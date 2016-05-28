@@ -1,0 +1,5 @@
+<map id="led_set" name="led_set">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html#a69974a7766fccf6b3ce362fec9ed8dfc" title="Set the value of a GPIO pin which is configured as output. " alt="" coords="117,5,188,32"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="236,5,348,32"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="396,5,491,32"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="nxt_motor_set_speed" name="nxt_motor_set_speed">
+<area shape="rect" id="node2" href="$motor_8c.html#af6a5ff3701e5d315de4657b01d5119db" title="Set power percent applied to motors. The calculation are appropriated to nxt motors ..." alt="" coords="218,31,301,57"/>
+<area shape="rect" id="node8" href="$motor_8c.html#a84a8b14050ec41e13b14f410a329a0bb" title="Set brake mode. Brake &#45; stop immediately, float &#45; soft stop. " alt="" coords="200,81,319,108"/>
+<area shape="rect" id="node3" href="$motor_8c.html#a99b9142e7e982f5de5ad7b09970c49db" title="Set the state of an attached motor. " alt="" coords="367,31,483,57"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a624ad0306d1c4e6dfc8e2bb01798e0ce" title="Initialize a GPIO pin with its GPIO functionality and set its direction to input. ..." alt="" coords="653,5,757,32"/>
+<area shape="rect" id="node6" href="$ninja_2gpio_8c.html#a69974a7766fccf6b3ce362fec9ed8dfc" title="Set the value of a GPIO pin which is configured as output. " alt="" coords="531,56,601,83"/>
+<area shape="rect" id="node5" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="809,31,904,57"/>
+<area shape="rect" id="node7" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="649,56,761,83"/>
+</map>

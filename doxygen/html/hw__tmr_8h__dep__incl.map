@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/include/hw/hw_tmr.h" name="leJOS_EV3/src/ev3/include/hw/hw_tmr.h">
+<area shape="rect" id="node2" href="$timer_8c.html" title="TIMER APIs. " alt="" coords="5,184,185,225"/>
+<area shape="rect" id="node3" href="$timer_8h.html" title="Timer APIs and macros. " alt="" coords="133,95,316,136"/>
+<area shape="rect" id="node5" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="341,95,509,136"/>
+<area shape="rect" id="node4" href="$systick_8c.html" title="This header contains function definitions required to manage the tick in milliseconds on the EV3..." alt="" coords="210,191,405,218"/>
+</map>

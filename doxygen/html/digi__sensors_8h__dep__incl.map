@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/digi_sensors.h" name="leJOS_EV3/src/ev3/digi_sensors.h">
+<area shape="rect" id="node2" href="$ecrobot__interface_8h.html" title="This file contains the function declarations for the users ECRobot&#45;API. This API is used to interact ..." alt="" coords="5,102,196,129"/>
+<area shape="rect" id="node4" href="$digi__sensors_8c.html" title="Function definitions to talk to the digital sensors (I2C sensors) " alt="" coords="220,95,381,136"/>
+<area shape="rect" id="node5" href="$i2c_8c.html" title="Function definitions related to I2C communication. " alt="" coords="405,102,575,129"/>
+<area shape="rect" id="node3" href="$ecrobot__interface_8c.html" title="This file contains the function definitions for the users ECRobot&#45;API. This API is used to interact w..." alt="" coords="5,184,196,211"/>
+</map>

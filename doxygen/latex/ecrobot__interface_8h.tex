@@ -1,0 +1,1480 @@
+\hypertarget{ecrobot__interface_8h}{}\section{E\+C\+Robot/ecrobot\+\_\+interface.h File Reference}
+\label{ecrobot__interface_8h}\index{E\+C\+Robot/ecrobot\+\_\+interface.\+h@{E\+C\+Robot/ecrobot\+\_\+interface.\+h}}
+
+
+This file contains the function declarations for the users E\+C\+Robot-\/\+A\+P\+I. This A\+P\+I is used to interact with sensors and actuators.  
+
+
+{\ttfamily \#include \char`\"{}mytypes.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}systick.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}adc\+\_\+sensors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}digi\+\_\+sensors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ev3\+\_\+motors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}power.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/button.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ecrobot\+\_\+types.\+h\char`\"{}}\\*
+Include dependency graph for ecrobot\+\_\+interface.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{ecrobot__interface_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{ecrobot__interface_8h_a0aa016f6fc2a67a826248368aecd7059}{}\#define \hyperlink{ecrobot__interface_8h_a0aa016f6fc2a67a826248368aecd7059}{L\+O\+W\+S\+P\+E\+E\+D\+\_\+9\+V}~1\label{ecrobot__interface_8h_a0aa016f6fc2a67a826248368aecd7059}
+
+\begin{DoxyCompactList}\small\item\em I2\+C sensor mode used for 9\+V sensors. \end{DoxyCompactList}\item 
+\hypertarget{ecrobot__interface_8h_a7deb4e975d37fa5d8bbd4dcf28d918c2}{}\#define \hyperlink{ecrobot__interface_8h_a7deb4e975d37fa5d8bbd4dcf28d918c2}{L\+O\+W\+S\+P\+E\+E\+D}~2\label{ecrobot__interface_8h_a7deb4e975d37fa5d8bbd4dcf28d918c2}
+
+\begin{DoxyCompactList}\small\item\em I2\+C sensor mode used for sensors with standard voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mytypes_8h_aa2db49128944fb6df8ee8aa636a47634}{S32} \hyperlink{ecrobot__interface_8h_aac401bc8039e76ef135628bac4c9d884}{ecrobot\+\_\+get\+\_\+motor\+\_\+rev} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Gets Servo Motor revolution value in degree. Wrapper of nxt\+\_\+motor\+\_\+get\+\_\+count. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a058a4f6b8b8cd0cd9b341f7728a0be4d}{ecrobot\+\_\+set\+\_\+motor\+\_\+speed} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a73359529e867901fff0eabb94f7c3fcf}{S8} speed)
+\begin{DoxyCompactList}\small\item\em Sets Servo Motor P\+W\+M value. Wrapper of nxt\+\_\+motor\+\_\+set\+\_\+speed, but brake mode is fixed as brake. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a243c5a9de426a2ceb53f13dc7c7945ee}{ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_aa2db49128944fb6df8ee8aa636a47634}{S32} mode, \hyperlink{mytypes_8h_a73359529e867901fff0eabb94f7c3fcf}{S8} speed)
+\begin{DoxyCompactList}\small\item\em Sets Servo Motor brake mode and P\+W\+M value. Wrapper of nxt\+\_\+motor\+\_\+set\+\_\+speed. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a716b589796dd18ec023ef45a4aca6b10}{ecrobot\+\_\+set\+\_\+motor\+\_\+rev} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_aa2db49128944fb6df8ee8aa636a47634}{S32} rev)
+\begin{DoxyCompactList}\small\item\em Sets Servo Motor revolution value in degree. Wrapper of nxt\+\_\+motor\+\_\+set\+\_\+count. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{ecrobot__interface_8h_a8db50e0e1ea5539ff33fb69019ba6c59}{ecrobot\+\_\+get\+\_\+light\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get N\+X\+T Light Sensor raw A/\+D data. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_aa583da85d360db935d690a72365ab12d}{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Turn infra-\/red light on. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a6913437b16d6917a1cdb4d5e18a0093b}{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Turn infra-\/red light off. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_a17ec6ec37bbe6d15ece65aab03b9df94}{ecrobot\+\_\+get\+\_\+touch\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get Touch Sensor on/off status. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{ecrobot__interface_8h_a3d0f6c7d2c8d0236bfcb5e647f42ec4f}{ecrobot\+\_\+get\+\_\+sound\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get Sound Sensor raw A/\+D data. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_aed9a245415bee498586a76a92830c7e9}{ecrobot\+\_\+init\+\_\+i2c} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} type)
+\begin{DoxyCompactList}\small\item\em Init a N\+X\+T sensor port for I2\+C communication. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_ae54fa3c45ac6d8a2cab8554e1ab48768}{ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} wait)
+\begin{DoxyCompactList}\small\item\em Wait until I2\+C communication is ready. \end{DoxyCompactList}\item 
+\hyperlink{ecrobot__types_8h_a66c6ead6db93a585d4f9d21ab3e944ac}{S\+I\+N\+T} \hyperlink{ecrobot__interface_8h_af1ca8c1fc75c05182aeb6fe60172fe54}{ecrobot\+\_\+send\+\_\+i2c} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} address, \hyperlink{ecrobot__types_8h_a66c6ead6db93a585d4f9d21ab3e944ac}{S\+I\+N\+T} i2c\+\_\+reg, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$buf, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} len)
+\begin{DoxyCompactList}\small\item\em Send I2\+C data. \end{DoxyCompactList}\item 
+\hyperlink{ecrobot__types_8h_a66c6ead6db93a585d4f9d21ab3e944ac}{S\+I\+N\+T} \hyperlink{ecrobot__interface_8h_ae2705c2c961299e7e1899b71d751519e}{ecrobot\+\_\+read\+\_\+i2c} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} address, \hyperlink{ecrobot__types_8h_a66c6ead6db93a585d4f9d21ab3e944ac}{S\+I\+N\+T} i2c\+\_\+reg, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$buf, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} len)
+\begin{DoxyCompactList}\small\item\em Read I2\+C data. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_adccd23ec10f6723d9ba9463dc44e01dc}{ecrobot\+\_\+term\+\_\+i2c} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Terminate a N\+X\+T sensor port used for I2\+C communication. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a1987f8ae51d64da9e63185302c84c6dc}{ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Init a N\+X\+T sensor port for Ultrasonic Sensor. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_aa2db49128944fb6df8ee8aa636a47634}{S32} \hyperlink{ecrobot__interface_8h_a606dc0e245136a73870800af77975917}{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get Ultrasonic Sensor measurement data in cm. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a92df098d5bc3f745a4c7e29256d6e826}{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} data\+\_\+buffer\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set the mode of the Lego ultrasonic sensor at the specified port to U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+H\+O\+T. After that get the range of the Lego ultrasonic sensor connected at the specified port and store it in the buffer. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a435363c3b8faf52afaf83fc935434054}{ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Terminate I2\+C used for for Ultrasonic. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{ecrobot__interface_8h_ad36f9c80a01f470b673244e9c0652559}{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Gets Gyro Sensor raw A/\+D data. The sensor data has offset value (approximately 600). \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_ae08f9a6ee81e70f713a74a5860062841}{S16} \hyperlink{ecrobot__interface_8h_a66caf428dfc59030202023eeec463ff1}{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the current rotation meassured by the Hi\+Technic gyro sensor connected at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a82abd85d3faadc9aa90e6a80a1f9c336}{ecrobot\+\_\+init\+\_\+accel\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initializes a port for I2\+C communication for Acceleration Sensor. This function should be implemented in the device initialize hook routine. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_ae918297bfa96d5a550519cb6b377c717}{ecrobot\+\_\+get\+\_\+accel\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_ae08f9a6ee81e70f713a74a5860062841}{S16} buf\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Gets acceleration data in three axes. The sensor meassures the acceleration on all 3 axis (X, Y and Z). This function will call sensor\+\_\+accel\+\_\+calibrate when called for the first time. The values returned will be relativ to 0. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a0d3f189f2fb27cfd95136e99e83e9044}{ecrobot\+\_\+term\+\_\+accel\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Terminates I2\+C communication used for Acceleraton Sensor. This function should be implemented in the device terminate hook routine. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_ac43644c6aa0ee882b21669b37e4dcae5}{ecrobot\+\_\+init\+\_\+color\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em initializes a port for I2\+C communication for the Color Sensor. This function should be implemented in the device initialize hook routine. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_a4052f27244a2ec626f9467ba5205f5ab}{ecrobot\+\_\+cal\+\_\+color\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} mode)
+\begin{DoxyCompactList}\small\item\em Calibrate the Hi\+Technic color sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_ab54ac6a5ac92fa3d8e452d7e0ac42b06}{ecrobot\+\_\+get\+\_\+color\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_ae08f9a6ee81e70f713a74a5860062841}{S16} buf\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get the red, green and blue values (R\+G\+B) meassured by the Hi\+Technic color sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a8d365c7adeac0016b97754d45d3352f7}{ecrobot\+\_\+term\+\_\+color\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Terminates I2\+C communication used for the Color Sensor. This function should be implemented in the device terminate hook routine. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_af87a9c15633d8cbabc9d69cf01d9cb46}{ecrobot\+\_\+init\+\_\+compass\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initializes a port for I2\+C communication for Compass Sensor. This function should be implemented in the device initialize hook routine. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_ae08f9a6ee81e70f713a74a5860062841}{S16} \hyperlink{ecrobot__interface_8h_abc583b0bef80df0e21019fed1b3c5ab3}{ecrobot\+\_\+get\+\_\+compass\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Read the current direction meassured by the Hi\+Technic compass sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_aeb7a9d999e93c0bf60ff6c8a633da305}{ecrobot\+\_\+term\+\_\+compass\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Terminates I2\+C communication used for Compass Sensor. This function should be implemented in the device terminate hook routine. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a855921fd0f9bdf7bebf26248d6705553}{ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Start the Hi\+Technic compass sensor calibration. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_a0ab83efcae7f5172df0d9ef24cbab482}{ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Finish the Hi\+Technic compass sensor calibration. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a87f6986d1cd3ece1c2ed94d2781f4073}{ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initializes a port for I2\+C communication for Temperature Sensor. \end{DoxyCompactList}\item 
+float \hyperlink{ecrobot__interface_8h_ac3d850ca54c4793976a72dcff72ea27f}{ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Measures and returns the current temperature value. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a3931f4ecc2a1fe1e20b540fb8fde4df8}{ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} resolution)
+\begin{DoxyCompactList}\small\item\em Set the resolution for the measured temperature values. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_aa7f203b9bb762050caacf41f177ac530}{ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Returns the current resolution setting of the sensor. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a8d5e57b6d8fb3e702350c59a613ccc16}{ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor} (\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} port\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Terminates I2\+C communication used for Temperature Sensor. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{ecrobot__interface_8h_acbb5d84af362934c9657a398abd73e1b}{ecrobot\+\_\+get\+\_\+battery\+\_\+voltage} (void)
+\begin{DoxyCompactList}\small\item\em Get the voltage of the battery. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_adf928e51a60dba0df29d615401cc55a8}{U16} \hyperlink{ecrobot__interface_8h_a82fbd47d249880aada07e9b39252cc8b}{ecrobot\+\_\+get\+\_\+battery\+\_\+current} (void)
+\begin{DoxyCompactList}\small\item\em Get the current of the battery. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{ecrobot__interface_8h_af43da73900e9f320695f8ca40c91601d}{ecrobot\+\_\+get\+\_\+systick\+\_\+ms} (void)
+\begin{DoxyCompactList}\small\item\em Get the current tick in milliseconds. \end{DoxyCompactList}\item 
+void \hyperlink{ecrobot__interface_8h_a7e4b2a4c452438af889f628b32572d68}{ecrobot\+\_\+wait\+\_\+ms} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} ms)
+\begin{DoxyCompactList}\small\item\em Wait for the specified amount of time. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_a8671b27a6f7da38378c08231b687433c}{ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Returns status of the enter button. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{ecrobot__interface_8h_a105aa94999ce18090972316b9679a400}{ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Returns status of the run button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the function declarations for the users E\+C\+Robot-\/\+A\+P\+I. This A\+P\+I is used to interact with sensors and actuators. 
+
+\begin{DoxyAuthor}{Author}
+Christian Soward, Tobias Schießl 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{ecrobot__interface_8h_a4052f27244a2ec626f9467ba5205f5ab}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+cal\+\_\+color\+\_\+sensor@{ecrobot\+\_\+cal\+\_\+color\+\_\+sensor}}
+\index{ecrobot\+\_\+cal\+\_\+color\+\_\+sensor@{ecrobot\+\_\+cal\+\_\+color\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+cal\+\_\+color\+\_\+sensor(\+U8 port\+\_\+id, U8 mode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+cal\+\_\+color\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U8}}]{mode}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a4052f27244a2ec626f9467ba5205f5ab}
+
+
+Calibrate the Hi\+Technic color sensor at the specified port. 
+
+To calibrate the sensor properly, this function has to be called two times. Once with mode set to C\+A\+L\+\_\+\+W\+H\+I\+T\+E (0x043) and once with mode set to C\+A\+L\+\_\+\+B\+L\+A\+C\+K (0x42). Calibration information is stored directly on the sensor and will be persistent, even if the sensor is no longer provided with power. When called with mode set to C\+A\+L\+\_\+\+W\+H\+I\+T\+E, the sensor should be located in front of a diffuse white surface at a distance of 1.\+5 cm. When called with mode set to C\+A\+L\+\_\+\+B\+L\+A\+C\+K, the sensor should have nothing in front of it within a distance of about 2 m. If the calibration command was received successfully, the sensors L\+E\+D will blink for confirmation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em mode} & -\/ The mode to calibrate the sensor with\+: C\+A\+L\+\_\+\+W\+H\+I\+T\+E (0x43) or C\+A\+L\+\_\+\+B\+L\+A\+C\+K (0x42)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the calibration was successful, 0 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a4052f27244a2ec626f9467ba5205f5ab_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a0ab83efcae7f5172df0d9ef24cbab482}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor}}
+\index{ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+cal\+\_\+end\+\_\+compass\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a0ab83efcae7f5172df0d9ef24cbab482}
+
+
+Finish the Hi\+Technic compass sensor calibration. 
+
+Read the information in the appropriate start\+\_\+calibration function first. This function is the third step and finishs the calibration process.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the calibration was successful, 0 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a0ab83efcae7f5172df0d9ef24cbab482_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a855921fd0f9bdf7bebf26248d6705553}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor}}
+\index{ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+cal\+\_\+start\+\_\+compass\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a855921fd0f9bdf7bebf26248d6705553}
+
+
+Start the Hi\+Technic compass sensor calibration. 
+
+You should calibrate a compass sensor when it is mounted on your robot in the way you want to use it. So the sensor will be calibrated for your specific environment/robot. The calibration adjustment is stored persitent on the sensor itself even if it is turned off. For more information see the Hi\+Technic documentation. Calibrating the compass sensor takes 3 steps. (1) Call this function. (2) Move the sensor/robot in a circle (540 degrees -\/ 720 degrees within 20 seconds). (3) Call the appropriate end\+\_\+calibration function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a855921fd0f9bdf7bebf26248d6705553_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ae918297bfa96d5a550519cb6b377c717}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+accel\+\_\+sensor@{ecrobot\+\_\+get\+\_\+accel\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+accel\+\_\+sensor@{ecrobot\+\_\+get\+\_\+accel\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+accel\+\_\+sensor(\+U8 port\+\_\+id, S16 buf[3])}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+get\+\_\+accel\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf S16}}]{buf\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ae918297bfa96d5a550519cb6b377c717}
+
+
+Gets acceleration data in three axes. The sensor meassures the acceleration on all 3 axis (X, Y and Z). This function will call sensor\+\_\+accel\+\_\+calibrate when called for the first time. The values returned will be relativ to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em buf} & -\/ Buffer to store the meassured values in (the values will be stored in the buffer in the following order\+: X, Y, Z)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_ae918297bfa96d5a550519cb6b377c717_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a82fbd47d249880aada07e9b39252cc8b}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+battery\+\_\+current@{ecrobot\+\_\+get\+\_\+battery\+\_\+current}}
+\index{ecrobot\+\_\+get\+\_\+battery\+\_\+current@{ecrobot\+\_\+get\+\_\+battery\+\_\+current}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+battery\+\_\+current(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} ecrobot\+\_\+get\+\_\+battery\+\_\+current (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a82fbd47d249880aada07e9b39252cc8b}
+
+
+Get the current of the battery. 
+
+\begin{DoxyReturn}{Returns}
+The current of the battery 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a82fbd47d249880aada07e9b39252cc8b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_acbb5d84af362934c9657a398abd73e1b}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+battery\+\_\+voltage@{ecrobot\+\_\+get\+\_\+battery\+\_\+voltage}}
+\index{ecrobot\+\_\+get\+\_\+battery\+\_\+voltage@{ecrobot\+\_\+get\+\_\+battery\+\_\+voltage}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+battery\+\_\+voltage(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} ecrobot\+\_\+get\+\_\+battery\+\_\+voltage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_acbb5d84af362934c9657a398abd73e1b}
+
+
+Get the voltage of the battery. 
+
+\begin{DoxyReturn}{Returns}
+The volatge of the battery 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_acbb5d84af362934c9657a398abd73e1b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ab54ac6a5ac92fa3d8e452d7e0ac42b06}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+color\+\_\+sensor@{ecrobot\+\_\+get\+\_\+color\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+color\+\_\+sensor@{ecrobot\+\_\+get\+\_\+color\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+color\+\_\+sensor(\+U8 port\+\_\+id, S16 buf[3])}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+get\+\_\+color\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf S16}}]{buf\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ab54ac6a5ac92fa3d8e452d7e0ac42b06}
+
+
+Get the red, green and blue values (R\+G\+B) meassured by the Hi\+Technic color sensor at the specified port. 
+
+For best results, the sensor should be calibrated before calling this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em buf} & -\/ Buffer to store the received data in (the values will be stored in the following order\+: red, green, blue)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_ab54ac6a5ac92fa3d8e452d7e0ac42b06_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_abc583b0bef80df0e21019fed1b3c5ab3}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+get\+\_\+compass\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+get\+\_\+compass\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+compass\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S16} ecrobot\+\_\+get\+\_\+compass\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_abc583b0bef80df0e21019fed1b3c5ab3}
+
+
+Read the current direction meassured by the Hi\+Technic compass sensor at the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current direction in degrees meassured by the sensor, ranging from 0 to 360 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_abc583b0bef80df0e21019fed1b3c5ab3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ad36f9c80a01f470b673244e9c0652559}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor@{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor@{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ad36f9c80a01f470b673244e9c0652559}
+
+
+Gets Gyro Sensor raw A/\+D data. The sensor data has offset value (approximately 600). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+raw A/\+D value 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_ad36f9c80a01f470b673244e9c0652559_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a66caf428dfc59030202023eeec463ff1}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees@{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees}}
+\index{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees@{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S16} ecrobot\+\_\+get\+\_\+gyro\+\_\+sensor\+\_\+degrees (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a66caf428dfc59030202023eeec463ff1}
+
+
+Get the current rotation meassured by the Hi\+Technic gyro sensor connected at the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current rotation meassured by the gyro sensor, ranging from -\/360 degrees to +360 degrees 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a66caf428dfc59030202023eeec463ff1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a8db50e0e1ea5539ff33fb69019ba6c59}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+light\+\_\+sensor@{ecrobot\+\_\+get\+\_\+light\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+light\+\_\+sensor@{ecrobot\+\_\+get\+\_\+light\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+light\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} ecrobot\+\_\+get\+\_\+light\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a8db50e0e1ea5539ff33fb69019ba6c59}
+
+
+Get N\+X\+T Light Sensor raw A/\+D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A/\+D raw data(0 to 1023) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a8db50e0e1ea5539ff33fb69019ba6c59_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_aac401bc8039e76ef135628bac4c9d884}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+motor\+\_\+rev@{ecrobot\+\_\+get\+\_\+motor\+\_\+rev}}
+\index{ecrobot\+\_\+get\+\_\+motor\+\_\+rev@{ecrobot\+\_\+get\+\_\+motor\+\_\+rev}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+motor\+\_\+rev(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S32} ecrobot\+\_\+get\+\_\+motor\+\_\+rev (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_aac401bc8039e76ef135628bac4c9d884}
+
+
+Gets Servo Motor revolution value in degree. Wrapper of nxt\+\_\+motor\+\_\+get\+\_\+count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+1, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+2, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+3, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+4\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Servo Motors revolution in degree 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_aac401bc8039e76ef135628bac4c9d884_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a606dc0e245136a73870800af77975917}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor@{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor@{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S32} ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a606dc0e245136a73870800af77975917}
+
+
+Get Ultrasonic Sensor measurement data in cm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance in cm (0 to 255), -\/1 (failure) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a606dc0e245136a73870800af77975917_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a92df098d5bc3f745a4c7e29256d6e826}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot@{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot}}
+\index{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot@{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot(\+U8 port\+\_\+id, U8 data\+\_\+buffer[8])}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+get\+\_\+sonar\+\_\+sensor\+\_\+single\+\_\+shot (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U8}}]{data\+\_\+buffer\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a92df098d5bc3f745a4c7e29256d6e826}
+
+
+Set the mode of the Lego ultrasonic sensor at the specified port to U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+H\+O\+T. After that get the range of the Lego ultrasonic sensor connected at the specified port and store it in the buffer. 
+
+The sensor meassures distances from 0 to 255 in cm. If nothing is located in front of the sensor, the value will be 255. All 8 entries of the array will be values returned by the sensor. If less than 8 objects are detected, some entries will be set to 255.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em data\+\_\+buffer} & -\/ Buffer to store the result in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a92df098d5bc3f745a4c7e29256d6e826_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a3d0f6c7d2c8d0236bfcb5e647f42ec4f}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+sound\+\_\+sensor@{ecrobot\+\_\+get\+\_\+sound\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+sound\+\_\+sensor@{ecrobot\+\_\+get\+\_\+sound\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+sound\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U16} ecrobot\+\_\+get\+\_\+sound\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a3d0f6c7d2c8d0236bfcb5e647f42ec4f}
+
+
+Get Sound Sensor raw A/\+D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A/\+D raw data(0 to 1023) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a3d0f6c7d2c8d0236bfcb5e647f42ec4f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_af43da73900e9f320695f8ca40c91601d}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+systick\+\_\+ms@{ecrobot\+\_\+get\+\_\+systick\+\_\+ms}}
+\index{ecrobot\+\_\+get\+\_\+systick\+\_\+ms@{ecrobot\+\_\+get\+\_\+systick\+\_\+ms}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+systick\+\_\+ms(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} ecrobot\+\_\+get\+\_\+systick\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_af43da73900e9f320695f8ca40c91601d}
+
+
+Get the current tick in milliseconds. 
+
+\begin{DoxyReturn}{Returns}
+The current tick in milliseconds 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{ecrobot__interface_8h_af43da73900e9f320695f8ca40c91601d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ac3d850ca54c4793976a72dcff72ea27f}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}float ecrobot\+\_\+get\+\_\+temperature\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ac3d850ca54c4793976a72dcff72ea27f}
+
+
+Measures and returns the current temperature value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current temperature given in degrees Celsius 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_ac3d850ca54c4793976a72dcff72ea27f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a17ec6ec37bbe6d15ece65aab03b9df94}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+\_\+touch\+\_\+sensor@{ecrobot\+\_\+get\+\_\+touch\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+\_\+touch\+\_\+sensor@{ecrobot\+\_\+get\+\_\+touch\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+\_\+touch\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+get\+\_\+touch\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a17ec6ec37bbe6d15ece65aab03b9df94}
+
+
+Get Touch Sensor on/off status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1(touched), 0(not touched) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a17ec6ec37bbe6d15ece65aab03b9df94_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_aa7f203b9bb762050caacf41f177ac530}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor}}
+\index{ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+get\+Resolution\+\_\+temperature\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_aa7f203b9bb762050caacf41f177ac530}
+
+
+Returns the current resolution setting of the sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current resolution. See the macros T\+E\+M\+P9\+B\+I\+T ... T\+E\+M\+P12\+B\+I\+T 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_aa7f203b9bb762050caacf41f177ac530_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a82abd85d3faadc9aa90e6a80a1f9c336}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+init\+\_\+accel\+\_\+sensor@{ecrobot\+\_\+init\+\_\+accel\+\_\+sensor}}
+\index{ecrobot\+\_\+init\+\_\+accel\+\_\+sensor@{ecrobot\+\_\+init\+\_\+accel\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+init\+\_\+accel\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+init\+\_\+accel\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a82abd85d3faadc9aa90e6a80a1f9c336}
+
+
+Initializes a port for I2\+C communication for Acceleration Sensor. This function should be implemented in the device initialize hook routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a82abd85d3faadc9aa90e6a80a1f9c336_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ac43644c6aa0ee882b21669b37e4dcae5}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+init\+\_\+color\+\_\+sensor@{ecrobot\+\_\+init\+\_\+color\+\_\+sensor}}
+\index{ecrobot\+\_\+init\+\_\+color\+\_\+sensor@{ecrobot\+\_\+init\+\_\+color\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+init\+\_\+color\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+init\+\_\+color\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ac43644c6aa0ee882b21669b37e4dcae5}
+
+
+initializes a port for I2\+C communication for the Color Sensor. This function should be implemented in the device initialize hook routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_ac43644c6aa0ee882b21669b37e4dcae5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_af87a9c15633d8cbabc9d69cf01d9cb46}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+init\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+init\+\_\+compass\+\_\+sensor}}
+\index{ecrobot\+\_\+init\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+init\+\_\+compass\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+init\+\_\+compass\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+init\+\_\+compass\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_af87a9c15633d8cbabc9d69cf01d9cb46}
+
+
+Initializes a port for I2\+C communication for Compass Sensor. This function should be implemented in the device initialize hook routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_af87a9c15633d8cbabc9d69cf01d9cb46_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_aed9a245415bee498586a76a92830c7e9}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+init\+\_\+i2c@{ecrobot\+\_\+init\+\_\+i2c}}
+\index{ecrobot\+\_\+init\+\_\+i2c@{ecrobot\+\_\+init\+\_\+i2c}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+init\+\_\+i2c(\+U8 port\+\_\+id, U8 type)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+init\+\_\+i2c (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U8}}]{type}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_aed9a245415bee498586a76a92830c7e9}
+
+
+Init a N\+X\+T sensor port for I2\+C communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em type} & -\/ L\+O\+W\+S\+P\+E\+E\+D\+\_\+9\+V, L\+O\+W\+S\+P\+E\+E\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_aed9a245415bee498586a76a92830c7e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a1987f8ae51d64da9e63185302c84c6dc}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor@{ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor}}
+\index{ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor@{ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+init\+\_\+sonar\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a1987f8ae51d64da9e63185302c84c6dc}
+
+
+Init a N\+X\+T sensor port for Ultrasonic Sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a1987f8ae51d64da9e63185302c84c6dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a87f6986d1cd3ece1c2ed94d2781f4073}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor}}
+\index{ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+init\+\_\+temperature\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a87f6986d1cd3ece1c2ed94d2781f4073}
+
+
+Initializes a port for I2\+C communication for Temperature Sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a87f6986d1cd3ece1c2ed94d2781f4073_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a8671b27a6f7da38378c08231b687433c}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed@{ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed}}
+\index{ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed@{ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+is\+\_\+\+E\+N\+T\+E\+R\+\_\+button\+\_\+pressed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a8671b27a6f7da38378c08231b687433c}
+
+
+Returns status of the enter button. 
+
+\begin{DoxyReturn}{Returns}
+1(is pressed), 0(is not pressed) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a8671b27a6f7da38378c08231b687433c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a105aa94999ce18090972316b9679a400}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed@{ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed}}
+\index{ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed@{ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+is\+\_\+\+R\+U\+N\+\_\+button\+\_\+pressed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a105aa94999ce18090972316b9679a400}
+
+
+Returns status of the run button. 
+
+\begin{DoxyReturn}{Returns}
+1(is pressed), 0(is not pressed) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a105aa94999ce18090972316b9679a400_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ae2705c2c961299e7e1899b71d751519e}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+read\+\_\+i2c@{ecrobot\+\_\+read\+\_\+i2c}}
+\index{ecrobot\+\_\+read\+\_\+i2c@{ecrobot\+\_\+read\+\_\+i2c}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+read\+\_\+i2c(\+U8 port\+\_\+id, U32 address, S\+I\+N\+T i2c\+\_\+reg, U8 $\ast$buf, U32 len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+N\+T} ecrobot\+\_\+read\+\_\+i2c (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U32}}]{address, }
+\item[{{\bf S\+I\+N\+T}}]{i2c\+\_\+reg, }
+\item[{{\bf U8} $\ast$}]{buf, }
+\item[{{\bf U32}}]{len}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ae2705c2c961299e7e1899b71d751519e}
+
+
+Read I2\+C data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em address} & -\/ 0x01 to 0x7\+F (Note that addresses are from 0x01 to 0x7\+F not even numbers from 0x02 to 0x\+F\+E as given in some I2\+C device specifications. They are 7-\/bit addresses not 8-\/bit addresses) \\
+\hline
+{\em i2c\+\_\+reg} & -\/ I2\+C register e.\+g. 0x42 \\
+\hline
+{\em buf} & -\/ buffer to return data \\
+\hline
+{\em len} & -\/ length of the return data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1(success), 0(failure) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_ae2705c2c961299e7e1899b71d751519e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_af1ca8c1fc75c05182aeb6fe60172fe54}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+send\+\_\+i2c@{ecrobot\+\_\+send\+\_\+i2c}}
+\index{ecrobot\+\_\+send\+\_\+i2c@{ecrobot\+\_\+send\+\_\+i2c}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+send\+\_\+i2c(\+U8 port\+\_\+id, U32 address, S\+I\+N\+T i2c\+\_\+reg, U8 $\ast$buf, U32 len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+N\+T} ecrobot\+\_\+send\+\_\+i2c (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U32}}]{address, }
+\item[{{\bf S\+I\+N\+T}}]{i2c\+\_\+reg, }
+\item[{{\bf U8} $\ast$}]{buf, }
+\item[{{\bf U32}}]{len}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_af1ca8c1fc75c05182aeb6fe60172fe54}
+
+
+Send I2\+C data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em address} & -\/ 0x01 to 0x7\+F (Note that addresses are from 0x01 to 0x7\+F not even numbers from 0x02 to 0x\+F\+E as given in some I2\+C device specifications. They are 7-\/bit addresses not 8-\/bit addresses) \\
+\hline
+{\em i2c\+\_\+reg} & -\/ I2\+C register e.\+g. 0x42 \\
+\hline
+{\em buf} & -\/ buffer containing data to send \\
+\hline
+{\em len} & -\/ length of the data to send\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1(success), 0(failure) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_af1ca8c1fc75c05182aeb6fe60172fe54_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_aa583da85d360db935d690a72365ab12d}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active@{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active}}
+\index{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active@{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+active (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_aa583da85d360db935d690a72365ab12d}
+
+
+Turn infra-\/red light on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_aa583da85d360db935d690a72365ab12d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a6913437b16d6917a1cdb4d5e18a0093b}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive@{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive}}
+\index{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive@{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+set\+\_\+light\+\_\+sensor\+\_\+inactive (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a6913437b16d6917a1cdb4d5e18a0093b}
+
+
+Turn infra-\/red light off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a6913437b16d6917a1cdb4d5e18a0093b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a243c5a9de426a2ceb53f13dc7c7945ee}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed@{ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed}}
+\index{ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed@{ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed(\+U8 port\+\_\+id, S32 mode, S8 speed)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+set\+\_\+motor\+\_\+mode\+\_\+speed (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf S32}}]{mode, }
+\item[{{\bf S8}}]{speed}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a243c5a9de426a2ceb53f13dc7c7945ee}
+
+
+Sets Servo Motor brake mode and P\+W\+M value. Wrapper of nxt\+\_\+motor\+\_\+set\+\_\+speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+1, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+2, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+3, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+4 \\
+\hline
+{\em mode} & -\/ 0(float), 1(brake) \\
+\hline
+{\em speed} & -\/ -\/100 to +100\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a243c5a9de426a2ceb53f13dc7c7945ee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a716b589796dd18ec023ef45a4aca6b10}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+set\+\_\+motor\+\_\+rev@{ecrobot\+\_\+set\+\_\+motor\+\_\+rev}}
+\index{ecrobot\+\_\+set\+\_\+motor\+\_\+rev@{ecrobot\+\_\+set\+\_\+motor\+\_\+rev}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+set\+\_\+motor\+\_\+rev(\+U8 port\+\_\+id, S32 rev)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+set\+\_\+motor\+\_\+rev (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf S32}}]{rev}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a716b589796dd18ec023ef45a4aca6b10}
+
+
+Sets Servo Motor revolution value in degree. Wrapper of nxt\+\_\+motor\+\_\+set\+\_\+count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+1, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+2, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+3, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+4 \\
+\hline
+{\em rev} & -\/ Servo Motors revolution in degree\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a716b589796dd18ec023ef45a4aca6b10_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a058a4f6b8b8cd0cd9b341f7728a0be4d}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+set\+\_\+motor\+\_\+speed@{ecrobot\+\_\+set\+\_\+motor\+\_\+speed}}
+\index{ecrobot\+\_\+set\+\_\+motor\+\_\+speed@{ecrobot\+\_\+set\+\_\+motor\+\_\+speed}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+set\+\_\+motor\+\_\+speed(\+U8 port\+\_\+id, S8 speed)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+set\+\_\+motor\+\_\+speed (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf S8}}]{speed}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a058a4f6b8b8cd0cd9b341f7728a0be4d}
+
+
+Sets Servo Motor P\+W\+M value. Wrapper of nxt\+\_\+motor\+\_\+set\+\_\+speed, but brake mode is fixed as brake. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+1, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+2, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+3, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+4 \\
+\hline
+{\em speed} & -\/ -\/100 to +100\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a058a4f6b8b8cd0cd9b341f7728a0be4d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a3931f4ecc2a1fe1e20b540fb8fde4df8}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor}}
+\index{ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor(\+U8 port\+\_\+id, U8 resolution)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+set\+Resolution\+\_\+temperature\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U8}}]{resolution}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a3931f4ecc2a1fe1e20b540fb8fde4df8}
+
+
+Set the resolution for the measured temperature values. 
+
+The internal Texas Instruments tmp275 temperature sensor can operate in different resolution modes. Lower resolution is faster. See the T\+E\+M\+P9\+B\+I\+T ... T\+E\+M\+P12\+B\+I\+T macros for more information or the official documentation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em resolution} & -\/ The resolution. Use on of the macros T\+E\+M\+P9\+B\+I\+T ... T\+E\+M\+P12\+B\+I\+T\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a3931f4ecc2a1fe1e20b540fb8fde4df8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a0d3f189f2fb27cfd95136e99e83e9044}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+term\+\_\+accel\+\_\+sensor@{ecrobot\+\_\+term\+\_\+accel\+\_\+sensor}}
+\index{ecrobot\+\_\+term\+\_\+accel\+\_\+sensor@{ecrobot\+\_\+term\+\_\+accel\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+term\+\_\+accel\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+term\+\_\+accel\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a0d3f189f2fb27cfd95136e99e83e9044}
+
+
+Terminates I2\+C communication used for Acceleraton Sensor. This function should be implemented in the device terminate hook routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a0d3f189f2fb27cfd95136e99e83e9044_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a8d365c7adeac0016b97754d45d3352f7}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+term\+\_\+color\+\_\+sensor@{ecrobot\+\_\+term\+\_\+color\+\_\+sensor}}
+\index{ecrobot\+\_\+term\+\_\+color\+\_\+sensor@{ecrobot\+\_\+term\+\_\+color\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+term\+\_\+color\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+term\+\_\+color\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a8d365c7adeac0016b97754d45d3352f7}
+
+
+Terminates I2\+C communication used for the Color Sensor. This function should be implemented in the device terminate hook routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a8d365c7adeac0016b97754d45d3352f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_aeb7a9d999e93c0bf60ff6c8a633da305}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+term\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+term\+\_\+compass\+\_\+sensor}}
+\index{ecrobot\+\_\+term\+\_\+compass\+\_\+sensor@{ecrobot\+\_\+term\+\_\+compass\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+term\+\_\+compass\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+term\+\_\+compass\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_aeb7a9d999e93c0bf60ff6c8a633da305}
+
+
+Terminates I2\+C communication used for Compass Sensor. This function should be implemented in the device terminate hook routine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_aeb7a9d999e93c0bf60ff6c8a633da305_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_adccd23ec10f6723d9ba9463dc44e01dc}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+term\+\_\+i2c@{ecrobot\+\_\+term\+\_\+i2c}}
+\index{ecrobot\+\_\+term\+\_\+i2c@{ecrobot\+\_\+term\+\_\+i2c}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+term\+\_\+i2c(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+term\+\_\+i2c (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_adccd23ec10f6723d9ba9463dc44e01dc}
+
+
+Terminate a N\+X\+T sensor port used for I2\+C communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{ecrobot__interface_8h_adccd23ec10f6723d9ba9463dc44e01dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a435363c3b8faf52afaf83fc935434054}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor@{ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor}}
+\index{ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor@{ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+term\+\_\+sonar\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a435363c3b8faf52afaf83fc935434054}
+
+
+Terminate I2\+C used for for Ultrasonic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a435363c3b8faf52afaf83fc935434054_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a8d5e57b6d8fb3e702350c59a613ccc16}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor}}
+\index{ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor@{ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor(\+U8 port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+term\+\_\+temperature\+\_\+sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a8d5e57b6d8fb3e702350c59a613ccc16}
+
+
+Terminates I2\+C communication used for Temperature Sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecrobot__interface_8h_a8d5e57b6d8fb3e702350c59a613ccc16_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_ae54fa3c45ac6d8a2cab8554e1ab48768}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready@{ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready}}
+\index{ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready@{ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready(\+U8 port\+\_\+id, U32 wait)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} ecrobot\+\_\+wait\+\_\+i2c\+\_\+ready (
+\begin{DoxyParamCaption}
+\item[{{\bf U8}}]{port\+\_\+id, }
+\item[{{\bf U32}}]{wait}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_ae54fa3c45ac6d8a2cab8554e1ab48768}
+
+
+Wait until I2\+C communication is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & -\/ E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+A, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+B, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+C, E\+V3\+\_\+\+P\+O\+R\+T\+\_\+\+D \\
+\hline
+{\em wait} & -\/ wait time out in msec\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1(I2\+C is ready), 0(time out) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{ecrobot__interface_8h_ae54fa3c45ac6d8a2cab8554e1ab48768_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ecrobot__interface_8h_a7e4b2a4c452438af889f628b32572d68}{}\index{ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}!ecrobot\+\_\+wait\+\_\+ms@{ecrobot\+\_\+wait\+\_\+ms}}
+\index{ecrobot\+\_\+wait\+\_\+ms@{ecrobot\+\_\+wait\+\_\+ms}!ecrobot\+\_\+interface.\+h@{ecrobot\+\_\+interface.\+h}}
+\subsubsection[{ecrobot\+\_\+wait\+\_\+ms(\+U32 ms)}]{\setlength{\rightskip}{0pt plus 5cm}void ecrobot\+\_\+wait\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{ms}
+\end{DoxyParamCaption}
+)}\label{ecrobot__interface_8h_a7e4b2a4c452438af889f628b32572d68}
+
+
+Wait for the specified amount of time. 
+
+Waiting with this function is an active waiting which will block until the time has elapsed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & -\/ The time to wait in milliseconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{ecrobot__interface_8h_a7e4b2a4c452438af889f628b32572d68_cgraph}
+\end{center}
+\end{figure}
+
+

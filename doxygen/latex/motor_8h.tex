@@ -1,0 +1,513 @@
+\hypertarget{motor_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/motor.h File Reference}
+\label{motor_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/motor.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/motor.\+h}}
+
+
+A header file for motor driver. This file contains function declarations to use servo motors as well as enumerations and structs to represent motors and their states.  
+
+
+{\ttfamily \#include \char`\"{}mytypes.\+h\char`\"{}}\\*
+Include dependency graph for motor.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{motor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmotor__port__info}{motor\+\_\+port\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Contains the gpio pins of output and input pins. \end{DoxyCompactList}\item 
+struct \hyperlink{structmotor__data__struct}{motor\+\_\+data\+\_\+struct}
+\begin{DoxyCompactList}\small\item\em Contains the information about wheel revolution, given speed and brake mode of motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{motor_8h_a83487e236604912b3cec558bad4530cc}{}\#define \hyperlink{motor_8h_a83487e236604912b3cec558bad4530cc}{N\+O\+\_\+\+O\+F\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+O\+R\+T\+S}~4\label{motor_8h_a83487e236604912b3cec558bad4530cc}
+
+\begin{DoxyCompactList}\small\item\em Number of output ports of servo motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{motor_8h_a8b94273b8a53b0ee0c40412486a6a939}{}typedef struct \hyperlink{structmotor__port__info}{motor\+\_\+port\+\_\+info} {\bfseries motor\+\_\+port\+\_\+info}\label{motor_8h_a8b94273b8a53b0ee0c40412486a6a939}
+
+\item 
+\hypertarget{motor_8h_a00fc6210eb29de501b4952c5c487d96c}{}typedef struct \hyperlink{structmotor__data__struct}{motor\+\_\+data\+\_\+struct} {\bfseries motor\+\_\+data\+\_\+struct}\label{motor_8h_a00fc6210eb29de501b4952c5c487d96c}
+
+\item 
+\hypertarget{motor_8h_a1d6688741ca30fabc8bb36003d29beed}{}typedef enum \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} {\bfseries motor\+\_\+port\+\_\+id}\label{motor_8h_a1d6688741ca30fabc8bb36003d29beed}
+
+\item 
+\hypertarget{motor_8h_a327aa825f46258c7ae26b2297d0212bc}{}typedef enum \hyperlink{motor_8h_a4446030b456aac4f5f561b211d69ba7d}{motor\+\_\+type\+\_\+id} {\bfseries motor\+\_\+type\+\_\+id}\label{motor_8h_a327aa825f46258c7ae26b2297d0212bc}
+
+\item 
+\hypertarget{motor_8h_ae1a4ad5f69b6f96fbd0c4ade81c5ccf2}{}typedef enum \hyperlink{motor_8h_a6e34ed6a155ed58a2639feaabe4cb805}{motor\+\_\+state} {\bfseries motor\+\_\+state}\label{motor_8h_ae1a4ad5f69b6f96fbd0c4ade81c5ccf2}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{}enum \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} \{ {\bfseries M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A} = 0x00, 
+{\bfseries M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B} = 0x01, 
+{\bfseries M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C} = 0x02, 
+{\bfseries M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D} = 0x03
+ \}\label{motor_8h_ac49201b722ae412d644406dc70ac0f5c}
+\begin{DoxyCompactList}\small\item\em Enumeration of motor ports. \end{DoxyCompactList}
+\item 
+\hypertarget{motor_8h_a4446030b456aac4f5f561b211d69ba7d}{}enum \hyperlink{motor_8h_a4446030b456aac4f5f561b211d69ba7d}{motor\+\_\+type\+\_\+id} \{ {\bfseries E\+V3\+\_\+\+M\+E\+D\+I\+U\+M\+\_\+\+M\+O\+T\+O\+R}, 
+{\bfseries N\+X\+T\+\_\+\+S\+E\+R\+V\+O\+\_\+\+M\+O\+T\+O\+R}, 
+{\bfseries U\+N\+K\+N\+O\+W\+N\+\_\+\+M\+O\+T\+O\+R\+\_\+\+T\+Y\+P\+E}
+ \}\label{motor_8h_a4446030b456aac4f5f561b211d69ba7d}
+\begin{DoxyCompactList}\small\item\em Enumeration of motor types. \end{DoxyCompactList}
+\item 
+\hypertarget{motor_8h_a6e34ed6a155ed58a2639feaabe4cb805}{}enum \hyperlink{motor_8h_a6e34ed6a155ed58a2639feaabe4cb805}{motor\+\_\+state} \{ {\bfseries M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+W\+A\+R\+D} = 0x00, 
+{\bfseries M\+O\+T\+O\+R\+\_\+\+O\+F\+F} = 0x01, 
+{\bfseries M\+O\+T\+O\+R\+\_\+\+F\+O\+R\+W\+A\+R\+D} = 0x02
+ \}\label{motor_8h_a6e34ed6a155ed58a2639feaabe4cb805}
+\begin{DoxyCompactList}\small\item\em Enumeration of motor states. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{motor_8h_a99b9142e7e982f5de5ad7b09970c49db}{motor\+\_\+set\+\_\+state} (\hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} port, \hyperlink{motor_8h_a6e34ed6a155ed58a2639feaabe4cb805}{motor\+\_\+state} state)
+\begin{DoxyCompactList}\small\item\em Set the state of an attached motor. \end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_a5ac1bf3bcb36ac7ae513eef6e4b5ceb5}{set\+\_\+duty\+\_\+ma} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} duty)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Load Compare A value 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_af701d3f5cabca15ad46c5ab614e8da2d}{set\+\_\+duty\+\_\+mb} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} duty)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Load Compare B value 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_a334a3e5169e70060d46a49c7992832e9}{set\+\_\+duty\+\_\+mc} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} duty)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Load Compare C value 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_aa5aa952927a9c3495c1e744908541580}{set\+\_\+duty\+\_\+md} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} duty)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Load Compare D value 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+unsigned int \hyperlink{motor_8h_ac6795fb3f5209ce3151d32899e605151}{get\+\_\+tacho\+\_\+dir} (\hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} Port)
+\begin{DoxyCompactList}\small\item\em Get G\+P\+I\+O value of pin 6 (D\+I\+R). Is used to calculate motor revolution. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{motor_8h_a666c4ce5dcaef70effb23a9def08cb8f}{get\+\_\+tacho\+\_\+int} (\hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} Port)
+\begin{DoxyCompactList}\small\item\em Get G\+P\+I\+O value of pin 5 (I\+N\+T). Is used to calculate motor revolution. \end{DoxyCompactList}\item 
+\hypertarget{motor_8h_af58cdb717e56e090d15fc65dd848b8bc}{}\hyperlink{motor_8h_a4446030b456aac4f5f561b211d69ba7d}{motor\+\_\+type\+\_\+id} \hyperlink{motor_8h_af58cdb717e56e090d15fc65dd848b8bc}{get\+\_\+motor\+\_\+type} (\hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} Port)\label{motor_8h_af58cdb717e56e090d15fc65dd848b8bc}
+
+\begin{DoxyCompactList}\small\item\em This function is not used. For future use. adc ch.\+14 -\/$>$ A adc ch.\+13 -\/$>$ B adc ch.\+0 -\/$>$ C adc ch.\+1 -\/$>$ D N\+X\+T\+\_\+\+S\+E\+R\+V\+O\+\_\+\+I\+D (124) E\+V3\+\_\+\+M\+E\+D\+I\+U\+M\+\_\+\+M\+O\+T\+O\+R\+\_\+\+I\+D (288) E\+V3\+\_\+\+L\+A\+R\+G\+E\+\_\+\+M\+O\+T\+O\+R\+\_\+\+I\+D (3692) \end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_ad2ae80e52ada848a4e2ce9df3d0474cc}{set\+\_\+power} (\hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id} Port, \hyperlink{mytypes_8h_aa2db49128944fb6df8ee8aa636a47634}{S32} Power)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Set power percent applied to motors. The calculation are appropriated to nxt motors 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_aa2a5af0fb9c1fa2047a5ca0af110f806}{motor\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the G\+P\+I\+O pins and the pwm modules necessary for motor moving functions. \end{DoxyCompactList}\item 
+int \hyperlink{motor_8h_ae50a2b7cd2bc5f961c3649524116f118}{ev3\+\_\+get\+\_\+count} (int \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id})
+\begin{DoxyCompactList}\small\item\em Get motor revolution count in degree. \end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_afed317a9946f5f0381ada25b85233bef}{ev3\+\_\+set\+\_\+count} (int \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id}, int count)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Set motor revolution count in degree 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_ad9eba416e7b4f8f89b3bc7d609da2f19}{ev3\+\_\+motor\+\_\+command} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id}, int cmd, int target\+\_\+count, int speed\+\_\+percent)
+\begin{DoxyCompactList}\small\item\em Set motor target revolution count, brake mode and speed percent. After reaching the target count the given motor stops. \end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_a73b0c539f3f60ea84ad8f0032cd40fff}{ev3\+\_\+motor\+\_\+quad\+\_\+decode} (int \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id})
+\begin{DoxyCompactList}\small\item\em Calculate actual revolution count of given motor port. \end{DoxyCompactList}\item 
+void \hyperlink{motor_8h_a84a8b14050ec41e13b14f410a329a0bb}{set\+\_\+brake\+\_\+mode} (int \hyperlink{motor_8h_ac49201b722ae412d644406dc70ac0f5c}{motor\+\_\+port\+\_\+id}, int brake\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Set brake mode. Brake -\/ stop immediately, float -\/ soft stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A header file for motor driver. This file contains function declarations to use servo motors as well as enumerations and structs to represent motors and their states. 
+
+\begin{DoxyAuthor}{Author}
+Bektur Marat uulu and Bektur Toktosunov 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{motor_8h_ae50a2b7cd2bc5f961c3649524116f118}{}\index{motor.\+h@{motor.\+h}!ev3\+\_\+get\+\_\+count@{ev3\+\_\+get\+\_\+count}}
+\index{ev3\+\_\+get\+\_\+count@{ev3\+\_\+get\+\_\+count}!motor.\+h@{motor.\+h}}
+\subsubsection[{ev3\+\_\+get\+\_\+count(int motor\+\_\+port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}int ev3\+\_\+get\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\+\_\+port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{motor_8h_ae50a2b7cd2bc5f961c3649524116f118}
+
+
+Get motor revolution count in degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+revolution in degree 
+\end{DoxyReturn}
+\hypertarget{motor_8h_ad9eba416e7b4f8f89b3bc7d609da2f19}{}\index{motor.\+h@{motor.\+h}!ev3\+\_\+motor\+\_\+command@{ev3\+\_\+motor\+\_\+command}}
+\index{ev3\+\_\+motor\+\_\+command@{ev3\+\_\+motor\+\_\+command}!motor.\+h@{motor.\+h}}
+\subsubsection[{ev3\+\_\+motor\+\_\+command(\+U32 motor\+\_\+port\+\_\+id, int cmd, int target\+\_\+count, int speed\+\_\+percent)}]{\setlength{\rightskip}{0pt plus 5cm}void ev3\+\_\+motor\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{motor\+\_\+port\+\_\+id, }
+\item[{int}]{cmd, }
+\item[{int}]{target\+\_\+count, }
+\item[{int}]{speed\+\_\+percent}
+\end{DoxyParamCaption}
+)}\label{motor_8h_ad9eba416e7b4f8f89b3bc7d609da2f19}
+
+
+Set motor target revolution count, brake mode and speed percent. After reaching the target count the given motor stops. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D) \\
+\hline
+{\em cmd} & -\/ brake mode. true -\/ brake, false -\/ float \\
+\hline
+{\em target\+\_\+count} & -\/ Target revolution count to reach in degree \\
+\hline
+{\em speed\+\_\+percent} & -\/ Speed percent to rotate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_ad9eba416e7b4f8f89b3bc7d609da2f19_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{motor_8h_a73b0c539f3f60ea84ad8f0032cd40fff}{}\index{motor.\+h@{motor.\+h}!ev3\+\_\+motor\+\_\+quad\+\_\+decode@{ev3\+\_\+motor\+\_\+quad\+\_\+decode}}
+\index{ev3\+\_\+motor\+\_\+quad\+\_\+decode@{ev3\+\_\+motor\+\_\+quad\+\_\+decode}!motor.\+h@{motor.\+h}}
+\subsubsection[{ev3\+\_\+motor\+\_\+quad\+\_\+decode(int motor\+\_\+port\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void ev3\+\_\+motor\+\_\+quad\+\_\+decode (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\+\_\+port\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{motor_8h_a73b0c539f3f60ea84ad8f0032cd40fff}
+
+
+Calculate actual revolution count of given motor port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_a73b0c539f3f60ea84ad8f0032cd40fff_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{motor_8h_afed317a9946f5f0381ada25b85233bef}{}\index{motor.\+h@{motor.\+h}!ev3\+\_\+set\+\_\+count@{ev3\+\_\+set\+\_\+count}}
+\index{ev3\+\_\+set\+\_\+count@{ev3\+\_\+set\+\_\+count}!motor.\+h@{motor.\+h}}
+\subsubsection[{ev3\+\_\+set\+\_\+count(int motor\+\_\+port\+\_\+id, int count)}]{\setlength{\rightskip}{0pt plus 5cm}void ev3\+\_\+set\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\+\_\+port\+\_\+id, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{motor_8h_afed317a9946f5f0381ada25b85233bef}
+
+
+
+\begin{DoxyItemize}
+\item Set motor revolution count in degree 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D) \\
+\hline
+{\em count} & -\/ Motor revolution count to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{motor_8h_ac6795fb3f5209ce3151d32899e605151}{}\index{motor.\+h@{motor.\+h}!get\+\_\+tacho\+\_\+dir@{get\+\_\+tacho\+\_\+dir}}
+\index{get\+\_\+tacho\+\_\+dir@{get\+\_\+tacho\+\_\+dir}!motor.\+h@{motor.\+h}}
+\subsubsection[{get\+\_\+tacho\+\_\+dir(motor\+\_\+port\+\_\+id Port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int get\+\_\+tacho\+\_\+dir (
+\begin{DoxyParamCaption}
+\item[{{\bf motor\+\_\+port\+\_\+id}}]{port}
+\end{DoxyParamCaption}
+)}\label{motor_8h_ac6795fb3f5209ce3151d32899e605151}
+
+
+Get G\+P\+I\+O value of pin 6 (D\+I\+R). Is used to calculate motor revolution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pin 6 value of a given port 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_ac6795fb3f5209ce3151d32899e605151_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{motor_8h_a666c4ce5dcaef70effb23a9def08cb8f}{}\index{motor.\+h@{motor.\+h}!get\+\_\+tacho\+\_\+int@{get\+\_\+tacho\+\_\+int}}
+\index{get\+\_\+tacho\+\_\+int@{get\+\_\+tacho\+\_\+int}!motor.\+h@{motor.\+h}}
+\subsubsection[{get\+\_\+tacho\+\_\+int(motor\+\_\+port\+\_\+id Port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int get\+\_\+tacho\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{{\bf motor\+\_\+port\+\_\+id}}]{port}
+\end{DoxyParamCaption}
+)}\label{motor_8h_a666c4ce5dcaef70effb23a9def08cb8f}
+
+
+Get G\+P\+I\+O value of pin 5 (I\+N\+T). Is used to calculate motor revolution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pin 5 value of a given port 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_a666c4ce5dcaef70effb23a9def08cb8f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{motor_8h_aa2a5af0fb9c1fa2047a5ca0af110f806}{}\index{motor.\+h@{motor.\+h}!motor\+\_\+init@{motor\+\_\+init}}
+\index{motor\+\_\+init@{motor\+\_\+init}!motor.\+h@{motor.\+h}}
+\subsubsection[{motor\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void motor\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{motor_8h_aa2a5af0fb9c1fa2047a5ca0af110f806}
+
+
+Initialize the G\+P\+I\+O pins and the pwm modules necessary for motor moving functions. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_aa2a5af0fb9c1fa2047a5ca0af110f806_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{motor_8h_a99b9142e7e982f5de5ad7b09970c49db}{}\index{motor.\+h@{motor.\+h}!motor\+\_\+set\+\_\+state@{motor\+\_\+set\+\_\+state}}
+\index{motor\+\_\+set\+\_\+state@{motor\+\_\+set\+\_\+state}!motor.\+h@{motor.\+h}}
+\subsubsection[{motor\+\_\+set\+\_\+state(motor\+\_\+port\+\_\+id port, motor\+\_\+state state)}]{\setlength{\rightskip}{0pt plus 5cm}void motor\+\_\+set\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf motor\+\_\+port\+\_\+id}}]{port, }
+\item[{{\bf motor\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{motor_8h_a99b9142e7e982f5de5ad7b09970c49db}
+
+
+Set the state of an attached motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D) \\
+\hline
+{\em state} & -\/ one of M\+O\+T\+O\+R\+\_\+\+F\+O\+R\+W\+A\+R\+D, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+W\+A\+R\+D, M\+O\+T\+O\+R\+\_\+\+O\+F\+F\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_a99b9142e7e982f5de5ad7b09970c49db_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{motor_8h_a84a8b14050ec41e13b14f410a329a0bb}{}\index{motor.\+h@{motor.\+h}!set\+\_\+brake\+\_\+mode@{set\+\_\+brake\+\_\+mode}}
+\index{set\+\_\+brake\+\_\+mode@{set\+\_\+brake\+\_\+mode}!motor.\+h@{motor.\+h}}
+\subsubsection[{set\+\_\+brake\+\_\+mode(int motor\+\_\+port\+\_\+id, int brake\+\_\+mode)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+brake\+\_\+mode (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\+\_\+port\+\_\+id, }
+\item[{int}]{brake\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{motor_8h_a84a8b14050ec41e13b14f410a329a0bb}
+
+
+Set brake mode. Brake -\/ stop immediately, float -\/ soft stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D)  -\/ Brake mode. True -\/ brake, false -\/ float\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{motor_8h_a5ac1bf3bcb36ac7ae513eef6e4b5ceb5}{}\index{motor.\+h@{motor.\+h}!set\+\_\+duty\+\_\+ma@{set\+\_\+duty\+\_\+ma}}
+\index{set\+\_\+duty\+\_\+ma@{set\+\_\+duty\+\_\+ma}!motor.\+h@{motor.\+h}}
+\subsubsection[{set\+\_\+duty\+\_\+ma(\+U32 duty)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+duty\+\_\+ma (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{duty}
+\end{DoxyParamCaption}
+)}\label{motor_8h_a5ac1bf3bcb36ac7ae513eef6e4b5ceb5}
+
+
+
+\begin{DoxyItemize}
+\item Load Compare A value 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty} & -\/ Compare value epwm1\+A (Port B)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{motor_8h_af701d3f5cabca15ad46c5ab614e8da2d}{}\index{motor.\+h@{motor.\+h}!set\+\_\+duty\+\_\+mb@{set\+\_\+duty\+\_\+mb}}
+\index{set\+\_\+duty\+\_\+mb@{set\+\_\+duty\+\_\+mb}!motor.\+h@{motor.\+h}}
+\subsubsection[{set\+\_\+duty\+\_\+mb(\+U32 duty)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+duty\+\_\+mb (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{duty}
+\end{DoxyParamCaption}
+)}\label{motor_8h_af701d3f5cabca15ad46c5ab614e8da2d}
+
+
+
+\begin{DoxyItemize}
+\item Load Compare B value 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty} & -\/ Compare value of epwm1\+B (Port A)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{motor_8h_a334a3e5169e70060d46a49c7992832e9}{}\index{motor.\+h@{motor.\+h}!set\+\_\+duty\+\_\+mc@{set\+\_\+duty\+\_\+mc}}
+\index{set\+\_\+duty\+\_\+mc@{set\+\_\+duty\+\_\+mc}!motor.\+h@{motor.\+h}}
+\subsubsection[{set\+\_\+duty\+\_\+mc(\+U32 duty)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+duty\+\_\+mc (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{duty}
+\end{DoxyParamCaption}
+)}\label{motor_8h_a334a3e5169e70060d46a49c7992832e9}
+
+
+
+\begin{DoxyItemize}
+\item Load Compare C value 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty} & -\/ Compare value of ecap1 (Port C)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{motor_8h_aa5aa952927a9c3495c1e744908541580}{}\index{motor.\+h@{motor.\+h}!set\+\_\+duty\+\_\+md@{set\+\_\+duty\+\_\+md}}
+\index{set\+\_\+duty\+\_\+md@{set\+\_\+duty\+\_\+md}!motor.\+h@{motor.\+h}}
+\subsubsection[{set\+\_\+duty\+\_\+md(\+U32 duty)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+duty\+\_\+md (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{duty}
+\end{DoxyParamCaption}
+)}\label{motor_8h_aa5aa952927a9c3495c1e744908541580}
+
+
+
+\begin{DoxyItemize}
+\item Load Compare D value 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty} & -\/ Compare value of ecap0 (Port D)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{motor_8h_ad2ae80e52ada848a4e2ce9df3d0474cc}{}\index{motor.\+h@{motor.\+h}!set\+\_\+power@{set\+\_\+power}}
+\index{set\+\_\+power@{set\+\_\+power}!motor.\+h@{motor.\+h}}
+\subsubsection[{set\+\_\+power(motor\+\_\+port\+\_\+id Port, S32 Power)}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+power (
+\begin{DoxyParamCaption}
+\item[{{\bf motor\+\_\+port\+\_\+id}}]{port, }
+\item[{{\bf S32}}]{power}
+\end{DoxyParamCaption}
+)}\label{motor_8h_ad2ae80e52ada848a4e2ce9df3d0474cc}
+
+
+
+\begin{DoxyItemize}
+\item Set power percent applied to motors. The calculation are appropriated to nxt motors 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor\+\_\+port\+\_\+id} & -\/ Motor port id (M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+A, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+B, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+C, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+T\+\_\+\+D) \\
+\hline
+{\em power} & -\/ Power percent from -\/100 to 100. Rotate backward if a negative number is given.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{motor_8h_ad2ae80e52ada848a4e2ce9df3d0474cc_cgraph}
+\end{center}
+\end{figure}
+
+

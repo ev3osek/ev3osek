@@ -1,0 +1,57 @@
+\hypertarget{psc_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/psc.c File Reference}
+\label{psc_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/psc.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/psc.\+c}}
+
+
+This file contains the device abstraction layer A\+P\+Is for the P\+S\+C module. There are A\+P\+Is here to enable power domain, transitions for a particular module.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+psc\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+Include dependency graph for psc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{psc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{psc_8c_a0cd2b7fe05e515aee9da70ce503ddc01}{P\+S\+C\+Module\+Control} (unsigned int base\+Add, unsigned int module\+Id, unsigned int power\+Domain, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function sets the requested module in the required state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the device abstraction layer A\+P\+Is for the P\+S\+C module. There are A\+P\+Is here to enable power domain, transitions for a particular module. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{psc_8c_a0cd2b7fe05e515aee9da70ce503ddc01}{}\index{psc.\+c@{psc.\+c}!P\+S\+C\+Module\+Control@{P\+S\+C\+Module\+Control}}
+\index{P\+S\+C\+Module\+Control@{P\+S\+C\+Module\+Control}!psc.\+c@{psc.\+c}}
+\subsubsection[{P\+S\+C\+Module\+Control(unsigned int base\+Add, unsigned int module\+Id, unsigned int power\+Domain, unsigned int flags)}]{\setlength{\rightskip}{0pt plus 5cm}int P\+S\+C\+Module\+Control (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{module\+Id, }
+\item[{unsigned int}]{power\+Domain, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{psc_8c_a0cd2b7fe05e515aee9da70ce503ddc01}
+
+
+This function sets the requested module in the required state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & Memory address of the P\+S\+C instance used. \\
+\hline
+{\em module\+Id} & The module number of the module to be commanded. \\
+\hline
+{\em power\+Domain} & The power domain of the module to be commanded. \\
+\hline
+{\em flags} & This contains the flags that is a logical O\+R of the commands that can be given to a module.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 in case of successful transition, -\/1 otherwise. 
+\end{DoxyReturn}

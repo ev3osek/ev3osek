@@ -1,0 +1,324 @@
+\hypertarget{drivers_2gpio_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/gpio.c File Reference}
+\label{drivers_2gpio_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/gpio.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/gpio.\+c}}
+
+
+This file contains the device abstraction layer A\+P\+Is for G\+P\+I\+O.  
+
+
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+Include dependency graph for gpio.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{drivers_2gpio_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{drivers_2gpio_8c_aa87453cad789a75e11d027c9bf2f921c}{G\+P\+I\+O\+Dir\+Mode\+Set} (unsigned int base\+Add, unsigned int pin\+Number, unsigned int pin\+Dir)
+\begin{DoxyCompactList}\small\item\em This function configures the direction of a pin as input or output. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{drivers_2gpio_8c_aedea493fe4ba6686abd467e40dd87ca3}{G\+P\+I\+O\+Dir\+Mode\+Get} (unsigned int base\+Add, unsigned int pin\+Number)
+\begin{DoxyCompactList}\small\item\em This function gets the direction of a pin which has been configured as an input or an output pin. \end{DoxyCompactList}\item 
+void \hyperlink{drivers_2gpio_8c_a44853c765932160929c2b4186a0d5e74}{G\+P\+I\+O\+Pin\+Write} (unsigned int base\+Add, unsigned int pin\+Number, unsigned int bit\+Value)
+\begin{DoxyCompactList}\small\item\em This function writes a logic 1 or a logic 0 to the specified pin. \end{DoxyCompactList}\item 
+int \hyperlink{drivers_2gpio_8c_ace52d83782c7357d4d06d77ce46886c1}{G\+P\+I\+O\+Pin\+Read} (unsigned int base\+Add, unsigned int pin\+Number)
+\begin{DoxyCompactList}\small\item\em This function reads the value(logic level) of an input or an output pin. \end{DoxyCompactList}\item 
+void \hyperlink{drivers_2gpio_8c_afb6a35e6e5aadb581c70222c4c308be8}{G\+P\+I\+O\+Int\+Type\+Set} (unsigned int base\+Add, unsigned int pin\+Number, unsigned int int\+Type)
+\begin{DoxyCompactList}\small\item\em This function configures the trigger level type for which an interrupt is required to occur. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{drivers_2gpio_8c_af0f47677a488ac8c0e0d0a10d75d9c3e}{G\+P\+I\+O\+Int\+Type\+Get} (unsigned int base\+Add, unsigned int pin\+Number)
+\begin{DoxyCompactList}\small\item\em This function reads the trigger level type being set for interrupts to be generated. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{drivers_2gpio_8c_aed676071b47db9df0593ff0cdfd9a3c9}{G\+P\+I\+O\+Pin\+Int\+Status} (unsigned int base\+Add, unsigned int pin\+Number)
+\begin{DoxyCompactList}\small\item\em This function determines the status of interrupt on a specified pin. \end{DoxyCompactList}\item 
+void \hyperlink{drivers_2gpio_8c_a6d197e8b7383dbb4fd4fbca9d76c1c9d}{G\+P\+I\+O\+Pin\+Int\+Clear} (unsigned int base\+Add, unsigned int pin\+Number)
+\begin{DoxyCompactList}\small\item\em This function clears the interrupt status of the pin being accessed. \end{DoxyCompactList}\item 
+void \hyperlink{drivers_2gpio_8c_adf47f3ee9153ac3dc323b423c5c921d5}{G\+P\+I\+O\+Bank\+Int\+Enable} (unsigned int base\+Add, unsigned int bank\+Number)
+\begin{DoxyCompactList}\small\item\em This function enables the interrupt generation capability for the bank of G\+P\+I\+O pins specified. \end{DoxyCompactList}\item 
+void \hyperlink{drivers_2gpio_8c_ac82e9f0cd76464c789391821b7b3fb27}{G\+P\+I\+O\+Bank\+Int\+Disable} (unsigned int base\+Add, unsigned int bank\+Number)
+\begin{DoxyCompactList}\small\item\em This function disables the interrupt generation capability for the bank of G\+P\+I\+O pins specified. \end{DoxyCompactList}\item 
+void \hyperlink{drivers_2gpio_8c_ab84d4431fdd2f41ae902b2f2ff24e947}{G\+P\+I\+O\+Bank\+Pins\+Write} (unsigned int base\+Add, unsigned int bank\+Number, unsigned int set\+Pins, unsigned int clr\+Pins)
+\begin{DoxyCompactList}\small\item\em This function is used to collectively set and collectively clear the specified bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the device abstraction layer A\+P\+Is for G\+P\+I\+O. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{drivers_2gpio_8c_ac82e9f0cd76464c789391821b7b3fb27}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Bank\+Int\+Disable@{G\+P\+I\+O\+Bank\+Int\+Disable}}
+\index{G\+P\+I\+O\+Bank\+Int\+Disable@{G\+P\+I\+O\+Bank\+Int\+Disable}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Bank\+Int\+Disable(unsigned int base\+Add, unsigned int bank\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Bank\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{bank\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_ac82e9f0cd76464c789391821b7b3fb27}
+
+
+This function disables the interrupt generation capability for the bank of G\+P\+I\+O pins specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em bank\+Number} & This is the bank for whose pins interrupt generation capability needs to be disabled. bank\+Number is 0 for bank 0, 1 for bank 1 and so on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{drivers_2gpio_8c_adf47f3ee9153ac3dc323b423c5c921d5}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Bank\+Int\+Enable@{G\+P\+I\+O\+Bank\+Int\+Enable}}
+\index{G\+P\+I\+O\+Bank\+Int\+Enable@{G\+P\+I\+O\+Bank\+Int\+Enable}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Bank\+Int\+Enable(unsigned int base\+Add, unsigned int bank\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Bank\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{bank\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_adf47f3ee9153ac3dc323b423c5c921d5}
+
+
+This function enables the interrupt generation capability for the bank of G\+P\+I\+O pins specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em bank\+Number} & This is the bank for whose pins interrupt generation capabiility needs to be enabled. bank\+Number is 0 for bank 0, 1 for bank 1 and so on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{drivers_2gpio_8c_ab84d4431fdd2f41ae902b2f2ff24e947}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Bank\+Pins\+Write@{G\+P\+I\+O\+Bank\+Pins\+Write}}
+\index{G\+P\+I\+O\+Bank\+Pins\+Write@{G\+P\+I\+O\+Bank\+Pins\+Write}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Bank\+Pins\+Write(unsigned int base\+Add, unsigned int bank\+Number, unsigned int set\+Pins, unsigned int clr\+Pins)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Bank\+Pins\+Write (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{bank\+Number, }
+\item[{unsigned int}]{set\+Pins, }
+\item[{unsigned int}]{clr\+Pins}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_ab84d4431fdd2f41ae902b2f2ff24e947}
+
+
+This function is used to collectively set and collectively clear the specified bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em bank\+Number} & Numerical value of the bank whose pins are to be modified.\\
+\hline
+{\em set\+Pins} & The bit-\/mask of the pins whose values have to be set. This could be the bitwise O\+R of the following macros\+: -\/$>$ G\+P\+I\+O\+\_\+\+B\+A\+N\+K\+\_\+\+P\+I\+N\+\_\+n where n $>$= 0 and n $<$= 15.\\
+\hline
+{\em clr\+Pins} & The bit-\/mask of the pins whose values have to be cleared. This could be the bitwise O\+R of the following macros\+: -\/$>$ G\+P\+I\+O\+\_\+\+B\+A\+N\+K\+\_\+\+P\+I\+N\+\_\+n where n $>$= 0 and n $<$= 15.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The pre-\/requisite to write to any pins is that the pins have to be configured as output pins. 
+\end{DoxyNote}
+\hypertarget{drivers_2gpio_8c_aedea493fe4ba6686abd467e40dd87ca3}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Dir\+Mode\+Get@{G\+P\+I\+O\+Dir\+Mode\+Get}}
+\index{G\+P\+I\+O\+Dir\+Mode\+Get@{G\+P\+I\+O\+Dir\+Mode\+Get}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Dir\+Mode\+Get(unsigned int base\+Add, unsigned int pin\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+P\+I\+O\+Dir\+Mode\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_aedea493fe4ba6686abd467e40dd87ca3}
+
+
+This function gets the direction of a pin which has been configured as an input or an output pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This returns one of the following two values\+: 1$>$ G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T, if the pin is configured as an input pin. 2$>$ G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T, if the pin is configured as an output pin. 
+\end{DoxyReturn}
+\hypertarget{drivers_2gpio_8c_aa87453cad789a75e11d027c9bf2f921c}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Dir\+Mode\+Set@{G\+P\+I\+O\+Dir\+Mode\+Set}}
+\index{G\+P\+I\+O\+Dir\+Mode\+Set@{G\+P\+I\+O\+Dir\+Mode\+Set}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Dir\+Mode\+Set(unsigned int base\+Add, unsigned int pin\+Number, unsigned int pin\+Dir)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Dir\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number, }
+\item[{unsigned int}]{pin\+Dir}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_aa87453cad789a75e11d027c9bf2f921c}
+
+
+This function configures the direction of a pin as input or output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+{\em pin\+Dir} & The direction to be set for the pin. This can take the values\+: 1$>$ G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T, for configuring the pin as input. 2$>$ G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T, for configuring the pin as output.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Here we write to the D\+I\+Rn register. Writing a logic 1 configures the pin as input and writing logic 0 as output. By default, all the pins are set as input pins. 
+\end{DoxyNote}
+\hypertarget{drivers_2gpio_8c_af0f47677a488ac8c0e0d0a10d75d9c3e}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Int\+Type\+Get@{G\+P\+I\+O\+Int\+Type\+Get}}
+\index{G\+P\+I\+O\+Int\+Type\+Get@{G\+P\+I\+O\+Int\+Type\+Get}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Int\+Type\+Get(unsigned int base\+Add, unsigned int pin\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+P\+I\+O\+Int\+Type\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_af0f47677a488ac8c0e0d0a10d75d9c3e}
+
+
+This function reads the trigger level type being set for interrupts to be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used.\\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin to be accessed. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This returns a value which indicates the type of trigger level type being set. One of the following values is returned. 1$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+E\+D\+G\+E, indicating no interrupts will be generated over the corresponding pin. 2$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+A\+L\+L\+E\+D\+G\+E, indicating a falling edge on the corresponding pin signifies an interrupt generation. 3$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+I\+S\+E\+D\+G\+E, indicating a rising edge on the corresponding pin signifies an interrupt generation. 4$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+T\+H\+E\+D\+G\+E, indicating both edges on the corresponding pin signifies an interrupt each being generated. 
+\end{DoxyReturn}
+\hypertarget{drivers_2gpio_8c_afb6a35e6e5aadb581c70222c4c308be8}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Int\+Type\+Set@{G\+P\+I\+O\+Int\+Type\+Set}}
+\index{G\+P\+I\+O\+Int\+Type\+Set@{G\+P\+I\+O\+Int\+Type\+Set}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Int\+Type\+Set(unsigned int base\+Add, unsigned int pin\+Number, unsigned int int\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Int\+Type\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number, }
+\item[{unsigned int}]{int\+Type}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_afb6a35e6e5aadb581c70222c4c308be8}
+
+
+This function configures the trigger level type for which an interrupt is required to occur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used.\\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+{\em int\+Type} & This specifies the trigger level type. This can take one of the following four values\+: 1$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+E\+D\+G\+E, to not generate any interrupts. 2$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+A\+L\+L\+E\+D\+G\+E, to generate an interrupt on the falling edge of a signal on that pin. 3$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+I\+S\+E\+D\+G\+E, to generate an interrupt on the rising edge of a signal on that pin. 4$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+O\+T\+H\+E\+D\+G\+E, to generate interrupts on both rising and falling edges of a signal on that pin.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Configuring the trigger level type for generating interrupts is not enough for the G\+P\+I\+O module to generate interrupts. The user should also enable the interrupt generation capability for the bank to which the pin belongs to. Use the function \hyperlink{drivers_2gpio_8c_adf47f3ee9153ac3dc323b423c5c921d5}{G\+P\+I\+O\+Bank\+Int\+Enable()} to do the same. 
+\end{DoxyNote}
+\hypertarget{drivers_2gpio_8c_a6d197e8b7383dbb4fd4fbca9d76c1c9d}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Pin\+Int\+Clear@{G\+P\+I\+O\+Pin\+Int\+Clear}}
+\index{G\+P\+I\+O\+Pin\+Int\+Clear@{G\+P\+I\+O\+Pin\+Int\+Clear}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Pin\+Int\+Clear(unsigned int base\+Add, unsigned int pin\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Pin\+Int\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_a6d197e8b7383dbb4fd4fbca9d76c1c9d}
+
+
+This function clears the interrupt status of the pin being accessed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin to be accessed. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{drivers_2gpio_8c_aed676071b47db9df0593ff0cdfd9a3c9}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Pin\+Int\+Status@{G\+P\+I\+O\+Pin\+Int\+Status}}
+\index{G\+P\+I\+O\+Pin\+Int\+Status@{G\+P\+I\+O\+Pin\+Int\+Status}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Pin\+Int\+Status(unsigned int base\+Add, unsigned int pin\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+P\+I\+O\+Pin\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_aed676071b47db9df0593ff0cdfd9a3c9}
+
+
+This function determines the status of interrupt on a specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used.\\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin to be accessed. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This returns a value which expresses the status of an interrupt raised over the specified pin. 1$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+N\+O\+P\+E\+N\+D, if no interrupts are left to be serviced. 2$>$ G\+P\+I\+O\+\_\+\+I\+N\+T\+\_\+\+P\+E\+N\+D, if the interrupt raised over that pin is yet to be cleared and serviced.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If an interrupt over a pin is found to be pending, then the application can call \hyperlink{drivers_2gpio_8c_a6d197e8b7383dbb4fd4fbca9d76c1c9d}{G\+P\+I\+O\+Pin\+Int\+Clear()} to clear the interrupt status. 
+\end{DoxyNote}
+\hypertarget{drivers_2gpio_8c_ace52d83782c7357d4d06d77ce46886c1}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Pin\+Read@{G\+P\+I\+O\+Pin\+Read}}
+\index{G\+P\+I\+O\+Pin\+Read@{G\+P\+I\+O\+Pin\+Read}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Pin\+Read(unsigned int base\+Add, unsigned int pin\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}int G\+P\+I\+O\+Pin\+Read (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_ace52d83782c7357d4d06d77ce46886c1}
+
+
+This function reads the value(logic level) of an input or an output pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This returns the value present on the specified pin. This returns one of the following values\+: 1$>$ G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+L\+O\+W, if the value on the pin is logic 0. 2$>$ G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+H\+I\+G\+H, if the value on the pin is logic 1.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Using this function, we can read the values of both input and output pins. 
+\end{DoxyNote}
+\hypertarget{drivers_2gpio_8c_a44853c765932160929c2b4186a0d5e74}{}\index{drivers/gpio.\+c@{drivers/gpio.\+c}!G\+P\+I\+O\+Pin\+Write@{G\+P\+I\+O\+Pin\+Write}}
+\index{G\+P\+I\+O\+Pin\+Write@{G\+P\+I\+O\+Pin\+Write}!drivers/gpio.\+c@{drivers/gpio.\+c}}
+\subsubsection[{G\+P\+I\+O\+Pin\+Write(unsigned int base\+Add, unsigned int pin\+Number, unsigned int bit\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+P\+I\+O\+Pin\+Write (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{pin\+Number, }
+\item[{unsigned int}]{bit\+Value}
+\end{DoxyParamCaption}
+)}\label{drivers_2gpio_8c_a44853c765932160929c2b4186a0d5e74}
+
+
+This function writes a logic 1 or a logic 0 to the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & The memory address of the G\+P\+I\+O instance being used. \\
+\hline
+{\em pin\+Number} & The serial number of the G\+P\+I\+O pin. The 144 G\+P\+I\+O pins have serial numbers from 1 to 144.\\
+\hline
+{\em bit\+Value} & This signifies whether to write a logic 0 or logic 1 to the specified pin.\+This variable can take any of the following two values\+: 1$>$ G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+L\+O\+W, which indicates to clear(logic 0) the bit. 2$>$ G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+H\+I\+G\+H, which indicates to set(logic 1) the bit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The pre-\/requisite to write to any pin is that the pin has to be configured as an output pin. 
+\end{DoxyNote}

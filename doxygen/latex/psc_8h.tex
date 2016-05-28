@@ -1,0 +1,69 @@
+\hypertarget{psc_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/psc.h File Reference}
+\label{psc_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/psc.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/psc.\+h}}
+
+
+This file contains the function prototypes for the device abstraction layer for P\+S\+C. It also contains some related macro definitions and some files to be included.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+psc\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+Include dependency graph for psc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{psc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{psc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{psc_8h_a0cd2b7fe05e515aee9da70ce503ddc01}{P\+S\+C\+Module\+Control} (unsigned int base\+Add, unsigned int module\+Id, unsigned int power\+Domain, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function sets the requested module in the required state. \end{DoxyCompactList}\item 
+\hypertarget{psc_8h_a996854ad710d2e2b65976571d00c9cd0}{}void {\bfseries U\+S\+B\+Module\+Clk\+Enable} (unsigned int ul\+Index, unsigned int ul\+Base)\label{psc_8h_a996854ad710d2e2b65976571d00c9cd0}
+
+\item 
+\hypertarget{psc_8h_a56b5a7743c8d30e49ac9da18de08aae2}{}void {\bfseries U\+S\+B\+Module\+Clk\+Disable} (unsigned int ul\+Index, unsigned int ul\+Base)\label{psc_8h_a56b5a7743c8d30e49ac9da18de08aae2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the function prototypes for the device abstraction layer for P\+S\+C. It also contains some related macro definitions and some files to be included. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{psc_8h_a0cd2b7fe05e515aee9da70ce503ddc01}{}\index{psc.\+h@{psc.\+h}!P\+S\+C\+Module\+Control@{P\+S\+C\+Module\+Control}}
+\index{P\+S\+C\+Module\+Control@{P\+S\+C\+Module\+Control}!psc.\+h@{psc.\+h}}
+\subsubsection[{P\+S\+C\+Module\+Control(unsigned int base\+Add, unsigned int module\+Id, unsigned int power\+Domain, unsigned int flags)}]{\setlength{\rightskip}{0pt plus 5cm}int P\+S\+C\+Module\+Control (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{module\+Id, }
+\item[{unsigned int}]{power\+Domain, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{psc_8h_a0cd2b7fe05e515aee9da70ce503ddc01}
+
+
+This function sets the requested module in the required state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & Memory address of the P\+S\+C instance used. \\
+\hline
+{\em module\+Id} & The module number of the module to be commanded. \\
+\hline
+{\em power\+Domain} & The power domain of the module to be commanded. \\
+\hline
+{\em flags} & This contains the flags that is a logical O\+R of the commands that can be given to a module.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 in case of successful transition, -\/1 otherwise. 
+\end{DoxyReturn}

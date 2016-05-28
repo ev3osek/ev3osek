@@ -1,0 +1,4 @@
+<map id="ecrobot_get_motor_rev" name="ecrobot_get_motor_rev">
+<area shape="rect" id="node2" href="$ev3__motors_8c.html#a91dc6b395f3ad4a93931e26f7901b15c" title="Get motor revolution count in degree. " alt="" coords="208,5,352,32"/>
+<area shape="rect" id="node3" href="$motor_8c.html#ae50a2b7cd2bc5f961c3649524116f118" title="Get motor revolution count in degree. " alt="" coords="400,5,507,32"/>
+</map>

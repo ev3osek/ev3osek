@@ -1,0 +1,105 @@
+\hypertarget{cpu_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/cpu.c File Reference}
+\label{cpu_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/cpu.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/cpu.\+c}}
+
+
+This file contains the A\+P\+I definitions for configuring C\+P\+U.  
+
+
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\\*
+Include dependency graph for cpu.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{cpu_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cpu_8c_a2e4c718bb11e64594297079b8a792ce6}{C\+P\+U\+Switch\+To\+Privileged\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I can be used to switch from user mode to privileged mode The priviledge mode will be system mode. System mode will share the same resources as user mode, but with privileges. \end{DoxyCompactList}\item 
+void \hyperlink{cpu_8c_a4cf2b146c5525ebe1a784e41d5f2ed0b}{C\+P\+U\+Switch\+To\+User\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I can be used to switch from any previleged mode of A\+R\+M to user mode. After this A\+P\+I is called, the program will continue to operate in non-\/privileged mode, until any exception occurs. After the exception is serviced, execution will continue in user mode. \end{DoxyCompactList}\item 
+void \hyperlink{cpu_8c_ac84e3399d2fc5b4796d4a1b5b0968b02}{C\+P\+U\+Abort\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I is called when the C\+P\+U is aborted or during execution of any undefined instruction. Both I\+R\+Q and F\+I\+Q will be disabled when the C\+P\+U gets an abort and calls this A\+P\+I. \end{DoxyCompactList}\item 
+\hypertarget{cpu_8c_a2b8f676ff7875642231f04babbd17b97}{}unsigned int {\bfseries C\+P\+U\+Int\+Status} (void)\label{cpu_8c_a2b8f676ff7875642231f04babbd17b97}
+
+\item 
+\hypertarget{cpu_8c_a01d56a9889bcfc726ec266ba09d73fa3}{}void {\bfseries C\+P\+Uirqd} (void)\label{cpu_8c_a01d56a9889bcfc726ec266ba09d73fa3}
+
+\item 
+\hypertarget{cpu_8c_a3d86dea46868108da20356e10086242c}{}void {\bfseries C\+P\+Uirqe} (void)\label{cpu_8c_a3d86dea46868108da20356e10086242c}
+
+\item 
+\hypertarget{cpu_8c_adc402dfda2bcaa51df0d8d65f0fb5bf3}{}void {\bfseries C\+P\+Ufiqd} (void)\label{cpu_8c_adc402dfda2bcaa51df0d8d65f0fb5bf3}
+
+\item 
+\hypertarget{cpu_8c_a3449b67e080862631066abc74487ca7c}{}void {\bfseries C\+P\+Ufiqe} (void)\label{cpu_8c_a3449b67e080862631066abc74487ca7c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the A\+P\+I definitions for configuring C\+P\+U. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{cpu_8c_ac84e3399d2fc5b4796d4a1b5b0968b02}{}\index{cpu.\+c@{cpu.\+c}!C\+P\+U\+Abort\+Handler@{C\+P\+U\+Abort\+Handler}}
+\index{C\+P\+U\+Abort\+Handler@{C\+P\+U\+Abort\+Handler}!cpu.\+c@{cpu.\+c}}
+\subsubsection[{C\+P\+U\+Abort\+Handler(void)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+P\+U\+Abort\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cpu_8c_ac84e3399d2fc5b4796d4a1b5b0968b02}
+
+
+This A\+P\+I is called when the C\+P\+U is aborted or during execution of any undefined instruction. Both I\+R\+Q and F\+I\+Q will be disabled when the C\+P\+U gets an abort and calls this A\+P\+I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+Note \+: The user can perform error handling such as an immediate reset inside this A\+P\+I if required. \hypertarget{cpu_8c_a2e4c718bb11e64594297079b8a792ce6}{}\index{cpu.\+c@{cpu.\+c}!C\+P\+U\+Switch\+To\+Privileged\+Mode@{C\+P\+U\+Switch\+To\+Privileged\+Mode}}
+\index{C\+P\+U\+Switch\+To\+Privileged\+Mode@{C\+P\+U\+Switch\+To\+Privileged\+Mode}!cpu.\+c@{cpu.\+c}}
+\subsubsection[{C\+P\+U\+Switch\+To\+Privileged\+Mode(void)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+P\+U\+Switch\+To\+Privileged\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cpu_8c_a2e4c718bb11e64594297079b8a792ce6}
+
+
+This A\+P\+I can be used to switch from user mode to privileged mode The priviledge mode will be system mode. System mode will share the same resources as user mode, but with privileges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+Note \+: All the access to system configuration which needs privileged access can be done after calling this A\+P\+I. \hypertarget{cpu_8c_a4cf2b146c5525ebe1a784e41d5f2ed0b}{}\index{cpu.\+c@{cpu.\+c}!C\+P\+U\+Switch\+To\+User\+Mode@{C\+P\+U\+Switch\+To\+User\+Mode}}
+\index{C\+P\+U\+Switch\+To\+User\+Mode@{C\+P\+U\+Switch\+To\+User\+Mode}!cpu.\+c@{cpu.\+c}}
+\subsubsection[{C\+P\+U\+Switch\+To\+User\+Mode(void)}]{\setlength{\rightskip}{0pt plus 5cm}void C\+P\+U\+Switch\+To\+User\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cpu_8c_a4cf2b146c5525ebe1a784e41d5f2ed0b}
+
+
+This A\+P\+I can be used to switch from any previleged mode of A\+R\+M to user mode. After this A\+P\+I is called, the program will continue to operate in non-\/privileged mode, until any exception occurs. After the exception is serviced, execution will continue in user mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+Note \+: All the access to system configuration which needs privileged access shall be done before this A\+P\+I is called. 

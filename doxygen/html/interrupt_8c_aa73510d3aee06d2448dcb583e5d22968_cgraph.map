@@ -1,0 +1,3 @@
+<map id="IntEnable" name="IntEnable">
+<area shape="rect" id="node2" href="$interrupt_8c.html#ab762b4e340eb694a59114d16a252919f" title="Enables the processor IRQ only in CPSR. Makes the processor to respond to IRQs. This does not affect ..." alt="" coords="131,5,272,32"/>
+</map>

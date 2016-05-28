@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/include/hw/hw_syscfg0_AM1808.h" name="leJOS_EV3/src/ev3/include/hw/hw_syscfg0_AM1808.h">
+<area shape="rect" id="node2" href="$syscfg_8c.html" title="This file contains APIs to lock and unlock the System Configuration (SYSCFG) module registers by appr..." alt="" coords="5,95,185,136"/>
+<area shape="rect" id="node3" href="$i2c_8c.html" title="Function definitions related to I2C communication. " alt="" coords="209,102,379,129"/>
+<area shape="rect" id="node4" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="403,95,571,136"/>
+<area shape="rect" id="node5" href="$systick_8c.html" title="This header contains function definitions required to manage the tick in milliseconds on the EV3..." alt="" coords="595,102,790,129"/>
+</map>

@@ -1,0 +1,54 @@
+\hypertarget{structsensor__port__info}{}\section{sensor\+\_\+port\+\_\+info Struct Reference}
+\label{structsensor__port__info}\index{sensor\+\_\+port\+\_\+info@{sensor\+\_\+port\+\_\+info}}
+
+
+This struct combines information about a sensor port of the E\+V3.  
+
+
+
+
+{\ttfamily \#include $<$init.\+h$>$}
+
+
+
+Collaboration diagram for sensor\+\_\+port\+\_\+info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{structsensor__port__info__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structsensor__port__info_a3fc6cc33e12f94e78c5cbdc71d5416bc}{}unsigned int \hyperlink{structsensor__port__info_a3fc6cc33e12f94e78c5cbdc71d5416bc}{pin1}\label{structsensor__port__info_a3fc6cc33e12f94e78c5cbdc71d5416bc}
+
+\begin{DoxyCompactList}\small\item\em I\+\_\+\+O\+N\+B -\/ 9\+V enable (high) \end{DoxyCompactList}\item 
+\hypertarget{structsensor__port__info_a9ff95d672cc5c5cd128fefae948d73fd}{}unsigned int \hyperlink{structsensor__port__info_a9ff95d672cc5c5cd128fefae948d73fd}{pin2}\label{structsensor__port__info_a9ff95d672cc5c5cd128fefae948d73fd}
+
+\begin{DoxyCompactList}\small\item\em L\+E\+G\+D\+E\+T\+B -\/ Digital input pulled up. \end{DoxyCompactList}\item 
+\hypertarget{structsensor__port__info_a35e509974944706792ebf66614660cd0}{}unsigned int \hyperlink{structsensor__port__info_a35e509974944706792ebf66614660cd0}{pin5}\label{structsensor__port__info_a35e509974944706792ebf66614660cd0}
+
+\begin{DoxyCompactList}\small\item\em D\+I\+G\+I\+B0 -\/ Digital input/output. \end{DoxyCompactList}\item 
+\hypertarget{structsensor__port__info_a13e010069077bbf68832945b15ea0a4b}{}unsigned int \hyperlink{structsensor__port__info_a13e010069077bbf68832945b15ea0a4b}{pin6}\label{structsensor__port__info_a13e010069077bbf68832945b15ea0a4b}
+
+\begin{DoxyCompactList}\small\item\em D\+I\+G\+I\+B1 -\/ Digital input/output. \end{DoxyCompactList}\item 
+\hypertarget{structsensor__port__info_a3003cc1f2257b8aacae9401b1d0cb124}{}unsigned int \hyperlink{structsensor__port__info_a3003cc1f2257b8aacae9401b1d0cb124}{buffer}\label{structsensor__port__info_a3003cc1f2257b8aacae9401b1d0cb124}
+
+\begin{DoxyCompactList}\small\item\em Buffer disable. \end{DoxyCompactList}\item 
+\hypertarget{structsensor__port__info_a8026555c6f721c2471a314e343cf4f0b}{}unsigned char \hyperlink{structsensor__port__info_a8026555c6f721c2471a314e343cf4f0b}{adc1}\label{structsensor__port__info_a8026555c6f721c2471a314e343cf4f0b}
+
+\begin{DoxyCompactList}\small\item\em A\+D\+C channel 1. \end{DoxyCompactList}\item 
+\hypertarget{structsensor__port__info_a088382fdcfe1201d13b924a848e4f126}{}unsigned char \hyperlink{structsensor__port__info_a088382fdcfe1201d13b924a848e4f126}{adc2}\label{structsensor__port__info_a088382fdcfe1201d13b924a848e4f126}
+
+\begin{DoxyCompactList}\small\item\em A\+D\+C channel 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This struct combines information about a sensor port of the E\+V3. 
+
+It is based on code taken from the ev3ninja project. Each sensor port is described by 4 G\+P\+I\+O pins which connect to the sensor, 1 buffer G\+P\+I\+O pin and 2 A\+D\+C channels. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/\hyperlink{init_8h}{init.\+h}\end{DoxyCompactItemize}

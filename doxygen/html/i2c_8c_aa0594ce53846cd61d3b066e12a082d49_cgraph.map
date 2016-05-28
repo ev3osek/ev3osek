@@ -1,0 +1,4 @@
+<map id="i2c_read_bit" name="i2c_read_bit">
+<area shape="rect" id="node2" href="$syscfg_8c.html#ad9852f17f940b3d76a65df9d28a18960" title="This function unlocks the write&#45;protection of the SYSCFG module. " alt="" coords="145,5,308,32"/>
+<area shape="rect" id="node3" href="$syscfg_8c.html#a94096dbe2e0e6102149173a8d10e1591" title="This function imposes write&#45;protection on the SYSCFG module. " alt="" coords="151,56,302,83"/>
+</map>

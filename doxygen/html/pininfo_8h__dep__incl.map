@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/ninja/pininfo.h" name="leJOS_EV3/src/ev3/ninja/pininfo.h">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html" title="This contains function definitions required to interact with GPIO pins of the SoC. " alt="" coords="5,95,173,136"/>
+<area shape="rect" id="node3" href="$pininfo_8c.html" title="This file defines the array required to manipulate the PINMUX registers and set the functionality of ..." alt="" coords="197,95,365,136"/>
+<area shape="rect" id="node4" href="$ninja_2spi_8c.html" title="This contains function definitions required to interact with the SPI0 controller of the SoC which is ..." alt="" coords="389,95,557,136"/>
+</map>

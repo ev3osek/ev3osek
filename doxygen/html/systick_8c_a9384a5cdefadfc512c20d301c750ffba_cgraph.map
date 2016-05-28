@@ -1,0 +1,6 @@
+<map id="systick_isr_C" name="systick_isr_C">
+<area shape="rect" id="node2" href="$timer_8c.html#ab32d99a0068510c6ff13935e194bf6b2" title="Disables the specified timer interrupts. " alt="" coords="174,5,289,32"/>
+<area shape="rect" id="node3" href="$interrupt_8c.html#a6583ca8d7b474ed993ce31b45ef1dfd2" title="Clears a sytem interrupt status in AINTC. " alt="" coords="156,56,307,83"/>
+<area shape="rect" id="node4" href="$timer_8c.html#af9d8f894846ff4e5e5796f0e88ae8c78" title="Clears the status of specified timer interrupts. " alt="" coords="162,107,301,133"/>
+<area shape="rect" id="node5" href="$timer_8c.html#a87b3ce1e8fe5a7fde5ec8f75cae4ff8c" title="Enables the specified timer interrupts. The timer interrupts which are to be enabled can be passed as..." alt="" coords="176,157,287,184"/>
+</map>

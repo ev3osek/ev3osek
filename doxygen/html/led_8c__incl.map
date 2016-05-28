@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/ninja/led.c" name="leJOS_EV3/src/ev3/ninja/led.c">
+<area shape="rect" id="node2" href="$led_8h.html" title="This header declares function required to interact with the LEDs of the EV3 as well as enumerations t..." alt="" coords="25,95,76,121"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="101,95,158,121"/>
+<area shape="rect" id="node4" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="50,169,209,196"/>
+</map>

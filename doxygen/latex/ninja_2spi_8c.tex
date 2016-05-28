@@ -1,0 +1,153 @@
+\hypertarget{ninja_2spi_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/spi.c File Reference}
+\label{ninja_2spi_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/spi.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/spi.\+c}}
+
+
+This contains function definitions required to interact with the S\+P\+I0 controller of the So\+C which is connected to the A\+D\+C.  
+
+
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pininfo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}systick.\+h\char`\"{}}\\*
+Include dependency graph for spi.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{ninja_2spi_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{ninja_2spi_8c_ad7af17cf30742fc29c9829b6bd94bb7a}{}\#define \hyperlink{ninja_2spi_8c_ad7af17cf30742fc29c9829b6bd94bb7a}{S\+P\+I0\+\_\+\+C\+L\+O\+C\+K}~150000000\+U\+L\label{ninja_2spi_8c_ad7af17cf30742fc29c9829b6bd94bb7a}
+
+\begin{DoxyCompactList}\small\item\em The clock rate at which the S\+P\+I0 controller should run. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_ab66ed350f5009d26f2e70911e35113aa}{}\#define \hyperlink{ninja_2spi_8c_ab66ed350f5009d26f2e70911e35113aa}{A\+D\+C\+\_\+\+T\+I\+M\+E}~8\+U\+L\label{ninja_2spi_8c_ab66ed350f5009d26f2e70911e35113aa}
+
+\begin{DoxyCompactList}\small\item\em The delay between 2 A\+D\+C convertions. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a1827eb5abf90948b5eaf230be00170fd}{}\#define \hyperlink{ninja_2spi_8c_a1827eb5abf90948b5eaf230be00170fd}{A\+D\+C\+\_\+\+C\+L\+O\+C\+K}~((1000000\+U\+L $\ast$ 16\+U\+L) / A\+D\+C\+\_\+\+T\+I\+M\+E)\label{ninja_2spi_8c_a1827eb5abf90948b5eaf230be00170fd}
+
+\begin{DoxyCompactList}\small\item\em The clock rate at which the A\+D\+C runs. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a1200c12821ba1c1d5ed915d608e41127}{}\#define \hyperlink{ninja_2spi_8c_a1200c12821ba1c1d5ed915d608e41127}{C\+N\+V\+S\+P\+D}~((\hyperlink{ninja_2spi_8c_ad7af17cf30742fc29c9829b6bd94bb7a}{S\+P\+I0\+\_\+\+C\+L\+O\+C\+K} / \hyperlink{ninja_2spi_8c_a1827eb5abf90948b5eaf230be00170fd}{A\+D\+C\+\_\+\+C\+L\+O\+C\+K}) -\/ 1)\label{ninja_2spi_8c_a1200c12821ba1c1d5ed915d608e41127}
+
+\begin{DoxyCompactList}\small\item\em The maximum convertion speed. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}{}\#define \hyperlink{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}{S\+P\+I0\+\_\+\+O\+F\+F\+S\+E\+T}~(\hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{G\+P\+I\+O\+\_\+\+P\+I\+N}(9, 0) + 5)\label{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}
+
+\begin{DoxyCompactList}\small\item\em The offset of the first G\+P\+I\+O pin which can provide S\+P\+I functionality. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a16ce69be83444ff939653090fb7fa151}{}\#define \hyperlink{ninja_2spi_8c_a16ce69be83444ff939653090fb7fa151}{S\+P\+I0\+\_\+\+M\+O\+S\+I}~(\hyperlink{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}{S\+P\+I0\+\_\+\+O\+F\+F\+S\+E\+T} + 0)\label{ninja_2spi_8c_a16ce69be83444ff939653090fb7fa151}
+
+\begin{DoxyCompactList}\small\item\em The G\+P\+I\+O pin which provided the Master-\/\+Output-\/\+Slave-\/\+Input functionality for S\+P\+I0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_aabba8137ea69a9180bedb49e83873988}{}\#define \hyperlink{ninja_2spi_8c_aabba8137ea69a9180bedb49e83873988}{S\+P\+I0\+\_\+\+M\+I\+S\+O}~(\hyperlink{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}{S\+P\+I0\+\_\+\+O\+F\+F\+S\+E\+T} + 1)\label{ninja_2spi_8c_aabba8137ea69a9180bedb49e83873988}
+
+\begin{DoxyCompactList}\small\item\em The G\+P\+I\+O pin which provided the Master-\/\+Input-\/\+Slave-\/\+Output functionality for S\+P\+I0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a1b745563682c155a14b1a65f8ebe0c47}{}\#define \hyperlink{ninja_2spi_8c_a1b745563682c155a14b1a65f8ebe0c47}{S\+P\+I0\+\_\+\+S\+C\+L}~(\hyperlink{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}{S\+P\+I0\+\_\+\+O\+F\+F\+S\+E\+T} + 2)\label{ninja_2spi_8c_a1b745563682c155a14b1a65f8ebe0c47}
+
+\begin{DoxyCompactList}\small\item\em The G\+P\+I\+O pin which provided the Clock functionality for S\+P\+I0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a5764b944b7809f264ff68d12652a7be0}{}\#define \hyperlink{ninja_2spi_8c_a5764b944b7809f264ff68d12652a7be0}{S\+P\+I0\+\_\+\+C\+S}~(\hyperlink{ninja_2spi_8c_aa84b5e26da2355aec15cd5614b2e872e}{S\+P\+I0\+\_\+\+O\+F\+F\+S\+E\+T} + 3)\label{ninja_2spi_8c_a5764b944b7809f264ff68d12652a7be0}
+
+\begin{DoxyCompactList}\small\item\em The G\+P\+I\+O pin which provided the Chip Select functionality for S\+P\+I0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{}\#define \hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E}~((volatile void$\ast$)0x01\+C41000)\label{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}
+
+\begin{DoxyCompactList}\small\item\em The base address of the S\+P\+I0 control register. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a2fff656be3fb6ccee909f26d0e454bc4}{}\#define \hyperlink{ninja_2spi_8c_a2fff656be3fb6ccee909f26d0e454bc4}{S\+P\+I\+G\+C\+R0}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x00)))\label{ninja_2spi_8c_a2fff656be3fb6ccee909f26d0e454bc4}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 global configuration register 0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a14f248c3740f5a81c030ca53e24a2c4f}{}\#define \hyperlink{ninja_2spi_8c_a14f248c3740f5a81c030ca53e24a2c4f}{S\+P\+I\+G\+C\+R1}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x04)))\label{ninja_2spi_8c_a14f248c3740f5a81c030ca53e24a2c4f}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 global configuration register 1. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a0e7dc8948d4dfb1f2f00ed3eb8144c17}{}\#define \hyperlink{ninja_2spi_8c_a0e7dc8948d4dfb1f2f00ed3eb8144c17}{S\+P\+I\+I\+N\+T0}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x08)))\label{ninja_2spi_8c_a0e7dc8948d4dfb1f2f00ed3eb8144c17}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 interrupt register. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a88d156c265e8b6524c5d463fe73628eb}{}\#define \hyperlink{ninja_2spi_8c_a88d156c265e8b6524c5d463fe73628eb}{S\+P\+I\+P\+C0}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x14)))\label{ninja_2spi_8c_a88d156c265e8b6524c5d463fe73628eb}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 pin control register 0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a1c5d129f5319809fa367a9232c31423e}{}\#define \hyperlink{ninja_2spi_8c_a1c5d129f5319809fa367a9232c31423e}{S\+P\+I\+D\+A\+T0}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x38)))\label{ninja_2spi_8c_a1c5d129f5319809fa367a9232c31423e}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 data transmit register 0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_ac5b3fd94e87b5e8b307a086afbe1e78d}{}\#define \hyperlink{ninja_2spi_8c_ac5b3fd94e87b5e8b307a086afbe1e78d}{S\+P\+I\+D\+A\+T1}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x3\+C)))\label{ninja_2spi_8c_ac5b3fd94e87b5e8b307a086afbe1e78d}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 data transmit register 1. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a3819917ebf65619cc08363b994124216}{}\#define \hyperlink{ninja_2spi_8c_a3819917ebf65619cc08363b994124216}{S\+P\+I\+B\+U\+F}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x40)))\label{ninja_2spi_8c_a3819917ebf65619cc08363b994124216}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 receive buffer register. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_ae03a297fa1980db6a6193caa495165fe}{}\#define \hyperlink{ninja_2spi_8c_ae03a297fa1980db6a6193caa495165fe}{S\+P\+I\+D\+E\+L\+A\+Y}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x48)))\label{ninja_2spi_8c_ae03a297fa1980db6a6193caa495165fe}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 delay register. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a6170d0590afeb3c279c01128d83c9015}{}\#define \hyperlink{ninja_2spi_8c_a6170d0590afeb3c279c01128d83c9015}{S\+P\+I\+D\+E\+F}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x4\+C)))\label{ninja_2spi_8c_a6170d0590afeb3c279c01128d83c9015}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 default chip select register. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a3c16f1d8402d702944b7a5c5de927438}{}\#define \hyperlink{ninja_2spi_8c_a3c16f1d8402d702944b7a5c5de927438}{S\+P\+I\+F\+M\+T0}~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2spi_8c_a4a3757b6bf87a9402b4cc6ff355dd015}{S\+P\+I\+\_\+\+B\+A\+S\+E} + 0x50)))\label{ninja_2spi_8c_a3c16f1d8402d702944b7a5c5de927438}
+
+\begin{DoxyCompactList}\small\item\em The S\+P\+I0 data format register 0. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_a50f093535b4164ab6ef925198e7cc4b2}{}\#define \hyperlink{ninja_2spi_8c_a50f093535b4164ab6ef925198e7cc4b2}{S\+P\+I\+Tx\+F\+U\+L\+L}~(\hyperlink{ninja_2spi_8c_a3819917ebf65619cc08363b994124216}{S\+P\+I\+B\+U\+F} \& 0x20000000)\label{ninja_2spi_8c_a50f093535b4164ab6ef925198e7cc4b2}
+
+\begin{DoxyCompactList}\small\item\em Check if the transmit data buffer is full. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2spi_8c_abe92caedff5bb318e41cdd0fc53d5702}{}\#define \hyperlink{ninja_2spi_8c_abe92caedff5bb318e41cdd0fc53d5702}{S\+P\+I\+Rx\+E\+M\+P\+T\+Y}~(\hyperlink{ninja_2spi_8c_a3819917ebf65619cc08363b994124216}{S\+P\+I\+B\+U\+F} \& 0x80000000)\label{ninja_2spi_8c_abe92caedff5bb318e41cdd0fc53d5702}
+
+\begin{DoxyCompactList}\small\item\em Check if the receive data buffer is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \hyperlink{ninja_2spi_8c_a4bb7874eaf4a6b816c819510f0f331cb}{spi\+\_\+update} (unsigned short data)
+\begin{DoxyCompactList}\small\item\em Send data via the S\+P\+I0 controller and get an updated value received by the S\+P\+I0 controller. \end{DoxyCompactList}\item 
+void \hyperlink{ninja_2spi_8c_ae909944aa85ae98323073c628be541aa}{spi\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the S\+P\+I0 controller and the required G\+P\+I\+O pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This contains function definitions required to interact with the S\+P\+I0 controller of the So\+C which is connected to the A\+D\+C. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{ninja_2spi_8c_ae909944aa85ae98323073c628be541aa}{}\index{ninja/spi.\+c@{ninja/spi.\+c}!spi\+\_\+init@{spi\+\_\+init}}
+\index{spi\+\_\+init@{spi\+\_\+init}!ninja/spi.\+c@{ninja/spi.\+c}}
+\subsubsection[{spi\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void spi\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ninja_2spi_8c_ae909944aa85ae98323073c628be541aa}
+
+
+Initialize the S\+P\+I0 controller and the required G\+P\+I\+O pins. 
+
+For the G\+P\+I\+O pins, the S\+P\+I functionality will be set instead of the G\+P\+I\+O functionality.
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{ninja_2spi_8c_ae909944aa85ae98323073c628be541aa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ninja_2spi_8c_a4bb7874eaf4a6b816c819510f0f331cb}{}\index{ninja/spi.\+c@{ninja/spi.\+c}!spi\+\_\+update@{spi\+\_\+update}}
+\index{spi\+\_\+update@{spi\+\_\+update}!ninja/spi.\+c@{ninja/spi.\+c}}
+\subsubsection[{spi\+\_\+update(unsigned short data)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short spi\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{data}
+\end{DoxyParamCaption}
+)}\label{ninja_2spi_8c_a4bb7874eaf4a6b816c819510f0f331cb}
+
+
+Send data via the S\+P\+I0 controller and get an updated value received by the S\+P\+I0 controller. 
+
+Since the S\+P\+I0 controller is configured for chip select 3 only, all data sent and received will be to or from the A\+D\+C. According to the documentation of the A\+D\+C, the selected channel (0 to 15) will be probed and returned on frame n+2. Therefore, the command is sent 3 times and only the third value received is returned to the caller of this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ The data to send (since this is data to the A\+D\+C, check the A\+D\+C documentation for possible commands that can be sent)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value received from the A\+D\+C after sending the data 3 times 
+\end{DoxyReturn}

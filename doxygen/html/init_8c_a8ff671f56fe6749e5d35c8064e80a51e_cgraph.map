@@ -1,0 +1,5 @@
+<map id="sensor_init" name="sensor_init">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html#a624ad0306d1c4e6dfc8e2bb01798e0ce" title="Initialize a GPIO pin with its GPIO functionality and set its direction to input. ..." alt="" coords="143,5,247,32"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="299,56,393,83"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="139,107,251,133"/>
+</map>

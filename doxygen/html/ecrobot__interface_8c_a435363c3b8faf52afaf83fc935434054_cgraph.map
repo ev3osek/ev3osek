@@ -1,0 +1,4 @@
+<map id="ecrobot_term_sonar_sensor" name="ecrobot_term_sonar_sensor">
+<area shape="rect" id="node2" href="$ecrobot__interface_8c.html#adccd23ec10f6723d9ba9463dc44e01dc" title="Terminate a NXT sensor port used for I2C communication. " alt="" coords="191,13,313,39"/>
+<area shape="rect" id="node3" href="$i2c_8c.html#a4cb4750a8621c4e0d9b3aafd4af5230c" title="Disable an I2C port. " alt="" coords="361,13,448,39"/>
+</map>

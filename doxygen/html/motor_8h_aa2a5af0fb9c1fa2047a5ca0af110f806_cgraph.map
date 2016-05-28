@@ -1,0 +1,33 @@
+<map id="motor_init" name="motor_init">
+<area shape="rect" id="node2" href="$motor_8c.html#af701d3f5cabca15ad46c5ab614e8da2d" title="Load Compare B value " alt="" coords="335,5,432,32"/>
+<area shape="rect" id="node3" href="$motor_8c.html#a5ac1bf3bcb36ac7ae513eef6e4b5ceb5" title="Load Compare A value " alt="" coords="335,56,432,83"/>
+<area shape="rect" id="node4" href="$motor_8c.html#aa5aa952927a9c3495c1e744908541580" title="Load Compare D value " alt="" coords="335,107,432,133"/>
+<area shape="rect" id="node5" href="$motor_8c.html#a334a3e5169e70060d46a49c7992832e9" title="Load Compare C value " alt="" coords="335,157,432,184"/>
+<area shape="rect" id="node6" href="$motor_8c.html#adf88364d9a6474487d32f0909a132d46" title="Initialize EHRPWM. " alt="" coords="132,284,224,311"/>
+<area shape="rect" id="node21" href="$ninja_2gpio_8c.html#a624ad0306d1c4e6dfc8e2bb01798e0ce" title="Initialize a GPIO pin with its GPIO functionality and set its direction to input. ..." alt="" coords="1215,563,1319,589"/>
+<area shape="rect" id="node26" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="1211,613,1323,640"/>
+<area shape="rect" id="node7" href="$syscfg_8c.html#ad9852f17f940b3d76a65df9d28a18960" title="This function unlocks the write&#45;protection of the SYSCFG module. " alt="" coords="302,208,465,235"/>
+<area shape="rect" id="node8" href="$psc_8c.html#a0cd2b7fe05e515aee9da70ce503ddc01" title="This function sets the requested module in the required state. " alt="" coords="316,259,451,285"/>
+<area shape="rect" id="node9" href="$motor_8c.html#ac5b387bcac9ff8af13097e4292a6769f" title="This function does appropriate Pin multiplexing to enable the use of pwm1, ecap0 and ecap1 related pi..." alt="" coords="298,309,469,336"/>
+<area shape="rect" id="node10" href="$ehrpwm_8c.html#a07998e157a6e55df784aa3543ebf7697" title="This API disables the synchronization. Even if sync&#45;in event occurs the count value will not be reloa..." alt="" coords="276,360,491,387"/>
+<area shape="rect" id="node11" href="$ehrpwm_8c.html#a525c8131e2870b90f640725de883061a" title="This API selects the output sync source. It determines on which of the following event sync&#45;out has t..." alt="" coords="290,411,477,437"/>
+<area shape="rect" id="node12" href="$ehrpwm_8c.html#afc497c2bab4286561d658403f958a0e5" title="This API configures the action to be taken on A by the Action qualifier module upon receiving the eve..." alt="" coords="272,461,495,488"/>
+<area shape="rect" id="node13" href="$ehrpwm_8c.html#a79eb376f1d6ab2bbab1e163262f1c94d" title="his API configures the action to be taken on B by the Action qualifier module upon receiving the even..." alt="" coords="272,512,495,539"/>
+<area shape="rect" id="node14" href="$motor_8c.html#a948dbfc6459672a0eaa751152e7337fa" title="Enable GPIO interrupts for bank 5 and 6. " alt="" coords="327,563,439,589"/>
+<area shape="rect" id="node32" href="$syscfg_8c.html#a94096dbe2e0e6102149173a8d10e1591" title="This function imposes write&#45;protection on the SYSCFG module. " alt="" coords="308,613,459,640"/>
+<area shape="rect" id="node15" href="$interrupt_8c.html#a1ba160b3eddc19a9b5f3d1fa10ff6f46" title="Registers an interrupt Handler in the interrupt vector table for system interrupts. " alt="" coords="561,461,647,488"/>
+<area shape="rect" id="node16" href="$motor_8c.html#a0da918a60e129522d9e6c05ca4eb8c37" title="Interrupt service routine for Pin Bank 5 (ports A, B and C). Calls ev3_motor_quad_decode() if one of ..." alt="" coords="566,563,642,589"/>
+<area shape="rect" id="node29" href="$motor_8c.html#a68152e5f1a6568e900ccaf3c378c0900" title="Interrupt service routine for Pin Bank 6. Calls ev3_motor_quad_decode() to actualize current wheel re..." alt="" coords="566,512,642,539"/>
+<area shape="rect" id="node30" href="$interrupt_8c.html#a2315050a4707c58de742a7bdb6fce944" title="Set the channel number for a system interrupt. Channel numbers 0&#45;1 are mapped to FIQ and Channel numb..." alt="" coords="551,613,657,640"/>
+<area shape="rect" id="node31" href="$interrupt_8c.html#abe0fc487514af7fb2b839b713da2dff4" title="Enables the sytem interrupt in AINTC. The interrupt will be processed only if it is enabled in AINTC..." alt="" coords="543,411,665,437"/>
+<area shape="rect" id="node17" href="$drivers_2gpio_8c.html#ac82e9f0cd76464c789391821b7b3fb27" title="This function disables the interrupt generation capability for the bank of GPIO pins specified..." alt="" coords="725,461,869,488"/>
+<area shape="rect" id="node18" href="$motor_8c.html#a73b0c539f3f60ea84ad8f0032cd40fff" title="Calculate actual revolution count of given motor port. " alt="" coords="713,512,880,539"/>
+<area shape="rect" id="node27" href="$interrupt_8c.html#a6583ca8d7b474ed993ce31b45ef1dfd2" title="Clears a sytem interrupt status in AINTC. " alt="" coords="721,563,872,589"/>
+<area shape="rect" id="node28" href="$drivers_2gpio_8c.html#adf47f3ee9153ac3dc323b423c5c921d5" title="This function enables the interrupt generation capability for the bank of GPIO pins specified..." alt="" coords="727,613,867,640"/>
+<area shape="rect" id="node19" href="$motor_8c.html#aca19a71ed95e38078c301ee466d41b6d" title="Get GPIO value of pin 5 (INT). Is used to calculate motor revolution. " alt="" coords="936,461,1036,488"/>
+<area shape="rect" id="node23" href="$motor_8c.html#ac66d9444d5c9762c6984c9a975941ec5" title="Get GPIO value of pin 6 (DIR). Is used to calculate motor revolution. " alt="" coords="936,512,1036,539"/>
+<area shape="rect" id="node24" href="$motor_8c.html#a99b9142e7e982f5de5ad7b09970c49db" title="Set the state of an attached motor. " alt="" coords="928,563,1044,589"/>
+<area shape="rect" id="node20" href="$ninja_2gpio_8c.html#adaed681b483d3acdb4f65842049abcda" title="Get the signal at a GPIO pin which is configured as input. " alt="" coords="1092,512,1163,539"/>
+<area shape="rect" id="node22" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="1371,588,1465,615"/>
+<area shape="rect" id="node25" href="$ninja_2gpio_8c.html#a69974a7766fccf6b3ce362fec9ed8dfc" title="Set the value of a GPIO pin which is configured as output. " alt="" coords="1092,613,1163,640"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/drivers/syscfg.c" name="leJOS_EV3/src/ev3/drivers/syscfg.c">
+<area shape="rect" id="node2" href="$hw__syscfg0___a_m1808_8h.html" title="SYSCFG0 register definitions for AM1808. " alt="" coords="5,95,164,121"/>
+<area shape="rect" id="node3" href="$soc___a_m1808_8h.html" title="This file contains the peripheral information for AM1808 SOC. " alt="" coords="189,95,298,121"/>
+<area shape="rect" id="node4" href="$evm_a_m1808_8h.html" title="This file contains the board specific function prototypes for use by applications. " alt="" coords="322,95,429,121"/>
+<area shape="rect" id="node5" href="$hw__types_8h.html" title="Common type definitions and macros. " alt="" coords="453,95,543,121"/>
+</map>

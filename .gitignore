@@ -1,0 +1,13 @@
+*.o
+leJOS_EV3.a
+ECRobot.a
+*.asm
+*.elf
+boot.cmd
+boot.scr
+*.bin
+*.asm
+*.elf
+kernel_cfg.c
+kernel_id.h
+implementation.oil

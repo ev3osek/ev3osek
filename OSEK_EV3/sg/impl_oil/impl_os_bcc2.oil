@@ -1,0 +1,85 @@
+    OS {
+        ENUM [STANDARD, EXTENDED] STATUS = EXTENDED;
+        BOOLEAN STARTUPHOOK = FALSE;
+        BOOLEAN ERRORHOOK = FALSE;
+        BOOLEAN SHUTDOWNHOOK = FALSE;
+        BOOLEAN PRETASKHOOK = FALSE;
+        BOOLEAN POSTTASKHOOK = FALSE;
+        BOOLEAN USEGETSERVICEID = TRUE;
+        BOOLEAN USEPARAMETERACCESS = TRUE;
+        BOOLEAN USERESSCHEDULER = FALSE;
+    };
+    
+    APPMODE { };
+
+    TASK {
+        BOOLEAN [
+            TRUE {
+                APPMODE_TYPE APPMODE[];
+            },
+            FALSE
+        ] AUTOSTART = FALSE;
+
+        UINT32 [1..8] PRIORITY = NO_DEFAULT;
+        UINT32 [1..256] ACTIVATION = NO_DEFAULT;
+        ENUM [NON, FULL] SCHEDULE = NO_DEFAULT;
+        EVENT_TYPE EVENT[];
+        RESOURCE_TYPE RESOURCE[];
+        MESSAGE_TYPE MESSAGE[];
+
+        UINT32 STACKSIZE = 1024;
+    };
+
+    ISR {
+        UINT32 [1, 2] CATEGORY = NO_DEFAULT;
+        UINT32 PRIORITY = NO_DEFAULT;
+        UINT32 ENTRY = NO_DEFAULT;
+        RESOURCE_TYPE RESOURCE[];
+        MESSAGE_TYPE MESSAGE[];
+    };
+
+    COUNTER {
+        UINT32 MINCYCLE = NO_DEFAULT;
+        UINT32 [1..2147483647] MAXALLOWEDVALUE = NO_DEFAULT;
+        UINT32 TICKSPERBASE = NO_DEFAULT;
+    };
+
+    ALARM {
+        COUNTER_TYPE COUNTER;
+        ENUM [
+            ACTIVATETASK {
+                TASK_TYPE TASK;
+            },
+            SETEVENT {
+                TASK_TYPE TASK;
+                EVENT_TYPE EVENT;
+            },
+            ALARMCALLBACK {
+                SYMBOLNAME ALARMCALLBACKNAME = NO_DEFAULT;
+            }
+        ] ACTION = NO_DEFAULT;
+
+        BOOLEAN [
+            TRUE {
+                UINT32 ALARMTIME = NO_DEFAULT;
+                UINT32 CYCLETIME = NO_DEFAULT;
+                APPMODE_TYPE APPMODE[];
+            },
+            FALSE
+        ] AUTOSTART = FALSE;
+    };
+
+    EVENT {
+        UINT32 WITH_AUTO MASK = AUTO;
+    };
+
+    RESOURCE {
+        ENUM [
+            STANDARD,
+            LINKED {
+                RESOURCE_TYPE LINKEDRESOURCE;
+            },
+            INTERNAL
+        ] RESOURCEPROPERTY = NO_DEFAULT;
+    };
+

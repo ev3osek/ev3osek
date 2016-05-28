@@ -1,0 +1,8 @@
+<map id="leJOS_EV3/src/ev3/ninja/spi.c" name="leJOS_EV3/src/ev3/ninja/spi.c">
+<area shape="rect" id="node2" href="$ninja_2spi_8h.html" title="This header declares function required to interact with the SPI0 controller of the SoC which is conne..." alt="" coords="5,95,56,121"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="81,95,138,121"/>
+<area shape="rect" id="node5" href="$pininfo_8h.html" title="This header defines the struct that represents a GPIO pin in the ev3ninja driver and makes the corres..." alt="" coords="162,95,233,121"/>
+<area shape="rect" id="node6" href="$systick_8h.html" title="This header contains function declarations required to manage the tick in milliseconds on the EV3..." alt="" coords="257,95,332,121"/>
+<area shape="rect" id="node4" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="30,169,189,196"/>
+<area shape="rect" id="node7" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="253,169,336,196"/>
+</map>

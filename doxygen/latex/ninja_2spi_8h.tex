@@ -1,0 +1,80 @@
+\hypertarget{ninja_2spi_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/spi.h File Reference}
+\label{ninja_2spi_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/spi.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/spi.\+h}}
+
+
+This header declares function required to interact with the S\+P\+I0 controller of the So\+C which is connected to the A\+D\+C.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ninja_2spi_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \hyperlink{ninja_2spi_8h_a4bb7874eaf4a6b816c819510f0f331cb}{spi\+\_\+update} (unsigned short data)
+\begin{DoxyCompactList}\small\item\em Send data via the S\+P\+I0 controller and get an updated value received by the S\+P\+I0 controller. \end{DoxyCompactList}\item 
+void \hyperlink{ninja_2spi_8h_ae909944aa85ae98323073c628be541aa}{spi\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the S\+P\+I0 controller and the required G\+P\+I\+O pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header declares function required to interact with the S\+P\+I0 controller of the So\+C which is connected to the A\+D\+C. 
+
+\begin{DoxyAuthor}{Author}
+ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{ninja_2spi_8h_ae909944aa85ae98323073c628be541aa}{}\index{ninja/spi.\+h@{ninja/spi.\+h}!spi\+\_\+init@{spi\+\_\+init}}
+\index{spi\+\_\+init@{spi\+\_\+init}!ninja/spi.\+h@{ninja/spi.\+h}}
+\subsubsection[{spi\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void spi\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ninja_2spi_8h_ae909944aa85ae98323073c628be541aa}
+
+
+Initialize the S\+P\+I0 controller and the required G\+P\+I\+O pins. 
+
+For the G\+P\+I\+O pins, the S\+P\+I functionality will be set instead of the G\+P\+I\+O functionality.
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{ninja_2spi_8h_ae909944aa85ae98323073c628be541aa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ninja_2spi_8h_a4bb7874eaf4a6b816c819510f0f331cb}{}\index{ninja/spi.\+h@{ninja/spi.\+h}!spi\+\_\+update@{spi\+\_\+update}}
+\index{spi\+\_\+update@{spi\+\_\+update}!ninja/spi.\+h@{ninja/spi.\+h}}
+\subsubsection[{spi\+\_\+update(unsigned short data)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short spi\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{data}
+\end{DoxyParamCaption}
+)}\label{ninja_2spi_8h_a4bb7874eaf4a6b816c819510f0f331cb}
+
+
+Send data via the S\+P\+I0 controller and get an updated value received by the S\+P\+I0 controller. 
+
+Since the S\+P\+I0 controller is configured for chip select 3 only, all data sent and received will be to or from the A\+D\+C. According to the documentation of the A\+D\+C, the selected channel (0 to 15) will be probed and returned on frame n+2. Therefore, the command is sent 3 times and only the third value received is returned to the caller of this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ The data to send (since this is data to the A\+D\+C, check the A\+D\+C documentation for possible commands that can be sent)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value received from the A\+D\+C after sending the data 3 times 
+\end{DoxyReturn}

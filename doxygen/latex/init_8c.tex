@@ -1,0 +1,161 @@
+\hypertarget{init_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/init.c File Reference}
+\label{init_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/init.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/init.\+c}}
+
+
+This code is required in order to initialize the le\+J\+O\+S driver including all modules properly.  
+
+
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}systick.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/adc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/led.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/motor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/button.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}include/hw/soc\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+Include dependency graph for init.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{init_8c_aae3db3a98d70c22944d98e61fa398938}{interrupt\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the A\+I\+N\+T\+C by enabling normal interrupts (I\+R\+Q) and fast interrupts (F\+I\+Q) on all required levels. \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_a8ff671f56fe6749e5d35c8064e80a51e}{sensor\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the sensor ports of the E\+V3 by setting the correct pin-\/multiplexing configuration. \end{DoxyCompactList}\item 
+void \hyperlink{init_8c_aebbe6b9342d909d61305c7302e0eb41f}{le\+J\+O\+S\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the le\+J\+O\+S driver and all required submodules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{init_8c_abf8979144b3520dc3115c425ae3e2e5a}{is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized} = 0
+\begin{DoxyCompactList}\small\item\em A flag indicating if the A\+I\+N\+T\+C (Interrupt Controller) is already initialized or not. \end{DoxyCompactList}\item 
+\hyperlink{structsensor__port__info}{sensor\+\_\+port\+\_\+info} \hyperlink{init_8c_a91059f248da7912f3fb19bf0d8df76c9}{ports} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array storing information about the 4 sensor ports of the E\+V3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This code is required in order to initialize the le\+J\+O\+S driver including all modules properly. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{init_8c_aae3db3a98d70c22944d98e61fa398938}{}\index{init.\+c@{init.\+c}!interrupt\+\_\+init@{interrupt\+\_\+init}}
+\index{interrupt\+\_\+init@{interrupt\+\_\+init}!init.\+c@{init.\+c}}
+\subsubsection[{interrupt\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{init_8c_aae3db3a98d70c22944d98e61fa398938}
+
+
+Initialize the A\+I\+N\+T\+C by enabling normal interrupts (I\+R\+Q) and fast interrupts (F\+I\+Q) on all required levels. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{init_8c_aae3db3a98d70c22944d98e61fa398938_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{init_8c_aebbe6b9342d909d61305c7302e0eb41f}{}\index{init.\+c@{init.\+c}!le\+J\+O\+S\+\_\+init@{le\+J\+O\+S\+\_\+init}}
+\index{le\+J\+O\+S\+\_\+init@{le\+J\+O\+S\+\_\+init}!init.\+c@{init.\+c}}
+\subsubsection[{le\+J\+O\+S\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void le\+J\+O\+S\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{init_8c_aebbe6b9342d909d61305c7302e0eb41f}
+
+
+Initialize the le\+J\+O\+S driver and all required submodules. 
+
+Initialization contains\+: A\+I\+N\+T\+C, systick, sensor ports, motor ports, S\+P\+I controller, A\+D\+C, hardware buttons, L\+E\+Ds
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8c_aebbe6b9342d909d61305c7302e0eb41f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{init_8c_a8ff671f56fe6749e5d35c8064e80a51e}{}\index{init.\+c@{init.\+c}!sensor\+\_\+init@{sensor\+\_\+init}}
+\index{sensor\+\_\+init@{sensor\+\_\+init}!init.\+c@{init.\+c}}
+\subsubsection[{sensor\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{init_8c_a8ff671f56fe6749e5d35c8064e80a51e}
+
+
+Initialize the sensor ports of the E\+V3 by setting the correct pin-\/multiplexing configuration. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8c_a8ff671f56fe6749e5d35c8064e80a51e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{init_8c_abf8979144b3520dc3115c425ae3e2e5a}{}\index{init.\+c@{init.\+c}!is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized@{is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized}}
+\index{is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized@{is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized}!init.\+c@{init.\+c}}
+\subsubsection[{is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U8} is\+\_\+\+A\+I\+N\+T\+C\+\_\+initialized = 0}\label{init_8c_abf8979144b3520dc3115c425ae3e2e5a}
+
+
+A flag indicating if the A\+I\+N\+T\+C (Interrupt Controller) is already initialized or not. 
+
+This is required since the function le\+J\+O\+S\+\_\+init will be called twice in O\+S\+E\+K applications, but the systick and the A\+I\+N\+T\+C should only be initialized once. \hypertarget{init_8c_a91059f248da7912f3fb19bf0d8df76c9}{}\index{init.\+c@{init.\+c}!ports@{ports}}
+\index{ports@{ports}!init.\+c@{init.\+c}}
+\subsubsection[{ports}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sensor\+\_\+port\+\_\+info} ports\mbox{[}$\,$\mbox{]}}\label{init_8c_a91059f248da7912f3fb19bf0d8df76c9}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(8, 10), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(2,  2), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(0,  2), 
+      \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(0, 15), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(8, 11), 0x6, 0x5 \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(8, 12), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(8, 15), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(0, 14), 
+      \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(0, 13), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(8, 14), 0x8, 0x7 \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(8,  9), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7, 11), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(0, 12), 
+      \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(1, 14), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7,  9), 0xA, 0x9 \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6,  4), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7,  8), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(0,  1), 
+      \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(1, 15), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7, 10), 0xC, 0xB \},
+\}
+\end{DoxyCode}
+
+
+Array storing information about the 4 sensor ports of the E\+V3. 
+
+A internally used attribute. Needed for port access. 

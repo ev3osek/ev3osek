@@ -1,0 +1,219 @@
+\hypertarget{i2c_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/i2c.h File Reference}
+\label{i2c_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/i2c.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/i2c.\+h}}
+
+
+Function declarations related to I2\+C communication.  
+
+
+{\ttfamily \#include \char`\"{}mytypes.\+h\char`\"{}}\\*
+Include dependency graph for i2c.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{i2c_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i2_c___p_i_n}{I2\+C\+\_\+\+P\+I\+N}
+\begin{DoxyCompactList}\small\item\em This struct represents a G\+P\+I\+O pin used for I2\+C communication. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T}
+\begin{DoxyCompactList}\small\item\em This struct represents an I2\+C port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_i2_c___p_i_n}{I2\+C\+\_\+\+P\+I\+N} \hyperlink{i2c_8h_aa8c55938690691119cc7569bf63dbf40}{I2\+C\+\_\+\+P\+I\+N}
+\begin{DoxyCompactList}\small\item\em This struct represents a G\+P\+I\+O pin used for I2\+C communication. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} \hyperlink{i2c_8h_a0130d29c75c038b56562e7d13c5bc64c}{I2\+C\+\_\+\+P\+O\+R\+T}
+\begin{DoxyCompactList}\small\item\em This struct represents an I2\+C port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2c_8h_a4cb4750a8621c4e0d9b3aafd4af5230c}{i2c\+\_\+disable} (int port)
+\begin{DoxyCompactList}\small\item\em Disable an I2\+C port. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8h_a0332fb23d14c50f230824b0123198784}{i2c\+\_\+enable} (int port)
+\begin{DoxyCompactList}\small\item\em Enable an I2\+C port. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8h_a5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the I2\+C module. \end{DoxyCompactList}\item 
+int \hyperlink{i2c_8h_af78781a3419670e75e0ea69bef1316b7}{i2c\+\_\+busy} (int port)
+\begin{DoxyCompactList}\small\item\em Check whether an I2\+C port is currently busy or not. \end{DoxyCompactList}\item 
+int \hyperlink{i2c_8h_a1ccf872ddce00bf2c601aaa14c005d8d}{i2c\+\_\+start\+\_\+transaction} (int port, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} address, int internal\+\_\+address, int n\+\_\+internal\+\_\+address\+\_\+bytes, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$data, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} nbytes, int write)
+\begin{DoxyCompactList}\small\item\em Start a new I2\+C transaction A\+N\+D wait until it\textquotesingle{}s finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function declarations related to I2\+C communication. 
+
+I2\+C communication is required in order to interact with the digital sensors.
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{i2c_8h_aa8c55938690691119cc7569bf63dbf40}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+\+P\+I\+N@{I2\+C\+\_\+\+P\+I\+N}}
+\index{I2\+C\+\_\+\+P\+I\+N@{I2\+C\+\_\+\+P\+I\+N}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+\+P\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf I2\+C\+\_\+\+P\+I\+N}  {\bf I2\+C\+\_\+\+P\+I\+N}}\label{i2c_8h_aa8c55938690691119cc7569bf63dbf40}
+
+
+This struct represents a G\+P\+I\+O pin used for I2\+C communication. 
+
+Every pin is represented by a pin number on a G\+P\+I\+O bank (0 to 15) and one G\+P\+I\+O register to control that pin. Note\+: 2 G\+P\+I\+O banks always share one G\+P\+I\+O register, therefore bank 0 and 1 relate to register 0, bank 2 and 3 relate to register 1 and so on. \hypertarget{i2c_8h_a0130d29c75c038b56562e7d13c5bc64c}{}\index{i2c.\+h@{i2c.\+h}!I2\+C\+\_\+\+P\+O\+R\+T@{I2\+C\+\_\+\+P\+O\+R\+T}}
+\index{I2\+C\+\_\+\+P\+O\+R\+T@{I2\+C\+\_\+\+P\+O\+R\+T}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{I2\+C\+\_\+\+P\+O\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf I2\+C\+\_\+\+P\+O\+R\+T}  {\bf I2\+C\+\_\+\+P\+O\+R\+T}}\label{i2c_8h_a0130d29c75c038b56562e7d13c5bc64c}
+
+
+This struct represents an I2\+C port. 
+
+Every port is represented by two G\+P\+I\+O pins (S\+D\+A for data and S\+C\+L for clock). This struct also contains the corresponding bitmasks in order to manipulate said G\+P\+I\+O pins. 
+
+\subsection{Function Documentation}
+\hypertarget{i2c_8h_af78781a3419670e75e0ea69bef1316b7}{}\index{i2c.\+h@{i2c.\+h}!i2c\+\_\+busy@{i2c\+\_\+busy}}
+\index{i2c\+\_\+busy@{i2c\+\_\+busy}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{i2c\+\_\+busy(int port)}]{\setlength{\rightskip}{0pt plus 5cm}int i2c\+\_\+busy (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_af78781a3419670e75e0ea69bef1316b7}
+
+
+Check whether an I2\+C port is currently busy or not. 
+
+Since our I2\+C communication is currently not based on interrupts (as it is in the N\+X\+T version of the le\+J\+O\+S driver) a port is never busy. Therefore this function will always return 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always 0 since our port can never be busy (no transaction will be pending) 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_a4cb4750a8621c4e0d9b3aafd4af5230c}{}\index{i2c.\+h@{i2c.\+h}!i2c\+\_\+disable@{i2c\+\_\+disable}}
+\index{i2c\+\_\+disable@{i2c\+\_\+disable}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{i2c\+\_\+disable(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_a4cb4750a8621c4e0d9b3aafd4af5230c}
+
+
+Disable an I2\+C port. 
+
+This function currently has no functionality and therefore it is not necessary to call it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to disable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_a0332fb23d14c50f230824b0123198784}{}\index{i2c.\+h@{i2c.\+h}!i2c\+\_\+enable@{i2c\+\_\+enable}}
+\index{i2c\+\_\+enable@{i2c\+\_\+enable}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{i2c\+\_\+enable(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_a0332fb23d14c50f230824b0123198784}
+
+
+Enable an I2\+C port. 
+
+Enabling a port means configuring the corresponding pin-\/multiplexing registers and setting the pins as output pins with a high signal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to disable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{i2c_8h_a0332fb23d14c50f230824b0123198784_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8h_a5730d9445429351b9f750084c5cb5aae}{}\index{i2c.\+h@{i2c.\+h}!i2c\+\_\+init@{i2c\+\_\+init}}
+\index{i2c\+\_\+init@{i2c\+\_\+init}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{i2c\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_a5730d9445429351b9f750084c5cb5aae}
+
+
+Initialize the I2\+C module. 
+
+This function currently has no functionality and therefore it is not necessary to call it.
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_a1ccf872ddce00bf2c601aaa14c005d8d}{}\index{i2c.\+h@{i2c.\+h}!i2c\+\_\+start\+\_\+transaction@{i2c\+\_\+start\+\_\+transaction}}
+\index{i2c\+\_\+start\+\_\+transaction@{i2c\+\_\+start\+\_\+transaction}!i2c.\+h@{i2c.\+h}}
+\subsubsection[{i2c\+\_\+start\+\_\+transaction(int port, U32 address, int internal\+\_\+address, int n\+\_\+internal\+\_\+address\+\_\+bytes, U8 $\ast$data, U32 nbytes, int write)}]{\setlength{\rightskip}{0pt plus 5cm}int i2c\+\_\+start\+\_\+transaction (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{{\bf U32}}]{address, }
+\item[{int}]{internal\+\_\+address, }
+\item[{int}]{n\+\_\+internal\+\_\+address\+\_\+bytes, }
+\item[{{\bf U8} $\ast$}]{data, }
+\item[{{\bf U32}}]{nbytes, }
+\item[{int}]{write}
+\end{DoxyParamCaption}
+)}\label{i2c_8h_a1ccf872ddce00bf2c601aaa14c005d8d}
+
+
+Start a new I2\+C transaction A\+N\+D wait until it\textquotesingle{}s finished. 
+
+In contrast to the name of the function, this will not only start the I2\+C transaction. Instead, the whole transaction is processed before returning from this function. The name remains in order to be A\+P\+I-\/compatible with the N\+X\+T version of the le\+J\+O\+S driver. In this driver, the I2\+C communication was controlled using interrupts. Note\+: According to the I2\+C protocol, a write is represented by a 0 and not by a 1 as in this function call. This behaviour is intended an also to keep A\+P\+I-\/compatibility to the N\+X\+T version of the driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to use (0 to 3) \\
+\hline
+{\em address} & -\/ The I2\+C slave address of the slave device \\
+\hline
+{\em internal\+\_\+address} & -\/ Internal register address of slave device to read from or write to \\
+\hline
+{\em n\+\_\+internal\+\_\+address\+\_\+bytes} & -\/ Size of the internal register address in bytes \\
+\hline
+{\em data} & -\/ Buffer to store received data in or the data to send \\
+\hline
+{\em nbytes} & -\/ Amount of bytes to receive or send, i.\+e. the length of the data array \\
+\hline
+{\em write} & -\/ 1 if we want to write to the slave, 0 if we want to read from it\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the transaction was successful, otherwise the number of the byte for which no A\+C\+K was received (beginning with 1) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8h_a1ccf872ddce00bf2c601aaa14c005d8d_cgraph}
+\end{center}
+\end{figure}
+
+

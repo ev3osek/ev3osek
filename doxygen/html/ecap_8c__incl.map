@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/drivers/ecap.c" name="leJOS_EV3/src/ev3/drivers/ecap.c">
+<area shape="rect" id="node2" href="$hw__ecap_8h.html" title="ECAP register definitions. " alt="" coords="32,169,118,196"/>
+<area shape="rect" id="node3" href="$hw__types_8h.html" title="Common type definitions and macros. " alt="" coords="22,95,112,121"/>
+<area shape="rect" id="node4" href="$ecap_8h.html" title="This file contains the function prototypes for the device abstraction layer for ECAP. It also contains some related macro definitions and some files to be included. " alt="" coords="136,95,198,121"/>
+<area shape="rect" id="node5" href="$hw__pwmss_8h.html" title="PWMSS register definitions. " alt="" coords="222,95,320,121"/>
+</map>

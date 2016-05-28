@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/_spreferences/CodeReviewPreferences/module.msd" folder="_spreferences" />
+      <modulePath path="$PROJECT_DIR$/_spreferences/PlatformTemplates/module.msd" folder="_spreferences" />
+      <modulePath path="$PROJECT_DIR$/_spreferences/TypeSizeConfiguration/module.msd" folder="_spreferences" />
+      <modulePath path="$PROJECT_DIR$/languages/de.whz.external/de.whz.external.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.whz.make/de.whz.make.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.whz.osek.mindstorms/de.whz.osek.mindstorms.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.whz.osek.sandboxLanguage/de.whz.osek.sandboxLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/de.whz.osek/de.whz.osek.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.com/oil.com.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.event/oil.event.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.isr/oil.isr.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.message/oil.message.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.networkmessage/oil.networkmessage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.reference/oil.reference.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.task/oil.task.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.timer/oil.timer.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil.types/oil.types.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oil/oil.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/oilCore/oilCore.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/oil.sandbox/oil.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

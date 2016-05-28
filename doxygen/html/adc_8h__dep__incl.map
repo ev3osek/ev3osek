@@ -1,0 +1,9 @@
+<map id="leJOS_EV3/src/ev3/ninja/adc.h" name="leJOS_EV3/src/ev3/ninja/adc.h">
+<area shape="rect" id="node2" href="$ecrobot__interface_8h.html" title="This file contains the function declarations for the users ECRobot&#45;API. This API is used to interact ..." alt="" coords="5,102,196,129"/>
+<area shape="rect" id="node4" href="$adc__sensors_8c.html" title="This file contains the function definitions to read the analogous sensors. " alt="" coords="221,95,383,136"/>
+<area shape="rect" id="node5" href="$init_8c.html" title="This code is required in order to initialize the leJOS driver including all modules properly..." alt="" coords="408,102,577,129"/>
+<area shape="rect" id="node6" href="$adc_8c.html" title="This file contains function definitions to talk to the ADC. " alt="" coords="602,95,770,136"/>
+<area shape="rect" id="node7" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="794,95,962,136"/>
+<area shape="rect" id="node8" href="$power_8c.html" title="This header contains function definitions for the power management on the EV3. " alt="" coords="986,102,1173,129"/>
+<area shape="rect" id="node3" href="$ecrobot__interface_8c.html" title="This file contains the function definitions for the users ECRobot&#45;API. This API is used to interact w..." alt="" coords="5,184,196,211"/>
+</map>

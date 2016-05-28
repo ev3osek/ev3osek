@@ -1,0 +1,824 @@
+\hypertarget{interrupt_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/armv5/am1808/interrupt.h File Reference}
+\label{interrupt_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/armv5/am1808/interrupt.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/armv5/am1808/interrupt.\+h}}
+
+
+Interrupt related A\+P\+I declarations.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+Include dependency graph for interrupt.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{interrupt_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interrupt_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interrupt_8h_ae0e6601ee7ddcb229552d1ea4ecbf109}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C\+O\+M\+M\+T\+X}~0\label{interrupt_8h_ae0e6601ee7ddcb229552d1ea4ecbf109}
+
+\item 
+\hypertarget{interrupt_8h_a890edca76fdace8e1aa4ff6cccea9286}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C\+O\+M\+M\+R\+X}~1\label{interrupt_8h_a890edca76fdace8e1aa4ff6cccea9286}
+
+\item 
+\hypertarget{interrupt_8h_af76bc1191f255fbb08edc798a78b9b54}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+N\+I\+N\+T}~2\label{interrupt_8h_af76bc1191f255fbb08edc798a78b9b54}
+
+\item 
+\hypertarget{interrupt_8h_a188e7d7ddd0cde8ad0360bb36d6b4d2b}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T0}~3\label{interrupt_8h_a188e7d7ddd0cde8ad0360bb36d6b4d2b}
+
+\item 
+\hypertarget{interrupt_8h_a0825e8b5e0de5c759bea47414f373919}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T1}~4\label{interrupt_8h_a0825e8b5e0de5c759bea47414f373919}
+
+\item 
+\hypertarget{interrupt_8h_ac4c4283669b6e17c5fb98884d07f4094}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T2}~5\label{interrupt_8h_ac4c4283669b6e17c5fb98884d07f4094}
+
+\item 
+\hypertarget{interrupt_8h_adba99c11816b53130ab812eea0617458}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T3}~6\label{interrupt_8h_adba99c11816b53130ab812eea0617458}
+
+\item 
+\hypertarget{interrupt_8h_a0e29a65ed2a5b90c225ec358eab38019}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T4}~7\label{interrupt_8h_a0e29a65ed2a5b90c225ec358eab38019}
+
+\item 
+\hypertarget{interrupt_8h_acc3811c0cb497d4751a30bf0187ef3e0}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T5}~8\label{interrupt_8h_acc3811c0cb497d4751a30bf0187ef3e0}
+
+\item 
+\hypertarget{interrupt_8h_ac6e59810b9bb473b343b3bd6ee59bb2b}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T6}~9\label{interrupt_8h_ac6e59810b9bb473b343b3bd6ee59bb2b}
+
+\item 
+\hypertarget{interrupt_8h_aa8cbc4c1233e0870c5e16a6e02b33e87}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+V\+T\+O\+U\+T7}~10\label{interrupt_8h_aa8cbc4c1233e0870c5e16a6e02b33e87}
+
+\item 
+\hypertarget{interrupt_8h_ade301427b792a9cff1e2c5fc81f9771b}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C\+C\+I\+N\+T0}~11\label{interrupt_8h_ade301427b792a9cff1e2c5fc81f9771b}
+
+\item 
+\hypertarget{interrupt_8h_a625d2d52f9c8a0c831b43adde1f5d84b}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C\+C\+E\+R\+R\+I\+N\+T}~12\label{interrupt_8h_a625d2d52f9c8a0c831b43adde1f5d84b}
+
+\item 
+\hypertarget{interrupt_8h_a622eae768f1bef46897b2224f891075e}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+C\+E\+R\+R\+I\+N\+T0}~13\label{interrupt_8h_a622eae768f1bef46897b2224f891075e}
+
+\item 
+\hypertarget{interrupt_8h_ac1a8546e0710919c79ee962ad11ed30f}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+A\+E\+M\+I\+F\+I\+N\+T}~14\label{interrupt_8h_ac1a8546e0710919c79ee962ad11ed30f}
+
+\item 
+\hypertarget{interrupt_8h_aaac94d6d9c97f914e1a14b4cd06aecb4}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+I2\+C\+I\+N\+T0}~15\label{interrupt_8h_aaac94d6d9c97f914e1a14b4cd06aecb4}
+
+\item 
+\hypertarget{interrupt_8h_afab54a9406ec0afa20e65ff340ff6cbc}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+M\+M\+C\+S\+D\+I\+N\+T0}~16\label{interrupt_8h_afab54a9406ec0afa20e65ff340ff6cbc}
+
+\item 
+\hypertarget{interrupt_8h_afcc218dd403c6dd505520d259154c5b6}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+M\+M\+C\+S\+D\+I\+N\+T1}~17\label{interrupt_8h_afcc218dd403c6dd505520d259154c5b6}
+
+\item 
+\hypertarget{interrupt_8h_a6787eab058cb17d724eaaab2bd9fbdef}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+P\+S\+C\+I\+N\+T0}~18\label{interrupt_8h_a6787eab058cb17d724eaaab2bd9fbdef}
+
+\item 
+\hypertarget{interrupt_8h_a87a45f963bd67506dc598b6b0b035486}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+R\+T\+C}~19\label{interrupt_8h_a87a45f963bd67506dc598b6b0b035486}
+
+\item 
+\hypertarget{interrupt_8h_a950f791e9f5f84713d15b5ac90041210}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+P\+I\+N\+T0}~20\label{interrupt_8h_a950f791e9f5f84713d15b5ac90041210}
+
+\item 
+\hypertarget{interrupt_8h_ad206200999cdd86ecdd089817651e7e4}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+I\+N\+T12\+\_\+0}~21\label{interrupt_8h_ad206200999cdd86ecdd089817651e7e4}
+
+\item 
+\hypertarget{interrupt_8h_a2b4e10845eb4a5bb5723d32b7dc52915}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+I\+N\+T34\+\_\+0}~22\label{interrupt_8h_a2b4e10845eb4a5bb5723d32b7dc52915}
+
+\item 
+\hypertarget{interrupt_8h_a681d19d04a6d38ddeb53550b1bba39e6}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+I\+N\+T12\+\_\+1}~23\label{interrupt_8h_a681d19d04a6d38ddeb53550b1bba39e6}
+
+\item 
+\hypertarget{interrupt_8h_a7d1693ec58182f78029e3240e5fc3f1e}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+I\+N\+T34\+\_\+1}~24\label{interrupt_8h_a7d1693ec58182f78029e3240e5fc3f1e}
+
+\item 
+\hypertarget{interrupt_8h_a5caf915707109b11354c96fe941836b3}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+A\+R\+T\+I\+N\+T0}~25\label{interrupt_8h_a5caf915707109b11354c96fe941836b3}
+
+\item 
+\hypertarget{interrupt_8h_a2a8ec830c9223e75874525ad6715c0b6}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+P\+R\+O\+T\+E\+R\+R}~26\label{interrupt_8h_a2a8ec830c9223e75874525ad6715c0b6}
+
+\item 
+\hypertarget{interrupt_8h_abb27de3a081e4a64293c0a88c7000c19}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+C\+H\+I\+P\+I\+N\+T0}~28\label{interrupt_8h_abb27de3a081e4a64293c0a88c7000c19}
+
+\item 
+\hypertarget{interrupt_8h_a420818ff1f4a0275a4b875b926184a84}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+C\+H\+I\+P\+I\+N\+T1}~29\label{interrupt_8h_a420818ff1f4a0275a4b875b926184a84}
+
+\item 
+\hypertarget{interrupt_8h_abe3ac1a1c670970f4a37807f362025fd}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+C\+H\+I\+P\+I\+N\+T2}~30\label{interrupt_8h_abe3ac1a1c670970f4a37807f362025fd}
+
+\item 
+\hypertarget{interrupt_8h_a86d072f82fae8b7891e3eedf7bc250d5}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+C\+H\+I\+P\+I\+N\+T3}~31\label{interrupt_8h_a86d072f82fae8b7891e3eedf7bc250d5}
+
+\item 
+\hypertarget{interrupt_8h_a6b6eef5c9f85fb2f2c2e0079ecaea285}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+C\+E\+R\+R\+I\+N\+T1}~32\label{interrupt_8h_a6b6eef5c9f85fb2f2c2e0079ecaea285}
+
+\item 
+\hypertarget{interrupt_8h_a4a8ec16a1f080e3e997ba1e429d24a8a}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C0\+\_\+\+R\+X\+T\+H\+R\+E\+S\+H}~33\label{interrupt_8h_a4a8ec16a1f080e3e997ba1e429d24a8a}
+
+\item 
+\hypertarget{interrupt_8h_a60024f088bbb6943fec06b69151c727c}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C0\+\_\+\+R\+X}~34\label{interrupt_8h_a60024f088bbb6943fec06b69151c727c}
+
+\item 
+\hypertarget{interrupt_8h_a240b7be83ba59db5dcefdf5134b0c2c8}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C0\+\_\+\+T\+X}~35\label{interrupt_8h_a240b7be83ba59db5dcefdf5134b0c2c8}
+
+\item 
+\hypertarget{interrupt_8h_a4e6284b97f1fb1b6199746f6ff4eb3e3}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C0\+\_\+\+M\+I\+S\+C}~36\label{interrupt_8h_a4e6284b97f1fb1b6199746f6ff4eb3e3}
+
+\item 
+\hypertarget{interrupt_8h_aec2e948c5563449cf69ef8fda05ba5d8}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C1\+\_\+\+R\+X\+T\+H\+R\+E\+S\+H}~37\label{interrupt_8h_aec2e948c5563449cf69ef8fda05ba5d8}
+
+\item 
+\hypertarget{interrupt_8h_aef7bdba55452c9df703b790415750f48}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C1\+\_\+\+R\+X}~38\label{interrupt_8h_aef7bdba55452c9df703b790415750f48}
+
+\item 
+\hypertarget{interrupt_8h_af326c8c86b684537605e6b3a34c82e6e}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C1\+\_\+\+T\+X}~39\label{interrupt_8h_af326c8c86b684537605e6b3a34c82e6e}
+
+\item 
+\hypertarget{interrupt_8h_aea723d1e44582b126d51aac0e24143da}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+C1\+\_\+\+M\+I\+S\+C}~40\label{interrupt_8h_aea723d1e44582b126d51aac0e24143da}
+
+\item 
+\hypertarget{interrupt_8h_ad0244ab3995a68fd12ddd3f0794ef63e}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+D\+D\+R2\+M\+E\+M\+E\+R\+R}~41\label{interrupt_8h_ad0244ab3995a68fd12ddd3f0794ef63e}
+
+\item 
+\hypertarget{interrupt_8h_af36087a5a15aaac49a7a3cfbdb55c218}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B0}~42\label{interrupt_8h_af36087a5a15aaac49a7a3cfbdb55c218}
+
+\item 
+\hypertarget{interrupt_8h_a3a5c564c47b3bf4f394cda7092f390a1}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B1}~43\label{interrupt_8h_a3a5c564c47b3bf4f394cda7092f390a1}
+
+\item 
+\hypertarget{interrupt_8h_aebfe4071a4c4070836d1c6de746f3b41}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B2}~44\label{interrupt_8h_aebfe4071a4c4070836d1c6de746f3b41}
+
+\item 
+\hypertarget{interrupt_8h_a75136aa90934d79241bebb248ea679c8}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B3}~45\label{interrupt_8h_a75136aa90934d79241bebb248ea679c8}
+
+\item 
+\hypertarget{interrupt_8h_a4b81f8d9313d53421d03b76e5c87063c}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B4}~46\label{interrupt_8h_a4b81f8d9313d53421d03b76e5c87063c}
+
+\item 
+\hypertarget{interrupt_8h_a9a32a4b260d51d4f547c702a77d1dc16}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B5}~47\label{interrupt_8h_a9a32a4b260d51d4f547c702a77d1dc16}
+
+\item 
+\hypertarget{interrupt_8h_a8f25f640d3f08eef7828e95f735d1c64}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B6}~48\label{interrupt_8h_a8f25f640d3f08eef7828e95f735d1c64}
+
+\item 
+\hypertarget{interrupt_8h_a6ec892309c9dfdb19d8d0a6a12793836}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B7}~49\label{interrupt_8h_a6ec892309c9dfdb19d8d0a6a12793836}
+
+\item 
+\hypertarget{interrupt_8h_a2e5460af457d4426fb61ae5c0c1cecff}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+G\+P\+I\+O\+B8}~50\label{interrupt_8h_a2e5460af457d4426fb61ae5c0c1cecff}
+
+\item 
+\hypertarget{interrupt_8h_a594436259ad71a049957def800d87371}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+I2\+C\+I\+N\+T1}~51\label{interrupt_8h_a594436259ad71a049957def800d87371}
+
+\item 
+\hypertarget{interrupt_8h_a92c6cfa559c61eb1649da7483c86c7aa}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+L\+C\+D\+I\+N\+T}~52\label{interrupt_8h_a92c6cfa559c61eb1649da7483c86c7aa}
+
+\item 
+\hypertarget{interrupt_8h_a88bf83c8c0a653b2ade9dcf01a465e4c}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+A\+R\+T\+I\+N\+T1}~53\label{interrupt_8h_a88bf83c8c0a653b2ade9dcf01a465e4c}
+
+\item 
+\hypertarget{interrupt_8h_a96e9c4c4ac864d620bbc31d9d51b7b01}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+M\+C\+A\+S\+P\+I\+N\+T}~54\label{interrupt_8h_a96e9c4c4ac864d620bbc31d9d51b7b01}
+
+\item 
+\hypertarget{interrupt_8h_a43cdb83b8841f0ed77103231e650b094}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+P\+S\+C\+I\+N\+T1}~55\label{interrupt_8h_a43cdb83b8841f0ed77103231e650b094}
+
+\item 
+\hypertarget{interrupt_8h_a405e91e9ec638852d037f500145ecaa3}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+P\+I\+N\+T1}~56\label{interrupt_8h_a405e91e9ec638852d037f500145ecaa3}
+
+\item 
+\hypertarget{interrupt_8h_a9d537fd43c7a8aac265db102838ffa00}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+H\+P\+I\+\_\+\+I\+N\+T1}~57\label{interrupt_8h_a9d537fd43c7a8aac265db102838ffa00}
+
+\item 
+\hypertarget{interrupt_8h_a7c6a9a879582995917c6c5cd3214e7ca}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+S\+B0}~58\label{interrupt_8h_a7c6a9a879582995917c6c5cd3214e7ca}
+
+\item 
+\hypertarget{interrupt_8h_ac5253e2e40b38fb85080cca9bc05721c}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+S\+B1\+H\+C}~59\label{interrupt_8h_ac5253e2e40b38fb85080cca9bc05721c}
+
+\item 
+\hypertarget{interrupt_8h_a6eacbd51d49422b0e446be99aa8c83e5}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+S\+B1\+R\+W\+A\+K\+E}~60\label{interrupt_8h_a6eacbd51d49422b0e446be99aa8c83e5}
+
+\item 
+\hypertarget{interrupt_8h_a65e04d03f9a9ca258e85de25736475a2}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+U\+A\+R\+T\+I\+N\+T2}~61\label{interrupt_8h_a65e04d03f9a9ca258e85de25736475a2}
+
+\item 
+\hypertarget{interrupt_8h_a86dbdb763a65f1c384501b02437e3751}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+H\+R\+P\+W\+M0}~63\label{interrupt_8h_a86dbdb763a65f1c384501b02437e3751}
+
+\item 
+\hypertarget{interrupt_8h_a8f9bbce1288a66869a959058a8167393}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+H\+R\+P\+W\+M0\+T\+Z}~64\label{interrupt_8h_a8f9bbce1288a66869a959058a8167393}
+
+\item 
+\hypertarget{interrupt_8h_ad6143d12d3a294fe8c6d1b15362625fb}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+H\+R\+P\+W\+M1}~65\label{interrupt_8h_ad6143d12d3a294fe8c6d1b15362625fb}
+
+\item 
+\hypertarget{interrupt_8h_a04cc80b674822b5a8bab0da9d1d59e8a}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+H\+R\+P\+W\+M1\+T\+Z}~66\label{interrupt_8h_a04cc80b674822b5a8bab0da9d1d59e8a}
+
+\item 
+\hypertarget{interrupt_8h_ac62c5f640142c00ad2385acf633f6525}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+A\+T\+A}~67\label{interrupt_8h_ac62c5f640142c00ad2385acf633f6525}
+
+\item 
+\hypertarget{interrupt_8h_aea819ee3f8fff1ea5594fa053425f3ba}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+I\+M\+R2\+\_\+\+A\+L\+L}~68\label{interrupt_8h_aea819ee3f8fff1ea5594fa053425f3ba}
+
+\item 
+\hypertarget{interrupt_8h_a919d338323d6583d3d3aaf73038ca5f5}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+C\+A\+P0}~69\label{interrupt_8h_a919d338323d6583d3d3aaf73038ca5f5}
+
+\item 
+\hypertarget{interrupt_8h_a3774abf3c764e6ed3e6483fede407394}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+C\+A\+P1}~70\label{interrupt_8h_a3774abf3c764e6ed3e6483fede407394}
+
+\item 
+\hypertarget{interrupt_8h_ab48398d09073ffe965ee68b8b57f4978}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+E\+C\+A\+P2}~71\label{interrupt_8h_ab48398d09073ffe965ee68b8b57f4978}
+
+\item 
+\hypertarget{interrupt_8h_a718a7bab81345603b28c53333ff226f1}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+M\+M\+C\+S\+D}~72\label{interrupt_8h_a718a7bab81345603b28c53333ff226f1}
+
+\item 
+\hypertarget{interrupt_8h_afdf682acde77cd3a997f64daaa1e0d18}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+S\+D\+I\+O}~73\label{interrupt_8h_afdf682acde77cd3a997f64daaa1e0d18}
+
+\item 
+\hypertarget{interrupt_8h_a5e48b747654c47d662c9972eedb13dc8}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T0}~74\label{interrupt_8h_a5e48b747654c47d662c9972eedb13dc8}
+
+\item 
+\hypertarget{interrupt_8h_a088bcd239bbb0d6865f4a2951a370811}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T1}~75\label{interrupt_8h_a088bcd239bbb0d6865f4a2951a370811}
+
+\item 
+\hypertarget{interrupt_8h_adc60518719e44e382e80811c4897b4b3}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T2}~76\label{interrupt_8h_adc60518719e44e382e80811c4897b4b3}
+
+\item 
+\hypertarget{interrupt_8h_a981e03e72b35b82411854bbd3bdfa30e}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T3}~77\label{interrupt_8h_a981e03e72b35b82411854bbd3bdfa30e}
+
+\item 
+\hypertarget{interrupt_8h_aff6d26dcc2aeb22773c09486db15715d}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T4}~78\label{interrupt_8h_aff6d26dcc2aeb22773c09486db15715d}
+
+\item 
+\hypertarget{interrupt_8h_a06ab4173238f2338486a6c05b7a561e4}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T5}~79\label{interrupt_8h_a06ab4173238f2338486a6c05b7a561e4}
+
+\item 
+\hypertarget{interrupt_8h_a60784cd711688ae16dfb0ab5c184b84e}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T6}~80\label{interrupt_8h_a60784cd711688ae16dfb0ab5c184b84e}
+
+\item 
+\hypertarget{interrupt_8h_aabb7ed75488403565203e1e6174f2006}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R1\+\_\+\+C\+M\+P\+I\+N\+T7}~81\label{interrupt_8h_aabb7ed75488403565203e1e6174f2006}
+
+\item 
+\hypertarget{interrupt_8h_a49d8709cd3e223dfeffb81b593332301}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T0}~82\label{interrupt_8h_a49d8709cd3e223dfeffb81b593332301}
+
+\item 
+\hypertarget{interrupt_8h_aeef4716103c9fa306baf95d65355d93b}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T1}~83\label{interrupt_8h_aeef4716103c9fa306baf95d65355d93b}
+
+\item 
+\hypertarget{interrupt_8h_abe4a3dfac078b482d42ae7705bc3806a}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T2}~84\label{interrupt_8h_abe4a3dfac078b482d42ae7705bc3806a}
+
+\item 
+\hypertarget{interrupt_8h_a6c43de6ddcf9d2b40667b280d1d34f98}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T3}~85\label{interrupt_8h_a6c43de6ddcf9d2b40667b280d1d34f98}
+
+\item 
+\hypertarget{interrupt_8h_adb533762599f6f8a50f44653648f94db}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T4}~86\label{interrupt_8h_adb533762599f6f8a50f44653648f94db}
+
+\item 
+\hypertarget{interrupt_8h_afa17f6012cb1621497a2faaae4718a43}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T5}~87\label{interrupt_8h_afa17f6012cb1621497a2faaae4718a43}
+
+\item 
+\hypertarget{interrupt_8h_a838e1f313e9a4df5e17926602088b499}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T6}~88\label{interrupt_8h_a838e1f313e9a4df5e17926602088b499}
+
+\item 
+\hypertarget{interrupt_8h_ab66bb46fcca05679e2394a83ad00ffc5}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R2\+\_\+\+C\+M\+P\+I\+N\+T7}~89\label{interrupt_8h_ab66bb46fcca05679e2394a83ad00ffc5}
+
+\item 
+\hypertarget{interrupt_8h_a193da3f525de013aacc4c8805913d4e3}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+A\+R\+M\+C\+L\+K\+S\+T\+O\+P\+R\+E\+Q}~90\label{interrupt_8h_a193da3f525de013aacc4c8805913d4e3}
+
+\item 
+\hypertarget{interrupt_8h_a665c88caade4c76f0b727a76647dcf3b}{}\#define {\bfseries S\+Y\+S\+\_\+\+I\+N\+T\+\_\+\+V\+P\+I\+F}~92\label{interrupt_8h_a665c88caade4c76f0b727a76647dcf3b}
+
+\item 
+\hypertarget{interrupt_8h_a8b9ae71d2ea53a231841b41414acf1ec}{}\#define {\bfseries N\+U\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+S}~101\label{interrupt_8h_a8b9ae71d2ea53a231841b41414acf1ec}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interrupt_8h_a66ae177818daddb7c73ea03249a4a814}{Int\+I\+R\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a2d66d6dd7226083be390b94f4caa49fd}{Int\+I\+R\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a5cd0cfc1a32f73a1a5134d76fcacd733}{Int\+F\+I\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables F\+I\+Q in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a30cb5d865534284b230e238e42924fd6}{Int\+F\+I\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables F\+I\+Q host interrupts in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a216cbc1f5aed0d7e5f7ba557e730b0e9}{Int\+A\+I\+N\+T\+C\+Init} (void)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I is used to setup the A\+I\+N\+T\+C. This A\+P\+I shall be called before using the A\+I\+N\+T\+C. All the host interruptsi will be disabled after calling this A\+P\+I. The user shall enable all the interrupts required for processing. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_af9ea132f26754d4ef754f8e0efd65ee9}{Int\+Global\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables interrupts in G\+E\+R register of A\+I\+N\+T\+C. F\+I\+Q and I\+R\+Q will be signaled for processing. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_abded5bc491aa3e276202d3255ae904e0}{Int\+Global\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables interrupts in G\+E\+R register of A\+I\+N\+T\+C. No interrupts will be signaled by the A\+I\+N\+T\+C to the A\+R\+M core. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_ab762b4e340eb694a59114d16a252919f}{Int\+Master\+I\+R\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables the processor I\+R\+Q only in C\+P\+S\+R. Makes the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_acb5ffeca4b44276baa4181d3311a97fc}{Int\+Master\+I\+R\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables the processor I\+R\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a4d4febbbc95b51d284bc346b5aa788a2}{Int\+Master\+F\+I\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables the processor F\+I\+Q only in C\+P\+S\+R. Makes the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_aae274b2821fba73c2739571453cc045a}{Int\+Master\+F\+I\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables the processor F\+I\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_abe0fc487514af7fb2b839b713da2dff4}{Int\+System\+Enable} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Enables the sytem interrupt in A\+I\+N\+T\+C. The interrupt will be processed only if it is enabled in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a61c6399c8b062fe736107872d35bc335}{Int\+System\+Disable} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Disables the sytem interrupt in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a6583ca8d7b474ed993ce31b45ef1dfd2}{Int\+System\+Status\+Clear} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Clears a sytem interrupt status in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{interrupt_8h_a444a31ec996cdfeec24168a6bc5bc4cb}{Int\+Channel\+Get} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Get the channel number for a system interrupt. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{interrupt_8h_ae7aeb55359c3a2736025674554518e15}{Int\+System\+Status\+Raw\+Get} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Get the raw status of a system interrupt. This will return 1 if the status is set and return 0 if the status is clear. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{interrupt_8h_a27b74a838775cc8a14c17755048f49f9}{Int\+System\+Status\+Enabled\+Get} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Get the enabled status of a system interrupt. This will return 1 if the status is set, and return 0 if the status is clear. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{interrupt_8h_ad127dedd30b9a62678d2151127124915}{Int\+Master\+Status\+Get} (void)
+\begin{DoxyCompactList}\small\item\em Returns the status of the interrupts F\+I\+Q and I\+R\+Q. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a1c5eb5508fc4414e995db1091b4bc70f}{Int\+Un\+Register} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Unregisters an interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_a2315050a4707c58de742a7bdb6fce944}{Int\+Channel\+Set} (unsigned int intr\+Num, unsigned char channel)
+\begin{DoxyCompactList}\small\item\em Set the channel number for a system interrupt. Channel numbers 0-\/1 are mapped to F\+I\+Q and Channel numbers 2-\/31 are mapped to I\+R\+Q of A\+R\+M. One or more system interrupt can be mapped to one channel. However, one system interrupt can not be mapped to multiple channels. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_ad62475cd404bfde18fb2f44fa16a85cf}{Int\+Register} (unsigned int intr\+Num, void($\ast$pfn\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Registers an interrupt Handler in the interrupt vector table for system interrupts. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{interrupt_8h_ab68c251cea09ef839cfe9c0a026187be}{Int\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Read and save the stasus and Disables the processor I\+R\+Q . Prevents the processor to respond to I\+R\+Qs. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8h_aa73510d3aee06d2448dcb583e5d22968}{Int\+Enable} (unsigned char status)
+\begin{DoxyCompactList}\small\item\em Restore the processor I\+R\+Q only status. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interrupt related A\+P\+I declarations. 
+
+This file contains the A\+P\+I prototypes for configuring A\+I\+N\+T\+C 
+
+\subsection{Function Documentation}
+\hypertarget{interrupt_8h_a216cbc1f5aed0d7e5f7ba557e730b0e9}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+A\+I\+N\+T\+C\+Init@{Int\+A\+I\+N\+T\+C\+Init}}
+\index{Int\+A\+I\+N\+T\+C\+Init@{Int\+A\+I\+N\+T\+C\+Init}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+A\+I\+N\+T\+C\+Init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+A\+I\+N\+T\+C\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a216cbc1f5aed0d7e5f7ba557e730b0e9}
+
+
+This A\+P\+I is used to setup the A\+I\+N\+T\+C. This A\+P\+I shall be called before using the A\+I\+N\+T\+C. All the host interruptsi will be disabled after calling this A\+P\+I. The user shall enable all the interrupts required for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a444a31ec996cdfeec24168a6bc5bc4cb}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Channel\+Get@{Int\+Channel\+Get}}
+\index{Int\+Channel\+Get@{Int\+Channel\+Get}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Channel\+Get(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Int\+Channel\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a444a31ec996cdfeec24168a6bc5bc4cb}
+
+
+Get the channel number for a system interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel Number. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a2315050a4707c58de742a7bdb6fce944}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Channel\+Set@{Int\+Channel\+Set}}
+\index{Int\+Channel\+Set@{Int\+Channel\+Set}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Channel\+Set(unsigned int intr\+Num, unsigned char channel)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Channel\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num, }
+\item[{unsigned char}]{channel}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a2315050a4707c58de742a7bdb6fce944}
+
+
+Set the channel number for a system interrupt. Channel numbers 0-\/1 are mapped to F\+I\+Q and Channel numbers 2-\/31 are mapped to I\+R\+Q of A\+R\+M. One or more system interrupt can be mapped to one channel. However, one system interrupt can not be mapped to multiple channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number \\
+\hline
+{\em channel} & -\/ Channel Number to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_ab68c251cea09ef839cfe9c0a026187be}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Disable@{Int\+Disable}}
+\index{Int\+Disable@{Int\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_ab68c251cea09ef839cfe9c0a026187be}
+
+
+Read and save the stasus and Disables the processor I\+R\+Q . Prevents the processor to respond to I\+R\+Qs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current status of I\+R\+Q
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{interrupt_8h_ab68c251cea09ef839cfe9c0a026187be_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{interrupt_8h_aa73510d3aee06d2448dcb583e5d22968}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Enable@{Int\+Enable}}
+\index{Int\+Enable@{Int\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Enable(unsigned char status)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{status}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_aa73510d3aee06d2448dcb583e5d22968}
+
+
+Restore the processor I\+R\+Q only status. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & status returned by the Int\+Disable fundtion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{interrupt_8h_aa73510d3aee06d2448dcb583e5d22968_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{interrupt_8h_a30cb5d865534284b230e238e42924fd6}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+F\+I\+Q\+Disable@{Int\+F\+I\+Q\+Disable}}
+\index{Int\+F\+I\+Q\+Disable@{Int\+F\+I\+Q\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+F\+I\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+F\+I\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a30cb5d865534284b230e238e42924fd6}
+
+
+Disables F\+I\+Q host interrupts in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a5cd0cfc1a32f73a1a5134d76fcacd733}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+F\+I\+Q\+Enable@{Int\+F\+I\+Q\+Enable}}
+\index{Int\+F\+I\+Q\+Enable@{Int\+F\+I\+Q\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+F\+I\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+F\+I\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a5cd0cfc1a32f73a1a5134d76fcacd733}
+
+
+Enables F\+I\+Q in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_abded5bc491aa3e276202d3255ae904e0}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Global\+Disable@{Int\+Global\+Disable}}
+\index{Int\+Global\+Disable@{Int\+Global\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Global\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Global\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_abded5bc491aa3e276202d3255ae904e0}
+
+
+Disables interrupts in G\+E\+R register of A\+I\+N\+T\+C. No interrupts will be signaled by the A\+I\+N\+T\+C to the A\+R\+M core. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_af9ea132f26754d4ef754f8e0efd65ee9}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Global\+Enable@{Int\+Global\+Enable}}
+\index{Int\+Global\+Enable@{Int\+Global\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Global\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Global\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_af9ea132f26754d4ef754f8e0efd65ee9}
+
+
+Enables interrupts in G\+E\+R register of A\+I\+N\+T\+C. F\+I\+Q and I\+R\+Q will be signaled for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a2d66d6dd7226083be390b94f4caa49fd}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+I\+R\+Q\+Disable@{Int\+I\+R\+Q\+Disable}}
+\index{Int\+I\+R\+Q\+Disable@{Int\+I\+R\+Q\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+I\+R\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+I\+R\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a2d66d6dd7226083be390b94f4caa49fd}
+
+
+Disables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a66ae177818daddb7c73ea03249a4a814}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+I\+R\+Q\+Enable@{Int\+I\+R\+Q\+Enable}}
+\index{Int\+I\+R\+Q\+Enable@{Int\+I\+R\+Q\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+I\+R\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+I\+R\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a66ae177818daddb7c73ea03249a4a814}
+
+
+Enables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_aae274b2821fba73c2739571453cc045a}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Master\+F\+I\+Q\+Disable@{Int\+Master\+F\+I\+Q\+Disable}}
+\index{Int\+Master\+F\+I\+Q\+Disable@{Int\+Master\+F\+I\+Q\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Master\+F\+I\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+F\+I\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_aae274b2821fba73c2739571453cc045a}
+
+
+Disables the processor F\+I\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8h_a4d4febbbc95b51d284bc346b5aa788a2}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Master\+F\+I\+Q\+Enable@{Int\+Master\+F\+I\+Q\+Enable}}
+\index{Int\+Master\+F\+I\+Q\+Enable@{Int\+Master\+F\+I\+Q\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Master\+F\+I\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+F\+I\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a4d4febbbc95b51d284bc346b5aa788a2}
+
+
+Enables the processor F\+I\+Q only in C\+P\+S\+R. Makes the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8h_acb5ffeca4b44276baa4181d3311a97fc}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Master\+I\+R\+Q\+Disable@{Int\+Master\+I\+R\+Q\+Disable}}
+\index{Int\+Master\+I\+R\+Q\+Disable@{Int\+Master\+I\+R\+Q\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Master\+I\+R\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+I\+R\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_acb5ffeca4b44276baa4181d3311a97fc}
+
+
+Disables the processor I\+R\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8h_ab762b4e340eb694a59114d16a252919f}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Master\+I\+R\+Q\+Enable@{Int\+Master\+I\+R\+Q\+Enable}}
+\index{Int\+Master\+I\+R\+Q\+Enable@{Int\+Master\+I\+R\+Q\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Master\+I\+R\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+I\+R\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_ab762b4e340eb694a59114d16a252919f}
+
+
+Enables the processor I\+R\+Q only in C\+P\+S\+R. Makes the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8h_ad127dedd30b9a62678d2151127124915}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Master\+Status\+Get@{Int\+Master\+Status\+Get}}
+\index{Int\+Master\+Status\+Get@{Int\+Master\+Status\+Get}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Master\+Status\+Get(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Int\+Master\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_ad127dedd30b9a62678d2151127124915}
+
+
+Returns the status of the interrupts F\+I\+Q and I\+R\+Q. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of interrupt as in C\+P\+S\+R.
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8h_ad62475cd404bfde18fb2f44fa16a85cf}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Register@{Int\+Register}}
+\index{Int\+Register@{Int\+Register}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Register(unsigned int intr\+Num, void($\ast$pfn\+Handler)(void))}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Register (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num, }
+\item[{void($\ast$)(void)}]{fn\+Handler}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_ad62475cd404bfde18fb2f44fa16a85cf}
+
+
+Registers an interrupt Handler in the interrupt vector table for system interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number \\
+\hline
+{\em fn\+Handler} & -\/ Function pointer to the I\+S\+R\\
+\hline
+\end{DoxyParams}
+Note\+: When the interrupt occurs for the sytem interrupt number indicated, the control goes to the I\+S\+R given as the parameter.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a61c6399c8b062fe736107872d35bc335}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+System\+Disable@{Int\+System\+Disable}}
+\index{Int\+System\+Disable@{Int\+System\+Disable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+System\+Disable(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+System\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a61c6399c8b062fe736107872d35bc335}
+
+
+Disables the sytem interrupt in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_abe0fc487514af7fb2b839b713da2dff4}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+System\+Enable@{Int\+System\+Enable}}
+\index{Int\+System\+Enable@{Int\+System\+Enable}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+System\+Enable(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+System\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_abe0fc487514af7fb2b839b713da2dff4}
+
+
+Enables the sytem interrupt in A\+I\+N\+T\+C. The interrupt will be processed only if it is enabled in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a6583ca8d7b474ed993ce31b45ef1dfd2}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+System\+Status\+Clear@{Int\+System\+Status\+Clear}}
+\index{Int\+System\+Status\+Clear@{Int\+System\+Status\+Clear}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+System\+Status\+Clear(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+System\+Status\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a6583ca8d7b474ed993ce31b45ef1dfd2}
+
+
+Clears a sytem interrupt status in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a27b74a838775cc8a14c17755048f49f9}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+System\+Status\+Enabled\+Get@{Int\+System\+Status\+Enabled\+Get}}
+\index{Int\+System\+Status\+Enabled\+Get@{Int\+System\+Status\+Enabled\+Get}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+System\+Status\+Enabled\+Get(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Int\+System\+Status\+Enabled\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a27b74a838775cc8a14c17755048f49f9}
+
+
+Get the enabled status of a system interrupt. This will return 1 if the status is set, and return 0 if the status is clear. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enabled Interrupt Status. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_ae7aeb55359c3a2736025674554518e15}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+System\+Status\+Raw\+Get@{Int\+System\+Status\+Raw\+Get}}
+\index{Int\+System\+Status\+Raw\+Get@{Int\+System\+Status\+Raw\+Get}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+System\+Status\+Raw\+Get(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Int\+System\+Status\+Raw\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_ae7aeb55359c3a2736025674554518e15}
+
+
+Get the raw status of a system interrupt. This will return 1 if the status is set and return 0 if the status is clear. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Raw Interrupt Status 
+\end{DoxyReturn}
+\hypertarget{interrupt_8h_a1c5eb5508fc4414e995db1091b4bc70f}{}\index{interrupt.\+h@{interrupt.\+h}!Int\+Un\+Register@{Int\+Un\+Register}}
+\index{Int\+Un\+Register@{Int\+Un\+Register}!interrupt.\+h@{interrupt.\+h}}
+\subsubsection[{Int\+Un\+Register(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Un\+Register (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8h_a1c5eb5508fc4414e995db1091b4bc70f}
+
+
+Unregisters an interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number\\
+\hline
+\end{DoxyParams}
+Note\+: Once an interrupt is unregistered it will enter infinite loop once an interrupt occurs
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

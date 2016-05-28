@@ -1,0 +1,7 @@
+<map id="leJOS_EV3/src/ev3/power.c" name="leJOS_EV3/src/ev3/power.c">
+<area shape="rect" id="node2" href="$power_8h.html" title="This header contains function declarations for the power management on the EV3. " alt="" coords="13,80,81,107"/>
+<area shape="rect" id="node4" href="$adc_8h.html" title="This header contains function declarations to talk to the ADC. " alt="" coords="105,80,191,107"/>
+<area shape="rect" id="node5" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="215,80,303,107"/>
+<area shape="rect" id="node3" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node6" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="179,155,338,181"/>
+</map>

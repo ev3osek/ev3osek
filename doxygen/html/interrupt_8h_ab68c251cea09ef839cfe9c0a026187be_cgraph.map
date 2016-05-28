@@ -1,0 +1,4 @@
+<map id="IntDisable" name="IntDisable">
+<area shape="rect" id="node2" href="$interrupt_8c.html#ad127dedd30b9a62678d2151127124915" title="Returns the status of the interrupts FIQ and IRQ. " alt="" coords="139,5,275,32"/>
+<area shape="rect" id="node3" href="$interrupt_8c.html#acb5ffeca4b44276baa4181d3311a97fc" title="Disables the processor IRQ only in CPSR.Prevents the processor to respond to IRQs. This does not affect the set of interrupts enabled/disabled in the AINTC. " alt="" coords="135,56,280,83"/>
+</map>

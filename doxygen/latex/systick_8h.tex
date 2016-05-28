@@ -1,0 +1,183 @@
+\hypertarget{systick_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/systick.h File Reference}
+\label{systick_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/systick.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/systick.\+h}}
+
+
+This header contains function declarations required to manage the tick in milliseconds on the E\+V3.  
+
+
+{\ttfamily \#include \char`\"{}mytypes.\+h\char`\"{}}\\*
+Include dependency graph for systick.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{systick_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{systick_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{systick_8h_ac816b9d61dad1fe749c8eb4c625320dd}{systick\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the systick module, i.\+e. the hardware timer of the So\+C. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} \hyperlink{systick_8h_acef982ce45bc326644139ebb22310c88}{systick\+\_\+get\+\_\+ms} (void)
+\begin{DoxyCompactList}\small\item\em Get the current tick in milliseconds. \end{DoxyCompactList}\item 
+void \hyperlink{systick_8h_a28abc49038576a107430e9beb1382272}{systick\+\_\+wait\+\_\+ms} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} ms)
+\begin{DoxyCompactList}\small\item\em Wait for the specified amount of time. \end{DoxyCompactList}\item 
+void \hyperlink{systick_8h_a7b972d8ad1551e20f8aca8ab76ea258f}{systick\+\_\+wait\+\_\+ns} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} n)
+\begin{DoxyCompactList}\small\item\em Wait for the specified amount of time. \end{DoxyCompactList}\item 
+void \hyperlink{systick_8h_a6bb784bfdb4023498819d1b26c2273a9}{systick\+\_\+suspend} (void)
+\begin{DoxyCompactList}\small\item\em Disable the timer and therefore the systick. \end{DoxyCompactList}\item 
+void \hyperlink{systick_8h_abd308166607c7424fb1ae67fb24cba5e}{systick\+\_\+resume} (void)
+\begin{DoxyCompactList}\small\item\em Enable the timer and therefore the systick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header contains function declarations required to manage the tick in milliseconds on the E\+V3. 
+
+The tick is provided by a hardware timer of the A\+M1808 So\+C which will trigger an interrupt every millisecond.
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{systick_8h_acef982ce45bc326644139ebb22310c88}{}\index{systick.\+h@{systick.\+h}!systick\+\_\+get\+\_\+ms@{systick\+\_\+get\+\_\+ms}}
+\index{systick\+\_\+get\+\_\+ms@{systick\+\_\+get\+\_\+ms}!systick.\+h@{systick.\+h}}
+\subsubsection[{systick\+\_\+get\+\_\+ms(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U32} systick\+\_\+get\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{systick_8h_acef982ce45bc326644139ebb22310c88}
+
+
+Get the current tick in milliseconds. 
+
+\begin{DoxyReturn}{Returns}
+The current tick in milliseconds 
+\end{DoxyReturn}
+\hypertarget{systick_8h_ac816b9d61dad1fe749c8eb4c625320dd}{}\index{systick.\+h@{systick.\+h}!systick\+\_\+init@{systick\+\_\+init}}
+\index{systick\+\_\+init@{systick\+\_\+init}!systick.\+h@{systick.\+h}}
+\subsubsection[{systick\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void systick\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{systick_8h_ac816b9d61dad1fe749c8eb4c625320dd}
+
+
+Initialize the systick module, i.\+e. the hardware timer of the So\+C. 
+
+This function will register the corresponding I\+S\+R, enable the timer interrupt and configure interrupt channel 2 (normal interrupt) for the hardware timer.
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{systick_8h_ac816b9d61dad1fe749c8eb4c625320dd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{systick_8h_abd308166607c7424fb1ae67fb24cba5e}{}\index{systick.\+h@{systick.\+h}!systick\+\_\+resume@{systick\+\_\+resume}}
+\index{systick\+\_\+resume@{systick\+\_\+resume}!systick.\+h@{systick.\+h}}
+\subsubsection[{systick\+\_\+resume(void)}]{\setlength{\rightskip}{0pt plus 5cm}void systick\+\_\+resume (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{systick_8h_abd308166607c7424fb1ae67fb24cba5e}
+
+
+Enable the timer and therefore the systick. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{systick_8h_abd308166607c7424fb1ae67fb24cba5e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{systick_8h_a6bb784bfdb4023498819d1b26c2273a9}{}\index{systick.\+h@{systick.\+h}!systick\+\_\+suspend@{systick\+\_\+suspend}}
+\index{systick\+\_\+suspend@{systick\+\_\+suspend}!systick.\+h@{systick.\+h}}
+\subsubsection[{systick\+\_\+suspend(void)}]{\setlength{\rightskip}{0pt plus 5cm}void systick\+\_\+suspend (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{systick_8h_a6bb784bfdb4023498819d1b26c2273a9}
+
+
+Disable the timer and therefore the systick. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{systick_8h_a6bb784bfdb4023498819d1b26c2273a9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{systick_8h_a28abc49038576a107430e9beb1382272}{}\index{systick.\+h@{systick.\+h}!systick\+\_\+wait\+\_\+ms@{systick\+\_\+wait\+\_\+ms}}
+\index{systick\+\_\+wait\+\_\+ms@{systick\+\_\+wait\+\_\+ms}!systick.\+h@{systick.\+h}}
+\subsubsection[{systick\+\_\+wait\+\_\+ms(\+U32 ms)}]{\setlength{\rightskip}{0pt plus 5cm}void systick\+\_\+wait\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{ms}
+\end{DoxyParamCaption}
+)}\label{systick_8h_a28abc49038576a107430e9beb1382272}
+
+
+Wait for the specified amount of time. 
+
+Waiting with this function is an active waiting which will block until the time has elapsed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & -\/ The time to wait in milliseconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{systick_8h_a7b972d8ad1551e20f8aca8ab76ea258f}{}\index{systick.\+h@{systick.\+h}!systick\+\_\+wait\+\_\+ns@{systick\+\_\+wait\+\_\+ns}}
+\index{systick\+\_\+wait\+\_\+ns@{systick\+\_\+wait\+\_\+ns}!systick.\+h@{systick.\+h}}
+\subsubsection[{systick\+\_\+wait\+\_\+ns(\+U32 n)}]{\setlength{\rightskip}{0pt plus 5cm}void systick\+\_\+wait\+\_\+ns (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{ns}
+\end{DoxyParamCaption}
+)}\label{systick_8h_a7b972d8ad1551e20f8aca8ab76ea258f}
+
+
+Wait for the specified amount of time. 
+
+Waiting with this function is an active waiting which will block until the time has elapsed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ns} & -\/ The time to wait in nanoseconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

@@ -1,0 +1,241 @@
+\hypertarget{ninja_2gpio_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/gpio.c File Reference}
+\label{ninja_2gpio_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/gpio.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/gpio.\+c}}
+
+
+This contains function definitions required to interact with G\+P\+I\+O pins of the So\+C.  
+
+
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pininfo.\+h\char`\"{}}\\*
+Include dependency graph for gpio.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{ninja_2gpio_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}{}\#define \hyperlink{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}{S\+Y\+S\+C\+F\+G\+\_\+\+K\+I\+C\+K}(N)~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2gpio_8h_ab22a14dc6036b9eb0356b319a069451a}{S\+Y\+S\+C\+F\+G0\+\_\+\+B\+A\+S\+E} + 0x38 + (\+N) $\ast$ 0x4)))\label{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}
+
+\begin{DoxyCompactList}\small\item\em The K\+I\+C\+K registers required to unlock access to some S\+Y\+S\+C\+F\+G register (including the pin-\/multiplexing registers) \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_a4b359cdcc1755d3c15a9ee3fd0aa24f6}{}\#define \hyperlink{ninja_2gpio_8c_a4b359cdcc1755d3c15a9ee3fd0aa24f6}{S\+Y\+S\+C\+F\+G\+\_\+\+P\+I\+N\+M\+U\+X}(N)~($\ast$((volatile unsigned int$\ast$)(\hyperlink{ninja_2gpio_8h_ab22a14dc6036b9eb0356b319a069451a}{S\+Y\+S\+C\+F\+G0\+\_\+\+B\+A\+S\+E} + 0x120 + (\+N) $\ast$ 0x4)))\label{ninja_2gpio_8c_a4b359cdcc1755d3c15a9ee3fd0aa24f6}
+
+\begin{DoxyCompactList}\small\item\em The P\+I\+N\+M\+U\+X registers in the S\+Y\+S\+C\+F\+G0 register in order to manipulate the pin-\/multiplexing configuration. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_a361f69779e24032f4eba42dad79812bc}{}\#define \hyperlink{ninja_2gpio_8c_a361f69779e24032f4eba42dad79812bc}{K\+I\+C\+K0\+\_\+\+U\+N\+L\+O\+C\+K}~0x83\+E70\+B13\label{ninja_2gpio_8c_a361f69779e24032f4eba42dad79812bc}
+
+\begin{DoxyCompactList}\small\item\em The value which needs to be written to K\+I\+C\+K0 register in order to unlock the protected registers. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_a7455c842e696953079909b7144240606}{}\#define \hyperlink{ninja_2gpio_8c_a7455c842e696953079909b7144240606}{K\+I\+C\+K1\+\_\+\+U\+N\+L\+O\+C\+K}~0x95\+A4\+F1\+E0\label{ninja_2gpio_8c_a7455c842e696953079909b7144240606}
+
+\begin{DoxyCompactList}\small\item\em The value which needs to be written to K\+I\+C\+K1 register in order to unlock the protected registers. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_a05b936a26c2338bc54b64cbed9f81722}{}\#define \hyperlink{ninja_2gpio_8c_a05b936a26c2338bc54b64cbed9f81722}{K\+I\+C\+K0\+\_\+\+L\+O\+C\+K}~0x0\label{ninja_2gpio_8c_a05b936a26c2338bc54b64cbed9f81722}
+
+\begin{DoxyCompactList}\small\item\em Any random value which can to be written to K\+I\+C\+K0 register in order to lock the protected registers. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_ad359cb767f0fe52aed21674e330b57ce}{}\#define \hyperlink{ninja_2gpio_8c_ad359cb767f0fe52aed21674e330b57ce}{K\+I\+C\+K1\+\_\+\+L\+O\+C\+K}~0x0\label{ninja_2gpio_8c_ad359cb767f0fe52aed21674e330b57ce}
+
+\begin{DoxyCompactList}\small\item\em Any random value which can to be written to K\+I\+C\+K1 register in order to lock the protected registers. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_a272860a898b1039db0f134ef67f5e562}{}\#define \hyperlink{ninja_2gpio_8c_a272860a898b1039db0f134ef67f5e562}{S\+Y\+S\+C\+F\+G\+\_\+\+U\+N\+L\+O\+C\+K}~\{ \hyperlink{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}{S\+Y\+S\+C\+F\+G\+\_\+\+K\+I\+C\+K}(0) = \hyperlink{ninja_2gpio_8c_a361f69779e24032f4eba42dad79812bc}{K\+I\+C\+K0\+\_\+\+U\+N\+L\+O\+C\+K}; \hyperlink{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}{S\+Y\+S\+C\+F\+G\+\_\+\+K\+I\+C\+K}(1) = \hyperlink{ninja_2gpio_8c_a7455c842e696953079909b7144240606}{K\+I\+C\+K1\+\_\+\+U\+N\+L\+O\+C\+K}; \}\label{ninja_2gpio_8c_a272860a898b1039db0f134ef67f5e562}
+
+\begin{DoxyCompactList}\small\item\em Unlock the protected registers by writing the required values into the K\+I\+C\+K registers. \end{DoxyCompactList}\item 
+\hypertarget{ninja_2gpio_8c_a9ee322baacba8426a68b8d92a978dc62}{}\#define \hyperlink{ninja_2gpio_8c_a9ee322baacba8426a68b8d92a978dc62}{S\+Y\+S\+C\+F\+G\+\_\+\+L\+O\+C\+K}~\{ \hyperlink{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}{S\+Y\+S\+C\+F\+G\+\_\+\+K\+I\+C\+K}(0) = \hyperlink{ninja_2gpio_8c_a05b936a26c2338bc54b64cbed9f81722}{K\+I\+C\+K0\+\_\+\+L\+O\+C\+K}; \hyperlink{ninja_2gpio_8c_a9942a5007f78ce35c7202661acf23f16}{S\+Y\+S\+C\+F\+G\+\_\+\+K\+I\+C\+K}(1) = \hyperlink{ninja_2gpio_8c_ad359cb767f0fe52aed21674e330b57ce}{K\+I\+C\+K1\+\_\+\+L\+O\+C\+K}; \}\label{ninja_2gpio_8c_a9ee322baacba8426a68b8d92a978dc62}
+
+\begin{DoxyCompactList}\small\item\em Lock the protected registers by writing random values into the K\+I\+C\+K registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ninja_2gpio_8c_a8cc18d800719367f95a7c1b1496e4267}{gpio\+\_\+init\+\_\+pin} (unsigned int pin)
+\begin{DoxyCompactList}\small\item\em Initialize a G\+P\+I\+O pin with its G\+P\+I\+O functionality. \end{DoxyCompactList}\item 
+void \hyperlink{ninja_2gpio_8c_a7f7ab845fe3eb7d621eeaec3b116d6d2}{gpio\+\_\+init\+\_\+outpin} (unsigned int pin)
+\begin{DoxyCompactList}\small\item\em Initialize a G\+P\+I\+O pin with its G\+P\+I\+O functionality and set its direction to output. \end{DoxyCompactList}\item 
+void \hyperlink{ninja_2gpio_8c_a624ad0306d1c4e6dfc8e2bb01798e0ce}{gpio\+\_\+init\+\_\+inpin} (unsigned int pin)
+\begin{DoxyCompactList}\small\item\em Initialize a G\+P\+I\+O pin with its G\+P\+I\+O functionality and set its direction to input. \end{DoxyCompactList}\item 
+void \hyperlink{ninja_2gpio_8c_a69974a7766fccf6b3ce362fec9ed8dfc}{gpio\+\_\+set} (unsigned int pin, unsigned int value)
+\begin{DoxyCompactList}\small\item\em Set the value of a G\+P\+I\+O pin which is configured as output. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ninja_2gpio_8c_adaed681b483d3acdb4f65842049abcda}{gpio\+\_\+get} (unsigned int pin)
+\begin{DoxyCompactList}\small\item\em Get the signal at a G\+P\+I\+O pin which is configured as input. \end{DoxyCompactList}\item 
+void \hyperlink{ninja_2gpio_8c_a07a531a51b7fd24c87ce1a8686657bfe}{turn\+\_\+off\+\_\+brick} (void)
+\begin{DoxyCompactList}\small\item\em Turn the E\+V3 off by setting G\+P\+I\+O pin 6 on bank 11 as an output pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This contains function definitions required to interact with G\+P\+I\+O pins of the So\+C. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{ninja_2gpio_8c_adaed681b483d3acdb4f65842049abcda}{}\index{ninja/gpio.\+c@{ninja/gpio.\+c}!gpio\+\_\+get@{gpio\+\_\+get}}
+\index{gpio\+\_\+get@{gpio\+\_\+get}!ninja/gpio.\+c@{ninja/gpio.\+c}}
+\subsubsection[{gpio\+\_\+get(unsigned int pin)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int gpio\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pin}
+\end{DoxyParamCaption}
+)}\label{ninja_2gpio_8c_adaed681b483d3acdb4f65842049abcda}
+
+
+Get the signal at a G\+P\+I\+O pin which is configured as input. 
+
+If not already done, this function will set the pin as an input pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & -\/ The pin number of the G\+P\+I\+O pin , ranging from 0 to 143)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The signal at the pin\+: 1 for high and 0 for low 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ninja_2gpio_8c_adaed681b483d3acdb4f65842049abcda_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ninja_2gpio_8c_a624ad0306d1c4e6dfc8e2bb01798e0ce}{}\index{ninja/gpio.\+c@{ninja/gpio.\+c}!gpio\+\_\+init\+\_\+inpin@{gpio\+\_\+init\+\_\+inpin}}
+\index{gpio\+\_\+init\+\_\+inpin@{gpio\+\_\+init\+\_\+inpin}!ninja/gpio.\+c@{ninja/gpio.\+c}}
+\subsubsection[{gpio\+\_\+init\+\_\+inpin(unsigned int pin)}]{\setlength{\rightskip}{0pt plus 5cm}void gpio\+\_\+init\+\_\+inpin (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pin}
+\end{DoxyParamCaption}
+)}\label{ninja_2gpio_8c_a624ad0306d1c4e6dfc8e2bb01798e0ce}
+
+
+Initialize a G\+P\+I\+O pin with its G\+P\+I\+O functionality and set its direction to input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & -\/ The pin number of the G\+P\+I\+O pin , ranging from 0 to 143)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{ninja_2gpio_8c_a624ad0306d1c4e6dfc8e2bb01798e0ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ninja_2gpio_8c_a7f7ab845fe3eb7d621eeaec3b116d6d2}{}\index{ninja/gpio.\+c@{ninja/gpio.\+c}!gpio\+\_\+init\+\_\+outpin@{gpio\+\_\+init\+\_\+outpin}}
+\index{gpio\+\_\+init\+\_\+outpin@{gpio\+\_\+init\+\_\+outpin}!ninja/gpio.\+c@{ninja/gpio.\+c}}
+\subsubsection[{gpio\+\_\+init\+\_\+outpin(unsigned int pin)}]{\setlength{\rightskip}{0pt plus 5cm}void gpio\+\_\+init\+\_\+outpin (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pin}
+\end{DoxyParamCaption}
+)}\label{ninja_2gpio_8c_a7f7ab845fe3eb7d621eeaec3b116d6d2}
+
+
+Initialize a G\+P\+I\+O pin with its G\+P\+I\+O functionality and set its direction to output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & -\/ The pin number of the G\+P\+I\+O pin , ranging from 0 to 143)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{ninja_2gpio_8c_a7f7ab845fe3eb7d621eeaec3b116d6d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ninja_2gpio_8c_a8cc18d800719367f95a7c1b1496e4267}{}\index{ninja/gpio.\+c@{ninja/gpio.\+c}!gpio\+\_\+init\+\_\+pin@{gpio\+\_\+init\+\_\+pin}}
+\index{gpio\+\_\+init\+\_\+pin@{gpio\+\_\+init\+\_\+pin}!ninja/gpio.\+c@{ninja/gpio.\+c}}
+\subsubsection[{gpio\+\_\+init\+\_\+pin(unsigned int pin)}]{\setlength{\rightskip}{0pt plus 5cm}void gpio\+\_\+init\+\_\+pin (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pin}
+\end{DoxyParamCaption}
+)}\label{ninja_2gpio_8c_a8cc18d800719367f95a7c1b1496e4267}
+
+
+Initialize a G\+P\+I\+O pin with its G\+P\+I\+O functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & -\/ The pin number of the G\+P\+I\+O pin , ranging from 0 to 143)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{ninja_2gpio_8c_a69974a7766fccf6b3ce362fec9ed8dfc}{}\index{ninja/gpio.\+c@{ninja/gpio.\+c}!gpio\+\_\+set@{gpio\+\_\+set}}
+\index{gpio\+\_\+set@{gpio\+\_\+set}!ninja/gpio.\+c@{ninja/gpio.\+c}}
+\subsubsection[{gpio\+\_\+set(unsigned int pin, unsigned int value)}]{\setlength{\rightskip}{0pt plus 5cm}void gpio\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pin, }
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)}\label{ninja_2gpio_8c_a69974a7766fccf6b3ce362fec9ed8dfc}
+
+
+Set the value of a G\+P\+I\+O pin which is configured as output. 
+
+If not already done, this function will set the pin as an output pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & -\/ The pin number of the G\+P\+I\+O pin , ranging from 0 to 143) \\
+\hline
+{\em value} & -\/ The value to set (0 will be low, all other values will map to high)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ninja_2gpio_8c_a69974a7766fccf6b3ce362fec9ed8dfc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ninja_2gpio_8c_a07a531a51b7fd24c87ce1a8686657bfe}{}\index{ninja/gpio.\+c@{ninja/gpio.\+c}!turn\+\_\+off\+\_\+brick@{turn\+\_\+off\+\_\+brick}}
+\index{turn\+\_\+off\+\_\+brick@{turn\+\_\+off\+\_\+brick}!ninja/gpio.\+c@{ninja/gpio.\+c}}
+\subsubsection[{turn\+\_\+off\+\_\+brick(void)}]{\setlength{\rightskip}{0pt plus 5cm}void turn\+\_\+off\+\_\+brick (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ninja_2gpio_8c_a07a531a51b7fd24c87ce1a8686657bfe}
+
+
+Turn the E\+V3 off by setting G\+P\+I\+O pin 6 on bank 11 as an output pin. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ninja_2gpio_8c_a07a531a51b7fd24c87ce1a8686657bfe_cgraph}
+\end{center}
+\end{figure}
+
+

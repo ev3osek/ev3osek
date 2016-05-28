@@ -1,0 +1,667 @@
+\hypertarget{digi__sensors_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/digi\+\_\+sensors.h File Reference}
+\label{digi__sensors_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/digi\+\_\+sensors.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/digi\+\_\+sensors.\+h}}
+
+
+Function declarations to talk to the digital sensors (I2\+C sensors)  
+
+
+{\ttfamily \#include \char`\"{}sensors.\+h\char`\"{}}\\*
+Include dependency graph for digi\+\_\+sensors.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{digi__sensors_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{digi__sensors_8h_ac319057341aa53b377d576193d070675}{}\#define \hyperlink{digi__sensors_8h_ac319057341aa53b377d576193d070675}{U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+I\+N\+O\+U\+S}~0x02\label{digi__sensors_8h_ac319057341aa53b377d576193d070675}
+
+\begin{DoxyCompactList}\small\item\em Ultrasonic sensor mode \char`\"{}\+C\+O\+N\+T\+I\+N\+O\+U\+S\char`\"{} (sensor will meassure periodically by itself) \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a87cfcdfef2efad22af4ad23dbdeb184f}{}\#define \hyperlink{digi__sensors_8h_a87cfcdfef2efad22af4ad23dbdeb184f}{U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+H\+O\+T}~0x01\label{digi__sensors_8h_a87cfcdfef2efad22af4ad23dbdeb184f}
+
+\begin{DoxyCompactList}\small\item\em Ultrasonic sensor mode \char`\"{}\+S\+I\+N\+G\+L\+E S\+H\+O\+T\char`\"{} (sensor will meassure whenever a new single shot command is received and it will meassure up to 8 objects in front of it) \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_abb0e6a940b46e8be6056f6589de82989}{}\#define \hyperlink{digi__sensors_8h_abb0e6a940b46e8be6056f6589de82989}{U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+O\+F\+F}~0x00\label{digi__sensors_8h_abb0e6a940b46e8be6056f6589de82989}
+
+\begin{DoxyCompactList}\small\item\em Ultrasonic sensor mode \char`\"{}\+O\+F\+F\char`\"{} (sensor will not meassure distances) \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_aedc755109e60888839f938a8b7e0524d}{}\#define \hyperlink{digi__sensors_8h_aedc755109e60888839f938a8b7e0524d}{C\+A\+L\+\_\+\+W\+H\+I\+T\+E}~0x43\label{digi__sensors_8h_aedc755109e60888839f938a8b7e0524d}
+
+\begin{DoxyCompactList}\small\item\em Constant value to send to the Hi\+Technic color sensor in order to start white calibration. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a89e7c4cd61f98fe7a9058c387288de38}{}\#define \hyperlink{digi__sensors_8h_a89e7c4cd61f98fe7a9058c387288de38}{C\+A\+L\+\_\+\+B\+L\+A\+C\+K}~0x42\label{digi__sensors_8h_a89e7c4cd61f98fe7a9058c387288de38}
+
+\begin{DoxyCompactList}\small\item\em Constant value to send to the Hi\+Technic color sensor in order to start black calibration. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_abb64ac4e3aecb43cc3f0cdeb27053697}{}\#define \hyperlink{digi__sensors_8h_abb64ac4e3aecb43cc3f0cdeb27053697}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+B\+L\+A\+C\+K}~0\label{digi__sensors_8h_abb64ac4e3aecb43cc3f0cdeb27053697}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for black. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_ace1b10b15e154682a644acd4dcddcccb}{}\#define \hyperlink{digi__sensors_8h_ace1b10b15e154682a644acd4dcddcccb}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+P\+U\+R\+P\+L\+E}~1\label{digi__sensors_8h_ace1b10b15e154682a644acd4dcddcccb}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for black. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_aa2d0d266568901e3a80ff7838a8d22b5}{}\#define \hyperlink{digi__sensors_8h_aa2d0d266568901e3a80ff7838a8d22b5}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+D\+A\+R\+K\+\_\+\+B\+L\+U\+E}~2\label{digi__sensors_8h_aa2d0d266568901e3a80ff7838a8d22b5}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for purple. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_abbf06ce98223e4dc9f657daa71cde57a}{}\#define \hyperlink{digi__sensors_8h_abbf06ce98223e4dc9f657daa71cde57a}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+U\+E}~3\label{digi__sensors_8h_abbf06ce98223e4dc9f657daa71cde57a}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for dark blue. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_aaa285cee18336d046c950bfbc5f3546b}{}\#define \hyperlink{digi__sensors_8h_aaa285cee18336d046c950bfbc5f3546b}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+E\+N}~4\label{digi__sensors_8h_aaa285cee18336d046c950bfbc5f3546b}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for light blue. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_ae03ee25c045dced61e16d30932d37e14}{}\#define \hyperlink{digi__sensors_8h_ae03ee25c045dced61e16d30932d37e14}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+O\+W\+\_\+\+G\+R\+E\+E\+N}~5\label{digi__sensors_8h_ae03ee25c045dced61e16d30932d37e14}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for green. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_afeb65d0bfa63947cf1850a860bf5bb65}{}\#define \hyperlink{digi__sensors_8h_afeb65d0bfa63947cf1850a860bf5bb65}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+Y\+E\+L\+L\+O\+W}~6\label{digi__sensors_8h_afeb65d0bfa63947cf1850a860bf5bb65}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for yellow green. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a61921555a696259b9a6eec9bdc5d6fa4}{}\#define \hyperlink{digi__sensors_8h_a61921555a696259b9a6eec9bdc5d6fa4}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+O\+R\+A\+N\+G\+E}~7\label{digi__sensors_8h_a61921555a696259b9a6eec9bdc5d6fa4}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for yellow. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a65f3694b3208dcd1176db578a81d5cfa}{}\#define \hyperlink{digi__sensors_8h_a65f3694b3208dcd1176db578a81d5cfa}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+R\+E\+D}~8\label{digi__sensors_8h_a65f3694b3208dcd1176db578a81d5cfa}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for orange. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a017221e4dfde04acf70aa64fae40fb41}{}\#define \hyperlink{digi__sensors_8h_a017221e4dfde04acf70aa64fae40fb41}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+R\+E\+D\+\_\+\+P\+I\+N\+K}~9\label{digi__sensors_8h_a017221e4dfde04acf70aa64fae40fb41}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for red. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_ac8ead7d9d09964da1077f82d8ca24f69}{}\#define \hyperlink{digi__sensors_8h_ac8ead7d9d09964da1077f82d8ca24f69}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+P\+I\+N\+K}~10\label{digi__sensors_8h_ac8ead7d9d09964da1077f82d8ca24f69}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for red pink. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_af484c37b58738834814e338a68aa3f4a}{}\#define \hyperlink{digi__sensors_8h_af484c37b58738834814e338a68aa3f4a}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+Y1}~11\label{digi__sensors_8h_af484c37b58738834814e338a68aa3f4a}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for grey. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a63a5c0e40b6a6494122f0ecd143e51f7}{}\#define \hyperlink{digi__sensors_8h_a63a5c0e40b6a6494122f0ecd143e51f7}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+Y2}~12\label{digi__sensors_8h_a63a5c0e40b6a6494122f0ecd143e51f7}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for grey. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a2beef0d4e1735d6379405d1ef65d06d9}{}\#define \hyperlink{digi__sensors_8h_a2beef0d4e1735d6379405d1ef65d06d9}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+Y3}~13\label{digi__sensors_8h_a2beef0d4e1735d6379405d1ef65d06d9}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for grey. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a10724936dec122a80e299ed19529a0cf}{}\#define \hyperlink{digi__sensors_8h_a10724936dec122a80e299ed19529a0cf}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+Y4}~14\label{digi__sensors_8h_a10724936dec122a80e299ed19529a0cf}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for grey. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a4fd1586fcf49c231f629690867214224}{}\#define \hyperlink{digi__sensors_8h_a4fd1586fcf49c231f629690867214224}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+Y5}~15\label{digi__sensors_8h_a4fd1586fcf49c231f629690867214224}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for grey. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a0f4d4493adaf0715ef7965dc9cc8837d}{}\#define \hyperlink{digi__sensors_8h_a0f4d4493adaf0715ef7965dc9cc8837d}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+G\+R\+E\+Y6}~16\label{digi__sensors_8h_a0f4d4493adaf0715ef7965dc9cc8837d}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for grey. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a75808bfaf630ee6175df14f45818dc98}{}\#define \hyperlink{digi__sensors_8h_a75808bfaf630ee6175df14f45818dc98}{H\+I\+\_\+\+T\+E\+C\+H\+N\+I\+C\+\_\+\+C\+O\+L\+\_\+\+W\+H\+I\+T\+E}~17\label{digi__sensors_8h_a75808bfaf630ee6175df14f45818dc98}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic color sensor I\+D for white. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a2f49ca714c5f18d6316053913fa48e66}{}\#define \hyperlink{digi__sensors_8h_a2f49ca714c5f18d6316053913fa48e66}{T\+E\+M\+P9\+B\+I\+T}~0x00\label{digi__sensors_8h_a2f49ca714c5f18d6316053913fa48e66}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic temperature sensor mode with 9 bit resolution (0.\+5 degrees C). Average Conversion time within sensor in this mode is 27.\+5ms. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a07f6dc4bedc7c9cf2910ea7558ecb658}{}\#define \hyperlink{digi__sensors_8h_a07f6dc4bedc7c9cf2910ea7558ecb658}{T\+E\+M\+P10\+B\+I\+T}~0x01\label{digi__sensors_8h_a07f6dc4bedc7c9cf2910ea7558ecb658}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic temperature sensor mode with 10 bit resolution (0.\+25 degrees C). Average Conversion time within sensor in this mode is 55ms. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a2306acea49c9d504037e60e48b47e84a}{}\#define \hyperlink{digi__sensors_8h_a2306acea49c9d504037e60e48b47e84a}{T\+E\+M\+P11\+B\+I\+T}~0x02\label{digi__sensors_8h_a2306acea49c9d504037e60e48b47e84a}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic temperature sensor mode with 11 bit resolution (0.\+125 degrees C). Average Conversion time within sensor in this mode is 110ms. \end{DoxyCompactList}\item 
+\hypertarget{digi__sensors_8h_a47c17e347657ea3dd5c6ee1b2984bad8}{}\#define \hyperlink{digi__sensors_8h_a47c17e347657ea3dd5c6ee1b2984bad8}{T\+E\+M\+P12\+B\+I\+T}~0x03\label{digi__sensors_8h_a47c17e347657ea3dd5c6ee1b2984bad8}
+
+\begin{DoxyCompactList}\small\item\em Hi\+Technic temperature sensor mode with 12 bit resolution (0.\+0625 degrees C). Average Conversion time within sensor in this mode is 220ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{digi__sensors_8h_a2d488ecea25668433c6735f7e209116f}{sensor\+\_\+digi\+\_\+enable} (int port)
+\begin{DoxyCompactList}\small\item\em Enable a digital sensor by configuring the G\+P\+I\+O pins required for I2\+C communication. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_a057ee5925bf19b397b18983d75996150}{sensor\+\_\+ultrasonic\+\_\+get\+\_\+range} (int port, unsigned char data\+\_\+buffer\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get the range of the Lego ultrasonic sensor connected at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_afe09ec865382307ec813997125383ffe}{sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode} (int port, unsigned char mode)
+\begin{DoxyCompactList}\small\item\em Set the mode of the Lego ultrasonic sensor at the specified port. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{digi__sensors_8h_a0c221a678641dd691386db5944f308b9}{sensor\+\_\+compass\+\_\+get} (int port)
+\begin{DoxyCompactList}\small\item\em Read the current direction meassured by the Hi\+Technic compass sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_ad5a350e11233b9c00111b4a46dca01fd}{sensor\+\_\+compass\+\_\+start\+\_\+calibration} (int port)
+\begin{DoxyCompactList}\small\item\em Start the Hi\+Technic compass sensor calibration. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{digi__sensors_8h_a4a8550a1fba94d0ec353bcba598c072c}{sensor\+\_\+compass\+\_\+end\+\_\+calibration} (int port)
+\begin{DoxyCompactList}\small\item\em Stop the Hi\+Technic compass sensor calibration. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_acb4dea3d66b0f37607942927b5b51a46}{sensor\+\_\+accel\+\_\+calibrate} (int port)
+\begin{DoxyCompactList}\small\item\em Calibrate the Hi\+Technic acceleration sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_a68be0a28d23a82d5964edbb5f636872a}{sensor\+\_\+accel\+\_\+get} (int port, short data\+\_\+buffer\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get the 0-\/relativ acceleration meassured by the Hi\+Technic acceleration sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_aa265ea983763d3a0e82f48c8f3933118}{sensor\+\_\+accel\+\_\+get\+\_\+raw} (int port, short data\+\_\+buffer\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get the raw acceleration meassured by the Hi\+Technic acceleration sensor at the specified port. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{digi__sensors_8h_a3567b8641cac35657ca9cc68484978b4}{sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate} (int port, int mode)
+\begin{DoxyCompactList}\small\item\em Calibrate the Hi\+Technic color sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_a78fe697ea289ae695bba5733b2d65fc2}{sensor\+\_\+hitechnic\+\_\+color\+\_\+get} (int port, signed short data\+\_\+buffer\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get the red, green and blue values (R\+G\+B) meassured by the Hi\+Technic color sensor at the specified port. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{digi__sensors_8h_ab0f726df1fcfa3740e4a0520aee10021}{sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id} (int port)
+\begin{DoxyCompactList}\small\item\em Get the I\+D of the color meassured by the Hi\+Technic color sensor at the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_a3d6a8ce902fe735c9708cbe49f0353f2}{sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string} (unsigned char color\+\_\+id, char $\ast$string\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Transform a Hi\+Technic color sensor I\+D into a String. \end{DoxyCompactList}\item 
+void \hyperlink{digi__sensors_8h_afa6d69c1acedfc6cb36eb8ea07018f92}{sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution} (int port, unsigned char resolution)
+\begin{DoxyCompactList}\small\item\em Set the resolution for the measured temperature values. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{digi__sensors_8h_a111641807c99aa571e9ea4652d06a112}{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution} (int port)
+\begin{DoxyCompactList}\small\item\em Returns the current resolution setting of the sensor. \end{DoxyCompactList}\item 
+float \hyperlink{digi__sensors_8h_a37d2fc17394ad02db6333df0b26688c1}{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature} (int port)
+\begin{DoxyCompactList}\small\item\em Measures and returns the current temperature value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function declarations to talk to the digital sensors (I2\+C sensors) 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, Christian Soward 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{digi__sensors_8h_acb4dea3d66b0f37607942927b5b51a46}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+accel\+\_\+calibrate@{sensor\+\_\+accel\+\_\+calibrate}}
+\index{sensor\+\_\+accel\+\_\+calibrate@{sensor\+\_\+accel\+\_\+calibrate}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+accel\+\_\+calibrate(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+accel\+\_\+calibrate (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_acb4dea3d66b0f37607942927b5b51a46}
+
+
+Calibrate the Hi\+Technic acceleration sensor at the specified port. 
+
+The sensor has be at rest when this function is called. Calibrating the sensor means to get the values returned while at rest in order to return values realtive to 0 in calls to sensor\+\_\+accel\+\_\+get. If this function is not called directly, it will be triggered on the first call to sensor\+\_\+accel\+\_\+get.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_acb4dea3d66b0f37607942927b5b51a46_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a68be0a28d23a82d5964edbb5f636872a}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+accel\+\_\+get@{sensor\+\_\+accel\+\_\+get}}
+\index{sensor\+\_\+accel\+\_\+get@{sensor\+\_\+accel\+\_\+get}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+accel\+\_\+get(int port, short data\+\_\+buffer[3])}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+accel\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{short}]{data\+\_\+buffer\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a68be0a28d23a82d5964edbb5f636872a}
+
+
+Get the 0-\/relativ acceleration meassured by the Hi\+Technic acceleration sensor at the specified port. 
+
+The sensor meassures the acceleration on all 3 axis (X, Y and Z). This function will call sensor\+\_\+accel\+\_\+calibrate when called for the first time. The values returned will be relativ to 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em data\+\_\+buffer} & -\/ Buffer to store the meassured values in (the values will be stored in the buffer in the following order\+: X, Y, Z)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a68be0a28d23a82d5964edbb5f636872a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_aa265ea983763d3a0e82f48c8f3933118}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+accel\+\_\+get\+\_\+raw@{sensor\+\_\+accel\+\_\+get\+\_\+raw}}
+\index{sensor\+\_\+accel\+\_\+get\+\_\+raw@{sensor\+\_\+accel\+\_\+get\+\_\+raw}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+accel\+\_\+get\+\_\+raw(int port, short data\+\_\+buffer[3])}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+accel\+\_\+get\+\_\+raw (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{short}]{data\+\_\+buffer\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_aa265ea983763d3a0e82f48c8f3933118}
+
+
+Get the raw acceleration meassured by the Hi\+Technic acceleration sensor at the specified port. 
+
+The sensor meassures the acceleration on all 3 axis (X, Y and Z). This function will not call sensor\+\_\+accel\+\_\+calibrate and return the raw values (not relativ to 0) returned by the sensor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em data\+\_\+buffer} & -\/ Buffer to store the meassured values in (the values will be stored in the buffer in the following order\+: X, Y, Z)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_aa265ea983763d3a0e82f48c8f3933118_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a4a8550a1fba94d0ec353bcba598c072c}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+compass\+\_\+end\+\_\+calibration@{sensor\+\_\+compass\+\_\+end\+\_\+calibration}}
+\index{sensor\+\_\+compass\+\_\+end\+\_\+calibration@{sensor\+\_\+compass\+\_\+end\+\_\+calibration}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+compass\+\_\+end\+\_\+calibration(int port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short sensor\+\_\+compass\+\_\+end\+\_\+calibration (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a4a8550a1fba94d0ec353bcba598c072c}
+
+
+Stop the Hi\+Technic compass sensor calibration. 
+
+Read the information in the appropriate start\+\_\+calibration function first. This function is the third step and finishs the calibration process.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the calibration was successful, 0 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a4a8550a1fba94d0ec353bcba598c072c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a0c221a678641dd691386db5944f308b9}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+compass\+\_\+get@{sensor\+\_\+compass\+\_\+get}}
+\index{sensor\+\_\+compass\+\_\+get@{sensor\+\_\+compass\+\_\+get}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+compass\+\_\+get(int port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short sensor\+\_\+compass\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a0c221a678641dd691386db5944f308b9}
+
+
+Read the current direction meassured by the Hi\+Technic compass sensor at the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current direction in degrees meassured by the sensor, ranging from 0 to 360 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a0c221a678641dd691386db5944f308b9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_ad5a350e11233b9c00111b4a46dca01fd}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+compass\+\_\+start\+\_\+calibration@{sensor\+\_\+compass\+\_\+start\+\_\+calibration}}
+\index{sensor\+\_\+compass\+\_\+start\+\_\+calibration@{sensor\+\_\+compass\+\_\+start\+\_\+calibration}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+compass\+\_\+start\+\_\+calibration(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+compass\+\_\+start\+\_\+calibration (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_ad5a350e11233b9c00111b4a46dca01fd}
+
+
+Start the Hi\+Technic compass sensor calibration. 
+
+You should calibrate a compass sensor when it is mounted on your robot in the way you want to use it. So the sensor will be calibrated for your specific environment/robot. The calibration adjustment is stored persitent on the sensor itself. For more information see the Hi\+Technic documentation. Calibrating the compass sensor takes 3 steps. (1) Call this function. (2) Move the sensor/robot in a circle (540 degrees -\/ 720 degrees within 20 seconds). (3) Call the appropriate end\+\_\+calibration function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_ad5a350e11233b9c00111b4a46dca01fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a2d488ecea25668433c6735f7e209116f}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+digi\+\_\+enable@{sensor\+\_\+digi\+\_\+enable}}
+\index{sensor\+\_\+digi\+\_\+enable@{sensor\+\_\+digi\+\_\+enable}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+digi\+\_\+enable(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+digi\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a2d488ecea25668433c6735f7e209116f}
+
+
+Enable a digital sensor by configuring the G\+P\+I\+O pins required for I2\+C communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a2d488ecea25668433c6735f7e209116f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a3567b8641cac35657ca9cc68484978b4}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate@{sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate}}
+\index{sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate@{sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate(int port, int mode)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char sensor\+\_\+hitechnic\+\_\+color\+\_\+calibrate (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a3567b8641cac35657ca9cc68484978b4}
+
+
+Calibrate the Hi\+Technic color sensor at the specified port. 
+
+To calibrate the sensor properly, this function has to be called two times. Once with mode set to C\+A\+L\+\_\+\+W\+H\+I\+T\+E (0x043) and once with mode set to C\+A\+L\+\_\+\+B\+L\+A\+C\+K (0x42). Calibration information is stored directly on the sensor and will be persistent, even if the sensor is no longer provided with power. When called with mode set to C\+A\+L\+\_\+\+W\+H\+I\+T\+E, the sensor should be located in front of a diffuse white surface at a distance of 1.\+5 cm. When called with mode set to C\+A\+L\+\_\+\+B\+L\+A\+C\+K, the sensor should have nothing in front of it within a distance of about 2 m. If the calibration command was received successfully, the sensors L\+E\+D will blink for confirmation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em mode} & -\/ The mode to calibrate the sensor with\+: C\+A\+L\+\_\+\+W\+H\+I\+T\+E (0x43) or C\+A\+L\+\_\+\+B\+L\+A\+C\+K (0x42)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the calibration was successful, 0 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a3567b8641cac35657ca9cc68484978b4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a78fe697ea289ae695bba5733b2d65fc2}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+hitechnic\+\_\+color\+\_\+get@{sensor\+\_\+hitechnic\+\_\+color\+\_\+get}}
+\index{sensor\+\_\+hitechnic\+\_\+color\+\_\+get@{sensor\+\_\+hitechnic\+\_\+color\+\_\+get}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+hitechnic\+\_\+color\+\_\+get(int port, signed short data\+\_\+buffer[3])}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+hitechnic\+\_\+color\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{signed short}]{data\+\_\+buffer\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a78fe697ea289ae695bba5733b2d65fc2}
+
+
+Get the red, green and blue values (R\+G\+B) meassured by the Hi\+Technic color sensor at the specified port. 
+
+For best results, the sensor should be calibrated before calling this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em data\+\_\+buffer} & -\/ Buffer to store the received data in (the values will be stored in the following order\+: red, green, blue)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a78fe697ea289ae695bba5733b2d65fc2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_ab0f726df1fcfa3740e4a0520aee10021}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id@{sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id}}
+\index{sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id@{sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id(int port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char sensor\+\_\+hitechnic\+\_\+color\+\_\+get\+\_\+color\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_ab0f726df1fcfa3740e4a0520aee10021}
+
+
+Get the I\+D of the color meassured by the Hi\+Technic color sensor at the specified port. 
+
+For best results, the sensor should be calibrated before calling this function. See \hyperlink{digi__sensors_8h}{digi\+\_\+sensors.\+h} to see which color is represented by which I\+D.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The I\+D of the color meassured by the sensor 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_ab0f726df1fcfa3740e4a0520aee10021_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a3d6a8ce902fe735c9708cbe49f0353f2}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string@{sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string}}
+\index{sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string@{sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string(unsigned char color\+\_\+id, char $\ast$string\+\_\+buffer)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+hitechnic\+\_\+color\+\_\+id\+\_\+to\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{color\+\_\+id, }
+\item[{char $\ast$}]{string\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a3d6a8ce902fe735c9708cbe49f0353f2}
+
+
+Transform a Hi\+Technic color sensor I\+D into a String. 
+
+This function was for debug purposes but it might be useful in the future. Therefore it remains part of the code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color\+\_\+id} & -\/ The I\+D of the color to represent as a String \\
+\hline
+{\em string\+\_\+buffer} & -\/ Buffer to store the String representation of the color in\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{digi__sensors_8h_a111641807c99aa571e9ea4652d06a112}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution@{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution}}
+\index{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution@{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution(int port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+resolution (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a111641807c99aa571e9ea4652d06a112}
+
+
+Returns the current resolution setting of the sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current resolution. See the macros T\+E\+M\+P9\+B\+I\+T ... T\+E\+M\+P12\+B\+I\+T 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a111641807c99aa571e9ea4652d06a112_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a37d2fc17394ad02db6333df0b26688c1}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature@{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature}}
+\index{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature@{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature(int port)}]{\setlength{\rightskip}{0pt plus 5cm}float sensor\+\_\+temperature\+\_\+nxt\+\_\+get\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a37d2fc17394ad02db6333df0b26688c1}
+
+
+Measures and returns the current temperature value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current temperature given in degrees Celsius 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a37d2fc17394ad02db6333df0b26688c1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_afa6d69c1acedfc6cb36eb8ea07018f92}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution@{sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution}}
+\index{sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution@{sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution(int port, unsigned char resolution)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+temperature\+\_\+nxt\+\_\+set\+\_\+resolution (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{unsigned char}]{resolution}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_afa6d69c1acedfc6cb36eb8ea07018f92}
+
+
+Set the resolution for the measured temperature values. 
+
+The internal Texas Instruments tmp275 temperature sensor can operate in different resolution modes. Lower resolution is faster. See the T\+E\+M\+P9\+B\+I\+T ... T\+E\+M\+P12\+B\+I\+T macros for more information or the official documentation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em resolution} & -\/ The resolution. Use on of the macros T\+E\+M\+P9\+B\+I\+T ... T\+E\+M\+P12\+B\+I\+T\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_afa6d69c1acedfc6cb36eb8ea07018f92_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_a057ee5925bf19b397b18983d75996150}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+ultrasonic\+\_\+get\+\_\+range@{sensor\+\_\+ultrasonic\+\_\+get\+\_\+range}}
+\index{sensor\+\_\+ultrasonic\+\_\+get\+\_\+range@{sensor\+\_\+ultrasonic\+\_\+get\+\_\+range}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+ultrasonic\+\_\+get\+\_\+range(int port, unsigned char data\+\_\+buffer[8])}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+ultrasonic\+\_\+get\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{unsigned char}]{data\+\_\+buffer\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_a057ee5925bf19b397b18983d75996150}
+
+
+Get the range of the Lego ultrasonic sensor connected at the specified port. 
+
+The sensor meassures distances from 0 to 255 in cm. If nothing is located in front of the sensor, the value will be 255. This function will consider the sensor\textquotesingle{}s current mode. If it is in C\+O\+N\+T\+I\+N\+O\+U\+S M\+O\+D\+E (default), only the first value of the array will be valid. The others will be set to 0. If it is in S\+I\+N\+G\+L\+E S\+H\+O\+T M\+O\+D\+E, all 8 entries of the array will be values returned by the sensor. If less than 8 objects are detected, some entries will be set to 255. If it is in O\+F\+F M\+O\+D\+E, all 8 entries of the array will be set to 0. Note\+: If the sensor is in S\+I\+N\+G\+L\+E S\+H\+O\+T M\+O\+D\+E, no additional S\+I\+N\+G\+L\+E S\+H\+O\+T command will be sent in this function -\/ call sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode therefore.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em data\+\_\+buffer} & -\/ Buffer to store the result in (depending on the sensor\textquotesingle{}s current mode, not all entries might be filled with values returned by the sensor)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_a057ee5925bf19b397b18983d75996150_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{digi__sensors_8h_afe09ec865382307ec813997125383ffe}{}\index{digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}!sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode@{sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode}}
+\index{sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode@{sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode}!digi\+\_\+sensors.\+h@{digi\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode(int port, unsigned char mode)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+ultrasonic\+\_\+set\+\_\+mode (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{unsigned char}]{mode}
+\end{DoxyParamCaption}
+)}\label{digi__sensors_8h_afe09ec865382307ec813997125383ffe}
+
+
+Set the mode of the Lego ultrasonic sensor at the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to \\
+\hline
+{\em mode} & -\/ The mode to set\+: U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+O\+F\+F (0x00), U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+S\+H\+O\+T (0x01) or U\+L\+T\+R\+A\+S\+O\+N\+I\+C\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+T\+I\+N\+O\+U\+S (0x02)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digi__sensors_8h_afe09ec865382307ec813997125383ffe_cgraph}
+\end{center}
+\end{figure}
+
+

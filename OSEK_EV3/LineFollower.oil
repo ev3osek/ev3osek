@@ -1,0 +1,104 @@
+#include "implementation.oil"
+
+CPU ATMEL_AT91SAM7S256
+{
+  OS LEJOS_OSEK
+  {
+    STATUS = EXTENDED;
+    STARTUPHOOK = FALSE;
+    ERRORHOOK = FALSE;
+    SHUTDOWNHOOK = FALSE;
+    PRETASKHOOK = FALSE;
+    POSTTASKHOOK = FALSE;
+    USEGETSERVICEID = FALSE;
+    USEPARAMETERACCESS = FALSE;
+    USERESSCHEDULER = FALSE;
+  };
+
+  /* Definition of application mode */
+  APPMODE appmode1{}; 
+
+  /* Definition of ressource */
+  RESOURCE LightValue
+  {
+    RESOURCEPROPERTY = STANDARD;
+  };
+
+  /* Definition of events */
+  EVENT TouchEvent {MASK = AUTO;};
+  EVENT LightValueEvent {MASK = AUTO;};
+
+  /* Definition of Tasks */
+  TASK TouchEventDispatcherTask
+  {
+    AUTOSTART = FALSE;
+    PRIORITY = 1; /* lowest priority */
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 4096;
+  };
+
+  TASK LightValueEventDispatcherTask
+  {
+    AUTOSTART = FALSE;
+    RESOURCE = LightValue;
+    PRIORITY = 1;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 4096;
+  };
+
+  TASK LineFollowerTask
+  {
+    AUTOSTART = TRUE
+    {
+      APPMODE = appmode1;
+    };
+    EVENT = TouchEvent;
+    EVENT = LightValueEvent;
+    RESOURCE = LightValue;
+    PRIORITY = 2;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 4096;
+  };
+
+  /* Defintion of counter and alarm */
+  COUNTER SysTimerCnt
+  {
+    MINCYCLE = 1;
+    MAXALLOWEDVALUE = 10000;
+    TICKSPERBASE = 1; /* One tick equals 1 ms */
+  };
+
+  ALARM TouchEventCyclicAlarm
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = TouchEventDispatcherTask;
+    };
+    AUTOSTART = TRUE
+    {
+      ALARMTIME = 1;
+      CYCLETIME = 10;
+      APPMODE = appmode1;
+    };
+  };
+
+  ALARM LightValueEventCyclicAlarm
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = LightValueEventDispatcherTask;
+    };
+    AUTOSTART = TRUE
+    {
+      ALARMTIME = 1;
+      CYCLETIME = 10;
+      APPMODE = appmode1;
+    };
+  };
+};
+

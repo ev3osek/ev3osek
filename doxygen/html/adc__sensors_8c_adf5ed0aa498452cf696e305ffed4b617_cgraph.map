@@ -1,0 +1,4 @@
+<map id="check_first" name="check_first">
+<area shape="rect" id="node2" href="$adc_8c.html#add2dc4cfa717ea4e243a273ebdb98a21" title="Get the value currently meassured by the ADC for the specified channel. " alt="" coords="140,5,208,32"/>
+<area shape="rect" id="node3" href="$ninja_2spi_8c.html#a4bb7874eaf4a6b816c819510f0f331cb" title="Send data via the SPI0 controller and get an updated value received by the SPI0 controller. " alt="" coords="256,5,341,32"/>
+</map>

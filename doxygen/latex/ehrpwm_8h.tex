@@ -1,0 +1,1809 @@
+\hypertarget{ehrpwm_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/ehrpwm.h File Reference}
+\label{ehrpwm_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/ehrpwm.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/ehrpwm.\+h}}
+
+
+This file contains the Macros and A\+P\+I prototypes for ehrpwm driver.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+ehrpwm.\+h\char`\"{}}\\*
+Include dependency graph for ehrpwm.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{ehrpwm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ehrpwm_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{ehrpwm_8h_abc8c167c028d81bcc96000868e3cdbf1}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+P\+R\+D\+\_\+\+L\+O\+A\+D\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+M\+A\+S\+K}~E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+P\+R\+D\+L\+D\label{ehrpwm_8h_abc8c167c028d81bcc96000868e3cdbf1}
+
+\item 
+\hypertarget{ehrpwm_8h_aa3756513b052d75eaf2ea507ce2f6d41}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+K}~E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+T\+R\+M\+O\+D\+E\label{ehrpwm_8h_aa3756513b052d75eaf2ea507ce2f6d41}
+
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P}
+\item 
+\hypertarget{ehrpwm_8h_ae6ed096e99fff6d1b0ee58e8643b2825}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+N\+A\+B\+L\+E}~E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+P\+H\+S\+E\+N\label{ehrpwm_8h_ae6ed096e99fff6d1b0ee58e8643b2825}
+
+\item 
+\hypertarget{ehrpwm_8h_a9a16d43426e5f072a1ba219199b7991b}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+M\+A\+S\+K}~E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+S\+Y\+N\+C\+O\+S\+E\+L\label{ehrpwm_8h_a9a16d43426e5f072a1ba219199b7991b}
+
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E}
+\item 
+\hypertarget{ehrpwm_8h_a0b1516d394fdba45ea1b749d56264b85}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+W\+R\+I\+T\+E\+\_\+\+E\+N\+A\+B\+L\+E}~0x0\label{ehrpwm_8h_a0b1516d394fdba45ea1b749d56264b85}
+
+\item 
+\hypertarget{ehrpwm_8h_a329f20740317dfa216915e9fde891f05}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+W\+R\+I\+T\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E}~0x1\label{ehrpwm_8h_a329f20740317dfa216915e9fde891f05}
+
+\item 
+\hypertarget{ehrpwm_8h_a1fb8b5163ffea9c25b657291390ead43}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+A\+F\+T\+E\+R\+\_\+\+N\+E\+X\+T\+\_\+\+T\+B\+\_\+\+I\+N\+C\+R\+E\+M\+E\+N\+T}~(0x0 $<$$<$ E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+F\+R\+E\+E\+\_\+\+S\+O\+F\+T\+\_\+\+S\+H\+I\+F\+T)\label{ehrpwm_8h_a1fb8b5163ffea9c25b657291390ead43}
+
+\item 
+\hypertarget{ehrpwm_8h_a0cea7b768d42c221213e53dfc23742f7}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+A\+F\+T\+E\+R\+\_\+\+A\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+C\+Y\+C\+L\+E}~(0x1 $<$$<$ E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+F\+R\+E\+E\+\_\+\+S\+O\+F\+T\+\_\+\+S\+H\+I\+F\+T)\label{ehrpwm_8h_a0cea7b768d42c221213e53dfc23742f7}
+
+\item 
+\hypertarget{ehrpwm_8h_a75cc103755e7b777ae9de00d24b36649}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N}~(0x2 $<$$<$ E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+F\+R\+E\+E\+\_\+\+S\+O\+F\+T\+\_\+\+S\+H\+I\+F\+T)\label{ehrpwm_8h_a75cc103755e7b777ae9de00d24b36649}
+
+\item 
+\hypertarget{ehrpwm_8h_afc7bb27774f29a9d0c3b6d40fda26a44}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+1}~(0x0001u)\label{ehrpwm_8h_afc7bb27774f29a9d0c3b6d40fda26a44}
+
+\item 
+\hypertarget{ehrpwm_8h_a626ebeb35e42f6e8d172db7495005dc3}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+2}~(0x0002u)\label{ehrpwm_8h_a626ebeb35e42f6e8d172db7495005dc3}
+
+\item 
+\hypertarget{ehrpwm_8h_a3085d5f8491e4558341be600c37fee60}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+4}~(0x0004u)\label{ehrpwm_8h_a3085d5f8491e4558341be600c37fee60}
+
+\item 
+\hypertarget{ehrpwm_8h_a7e3a03c16748c192ffa9252e1b197e9d}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+8}~(0x0008u)\label{ehrpwm_8h_a7e3a03c16748c192ffa9252e1b197e9d}
+
+\item 
+\hypertarget{ehrpwm_8h_a8ce622043b24552cea4d4d7f626f1259}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+16}~(0x0010u)\label{ehrpwm_8h_a8ce622043b24552cea4d4d7f626f1259}
+
+\item 
+\hypertarget{ehrpwm_8h_ab86de8e37d3a648d9aaba32a4da11eaf}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+32}~(0x0020u)\label{ehrpwm_8h_ab86de8e37d3a648d9aaba32a4da11eaf}
+
+\item 
+\hypertarget{ehrpwm_8h_abbf095bba051ebf83646fba934ebdba3}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+64}~(0x0040u)\label{ehrpwm_8h_abbf095bba051ebf83646fba934ebdba3}
+
+\item 
+\hypertarget{ehrpwm_8h_aeda1f8adba27b827f3b37272663dbc1d}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+L\+K\+D\+I\+V\+\_\+128}~(0x0080u)\label{ehrpwm_8h_aeda1f8adba27b827f3b37272663dbc1d}
+
+\item 
+\hypertarget{ehrpwm_8h_a3c95c4a79cf3b7f1e06c66146abe9a08}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+1}~(0x0001u)\label{ehrpwm_8h_a3c95c4a79cf3b7f1e06c66146abe9a08}
+
+\item 
+\hypertarget{ehrpwm_8h_a99a582e37cc058ccfb5e52ee4423c0e4}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+2}~(0x0002u)\label{ehrpwm_8h_a99a582e37cc058ccfb5e52ee4423c0e4}
+
+\item 
+\hypertarget{ehrpwm_8h_a61bb0c95395bfd90413e20c1025ffc7c}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+4}~(0x0004u)\label{ehrpwm_8h_a61bb0c95395bfd90413e20c1025ffc7c}
+
+\item 
+\hypertarget{ehrpwm_8h_ae80fe84adf67f75e629d7647696fa472}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+6}~(0x0006u)\label{ehrpwm_8h_ae80fe84adf67f75e629d7647696fa472}
+
+\item 
+\hypertarget{ehrpwm_8h_afad1111f5ab94db2a158630b287a5631}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+8}~(0x0008u)\label{ehrpwm_8h_afad1111f5ab94db2a158630b287a5631}
+
+\item 
+\hypertarget{ehrpwm_8h_a6f3feb70525bd44ae04c92cab467ec0e}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+10}~(0x000\+Au)\label{ehrpwm_8h_a6f3feb70525bd44ae04c92cab467ec0e}
+
+\item 
+\hypertarget{ehrpwm_8h_a07f9c7abc4992c6c19b85914a48e1def}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+12}~(0x000\+Cu)\label{ehrpwm_8h_a07f9c7abc4992c6c19b85914a48e1def}
+
+\item 
+\hypertarget{ehrpwm_8h_ac4e30aab6e335cf8c6b09ef2b1183080}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+C\+T\+L\+\_\+\+H\+S\+P\+C\+L\+K\+D\+I\+V\+\_\+14}~(0x000\+Eu)\label{ehrpwm_8h_ac4e30aab6e335cf8c6b09ef2b1183080}
+
+\item 
+\hypertarget{ehrpwm_8h_aefc75eab139ef50bdb740e36b5857b7c}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+Y\+N\+C}~0x0\label{ehrpwm_8h_aefc75eab139ef50bdb740e36b5857b7c}
+
+\item 
+\hypertarget{ehrpwm_8h_aa143fa56172a5be1023cec5cb513b7e1}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+Y\+N\+C}~0x1\label{ehrpwm_8h_aa143fa56172a5be1023cec5cb513b7e1}
+
+\item 
+\hypertarget{ehrpwm_8h_ac4d9744d55a2d72e16d9f31f38f0e0c3}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+A\+\_\+\+E\+M\+P\+T\+Y}~(0x0 $<$$<$ E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+S\+H\+D\+W\+A\+F\+U\+L\+L\+\_\+\+S\+H\+I\+F\+T)\label{ehrpwm_8h_ac4d9744d55a2d72e16d9f31f38f0e0c3}
+
+\item 
+\hypertarget{ehrpwm_8h_a27a9df1476f90dea2d2df2099a7feffc}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+A\+\_\+\+F\+U\+L\+L}~(E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+S\+H\+D\+W\+A\+F\+U\+L\+L)\label{ehrpwm_8h_a27a9df1476f90dea2d2df2099a7feffc}
+
+\item 
+\hypertarget{ehrpwm_8h_a9ffbea5a1681a9c2cf3d1e655fae5609}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+B\+\_\+\+E\+M\+P\+T\+Y}~(0x0 $<$$<$ E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+S\+H\+D\+W\+B\+F\+U\+L\+L\+\_\+\+S\+H\+I\+F\+T)\label{ehrpwm_8h_a9ffbea5a1681a9c2cf3d1e655fae5609}
+
+\item 
+\hypertarget{ehrpwm_8h_a89af73e4dbf5c7e8b24e56ede168b5de}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+B\+\_\+\+F\+U\+L\+L}~(E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+S\+H\+D\+W\+B\+F\+U\+L\+L)\label{ehrpwm_8h_a89af73e4dbf5c7e8b24e56ede168b5de}
+
+\item 
+\hypertarget{ehrpwm_8h_af5fba66ec53c66a158f82808d225a4e2}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+N\+O\+T\+\_\+\+O\+V\+E\+R\+W\+R\+\_\+\+S\+H\+\_\+\+F\+L}~0x0\label{ehrpwm_8h_af5fba66ec53c66a158f82808d225a4e2}
+
+\item 
+\hypertarget{ehrpwm_8h_aca54f5279ce48747124aec23166fb512}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+O\+V\+E\+R\+W\+R\+\_\+\+S\+H\+\_\+\+F\+L}~0x1\label{ehrpwm_8h_aca54f5279ce48747124aec23166fb512}
+
+\item 
+\hypertarget{ehrpwm_8h_a407c59db5b32682cc8d3da0ad59ca26a}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+M\+A\+S\+K}~E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+L\+O\+A\+D\+B\+M\+O\+D\+E\label{ehrpwm_8h_a407c59db5b32682cc8d3da0ad59ca26a}
+
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}
+\item 
+\hypertarget{ehrpwm_8h_ab37b115f0c8b5d5172bdf1ca7b71d9f8}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+M\+A\+S\+K}~E\+H\+R\+P\+W\+M\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+L\+O\+A\+D\+A\+M\+O\+D\+E\label{ehrpwm_8h_ab37b115f0c8b5d5172bdf1ca7b71d9f8}
+
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}
+\item 
+\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}
+\item 
+\hypertarget{ehrpwm_8h_acf067fbfbc227d65940e45dddc32671a}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+12\+\_\+5\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+1\+D\+I\+V8\label{ehrpwm_8h_acf067fbfbc227d65940e45dddc32671a}
+
+\item 
+\hypertarget{ehrpwm_8h_a3cd672380e48206be9702ca64123d1eb}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+25\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+2\+D\+I\+V8\label{ehrpwm_8h_a3cd672380e48206be9702ca64123d1eb}
+
+\item 
+\hypertarget{ehrpwm_8h_ab67ed43aba5344e245c029deb3d0a426}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+37\+\_\+5\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+3\+D\+I\+V8\label{ehrpwm_8h_ab67ed43aba5344e245c029deb3d0a426}
+
+\item 
+\hypertarget{ehrpwm_8h_abe72d878a84b7885b156ba8d5e0d1b61}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+50\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+4\+D\+I\+V8\label{ehrpwm_8h_abe72d878a84b7885b156ba8d5e0d1b61}
+
+\item 
+\hypertarget{ehrpwm_8h_a0004cd7a5207e0b428a45b46dd05c6a0}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+62\+\_\+5\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+5\+D\+I\+V8\label{ehrpwm_8h_a0004cd7a5207e0b428a45b46dd05c6a0}
+
+\item 
+\hypertarget{ehrpwm_8h_ae4dab694b6e5b0187cb31c8868cc8313}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+75\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+6\+D\+I\+V8\label{ehrpwm_8h_ae4dab694b6e5b0187cb31c8868cc8313}
+
+\item 
+\hypertarget{ehrpwm_8h_a2da3bcf0cc92ddc1719ca603236f0872}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+C\+H\+P\+\_\+\+D\+U\+T\+Y\+\_\+87\+\_\+5\+\_\+\+P\+E\+R}~E\+H\+R\+P\+W\+M\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+H\+P\+D\+U\+T\+Y\+\_\+7\+D\+I\+V8\label{ehrpwm_8h_a2da3bcf0cc92ddc1719ca603236f0872}
+
+\item 
+\hypertarget{ehrpwm_8h_a8c505af9a3578979cc3903e82753375b}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+\_\+\+O\+N\+E\+S\+H\+O\+T}~0x0\label{ehrpwm_8h_a8c505af9a3578979cc3903e82753375b}
+
+\item 
+\hypertarget{ehrpwm_8h_a046e949a803af386efcd43c657601394}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+\_\+\+C\+Y\+C\+L\+E\+B\+Y\+C\+Y\+C\+L\+E}~0x1\label{ehrpwm_8h_a046e949a803af386efcd43c657601394}
+
+\item 
+\hypertarget{ehrpwm_8h_a8f662a084d1b960bef266248edc2658b}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+\_\+\+O\+N\+E\+S\+H\+O\+T\+\_\+\+C\+L\+E\+A\+R}~(E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+O\+S\+T $\vert$ E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+I\+N\+T)\label{ehrpwm_8h_a8f662a084d1b960bef266248edc2658b}
+
+\item 
+\hypertarget{ehrpwm_8h_a46eeeacf58df16b429599109db145c52}{}\#define {\bfseries E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+\_\+\+C\+Y\+C\+L\+E\+B\+Y\+C\+Y\+C\+L\+E\+\_\+\+C\+L\+E\+A\+R}~(E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+C\+B\+C $\vert$ E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+I\+N\+T)\label{ehrpwm_8h_a46eeeacf58df16b429599109db145c52}
+
+\item 
+\hypertarget{ehrpwm_8h_a82edf949686f4690e4d81b756ae6ede5}{}\#define {\bfseries E\+C\+A\+P}~0x01\label{ehrpwm_8h_a82edf949686f4690e4d81b756ae6ede5}
+
+\item 
+\hypertarget{ehrpwm_8h_a893ae848235c4d0fd8464813c497f0c4}{}\#define {\bfseries E\+P\+W\+M}~0x02\label{ehrpwm_8h_a893ae848235c4d0fd8464813c497f0c4}
+
+\item 
+\hypertarget{ehrpwm_8h_afef24ba29e915620432d74a7a508e899}{}\#define {\bfseries E\+Q\+E\+P}~0x03\label{ehrpwm_8h_afef24ba29e915620432d74a7a508e899}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{ehrpwm_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{}typedef char {\bfseries bool}\label{ehrpwm_8h_ad5c9d4ba3dc37783a528b0925dc981a0}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ehrpwm_8h_afe52258a8de4554da297fc309ec2eb17}{E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config} (unsigned int base\+Addr, unsigned int tb\+Clk, unsigned int module\+Clk)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the clock divider of the Time base module. The clock divider can be calculated using the equation T\+B\+C\+L\+K = S\+Y\+S\+C\+L\+K\+O\+U\+T/(H\+S\+P\+C\+L\+K\+D\+I\+V × C\+L\+K\+D\+I\+V) \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a803641e8d6b0e97ed010eb611ba02b33}{E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set} (unsigned int base\+Addr, unsigned int tb\+Clk, unsigned int pwm\+Freq, unsigned int counter\+Dir, bool enable\+Shadow\+Write)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the P\+W\+M Frequency/\+Period. The period count determines the period of the final output waveform. For the given period count, in the case of U\+P and D\+O\+W\+N counter the count value will be loaded as is. In the case of U\+P\+\_\+\+D\+O\+W\+N counter the count is halfed. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a2ff1feffaa3798d646ba0d0a0b582cff}{E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set} (unsigned int base\+Addr, unsigned int mode)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures emulation mode. This setting determines the behaviour of Timebase during emulation (debugging). \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a06ebbe6fc66c85d2673f29d4ddfe414a}{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable} (unsigned int base\+Addr, unsigned int tb\+Phs\+Value, unsigned int phs\+Count\+Dir)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I enables the synchronization. When a sync-\/in event is generated the couter is reloaded with the new value. After sync the counter will use the new value. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a07998e157a6e55df784aa3543ebf7697}{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I disables the synchronization. Even if sync-\/in event occurs the count value will not be reloaded. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a3b5c0f3a4f5be5f1542bd783242c49ec}{E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I generates sw forced sync pulse. This A\+P\+I can be used for testing. When this A\+P\+I is called sync-\/in will be generated. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a525c8131e2870b90f640725de883061a}{E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set} (unsigned int base\+Addr, unsigned int sync\+Out\+Mode)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I selects the output sync source. It determines on which of the following event sync-\/out has to be generated. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a82539b90648c79483f28a24a4b4d5989}{E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count} (unsigned int base\+Addr, unsigned int tb\+Count)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I loads the T\+B counter. The new value is taken immediately. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ehrpwm_8h_a5550aaae6599d88603109669719de7c7}{E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I gets the T\+B counter current value. The count operation is not affected by the read. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ehrpwm_8h_afc2a05839617e629fbcfe64dfea8b583}{E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get} (unsigned int base\+Addr, unsigned int tb\+Status\+Mask)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I gets the T\+B status as indicated by the tb\+Status\+Mask parameter. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a2b19d02bc65c56f2f58196a110617891}{E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status} (unsigned int base\+Addr, unsigned int tb\+Status\+Mask)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I clears the T\+B status bits indicated by the tb\+Status\+Mask parameter. \end{DoxyCompactList}\item 
+bool \hyperlink{ehrpwm_8h_ae7b06453e499d034c651a1d66a78433c}{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A} (unsigned int base\+Addr, unsigned int C\+M\+P\+A\+Val, bool enable\+Shadow\+Write, unsigned int Shadow\+To\+Active\+Load\+Trigger, bool Overwrite\+Shadow\+Full)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I loads the C\+M\+P\+A value. When C\+M\+P\+A value equals the counter value, then an event is generated both in the up direction and down direction. \end{DoxyCompactList}\item 
+bool \hyperlink{ehrpwm_8h_a8141230b22d347d76ef71e182f86fd72}{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B} (unsigned int base\+Addr, unsigned int C\+M\+P\+B\+Val, bool enable\+Shadow\+Write, unsigned int Shadow\+To\+Active\+Load\+Trigger, bool Overwrite\+Shadow\+Full)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I loads the C\+M\+P\+B value. When C\+M\+P\+B value equals the counter value, then an event is generated both in the up direction and down direction. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_afc497c2bab4286561d658403f958a0e5}{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A} (unsigned int base\+Addr, unsigned int zero, unsigned int period, unsigned int C\+A\+Up, unsigned int C\+A\+Down, unsigned int C\+B\+Up, unsigned int C\+B\+Down, unsigned int S\+W\+Forced)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the action to be taken on A by the Action qualifier module upon receiving the events. This will determine the output waveform. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a79eb376f1d6ab2bbab1e163262f1c94d}{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B} (unsigned int base\+Addr, unsigned int zero, unsigned int period, unsigned int C\+A\+Up, unsigned int C\+A\+Down, unsigned int C\+B\+Up, unsigned int C\+B\+Down, unsigned int S\+W\+Forced)
+\begin{DoxyCompactList}\small\item\em his A\+P\+I configures the action to be taken on B by the Action qualifier module upon receiving the events. This will determine the output waveform. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a4b95ac4bf7c44bdf2110c1f8c808ac76}{E\+H\+R\+P\+W\+M\+S\+W\+Force\+A} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I triggers the S\+W forced event on A. This can be used for testing the A\+Q sub-\/module.\+Every call to this A\+P\+I will trigger a single event. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a3d9ecfd1f0145ff3405f184639f2086b}{E\+H\+R\+P\+W\+M\+S\+W\+Force\+B} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I triggers the S\+W forced event on B. This can be used for testing the A\+Q sub-\/module.\+Every call to this A\+P\+I will trigger a single event. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a1b653a0d923d2a3ddbee7ce1772d7ada}{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A} (unsigned int base\+Addr, unsigned int force\+Val, unsigned int active\+Reg\+Reload\+Mode)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I forces a value continuously on A. The output can be forced to low or high. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_af1bed2d50d6bc9d27ff2ed0668b19bec}{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B} (unsigned int base\+Addr, unsigned int force\+Val, unsigned int active\+Reg\+Reload\+Mode)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I forces a value continuously on B. The output can be forced to low or high. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_aa6eeeba30457564858e1439dc941eadb}{E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select} (unsigned int base\+Addr, unsigned int D\+Bgen\+Source)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I selects the source for delay blocks in dead band sub-\/module. The Dead band generator has two sub-\/modules, one for raising edge delay and the other for falling edge delay. This can be configured when a delay is need between two signals during signal change. The dead band generator is usefull in full-\/inverters. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ab2c10cdbcedbefac13579a6505b0b5f0}{E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select} (unsigned int base\+Addr, unsigned int D\+Bgen\+Pol)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I selects the polarity. This allows to selectively invert one of the delayed signals before it is sent out of the dead-\/band sub-\/module. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a4d5b8a3b8ff3bee99174e6646e2e47d4}{E\+H\+R\+P\+W\+M\+D\+B\+Output} (unsigned int base\+Addr, unsigned int D\+Bgen\+Op\+Mode)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I selects output mode. This allows to selectively enable or bypass the dead-\/band generation for the falling-\/edge and rising-\/edge delay. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ac0f8f2919ce43dd5d9b415c09c6aedf9}{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D} (unsigned int base\+Addr, unsigned int raising\+Edge\+Delay)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I sets the raising edge delay. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ac98ad529bdefad58bef70f0fc9bc37ea}{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D} (unsigned int base\+Addr, unsigned int falling\+Edge\+Delay)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I sets the Falling edge delay. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a6b4a3d5fd4d1227d88044fb9fc19c5f4}{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty} (unsigned int base\+Addr, unsigned int duty\+Cycle)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the chopper duty cyce. In Chopper sub-\/module the P\+W\+M signal is modulated with a carrier signal. Th duty cycle of the carrier signal is configured with this A\+P\+I. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a0d28a708f8e093dd42bc59ce78363283}{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq} (unsigned int base\+Addr, unsigned int freq\+Div)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the chopper frequency. In chopper sub-\/module the P\+W\+M signal is modulated with a carrier signal. The frequency of the carrier signal is configured with this A\+P\+I. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ac18f062cb461a26bcae4d796e33d2c21}{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W} (unsigned int base\+Addr, unsigned int O\+S\+P\+W\+Cycles)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures one shot pulse width. The chopper module is useful in switching operations for pulse transformers. The one-\/shot block provides a high energy first pulse to ensure hard and fast power switch turn on, while the subsequent pulses sustain pulses, ensuring the power switch remains on. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a3b670330dd0e328deac7ae45a384c228}{E\+H\+R\+P\+W\+M\+Chopper\+Enable} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I enables the P\+W\+M chopper sub-\/module. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a347e161ffcaa6daeae4b9791817cef01}{E\+H\+R\+P\+W\+M\+Chopper\+Disable} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I disables the P\+W\+M chopper sub-\/module. This will cause the chopper module to be by-\/passed. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a9054d7c5ff285070f29597ffcbe88e4a}{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable} (unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I enables the trip event. The trip signals indicates external fault, and the e\+P\+W\+M outputs can be programmed to respond accordingly when faults occur. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_af9bc8305ed7c68727c71e73a0767a7fe}{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable} (unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I disable the trip event. The trip events will be ignored. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_aa6bd7e2f38a7e22b0fd48a023b77fd5e}{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip} (unsigned int base\+Addr, unsigned int op\+Value)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the o/p on A when a trip event is recognized. The output can be set to high or low or high impedence. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_aac78201ab14555b3fdff277eb4b6d1df}{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip} (unsigned int base\+Addr, unsigned int op\+Value)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures the o/p on B when a trip event is recognised. The output can be set to high or low or high impedence. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a61bbeb717a445125e83422b2f0371840}{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable} (unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I enables the trip interrupt. When trip event occurs the sub-\/module can be configured to interrupt C\+P\+U. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a27f436af359da51cd8f4683c7b7264b9}{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable} (unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I disables the trip interrupt. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ehrpwm_8h_ac06a4c82dc57a1d1730c8e2fa925eacc}{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get} (unsigned int base\+Addr, unsigned int flag\+To\+Read)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I returns the flag status requested. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a7bae2894bd2fbb9966dcb1621418045c}{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear} (unsigned int base\+Addr, unsigned int flag\+To\+Clear)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I clears the flag. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ac0d81f2cd394ac851f444b7ea259105f}{E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event} (unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I enables to generate S\+W forced trip. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_aa6220673129b2734d207ce7b32232c02}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I disables the interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a013bacc0cd501d173eb7cb83b873e0dd}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I enables the interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_aa205f30553b25c5218aeee6d6ca69ea3}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select} (unsigned int base\+Addr, unsigned int select\+Int)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I selects the interrupt source. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ae3faf92508ff95fc16c29bdcb73c6327}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale} (unsigned int base\+Addr, unsigned int prescale)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I prescales the event on which interrupt is to be generated. \end{DoxyCompactList}\item 
+bool \hyperlink{ehrpwm_8h_ae2a2fd7fcd612c68c235c537c48d2e69}{E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I returns the number of events occured. \end{DoxyCompactList}\item 
+bool \hyperlink{ehrpwm_8h_a7bfe0c3b855993c3032cd3f7193c405d}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I returns the interrupt status. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a5b288d6fcea632e6aeafaccda76a44ac}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I clears the interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a7c14e901e07b4e2382a125f4e03bf970}{E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I forces interrupt to be generated. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a2a7bc96e81e0672cd9e7cd245ab44e52}{E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R} (unsigned int base\+Addr, unsigned int T\+B\+P\+H\+S\+H\+R\+Val)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I loads the H\+R P\+H\+S value. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a9acb832e748f0b75d4d64524964a7b99}{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R} (unsigned int base\+Addr, unsigned int C\+M\+P\+A\+H\+R\+Val, unsigned int Shadow\+To\+Active\+Load\+Trigger)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I loads C\+M\+P\+A\+H\+R value. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a17215a69460bbe2f33226df1e557a8db}{E\+H\+R\+P\+W\+M\+Config\+H\+R} (unsigned int base\+Addr, unsigned int ctrl\+Mode, unsigned int M\+E\+P\+Ctrl\+Edge)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I configures control mode and edge mode. In also enables the H\+R sub-\/module. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a0f2979c3aa2ca05c5d624c1b402d8e12}{E\+H\+R\+P\+W\+M\+H\+R\+Disable} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I disables the H\+R sub-\/module. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_ad4b93780f5de7f18169631557a02ee21}{E\+H\+R\+P\+W\+M\+Clock\+Enable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions enables clock for E\+H\+R\+P\+W\+M module in P\+W\+M\+S\+S subsystem. \end{DoxyCompactList}\item 
+void \hyperlink{ehrpwm_8h_a281f81a9ca69f002c42f00339236feff}{E\+H\+R\+P\+W\+M\+Clock\+Disable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions enables clock for E\+H\+R\+P\+W\+M module in P\+W\+M\+S\+S subsystem. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ehrpwm_8h_a38318e9166b0c29e723ca433e548d76a}{E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions determines whether clock is enabled or not. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ehrpwm_8h_add682f45a33357a30d56ff59a4665989}{E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions determines whether clock is disabled or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the Macros and A\+P\+I prototypes for ehrpwm driver. 
+
+============================================================================
+
+
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ehrpwm_8h_a29664fba00ca9c88c0399a4240178659}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}\label{ehrpwm_8h_a29664fba00ca9c88c0399a4240178659}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADAMODE\_TBCTRPRD << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADAMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_ab9bd481092da885fe2617d1d7f78902c}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}\label{ehrpwm_8h_ab9bd481092da885fe2617d1d7f78902c}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADAMODE\_TBCTRZERO << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADAMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_a6103c74c8d2d241d864724b4fbf98f97}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}\label{ehrpwm_8h_a6103c74c8d2d241d864724b4fbf98f97}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADAMODE\_ZEROORPRD << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADAMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_ab17bde52331bde37e77a124392927ffc}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+A\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}\label{ehrpwm_8h_ab17bde52331bde37e77a124392927ffc}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADAMODE\_FREEZE << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADAMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_ad9549683f09d2643dd293a7c9a042028}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+P\+E\+R\+I\+O\+D}\label{ehrpwm_8h_ad9549683f09d2643dd293a7c9a042028}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADBMODE\_TBCTRPRD << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADBMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_add9be0073cbdbff91cee6f3c3876fa3a}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}\label{ehrpwm_8h_add9be0073cbdbff91cee6f3c3876fa3a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADBMODE\_TBCTRZERO << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADBMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_a1d90f646b2a1887600703a9142e04cb8}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+L\+O\+A\+D\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O\+\_\+\+O\+R\+\_\+\+P\+E\+R\+I\+O\+D}\label{ehrpwm_8h_a1d90f646b2a1887600703a9142e04cb8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADBMODE\_ZEROORPRD << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADBMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_aae8c468b6951b10a32514441775ec4fa}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+M\+P\+B\+\_\+\+N\+O\+\_\+\+L\+O\+A\+D}\label{ehrpwm_8h_aae8c468b6951b10a32514441775ec4fa}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_CMPCTL\_LOADBMODE\_FREEZE << \(\backslash\)
+                            EHRPWM\_CMPCTL\_LOADBMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_af9266ce41e7350fb7a1b818043a0f7a5}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N}\label{ehrpwm_8h_af9266ce41e7350fb7a1b818043a0f7a5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_CTRMODE\_DOWN << \(\backslash\)
+                            EHRPWM\_TBCTL\_CTRMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_a80634d68a43e260aa0c1d23cdb236c71}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+S\+T\+O\+P}\label{ehrpwm_8h_a80634d68a43e260aa0c1d23cdb236c71}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_CTRMODE\_STOPFREEZE << \(\backslash\)
+                            EHRPWM\_TBCTL\_CTRMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_a84f4b44bd6d67f8793c3675fa0284b4e}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P}\label{ehrpwm_8h_a84f4b44bd6d67f8793c3675fa0284b4e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_CTRMODE\_UP << \(\backslash\)
+                                EHRPWM\_TBCTL\_CTRMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_ad075400563ca7c3b054ca71f5a2cd831}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N@{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+D\+O\+W\+N}\label{ehrpwm_8h_ad075400563ca7c3b054ca71f5a2cd831}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_CTRMODE\_UPDOWN << \(\backslash\)
+                            EHRPWM\_TBCTL\_CTRMODE\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_af346d5d6245180b5f9680d4ce8af1ced}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B}\label{ehrpwm_8h_af346d5d6245180b5f9680d4ce8af1ced}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_SYNCOSEL\_TBCTRCMPB << \(\backslash\)
+                            EHRPWM\_TBCTL\_SYNCOSEL\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_af846632c5f2ea51da70b808bbe36528e}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O}\label{ehrpwm_8h_af846632c5f2ea51da70b808bbe36528e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_SYNCOSEL\_TBCTRZERO << \(\backslash\)
+                            EHRPWM\_TBCTL\_SYNCOSEL\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_acf599f96b26c3809f47eb35050e6f6c9}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E}\label{ehrpwm_8h_acf599f96b26c3809f47eb35050e6f6c9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_SYNCOSEL\_DISABLE << \(\backslash\)
+                            EHRPWM\_TBCTL\_SYNCOSEL\_SHIFT)
+\end{DoxyCode}
+\hypertarget{ehrpwm_8h_ac376b7c6d140033632db6d9fd1f1eb81}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N}}
+\index{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N@{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N}\label{ehrpwm_8h_ac376b7c6d140033632db6d9fd1f1eb81}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(EHRPWM\_TBCTL\_SYNCOSEL\_EPWMXSYNCI << \(\backslash\)
+                            EHRPWM\_TBCTL\_SYNCOSEL\_SHIFT)
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{ehrpwm_8h_a1b653a0d923d2a3ddbee7ce1772d7ada}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A@{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A}}
+\index{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A@{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A(unsigned int base\+Addr, unsigned int force\+Val, unsigned int active\+Reg\+Reload\+Mode)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+A (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{force\+Val, }
+\item[{unsigned int}]{active\+Reg\+Reload\+Mode}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a1b653a0d923d2a3ddbee7ce1772d7ada}
+
+
+This A\+P\+I forces a value continuously on A. The output can be forced to low or high. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em force\+Val} & Value to be forced \\
+\hline
+{\em active\+Reg\+Reload\+Mode} & Shadow to active reg load trigger\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_af1bed2d50d6bc9d27ff2ed0668b19bec}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B@{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B}}
+\index{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B@{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B(unsigned int base\+Addr, unsigned int force\+Val, unsigned int active\+Reg\+Reload\+Mode)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+A\+Q\+Cont\+S\+W\+Force\+On\+B (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{force\+Val, }
+\item[{unsigned int}]{active\+Reg\+Reload\+Mode}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_af1bed2d50d6bc9d27ff2ed0668b19bec}
+
+
+This A\+P\+I forces a value continuously on B. The output can be forced to low or high. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em force\+Val} & Value to be forced \\
+\hline
+{\em active\+Reg\+Reload\+Mode} & Shadow to active reg load trigger\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a347e161ffcaa6daeae4b9791817cef01}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Chopper\+Disable@{E\+H\+R\+P\+W\+M\+Chopper\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+Chopper\+Disable@{E\+H\+R\+P\+W\+M\+Chopper\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Chopper\+Disable(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Chopper\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a347e161ffcaa6daeae4b9791817cef01}
+
+
+This A\+P\+I disables the P\+W\+M chopper sub-\/module. This will cause the chopper module to be by-\/passed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a3b670330dd0e328deac7ae45a384c228}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Chopper\+Enable@{E\+H\+R\+P\+W\+M\+Chopper\+Enable}}
+\index{E\+H\+R\+P\+W\+M\+Chopper\+Enable@{E\+H\+R\+P\+W\+M\+Chopper\+Enable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Chopper\+Enable(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Chopper\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a3b670330dd0e328deac7ae45a384c228}
+
+
+This A\+P\+I enables the P\+W\+M chopper sub-\/module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a281f81a9ca69f002c42f00339236feff}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Clock\+Disable@{E\+H\+R\+P\+W\+M\+Clock\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+Clock\+Disable@{E\+H\+R\+P\+W\+M\+Clock\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Clock\+Disable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Clock\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a281f81a9ca69f002c42f00339236feff}
+
+
+This functions enables clock for E\+H\+R\+P\+W\+M module in P\+W\+M\+S\+S subsystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_add682f45a33357a30d56ff59a4665989}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get@{E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get}}
+\index{E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get@{E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+H\+R\+P\+W\+M\+Clock\+Disable\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_add682f45a33357a30d56ff59a4665989}
+
+
+This functions determines whether clock is disabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return\textquotesingle{}s \textquotesingle{}1\textquotesingle{} if clocked is disabled. return\textquotesingle{}s \textquotesingle{}0\textquotesingle{} if clocked is not disabled. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ad4b93780f5de7f18169631557a02ee21}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Clock\+Enable@{E\+H\+R\+P\+W\+M\+Clock\+Enable}}
+\index{E\+H\+R\+P\+W\+M\+Clock\+Enable@{E\+H\+R\+P\+W\+M\+Clock\+Enable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Clock\+Enable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Clock\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ad4b93780f5de7f18169631557a02ee21}
+
+
+This functions enables clock for E\+H\+R\+P\+W\+M module in P\+W\+M\+S\+S subsystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a38318e9166b0c29e723ca433e548d76a}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get@{E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get}}
+\index{E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get@{E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+H\+R\+P\+W\+M\+Clock\+Enable\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a38318e9166b0c29e723ca433e548d76a}
+
+
+This functions determines whether clock is enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return\textquotesingle{}s \textquotesingle{}1\textquotesingle{} if clocked is enabled. return\textquotesingle{}s \textquotesingle{}0\textquotesingle{} if clocked is not enabled. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a17215a69460bbe2f33226df1e557a8db}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Config\+H\+R@{E\+H\+R\+P\+W\+M\+Config\+H\+R}}
+\index{E\+H\+R\+P\+W\+M\+Config\+H\+R@{E\+H\+R\+P\+W\+M\+Config\+H\+R}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Config\+H\+R(unsigned int base\+Addr, unsigned int ctrl\+Mode, unsigned int M\+E\+P\+Ctrl\+Edge)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Config\+H\+R (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{ctrl\+Mode, }
+\item[{unsigned int}]{M\+E\+P\+Ctrl\+Edge}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a17215a69460bbe2f33226df1e557a8db}
+
+
+This A\+P\+I configures control mode and edge mode. In also enables the H\+R sub-\/module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em ctrl\+Mode} & phase control or duty control \\
+\hline
+{\em M\+E\+P\+Ctrl\+Edge} & Edge on which M\+E\+P to be applied (raising, falling, both)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_afc497c2bab4286561d658403f958a0e5}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A@{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A}}
+\index{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A@{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A(unsigned int base\+Addr, unsigned int zero, unsigned int period, unsigned int C\+A\+Up, unsigned int C\+A\+Down, unsigned int C\+B\+Up, unsigned int C\+B\+Down, unsigned int S\+W\+Forced)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+A (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{zero, }
+\item[{unsigned int}]{period, }
+\item[{unsigned int}]{C\+A\+Up, }
+\item[{unsigned int}]{C\+A\+Down, }
+\item[{unsigned int}]{C\+B\+Up, }
+\item[{unsigned int}]{C\+B\+Down, }
+\item[{unsigned int}]{S\+W\+Forced}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_afc497c2bab4286561d658403f958a0e5}
+
+
+This A\+P\+I configures the action to be taken on A by the Action qualifier module upon receiving the events. This will determine the output waveform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zero} & Action to be taken when C\+T\+R = 0 \\
+\hline
+{\em period} & Action to be taken when C\+T\+R = P\+R\+D \\
+\hline
+{\em C\+A\+Up} & Action to be taken when C\+T\+R = C\+A\+Up \\
+\hline
+{\em C\+A\+Down} & Action to be taken when C\+T\+R = C\+A\+Down \\
+\hline
+{\em C\+B\+Up} & Action to be taken when C\+T\+R = C\+B\+Up \\
+\hline
+{\em C\+B\+Down} & Action to be taken when C\+T\+R = C\+B\+Down \\
+\hline
+{\em S\+W\+Forced} & Action to be taken when S\+W forced event has been generated \begin{DoxyVerb}Possible values for the actions are
+     - EHRPWM_XXXX_XXXX_DONOTHING \n
+     - EHRPWM_XXXX_XXXX_CLEAR \n
+     - EHRPWM_XXXX_XXXX_SET \n
+     - EHRPWM_XXXX_XXXX_TOGGLE \n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a79eb376f1d6ab2bbab1e163262f1c94d}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B@{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B}}
+\index{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B@{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B(unsigned int base\+Addr, unsigned int zero, unsigned int period, unsigned int C\+A\+Up, unsigned int C\+A\+Down, unsigned int C\+B\+Up, unsigned int C\+B\+Down, unsigned int S\+W\+Forced)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Configure\+A\+Q\+Action\+On\+B (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{zero, }
+\item[{unsigned int}]{period, }
+\item[{unsigned int}]{C\+A\+Up, }
+\item[{unsigned int}]{C\+A\+Down, }
+\item[{unsigned int}]{C\+B\+Up, }
+\item[{unsigned int}]{C\+B\+Down, }
+\item[{unsigned int}]{S\+W\+Forced}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a79eb376f1d6ab2bbab1e163262f1c94d}
+
+
+his A\+P\+I configures the action to be taken on B by the Action qualifier module upon receiving the events. This will determine the output waveform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zero} & Action to be taken when C\+T\+R = 0 \\
+\hline
+{\em period} & Action to be taken when C\+T\+R = P\+R\+D \\
+\hline
+{\em C\+A\+Up} & Action to be taken when C\+T\+R = C\+A\+Up \\
+\hline
+{\em C\+A\+Down} & Action to be taken when C\+T\+R = C\+A\+Down \\
+\hline
+{\em C\+B\+Up} & Action to be taken when C\+T\+R = C\+B\+Up \\
+\hline
+{\em C\+B\+Down} & Action to be taken when C\+T\+R = C\+B\+Down \\
+\hline
+{\em S\+W\+Forced} & Action to be taken when S\+W forced event has been generated \begin{DoxyVerb}Possible values for the actions are
+    - EHRPWM_XXXX_XXXX_DONOTHING \n
+    - EHRPWM_XXXX_XXXX_CLEAR \n
+    - EHRPWM_XXXX_XXXX_SET \n
+    - EHRPWM_XXXX_XXXX_TOGGLE \n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a6b4a3d5fd4d1227d88044fb9fc19c5f4}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty@{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty}}
+\index{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty@{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty(unsigned int base\+Addr, unsigned int duty\+Cycle)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Duty (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{duty\+Cycle}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a6b4a3d5fd4d1227d88044fb9fc19c5f4}
+
+
+This A\+P\+I configures the chopper duty cyce. In Chopper sub-\/module the P\+W\+M signal is modulated with a carrier signal. Th duty cycle of the carrier signal is configured with this A\+P\+I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em duty\+Cycle} & Duty cycle of the chopping carrier. Possible values are \+:
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+12\+\_\+5\+\_\+\+P\+E\+R ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+25\+\_\+\+P\+E\+R ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+37\+\_\+5\+\_\+\+P\+E\+R ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+50\+\_\+\+P\+E\+R ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+62\+\_\+5\+\_\+\+P\+E\+R ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+75\+\_\+\+P\+E\+R ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+U\+T\+Y\+\_\+87\+\_\+5\+\_\+\+P\+E\+R ~\newline
+ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a0d28a708f8e093dd42bc59ce78363283}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq@{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq}}
+\index{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq@{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq(unsigned int base\+Addr, unsigned int freq\+Div)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Configure\+Chopper\+Freq (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{freq\+Div}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a0d28a708f8e093dd42bc59ce78363283}
+
+
+This A\+P\+I configures the chopper frequency. In chopper sub-\/module the P\+W\+M signal is modulated with a carrier signal. The frequency of the carrier signal is configured with this A\+P\+I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em freq\+Div} & Frequency divider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ac18f062cb461a26bcae4d796e33d2c21}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W@{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W}}
+\index{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W@{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W(unsigned int base\+Addr, unsigned int O\+S\+P\+W\+Cycles)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Configure\+Chopper\+O\+S\+P\+W (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{O\+S\+P\+W\+Cycles}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ac18f062cb461a26bcae4d796e33d2c21}
+
+
+This A\+P\+I configures one shot pulse width. The chopper module is useful in switching operations for pulse transformers. The one-\/shot block provides a high energy first pulse to ensure hard and fast power switch turn on, while the subsequent pulses sustain pulses, ensuring the power switch remains on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em O\+S\+P\+W\+Cycles} & Number of clocks the O\+S\+P\+W to be O\+N.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ac98ad529bdefad58bef70f0fc9bc37ea}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D@{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D}}
+\index{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D@{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D(unsigned int base\+Addr, unsigned int falling\+Edge\+Delay)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+D\+B\+Configure\+F\+E\+D (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{falling\+Edge\+Delay}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ac98ad529bdefad58bef70f0fc9bc37ea}
+
+
+This A\+P\+I sets the Falling edge delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em falling\+Edge\+Delay} & Falling Edge Delay\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ac0f8f2919ce43dd5d9b415c09c6aedf9}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D@{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D}}
+\index{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D@{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D(unsigned int base\+Addr, unsigned int raising\+Edge\+Delay)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+D\+B\+Configure\+R\+E\+D (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{raising\+Edge\+Delay}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ac0f8f2919ce43dd5d9b415c09c6aedf9}
+
+
+This A\+P\+I sets the raising edge delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em raising\+Edge\+Delay} & Raising Edge Delay\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a4d5b8a3b8ff3bee99174e6646e2e47d4}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+D\+B\+Output@{E\+H\+R\+P\+W\+M\+D\+B\+Output}}
+\index{E\+H\+R\+P\+W\+M\+D\+B\+Output@{E\+H\+R\+P\+W\+M\+D\+B\+Output}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+D\+B\+Output(unsigned int base\+Addr, unsigned int D\+Bgen\+Op\+Mode)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+D\+B\+Output (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{D\+Bgen\+Op\+Mode}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a4d5b8a3b8ff3bee99174e6646e2e47d4}
+
+
+This A\+P\+I selects output mode. This allows to selectively enable or bypass the dead-\/band generation for the falling-\/edge and rising-\/edge delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em D\+Bgen\+Op\+Mode} & Output mode. The possible values can be \+:
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E\+\_\+\+B\+Y\+P\+A\+S\+S ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+E\+D\+B\+F\+E\+D ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E\+\_\+\+A\+R\+E\+D\+N\+O\+F\+E\+D ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E\+\_\+\+A\+R\+E\+D\+B\+F\+E\+D ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ab2c10cdbcedbefac13579a6505b0b5f0}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select@{E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select}}
+\index{E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select@{E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select(unsigned int base\+Addr, unsigned int D\+Bgen\+Pol)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+D\+B\+Polarity\+Select (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{D\+Bgen\+Pol}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ab2c10cdbcedbefac13579a6505b0b5f0}
+
+
+This A\+P\+I selects the polarity. This allows to selectively invert one of the delayed signals before it is sent out of the dead-\/band sub-\/module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em D\+Bgen\+Source} & Polarity. The possible values can be \+:
+\begin{DoxyItemize}
+\item H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+P\+O\+L\+S\+E\+L\+\_\+\+A\+C\+T\+I\+V\+E\+H\+I\+G\+H ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+P\+O\+L\+S\+E\+L\+\_\+\+A\+L\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+P\+O\+L\+S\+E\+L\+\_\+\+A\+H\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+P\+O\+L\+S\+E\+L\+\_\+\+A\+C\+T\+I\+V\+E\+L\+O\+W ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_aa6eeeba30457564858e1439dc941eadb}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select@{E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select}}
+\index{E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select@{E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select(unsigned int base\+Addr, unsigned int D\+Bgen\+Source)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+D\+B\+Source\+Select (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{D\+Bgen\+Source}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_aa6eeeba30457564858e1439dc941eadb}
+
+
+This A\+P\+I selects the source for delay blocks in dead band sub-\/module. The Dead band generator has two sub-\/modules, one for raising edge delay and the other for falling edge delay. This can be configured when a delay is need between two signals during signal change. The dead band generator is usefull in full-\/inverters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em D\+Bgen\+Source} & Source selection. The possible values can be
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+I\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+R\+E\+D\+A\+F\+E\+D ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+I\+N\+\_\+\+M\+O\+D\+E\+\_\+\+B\+R\+E\+D\+A\+F\+E\+D ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+I\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+R\+E\+D\+B\+F\+E\+D ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+D\+B\+C\+T\+L\+\_\+\+I\+N\+\_\+\+M\+O\+D\+E\+\_\+\+B\+R\+E\+D\+B\+F\+E\+D ~\newline
+ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ae2a2fd7fcd612c68c235c537c48d2e69}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count@{E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count@{E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+H\+R\+P\+W\+M\+E\+T\+Event\+Count (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ae2a2fd7fcd612c68c235c537c48d2e69}
+
+
+This A\+P\+I returns the number of events occured. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+event\+Count number of events occured 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a5b288d6fcea632e6aeafaccda76a44ac}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+E\+T\+Int\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a5b288d6fcea632e6aeafaccda76a44ac}
+
+
+This A\+P\+I clears the interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_aa6220673129b2734d207ce7b32232c02}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+E\+T\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_aa6220673129b2734d207ce7b32232c02}
+
+
+This A\+P\+I disables the interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a013bacc0cd501d173eb7cb83b873e0dd}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+E\+T\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a013bacc0cd501d173eb7cb83b873e0dd}
+
+
+This A\+P\+I enables the interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ae3faf92508ff95fc16c29bdcb73c6327}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale(unsigned int base\+Addr, unsigned int prescale)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+E\+T\+Int\+Prescale (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{prescale}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ae3faf92508ff95fc16c29bdcb73c6327}
+
+
+This A\+P\+I prescales the event on which interrupt is to be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em prescale} & prescalar value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_aa205f30553b25c5218aeee6d6ca69ea3}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select(unsigned int base\+Addr, unsigned int select\+Int)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+E\+T\+Int\+Source\+Select (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{select\+Int}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_aa205f30553b25c5218aeee6d6ca69ea3}
+
+
+This A\+P\+I selects the interrupt source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em select\+Int} & Event which triggers interrupt. The possible source can be,
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+E\+T\+S\+E\+L\+\_\+\+I\+N\+T\+S\+E\+L\+\_\+\+T\+B\+C\+T\+R\+E\+Q\+U\+Z\+E\+R\+O ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+E\+T\+S\+E\+L\+\_\+\+I\+N\+T\+S\+E\+L\+\_\+\+T\+B\+C\+T\+R\+E\+Q\+U\+P\+R\+D ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+E\+T\+S\+E\+L\+\_\+\+I\+N\+T\+S\+E\+L\+\_\+\+T\+B\+C\+T\+R\+E\+Q\+U\+C\+M\+P\+A\+I\+N\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+E\+T\+S\+E\+L\+\_\+\+I\+N\+T\+S\+E\+L\+\_\+\+T\+B\+C\+T\+R\+E\+Q\+U\+C\+M\+P\+A\+D\+E\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+E\+T\+S\+E\+L\+\_\+\+I\+N\+T\+S\+E\+L\+\_\+\+T\+B\+C\+T\+R\+E\+Q\+U\+C\+M\+P\+B\+I\+N\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+E\+T\+S\+E\+L\+\_\+\+I\+N\+T\+S\+E\+L\+\_\+\+T\+B\+C\+T\+R\+E\+Q\+U\+C\+M\+P\+B\+D\+E\+C ~\newline
+ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a7bfe0c3b855993c3032cd3f7193c405d}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+H\+R\+P\+W\+M\+E\+T\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a7bfe0c3b855993c3032cd3f7193c405d}
+
+
+This A\+P\+I returns the interrupt status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status Status of the interrupt 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a7c14e901e07b4e2382a125f4e03bf970}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force}}
+\index{E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force@{E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+E\+T\+Int\+S\+W\+Force (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a7c14e901e07b4e2382a125f4e03bf970}
+
+
+This A\+P\+I forces interrupt to be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a0f2979c3aa2ca05c5d624c1b402d8e12}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+H\+R\+Disable@{E\+H\+R\+P\+W\+M\+H\+R\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+H\+R\+Disable@{E\+H\+R\+P\+W\+M\+H\+R\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+H\+R\+Disable(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+H\+R\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a0f2979c3aa2ca05c5d624c1b402d8e12}
+
+
+This A\+P\+I disables the H\+R sub-\/module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ae7b06453e499d034c651a1d66a78433c}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A@{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A}}
+\index{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A@{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A(unsigned int base\+Addr, unsigned int C\+M\+P\+A\+Val, bool enable\+Shadow\+Write, unsigned int Shadow\+To\+Active\+Load\+Trigger, bool Overwrite\+Shadow\+Full)}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{C\+M\+P\+A\+Val, }
+\item[{bool}]{enable\+Shadow\+Write, }
+\item[{unsigned int}]{Shadow\+To\+Active\+Load\+Trigger, }
+\item[{bool}]{Overwrite\+Shadow\+Full}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ae7b06453e499d034c651a1d66a78433c}
+
+
+This A\+P\+I loads the C\+M\+P\+A value. When C\+M\+P\+A value equals the counter value, then an event is generated both in the up direction and down direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em C\+M\+P\+A\+Val} & C\+M\+P\+A value to be loaded. \\
+\hline
+{\em enable\+Shadow\+Write} & Enable write to shadow register. \\
+\hline
+{\em Shadow\+To\+Active\+Load\+Trigger} & Shadow to active register load trigger. \\
+\hline
+{\em Overwrite\+Shadow\+Full} & Overwrite even if previous value is not loaded to active register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Flag indicates whether the C\+M\+P\+A value is written or not. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a9acb832e748f0b75d4d64524964a7b99}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R@{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R}}
+\index{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R@{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R(unsigned int base\+Addr, unsigned int C\+M\+P\+A\+H\+R\+Val, unsigned int Shadow\+To\+Active\+Load\+Trigger)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+A\+H\+R (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{C\+M\+P\+A\+H\+R\+Val, }
+\item[{unsigned int}]{Shadow\+To\+Active\+Load\+Trigger}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a9acb832e748f0b75d4d64524964a7b99}
+
+
+This A\+P\+I loads C\+M\+P\+A\+H\+R value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em C\+M\+P\+A\+H\+R\+Val} & C\+M\+P\+A\+H\+R value to he loaded \\
+\hline
+{\em Shadow\+To\+Active\+Load\+Trigger} & Condition when the active reg to be loaded from shadow register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a8141230b22d347d76ef71e182f86fd72}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B@{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B}}
+\index{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B@{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B(unsigned int base\+Addr, unsigned int C\+M\+P\+B\+Val, bool enable\+Shadow\+Write, unsigned int Shadow\+To\+Active\+Load\+Trigger, bool Overwrite\+Shadow\+Full)}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+H\+R\+P\+W\+M\+Load\+C\+M\+P\+B (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{C\+M\+P\+B\+Val, }
+\item[{bool}]{enable\+Shadow\+Write, }
+\item[{unsigned int}]{Shadow\+To\+Active\+Load\+Trigger, }
+\item[{bool}]{Overwrite\+Shadow\+Full}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a8141230b22d347d76ef71e182f86fd72}
+
+
+This A\+P\+I loads the C\+M\+P\+B value. When C\+M\+P\+B value equals the counter value, then an event is generated both in the up direction and down direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em C\+M\+P\+B\+Val} & C\+M\+P\+B value to be loaded. \\
+\hline
+{\em enable\+Shadow\+Write} & Enable write to shadow register. \\
+\hline
+{\em Shadow\+To\+Active\+Load\+Trigger} & Shadow to active register load trigger. \\
+\hline
+{\em Overwrite\+Shadow\+Full} & Overwrite even if previous value is not loaded to active register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Flag indicates whether the C\+M\+P\+B value is written or not. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a2a7bc96e81e0672cd9e7cd245ab44e52}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R@{E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R}}
+\index{E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R@{E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R(unsigned int base\+Addr, unsigned int T\+B\+P\+H\+S\+H\+R\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Load\+T\+B\+P\+H\+S\+H\+R (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{T\+B\+P\+H\+S\+H\+R\+Val}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a2a7bc96e81e0672cd9e7cd245ab44e52}
+
+
+This A\+P\+I loads the H\+R P\+H\+S value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em T\+B\+P\+H\+S\+H\+R\+Val} & T\+B P\+H\+S H\+R value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a803641e8d6b0e97ed010eb611ba02b33}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set@{E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set}}
+\index{E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set@{E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set(unsigned int base\+Addr, unsigned int tb\+Clk, unsigned int pwm\+Freq, unsigned int counter\+Dir, bool enable\+Shadow\+Write)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+P\+W\+M\+Op\+Freq\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tb\+Clk, }
+\item[{unsigned int}]{pwm\+Freq, }
+\item[{unsigned int}]{counter\+Dir, }
+\item[{bool}]{enable\+Shadow\+Write}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a803641e8d6b0e97ed010eb611ba02b33}
+
+
+This A\+P\+I configures the P\+W\+M Frequency/\+Period. The period count determines the period of the final output waveform. For the given period count, in the case of U\+P and D\+O\+W\+N counter the count value will be loaded as is. In the case of U\+P\+\_\+\+D\+O\+W\+N counter the count is halfed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em tb\+Clk} & Timebase clock. \\
+\hline
+{\em pwm\+Freq} & Frequency of the P\+W\+M Output. If the counter direction is up-\/down this value has to be halfed, so that the period of the final output is equal to pwm\+Freq.\\
+\hline
+{\em counter\+Dir} & Direction of the counter(up, down, up-\/down) \\
+\hline
+{\em enable\+Shadow\+Write} & Whether write to Period register is to be shadowed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a5550aaae6599d88603109669719de7c7}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count@{E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count}}
+\index{E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count@{E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+H\+R\+P\+W\+M\+Read\+T\+B\+Count (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a5550aaae6599d88603109669719de7c7}
+
+
+This A\+P\+I gets the T\+B counter current value. The count operation is not affected by the read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tb\+Count Current Timebase count value. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a4b95ac4bf7c44bdf2110c1f8c808ac76}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+S\+W\+Force\+A@{E\+H\+R\+P\+W\+M\+S\+W\+Force\+A}}
+\index{E\+H\+R\+P\+W\+M\+S\+W\+Force\+A@{E\+H\+R\+P\+W\+M\+S\+W\+Force\+A}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+S\+W\+Force\+A(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+S\+W\+Force\+A (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a4b95ac4bf7c44bdf2110c1f8c808ac76}
+
+
+This A\+P\+I triggers the S\+W forced event on A. This can be used for testing the A\+Q sub-\/module.\+Every call to this A\+P\+I will trigger a single event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a3d9ecfd1f0145ff3405f184639f2086b}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+S\+W\+Force\+B@{E\+H\+R\+P\+W\+M\+S\+W\+Force\+B}}
+\index{E\+H\+R\+P\+W\+M\+S\+W\+Force\+B@{E\+H\+R\+P\+W\+M\+S\+W\+Force\+B}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+S\+W\+Force\+B(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+S\+W\+Force\+B (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a3d9ecfd1f0145ff3405f184639f2086b}
+
+
+This A\+P\+I triggers the S\+W forced event on B. This can be used for testing the A\+Q sub-\/module.\+Every call to this A\+P\+I will trigger a single event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a525c8131e2870b90f640725de883061a}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set@{E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set}}
+\index{E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set@{E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set(unsigned int base\+Addr, unsigned int sync\+Out\+Mode)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Sync\+Out\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{sync\+Out\+Mode}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a525c8131e2870b90f640725de883061a}
+
+
+This A\+P\+I selects the output sync source. It determines on which of the following event sync-\/out has to be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em sync\+Out\+Mode} & Sync out mode. Possible values are,
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+S\+Y\+N\+C\+I\+N ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+Z\+E\+R\+O ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+Q\+U\+A\+L\+\_\+\+C\+O\+M\+P\+A\+R\+E\+B ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+S\+Y\+N\+C\+O\+U\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a2b19d02bc65c56f2f58196a110617891}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status@{E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status}}
+\index{E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status@{E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status(unsigned int base\+Addr, unsigned int tb\+Status\+Mask)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+B\+Clear\+Status (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tb\+Status\+Mask}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a2b19d02bc65c56f2f58196a110617891}
+
+
+This A\+P\+I clears the T\+B status bits indicated by the tb\+Status\+Mask parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em tb\+Status\+Mask} & Indicates which status bit need to be cleared.
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+S\+T\+S\+\_\+\+C\+T\+R\+M\+A\+X ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+S\+T\+S\+\_\+\+S\+Y\+N\+C\+I ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+S\+T\+S\+\_\+\+C\+T\+R\+D\+I\+R ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a2ff1feffaa3798d646ba0d0a0b582cff}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set@{E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set}}
+\index{E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set@{E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set(unsigned int base\+Addr, unsigned int mode)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+B\+Emulation\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{mode}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a2ff1feffaa3798d646ba0d0a0b582cff}
+
+
+This A\+P\+I configures emulation mode. This setting determines the behaviour of Timebase during emulation (debugging). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em mode} & Emulation mode. Possible values are,
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+A\+F\+T\+E\+R\+\_\+\+N\+E\+X\+T\+\_\+\+T\+B\+\_\+\+I\+N\+C\+R\+E\+M\+E\+N\+T ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+S\+T\+O\+P\+\_\+\+A\+F\+T\+E\+R\+\_\+\+A\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+C\+Y\+C\+L\+E ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_afc2a05839617e629fbcfe64dfea8b583}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get@{E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get}}
+\index{E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get@{E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get(unsigned int base\+Addr, unsigned int tb\+Status\+Mask)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+H\+R\+P\+W\+M\+T\+B\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tb\+Status\+Mask}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_afc2a05839617e629fbcfe64dfea8b583}
+
+
+This A\+P\+I gets the T\+B status as indicated by the tb\+Status\+Mask parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em tb\+Status\+Mask} & Indicates which status is needed.
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+S\+T\+S\+\_\+\+C\+T\+R\+M\+A\+X
+\begin{DoxyItemize}
+\item whether the counter has reached the max value ~\newline
+
+\end{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+S\+T\+S\+\_\+\+S\+Y\+N\+C\+I
+\begin{DoxyItemize}
+\item indicates external sync event has occured ~\newline
+
+\end{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+B\+S\+T\+S\+\_\+\+C\+T\+R\+D\+I\+R -\/ gives the counter direction ~\newline
+ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tb\+Status Requested status is returned. The user need to extract the appropriate bits by shifting. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_afe52258a8de4554da297fc309ec2eb17}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config@{E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config}}
+\index{E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config@{E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config(unsigned int base\+Addr, unsigned int tb\+Clk, unsigned int module\+Clk)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Timebase\+Clk\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tb\+Clk, }
+\item[{unsigned int}]{module\+Clk}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_afe52258a8de4554da297fc309ec2eb17}
+
+
+This A\+P\+I configures the clock divider of the Time base module. The clock divider can be calculated using the equation T\+B\+C\+L\+K = S\+Y\+S\+C\+L\+K\+O\+U\+T/(H\+S\+P\+C\+L\+K\+D\+I\+V × C\+L\+K\+D\+I\+V) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em tb\+Clk} & Timebase clock to be generated. \\
+\hline
+{\em module\+Clk} & Input clock of the P\+W\+M module (sysclk2)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a07998e157a6e55df784aa3543ebf7697}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable@{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable@{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a07998e157a6e55df784aa3543ebf7697}
+
+
+This A\+P\+I disables the synchronization. Even if sync-\/in event occurs the count value will not be reloaded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a06ebbe6fc66c85d2673f29d4ddfe414a}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable@{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable}}
+\index{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable@{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable(unsigned int base\+Addr, unsigned int tb\+Phs\+Value, unsigned int phs\+Count\+Dir)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Timebase\+Sync\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tb\+Phs\+Value, }
+\item[{unsigned int}]{phs\+Count\+Dir}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a06ebbe6fc66c85d2673f29d4ddfe414a}
+
+
+This A\+P\+I enables the synchronization. When a sync-\/in event is generated the couter is reloaded with the new value. After sync the counter will use the new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em tb\+Phs\+Value} & Phase value to be reloaded after sync \\
+\hline
+{\em phs\+Count\+Dir} & Count direction after sync. Possible values are
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+D\+O\+W\+N\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+Y\+N\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+C\+O\+U\+N\+T\+\_\+\+U\+P\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+Y\+N\+C ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a3b5c0f3a4f5be5f1542bd783242c49ec}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync@{E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync}}
+\index{E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync@{E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Trigger\+S\+W\+Sync (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a3b5c0f3a4f5be5f1542bd783242c49ec}
+
+
+This A\+P\+I generates sw forced sync pulse. This A\+P\+I can be used for testing. When this A\+P\+I is called sync-\/in will be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a7bae2894bd2fbb9966dcb1621418045c}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear@{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear@{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear(unsigned int base\+Addr, unsigned int flag\+To\+Clear)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{flag\+To\+Clear}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a7bae2894bd2fbb9966dcb1621418045c}
+
+
+This A\+P\+I clears the flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em flag\+To\+Clear} & Status to be cleared. The possible values can be,
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+O\+S\+T ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+C\+B\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+I\+N\+T ~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ac06a4c82dc57a1d1730c8e2fa925eacc}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get@{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get@{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get(unsigned int base\+Addr, unsigned int flag\+To\+Read)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+H\+R\+P\+W\+M\+T\+Z\+Flag\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{flag\+To\+Read}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ac06a4c82dc57a1d1730c8e2fa925eacc}
+
+
+This A\+P\+I returns the flag status requested. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em flag\+To\+Read} & status to be read. The possible values can be,
+\begin{DoxyItemize}
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+O\+S\+T ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+C\+B\+C ~\newline
+
+\item E\+H\+R\+P\+W\+M\+\_\+\+T\+Z\+C\+L\+R\+\_\+\+I\+N\+T ~\newline
+ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_aa6bd7e2f38a7e22b0fd48a023b77fd5e}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip@{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip@{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip(unsigned int base\+Addr, unsigned int op\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Force\+A\+On\+Trip (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{op\+Value}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_aa6bd7e2f38a7e22b0fd48a023b77fd5e}
+
+
+This A\+P\+I configures the o/p on A when a trip event is recognized. The output can be set to high or low or high impedence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em op\+Value} & o/p state to be configured\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_aac78201ab14555b3fdff277eb4b6d1df}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip@{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip@{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip(unsigned int base\+Addr, unsigned int op\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Force\+B\+On\+Trip (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{op\+Value}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_aac78201ab14555b3fdff277eb4b6d1df}
+
+
+This A\+P\+I configures the o/p on B when a trip event is recognised. The output can be set to high or low or high impedence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em op\+Value} & o/p state to be configured\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a27f436af359da51cd8f4683c7b7264b9}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable@{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable@{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable(unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{bool}]{osht\+\_\+\+C\+B\+C}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a27f436af359da51cd8f4683c7b7264b9}
+
+
+This A\+P\+I disables the trip interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em osht\+\_\+\+C\+B\+C} & disable O\+S\+T or C\+B\+C\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a61bbeb717a445125e83422b2f0371840}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable@{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable@{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable(unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{bool}]{osht\+\_\+\+C\+B\+C}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a61bbeb717a445125e83422b2f0371840}
+
+
+This A\+P\+I enables the trip interrupt. When trip event occurs the sub-\/module can be configured to interrupt C\+P\+U. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em osht\+\_\+\+C\+B\+C} & enable O\+S\+T or C\+B\+C\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_ac0d81f2cd394ac851f444b7ea259105f}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event@{E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event@{E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event(unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+S\+W\+Frc\+Event (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{bool}]{osht\+\_\+\+C\+B\+C}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_ac0d81f2cd394ac851f444b7ea259105f}
+
+
+This A\+P\+I enables to generate S\+W forced trip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em osht\+\_\+\+C\+B\+C} & generate O\+S\+T or C\+B\+C trip\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_af9bc8305ed7c68727c71e73a0767a7fe}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable@{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable@{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable(unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{bool}]{osht\+\_\+\+C\+B\+C}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_af9bc8305ed7c68727c71e73a0767a7fe}
+
+
+This A\+P\+I disable the trip event. The trip events will be ignored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em osht\+\_\+\+C\+B\+C} & Disable O\+S\+T or C\+B\+C event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a9054d7c5ff285070f29597ffcbe88e4a}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable@{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable}}
+\index{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable@{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable(unsigned int base\+Addr, bool osht\+\_\+\+C\+B\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+T\+Z\+Trip\+Event\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{bool}]{osht\+\_\+\+C\+B\+C}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a9054d7c5ff285070f29597ffcbe88e4a}
+
+
+This A\+P\+I enables the trip event. The trip signals indicates external fault, and the e\+P\+W\+M outputs can be programmed to respond accordingly when faults occur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em osht\+\_\+\+C\+B\+C} & Enable O\+S\+T or C\+B\+C event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ehrpwm_8h_a82539b90648c79483f28a24a4b4d5989}{}\index{ehrpwm.\+h@{ehrpwm.\+h}!E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count@{E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count}}
+\index{E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count@{E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count}!ehrpwm.\+h@{ehrpwm.\+h}}
+\subsubsection[{E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count(unsigned int base\+Addr, unsigned int tb\+Count)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+H\+R\+P\+W\+M\+Write\+T\+B\+Count (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tb\+Count}
+\end{DoxyParamCaption}
+)}\label{ehrpwm_8h_a82539b90648c79483f28a24a4b4d5989}
+
+
+This A\+P\+I loads the T\+B counter. The new value is taken immediately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the P\+W\+M Module Registers. \\
+\hline
+{\em tb\+Count} & Time base count value to be loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

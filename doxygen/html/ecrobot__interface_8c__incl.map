@@ -1,0 +1,16 @@
+<map id="ECRobot/ecrobot_interface.c" name="ECRobot/ecrobot_interface.c">
+<area shape="rect" id="node2" href="$ecrobot__interface_8h.html" title="This file contains the function declarations for the users ECRobot&#45;API. This API is used to interact ..." alt="" coords="508,80,641,107"/>
+<area shape="rect" id="node3" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="340,304,423,331"/>
+<area shape="rect" id="node4" href="$systick_8h.html" title="This header contains function declarations required to manage the tick in milliseconds on the EV3..." alt="" coords="33,229,108,256"/>
+<area shape="rect" id="node5" href="$adc__sensors_8h.html" title="Function declarations to read the analogous sensors. " alt="" coords="69,155,176,181"/>
+<area shape="rect" id="node7" href="$digi__sensors_8h.html" title="Function declarations to talk to the digital sensors (I2C sensors) " alt="" coords="200,155,307,181"/>
+<area shape="rect" id="node8" href="$ev3__motors_8h.html" title="This header contains function declarations to use motor drivers. Driver wrapper for ECRobot API..." alt="" coords="331,155,432,181"/>
+<area shape="rect" id="node10" href="$i2c_8h.html" title="Function declarations related to I2C communication. " alt="" coords="459,229,509,256"/>
+<area shape="rect" id="node12" href="$init_8h.html" title="This header provides the interface to initialize the leJOS EV3 drivers. " alt="" coords="589,155,640,181"/>
+<area shape="rect" id="node13" href="$adc_8h.html" title="This header contains function declarations to talk to the ADC. " alt="" coords="665,155,719,181"/>
+<area shape="rect" id="node14" href="$power_8h.html" title="This header contains function declarations for the power management on the EV3. " alt="" coords="629,229,697,256"/>
+<area shape="rect" id="node15" href="$button_8h.html" title="This header contains function declarations to use the hardware buttons of the EV3 as well as enumerat..." alt="" coords="795,155,895,181"/>
+<area shape="rect" id="node17" href="$ecrobot__types_8h.html" title="This file contains some typedefs. " alt="" coords="799,229,913,256"/>
+<area shape="rect" id="node6" href="$sensors_8h.html" title="This header contains macros for the sensor ports of the EV3. " alt="" coords="161,229,239,256"/>
+<area shape="rect" id="node9" href="$motor_8h.html" title="A header file for motor driver. This file contains function declarations to use servo motors as well ..." alt="" coords="329,229,434,256"/>
+</map>

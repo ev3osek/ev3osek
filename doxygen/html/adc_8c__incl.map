@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/ninja/adc.c" name="leJOS_EV3/src/ev3/ninja/adc.c">
+<area shape="rect" id="node2" href="$adc_8h.html" title="This header contains function declarations to talk to the ADC. " alt="" coords="5,95,60,121"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="84,95,141,121"/>
+<area shape="rect" id="node5" href="$ninja_2spi_8h.html" title="This header declares function required to interact with the SPI0 controller of the SoC which is conne..." alt="" coords="166,95,217,121"/>
+<area shape="rect" id="node4" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="33,169,192,196"/>
+</map>

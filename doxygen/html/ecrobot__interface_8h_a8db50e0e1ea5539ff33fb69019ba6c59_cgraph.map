@@ -1,0 +1,5 @@
+<map id="ecrobot_get_light_sensor" name="ecrobot_get_light_sensor">
+<area shape="rect" id="node2" href="$adc__sensors_8c.html#aa79a3551e376d601c60f8e62ae05b051" title="Get the 10 bit value of the NXT light sensor at the specified port. " alt="" coords="220,5,337,32"/>
+<area shape="rect" id="node3" href="$adc_8c.html#add2dc4cfa717ea4e243a273ebdb98a21" title="Get the value currently meassured by the ADC for the specified channel. " alt="" coords="385,5,453,32"/>
+<area shape="rect" id="node4" href="$ninja_2spi_8c.html#a4bb7874eaf4a6b816c819510f0f331cb" title="Send data via the SPI0 controller and get an updated value received by the SPI0 controller. " alt="" coords="501,5,587,32"/>
+</map>

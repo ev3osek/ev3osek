@@ -1,0 +1,8 @@
+<map id="ecrobot_get_sound_sensor" name="ecrobot_get_sound_sensor">
+<area shape="rect" id="node2" href="$adc__sensors_8c.html#aad8ee5676bd95e3ad2a504d189d2a432" title="Get the 10 bit value of the NXT sound sensor at the specified port. " alt="" coords="232,31,360,57"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a69974a7766fccf6b3ce362fec9ed8dfc" title="Set the value of a GPIO pin which is configured as output. " alt="" coords="408,5,479,32"/>
+<area shape="rect" id="node6" href="$adc_8c.html#add2dc4cfa717ea4e243a273ebdb98a21" title="Get the value currently meassured by the ADC for the specified channel. " alt="" coords="409,56,477,83"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="527,5,639,32"/>
+<area shape="rect" id="node5" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="687,5,781,32"/>
+<area shape="rect" id="node7" href="$ninja_2spi_8c.html#a4bb7874eaf4a6b816c819510f0f331cb" title="Send data via the SPI0 controller and get an updated value received by the SPI0 controller. " alt="" coords="540,56,625,83"/>
+</map>

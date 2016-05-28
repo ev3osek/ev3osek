@@ -1,0 +1,17 @@
+<map id="leJOS_EV3/src/ev3/include/hw/hw_gpio.h" name="leJOS_EV3/src/ev3/include/hw/hw_gpio.h">
+<area shape="rect" id="node2" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="1094,95,1262,136"/>
+<area shape="rect" id="node12" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="1977,184,2145,225"/>
+<area shape="rect" id="node15" href="$i2c_8c.html" title="Function definitions related to I2C communication. " alt="" coords="1776,102,1945,129"/>
+<area shape="rect" id="node16" href="$include_2gpio_8h.html" title="This file contains the function prototypes for the device abstraction layer for GPIO and some related..." alt="" coords="1969,95,2152,136"/>
+<area shape="rect" id="node3" href="$ecrobot__interface_8h.html" title="This file contains the function declarations for the users ECRobot&#45;API. This API is used to interact ..." alt="" coords="5,191,196,218"/>
+<area shape="rect" id="node5" href="$adc__sensors_8c.html" title="This file contains the function definitions to read the analogous sensors. " alt="" coords="221,184,383,225"/>
+<area shape="rect" id="node6" href="$drivers_2gpio_8c.html" title="This file contains the device abstraction layer APIs for GPIO. " alt="" coords="408,184,588,225"/>
+<area shape="rect" id="node7" href="$init_8c.html" title="This code is required in order to initialize the leJOS driver including all modules properly..." alt="" coords="612,191,781,218"/>
+<area shape="rect" id="node8" href="$adc_8c.html" title="This file contains function definitions to talk to the ADC. " alt="" coords="806,184,974,225"/>
+<area shape="rect" id="node9" href="$button_8c.html" title="This file contains function definitions to use the hardware buttons of the EV3. " alt="" coords="998,184,1166,225"/>
+<area shape="rect" id="node10" href="$ninja_2gpio_8c.html" title="This contains function definitions required to interact with GPIO pins of the SoC. " alt="" coords="1190,184,1358,225"/>
+<area shape="rect" id="node11" href="$led_8c.html" title="This contains function definitions required to interact with the LEDs of the EV3. ..." alt="" coords="1382,184,1550,225"/>
+<area shape="rect" id="node13" href="$ninja_2spi_8c.html" title="This contains function definitions required to interact with the SPI0 controller of the SoC which is ..." alt="" coords="1574,184,1742,225"/>
+<area shape="rect" id="node14" href="$power_8c.html" title="This header contains function definitions for the power management on the EV3. " alt="" coords="1766,191,1953,218"/>
+<area shape="rect" id="node4" href="$ecrobot__interface_8c.html" title="This file contains the function definitions for the users ECRobot&#45;API. This API is used to interact w..." alt="" coords="5,273,196,300"/>
+</map>

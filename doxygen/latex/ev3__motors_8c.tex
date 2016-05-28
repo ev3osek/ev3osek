@@ -1,0 +1,177 @@
+\hypertarget{ev3__motors_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ev3\+\_\+motors.c File Reference}
+\label{ev3__motors_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ev3\+\_\+motors.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ev3\+\_\+motors.\+c}}
+
+
+This file contains function definitions to use E\+V3 motors. Driver wrapper for E\+C\+Robot A\+P\+I.  
+
+
+{\ttfamily \#include \char`\"{}ev3\+\_\+motors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ninja/motor.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\\*
+Include dependency graph for ev3\+\_\+motors.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ev3__motors_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ev3__motors_8c_a91dc6b395f3ad4a93931e26f7901b15c}{nxt\+\_\+motor\+\_\+get\+\_\+count} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} n)
+\begin{DoxyCompactList}\small\item\em Get motor revolution count in degree. \end{DoxyCompactList}\item 
+void \hyperlink{ev3__motors_8c_a58e972c0918c61b03ef32fcd14c831e8}{nxt\+\_\+motor\+\_\+set\+\_\+count} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} n, int count)
+\begin{DoxyCompactList}\small\item\em Set motor revolution count in degree. \end{DoxyCompactList}\item 
+void \hyperlink{ev3__motors_8c_ab0f0837d6ff8dfadf093e919a93568e5}{nxt\+\_\+motor\+\_\+set\+\_\+speed} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} n, int speed\+\_\+percent, int brake)
+\begin{DoxyCompactList}\small\item\em Set motor speed and brake mode. \end{DoxyCompactList}\item 
+void \hyperlink{ev3__motors_8c_a2f5029847bf9b7a4a5c52953b1f93d7e}{nxt\+\_\+motor\+\_\+command} (\hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} n, int cmd, int target\+\_\+count, int speed\+\_\+percent)
+\begin{DoxyCompactList}\small\item\em Set motor target revolution count to reach, speed percent and brake mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains function definitions to use E\+V3 motors. Driver wrapper for E\+C\+Robot A\+P\+I. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{ev3__motors_8c_a2f5029847bf9b7a4a5c52953b1f93d7e}{}\index{ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}!nxt\+\_\+motor\+\_\+command@{nxt\+\_\+motor\+\_\+command}}
+\index{nxt\+\_\+motor\+\_\+command@{nxt\+\_\+motor\+\_\+command}!ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}}
+\subsubsection[{nxt\+\_\+motor\+\_\+command(\+U32 n, int cmd, int target\+\_\+count, int speed\+\_\+percent)}]{\setlength{\rightskip}{0pt plus 5cm}void nxt\+\_\+motor\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{n, }
+\item[{int}]{cmd, }
+\item[{int}]{target\+\_\+count, }
+\item[{int}]{speed\+\_\+percent}
+\end{DoxyParamCaption}
+)}\label{ev3__motors_8c_a2f5029847bf9b7a4a5c52953b1f93d7e}
+
+
+Set motor target revolution count to reach, speed percent and brake mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Motor port id \\
+\hline
+{\em cmd} & -\/ Brake mode. True -\/ brake, false -\/ stop \\
+\hline
+{\em target\+\_\+count} & -\/ Target revolution count to reach and stop \\
+\hline
+{\em speed\+\_\+percent} & -\/ Speed percent to rotate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev3__motors_8c_a2f5029847bf9b7a4a5c52953b1f93d7e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev3__motors_8c_a91dc6b395f3ad4a93931e26f7901b15c}{}\index{ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}!nxt\+\_\+motor\+\_\+get\+\_\+count@{nxt\+\_\+motor\+\_\+get\+\_\+count}}
+\index{nxt\+\_\+motor\+\_\+get\+\_\+count@{nxt\+\_\+motor\+\_\+get\+\_\+count}!ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}}
+\subsubsection[{nxt\+\_\+motor\+\_\+get\+\_\+count(\+U32 n)}]{\setlength{\rightskip}{0pt plus 5cm}int nxt\+\_\+motor\+\_\+get\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{n}
+\end{DoxyParamCaption}
+)}\label{ev3__motors_8c_a91dc6b395f3ad4a93931e26f7901b15c}
+
+
+Get motor revolution count in degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Motor port id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+revolution in degree 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{ev3__motors_8c_a91dc6b395f3ad4a93931e26f7901b15c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev3__motors_8c_a58e972c0918c61b03ef32fcd14c831e8}{}\index{ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}!nxt\+\_\+motor\+\_\+set\+\_\+count@{nxt\+\_\+motor\+\_\+set\+\_\+count}}
+\index{nxt\+\_\+motor\+\_\+set\+\_\+count@{nxt\+\_\+motor\+\_\+set\+\_\+count}!ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}}
+\subsubsection[{nxt\+\_\+motor\+\_\+set\+\_\+count(\+U32 n, int count)}]{\setlength{\rightskip}{0pt plus 5cm}void nxt\+\_\+motor\+\_\+set\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{n, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{ev3__motors_8c_a58e972c0918c61b03ef32fcd14c831e8}
+
+
+Set motor revolution count in degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Motor port id \\
+\hline
+{\em count} & -\/ Motor revolution count to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{ev3__motors_8c_a58e972c0918c61b03ef32fcd14c831e8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ev3__motors_8c_ab0f0837d6ff8dfadf093e919a93568e5}{}\index{ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}!nxt\+\_\+motor\+\_\+set\+\_\+speed@{nxt\+\_\+motor\+\_\+set\+\_\+speed}}
+\index{nxt\+\_\+motor\+\_\+set\+\_\+speed@{nxt\+\_\+motor\+\_\+set\+\_\+speed}!ev3\+\_\+motors.\+c@{ev3\+\_\+motors.\+c}}
+\subsubsection[{nxt\+\_\+motor\+\_\+set\+\_\+speed(\+U32 n, int speed\+\_\+percent, int brake)}]{\setlength{\rightskip}{0pt plus 5cm}void nxt\+\_\+motor\+\_\+set\+\_\+speed (
+\begin{DoxyParamCaption}
+\item[{{\bf U32}}]{n, }
+\item[{int}]{speed\+\_\+percent, }
+\item[{int}]{brake}
+\end{DoxyParamCaption}
+)}\label{ev3__motors_8c_ab0f0837d6ff8dfadf093e919a93568e5}
+
+
+Set motor speed and brake mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Motor port id \\
+\hline
+{\em speed\+\_\+percent} & -\/ Speed percent. The given motor rotates backward if negative \\
+\hline
+{\em brake} & -\/ Brake mode. True -\/ brake (stop immediately), false -\/ float (soft stop)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ev3__motors_8c_ab0f0837d6ff8dfadf093e919a93568e5_cgraph}
+\end{center}
+\end{figure}
+
+

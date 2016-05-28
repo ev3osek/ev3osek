@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/ev3_motors.c" name="leJOS_EV3/src/ev3/ev3_motors.c">
+<area shape="rect" id="node2" href="$ev3__motors_8h.html" title="This header contains function declarations to use motor drivers. Driver wrapper for ECRobot API..." alt="" coords="5,95,107,121"/>
+<area shape="rect" id="node4" href="$motor_8h.html" title="A header file for motor driver. This file contains function declarations to use servo motors as well ..." alt="" coords="91,169,197,196"/>
+<area shape="rect" id="node3" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="57,244,140,271"/>
+</map>

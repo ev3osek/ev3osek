@@ -1,0 +1,41 @@
+    MESSAGE {
+        ENUM [
+            SEND_STATIC_INTERNAL {
+                STRING CDATATYPE;
+		ENUM [ALWAYS] FILTER=ALWAYS;
+            },
+            RECEIVE_UNQUEUED_INTERNAL {
+                MESSAGE_TYPE SENDINGMESSAGE;
+		ENUM [ALWAYS] FILTER=ALWAYS;
+                UINT64 INITIALVALUE = 0;
+            }
+        ] MESSAGEPROPERTY;
+
+        ENUM [
+	    NONE,
+            ACTIVATETASK {
+                TASK_TYPE TASK;
+            },
+            SETEVENT {
+                TASK_TYPE TASK;
+                EVENT_TYPE EVENT;
+            },
+            COMCALLBACK {
+		STRING CALLBACKROUTINENAME;
+		MESSAGE_TYPE MESSAGE[];
+	    }
+        ] NOTIFICATION = NONE;
+	ENUM [ NONE ] NOTIFICATIONERROR = NONE;
+    };
+
+    COM {
+	FLOAT COMTIMEBASE = 0.001;
+        BOOLEAN COMERRORHOOK = FALSE;
+        BOOLEAN COMUSEGETSERVICEID = TRUE;
+        BOOLEAN COMUSEPARAMETERACCESS = TRUE;
+        BOOLEAN COMSTARTCOMEXTENSION = FALSE;
+        STRING COMAPPMODE;
+        ENUM [COMSTANDARD] COMSTATUS = COMSTANDARD;
+    };
+
+

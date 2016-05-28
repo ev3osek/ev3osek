@@ -1,0 +1,39 @@
+\hypertarget{struct_i2_c___p_i_n}{}\section{I2\+C\+\_\+\+P\+I\+N Struct Reference}
+\label{struct_i2_c___p_i_n}\index{I2\+C\+\_\+\+P\+I\+N@{I2\+C\+\_\+\+P\+I\+N}}
+
+
+This struct represents a G\+P\+I\+O pin used for I2\+C communication.  
+
+
+
+
+{\ttfamily \#include $<$i2c.\+h$>$}
+
+
+
+Collaboration diagram for I2\+C\+\_\+\+P\+I\+N\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{struct_i2_c___p_i_n__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_i2_c___p_i_n_a330fb1f866557aa4731cfc091e62066a}{}\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{struct_i2_c___p_i_n_a330fb1f866557aa4731cfc091e62066a}{gpio\+\_\+registers}\label{struct_i2_c___p_i_n_a330fb1f866557aa4731cfc091e62066a}
+
+\begin{DoxyCompactList}\small\item\em The G\+P\+I\+O register to control this pin. \end{DoxyCompactList}\item 
+\hypertarget{struct_i2_c___p_i_n_a14ccbbc47dccaade3a6b3a2d9704b8e0}{}\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{struct_i2_c___p_i_n_a14ccbbc47dccaade3a6b3a2d9704b8e0}{pin}\label{struct_i2_c___p_i_n_a14ccbbc47dccaade3a6b3a2d9704b8e0}
+
+\begin{DoxyCompactList}\small\item\em The number of the G\+P\+I\+O pin on its bank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This struct represents a G\+P\+I\+O pin used for I2\+C communication. 
+
+Every pin is represented by a pin number on a G\+P\+I\+O bank (0 to 15) and one G\+P\+I\+O register to control that pin. Note\+: 2 G\+P\+I\+O banks always share one G\+P\+I\+O register, therefore bank 0 and 1 relate to register 0, bank 2 and 3 relate to register 1 and so on. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/\hyperlink{i2c_8h}{i2c.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="ecrobot_get_gyro_sensor_degrees" name="ecrobot_get_gyro_sensor_degrees">
+<area shape="rect" id="node2" href="$adc__sensors_8c.html#ac18316e5f5caf3b43ff384bc7e80568d" title="Get the current rotation meassured by the HiTechnic gyro sensor connected at the specified port..." alt="" coords="221,13,340,39"/>
+<area shape="rect" id="node3" href="$adc_8c.html#add2dc4cfa717ea4e243a273ebdb98a21" title="Get the value currently meassured by the ADC for the specified channel. " alt="" coords="388,13,456,39"/>
+<area shape="rect" id="node4" href="$ninja_2spi_8c.html#a4bb7874eaf4a6b816c819510f0f331cb" title="Send data via the SPI0 controller and get an updated value received by the SPI0 controller. " alt="" coords="504,13,589,39"/>
+</map>

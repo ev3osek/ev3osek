@@ -1,0 +1,4 @@
+<map id="button_init" name="button_init">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html#a624ad0306d1c4e6dfc8e2bb01798e0ce" title="Initialize a GPIO pin with its GPIO functionality and set its direction to input. ..." alt="" coords="136,5,240,32"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="288,5,383,32"/>
+</map>

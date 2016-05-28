@@ -1,0 +1,20 @@
+<map id="leJOS_EV3/src/ev3/ninja/motor.c" name="leJOS_EV3/src/ev3/ninja/motor.c">
+<area shape="rect" id="node2" href="$motor_8h.html" title="A header file for motor driver. This file contains function declarations to use servo motors as well ..." alt="" coords="902,95,969,121"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="56,95,113,121"/>
+<area shape="rect" id="node5" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="5,169,164,196"/>
+<area shape="rect" id="node6" href="$adc_8h.html" title="This header contains function declarations to talk to the ADC. " alt="" coords="277,95,332,121"/>
+<area shape="rect" id="node7" href="$hw__syscfg0___a_m1808_8h.html" title="SYSCFG0 register definitions for AM1808. " alt="" coords="356,95,515,121"/>
+<area shape="rect" id="node8" href="$soc___a_m1808_8h.html" title="This file contains the peripheral information for AM1808 SOC. " alt="" coords="539,95,649,121"/>
+<area shape="rect" id="node9" href="$interrupt_8h.html" title="Interrupt related API declarations. " alt="" coords="1078,95,1158,121"/>
+<area shape="rect" id="node11" href="$evm_a_m1808_8h.html" title="This file contains the board specific function prototypes for use by applications. " alt="" coords="771,95,878,121"/>
+<area shape="rect" id="node12" href="$ehrpwm_8h.html" title="This file contains the Macros and API prototypes for ehrpwm driver. " alt="" coords="1183,95,1261,121"/>
+<area shape="rect" id="node15" href="$psc_8h.html" title="This file contains the function prototypes for the device abstraction layer for PSC. It also contains some related macro definitions and some files to be included. " alt="" coords="1285,95,1340,121"/>
+<area shape="rect" id="node17" href="$include_2gpio_8h.html" title="This file contains the function prototypes for the device abstraction layer for GPIO and some related..." alt="" coords="138,95,253,121"/>
+<area shape="rect" id="node18" href="$systick_8h.html" title="This header contains function declarations required to manage the tick in milliseconds on the EV3..." alt="" coords="673,95,747,121"/>
+<area shape="rect" id="node19" href="$hw__ecap_8h.html" title="ECAP register definitions. " alt="" coords="1365,95,1450,121"/>
+<area shape="rect" id="node20" href="$hw__tmr_8h.html" title="This file contains the Register Descriptions for Timer. " alt="" coords="1475,95,1551,121"/>
+<area shape="rect" id="node3" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="781,169,863,196"/>
+<area shape="rect" id="node10" href="$hw__types_8h.html" title="Common type definitions and macros. " alt="" coords="1057,169,1147,196"/>
+<area shape="rect" id="node13" href="$hw__ehrpwm_8h.html" title="EHRPWM register definitions. " alt="" coords="1171,169,1273,196"/>
+<area shape="rect" id="node16" href="$hw__psc___a_m1808_8h.html" title="PSC register definitions for AM1808. " alt="" coords="1298,169,1431,196"/>
+</map>

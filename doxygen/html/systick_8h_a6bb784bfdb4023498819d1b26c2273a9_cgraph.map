@@ -1,0 +1,3 @@
+<map id="systick_suspend" name="systick_suspend">
+<area shape="rect" id="node2" href="$timer_8c.html#a46a25c076cc25a8b986a810f906eaaa1" title="Disables the timer. The timer stops running when this API is called. " alt="" coords="173,5,272,32"/>
+</map>

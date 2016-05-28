@@ -1,0 +1,819 @@
+\hypertarget{ecap_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/ecap.c File Reference}
+\label{ecap_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/ecap.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/ecap.\+c}}
+
+
+E\+C\+A\+P A\+P\+Is.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+ecap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ecap.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+pwmss.\+h\char`\"{}}\\*
+Include dependency graph for ecap.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{ecap_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ecap_8c_a6550755faf729394cf3f7151e826df79}{E\+C\+A\+P\+Clock\+Enable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions enables clock for E\+C\+A\+P module in P\+W\+M\+S\+S subsystem. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a3035fe5686dead8c837a093690494f52}{E\+C\+A\+P\+Clock\+Disable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions disables clock for E\+C\+A\+P module in P\+W\+M\+S\+S subsystem. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ecap_8c_a20c4be139c245f9d1b07e2877a868c67}{E\+C\+A\+P\+Clock\+Enable\+Status\+Get} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions determines whether clock is enabled or not. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ecap_8c_a720f37119a9e7f3b11893c80dd98c29e}{E\+C\+A\+P\+Clock\+Disable\+Status\+Get} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This functions determines whether clock is disabled or not. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_abd2b3ac31b9387520fcea9cd74fe8849}{E\+C\+A\+P\+Capture\+Loading\+Enable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This function enables capture loading. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a1a304508297ee707d5aaf500e199628c}{E\+C\+A\+P\+Capture\+Loading\+Disable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This function disables capture loading. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a45495a1c6a71c3963d2f038ee2c6d829}{E\+C\+A\+P\+Prescale\+Config} (unsigned int base\+Add, unsigned int prescale)
+\begin{DoxyCompactList}\small\item\em This function configures prescale value. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_aa09f9e2b092e2afe150a5b198c06a7a3}{E\+C\+A\+P\+Operating\+Mode\+Select} (unsigned int base\+Add, unsigned int mode\+Select)
+\begin{DoxyCompactList}\small\item\em This function configures ecapture module to operate in capture mode or in A\+P\+W\+M mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ecap_8c_a3cefd872276c8bd18ed5daf603322a48}{E\+C\+A\+P\+Time\+Stamp\+Read} (unsigned int base\+Add, unsigned int cap\+Evt\+Flag)
+\begin{DoxyCompactList}\small\item\em This function returns time-\/stamp for a given capture event. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_aa209c78a5fb4a6f95c880ae338a7789c}{E\+C\+A\+P\+Counter\+Config} (unsigned int base\+Add, unsigned int count\+Val)
+\begin{DoxyCompactList}\small\item\em This function configures the counter register which is used as Capture Time base. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_ae6f8bd1709676139875f56fa0a346da3}{E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config} (unsigned int base\+Add, unsigned int cap\+Evt1pol, unsigned int cap\+Evt2pol, unsigned int cap\+Evt3pol, unsigned int cap\+Evt4pol)
+\begin{DoxyCompactList}\small\item\em This function configures Capture Event polarity. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a072c52b478cf359f89f6ac31413c7524}{E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config} (unsigned int base\+Add, unsigned int Counter\+Rst1, unsigned int Counter\+Rst2, unsigned int Counter\+Rst3, unsigned int Counter\+Rst4)
+\begin{DoxyCompactList}\small\item\em This function enables reset of the counters upon Capture Events. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a61f7b196cb34846d8bfa0ffa04208a62}{E\+C\+A\+P\+Continous\+Mode\+Config} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This function configures E\+C\+A\+P to Continuous mode. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_aa81cabb269518d2f1851208e7a010139}{E\+C\+A\+P\+One\+Shot\+Mode\+Config} (unsigned int base\+Add, unsigned int stop\+Val)
+\begin{DoxyCompactList}\small\item\em This function configures E\+C\+A\+P to One-\/shot mode and also stop value for this mode. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_af0a59192e442373a3e928449353aefe4}{E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This function configures E\+C\+A\+P to One-\/\+Short Re-\/arming. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a792b60259c0d070c5d603b155d792b6e}{E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em This function configures output polarity for A\+P\+W\+M output. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a20deb25d7580ce492f2df43d9e4c25d3}{E\+C\+A\+P\+Counter\+Control} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em This function configures counter to stop or free running based on its input argument flag. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_acf67168b83a7d0b3bd1821bc6533b933}{E\+C\+A\+P\+Sync\+In\+Out\+Select} (unsigned int base\+Add, unsigned int sync\+In, unsigned int sync\+Out)
+\begin{DoxyCompactList}\small\item\em This function configures Sync-\/\+In and Sync-\/\+Out. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a1d314a83cab6ae43c6b8c2b741ce1c1e}{E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config} (unsigned int base\+Add, unsigned int compare\+Val, unsigned int period\+Val)
+\begin{DoxyCompactList}\small\item\em When E\+C\+A\+P module is configured in A\+P\+W\+M mode capture 1 and capture 2 registers are used as period and compare register.\+This function configures compare and period values to this register. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a43ccfc1df241ad51155ec8aaacccb940}{E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config} (unsigned int base\+Add, unsigned int compare\+Val, unsigned int period\+Val)
+\begin{DoxyCompactList}\small\item\em This function configures the Shadow register. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a486dc33e71e939bd1c5f34df25bd00f4}{E\+C\+A\+P\+Counter\+Phase\+Val\+Config} (unsigned int base\+Add, unsigned int cnt\+Phase\+Val)
+\begin{DoxyCompactList}\small\item\em This function configures the counter phase value. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a590b90345ce28bacc857171992c3375c}{E\+C\+A\+P\+Global\+Int\+Enable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This function enables the generation of interrupts if any of event interrupt are enable and corresponding event interrupt flag is set. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a89901efa07dbe0074ba9f04d95297f62}{E\+C\+A\+P\+Int\+Enable} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em This function enables the specified interrups. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_acd6fac2093ddc7b358264de5d700aeba}{E\+C\+A\+P\+Int\+Disable} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em This function disables the specified interrups. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ecap_8c_a59e9982f562e3c8a27162964b1d96860}{E\+C\+A\+P\+Int\+Status} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em This function returns the status specified interrups. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_aa6e9074297e48a83133d44e2bc22fd5b}{E\+C\+A\+P\+Int\+Status\+Clear} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em This function clears of the status specified interrups. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{ecap_8c_a5027fe8286a16bfa643db60e83ea2c19}{E\+C\+A\+P\+Peripheral\+Id\+Get} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em This function returns the peripheral I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_a6b0c3bfa4cada108d251b05c0dae1755}{Ecap\+Context\+Save} (unsigned int ecap\+Base, unsigned int pwmss\+Base, \hyperlink{structecap_context}{E\+C\+A\+P\+C\+O\+N\+T\+E\+X\+T} $\ast$context\+Ptr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I can be used to save the register context of E\+C\+A\+P. \end{DoxyCompactList}\item 
+void \hyperlink{ecap_8c_ab7e4ce2ac6ca8b621f3588643a14835c}{Ecap\+Context\+Restore} (unsigned int ecap\+Base, unsigned int pwmss\+Base, \hyperlink{structecap_context}{E\+C\+A\+P\+C\+O\+N\+T\+E\+X\+T} $\ast$context\+Ptr)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I can be used to restore the register context of E\+C\+A\+P. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+C\+A\+P A\+P\+Is. 
+
+This file contains the device abstraction layer A\+P\+Is for E\+C\+A\+P 
+
+\subsection{Function Documentation}
+\hypertarget{ecap_8c_a1d314a83cab6ae43c6b8c2b741ce1c1e}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config@{E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config}}
+\index{E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config@{E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config(unsigned int base\+Add, unsigned int compare\+Val, unsigned int period\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+A\+P\+W\+M\+Capture\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{compare\+Val, }
+\item[{unsigned int}]{period\+Val}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a1d314a83cab6ae43c6b8c2b741ce1c1e}
+
+
+When E\+C\+A\+P module is configured in A\+P\+W\+M mode capture 1 and capture 2 registers are used as period and compare register.\+This function configures compare and period values to this register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em compare\+Val} & It is the Compare value to be configured. \\
+\hline
+{\em period\+Val} & It is the Period value to be configured.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a792b60259c0d070c5d603b155d792b6e}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config@{E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config}}
+\index{E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config@{E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+A\+P\+W\+M\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a792b60259c0d070c5d603b155d792b6e}
+
+
+This function configures output polarity for A\+P\+W\+M output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em flag} & It is the value which determines the output polarity for A\+P\+W\+M output.~\newline
+ flag can take following macros.~\newline
+ E\+C\+A\+P\+\_\+\+A\+P\+W\+M\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+G\+H.~\newline
+ E\+C\+A\+P\+\_\+\+A\+P\+W\+M\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+O\+W.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a43ccfc1df241ad51155ec8aaacccb940}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config@{E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config}}
+\index{E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config@{E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config(unsigned int base\+Add, unsigned int compare\+Val, unsigned int period\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+A\+P\+W\+M\+Shadow\+Capture\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{compare\+Val, }
+\item[{unsigned int}]{period\+Val}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a43ccfc1df241ad51155ec8aaacccb940}
+
+
+This function configures the Shadow register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em compare\+Val} & It is the Compare value to be configured. \\
+\hline
+{\em period\+Val} & It is the Period value to be configured.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_ae6f8bd1709676139875f56fa0a346da3}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config@{E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config}}
+\index{E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config@{E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config(unsigned int base\+Add, unsigned int cap\+Evt1pol, unsigned int cap\+Evt2pol, unsigned int cap\+Evt3pol, unsigned int cap\+Evt4pol)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Cape\+Evt\+Polarity\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{cap\+Evt1pol, }
+\item[{unsigned int}]{cap\+Evt2pol, }
+\item[{unsigned int}]{cap\+Evt3pol, }
+\item[{unsigned int}]{cap\+Evt4pol}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_ae6f8bd1709676139875f56fa0a346da3}
+
+
+This function configures Capture Event polarity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em cap\+Evt1pol} & It determines whether Capture Event1 has to be generated on rising edge or falling edge of pulse.\\
+\hline
+{\em cap\+Evt2pol} & It determines whether Capture Event2 has to be generated on rising edge or falling edge of pulse.\\
+\hline
+{\em cap\+Evt3pol} & It determines whether Capture Event3 has to be generated on rising edge or falling edge of pulse.\\
+\hline
+{\em cap\+Evt4pol} & It determines whether Capture Event4 has to be generated on rising edge or falling edge of pulse.\\
+\hline
+\end{DoxyParams}
+0 -\/ falling edge 1 -\/ rising edge \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a072c52b478cf359f89f6ac31413c7524}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config@{E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config}}
+\index{E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config@{E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config(unsigned int base\+Add, unsigned int Counter\+Rst1, unsigned int Counter\+Rst2, unsigned int Counter\+Rst3, unsigned int Counter\+Rst4)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Capture\+Evt\+Cntr\+Rst\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{Counter\+Rst1, }
+\item[{unsigned int}]{Counter\+Rst2, }
+\item[{unsigned int}]{Counter\+Rst3, }
+\item[{unsigned int}]{Counter\+Rst4}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a072c52b478cf359f89f6ac31413c7524}
+
+
+This function enables reset of the counters upon Capture Events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em Counter\+Rst1} & It determines whether counter has to be reset upon Capture Event1.\\
+\hline
+{\em Counter\+Rst2} & It determines whether counter has to be reset upon Capture Event2.\\
+\hline
+{\em Counter\+Rst3} & It determines whether counter has to be reset upon Capture Event3.\\
+\hline
+{\em Counter\+Rst4} & It determines whether counter has to be reset upon Capture Event4.\\
+\hline
+\end{DoxyParams}
+0 -\/ Don\textquotesingle{}t reset counter upon capture event.~\newline
+ 1 -\/ Reset upon counter capture event.~\newline
+ \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a1a304508297ee707d5aaf500e199628c}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Capture\+Loading\+Disable@{E\+C\+A\+P\+Capture\+Loading\+Disable}}
+\index{E\+C\+A\+P\+Capture\+Loading\+Disable@{E\+C\+A\+P\+Capture\+Loading\+Disable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Capture\+Loading\+Disable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Capture\+Loading\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a1a304508297ee707d5aaf500e199628c}
+
+
+This function disables capture loading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_abd2b3ac31b9387520fcea9cd74fe8849}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Capture\+Loading\+Enable@{E\+C\+A\+P\+Capture\+Loading\+Enable}}
+\index{E\+C\+A\+P\+Capture\+Loading\+Enable@{E\+C\+A\+P\+Capture\+Loading\+Enable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Capture\+Loading\+Enable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Capture\+Loading\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_abd2b3ac31b9387520fcea9cd74fe8849}
+
+
+This function enables capture loading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a3035fe5686dead8c837a093690494f52}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Clock\+Disable@{E\+C\+A\+P\+Clock\+Disable}}
+\index{E\+C\+A\+P\+Clock\+Disable@{E\+C\+A\+P\+Clock\+Disable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Clock\+Disable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Clock\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a3035fe5686dead8c837a093690494f52}
+
+
+This functions disables clock for E\+C\+A\+P module in P\+W\+M\+S\+S subsystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a720f37119a9e7f3b11893c80dd98c29e}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Clock\+Disable\+Status\+Get@{E\+C\+A\+P\+Clock\+Disable\+Status\+Get}}
+\index{E\+C\+A\+P\+Clock\+Disable\+Status\+Get@{E\+C\+A\+P\+Clock\+Disable\+Status\+Get}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Clock\+Disable\+Status\+Get(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+C\+A\+P\+Clock\+Disable\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a720f37119a9e7f3b11893c80dd98c29e}
+
+
+This functions determines whether clock is disabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return\textquotesingle{}s \textquotesingle{}1\textquotesingle{} if clocked is disabled. return\textquotesingle{}s \textquotesingle{}0\textquotesingle{} if clocked is not disabled. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a6550755faf729394cf3f7151e826df79}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Clock\+Enable@{E\+C\+A\+P\+Clock\+Enable}}
+\index{E\+C\+A\+P\+Clock\+Enable@{E\+C\+A\+P\+Clock\+Enable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Clock\+Enable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Clock\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a6550755faf729394cf3f7151e826df79}
+
+
+This functions enables clock for E\+C\+A\+P module in P\+W\+M\+S\+S subsystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a20c4be139c245f9d1b07e2877a868c67}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Clock\+Enable\+Status\+Get@{E\+C\+A\+P\+Clock\+Enable\+Status\+Get}}
+\index{E\+C\+A\+P\+Clock\+Enable\+Status\+Get@{E\+C\+A\+P\+Clock\+Enable\+Status\+Get}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Clock\+Enable\+Status\+Get(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+C\+A\+P\+Clock\+Enable\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a20c4be139c245f9d1b07e2877a868c67}
+
+
+This functions determines whether clock is enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the P\+W\+M\+S\+S instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return\textquotesingle{}s \textquotesingle{}1\textquotesingle{} if clocked is enabled. return\textquotesingle{}s \textquotesingle{}0\textquotesingle{} if clocked is not enabled. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_ab7e4ce2ac6ca8b621f3588643a14835c}{}\index{ecap.\+c@{ecap.\+c}!Ecap\+Context\+Restore@{Ecap\+Context\+Restore}}
+\index{Ecap\+Context\+Restore@{Ecap\+Context\+Restore}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{Ecap\+Context\+Restore(unsigned int ecap\+Base, unsigned int pwmss\+Base, E\+C\+A\+P\+C\+O\+N\+T\+E\+X\+T $\ast$context\+Ptr)}]{\setlength{\rightskip}{0pt plus 5cm}void Ecap\+Context\+Restore (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ecap\+Base, }
+\item[{unsigned int}]{pwmss\+Base, }
+\item[{{\bf E\+C\+A\+P\+C\+O\+N\+T\+E\+X\+T} $\ast$}]{context\+Ptr}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_ab7e4ce2ac6ca8b621f3588643a14835c}
+
+
+This A\+P\+I can be used to restore the register context of E\+C\+A\+P. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ecap\+Base} & Base address of E\+C\+A\+P instance \\
+\hline
+{\em pwmss\+Base} & Base address of the P\+W\+M subsystem \\
+\hline
+{\em context\+Ptr} & Pointer to the structure where E\+C\+A\+P register context need to be saved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a6b0c3bfa4cada108d251b05c0dae1755}{}\index{ecap.\+c@{ecap.\+c}!Ecap\+Context\+Save@{Ecap\+Context\+Save}}
+\index{Ecap\+Context\+Save@{Ecap\+Context\+Save}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{Ecap\+Context\+Save(unsigned int ecap\+Base, unsigned int pwmss\+Base, E\+C\+A\+P\+C\+O\+N\+T\+E\+X\+T $\ast$context\+Ptr)}]{\setlength{\rightskip}{0pt plus 5cm}void Ecap\+Context\+Save (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ecap\+Base, }
+\item[{unsigned int}]{pwmss\+Base, }
+\item[{{\bf E\+C\+A\+P\+C\+O\+N\+T\+E\+X\+T} $\ast$}]{context\+Ptr}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a6b0c3bfa4cada108d251b05c0dae1755}
+
+
+This A\+P\+I can be used to save the register context of E\+C\+A\+P. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ecap\+Base} & Base address of E\+C\+A\+P instance \\
+\hline
+{\em pwmss\+Base} & Base address of the P\+W\+M subsystem \\
+\hline
+{\em context\+Ptr} & Pointer to the structure where E\+C\+A\+P register context need to be saved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a61f7b196cb34846d8bfa0ffa04208a62}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Continous\+Mode\+Config@{E\+C\+A\+P\+Continous\+Mode\+Config}}
+\index{E\+C\+A\+P\+Continous\+Mode\+Config@{E\+C\+A\+P\+Continous\+Mode\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Continous\+Mode\+Config(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Continous\+Mode\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a61f7b196cb34846d8bfa0ffa04208a62}
+
+
+This function configures E\+C\+A\+P to Continuous mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.~\newline
+ This A\+P\+I is valid only if E\+C\+A\+P is configured to Capture Mode.\+It has no significance when E\+C\+A\+P is configured in A\+P\+W\+M mode. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_aa209c78a5fb4a6f95c880ae338a7789c}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Counter\+Config@{E\+C\+A\+P\+Counter\+Config}}
+\index{E\+C\+A\+P\+Counter\+Config@{E\+C\+A\+P\+Counter\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Counter\+Config(unsigned int base\+Add, unsigned int count\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Counter\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{count\+Val}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_aa209c78a5fb4a6f95c880ae338a7789c}
+
+
+This function configures the counter register which is used as Capture Time base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em count\+Val} & It is counter value to be configured.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a20deb25d7580ce492f2df43d9e4c25d3}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Counter\+Control@{E\+C\+A\+P\+Counter\+Control}}
+\index{E\+C\+A\+P\+Counter\+Control@{E\+C\+A\+P\+Counter\+Control}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Counter\+Control(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Counter\+Control (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a20deb25d7580ce492f2df43d9e4c25d3}
+
+
+This function configures counter to stop or free running based on its input argument flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em flag} & It is the value which determine counter to be configured to stop or free running.~\newline
+ flag can take following macros.~\newline
+ E\+C\+A\+P\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+S\+T\+O\+P.~\newline
+ E\+C\+A\+P\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a486dc33e71e939bd1c5f34df25bd00f4}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Counter\+Phase\+Val\+Config@{E\+C\+A\+P\+Counter\+Phase\+Val\+Config}}
+\index{E\+C\+A\+P\+Counter\+Phase\+Val\+Config@{E\+C\+A\+P\+Counter\+Phase\+Val\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Counter\+Phase\+Val\+Config(unsigned int base\+Add, unsigned int cnt\+Phase\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Counter\+Phase\+Val\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{cnt\+Phase\+Val}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a486dc33e71e939bd1c5f34df25bd00f4}
+
+
+This function configures the counter phase value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em cnt\+Phase\+Val} & It is the counter phase value to be programmed for phase lag/lead.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a590b90345ce28bacc857171992c3375c}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Global\+Int\+Enable@{E\+C\+A\+P\+Global\+Int\+Enable}}
+\index{E\+C\+A\+P\+Global\+Int\+Enable@{E\+C\+A\+P\+Global\+Int\+Enable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Global\+Int\+Enable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Global\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a590b90345ce28bacc857171992c3375c}
+
+
+This function enables the generation of interrupts if any of event interrupt are enable and corresponding event interrupt flag is set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_acd6fac2093ddc7b358264de5d700aeba}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Int\+Disable@{E\+C\+A\+P\+Int\+Disable}}
+\index{E\+C\+A\+P\+Int\+Disable@{E\+C\+A\+P\+Int\+Disable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Int\+Disable(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_acd6fac2093ddc7b358264de5d700aeba}
+
+
+This function disables the specified interrups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em flag} & It is the value which specifies the interrupts to be disabled.~\newline
+ flag can take following macros.\\
+\hline
+\end{DoxyParams}
+E\+C\+A\+P\+\_\+\+C\+E\+V\+T1\+\_\+\+I\+N\+T -\/ Enable Capture Event 1 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T2\+\_\+\+I\+N\+T -\/ Enable Capture Event 2 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T3\+\_\+\+I\+N\+T -\/ Enable Capture Event 3 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T4\+\_\+\+I\+N\+T -\/ Enable Capture Event 4 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+N\+T\+O\+V\+F\+\_\+\+I\+N\+T -\/ Enable Counter Overflow interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+P\+R\+D\+E\+Q\+\_\+\+I\+N\+T -\/ Enable Period equal interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+M\+P\+E\+Q\+\_\+\+I\+N\+T -\/ Enable Compare equal interrupt.~\newline
+
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a89901efa07dbe0074ba9f04d95297f62}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Int\+Enable@{E\+C\+A\+P\+Int\+Enable}}
+\index{E\+C\+A\+P\+Int\+Enable@{E\+C\+A\+P\+Int\+Enable}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Int\+Enable(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a89901efa07dbe0074ba9f04d95297f62}
+
+
+This function enables the specified interrups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em flag} & It is the value which specifies the interrupts to be enabled.~\newline
+ flag can take following macros\\
+\hline
+\end{DoxyParams}
+E\+C\+A\+P\+\_\+\+C\+E\+V\+T1\+\_\+\+I\+N\+T -\/ Enable Capture Event 1 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T2\+\_\+\+I\+N\+T -\/ Enable Capture Event 2 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T3\+\_\+\+I\+N\+T -\/ Enable Capture Event 3 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T4\+\_\+\+I\+N\+T -\/ Enable Capture Event 4 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+N\+T\+O\+V\+F\+\_\+\+I\+N\+T -\/ Enable Counter Overflow interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+P\+R\+D\+E\+Q\+\_\+\+I\+N\+T -\/ Enable Period equal interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+M\+P\+E\+Q\+\_\+\+I\+N\+T -\/ Enable Compare equal interrupt.~\newline
+
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a59e9982f562e3c8a27162964b1d96860}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Int\+Status@{E\+C\+A\+P\+Int\+Status}}
+\index{E\+C\+A\+P\+Int\+Status@{E\+C\+A\+P\+Int\+Status}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Int\+Status(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+C\+A\+P\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a59e9982f562e3c8a27162964b1d96860}
+
+
+This function returns the status specified interrups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em flag} & It is the value which specifies the status of interrupts to be returned.~\newline
+ flag can take following macros.\\
+\hline
+\end{DoxyParams}
+E\+C\+A\+P\+\_\+\+C\+E\+V\+T1\+\_\+\+I\+N\+T -\/ Status of Capture Event 1 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T2\+\_\+\+I\+N\+T -\/ Status of Capture Event 2 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T3\+\_\+\+I\+N\+T -\/ Status of Capture Event 3 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T4\+\_\+\+I\+N\+T -\/ Status of Capture Event 4 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+N\+T\+O\+V\+F\+\_\+\+I\+N\+T -\/ Status of Counter Overflow interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+P\+R\+D\+E\+Q\+\_\+\+I\+N\+T -\/ Status of Period equal interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+M\+P\+E\+Q\+\_\+\+I\+N\+T -\/ Status of Compare equal interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+T -\/ Global interrupt status.~\newline
+
+
+\begin{DoxyReturn}{Returns}
+Status of the specified interrupts. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_aa6e9074297e48a83133d44e2bc22fd5b}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Int\+Status\+Clear@{E\+C\+A\+P\+Int\+Status\+Clear}}
+\index{E\+C\+A\+P\+Int\+Status\+Clear@{E\+C\+A\+P\+Int\+Status\+Clear}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Int\+Status\+Clear(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Int\+Status\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_aa6e9074297e48a83133d44e2bc22fd5b}
+
+
+This function clears of the status specified interrups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em flag} & It is the value which specifies the status of interrupts to be cleared.~\newline
+ flag can take following macros.\\
+\hline
+\end{DoxyParams}
+E\+C\+A\+P\+\_\+\+C\+E\+V\+T1\+\_\+\+I\+N\+T -\/ Status of Capture Event 1 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T2\+\_\+\+I\+N\+T -\/ Status of Capture Event 2 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T3\+\_\+\+I\+N\+T -\/ Status of Capture Event 3 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+E\+V\+T4\+\_\+\+I\+N\+T -\/ Status of Capture Event 4 interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+N\+T\+O\+V\+F\+\_\+\+I\+N\+T -\/ Status of Counter Overflow interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+P\+R\+D\+E\+Q\+\_\+\+I\+N\+T -\/ Status of Period equal interrupt.~\newline
+ E\+C\+A\+P\+\_\+\+C\+M\+P\+E\+Q\+\_\+\+I\+N\+T -\/ Status of Compare equal interrupt.~\newline
+
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_aa81cabb269518d2f1851208e7a010139}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+One\+Shot\+Mode\+Config@{E\+C\+A\+P\+One\+Shot\+Mode\+Config}}
+\index{E\+C\+A\+P\+One\+Shot\+Mode\+Config@{E\+C\+A\+P\+One\+Shot\+Mode\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+One\+Shot\+Mode\+Config(unsigned int base\+Add, unsigned int stop\+Val)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+One\+Shot\+Mode\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{stop\+Val}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_aa81cabb269518d2f1851208e7a010139}
+
+
+This function configures E\+C\+A\+P to One-\/shot mode and also stop value for this mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+{\em stop\+Val} & It is the number of captures allowed to occur before Capture register(1-\/4) are frozen.~\newline
+ stop\+Val can take following macros.~\newline
+ E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T1\+\_\+\+S\+T\+O\+P -\/ stop after Capture Event 1~\newline
+. E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T2\+\_\+\+S\+T\+O\+P -\/ stop after Capture Event 2~\newline
+. E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T3\+\_\+\+S\+T\+O\+P -\/ stop after Capture Event 3~\newline
+. E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T4\+\_\+\+S\+T\+O\+P -\/ stop after Capture Event 4~\newline
+.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.~\newline
+ This A\+P\+I is valid only if E\+C\+A\+P is configured to Capture Mode.\+It has no significance when E\+C\+A\+P is configured in A\+P\+W\+M mode. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_af0a59192e442373a3e928449353aefe4}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M@{E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M}}
+\index{E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M@{E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+One\+Shot\+R\+E\+A\+R\+M (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_af0a59192e442373a3e928449353aefe4}
+
+
+This function configures E\+C\+A\+P to One-\/\+Short Re-\/arming. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None.~\newline
+ When this A\+P\+I is invoked following things happen.~\newline
+
+\begin{DoxyEnumerate}
+\item Resets Mod4 counter to zero.~\newline
+
+\item Un-\/freezes the Mod4 counter.~\newline
+
+\item Enables capture register loads.~\newline
+
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+\hypertarget{ecap_8c_aa09f9e2b092e2afe150a5b198c06a7a3}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Operating\+Mode\+Select@{E\+C\+A\+P\+Operating\+Mode\+Select}}
+\index{E\+C\+A\+P\+Operating\+Mode\+Select@{E\+C\+A\+P\+Operating\+Mode\+Select}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Operating\+Mode\+Select(unsigned int base\+Add, unsigned int mode\+Select)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Operating\+Mode\+Select (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{mode\+Select}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_aa09f9e2b092e2afe150a5b198c06a7a3}
+
+
+This function configures ecapture module to operate in capture mode or in A\+P\+W\+M mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em mode\+Select} & It is the value which determines whether ecapture module to operate in capture mode or in A\+P\+W\+M mode.~\newline
+ mode\+Select can take following macros.\\
+\hline
+\end{DoxyParams}
+E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+M\+O\+D\+E -\/ Capture Mode.~\newline
+ E\+C\+A\+P\+\_\+\+A\+P\+W\+M\+\_\+\+M\+O\+D\+E -\/ A\+P\+W\+M Mode.~\newline
+ \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a5027fe8286a16bfa643db60e83ea2c19}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Peripheral\+Id\+Get@{E\+C\+A\+P\+Peripheral\+Id\+Get}}
+\index{E\+C\+A\+P\+Peripheral\+Id\+Get@{E\+C\+A\+P\+Peripheral\+Id\+Get}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Peripheral\+Id\+Get(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+C\+A\+P\+Peripheral\+Id\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a5027fe8286a16bfa643db60e83ea2c19}
+
+
+This function returns the peripheral I\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Peripheral I\+D. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a45495a1c6a71c3963d2f038ee2c6d829}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Prescale\+Config@{E\+C\+A\+P\+Prescale\+Config}}
+\index{E\+C\+A\+P\+Prescale\+Config@{E\+C\+A\+P\+Prescale\+Config}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Prescale\+Config(unsigned int base\+Add, unsigned int prescale)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Prescale\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{prescale}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a45495a1c6a71c3963d2f038ee2c6d829}
+
+
+This function configures prescale value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em prescale} & It is the value which is used to prescale the incoming input.\\
+\hline
+\end{DoxyParams}
+prescale can take any integer value between 0 and 62
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_acf67168b83a7d0b3bd1821bc6533b933}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Sync\+In\+Out\+Select@{E\+C\+A\+P\+Sync\+In\+Out\+Select}}
+\index{E\+C\+A\+P\+Sync\+In\+Out\+Select@{E\+C\+A\+P\+Sync\+In\+Out\+Select}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Sync\+In\+Out\+Select(unsigned int base\+Add, unsigned int sync\+In, unsigned int sync\+Out)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+C\+A\+P\+Sync\+In\+Out\+Select (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{sync\+In, }
+\item[{unsigned int}]{sync\+Out}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_acf67168b83a7d0b3bd1821bc6533b933}
+
+
+This function configures Sync-\/\+In and Sync-\/\+Out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em sync\+In} & It is the value which determines whether to disable sync\+In or to enable counter to be loaded from C\+N\+T\+P\+H\+S register upon a S\+Y\+N\+C\+I signal.~\newline
+ sync\+In can take following macros.~\newline
+ E\+C\+A\+P\+\_\+\+S\+Y\+N\+C\+\_\+\+I\+N\+\_\+\+D\+I\+S\+A\+B\+L\+E.~\newline
+ E\+C\+A\+P\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R -\/ Enables counter to load from C\+N\+T\+P\+H\+S register upon S\+Y\+N\+C\+I signal.~\newline
+ \\
+\hline
+{\em sync\+Out} & It is the value which select type of sync\+Out signal (i.\+e select sync\+In event to be the Sync-\/\+Out signal, select P\+R\+D\+\_\+eq event to be Sync-\/\+Out signal).~\newline
+ \begin{DoxyVerb}    syncOut can take following macros.\n
+
+    ECAP_SYNC_IN - Select syncIn event to be the Sync-Out signal.\n
+    ECAP_PRD_EQ  - Select PRD_eq event to be Sync-Out signal.\n
+    ECAP_SYNC_OUT_DISABLE - Disable syncOut signal.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{ecap_8c_a3cefd872276c8bd18ed5daf603322a48}{}\index{ecap.\+c@{ecap.\+c}!E\+C\+A\+P\+Time\+Stamp\+Read@{E\+C\+A\+P\+Time\+Stamp\+Read}}
+\index{E\+C\+A\+P\+Time\+Stamp\+Read@{E\+C\+A\+P\+Time\+Stamp\+Read}!ecap.\+c@{ecap.\+c}}
+\subsubsection[{E\+C\+A\+P\+Time\+Stamp\+Read(unsigned int base\+Add, unsigned int cap\+Evt\+Flag)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int E\+C\+A\+P\+Time\+Stamp\+Read (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{cap\+Evt\+Flag}
+\end{DoxyParamCaption}
+)}\label{ecap_8c_a3cefd872276c8bd18ed5daf603322a48}
+
+
+This function returns time-\/stamp for a given capture event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Add} & It is the Memory address of the E\+C\+A\+P instance used. \\
+\hline
+{\em cap\+Evt\+Flag} & It is the value which determines for which capture event time-\/stam has to returned.\\
+\hline
+\end{DoxyParams}
+cap\+Evt\+Flag can take following macros.
+
+E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+1 -\/ Capture Event 1.~\newline
+ E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+2 -\/ Capture Event 2.~\newline
+ E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+3 -\/ Capture Event 3.~\newline
+ E\+C\+A\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+4 -\/ Capture Event 4.~\newline
+ \begin{DoxyReturn}{Returns}
+Returns the time-\/stamp for given capure event. 
+\end{DoxyReturn}

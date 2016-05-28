@@ -1,0 +1,615 @@
+\hypertarget{i2c_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/i2c.c File Reference}
+\label{i2c_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/i2c.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/i2c.\+c}}
+
+
+Function definitions related to I2\+C communication.  
+
+
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}soc\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}systick.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+syscfg0\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}digi\+\_\+sensors.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}evm\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for i2c.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{i2c_8c_a4c82e9c9d3280db703b1fe9f517940f1}{}\#define \hyperlink{i2c_8c_a4c82e9c9d3280db703b1fe9f517940f1}{I2\+C\+\_\+\+N\+\_\+\+P\+O\+R\+T\+S}~4\label{i2c_8c_a4c82e9c9d3280db703b1fe9f517940f1}
+
+\begin{DoxyCompactList}\small\item\em The amount of I2\+C ports on the E\+V3. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a78852e3bc0b4671c9ffe43860706074d}{}\#define \hyperlink{i2c_8c_a78852e3bc0b4671c9ffe43860706074d}{I2\+C\+\_\+\+N\+\_\+\+R\+E\+T\+R\+I\+E\+S}~3\label{i2c_8c_a78852e3bc0b4671c9ffe43860706074d}
+
+\begin{DoxyCompactList}\small\item\em The amount of maximum retries before an I2\+C transaction fails. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a2644a996d617bb0de1e5e546d06a6330}{}\#define \hyperlink{i2c_8c_a2644a996d617bb0de1e5e546d06a6330}{P\+I\+N\+M\+U\+X0\+Register}~$\ast$(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adeb0aa716e4aa3fb5f0815e12649c7fc}{S\+O\+C\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+0\+\_\+\+R\+E\+G\+S} + S\+Y\+S\+C\+F\+G0\+\_\+\+P\+I\+N\+M\+U\+X(0))\label{i2c_8c_a2644a996d617bb0de1e5e546d06a6330}
+
+\begin{DoxyCompactList}\small\item\em Pin-\/multiplexing register 0. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a2cd86b41d228a4c6d70117096341e6a1}{}\#define \hyperlink{i2c_8c_a2cd86b41d228a4c6d70117096341e6a1}{P\+I\+N\+M\+U\+X1\+Register}~$\ast$(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adeb0aa716e4aa3fb5f0815e12649c7fc}{S\+O\+C\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+0\+\_\+\+R\+E\+G\+S} + S\+Y\+S\+C\+F\+G0\+\_\+\+P\+I\+N\+M\+U\+X(1))\label{i2c_8c_a2cd86b41d228a4c6d70117096341e6a1}
+
+\begin{DoxyCompactList}\small\item\em Pin-\/multiplexing register 1. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_af32b6a55602f7f82c45624f58e77cc11}{}\#define \hyperlink{i2c_8c_af32b6a55602f7f82c45624f58e77cc11}{P\+I\+N\+M\+U\+X2\+Register}~$\ast$(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adeb0aa716e4aa3fb5f0815e12649c7fc}{S\+O\+C\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+0\+\_\+\+R\+E\+G\+S} + S\+Y\+S\+C\+F\+G0\+\_\+\+P\+I\+N\+M\+U\+X(2))\label{i2c_8c_af32b6a55602f7f82c45624f58e77cc11}
+
+\begin{DoxyCompactList}\small\item\em Pin-\/multiplexing register 2. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_ad309ccd78d81f5dcd00a5a1b46acafe4}{}\#define \hyperlink{i2c_8c_ad309ccd78d81f5dcd00a5a1b46acafe4}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+1\+\_\+\+P\+I\+N\+M\+U\+X0\+\_\+\+C\+L\+E\+A\+R}~0x\+F\+F\+F\+F\+F\+F\+F0\label{i2c_8c_ad309ccd78d81f5dcd00a5a1b46acafe4}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear the half-\/byte representing the pin-\/multiplexing configuration for Port 1 (S\+D\+A) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a6fdd16205aed3b2d9ac31771f31da34d}{}\#define \hyperlink{i2c_8c_a6fdd16205aed3b2d9ac31771f31da34d}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+1\+\_\+\+P\+I\+N\+M\+U\+X0\+\_\+\+S\+E\+T}~0x00000008\label{i2c_8c_a6fdd16205aed3b2d9ac31771f31da34d}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set the half-\/byte representing the pin-\/multiplexing configuration for Port 1 (S\+D\+A) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a21cf8bc598149428424197b22a3c78c5}{}\#define \hyperlink{i2c_8c_a21cf8bc598149428424197b22a3c78c5}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+1\+\_\+\+P\+I\+N\+M\+U\+X1\+\_\+\+C\+L\+E\+A\+R}~0x\+F\+F0\+F\+F\+F\+F\+F\label{i2c_8c_a21cf8bc598149428424197b22a3c78c5}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear the half-\/byte representing the pin-\/multiplexing configuration for Port 1 (S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a62b5aa2d733b4da7b34ff6f8f3690425}{}\#define \hyperlink{i2c_8c_a62b5aa2d733b4da7b34ff6f8f3690425}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+1\+\_\+\+P\+I\+N\+M\+U\+X1\+\_\+\+S\+E\+T}~0x00800000\label{i2c_8c_a62b5aa2d733b4da7b34ff6f8f3690425}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set the half-\/byte representing the pin-\/multiplexing configuration for Port 1 (S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a405be9f269b5b1687581410c340b7b7e}{}\#define \hyperlink{i2c_8c_a405be9f269b5b1687581410c340b7b7e}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+2\+\_\+\+P\+I\+N\+M\+U\+X0\+\_\+\+C\+L\+E\+A\+R}~0x\+F\+F\+F\+F\+F00\+F\label{i2c_8c_a405be9f269b5b1687581410c340b7b7e}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear both half-\/bytes representing the pin-\/multiplexing configuration for Port 2 (S\+D\+A and S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a24e3f65310efa2e2883cefeb635ea411}{}\#define \hyperlink{i2c_8c_a24e3f65310efa2e2883cefeb635ea411}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+2\+\_\+\+P\+I\+N\+M\+U\+X0\+\_\+\+S\+E\+T}~0x00000880\label{i2c_8c_a24e3f65310efa2e2883cefeb635ea411}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set both half-\/bytes representing the pin-\/multiplexing configuration for Port 2 (S\+D\+A and S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_aa606c27c80bd34b29addc9d6bc1f9d93}{}\#define \hyperlink{i2c_8c_aa606c27c80bd34b29addc9d6bc1f9d93}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+3\+\_\+\+P\+I\+N\+M\+U\+X0\+\_\+\+C\+L\+E\+A\+R}~0x\+F\+F\+F\+F0\+F\+F\+F\label{i2c_8c_aa606c27c80bd34b29addc9d6bc1f9d93}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear the half-\/byte representing the pin-\/multiplexing configuration for Port 3 (S\+D\+A) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a483d545fe94eb1840ffc92893a8fdf51}{}\#define \hyperlink{i2c_8c_a483d545fe94eb1840ffc92893a8fdf51}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+3\+\_\+\+P\+I\+N\+M\+U\+X0\+\_\+\+S\+E\+T}~0x00008000\label{i2c_8c_a483d545fe94eb1840ffc92893a8fdf51}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set the half-\/byte representing the pin-\/multiplexing configuration for Port 3 (S\+D\+A) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_ab749281beb38fd41639382e87760c45d}{}\#define \hyperlink{i2c_8c_ab749281beb38fd41639382e87760c45d}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+3\+\_\+\+P\+I\+N\+M\+U\+X2\+\_\+\+C\+L\+E\+A\+R}~0x\+F\+F\+F\+F\+F\+F0\+F\label{i2c_8c_ab749281beb38fd41639382e87760c45d}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear the half-\/byte representing the pin-\/multiplexing configuration for Port 3 (S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a316755071c6d25cf8b77c0c81d676461}{}\#define \hyperlink{i2c_8c_a316755071c6d25cf8b77c0c81d676461}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+3\+\_\+\+P\+I\+N\+M\+U\+X2\+\_\+\+S\+E\+T}~0x00000040\label{i2c_8c_a316755071c6d25cf8b77c0c81d676461}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set the half-\/byte representing the pin-\/multiplexing configuration for Port 3 (S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_aa54533daa7bc8637593b0b09eabc1d9d}{}\#define \hyperlink{i2c_8c_aa54533daa7bc8637593b0b09eabc1d9d}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+4\+\_\+\+P\+I\+N\+M\+U\+X1\+\_\+\+C\+L\+E\+A\+R}~0x\+F0\+F\+F\+F\+F\+F\+F\label{i2c_8c_aa54533daa7bc8637593b0b09eabc1d9d}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear the half-\/byte representing the pin-\/multiplexing configuration for Port 4 (S\+D\+A) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_adf6c3b4e372bed42757695a0b2da61f9}{}\#define \hyperlink{i2c_8c_adf6c3b4e372bed42757695a0b2da61f9}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+4\+\_\+\+P\+I\+N\+M\+U\+X1\+\_\+\+S\+E\+T}~0x08000000\label{i2c_8c_adf6c3b4e372bed42757695a0b2da61f9}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set the half-\/byte representing the pin-\/multiplexing configuration for Port 4 (S\+D\+A) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a9d7dd57a8fb6a4171c8c9a77a4539aa5}{}\#define \hyperlink{i2c_8c_a9d7dd57a8fb6a4171c8c9a77a4539aa5}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+4\+\_\+\+P\+I\+N\+M\+U\+X2\+\_\+\+C\+L\+E\+A\+R}~0x\+F\+F\+F\+F\+F\+F0\+F\label{i2c_8c_a9d7dd57a8fb6a4171c8c9a77a4539aa5}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to clear the half-\/byte representing the pin-\/multiplexing configuration for Port 4 (S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a9361e4fd686c5e30672551b993beb78c}{}\#define \hyperlink{i2c_8c_a9361e4fd686c5e30672551b993beb78c}{M\+A\+S\+K\+\_\+\+P\+O\+R\+T\+\_\+4\+\_\+\+P\+I\+N\+M\+U\+X2\+\_\+\+S\+E\+T}~0x00000008\label{i2c_8c_a9361e4fd686c5e30672551b993beb78c}
+
+\begin{DoxyCompactList}\small\item\em Bitmask to set the half-\/byte representing the pin-\/multiplexing configuration for Port 4 (S\+C\+L) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a8094bb2eee3df60d7b7ff9c5fb8063e1}{}\#define \hyperlink{i2c_8c_a8094bb2eee3df60d7b7ff9c5fb8063e1}{Set\+S\+D\+A\+Direction\+Output}(port)~$\ast$((unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + \hyperlink{ninja_2gpio_8h_a7c5ce760b66800f1bb68aece60e0d586}{G\+P\+I\+O\+\_\+\+D\+I\+R}(port.\+S\+D\+A.\+gpio\+\_\+registers))) \&= $\sim$port.\+S\+D\+A\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R\label{i2c_8c_a8094bb2eee3df60d7b7ff9c5fb8063e1}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+D\+A pin of the specified port as an output pin. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a904755786635de5d75cda0565ec3bdbe}{}\#define \hyperlink{i2c_8c_a904755786635de5d75cda0565ec3bdbe}{Set\+S\+C\+L\+Direction\+Output}(port)~$\ast$((unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + \hyperlink{ninja_2gpio_8h_a7c5ce760b66800f1bb68aece60e0d586}{G\+P\+I\+O\+\_\+\+D\+I\+R}(port.\+S\+C\+L.\+gpio\+\_\+registers))) \&= $\sim$port.\+S\+C\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R\label{i2c_8c_a904755786635de5d75cda0565ec3bdbe}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+C\+L pin of the specified port as an output pin. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a6313c9096ed47c181f78bc9721208b62}{}\#define \hyperlink{i2c_8c_a6313c9096ed47c181f78bc9721208b62}{Set\+Direction\+Output}(port)~(\hyperlink{i2c_8c_a8094bb2eee3df60d7b7ff9c5fb8063e1}{Set\+S\+D\+A\+Direction\+Output}(port)); (\hyperlink{i2c_8c_a904755786635de5d75cda0565ec3bdbe}{Set\+S\+C\+L\+Direction\+Output}(port));\label{i2c_8c_a6313c9096ed47c181f78bc9721208b62}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+D\+A and S\+C\+L pins of the specified port as output pins. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_ae82822e8bea8d42e13f5385f109abbe1}{}\#define \hyperlink{i2c_8c_ae82822e8bea8d42e13f5385f109abbe1}{Set\+S\+D\+A\+Direction\+Input}(port)~$\ast$((unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + \hyperlink{ninja_2gpio_8h_a7c5ce760b66800f1bb68aece60e0d586}{G\+P\+I\+O\+\_\+\+D\+I\+R}(port.\+S\+D\+A.\+gpio\+\_\+registers))) $\vert$= port.\+S\+D\+A\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R\label{i2c_8c_ae82822e8bea8d42e13f5385f109abbe1}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+D\+A pin of the specified port as an input pin. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a4d3156004586db9109dfea9127b6b913}{}\#define \hyperlink{i2c_8c_a4d3156004586db9109dfea9127b6b913}{Set\+S\+C\+L\+Direction\+Input}(port)~$\ast$((unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + \hyperlink{ninja_2gpio_8h_a7c5ce760b66800f1bb68aece60e0d586}{G\+P\+I\+O\+\_\+\+D\+I\+R}(port.\+S\+C\+L.\+gpio\+\_\+registers))) $\vert$= port.\+S\+C\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R\label{i2c_8c_a4d3156004586db9109dfea9127b6b913}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+C\+L pin of the specified port as an input pin. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a5af3d0019d953515b57f3f9e0f26017f}{}\#define \hyperlink{i2c_8c_a5af3d0019d953515b57f3f9e0f26017f}{Set\+Direction\+Input}~(\hyperlink{i2c_8c_ae82822e8bea8d42e13f5385f109abbe1}{Set\+S\+D\+A\+Direction\+Input}(port)); (\hyperlink{i2c_8c_a4d3156004586db9109dfea9127b6b913}{Set\+S\+C\+L\+Direction\+Input}(port));\label{i2c_8c_a5af3d0019d953515b57f3f9e0f26017f}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+D\+A and S\+C\+L pins of the specified port as input pins. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_ad0b3d4d546d3ad4706c3b241fa9620c4}{}\#define \hyperlink{i2c_8c_ad0b3d4d546d3ad4706c3b241fa9620c4}{S\+D\+A\+Set\+Data\+Register}(port)~(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A(port.\+S\+D\+A.\+gpio\+\_\+registers))\label{i2c_8c_ad0b3d4d546d3ad4706c3b241fa9620c4}
+
+\begin{DoxyCompactList}\small\item\em Pointer to register required to set the S\+D\+A pin of the specified port high. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a0ba80cb4aa0caf6f9953d5e1bab395d6}{}\#define \hyperlink{i2c_8c_a0ba80cb4aa0caf6f9953d5e1bab395d6}{S\+C\+L\+Set\+Data\+Register}(port)~(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A(port.\+S\+C\+L.\+gpio\+\_\+registers))\label{i2c_8c_a0ba80cb4aa0caf6f9953d5e1bab395d6}
+
+\begin{DoxyCompactList}\small\item\em Pointer to register required to set the S\+C\+L pin of the specified port high. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a4d5ed9a796d3fb18e799605578a7dfe8}{}\#define \hyperlink{i2c_8c_a4d5ed9a796d3fb18e799605578a7dfe8}{S\+D\+A\+Clear\+Data\+Register}(port)~(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A(port.\+S\+D\+A.\+gpio\+\_\+registers))\label{i2c_8c_a4d5ed9a796d3fb18e799605578a7dfe8}
+
+\begin{DoxyCompactList}\small\item\em Pointer to register required to set the S\+C\+L pin of the specified port low. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_ab4f596cff9e441cf6b7b64fd2b3bb75f}{}\#define \hyperlink{i2c_8c_ab4f596cff9e441cf6b7b64fd2b3bb75f}{S\+C\+L\+Clear\+Data\+Register}(port)~(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A(port.\+S\+C\+L.\+gpio\+\_\+registers))\label{i2c_8c_ab4f596cff9e441cf6b7b64fd2b3bb75f}
+
+\begin{DoxyCompactList}\small\item\em Pointer to register required to set the S\+C\+L pin of the specified port low. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_aedd989eebea0faa3af1a70caff66519a}{}\#define \hyperlink{i2c_8c_aedd989eebea0faa3af1a70caff66519a}{S\+D\+A\+In\+Register}(port)~(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A(port.\+S\+D\+A.\+gpio\+\_\+registers))\label{i2c_8c_aedd989eebea0faa3af1a70caff66519a}
+
+\begin{DoxyCompactList}\small\item\em Pointer to register required to read the S\+D\+A pin of the specified port. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a10809839c56bde7d41605ac9be56197b}{}\#define \hyperlink{i2c_8c_a10809839c56bde7d41605ac9be56197b}{S\+C\+L\+In\+Register}(port)~(unsigned int $\ast$)(\hyperlink{soc___a_m1808_8h_adee61347c9497c7152e364bd8878872d}{S\+O\+C\+\_\+\+G\+P\+I\+O\+\_\+0\+\_\+\+R\+E\+G\+S} + G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A(port.\+S\+C\+L.\+gpio\+\_\+registers))\label{i2c_8c_a10809839c56bde7d41605ac9be56197b}
+
+\begin{DoxyCompactList}\small\item\em Pointer to register required to read the S\+C\+L pin of the specified port. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a09156daef45b1a89448c5fc19b2fc93b}{}\#define \hyperlink{i2c_8c_a09156daef45b1a89448c5fc19b2fc93b}{S\+D\+A\+\_\+\+H\+I\+G\+H}(port)~($\ast$(\hyperlink{i2c_8c_ad0b3d4d546d3ad4706c3b241fa9620c4}{S\+D\+A\+Set\+Data\+Register}(port))    $\vert$= port.\+S\+D\+A\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R);\label{i2c_8c_a09156daef45b1a89448c5fc19b2fc93b}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+D\+A pin of the specified port high (needs to be configured as output) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_af1b23b4c5a6492cd412eb33f898e8948}{}\#define \hyperlink{i2c_8c_af1b23b4c5a6492cd412eb33f898e8948}{S\+D\+A\+\_\+\+L\+O\+W}(port)~($\ast$(\hyperlink{i2c_8c_a4d5ed9a796d3fb18e799605578a7dfe8}{S\+D\+A\+Clear\+Data\+Register}(port))  \&= port.\+S\+D\+A\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R);\label{i2c_8c_af1b23b4c5a6492cd412eb33f898e8948}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+D\+A pin of the specified port low (needs to be configured as output) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a6fc104f15c3829998a7428ea69228593}{}\#define \hyperlink{i2c_8c_a6fc104f15c3829998a7428ea69228593}{S\+C\+L\+\_\+\+H\+I\+G\+H}(port)~($\ast$(\hyperlink{i2c_8c_a0ba80cb4aa0caf6f9953d5e1bab395d6}{S\+C\+L\+Set\+Data\+Register}(port))    $\vert$= port.\+S\+C\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R);\label{i2c_8c_a6fc104f15c3829998a7428ea69228593}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+C\+L pin of the specified port high (needs to be configured as output) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a8946aee1d27a2e3ea8e6c3757a9ec2c5}{}\#define \hyperlink{i2c_8c_a8946aee1d27a2e3ea8e6c3757a9ec2c5}{S\+C\+L\+\_\+\+L\+O\+W}(port)~($\ast$(\hyperlink{i2c_8c_ab4f596cff9e441cf6b7b64fd2b3bb75f}{S\+C\+L\+Clear\+Data\+Register}(port))  \&= port.\+S\+C\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R);\label{i2c_8c_a8946aee1d27a2e3ea8e6c3757a9ec2c5}
+
+\begin{DoxyCompactList}\small\item\em Set the S\+C\+L pin of the specified port low (needs to be configured as output) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_a5a2152636b23cbe1aab14b651cf53669}{}\#define \hyperlink{i2c_8c_a5a2152636b23cbe1aab14b651cf53669}{R\+E\+A\+D\+\_\+\+S\+D\+A}(port)~(($\ast$\hyperlink{i2c_8c_aedd989eebea0faa3af1a70caff66519a}{S\+D\+A\+In\+Register}(port) \& port.\+S\+D\+A\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R) $>$ 0 ? 1 \+: 0)\label{i2c_8c_a5a2152636b23cbe1aab14b651cf53669}
+
+\begin{DoxyCompactList}\small\item\em Read the S\+D\+A pin of the specified port (needs to be configured as input) \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_aafe92870b0bb5db655d5b493f7c4b864}{}\#define \hyperlink{i2c_8c_aafe92870b0bb5db655d5b493f7c4b864}{R\+E\+A\+D\+\_\+\+S\+C\+L}(port)~(($\ast$\hyperlink{i2c_8c_a10809839c56bde7d41605ac9be56197b}{S\+C\+L\+In\+Register}(port) \& port.\+S\+C\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+E\+A\+R) $>$ 0 ? 1 \+: 0)\label{i2c_8c_aafe92870b0bb5db655d5b493f7c4b864}
+
+\begin{DoxyCompactList}\small\item\em Read the S\+C\+L pin of the specified port (needs to be configured as input) \end{DoxyCompactList}\item 
+\#define \hyperlink{i2c_8c_a62249e384b997229a3e2ae74ade334e2}{D\+E\+L\+A\+Y}~\hyperlink{i2c_8c_a934965c0299a49add07af1b22db39a09}{do\+Delay}(85);
+\begin{DoxyCompactList}\small\item\em Delay the communication between two clock pulses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2c_8c_a934965c0299a49add07af1b22db39a09}{do\+Delay} (int time)
+\begin{DoxyCompactList}\small\item\em Delay the communication between two clock pulses by counting from 0 to the specified value. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8c_a437ed48e34ac6e068bfc8ff0e0cda3ed}{i2c\+\_\+write\+\_\+bit} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} bit)
+\begin{DoxyCompactList}\small\item\em Send a bit by setting the S\+D\+A pin high or low. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{i2c_8c_aa0594ce53846cd61d3b066e12a082d49}{i2c\+\_\+read\+\_\+bit} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port)
+\begin{DoxyCompactList}\small\item\em Read a bit by reading the signal on S\+D\+A. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{i2c_8c_a5672b3f97bcc480cfef2c4598112b215}{i2c\+\_\+write\+\_\+byte} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} byte)
+\begin{DoxyCompactList}\small\item\em Send a byte. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{i2c_8c_a518ba2e761a5fdfe08ded5ba19f89d26}{i2c\+\_\+read\+\_\+byte} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port)
+\begin{DoxyCompactList}\small\item\em Read a byte. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8c_a06d4ea5d35013c54b1c91651ed9e7a6d}{i2c\+\_\+send\+\_\+start} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port)
+\begin{DoxyCompactList}\small\item\em Send an I2\+C start signal. \end{DoxyCompactList}\item 
+\hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} \hyperlink{i2c_8c_a675a7be8d1be3812bbfbae4fb4868fe7}{i2c\+\_\+send\+\_\+slave\+\_\+address} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} slave\+\_\+address, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} read\+\_\+write\+\_\+bit)
+\begin{DoxyCompactList}\small\item\em Send the I2\+C slave address along with the read/write bit. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8c_ac6512ac4ff6a45def4900a659bee5dc1}{i2c\+\_\+send\+\_\+stop} (\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} port)
+\begin{DoxyCompactList}\small\item\em Send an I2\+C stop signal. \end{DoxyCompactList}\item 
+int \hyperlink{i2c_8c_a49173d8dccb25e8735985f8a2c79bc04}{i2c\+\_\+available} (int port, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} address)
+\begin{DoxyCompactList}\small\item\em Check if an I2\+C device with the given address is available at the specified with port. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8c_a4cb4750a8621c4e0d9b3aafd4af5230c}{i2c\+\_\+disable} (int port)
+\begin{DoxyCompactList}\small\item\em Disable an I2\+C port. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8c_a0332fb23d14c50f230824b0123198784}{i2c\+\_\+enable} (int port)
+\begin{DoxyCompactList}\small\item\em Enable an I2\+C port. \end{DoxyCompactList}\item 
+void \hyperlink{i2c_8c_a5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the I2\+C module. \end{DoxyCompactList}\item 
+int \hyperlink{i2c_8c_af78781a3419670e75e0ea69bef1316b7}{i2c\+\_\+busy} (int port)
+\begin{DoxyCompactList}\small\item\em Check whether an I2\+C port is currently busy or not. \end{DoxyCompactList}\item 
+int \hyperlink{i2c_8c_a1ccf872ddce00bf2c601aaa14c005d8d}{i2c\+\_\+start\+\_\+transaction} (int port, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} address, int internal\+\_\+address, int n\+\_\+internal\+\_\+address\+\_\+bytes, \hyperlink{mytypes_8h_a3cb25ca6f51f003950f9625ff05536fc}{U8} $\ast$data, \hyperlink{mytypes_8h_a811024d35b9b8a41095b1f583b649e56}{U32} nbytes, int write)
+\begin{DoxyCompactList}\small\item\em Start a new I2\+C transaction A\+N\+D wait until it\textquotesingle{}s finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_i2_c___p_o_r_t}{I2\+C\+\_\+\+P\+O\+R\+T} \hyperlink{i2c_8c_ab5ef7cc3b11bed460a8ed1eab6298697}{ports\+\_\+i2c} \mbox{[}\hyperlink{i2c_8c_a4c82e9c9d3280db703b1fe9f517940f1}{I2\+C\+\_\+\+N\+\_\+\+P\+O\+R\+T\+S}\mbox{]}
+\begin{DoxyCompactList}\small\item\em This array stores information about the G\+P\+I\+O pins which represent S\+D\+A and S\+C\+L lines for the I2\+C communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function definitions related to I2\+C communication. 
+
+I2\+C communication is required in order to interact with the digital sensors.
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{i2c_8c_a62249e384b997229a3e2ae74ade334e2}{}\index{i2c.\+c@{i2c.\+c}!D\+E\+L\+A\+Y@{D\+E\+L\+A\+Y}}
+\index{D\+E\+L\+A\+Y@{D\+E\+L\+A\+Y}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{D\+E\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y~{\bf do\+Delay}(85);}\label{i2c_8c_a62249e384b997229a3e2ae74ade334e2}
+
+
+Delay the communication between two clock pulses. 
+
+Counting to 85 is the best value to get as close to the original Lego firmware as possible (meassured with an oscilloscope). With this value, we have a delay between 100 and 125 ns between two clock pulses. 
+
+\subsection{Function Documentation}
+\hypertarget{i2c_8c_a934965c0299a49add07af1b22db39a09}{}\index{i2c.\+c@{i2c.\+c}!do\+Delay@{do\+Delay}}
+\index{do\+Delay@{do\+Delay}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{do\+Delay(int time)}]{\setlength{\rightskip}{0pt plus 5cm}void do\+Delay (
+\begin{DoxyParamCaption}
+\item[{int}]{time}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a934965c0299a49add07af1b22db39a09}
+
+
+Delay the communication between two clock pulses by counting from 0 to the specified value. 
+
+This approach is necessary since we cannot wait below 1 ms with our systick impplementation and this is far too slow for I2\+C communication.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & -\/ Ther value up to which the counter will be incremented before returning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_a49173d8dccb25e8735985f8a2c79bc04}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+available@{i2c\+\_\+available}}
+\index{i2c\+\_\+available@{i2c\+\_\+available}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+available(int port, U32 address)}]{\setlength{\rightskip}{0pt plus 5cm}int i2c\+\_\+available (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{{\bf U32}}]{address}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a49173d8dccb25e8735985f8a2c79bc04}
+
+
+Check if an I2\+C device with the given address is available at the specified with port. 
+
+This function makes use of the internal register layout which is equal among all Lego/\+Hi\+Technic I2\+C sensors. On internal address 0x00, the product version if the sensor is stored. If we read this value and receive a 0, we can assume that no sensor is available since a product version of 0 makes no sense. So far this is the only way to figure out if a sensor is connected to the port. Since the S\+D\+A signal will default to 0 when configured as input, the A\+C\+K bit is not enough to check that. It would always be 0 and therefore we would assume that a device is ready.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use \\
+\hline
+{\em address} & -\/ The I2\+C slave address of the slave device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if no device is available, 1 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8c_a49173d8dccb25e8735985f8a2c79bc04_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8c_af78781a3419670e75e0ea69bef1316b7}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+busy@{i2c\+\_\+busy}}
+\index{i2c\+\_\+busy@{i2c\+\_\+busy}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+busy(int port)}]{\setlength{\rightskip}{0pt plus 5cm}int i2c\+\_\+busy (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_af78781a3419670e75e0ea69bef1316b7}
+
+
+Check whether an I2\+C port is currently busy or not. 
+
+Since our I2\+C communication is currently not based on interrupts (as it is in the N\+X\+T version of the le\+J\+O\+S driver) a port is never busy. Therefore this function will always return 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always 0 since our port can never be busy (no transaction will be pending) 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_a4cb4750a8621c4e0d9b3aafd4af5230c}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+disable@{i2c\+\_\+disable}}
+\index{i2c\+\_\+disable@{i2c\+\_\+disable}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+disable(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a4cb4750a8621c4e0d9b3aafd4af5230c}
+
+
+Disable an I2\+C port. 
+
+This function currently has no functionality and therefore it is not necessary to call it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to disable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_a0332fb23d14c50f230824b0123198784}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+enable@{i2c\+\_\+enable}}
+\index{i2c\+\_\+enable@{i2c\+\_\+enable}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+enable(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a0332fb23d14c50f230824b0123198784}
+
+
+Enable an I2\+C port. 
+
+Enabling a port means configuring the corresponding pin-\/multiplexing registers and setting the pins as output pins with a high signal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to disable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{i2c_8c_a0332fb23d14c50f230824b0123198784_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8c_a5730d9445429351b9f750084c5cb5aae}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+init@{i2c\+\_\+init}}
+\index{i2c\+\_\+init@{i2c\+\_\+init}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a5730d9445429351b9f750084c5cb5aae}
+
+
+Initialize the I2\+C module. 
+
+This function currently has no functionality and therefore it is not necessary to call it.
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_aa0594ce53846cd61d3b066e12a082d49}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+read\+\_\+bit@{i2c\+\_\+read\+\_\+bit}}
+\index{i2c\+\_\+read\+\_\+bit@{i2c\+\_\+read\+\_\+bit}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+read\+\_\+bit(\+I2\+C\+\_\+\+P\+O\+R\+T port)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} i2c\+\_\+read\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_aa0594ce53846cd61d3b066e12a082d49}
+
+
+Read a bit by reading the signal on S\+D\+A. 
+
+Only the last bit of the returned byte should be considered (L\+S\+B). All other bits will be 0. This function will set S\+D\+A as an input pin in order to give the control to the slave device (sensor). The pin will be reset to output before returning from this function. S\+C\+L should be low before calling this function and will be low again after returning from it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The bit red (L\+S\+B of the returned byte) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{i2c_8c_aa0594ce53846cd61d3b066e12a082d49_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8c_a518ba2e761a5fdfe08ded5ba19f89d26}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+read\+\_\+byte@{i2c\+\_\+read\+\_\+byte}}
+\index{i2c\+\_\+read\+\_\+byte@{i2c\+\_\+read\+\_\+byte}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+read\+\_\+byte(\+I2\+C\+\_\+\+P\+O\+R\+T port)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} i2c\+\_\+read\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a518ba2e761a5fdfe08ded5ba19f89d26}
+
+
+Read a byte. 
+
+The byte will be red by reading it bit by bit. Therefore i2c\+\_\+read\+\_\+bit will be used. Before returning, this function will send an A\+C\+K bit to the slave device (sensor). S\+C\+L should be low before calling this function and will be low again after returning from it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The byte red 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8c_a518ba2e761a5fdfe08ded5ba19f89d26_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8c_a675a7be8d1be3812bbfbae4fb4868fe7}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+send\+\_\+slave\+\_\+address@{i2c\+\_\+send\+\_\+slave\+\_\+address}}
+\index{i2c\+\_\+send\+\_\+slave\+\_\+address@{i2c\+\_\+send\+\_\+slave\+\_\+address}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+send\+\_\+slave\+\_\+address(\+I2\+C\+\_\+\+P\+O\+R\+T port, U8 slave\+\_\+address, U8 read\+\_\+write\+\_\+bit)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} i2c\+\_\+send\+\_\+slave\+\_\+address (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port, }
+\item[{{\bf U8}}]{slave\+\_\+address, }
+\item[{{\bf U8}}]{read\+\_\+write\+\_\+bit}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a675a7be8d1be3812bbfbae4fb4868fe7}
+
+
+Send the I2\+C slave address along with the read/write bit. 
+
+This is the first byte that has to be sent in an I2\+C transaction after sending the start signal. The slave address is a 7 bit address which gets shifted by 1 to the left inside this function. The last bit of the byte will be 1 if we want to write to the slave device (sensor), 0 if we want to read from it. S\+C\+L should be low before calling this function and will be low again after returning from it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use \\
+\hline
+{\em slave\+\_\+address} & -\/ The slave address to use (unshifted) \\
+\hline
+{\em read\+\_\+write\+\_\+bit} & -\/ The read/write bit (1 if we want to write to the slave device, 0 if we want to read from it)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The A\+C\+K bit received from the slave (0 for A\+C\+K and 1 for no A\+C\+K) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8c_a675a7be8d1be3812bbfbae4fb4868fe7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8c_a06d4ea5d35013c54b1c91651ed9e7a6d}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+send\+\_\+start@{i2c\+\_\+send\+\_\+start}}
+\index{i2c\+\_\+send\+\_\+start@{i2c\+\_\+send\+\_\+start}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+send\+\_\+start(\+I2\+C\+\_\+\+P\+O\+R\+T port)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+send\+\_\+start (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a06d4ea5d35013c54b1c91651ed9e7a6d}
+
+
+Send an I2\+C start signal. 
+
+A start in an I2\+C transaction means setting S\+D\+A to 0 while S\+C\+L is 1. After calling this function, S\+D\+A and S\+C\+L will both be low.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_ac6512ac4ff6a45def4900a659bee5dc1}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+send\+\_\+stop@{i2c\+\_\+send\+\_\+stop}}
+\index{i2c\+\_\+send\+\_\+stop@{i2c\+\_\+send\+\_\+stop}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+send\+\_\+stop(\+I2\+C\+\_\+\+P\+O\+R\+T port)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+send\+\_\+stop (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_ac6512ac4ff6a45def4900a659bee5dc1}
+
+
+Send an I2\+C stop signal. 
+
+A stop in an I2\+C transaction means setting S\+D\+A to 1 while S\+C\+L is 1. After calling this function, S\+D\+A and S\+C\+L will both be high.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_a1ccf872ddce00bf2c601aaa14c005d8d}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+start\+\_\+transaction@{i2c\+\_\+start\+\_\+transaction}}
+\index{i2c\+\_\+start\+\_\+transaction@{i2c\+\_\+start\+\_\+transaction}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+start\+\_\+transaction(int port, U32 address, int internal\+\_\+address, int n\+\_\+internal\+\_\+address\+\_\+bytes, U8 $\ast$data, U32 nbytes, int write)}]{\setlength{\rightskip}{0pt plus 5cm}int i2c\+\_\+start\+\_\+transaction (
+\begin{DoxyParamCaption}
+\item[{int}]{port, }
+\item[{{\bf U32}}]{address, }
+\item[{int}]{internal\+\_\+address, }
+\item[{int}]{n\+\_\+internal\+\_\+address\+\_\+bytes, }
+\item[{{\bf U8} $\ast$}]{data, }
+\item[{{\bf U32}}]{nbytes, }
+\item[{int}]{write}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a1ccf872ddce00bf2c601aaa14c005d8d}
+
+
+Start a new I2\+C transaction A\+N\+D wait until it\textquotesingle{}s finished. 
+
+In contrast to the name of the function, this will not only start the I2\+C transaction. Instead, the whole transaction is processed before returning from this function. The name remains in order to be A\+P\+I-\/compatible with the N\+X\+T version of the le\+J\+O\+S driver. In this driver, the I2\+C communication was controlled using interrupts. Note\+: According to the I2\+C protocol, a write is represented by a 0 and not by a 1 as in this function call. This behaviour is intended an also to keep A\+P\+I-\/compatibility to the N\+X\+T version of the driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port to use (0 to 3) \\
+\hline
+{\em address} & -\/ The I2\+C slave address of the slave device \\
+\hline
+{\em internal\+\_\+address} & -\/ Internal register address of slave device to read from or write to \\
+\hline
+{\em n\+\_\+internal\+\_\+address\+\_\+bytes} & -\/ Size of the internal register address in bytes \\
+\hline
+{\em data} & -\/ Buffer to store received data in or the data to send \\
+\hline
+{\em nbytes} & -\/ Amount of bytes to receive or send, i.\+e. the length of the data array \\
+\hline
+{\em write} & -\/ 1 if we want to write to the slave, 0 if we want to read from it\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the transaction was successful, otherwise the number of the byte for which no A\+C\+K was received (beginning with 1) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8c_a1ccf872ddce00bf2c601aaa14c005d8d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{i2c_8c_a437ed48e34ac6e068bfc8ff0e0cda3ed}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+write\+\_\+bit@{i2c\+\_\+write\+\_\+bit}}
+\index{i2c\+\_\+write\+\_\+bit@{i2c\+\_\+write\+\_\+bit}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+write\+\_\+bit(\+I2\+C\+\_\+\+P\+O\+R\+T port, U8 bit)}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\+\_\+write\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port, }
+\item[{{\bf U8}}]{bit}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a437ed48e34ac6e068bfc8ff0e0cda3ed}
+
+
+Send a bit by setting the S\+D\+A pin high or low. 
+
+Only the last bit of the given byte will be used (L\+S\+B). S\+C\+L should be low before calling this function and will be low again after returning from it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use \\
+\hline
+{\em bit} & -\/ The bit to write (only the L\+S\+B of the byte will be considered)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_a5672b3f97bcc480cfef2c4598112b215}{}\index{i2c.\+c@{i2c.\+c}!i2c\+\_\+write\+\_\+byte@{i2c\+\_\+write\+\_\+byte}}
+\index{i2c\+\_\+write\+\_\+byte@{i2c\+\_\+write\+\_\+byte}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{i2c\+\_\+write\+\_\+byte(\+I2\+C\+\_\+\+P\+O\+R\+T port, U8 byte)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U8} i2c\+\_\+write\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{{\bf I2\+C\+\_\+\+P\+O\+R\+T}}]{port, }
+\item[{{\bf U8}}]{byte}
+\end{DoxyParamCaption}
+)}\label{i2c_8c_a5672b3f97bcc480cfef2c4598112b215}
+
+
+Send a byte. 
+
+The byte will be written by sending it bit by bit. Therefore i2c\+\_\+write\+\_\+bit will be used. S\+C\+L should be low before calling this function and will be low again after returning from it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port in use \\
+\hline
+{\em byte} & -\/ The byte to send\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The A\+C\+K bit received from the slave (0 for A\+C\+K and 1 for no A\+C\+K) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c_8c_a5672b3f97bcc480cfef2c4598112b215_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{i2c_8c_ab5ef7cc3b11bed460a8ed1eab6298697}{}\index{i2c.\+c@{i2c.\+c}!ports\+\_\+i2c@{ports\+\_\+i2c}}
+\index{ports\+\_\+i2c@{ports\+\_\+i2c}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{ports\+\_\+i2c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2\+C\+\_\+\+P\+O\+R\+T} ports\+\_\+i2c\mbox{[}{\bf I2\+C\+\_\+\+N\+\_\+\+P\+O\+R\+T\+S}\mbox{]}}\label{i2c_8c_ab5ef7cc3b11bed460a8ed1eab6298697}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{\{0, 15\}, \{0, 2\}, 0x00008000, 0x00000004\},
+    \{\{0, 13\}, \{0, 14\}, 0x00002000, 0x00004000\},
+    \{\{0, 14\}, \{0, 12\}, 0x40000000, 0x00001000\},
+    \{\{0, 15\}, \{0, 1\}, 0x80000000, 0x00000002\}
+\}
+\end{DoxyCode}
+
+
+This array stores information about the G\+P\+I\+O pins which represent S\+D\+A and S\+C\+L lines for the I2\+C communication. 
+

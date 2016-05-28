@@ -1,0 +1,177 @@
+\hypertarget{led_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/led.h File Reference}
+\label{led_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/led.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/led.\+h}}
+
+
+This header declares function required to interact with the L\+E\+Ds of the E\+V3 as well as enumerations therefore.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structled__info}{led\+\_\+info}
+\begin{DoxyCompactList}\small\item\em This struct stores information about one L\+E\+D which is controlled by 2 G\+P\+I\+O pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71ea}{led\+\_\+id} \hyperlink{led_8h_abe518b59c107052b8315c19d5a6b62e0}{led\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Enumeration to represent the I\+D of the L\+E\+Ds. \end{DoxyCompactList}\item 
+\hypertarget{led_8h_af76b3df3b5b8345e00ecafd152bea87c}{}typedef enum \hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73}{led\+\_\+color} \hyperlink{led_8h_af76b3df3b5b8345e00ecafd152bea87c}{led\+\_\+color}\label{led_8h_af76b3df3b5b8345e00ecafd152bea87c}
+
+\begin{DoxyCompactList}\small\item\em Enumeration to represent the color which should be set for an L\+E\+D. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structled__info}{led\+\_\+info} \hyperlink{led_8h_a3a2cea1de752db085bffa030ba3e9e6d}{led\+\_\+info}
+\begin{DoxyCompactList}\small\item\em This struct stores information about one L\+E\+D which is controlled by 2 G\+P\+I\+O pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71ea}{led\+\_\+id} \{ \hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaabf9eac52d3b8563bcb2246418164593e}{L\+E\+D\+\_\+\+L\+E\+F\+T} = 0x01, 
+\hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaab9a494f0eb318ffe83ce65b5b51097f8}{L\+E\+D\+\_\+\+R\+I\+G\+H\+T} = 0x02, 
+\hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaa5500c66903349275473517426139233c}{L\+E\+D\+\_\+\+B\+O\+T\+H} = L\+E\+D\+\_\+\+L\+E\+F\+T $\vert$ L\+E\+D\+\_\+\+R\+I\+G\+H\+T
+ \}\begin{DoxyCompactList}\small\item\em Enumeration to represent the I\+D of the L\+E\+Ds. \end{DoxyCompactList}
+\item 
+enum \hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73}{led\+\_\+color} \{ \hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73a4376d5e9e19f1983bbc3e8b412f84e3d}{L\+E\+D\+\_\+\+B\+L\+A\+C\+K} = 0x00, 
+\hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73ad80f13022b6d309268fadc7b1da89cb9}{L\+E\+D\+\_\+\+R\+E\+D} = 0x01, 
+\hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73a0ad916c7f80666dc88f6b5b22a72e742}{L\+E\+D\+\_\+\+G\+R\+E\+E\+N} = 0x02, 
+\hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73a082cd0390f10e6458c4e2a8adf6594c5}{L\+E\+D\+\_\+\+O\+R\+A\+N\+G\+E} = L\+E\+D\+\_\+\+R\+E\+D $\vert$ L\+E\+D\+\_\+\+G\+R\+E\+E\+N
+ \}\begin{DoxyCompactList}\small\item\em Enumeration to represent the color which should be set for an L\+E\+D. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8h_af47863c8014e3ddf2909dedb61a7062b}{led\+\_\+set} (\hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71ea}{led\+\_\+id} led, \hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73}{led\+\_\+color} color)
+\begin{DoxyCompactList}\small\item\em Set the color of the given L\+E\+D. \end{DoxyCompactList}\item 
+void \hyperlink{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}{led\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the G\+P\+I\+O pins required to manipulate the L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header declares function required to interact with the L\+E\+Ds of the E\+V3 as well as enumerations therefore. 
+
+\begin{DoxyAuthor}{Author}
+ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{led_8h_abe518b59c107052b8315c19d5a6b62e0}{}\index{led.\+h@{led.\+h}!led\+\_\+id@{led\+\_\+id}}
+\index{led\+\_\+id@{led\+\_\+id}!led.\+h@{led.\+h}}
+\subsubsection[{led\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf led\+\_\+id}  {\bf led\+\_\+id}}\label{led_8h_abe518b59c107052b8315c19d5a6b62e0}
+
+
+Enumeration to represent the I\+D of the L\+E\+Ds. 
+
+Every L\+E\+D in fact consists of two L\+E\+Ds, a red ond and a green one. \hypertarget{led_8h_a3a2cea1de752db085bffa030ba3e9e6d}{}\index{led.\+h@{led.\+h}!led\+\_\+info@{led\+\_\+info}}
+\index{led\+\_\+info@{led\+\_\+info}!led.\+h@{led.\+h}}
+\subsubsection[{led\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf led\+\_\+info}  {\bf led\+\_\+info}}\label{led_8h_a3a2cea1de752db085bffa030ba3e9e6d}
+
+
+This struct stores information about one L\+E\+D which is controlled by 2 G\+P\+I\+O pins. 
+
+One G\+P\+I\+O pin controlls the red L\+E\+D and one pin the green L\+E\+D. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{led_8h_add3b17d7e612b943fa4ce611ee324e73}{}\index{led.\+h@{led.\+h}!led\+\_\+color@{led\+\_\+color}}
+\index{led\+\_\+color@{led\+\_\+color}!led.\+h@{led.\+h}}
+\subsubsection[{led\+\_\+color}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf led\+\_\+color}}\label{led_8h_add3b17d7e612b943fa4ce611ee324e73}
+
+
+Enumeration to represent the color which should be set for an L\+E\+D. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+E\+D\+\_\+\+B\+L\+A\+C\+K@{L\+E\+D\+\_\+\+B\+L\+A\+C\+K}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+B\+L\+A\+C\+K@{L\+E\+D\+\_\+\+B\+L\+A\+C\+K}}\item[{\em 
+\hypertarget{led_8h_add3b17d7e612b943fa4ce611ee324e73a4376d5e9e19f1983bbc3e8b412f84e3d}{}L\+E\+D\+\_\+\+B\+L\+A\+C\+K\label{led_8h_add3b17d7e612b943fa4ce611ee324e73a4376d5e9e19f1983bbc3e8b412f84e3d}
+}]Black color (which equals off) \index{L\+E\+D\+\_\+\+R\+E\+D@{L\+E\+D\+\_\+\+R\+E\+D}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+R\+E\+D@{L\+E\+D\+\_\+\+R\+E\+D}}\item[{\em 
+\hypertarget{led_8h_add3b17d7e612b943fa4ce611ee324e73ad80f13022b6d309268fadc7b1da89cb9}{}L\+E\+D\+\_\+\+R\+E\+D\label{led_8h_add3b17d7e612b943fa4ce611ee324e73ad80f13022b6d309268fadc7b1da89cb9}
+}]Red color (which equals enabling only one G\+P\+I\+O pin) \index{L\+E\+D\+\_\+\+G\+R\+E\+E\+N@{L\+E\+D\+\_\+\+G\+R\+E\+E\+N}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+G\+R\+E\+E\+N@{L\+E\+D\+\_\+\+G\+R\+E\+E\+N}}\item[{\em 
+\hypertarget{led_8h_add3b17d7e612b943fa4ce611ee324e73a0ad916c7f80666dc88f6b5b22a72e742}{}L\+E\+D\+\_\+\+G\+R\+E\+E\+N\label{led_8h_add3b17d7e612b943fa4ce611ee324e73a0ad916c7f80666dc88f6b5b22a72e742}
+}]Green color (which equals enabling only one G\+P\+I\+O pin) \index{L\+E\+D\+\_\+\+O\+R\+A\+N\+G\+E@{L\+E\+D\+\_\+\+O\+R\+A\+N\+G\+E}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+O\+R\+A\+N\+G\+E@{L\+E\+D\+\_\+\+O\+R\+A\+N\+G\+E}}\item[{\em 
+\hypertarget{led_8h_add3b17d7e612b943fa4ce611ee324e73a082cd0390f10e6458c4e2a8adf6594c5}{}L\+E\+D\+\_\+\+O\+R\+A\+N\+G\+E\label{led_8h_add3b17d7e612b943fa4ce611ee324e73a082cd0390f10e6458c4e2a8adf6594c5}
+}]Orange color (which equals enabling both G\+P\+I\+O pins) \end{description}
+\end{Desc}
+\hypertarget{led_8h_acb7e9e867e9fca70f6201b3c5c6a71ea}{}\index{led.\+h@{led.\+h}!led\+\_\+id@{led\+\_\+id}}
+\index{led\+\_\+id@{led\+\_\+id}!led.\+h@{led.\+h}}
+\subsubsection[{led\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf led\+\_\+id}}\label{led_8h_acb7e9e867e9fca70f6201b3c5c6a71ea}
+
+
+Enumeration to represent the I\+D of the L\+E\+Ds. 
+
+Every L\+E\+D in fact consists of two L\+E\+Ds, a red ond and a green one. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+E\+D\+\_\+\+L\+E\+F\+T@{L\+E\+D\+\_\+\+L\+E\+F\+T}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+L\+E\+F\+T@{L\+E\+D\+\_\+\+L\+E\+F\+T}}\item[{\em 
+\hypertarget{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaabf9eac52d3b8563bcb2246418164593e}{}L\+E\+D\+\_\+\+L\+E\+F\+T\label{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaabf9eac52d3b8563bcb2246418164593e}
+}]The left L\+E\+Ds (red and green) of the E\+V3. \index{L\+E\+D\+\_\+\+R\+I\+G\+H\+T@{L\+E\+D\+\_\+\+R\+I\+G\+H\+T}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+R\+I\+G\+H\+T@{L\+E\+D\+\_\+\+R\+I\+G\+H\+T}}\item[{\em 
+\hypertarget{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaab9a494f0eb318ffe83ce65b5b51097f8}{}L\+E\+D\+\_\+\+R\+I\+G\+H\+T\label{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaab9a494f0eb318ffe83ce65b5b51097f8}
+}]The right L\+E\+Ds (red and green) of the E\+V3. \index{L\+E\+D\+\_\+\+B\+O\+T\+H@{L\+E\+D\+\_\+\+B\+O\+T\+H}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+B\+O\+T\+H@{L\+E\+D\+\_\+\+B\+O\+T\+H}}\item[{\em 
+\hypertarget{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaa5500c66903349275473517426139233c}{}L\+E\+D\+\_\+\+B\+O\+T\+H\label{led_8h_acb7e9e867e9fca70f6201b3c5c6a71eaa5500c66903349275473517426139233c}
+}]Both L\+E\+Ds of the E\+V3. \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}{}\index{led.\+h@{led.\+h}!led\+\_\+init@{led\+\_\+init}}
+\index{led\+\_\+init@{led\+\_\+init}!led.\+h@{led.\+h}}
+\subsubsection[{led\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void led\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}
+
+
+Initialize the G\+P\+I\+O pins required to manipulate the L\+E\+Ds. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{led_8h_af47863c8014e3ddf2909dedb61a7062b}{}\index{led.\+h@{led.\+h}!led\+\_\+set@{led\+\_\+set}}
+\index{led\+\_\+set@{led\+\_\+set}!led.\+h@{led.\+h}}
+\subsubsection[{led\+\_\+set(led\+\_\+id led, led\+\_\+color color)}]{\setlength{\rightskip}{0pt plus 5cm}void led\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf led\+\_\+id}}]{led, }
+\item[{{\bf led\+\_\+color}}]{color}
+\end{DoxyParamCaption}
+)}\label{led_8h_af47863c8014e3ddf2909dedb61a7062b}
+
+
+Set the color of the given L\+E\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & -\/ The I\+D of the L\+E\+D to control \\
+\hline
+{\em color} & -\/ The color to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8h_af47863c8014e3ddf2909dedb61a7062b_cgraph}
+\end{center}
+\end{figure}
+
+

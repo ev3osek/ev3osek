@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/ninja/spi.h" name="leJOS_EV3/src/ev3/ninja/spi.h">
+<area shape="rect" id="node2" href="$init_8c.html" title="This code is required in order to initialize the leJOS driver including all modules properly..." alt="" coords="5,102,175,129"/>
+<area shape="rect" id="node3" href="$adc_8c.html" title="This file contains function definitions to talk to the ADC. " alt="" coords="199,95,367,136"/>
+<area shape="rect" id="node4" href="$ninja_2spi_8c.html" title="This contains function definitions required to interact with the SPI0 controller of the SoC which is ..." alt="" coords="391,95,559,136"/>
+</map>

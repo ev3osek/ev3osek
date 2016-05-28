@@ -1,0 +1,18 @@
+<map id="leJOS_EV3/src/ev3/mytypes.h" name="leJOS_EV3/src/ev3/mytypes.h">
+<area shape="rect" id="node2" href="$ecrobot__interface_8h.html" title="This file contains the function declarations for the users ECRobot&#45;API. This API is used to interact ..." alt="" coords="782,266,973,293"/>
+<area shape="rect" id="node4" href="$ecrobot__types_8h.html" title="This file contains some typedefs. " alt="" coords="5,87,179,114"/>
+<area shape="rect" id="node5" href="$i2c_8h.html" title="Function declarations related to I2C communication. " alt="" coords="491,87,661,114"/>
+<area shape="rect" id="node9" href="$ev3__motors_8h.html" title="This header contains function declarations to use motor drivers. Driver wrapper for ECRobot API..." alt="" coords="1583,169,1745,211"/>
+<area shape="rect" id="node11" href="$motor_8h.html" title="A header file for motor driver. This file contains function declarations to use servo motors as well ..." alt="" coords="1340,80,1508,121"/>
+<area shape="rect" id="node13" href="$systick_8h.html" title="This header contains function declarations required to manage the tick in milliseconds on the EV3..." alt="" coords="968,87,1163,114"/>
+<area shape="rect" id="node16" href="$power_8h.html" title="This header contains function declarations for the power management on the EV3. " alt="" coords="1689,87,1876,114"/>
+<area shape="rect" id="node3" href="$ecrobot__interface_8c.html" title="This file contains the function definitions for the users ECRobot&#45;API. This API is used to interact w..." alt="" coords="782,348,973,375"/>
+<area shape="rect" id="node6" href="$digi__sensors_8c.html" title="Function definitions to talk to the digital sensors (I2C sensors) " alt="" coords="254,169,415,211"/>
+<area shape="rect" id="node7" href="$i2c_8c.html" title="Function definitions related to I2C communication. " alt="" coords="491,177,661,203"/>
+<area shape="rect" id="node8" href="$init_8c.html" title="This code is required in order to initialize the leJOS driver including all modules properly..." alt="" coords="685,177,854,203"/>
+<area shape="rect" id="node10" href="$ev3__motors_8c.html" title="This file contains function definitions to use EV3 motors. Driver wrapper for ECRobot API..." alt="" coords="1523,259,1685,300"/>
+<area shape="rect" id="node12" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="1340,169,1508,211"/>
+<area shape="rect" id="node14" href="$ninja_2spi_8c.html" title="This contains function definitions required to interact with the SPI0 controller of the SoC which is ..." alt="" coords="879,169,1047,211"/>
+<area shape="rect" id="node15" href="$systick_8c.html" title="This header contains function definitions required to manage the tick in milliseconds on the EV3..." alt="" coords="1071,177,1265,203"/>
+<area shape="rect" id="node17" href="$power_8c.html" title="This header contains function definitions for the power management on the EV3. " alt="" coords="1820,177,2007,203"/>
+</map>

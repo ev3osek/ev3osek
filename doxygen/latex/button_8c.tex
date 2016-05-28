@@ -1,0 +1,144 @@
+\hypertarget{button_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/button.c File Reference}
+\label{button_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/button.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/button.\+c}}
+
+
+This file contains function definitions to use the hardware buttons of the E\+V3.  
+
+
+{\ttfamily \#include \char`\"{}button.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+Include dependency graph for button.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{button_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}{button\+\_\+state} \hyperlink{button_8c_a70d2b56a865445f6eacb4213f24c36e8}{button\+\_\+get\+\_\+state} (\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{button\+\_\+id} button)
+\begin{DoxyCompactList}\small\item\em Check if the given button is pressed. \end{DoxyCompactList}\item 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{button\+\_\+id} \hyperlink{button_8c_a4031f58a6c5e9c96eeed977f1d76db22}{button\+\_\+get\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Check if any button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{button_8c_a9ebb64bc3ea7a1e75d422784fe931347}{button\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the buttons be configuring the required G\+P\+I\+O pins as input pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structbutton__info}{button\+\_\+info} \hyperlink{button_8c_a07e9441eeb4ae735dbbe5ec08bfbd33e}{buttons} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array storing the required G\+P\+I\+O pins to read the state of the buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains function definitions to use the hardware buttons of the E\+V3. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{button_8c_a4031f58a6c5e9c96eeed977f1d76db22}{}\index{button.\+c@{button.\+c}!button\+\_\+get\+\_\+pressed@{button\+\_\+get\+\_\+pressed}}
+\index{button\+\_\+get\+\_\+pressed@{button\+\_\+get\+\_\+pressed}!button.\+c@{button.\+c}}
+\subsubsection[{button\+\_\+get\+\_\+pressed(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf button\+\_\+id} button\+\_\+get\+\_\+pressed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{button_8c_a4031f58a6c5e9c96eeed977f1d76db22}
+
+
+Check if any button is pressed. 
+
+This function will check if any button is pressed. As soon as one button that is pressed is found, it will be returned and the remaining buttons will not be checked. The buttons are checked in the order they are defined in the enumeration button\+\_\+id, i.\+e. L\+E\+F\+T, R\+I\+G\+H\+T, T\+O\+P, B\+O\+T\+T\+O\+M, C\+E\+N\+T\+E\+R, B\+A\+C\+K.
+
+\begin{DoxyReturn}{Returns}
+The I\+D of the button that was pressed (ranging from 0x00 to 0x05) or B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E (0x\+F\+F) if none was pressed 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a4031f58a6c5e9c96eeed977f1d76db22_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{button_8c_a70d2b56a865445f6eacb4213f24c36e8}{}\index{button.\+c@{button.\+c}!button\+\_\+get\+\_\+state@{button\+\_\+get\+\_\+state}}
+\index{button\+\_\+get\+\_\+state@{button\+\_\+get\+\_\+state}!button.\+c@{button.\+c}}
+\subsubsection[{button\+\_\+get\+\_\+state(button\+\_\+id button)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf button\+\_\+state} button\+\_\+get\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf button\+\_\+id}}]{button}
+\end{DoxyParamCaption}
+)}\label{button_8c_a70d2b56a865445f6eacb4213f24c36e8}
+
+
+Check if the given button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & -\/ The I\+D of the button to check (ranging from 0x00 to 0x05)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The state of the button (B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N = 0x01 if the button is pressed, B\+U\+T\+T\+O\+N\+\_\+\+U\+P = 0x00 otherwise) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a70d2b56a865445f6eacb4213f24c36e8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{button_8c_a9ebb64bc3ea7a1e75d422784fe931347}{}\index{button.\+c@{button.\+c}!button\+\_\+init@{button\+\_\+init}}
+\index{button\+\_\+init@{button\+\_\+init}!button.\+c@{button.\+c}}
+\subsubsection[{button\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void button\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{button_8c_a9ebb64bc3ea7a1e75d422784fe931347}
+
+
+Initialize the buttons be configuring the required G\+P\+I\+O pins as input pins. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a9ebb64bc3ea7a1e75d422784fe931347_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{button_8c_a07e9441eeb4ae735dbbe5ec08bfbd33e}{}\index{button.\+c@{button.\+c}!buttons@{buttons}}
+\index{buttons@{buttons}!button.\+c@{button.\+c}}
+\subsubsection[{buttons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf button\+\_\+info} buttons\mbox{[}$\,$\mbox{]}}\label{button_8c_a07e9441eeb4ae735dbbe5ec08bfbd33e}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6,  6) \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7, 12) \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7, 15) \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(7, 14) \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(1, 13) \},
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6, 10) \}
+\}
+\end{DoxyCode}
+
+
+Array storing the required G\+P\+I\+O pins to read the state of the buttons. 
+

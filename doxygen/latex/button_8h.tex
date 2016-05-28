@@ -1,0 +1,205 @@
+\hypertarget{button_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/button.h File Reference}
+\label{button_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/button.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/button.\+h}}
+
+
+This header contains function declarations to use the hardware buttons of the E\+V3 as well as enumerations to represent the buttons and their states.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbutton__info}{button\+\_\+info}
+\begin{DoxyCompactList}\small\item\em This struct contains the information required to read a buttons state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structbutton__info}{button\+\_\+info} \hyperlink{button_8h_a7af6d2752e2346390203d08b96bad7ad}{button\+\_\+info}
+\begin{DoxyCompactList}\small\item\em This struct contains the information required to read a buttons state. \end{DoxyCompactList}\item 
+\hypertarget{button_8h_abc5113fe9697714b3405ade2c5db81f0}{}typedef enum \hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{button\+\_\+id} \hyperlink{button_8h_abc5113fe9697714b3405ade2c5db81f0}{button\+\_\+id}\label{button_8h_abc5113fe9697714b3405ade2c5db81f0}
+
+\begin{DoxyCompactList}\small\item\em This enumeration maps the buttons to unique I\+Ds. \end{DoxyCompactList}\item 
+\hypertarget{button_8h_ab67cb51be4212c1aa3d1a82fbab9a08e}{}typedef enum \hyperlink{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}{button\+\_\+state} \hyperlink{button_8h_ab67cb51be4212c1aa3d1a82fbab9a08e}{button\+\_\+state}\label{button_8h_ab67cb51be4212c1aa3d1a82fbab9a08e}
+
+\begin{DoxyCompactList}\small\item\em This enumeration represents a button\textquotesingle{}s state (pressed = D\+O\+W\+N or not pressed = U\+P) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{button\+\_\+id} \{ \\*
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba55dc0d53615e28ee8af66827bee48e4e}{B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T} = 0x00, 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba13046edd6d64a0de5821b5ff4c7581ce}{B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T} = 0x01, 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba7dd7d066154c7572eeb2ab269bcfe5af}{B\+U\+T\+T\+O\+N\+\_\+\+T\+O\+P} = 0x02, 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba2f6433828e76dc7d8b58b0222bc5c250}{B\+U\+T\+T\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M} = 0x03, 
+\\*
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba81f2f85b55c96efd16c55df6441b2fd3}{B\+U\+T\+T\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R} = 0x04, 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba80bbae5d9dece7dc5b0d0a45f9390770}{B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+C\+K} = 0x05, 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba44b65ff2efb4231ba8109b9f72b7ad6d}{B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E} = 0x\+F\+F
+ \}\begin{DoxyCompactList}\small\item\em This enumeration maps the buttons to unique I\+Ds. \end{DoxyCompactList}
+\item 
+enum \hyperlink{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}{button\+\_\+state} \{ \hyperlink{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba37666936297216dce293b0aa31c474b8}{B\+U\+T\+T\+O\+N\+\_\+\+U\+P} = 0x00, 
+\hyperlink{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba0c7746cfbcac16484b2266e6f51e5e0b}{B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N} = 0x01
+ \}\begin{DoxyCompactList}\small\item\em This enumeration represents a button\textquotesingle{}s state (pressed = D\+O\+W\+N or not pressed = U\+P) \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}{button\+\_\+state} \hyperlink{button_8h_a70d2b56a865445f6eacb4213f24c36e8}{button\+\_\+get\+\_\+state} (\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{button\+\_\+id} button)
+\begin{DoxyCompactList}\small\item\em Check if the given button is pressed. \end{DoxyCompactList}\item 
+\hyperlink{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{button\+\_\+id} \hyperlink{button_8h_a4031f58a6c5e9c96eeed977f1d76db22}{button\+\_\+get\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Check if any button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{button_8h_a9ebb64bc3ea7a1e75d422784fe931347}{button\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the buttons be configuring the required G\+P\+I\+O pins as input pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header contains function declarations to use the hardware buttons of the E\+V3 as well as enumerations to represent the buttons and their states. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{button_8h_a7af6d2752e2346390203d08b96bad7ad}{}\index{button.\+h@{button.\+h}!button\+\_\+info@{button\+\_\+info}}
+\index{button\+\_\+info@{button\+\_\+info}!button.\+h@{button.\+h}}
+\subsubsection[{button\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf button\+\_\+info}  {\bf button\+\_\+info}}\label{button_8h_a7af6d2752e2346390203d08b96bad7ad}
+
+
+This struct contains the information required to read a buttons state. 
+
+Every buttons is red by reading the signal on 1 G\+P\+I\+O pin which is configured as input. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}{}\index{button.\+h@{button.\+h}!button\+\_\+id@{button\+\_\+id}}
+\index{button\+\_\+id@{button\+\_\+id}!button.\+h@{button.\+h}}
+\subsubsection[{button\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf button\+\_\+id}}\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fb}
+
+
+This enumeration maps the buttons to unique I\+Ds. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T@{B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T@{B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba55dc0d53615e28ee8af66827bee48e4e}{}B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba55dc0d53615e28ee8af66827bee48e4e}
+}]The left button of the E\+V3. \index{B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T@{B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T@{B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba13046edd6d64a0de5821b5ff4c7581ce}{}B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba13046edd6d64a0de5821b5ff4c7581ce}
+}]The right button of the E\+V3. \index{B\+U\+T\+T\+O\+N\+\_\+\+T\+O\+P@{B\+U\+T\+T\+O\+N\+\_\+\+T\+O\+P}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+T\+O\+P@{B\+U\+T\+T\+O\+N\+\_\+\+T\+O\+P}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba7dd7d066154c7572eeb2ab269bcfe5af}{}B\+U\+T\+T\+O\+N\+\_\+\+T\+O\+P\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba7dd7d066154c7572eeb2ab269bcfe5af}
+}]The top button of the E\+V3. \index{B\+U\+T\+T\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M@{B\+U\+T\+T\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M@{B\+U\+T\+T\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba2f6433828e76dc7d8b58b0222bc5c250}{}B\+U\+T\+T\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba2f6433828e76dc7d8b58b0222bc5c250}
+}]The bottom button of the E\+V3. \index{B\+U\+T\+T\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R@{B\+U\+T\+T\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R@{B\+U\+T\+T\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba81f2f85b55c96efd16c55df6441b2fd3}{}B\+U\+T\+T\+O\+N\+\_\+\+C\+E\+N\+T\+E\+R\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba81f2f85b55c96efd16c55df6441b2fd3}
+}]The center button of the E\+V3. \index{B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+C\+K@{B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+C\+K}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+C\+K@{B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+C\+K}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba80bbae5d9dece7dc5b0d0a45f9390770}{}B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+C\+K\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba80bbae5d9dece7dc5b0d0a45f9390770}
+}]The upper left button of the E\+V3. \index{B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E@{B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E@{B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba44b65ff2efb4231ba8109b9f72b7ad6d}{}B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E\label{button_8h_a679c27cd16998bb7e9b45dd60e5e30fba44b65ff2efb4231ba8109b9f72b7ad6d}
+}]I\+D representing no button. \end{description}
+\end{Desc}
+\hypertarget{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}{}\index{button.\+h@{button.\+h}!button\+\_\+state@{button\+\_\+state}}
+\index{button\+\_\+state@{button\+\_\+state}!button.\+h@{button.\+h}}
+\subsubsection[{button\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf button\+\_\+state}}\label{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}
+
+
+This enumeration represents a button\textquotesingle{}s state (pressed = D\+O\+W\+N or not pressed = U\+P) 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\+U\+T\+T\+O\+N\+\_\+\+U\+P@{B\+U\+T\+T\+O\+N\+\_\+\+U\+P}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+U\+P@{B\+U\+T\+T\+O\+N\+\_\+\+U\+P}}\item[{\em 
+\hypertarget{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba37666936297216dce293b0aa31c474b8}{}B\+U\+T\+T\+O\+N\+\_\+\+U\+P\label{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba37666936297216dce293b0aa31c474b8}
+}]State representing that the button was not pressed. \index{B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N@{B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N@{B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N}}\item[{\em 
+\hypertarget{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba0c7746cfbcac16484b2266e6f51e5e0b}{}B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N\label{button_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba0c7746cfbcac16484b2266e6f51e5e0b}
+}]State representing that the button was pressed. \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{button_8h_a4031f58a6c5e9c96eeed977f1d76db22}{}\index{button.\+h@{button.\+h}!button\+\_\+get\+\_\+pressed@{button\+\_\+get\+\_\+pressed}}
+\index{button\+\_\+get\+\_\+pressed@{button\+\_\+get\+\_\+pressed}!button.\+h@{button.\+h}}
+\subsubsection[{button\+\_\+get\+\_\+pressed(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf button\+\_\+id} button\+\_\+get\+\_\+pressed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{button_8h_a4031f58a6c5e9c96eeed977f1d76db22}
+
+
+Check if any button is pressed. 
+
+This function will check if any button is pressed. As soon as one button that is pressed is found, it will be returned and the remaining buttons will not be checked. The buttons are checked in the order they are defined in the enumeration button\+\_\+id, i.\+e. L\+E\+F\+T, R\+I\+G\+H\+T, T\+O\+P, B\+O\+T\+T\+O\+M, C\+E\+N\+T\+E\+R, B\+A\+C\+K.
+
+\begin{DoxyReturn}{Returns}
+The I\+D of the button that was pressed (ranging from 0x00 to 0x05) or B\+U\+T\+T\+O\+N\+\_\+\+N\+O\+N\+E (0x\+F\+F) if none was pressed 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8h_a4031f58a6c5e9c96eeed977f1d76db22_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{button_8h_a70d2b56a865445f6eacb4213f24c36e8}{}\index{button.\+h@{button.\+h}!button\+\_\+get\+\_\+state@{button\+\_\+get\+\_\+state}}
+\index{button\+\_\+get\+\_\+state@{button\+\_\+get\+\_\+state}!button.\+h@{button.\+h}}
+\subsubsection[{button\+\_\+get\+\_\+state(button\+\_\+id button)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf button\+\_\+state} button\+\_\+get\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf button\+\_\+id}}]{button}
+\end{DoxyParamCaption}
+)}\label{button_8h_a70d2b56a865445f6eacb4213f24c36e8}
+
+
+Check if the given button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & -\/ The I\+D of the button to check (ranging from 0x00 to 0x05)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The state of the button (B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+W\+N = 0x01 if the button is pressed, B\+U\+T\+T\+O\+N\+\_\+\+U\+P = 0x00 otherwise) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8h_a70d2b56a865445f6eacb4213f24c36e8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{button_8h_a9ebb64bc3ea7a1e75d422784fe931347}{}\index{button.\+h@{button.\+h}!button\+\_\+init@{button\+\_\+init}}
+\index{button\+\_\+init@{button\+\_\+init}!button.\+h@{button.\+h}}
+\subsubsection[{button\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void button\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{button_8h_a9ebb64bc3ea7a1e75d422784fe931347}
+
+
+Initialize the buttons be configuring the required G\+P\+I\+O pins as input pins. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8h_a9ebb64bc3ea7a1e75d422784fe931347_cgraph}
+\end{center}
+\end{figure}
+
+

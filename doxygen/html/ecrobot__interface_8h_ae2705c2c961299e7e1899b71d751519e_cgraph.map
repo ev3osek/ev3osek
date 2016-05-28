@@ -1,0 +1,16 @@
+<map id="ecrobot_read_i2c" name="ecrobot_read_i2c">
+<area shape="rect" id="node2" href="$ecrobot__interface_8c.html#ae54fa3c45ac6d8a2cab8554e1ab48768" title="Wait until I2C communication is ready. " alt="" coords="175,56,333,83"/>
+<area shape="rect" id="node5" href="$i2c_8c.html#a1ccf872ddce00bf2c601aaa14c005d8d" title="Start a new I2C transaction AND wait until it&#39;s finished. " alt="" coords="183,208,325,235"/>
+<area shape="rect" id="node3" href="$systick_8c.html#acef982ce45bc326644139ebb22310c88" title="Get the current tick in milliseconds. " alt="" coords="407,5,521,32"/>
+<area shape="rect" id="node4" href="$i2c_8c.html#af78781a3419670e75e0ea69bef1316b7" title="Check whether an I2C port is currently busy or not. " alt="" coords="427,56,501,83"/>
+<area shape="rect" id="node6" href="$i2c_8c.html#ac6512ac4ff6a45def4900a659bee5dc1" title="Send an I2C stop signal. " alt="" coords="411,107,517,133"/>
+<area shape="rect" id="node7" href="$systick_8c.html#a28abc49038576a107430e9beb1382272" title="Wait for the specified amount of time. " alt="" coords="404,157,524,184"/>
+<area shape="rect" id="node8" href="$i2c_8c.html#a06d4ea5d35013c54b1c91651ed9e7a6d" title="Send an I2C start signal. " alt="" coords="411,208,517,235"/>
+<area shape="rect" id="node9" href="$i2c_8c.html#a675a7be8d1be3812bbfbae4fb4868fe7" title="Send the I2C slave address along with the read/write bit. " alt="" coords="381,360,547,387"/>
+<area shape="rect" id="node10" href="$i2c_8c.html#a5672b3f97bcc480cfef2c4598112b215" title="Send a byte. " alt="" coords="595,309,701,336"/>
+<area shape="rect" id="node15" href="$i2c_8c.html#a518ba2e761a5fdfe08ded5ba19f89d26" title="Read a byte. " alt="" coords="597,259,699,285"/>
+<area shape="rect" id="node11" href="$i2c_8c.html#a437ed48e34ac6e068bfc8ff0e0cda3ed" title="Send a bit by setting the SDA pin high or low. " alt="" coords="749,259,844,285"/>
+<area shape="rect" id="node12" href="$i2c_8c.html#aa0594ce53846cd61d3b066e12a082d49" title="Read a bit by reading the signal on SDA. " alt="" coords="751,309,843,336"/>
+<area shape="rect" id="node13" href="$syscfg_8c.html#ad9852f17f940b3d76a65df9d28a18960" title="This function unlocks the write&#45;protection of the SYSCFG module. " alt="" coords="892,284,1055,311"/>
+<area shape="rect" id="node14" href="$syscfg_8c.html#a94096dbe2e0e6102149173a8d10e1591" title="This function imposes write&#45;protection on the SYSCFG module. " alt="" coords="898,335,1049,361"/>
+</map>

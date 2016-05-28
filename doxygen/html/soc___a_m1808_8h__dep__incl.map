@@ -1,0 +1,8 @@
+<map id="leJOS_EV3/src/ev3/include/hw/soc_AM1808.h" name="leJOS_EV3/src/ev3/include/hw/soc_AM1808.h">
+<area shape="rect" id="node2" href="$interrupt_8c.html" title="Contains the APIs for configuring AINTC. " alt="" coords="5,95,185,136"/>
+<area shape="rect" id="node3" href="$syscfg_8c.html" title="This file contains APIs to lock and unlock the System Configuration (SYSCFG) module registers by appr..." alt="" coords="209,95,389,136"/>
+<area shape="rect" id="node4" href="$i2c_8c.html" title="Function definitions related to I2C communication. " alt="" coords="413,102,583,129"/>
+<area shape="rect" id="node5" href="$init_8c.html" title="This code is required in order to initialize the leJOS driver including all modules properly..." alt="" coords="607,102,776,129"/>
+<area shape="rect" id="node6" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="801,95,969,136"/>
+<area shape="rect" id="node7" href="$systick_8c.html" title="This header contains function definitions required to manage the tick in milliseconds on the EV3..." alt="" coords="993,102,1187,129"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/include/hw/hw_ecap.h" name="leJOS_EV3/src/ev3/include/hw/hw_ecap.h">
+<area shape="rect" id="node2" href="$ecap_8c.html" title="ECAP APIs. " alt="" coords="5,184,185,225"/>
+<area shape="rect" id="node3" href="$ecap_8h.html" title="This file contains the function prototypes for the device abstraction layer for ECAP. It also contains some related macro definitions and some files to be included. " alt="" coords="69,95,252,136"/>
+<area shape="rect" id="node4" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="277,95,445,136"/>
+</map>

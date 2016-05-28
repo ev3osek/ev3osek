@@ -1,0 +1,19 @@
+The majority of the code of lejos NXT is issued under a Mozilla
+Public License v1 - see the LICENSE file. This is the license
+that lejos has always been issued under, as it originally included 
+Kekoa Proudfoot's librcx code, which was issued under that license.
+
+The libnxt project created by David Anderson is issued under the GPL v2
+license - see the COPYING file in the libnxt directory.
+
+Two jar files in 3rdparty/lib (bcel-5.1.jar and commons-cli-1.0.jar)
+are issued under the Apache Software License v1.1. The jar files include
+the license.
+
+Another jar file, 3rdparty/lib/cpptasks.jar, is issued under the 
+Apache Software License v2. The jar file includes the license.
+
+See the ACKNOWLEDGMENTS file for acknowledgment of authors
+and organisations that have contributed to this project.
+
+

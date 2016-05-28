@@ -1,0 +1,555 @@
+\hypertarget{interrupt_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/interrupt.c File Reference}
+\label{interrupt_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/interrupt.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/interrupt.\+c}}
+
+
+Contains the A\+P\+Is for configuring A\+I\+N\+T\+C.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+aintc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}interrupt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}soc\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for interrupt.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interrupt_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interrupt_8c_a19fab01b1a8438bd8b91e411672210cc}{}\#define {\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+S\+H\+I\+F\+T}~(0x03)\label{interrupt_8c_a19fab01b1a8438bd8b91e411672210cc}
+
+\item 
+\hypertarget{interrupt_8c_aa7860e24443ca281a1894ec26284c0ba}{}\#define {\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+R\+\_\+\+B\+I\+T\+\_\+\+M\+A\+S\+K}~(0x07)\label{interrupt_8c_aa7860e24443ca281a1894ec26284c0ba}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interrupt_8c_a1ba160b3eddc19a9b5f3d1fa10ff6f46}{Int\+Register} (unsigned int intr\+Num, void($\ast$fn\+Handler)(void))
+\begin{DoxyCompactList}\small\item\em Registers an interrupt Handler in the interrupt vector table for system interrupts. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a1c5eb5508fc4414e995db1091b4bc70f}{Int\+Un\+Register} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Unregisters an interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a2315050a4707c58de742a7bdb6fce944}{Int\+Channel\+Set} (unsigned int intr\+Num, unsigned char channel)
+\begin{DoxyCompactList}\small\item\em Set the channel number for a system interrupt. Channel numbers 0-\/1 are mapped to F\+I\+Q and Channel numbers 2-\/31 are mapped to I\+R\+Q of A\+R\+M. One or more system interrupt can be mapped to one channel. However, one system interrupt can not be mapped to multiple channels. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{interrupt_8c_a444a31ec996cdfeec24168a6bc5bc4cb}{Int\+Channel\+Get} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Get the channel number for a system interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_af9ea132f26754d4ef754f8e0efd65ee9}{Int\+Global\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables interrupts in G\+E\+R register of A\+I\+N\+T\+C. F\+I\+Q and I\+R\+Q will be signaled for processing. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_abded5bc491aa3e276202d3255ae904e0}{Int\+Global\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables interrupts in G\+E\+R register of A\+I\+N\+T\+C. No interrupts will be signaled by the A\+I\+N\+T\+C to the A\+R\+M core. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_abe0fc487514af7fb2b839b713da2dff4}{Int\+System\+Enable} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Enables the sytem interrupt in A\+I\+N\+T\+C. The interrupt will be processed only if it is enabled in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a61c6399c8b062fe736107872d35bc335}{Int\+System\+Disable} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Disables the sytem interrupt in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a6583ca8d7b474ed993ce31b45ef1dfd2}{Int\+System\+Status\+Clear} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Clears a sytem interrupt status in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{interrupt_8c_ae7aeb55359c3a2736025674554518e15}{Int\+System\+Status\+Raw\+Get} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Get the raw status of a system interrupt. This will return 1 if the status is set and return 0 if the status is clear. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{interrupt_8c_a27b74a838775cc8a14c17755048f49f9}{Int\+System\+Status\+Enabled\+Get} (unsigned int intr\+Num)
+\begin{DoxyCompactList}\small\item\em Get the enabled status of a system interrupt. This will return 1 if the status is set, and return 0 if the status is clear. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a66ae177818daddb7c73ea03249a4a814}{Int\+I\+R\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a2d66d6dd7226083be390b94f4caa49fd}{Int\+I\+R\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a5cd0cfc1a32f73a1a5134d76fcacd733}{Int\+F\+I\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables F\+I\+Q in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a30cb5d865534284b230e238e42924fd6}{Int\+F\+I\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables F\+I\+Q host interrupts in A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a216cbc1f5aed0d7e5f7ba557e730b0e9}{Int\+A\+I\+N\+T\+C\+Init} (void)
+\begin{DoxyCompactList}\small\item\em This A\+P\+I is used to setup the A\+I\+N\+T\+C. This A\+P\+I shall be called before using the A\+I\+N\+T\+C. All the host interruptsi will be disabled after calling this A\+P\+I. The user shall enable all the interrupts required for processing. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_ab762b4e340eb694a59114d16a252919f}{Int\+Master\+I\+R\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables the processor I\+R\+Q only in C\+P\+S\+R. Makes the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_acb5ffeca4b44276baa4181d3311a97fc}{Int\+Master\+I\+R\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables the processor I\+R\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_a4d4febbbc95b51d284bc346b5aa788a2}{Int\+Master\+F\+I\+Q\+Enable} (void)
+\begin{DoxyCompactList}\small\item\em Enables the processor F\+I\+Q only in C\+P\+S\+R. Makes the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_aae274b2821fba73c2739571453cc045a}{Int\+Master\+F\+I\+Q\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Disables the processor F\+I\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{interrupt_8c_ad127dedd30b9a62678d2151127124915}{Int\+Master\+Status\+Get} (void)
+\begin{DoxyCompactList}\small\item\em Returns the status of the interrupts F\+I\+Q and I\+R\+Q. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{interrupt_8c_ab68c251cea09ef839cfe9c0a026187be}{Int\+Disable} (void)
+\begin{DoxyCompactList}\small\item\em Read and save the stasus and Disables the processor I\+R\+Q . Prevents the processor to respond to I\+R\+Qs. \end{DoxyCompactList}\item 
+void \hyperlink{interrupt_8c_aa73510d3aee06d2448dcb583e5d22968}{Int\+Enable} (unsigned char status)
+\begin{DoxyCompactList}\small\item\em Restore the processor I\+R\+Q only status. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the A\+P\+Is for configuring A\+I\+N\+T\+C. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{interrupt_8c_a216cbc1f5aed0d7e5f7ba557e730b0e9}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+A\+I\+N\+T\+C\+Init@{Int\+A\+I\+N\+T\+C\+Init}}
+\index{Int\+A\+I\+N\+T\+C\+Init@{Int\+A\+I\+N\+T\+C\+Init}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+A\+I\+N\+T\+C\+Init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+A\+I\+N\+T\+C\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a216cbc1f5aed0d7e5f7ba557e730b0e9}
+
+
+This A\+P\+I is used to setup the A\+I\+N\+T\+C. This A\+P\+I shall be called before using the A\+I\+N\+T\+C. All the host interruptsi will be disabled after calling this A\+P\+I. The user shall enable all the interrupts required for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a444a31ec996cdfeec24168a6bc5bc4cb}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Channel\+Get@{Int\+Channel\+Get}}
+\index{Int\+Channel\+Get@{Int\+Channel\+Get}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Channel\+Get(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Int\+Channel\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a444a31ec996cdfeec24168a6bc5bc4cb}
+
+
+Get the channel number for a system interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel Number. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a2315050a4707c58de742a7bdb6fce944}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Channel\+Set@{Int\+Channel\+Set}}
+\index{Int\+Channel\+Set@{Int\+Channel\+Set}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Channel\+Set(unsigned int intr\+Num, unsigned char channel)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Channel\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num, }
+\item[{unsigned char}]{channel}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a2315050a4707c58de742a7bdb6fce944}
+
+
+Set the channel number for a system interrupt. Channel numbers 0-\/1 are mapped to F\+I\+Q and Channel numbers 2-\/31 are mapped to I\+R\+Q of A\+R\+M. One or more system interrupt can be mapped to one channel. However, one system interrupt can not be mapped to multiple channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number \\
+\hline
+{\em channel} & -\/ Channel Number to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_ab68c251cea09ef839cfe9c0a026187be}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Disable@{Int\+Disable}}
+\index{Int\+Disable@{Int\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_ab68c251cea09ef839cfe9c0a026187be}
+
+
+Read and save the stasus and Disables the processor I\+R\+Q . Prevents the processor to respond to I\+R\+Qs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current status of I\+R\+Q
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{interrupt_8c_ab68c251cea09ef839cfe9c0a026187be_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{interrupt_8c_aa73510d3aee06d2448dcb583e5d22968}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Enable@{Int\+Enable}}
+\index{Int\+Enable@{Int\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Enable(unsigned char status)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{status}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_aa73510d3aee06d2448dcb583e5d22968}
+
+
+Restore the processor I\+R\+Q only status. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & status returned by the Int\+Disable fundtion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{interrupt_8c_aa73510d3aee06d2448dcb583e5d22968_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{interrupt_8c_a30cb5d865534284b230e238e42924fd6}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+F\+I\+Q\+Disable@{Int\+F\+I\+Q\+Disable}}
+\index{Int\+F\+I\+Q\+Disable@{Int\+F\+I\+Q\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+F\+I\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+F\+I\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a30cb5d865534284b230e238e42924fd6}
+
+
+Disables F\+I\+Q host interrupts in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a5cd0cfc1a32f73a1a5134d76fcacd733}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+F\+I\+Q\+Enable@{Int\+F\+I\+Q\+Enable}}
+\index{Int\+F\+I\+Q\+Enable@{Int\+F\+I\+Q\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+F\+I\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+F\+I\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a5cd0cfc1a32f73a1a5134d76fcacd733}
+
+
+Enables F\+I\+Q in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_abded5bc491aa3e276202d3255ae904e0}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Global\+Disable@{Int\+Global\+Disable}}
+\index{Int\+Global\+Disable@{Int\+Global\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Global\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Global\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_abded5bc491aa3e276202d3255ae904e0}
+
+
+Disables interrupts in G\+E\+R register of A\+I\+N\+T\+C. No interrupts will be signaled by the A\+I\+N\+T\+C to the A\+R\+M core. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_af9ea132f26754d4ef754f8e0efd65ee9}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Global\+Enable@{Int\+Global\+Enable}}
+\index{Int\+Global\+Enable@{Int\+Global\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Global\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Global\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_af9ea132f26754d4ef754f8e0efd65ee9}
+
+
+Enables interrupts in G\+E\+R register of A\+I\+N\+T\+C. F\+I\+Q and I\+R\+Q will be signaled for processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a2d66d6dd7226083be390b94f4caa49fd}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+I\+R\+Q\+Disable@{Int\+I\+R\+Q\+Disable}}
+\index{Int\+I\+R\+Q\+Disable@{Int\+I\+R\+Q\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+I\+R\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+I\+R\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a2d66d6dd7226083be390b94f4caa49fd}
+
+
+Disables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a66ae177818daddb7c73ea03249a4a814}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+I\+R\+Q\+Enable@{Int\+I\+R\+Q\+Enable}}
+\index{Int\+I\+R\+Q\+Enable@{Int\+I\+R\+Q\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+I\+R\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+I\+R\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a66ae177818daddb7c73ea03249a4a814}
+
+
+Enables I\+R\+Q in H\+I\+E\+R register of A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_aae274b2821fba73c2739571453cc045a}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Master\+F\+I\+Q\+Disable@{Int\+Master\+F\+I\+Q\+Disable}}
+\index{Int\+Master\+F\+I\+Q\+Disable@{Int\+Master\+F\+I\+Q\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Master\+F\+I\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+F\+I\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_aae274b2821fba73c2739571453cc045a}
+
+
+Disables the processor F\+I\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8c_a4d4febbbc95b51d284bc346b5aa788a2}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Master\+F\+I\+Q\+Enable@{Int\+Master\+F\+I\+Q\+Enable}}
+\index{Int\+Master\+F\+I\+Q\+Enable@{Int\+Master\+F\+I\+Q\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Master\+F\+I\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+F\+I\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a4d4febbbc95b51d284bc346b5aa788a2}
+
+
+Enables the processor F\+I\+Q only in C\+P\+S\+R. Makes the processor to respond to F\+I\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8c_acb5ffeca4b44276baa4181d3311a97fc}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Master\+I\+R\+Q\+Disable@{Int\+Master\+I\+R\+Q\+Disable}}
+\index{Int\+Master\+I\+R\+Q\+Disable@{Int\+Master\+I\+R\+Q\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Master\+I\+R\+Q\+Disable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+I\+R\+Q\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_acb5ffeca4b44276baa4181d3311a97fc}
+
+
+Disables the processor I\+R\+Q only in C\+P\+S\+R.\+Prevents the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8c_ab762b4e340eb694a59114d16a252919f}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Master\+I\+R\+Q\+Enable@{Int\+Master\+I\+R\+Q\+Enable}}
+\index{Int\+Master\+I\+R\+Q\+Enable@{Int\+Master\+I\+R\+Q\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Master\+I\+R\+Q\+Enable(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Master\+I\+R\+Q\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_ab762b4e340eb694a59114d16a252919f}
+
+
+Enables the processor I\+R\+Q only in C\+P\+S\+R. Makes the processor to respond to I\+R\+Qs. This does not affect the set of interrupts enabled/disabled in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8c_ad127dedd30b9a62678d2151127124915}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Master\+Status\+Get@{Int\+Master\+Status\+Get}}
+\index{Int\+Master\+Status\+Get@{Int\+Master\+Status\+Get}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Master\+Status\+Get(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Int\+Master\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_ad127dedd30b9a62678d2151127124915}
+
+
+Returns the status of the interrupts F\+I\+Q and I\+R\+Q. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of interrupt as in C\+P\+S\+R.
+\end{DoxyReturn}
+Note\+: This function call shall be done only in previleged mode of A\+R\+M \hypertarget{interrupt_8c_a1ba160b3eddc19a9b5f3d1fa10ff6f46}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Register@{Int\+Register}}
+\index{Int\+Register@{Int\+Register}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Register(unsigned int intr\+Num, void($\ast$fn\+Handler)(void))}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Register (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num, }
+\item[{void($\ast$)(void)}]{fn\+Handler}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a1ba160b3eddc19a9b5f3d1fa10ff6f46}
+
+
+Registers an interrupt Handler in the interrupt vector table for system interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number \\
+\hline
+{\em fn\+Handler} & -\/ Function pointer to the I\+S\+R\\
+\hline
+\end{DoxyParams}
+Note\+: When the interrupt occurs for the sytem interrupt number indicated, the control goes to the I\+S\+R given as the parameter.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a61c6399c8b062fe736107872d35bc335}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+System\+Disable@{Int\+System\+Disable}}
+\index{Int\+System\+Disable@{Int\+System\+Disable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+System\+Disable(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+System\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a61c6399c8b062fe736107872d35bc335}
+
+
+Disables the sytem interrupt in the A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_abe0fc487514af7fb2b839b713da2dff4}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+System\+Enable@{Int\+System\+Enable}}
+\index{Int\+System\+Enable@{Int\+System\+Enable}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+System\+Enable(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+System\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_abe0fc487514af7fb2b839b713da2dff4}
+
+
+Enables the sytem interrupt in A\+I\+N\+T\+C. The interrupt will be processed only if it is enabled in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a6583ca8d7b474ed993ce31b45ef1dfd2}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+System\+Status\+Clear@{Int\+System\+Status\+Clear}}
+\index{Int\+System\+Status\+Clear@{Int\+System\+Status\+Clear}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+System\+Status\+Clear(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+System\+Status\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a6583ca8d7b474ed993ce31b45ef1dfd2}
+
+
+Clears a sytem interrupt status in A\+I\+N\+T\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a27b74a838775cc8a14c17755048f49f9}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+System\+Status\+Enabled\+Get@{Int\+System\+Status\+Enabled\+Get}}
+\index{Int\+System\+Status\+Enabled\+Get@{Int\+System\+Status\+Enabled\+Get}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+System\+Status\+Enabled\+Get(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Int\+System\+Status\+Enabled\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a27b74a838775cc8a14c17755048f49f9}
+
+
+Get the enabled status of a system interrupt. This will return 1 if the status is set, and return 0 if the status is clear. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enabled Interrupt Status. 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_ae7aeb55359c3a2736025674554518e15}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+System\+Status\+Raw\+Get@{Int\+System\+Status\+Raw\+Get}}
+\index{Int\+System\+Status\+Raw\+Get@{Int\+System\+Status\+Raw\+Get}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+System\+Status\+Raw\+Get(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Int\+System\+Status\+Raw\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_ae7aeb55359c3a2736025674554518e15}
+
+
+Get the raw status of a system interrupt. This will return 1 if the status is set and return 0 if the status is clear. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Raw Interrupt Status 
+\end{DoxyReturn}
+\hypertarget{interrupt_8c_a1c5eb5508fc4414e995db1091b4bc70f}{}\index{interrupt.\+c@{interrupt.\+c}!Int\+Un\+Register@{Int\+Un\+Register}}
+\index{Int\+Un\+Register@{Int\+Un\+Register}!interrupt.\+c@{interrupt.\+c}}
+\subsubsection[{Int\+Un\+Register(unsigned int intr\+Num)}]{\setlength{\rightskip}{0pt plus 5cm}void Int\+Un\+Register (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{intr\+Num}
+\end{DoxyParamCaption}
+)}\label{interrupt_8c_a1c5eb5508fc4414e995db1091b4bc70f}
+
+
+Unregisters an interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr\+Num} & -\/ Interrupt Number\\
+\hline
+\end{DoxyParams}
+Note\+: Once an interrupt is unregistered it will enter infinite loop once an interrupt occurs
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

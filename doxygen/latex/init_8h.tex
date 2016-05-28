@@ -1,0 +1,77 @@
+\hypertarget{init_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/init.h File Reference}
+\label{init_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/init.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/init.\+h}}
+
+
+This header provides the interface to initialize the le\+J\+O\+S E\+V3 drivers.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsensor__port__info}{sensor\+\_\+port\+\_\+info}
+\begin{DoxyCompactList}\small\item\em This struct combines information about a sensor port of the E\+V3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structsensor__port__info}{sensor\+\_\+port\+\_\+info} \hyperlink{init_8h_a40bf0e16650830d4fd523855eb384513}{sensor\+\_\+port\+\_\+info}
+\begin{DoxyCompactList}\small\item\em This struct combines information about a sensor port of the E\+V3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{init_8h_aebbe6b9342d909d61305c7302e0eb41f}{le\+J\+O\+S\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the le\+J\+O\+S driver and all required submodules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header provides the interface to initialize the le\+J\+O\+S E\+V3 drivers. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl, ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{init_8h_a40bf0e16650830d4fd523855eb384513}{}\index{init.\+h@{init.\+h}!sensor\+\_\+port\+\_\+info@{sensor\+\_\+port\+\_\+info}}
+\index{sensor\+\_\+port\+\_\+info@{sensor\+\_\+port\+\_\+info}!init.\+h@{init.\+h}}
+\subsubsection[{sensor\+\_\+port\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf sensor\+\_\+port\+\_\+info}  {\bf sensor\+\_\+port\+\_\+info}}\label{init_8h_a40bf0e16650830d4fd523855eb384513}
+
+
+This struct combines information about a sensor port of the E\+V3. 
+
+It is based on code taken from the ev3ninja project. Each sensor port is described by 4 G\+P\+I\+O pins which connect to the sensor, 1 buffer G\+P\+I\+O pin and 2 A\+D\+C channels. 
+
+\subsection{Function Documentation}
+\hypertarget{init_8h_aebbe6b9342d909d61305c7302e0eb41f}{}\index{init.\+h@{init.\+h}!le\+J\+O\+S\+\_\+init@{le\+J\+O\+S\+\_\+init}}
+\index{le\+J\+O\+S\+\_\+init@{le\+J\+O\+S\+\_\+init}!init.\+h@{init.\+h}}
+\subsubsection[{le\+J\+O\+S\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void le\+J\+O\+S\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{init_8h_aebbe6b9342d909d61305c7302e0eb41f}
+
+
+Initialize the le\+J\+O\+S driver and all required submodules. 
+
+Initialization contains\+: A\+I\+N\+T\+C, systick, sensor ports, motor ports, S\+P\+I controller, A\+D\+C, hardware buttons, L\+E\+Ds
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8h_aebbe6b9342d909d61305c7302e0eb41f_cgraph}
+\end{center}
+\end{figure}
+
+

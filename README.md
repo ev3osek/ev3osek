@@ -1,0 +1,3 @@
+# ev3OSEK - OSEK-RTOS for Lego Mindstorms EV3
+
+ev3OSEK is a platform for LEGO Mindstorms EV3. It is a partially portation of the [nxtOSEK](http://lejos-osek.sourceforge.net/) platform, that is used for the older LEGO Mindstorms NXT devices. Now with ev3OSEK you can develop programs for the newer generation called EV3 using the C programming language and OSEK as the underlying realtime operating sytem. The wiki is a good starting point for more information.

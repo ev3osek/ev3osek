@@ -1,0 +1,6 @@
+<map id="ecrobot_set_light_sensor_inactive" name="ecrobot_set_light_sensor_inactive">
+<area shape="rect" id="node2" href="$adc__sensors_8c.html#ad14f89dae0cdb50d45e8bb2a514ea4ec" title="Set an NXT light sensor at the specified port inactive by disabling its LED. " alt="" coords="220,13,389,39"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a69974a7766fccf6b3ce362fec9ed8dfc" title="Set the value of a GPIO pin which is configured as output. " alt="" coords="437,13,508,39"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="556,13,668,39"/>
+<area shape="rect" id="node5" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="716,13,811,39"/>
+</map>

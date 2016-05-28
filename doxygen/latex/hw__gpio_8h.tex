@@ -1,0 +1,2032 @@
+\hypertarget{hw__gpio_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+gpio.h File Reference}
+\label{hw__gpio_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+gpio.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+gpio.\+h}}
+
+
+G\+P\+I\+O register definitions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hw__gpio_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{hw__gpio_8h_aaef002043a3b7f7e326e8493f71b554b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+R\+E\+V\+I\+D}~(0x0)\label{hw__gpio_8h_aaef002043a3b7f7e326e8493f71b554b}
+
+\item 
+\hypertarget{hw__gpio_8h_ae089985b1d200993bf03c68e11996e4d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N}~(0x8)\label{hw__gpio_8h_ae089985b1d200993bf03c68e11996e4d}
+
+\item 
+\hypertarget{hw__gpio_8h_a6fbad8ac1d7f5efac0726e69415ff87a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R}(n)~(0x10 + (0x28 $\ast$ n))\label{hw__gpio_8h_a6fbad8ac1d7f5efac0726e69415ff87a}
+
+\item 
+\hypertarget{hw__gpio_8h_a34cdfedb0fa6874103eaa659af0177bf}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A}(n)~(0x14 + (0x28 $\ast$ n))\label{hw__gpio_8h_a34cdfedb0fa6874103eaa659af0177bf}
+
+\item 
+\hypertarget{hw__gpio_8h_ad51eb01285006b69ea15d45ddf0717d6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A}(n)~(0x18 + (0x28 $\ast$ n))\label{hw__gpio_8h_ad51eb01285006b69ea15d45ddf0717d6}
+
+\item 
+\hypertarget{hw__gpio_8h_ae6904fd2ba74673806a9a2f414710a27}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A}(n)~(0x1\+C + (0x28 $\ast$ n))\label{hw__gpio_8h_ae6904fd2ba74673806a9a2f414710a27}
+
+\item 
+\hypertarget{hw__gpio_8h_a9d4d2d8139fe069d2f76a87163721062}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A}(n)~(0x20 + (0x28 $\ast$ n))\label{hw__gpio_8h_a9d4d2d8139fe069d2f76a87163721062}
+
+\item 
+\hypertarget{hw__gpio_8h_a7191800c1466249b93098ea15d6aeb73}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G}(n)~(0x24 + (0x28 $\ast$ n))\label{hw__gpio_8h_a7191800c1466249b93098ea15d6aeb73}
+
+\item 
+\hypertarget{hw__gpio_8h_a594edb5caa2748c81cbe75bf587e3b96}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G}(n)~(0x28 + (0x28 $\ast$ n))\label{hw__gpio_8h_a594edb5caa2748c81cbe75bf587e3b96}
+
+\item 
+\hypertarget{hw__gpio_8h_a1ab1c0009dd90092a1fa18f413e4f129}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G}(n)~(0x2\+C + (0x28 $\ast$ n))\label{hw__gpio_8h_a1ab1c0009dd90092a1fa18f413e4f129}
+
+\item 
+\hypertarget{hw__gpio_8h_ae34fd64e9d249f79d74ffd0b872805cc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G}(n)~(0x30 + (0x28 $\ast$ n))\label{hw__gpio_8h_ae34fd64e9d249f79d74ffd0b872805cc}
+
+\item 
+\hypertarget{hw__gpio_8h_a0f34afeaf1512a5aa587cd533b719ec1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T}(n)~(0x34 + (0x28 $\ast$ n))\label{hw__gpio_8h_a0f34afeaf1512a5aa587cd533b719ec1}
+
+\item 
+\hypertarget{hw__gpio_8h_a62ccfc4e135a0bb9bdbfb5dab6b70141}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+R\+E\+V\+I\+D\+\_\+\+R\+E\+V}~(0x\+F\+F\+F\+F\+F\+F\+F\+Fu)\label{hw__gpio_8h_a62ccfc4e135a0bb9bdbfb5dab6b70141}
+
+\item 
+\hypertarget{hw__gpio_8h_a99c93425217c944d13f8fb629c0d2534}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+R\+E\+V\+I\+D\+\_\+\+R\+E\+V\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a99c93425217c944d13f8fb629c0d2534}
+
+\item 
+\hypertarget{hw__gpio_8h_a89751578a39e0823cc3f17bba18cdaa6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N7}~(0x00000080u)\label{hw__gpio_8h_a89751578a39e0823cc3f17bba18cdaa6}
+
+\item 
+\hypertarget{hw__gpio_8h_a995fdece6d6acb0ff364aaa063f329ac}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_a995fdece6d6acb0ff364aaa063f329ac}
+
+\item 
+\hypertarget{hw__gpio_8h_a7cc797fd2ecd30b1bc3461ec5042ddeb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N6}~(0x00000040u)\label{hw__gpio_8h_a7cc797fd2ecd30b1bc3461ec5042ddeb}
+
+\item 
+\hypertarget{hw__gpio_8h_af42278b2fe69bcd78c8333e869a03fb2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_af42278b2fe69bcd78c8333e869a03fb2}
+
+\item 
+\hypertarget{hw__gpio_8h_aa5be14b9469ae31ab525db736aef4cb1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N5}~(0x00000020u)\label{hw__gpio_8h_aa5be14b9469ae31ab525db736aef4cb1}
+
+\item 
+\hypertarget{hw__gpio_8h_a8fdc39ddcee5ef99a81c340b8203b03c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a8fdc39ddcee5ef99a81c340b8203b03c}
+
+\item 
+\hypertarget{hw__gpio_8h_a8f68443ca34ae4c37b4de6197fd56ba8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N4}~(0x00000010u)\label{hw__gpio_8h_a8f68443ca34ae4c37b4de6197fd56ba8}
+
+\item 
+\hypertarget{hw__gpio_8h_ab14f346f118323ce19573067a14194b1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_ab14f346f118323ce19573067a14194b1}
+
+\item 
+\hypertarget{hw__gpio_8h_ac7ef86a49c0e64da2f3557f063b34836}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N3}~(0x00000008u)\label{hw__gpio_8h_ac7ef86a49c0e64da2f3557f063b34836}
+
+\item 
+\hypertarget{hw__gpio_8h_a32e9581799d9133f79a9388800badf55}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a32e9581799d9133f79a9388800badf55}
+
+\item 
+\hypertarget{hw__gpio_8h_ae7ce649c134054821d5f463fc21c72bc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N2}~(0x00000004u)\label{hw__gpio_8h_ae7ce649c134054821d5f463fc21c72bc}
+
+\item 
+\hypertarget{hw__gpio_8h_ac9bb4b55fdd84b32fca3422549dec86f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_ac9bb4b55fdd84b32fca3422549dec86f}
+
+\item 
+\hypertarget{hw__gpio_8h_a057986a7ce8c581fd28638d88511bcd6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N1}~(0x00000002u)\label{hw__gpio_8h_a057986a7ce8c581fd28638d88511bcd6}
+
+\item 
+\hypertarget{hw__gpio_8h_a6c728900b0054a1e3eaa56dbce28bf17}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_a6c728900b0054a1e3eaa56dbce28bf17}
+
+\item 
+\hypertarget{hw__gpio_8h_afc6cf4d7d06d791a12992a23480b87bc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N0}~(0x00000001u)\label{hw__gpio_8h_afc6cf4d7d06d791a12992a23480b87bc}
+
+\item 
+\hypertarget{hw__gpio_8h_a32bf76224c2534ed7fd1ca60ecc07713}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+B\+I\+N\+T\+E\+N\+\_\+\+E\+N0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a32bf76224c2534ed7fd1ca60ecc07713}
+
+\item 
+\hypertarget{hw__gpio_8h_a1e7e85f1a51b60d20e06c66864e5a0d7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R31}~(0x80000000u)\label{hw__gpio_8h_a1e7e85f1a51b60d20e06c66864e5a0d7}
+
+\item 
+\hypertarget{hw__gpio_8h_a17139b3885decfd0ed76cc2e6e577238}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a17139b3885decfd0ed76cc2e6e577238}
+
+\item 
+\hypertarget{hw__gpio_8h_afc0f52e6c487f59d90b0d3e52f8d096b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R30}~(0x40000000u)\label{hw__gpio_8h_afc0f52e6c487f59d90b0d3e52f8d096b}
+
+\item 
+\hypertarget{hw__gpio_8h_a4a31091310b8e44a1ecfe150a1fbeae8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a4a31091310b8e44a1ecfe150a1fbeae8}
+
+\item 
+\hypertarget{hw__gpio_8h_a5e1cbba64f1a08905fbfd1371d0b4aae}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R29}~(0x20000000u)\label{hw__gpio_8h_a5e1cbba64f1a08905fbfd1371d0b4aae}
+
+\item 
+\hypertarget{hw__gpio_8h_a414777933e21f0ffb80a1091d2e5212c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a414777933e21f0ffb80a1091d2e5212c}
+
+\item 
+\hypertarget{hw__gpio_8h_afad030c5aa6920bacef9cfbf0be700c0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R28}~(0x10000000u)\label{hw__gpio_8h_afad030c5aa6920bacef9cfbf0be700c0}
+
+\item 
+\hypertarget{hw__gpio_8h_ac75695f2f7160fdb985f88f1add7d22f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_ac75695f2f7160fdb985f88f1add7d22f}
+
+\item 
+\hypertarget{hw__gpio_8h_ad780d8354f52e63a41d91ee5698a2db4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R27}~(0x08000000u)\label{hw__gpio_8h_ad780d8354f52e63a41d91ee5698a2db4}
+
+\item 
+\hypertarget{hw__gpio_8h_af023423dc4d12d710f1f1ff9dd588252}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_af023423dc4d12d710f1f1ff9dd588252}
+
+\item 
+\hypertarget{hw__gpio_8h_a727c6dc19b53d30976b5167b2be8c745}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R26}~(0x04000000u)\label{hw__gpio_8h_a727c6dc19b53d30976b5167b2be8c745}
+
+\item 
+\hypertarget{hw__gpio_8h_a6faef64284904d52338100601d9609e1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_a6faef64284904d52338100601d9609e1}
+
+\item 
+\hypertarget{hw__gpio_8h_a3b6233386ba652a7397e12c3ed36e49d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R25}~(0x02000000u)\label{hw__gpio_8h_a3b6233386ba652a7397e12c3ed36e49d}
+
+\item 
+\hypertarget{hw__gpio_8h_ac51e353cea6881d8a3155183b5797343}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_ac51e353cea6881d8a3155183b5797343}
+
+\item 
+\hypertarget{hw__gpio_8h_aac133dd8db3757ec7cdc89617fb0f6a8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R24}~(0x01000000u)\label{hw__gpio_8h_aac133dd8db3757ec7cdc89617fb0f6a8}
+
+\item 
+\hypertarget{hw__gpio_8h_a19fc4664ce1f3a4e7bd02f5464c2afe4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_a19fc4664ce1f3a4e7bd02f5464c2afe4}
+
+\item 
+\hypertarget{hw__gpio_8h_a8d006ec9365f937388dd7b4d75f430ed}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R23}~(0x00800000u)\label{hw__gpio_8h_a8d006ec9365f937388dd7b4d75f430ed}
+
+\item 
+\hypertarget{hw__gpio_8h_a498a4044e4a9d33d7fc2c4bcb78a622a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_a498a4044e4a9d33d7fc2c4bcb78a622a}
+
+\item 
+\hypertarget{hw__gpio_8h_afdf00737b74789e0067caff75d60acd1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R22}~(0x00400000u)\label{hw__gpio_8h_afdf00737b74789e0067caff75d60acd1}
+
+\item 
+\hypertarget{hw__gpio_8h_a074f3b2e69c8e9c428f7fe6f1b93ebce}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a074f3b2e69c8e9c428f7fe6f1b93ebce}
+
+\item 
+\hypertarget{hw__gpio_8h_ad22483afcfcd43e941997f337b685569}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R21}~(0x00200000u)\label{hw__gpio_8h_ad22483afcfcd43e941997f337b685569}
+
+\item 
+\hypertarget{hw__gpio_8h_a5149d5d3b7d1215db6e1e07ff7d90708}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_a5149d5d3b7d1215db6e1e07ff7d90708}
+
+\item 
+\hypertarget{hw__gpio_8h_adafe25a1c883be7a7cec5aaf0ed814fa}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R20}~(0x00100000u)\label{hw__gpio_8h_adafe25a1c883be7a7cec5aaf0ed814fa}
+
+\item 
+\hypertarget{hw__gpio_8h_a4ee51d1a28b8d566f3d3b0ce7496c911}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_a4ee51d1a28b8d566f3d3b0ce7496c911}
+
+\item 
+\hypertarget{hw__gpio_8h_a5b5bcc13606efc95aa8816dda6eeebdf}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R19}~(0x00080000u)\label{hw__gpio_8h_a5b5bcc13606efc95aa8816dda6eeebdf}
+
+\item 
+\hypertarget{hw__gpio_8h_aa08d0aa02ccfc5d7c0e12094e4ddb85d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_aa08d0aa02ccfc5d7c0e12094e4ddb85d}
+
+\item 
+\hypertarget{hw__gpio_8h_a39a7393c319aad9e54dd5c1cf059f8e4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R18}~(0x00040000u)\label{hw__gpio_8h_a39a7393c319aad9e54dd5c1cf059f8e4}
+
+\item 
+\hypertarget{hw__gpio_8h_a92a7fce846fdf93f3d869803167175fc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_a92a7fce846fdf93f3d869803167175fc}
+
+\item 
+\hypertarget{hw__gpio_8h_a0a49a2e7d5b83bcf355398c43347423d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R17}~(0x00020000u)\label{hw__gpio_8h_a0a49a2e7d5b83bcf355398c43347423d}
+
+\item 
+\hypertarget{hw__gpio_8h_a22f96aa00e157991f81816d3eb459901}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a22f96aa00e157991f81816d3eb459901}
+
+\item 
+\hypertarget{hw__gpio_8h_a5935b06421c75e387b0b792b3eea119d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R16}~(0x00010000u)\label{hw__gpio_8h_a5935b06421c75e387b0b792b3eea119d}
+
+\item 
+\hypertarget{hw__gpio_8h_a1f883a24ea6c436aeec3a3d0f8542913}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a1f883a24ea6c436aeec3a3d0f8542913}
+
+\item 
+\hypertarget{hw__gpio_8h_a058e7b5768783b9577b7e0be3cc63b18}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R15}~(0x00008000u)\label{hw__gpio_8h_a058e7b5768783b9577b7e0be3cc63b18}
+
+\item 
+\hypertarget{hw__gpio_8h_a904b0a4f5a488f0aff74f6b93543832a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_a904b0a4f5a488f0aff74f6b93543832a}
+
+\item 
+\hypertarget{hw__gpio_8h_affc5c17c8667625a28b410b969773821}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R14}~(0x00004000u)\label{hw__gpio_8h_affc5c17c8667625a28b410b969773821}
+
+\item 
+\hypertarget{hw__gpio_8h_a58a59c539a3d8cba85417f7d2859b55b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a58a59c539a3d8cba85417f7d2859b55b}
+
+\item 
+\hypertarget{hw__gpio_8h_ac8c4fbe5d7cf35c8d5bd36cc06a65fb6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R13}~(0x00002000u)\label{hw__gpio_8h_ac8c4fbe5d7cf35c8d5bd36cc06a65fb6}
+
+\item 
+\hypertarget{hw__gpio_8h_a6a6b50556564100ffd421cf654e97b0b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_a6a6b50556564100ffd421cf654e97b0b}
+
+\item 
+\hypertarget{hw__gpio_8h_a3c7bafb10f5bcd365d09f401508f1c52}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R12}~(0x00001000u)\label{hw__gpio_8h_a3c7bafb10f5bcd365d09f401508f1c52}
+
+\item 
+\hypertarget{hw__gpio_8h_a2c1b7f884bd26c49a4025d328bb1f334}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a2c1b7f884bd26c49a4025d328bb1f334}
+
+\item 
+\hypertarget{hw__gpio_8h_a907277e24b8b938367f4c0b9bb7c917c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R11}~(0x00000800u)\label{hw__gpio_8h_a907277e24b8b938367f4c0b9bb7c917c}
+
+\item 
+\hypertarget{hw__gpio_8h_aab2d04321a67ca4b6bf1b85b6b959b4f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_aab2d04321a67ca4b6bf1b85b6b959b4f}
+
+\item 
+\hypertarget{hw__gpio_8h_a2cb9ba577eee894a1f45210a7a31ff0c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R10}~(0x00000400u)\label{hw__gpio_8h_a2cb9ba577eee894a1f45210a7a31ff0c}
+
+\item 
+\hypertarget{hw__gpio_8h_ab9b85775f01fe4809a3e16a09c6ac6fa}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_ab9b85775f01fe4809a3e16a09c6ac6fa}
+
+\item 
+\hypertarget{hw__gpio_8h_ab260416ae35b3a288a66a69fb3bd1c20}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R9}~(0x00000200u)\label{hw__gpio_8h_ab260416ae35b3a288a66a69fb3bd1c20}
+
+\item 
+\hypertarget{hw__gpio_8h_ad63cc71c8165c0142f0c5fd7e8a41973}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_ad63cc71c8165c0142f0c5fd7e8a41973}
+
+\item 
+\hypertarget{hw__gpio_8h_a393e5403fc1148fade3b4a8612b075cc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R8}~(0x00000100u)\label{hw__gpio_8h_a393e5403fc1148fade3b4a8612b075cc}
+
+\item 
+\hypertarget{hw__gpio_8h_a78bc26748d0dd48acc9a6182bf90c303}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_a78bc26748d0dd48acc9a6182bf90c303}
+
+\item 
+\hypertarget{hw__gpio_8h_a1fd840ca180214457578742f3b3c9d70}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R7}~(0x00000080u)\label{hw__gpio_8h_a1fd840ca180214457578742f3b3c9d70}
+
+\item 
+\hypertarget{hw__gpio_8h_ae17b414d4ee5fc65c7de4fa975a930de}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_ae17b414d4ee5fc65c7de4fa975a930de}
+
+\item 
+\hypertarget{hw__gpio_8h_a8741ea636958996aee584d1da0c1f6f0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R6}~(0x00000040u)\label{hw__gpio_8h_a8741ea636958996aee584d1da0c1f6f0}
+
+\item 
+\hypertarget{hw__gpio_8h_a442765a32b1e632bd9587aa271dce94e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a442765a32b1e632bd9587aa271dce94e}
+
+\item 
+\hypertarget{hw__gpio_8h_a396b4ffead2295153b17907b8cf0951a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R5}~(0x00000020u)\label{hw__gpio_8h_a396b4ffead2295153b17907b8cf0951a}
+
+\item 
+\hypertarget{hw__gpio_8h_aae6129cc888114a56306bbd36d801b80}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_aae6129cc888114a56306bbd36d801b80}
+
+\item 
+\hypertarget{hw__gpio_8h_af9fd3db04e1cf8a92b10bfeb09da102e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R4}~(0x00000010u)\label{hw__gpio_8h_af9fd3db04e1cf8a92b10bfeb09da102e}
+
+\item 
+\hypertarget{hw__gpio_8h_a288b1aec4566e35a3ab287e5dfb892c2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a288b1aec4566e35a3ab287e5dfb892c2}
+
+\item 
+\hypertarget{hw__gpio_8h_a21e55aa73cbfe4715131093f90d009a6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R3}~(0x00000008u)\label{hw__gpio_8h_a21e55aa73cbfe4715131093f90d009a6}
+
+\item 
+\hypertarget{hw__gpio_8h_a65b45bd045b80bb5f80c4506f3382a35}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a65b45bd045b80bb5f80c4506f3382a35}
+
+\item 
+\hypertarget{hw__gpio_8h_aac00041297985bb5798683d5ebf31b24}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R2}~(0x00000004u)\label{hw__gpio_8h_aac00041297985bb5798683d5ebf31b24}
+
+\item 
+\hypertarget{hw__gpio_8h_a17918aba050b4d86dd6ae8a465953a4a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_a17918aba050b4d86dd6ae8a465953a4a}
+
+\item 
+\hypertarget{hw__gpio_8h_aa0793089dbe9e88e000b9fe53db09446}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R1}~(0x00000002u)\label{hw__gpio_8h_aa0793089dbe9e88e000b9fe53db09446}
+
+\item 
+\hypertarget{hw__gpio_8h_a5207419301644b89574a2468b94fc97d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_a5207419301644b89574a2468b94fc97d}
+
+\item 
+\hypertarget{hw__gpio_8h_a1a5ed48746656305316f8b74332fe12c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R0}~(0x00000001u)\label{hw__gpio_8h_a1a5ed48746656305316f8b74332fe12c}
+
+\item 
+\hypertarget{hw__gpio_8h_a2684b22765f5e76498c9e768d2786621}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+D\+I\+R\+\_\+\+D\+I\+R0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a2684b22765f5e76498c9e768d2786621}
+
+\item 
+\hypertarget{hw__gpio_8h_ae574a5aafd5b7ff34ca80783acfe7976}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T31}~(0x80000000u)\label{hw__gpio_8h_ae574a5aafd5b7ff34ca80783acfe7976}
+
+\item 
+\hypertarget{hw__gpio_8h_af153cb166d975c5c025c5e042f2f9eb7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_af153cb166d975c5c025c5e042f2f9eb7}
+
+\item 
+\hypertarget{hw__gpio_8h_a0d8c623d351998f6a745381ac7f0bf2f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T30}~(0x40000000u)\label{hw__gpio_8h_a0d8c623d351998f6a745381ac7f0bf2f}
+
+\item 
+\hypertarget{hw__gpio_8h_a71fc95d835b3c1ef3326dedda6a90381}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a71fc95d835b3c1ef3326dedda6a90381}
+
+\item 
+\hypertarget{hw__gpio_8h_ab45829547a9b13ef81dc7930a68b1581}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T29}~(0x20000000u)\label{hw__gpio_8h_ab45829547a9b13ef81dc7930a68b1581}
+
+\item 
+\hypertarget{hw__gpio_8h_aee20d809d9f131616a52edb0d79a195e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_aee20d809d9f131616a52edb0d79a195e}
+
+\item 
+\hypertarget{hw__gpio_8h_a3f0210de79e3ca976c9acf66f966d489}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T28}~(0x10000000u)\label{hw__gpio_8h_a3f0210de79e3ca976c9acf66f966d489}
+
+\item 
+\hypertarget{hw__gpio_8h_a5754afa5c68ac5a09fa53a88272175ad}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a5754afa5c68ac5a09fa53a88272175ad}
+
+\item 
+\hypertarget{hw__gpio_8h_a1d06deac82413e2699f3c9b0be93e227}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T27}~(0x08000000u)\label{hw__gpio_8h_a1d06deac82413e2699f3c9b0be93e227}
+
+\item 
+\hypertarget{hw__gpio_8h_a6f2135c6ba1f20ef8e1de5e34673bd01}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_a6f2135c6ba1f20ef8e1de5e34673bd01}
+
+\item 
+\hypertarget{hw__gpio_8h_abcb27f8a999aedd95ac70fe17a9915fe}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T26}~(0x04000000u)\label{hw__gpio_8h_abcb27f8a999aedd95ac70fe17a9915fe}
+
+\item 
+\hypertarget{hw__gpio_8h_a1f57394ee6328eb07402d57cb1e83724}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_a1f57394ee6328eb07402d57cb1e83724}
+
+\item 
+\hypertarget{hw__gpio_8h_a9d92ec618b2a860b0011cad664d6b91e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T25}~(0x02000000u)\label{hw__gpio_8h_a9d92ec618b2a860b0011cad664d6b91e}
+
+\item 
+\hypertarget{hw__gpio_8h_ad1f566693ccfa3fd4443ae2eea1b3dd2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_ad1f566693ccfa3fd4443ae2eea1b3dd2}
+
+\item 
+\hypertarget{hw__gpio_8h_a48eae585fc0585b7218a10b81cbd6d32}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T24}~(0x01000000u)\label{hw__gpio_8h_a48eae585fc0585b7218a10b81cbd6d32}
+
+\item 
+\hypertarget{hw__gpio_8h_a3ea512872b5c4fc0b2e5d5b246974e43}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_a3ea512872b5c4fc0b2e5d5b246974e43}
+
+\item 
+\hypertarget{hw__gpio_8h_ae53f85a8a40e3a995e7e04671a7bc33c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T23}~(0x00800000u)\label{hw__gpio_8h_ae53f85a8a40e3a995e7e04671a7bc33c}
+
+\item 
+\hypertarget{hw__gpio_8h_a54771ba18b74cd80d05fc960510d2732}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_a54771ba18b74cd80d05fc960510d2732}
+
+\item 
+\hypertarget{hw__gpio_8h_a3010391de5bd6b7fdf50014ed6476820}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T22}~(0x00400000u)\label{hw__gpio_8h_a3010391de5bd6b7fdf50014ed6476820}
+
+\item 
+\hypertarget{hw__gpio_8h_a49f36fc90113884f252a6f5956723ab1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a49f36fc90113884f252a6f5956723ab1}
+
+\item 
+\hypertarget{hw__gpio_8h_af6b3ecbcd9c80a6cdbbf62cedc279d09}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T21}~(0x00200000u)\label{hw__gpio_8h_af6b3ecbcd9c80a6cdbbf62cedc279d09}
+
+\item 
+\hypertarget{hw__gpio_8h_aa0095377d6ab57c0c2185bdf00c90112}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_aa0095377d6ab57c0c2185bdf00c90112}
+
+\item 
+\hypertarget{hw__gpio_8h_a7dae36778baf54e5fd73824e76abedf4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T20}~(0x00100000u)\label{hw__gpio_8h_a7dae36778baf54e5fd73824e76abedf4}
+
+\item 
+\hypertarget{hw__gpio_8h_ab1052ccab2f9f1c6f702c116e6cfc173}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_ab1052ccab2f9f1c6f702c116e6cfc173}
+
+\item 
+\hypertarget{hw__gpio_8h_a7d351289dea958aed4d22e19c7e3191c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T19}~(0x00080000u)\label{hw__gpio_8h_a7d351289dea958aed4d22e19c7e3191c}
+
+\item 
+\hypertarget{hw__gpio_8h_a7158f3a07cd76ba99fca03c16d79e7e1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_a7158f3a07cd76ba99fca03c16d79e7e1}
+
+\item 
+\hypertarget{hw__gpio_8h_a87170dda799c48bc924568db22385aea}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T18}~(0x00040000u)\label{hw__gpio_8h_a87170dda799c48bc924568db22385aea}
+
+\item 
+\hypertarget{hw__gpio_8h_aef9b9d224023082a15097ed4e55c3f15}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_aef9b9d224023082a15097ed4e55c3f15}
+
+\item 
+\hypertarget{hw__gpio_8h_a5a7ad88ddfc27df5f7c15219af29de41}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T17}~(0x00020000u)\label{hw__gpio_8h_a5a7ad88ddfc27df5f7c15219af29de41}
+
+\item 
+\hypertarget{hw__gpio_8h_a66f446ff9bd501b3d97aa01de06ba01d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a66f446ff9bd501b3d97aa01de06ba01d}
+
+\item 
+\hypertarget{hw__gpio_8h_afaa2dd6e5dd28a8028c69944856db159}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T16}~(0x00010000u)\label{hw__gpio_8h_afaa2dd6e5dd28a8028c69944856db159}
+
+\item 
+\hypertarget{hw__gpio_8h_a2144164edd248db666263d7112cafbaf}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a2144164edd248db666263d7112cafbaf}
+
+\item 
+\hypertarget{hw__gpio_8h_ab464141d7da78ad855ecd03b9fe30fef}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T15}~(0x00008000u)\label{hw__gpio_8h_ab464141d7da78ad855ecd03b9fe30fef}
+
+\item 
+\hypertarget{hw__gpio_8h_a8fbea4ca4f4b4ada2b14421eec6b3ef1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_a8fbea4ca4f4b4ada2b14421eec6b3ef1}
+
+\item 
+\hypertarget{hw__gpio_8h_a41528033fc95fe60887063f61ce842bc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T14}~(0x00004000u)\label{hw__gpio_8h_a41528033fc95fe60887063f61ce842bc}
+
+\item 
+\hypertarget{hw__gpio_8h_a50e1826fd005418786ee60e42a16f511}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a50e1826fd005418786ee60e42a16f511}
+
+\item 
+\hypertarget{hw__gpio_8h_a060e26bd2c5c77aa8ca48aad38b8c2e3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T13}~(0x00002000u)\label{hw__gpio_8h_a060e26bd2c5c77aa8ca48aad38b8c2e3}
+
+\item 
+\hypertarget{hw__gpio_8h_ac80636db92c1095ad4e4d9e0e83d3989}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_ac80636db92c1095ad4e4d9e0e83d3989}
+
+\item 
+\hypertarget{hw__gpio_8h_a6c3aca5a44a6190fde50e89647f74fbc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T12}~(0x00001000u)\label{hw__gpio_8h_a6c3aca5a44a6190fde50e89647f74fbc}
+
+\item 
+\hypertarget{hw__gpio_8h_a5ea88f65676691cfe21802d62a96036d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a5ea88f65676691cfe21802d62a96036d}
+
+\item 
+\hypertarget{hw__gpio_8h_ad9d3d85f8a75131829d7e2de1e047a11}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T11}~(0x00000800u)\label{hw__gpio_8h_ad9d3d85f8a75131829d7e2de1e047a11}
+
+\item 
+\hypertarget{hw__gpio_8h_ac2875c93e34c14d43c4a22f13e3967a1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_ac2875c93e34c14d43c4a22f13e3967a1}
+
+\item 
+\hypertarget{hw__gpio_8h_a2f41743c555339ecb1973a6172a25ac6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T10}~(0x00000400u)\label{hw__gpio_8h_a2f41743c555339ecb1973a6172a25ac6}
+
+\item 
+\hypertarget{hw__gpio_8h_a6734a9e6fdf3ce035b93d4f16b465580}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a6734a9e6fdf3ce035b93d4f16b465580}
+
+\item 
+\hypertarget{hw__gpio_8h_a109de3ca19c0411e2ab78d0a0c2ef2fc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T9}~(0x00000200u)\label{hw__gpio_8h_a109de3ca19c0411e2ab78d0a0c2ef2fc}
+
+\item 
+\hypertarget{hw__gpio_8h_accd4daea1adec3de170787ef8599d2ca}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_accd4daea1adec3de170787ef8599d2ca}
+
+\item 
+\hypertarget{hw__gpio_8h_a080986ebe4a75801722271f9402d378c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T8}~(0x00000100u)\label{hw__gpio_8h_a080986ebe4a75801722271f9402d378c}
+
+\item 
+\hypertarget{hw__gpio_8h_a40a29d078bf3538eb1bc7301be2a0b42}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_a40a29d078bf3538eb1bc7301be2a0b42}
+
+\item 
+\hypertarget{hw__gpio_8h_ac02ebde63eb689253a267c6d15848b79}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T7}~(0x00000080u)\label{hw__gpio_8h_ac02ebde63eb689253a267c6d15848b79}
+
+\item 
+\hypertarget{hw__gpio_8h_ac09eb6c663cdd7eedf3ffbb348003c01}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_ac09eb6c663cdd7eedf3ffbb348003c01}
+
+\item 
+\hypertarget{hw__gpio_8h_a1b00bdeca9d5e50e6acd822bc55d1e5b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T6}~(0x00000040u)\label{hw__gpio_8h_a1b00bdeca9d5e50e6acd822bc55d1e5b}
+
+\item 
+\hypertarget{hw__gpio_8h_ab311fda83b112b917bdfa5bc5a93c19a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_ab311fda83b112b917bdfa5bc5a93c19a}
+
+\item 
+\hypertarget{hw__gpio_8h_a0faffdbd7ddd981a6f4994e421e8af26}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T5}~(0x00000020u)\label{hw__gpio_8h_a0faffdbd7ddd981a6f4994e421e8af26}
+
+\item 
+\hypertarget{hw__gpio_8h_a431d6bb603a1bd73eb934e0301d9b869}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a431d6bb603a1bd73eb934e0301d9b869}
+
+\item 
+\hypertarget{hw__gpio_8h_a44aaac5edce0db998cf21c860fa07cba}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T4}~(0x00000010u)\label{hw__gpio_8h_a44aaac5edce0db998cf21c860fa07cba}
+
+\item 
+\hypertarget{hw__gpio_8h_a69b0f602372fdca2df6d579c4a7c75ca}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a69b0f602372fdca2df6d579c4a7c75ca}
+
+\item 
+\hypertarget{hw__gpio_8h_a9e8c52e43c37b9eeb7db689ece08583b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T3}~(0x00000008u)\label{hw__gpio_8h_a9e8c52e43c37b9eeb7db689ece08583b}
+
+\item 
+\hypertarget{hw__gpio_8h_a72a84c78d5933feb6e6394366804580f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a72a84c78d5933feb6e6394366804580f}
+
+\item 
+\hypertarget{hw__gpio_8h_a435f5baf1f0f6cad50a89ad360e5be74}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T2}~(0x00000004u)\label{hw__gpio_8h_a435f5baf1f0f6cad50a89ad360e5be74}
+
+\item 
+\hypertarget{hw__gpio_8h_a87b1b62d91e4c46aa2068be71841bfd6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_a87b1b62d91e4c46aa2068be71841bfd6}
+
+\item 
+\hypertarget{hw__gpio_8h_aa2a26f752e95c237392192f0e6271c49}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T1}~(0x00000002u)\label{hw__gpio_8h_aa2a26f752e95c237392192f0e6271c49}
+
+\item 
+\hypertarget{hw__gpio_8h_a6d7358571253ea986f192d2450250acd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_a6d7358571253ea986f192d2450250acd}
+
+\item 
+\hypertarget{hw__gpio_8h_a7c2cd11a17244b740dcd4768f98453af}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T0}~(0x00000001u)\label{hw__gpio_8h_a7c2cd11a17244b740dcd4768f98453af}
+
+\item 
+\hypertarget{hw__gpio_8h_a1a13fa31fc20c5767c73b86f40dd74f1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+O\+U\+T\+\_\+\+D\+A\+T\+A\+\_\+\+O\+U\+T0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a1a13fa31fc20c5767c73b86f40dd74f1}
+
+\item 
+\hypertarget{hw__gpio_8h_a379715cfc0ce70283a9c22573d1bf8a4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T31}~(0x80000000u)\label{hw__gpio_8h_a379715cfc0ce70283a9c22573d1bf8a4}
+
+\item 
+\hypertarget{hw__gpio_8h_acc764bc68dc1c5f3c68a981a659e8807}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_acc764bc68dc1c5f3c68a981a659e8807}
+
+\item 
+\hypertarget{hw__gpio_8h_a3fdf682957fc3fc84e09ba014ab1068d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T30}~(0x40000000u)\label{hw__gpio_8h_a3fdf682957fc3fc84e09ba014ab1068d}
+
+\item 
+\hypertarget{hw__gpio_8h_ab00bf95f9023bc2c5f2a0bedfa6b77e5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_ab00bf95f9023bc2c5f2a0bedfa6b77e5}
+
+\item 
+\hypertarget{hw__gpio_8h_a90170f9af90ff15c910c03e6abae09ea}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T29}~(0x20000000u)\label{hw__gpio_8h_a90170f9af90ff15c910c03e6abae09ea}
+
+\item 
+\hypertarget{hw__gpio_8h_ae645c7b65cc8deefd70d836e6aa9ffb3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_ae645c7b65cc8deefd70d836e6aa9ffb3}
+
+\item 
+\hypertarget{hw__gpio_8h_a36765545658670c131738de044738006}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T28}~(0x10000000u)\label{hw__gpio_8h_a36765545658670c131738de044738006}
+
+\item 
+\hypertarget{hw__gpio_8h_aba6230dd9524b7f20756a6556d6cfcb0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_aba6230dd9524b7f20756a6556d6cfcb0}
+
+\item 
+\hypertarget{hw__gpio_8h_aed7a5b0c491142c2929a96fe460d0376}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T27}~(0x08000000u)\label{hw__gpio_8h_aed7a5b0c491142c2929a96fe460d0376}
+
+\item 
+\hypertarget{hw__gpio_8h_a0cbefff38fb7909937764c9dac7c32fd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_a0cbefff38fb7909937764c9dac7c32fd}
+
+\item 
+\hypertarget{hw__gpio_8h_a1a90832f7796906ddbfc0d9f4b55bd86}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T26}~(0x04000000u)\label{hw__gpio_8h_a1a90832f7796906ddbfc0d9f4b55bd86}
+
+\item 
+\hypertarget{hw__gpio_8h_a44f6350e36a8d5ebb1375d62b985f40e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_a44f6350e36a8d5ebb1375d62b985f40e}
+
+\item 
+\hypertarget{hw__gpio_8h_a29199ab2277799de94bfdf860c89010a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T25}~(0x02000000u)\label{hw__gpio_8h_a29199ab2277799de94bfdf860c89010a}
+
+\item 
+\hypertarget{hw__gpio_8h_a534965e00ab9e3b02e0e7b1053fcf83a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_a534965e00ab9e3b02e0e7b1053fcf83a}
+
+\item 
+\hypertarget{hw__gpio_8h_a2ff663e16a83ab4919c9dc0eb7473647}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T24}~(0x01000000u)\label{hw__gpio_8h_a2ff663e16a83ab4919c9dc0eb7473647}
+
+\item 
+\hypertarget{hw__gpio_8h_af9cee5ee816a629906705893a3a4dbb7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_af9cee5ee816a629906705893a3a4dbb7}
+
+\item 
+\hypertarget{hw__gpio_8h_a074f4a81eec1a510bf1578f6f4aa0aaf}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T23}~(0x00800000u)\label{hw__gpio_8h_a074f4a81eec1a510bf1578f6f4aa0aaf}
+
+\item 
+\hypertarget{hw__gpio_8h_af8815fa08916175a003eec8ba1e0e3a8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_af8815fa08916175a003eec8ba1e0e3a8}
+
+\item 
+\hypertarget{hw__gpio_8h_ab99515d06a00e2a77456d1bb7a9fd2e2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T22}~(0x00400000u)\label{hw__gpio_8h_ab99515d06a00e2a77456d1bb7a9fd2e2}
+
+\item 
+\hypertarget{hw__gpio_8h_a1ff933819ba022045e3289318d134fb5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a1ff933819ba022045e3289318d134fb5}
+
+\item 
+\hypertarget{hw__gpio_8h_ada4c39758c18b33bb04ebb6be2ca50c5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T21}~(0x00200000u)\label{hw__gpio_8h_ada4c39758c18b33bb04ebb6be2ca50c5}
+
+\item 
+\hypertarget{hw__gpio_8h_a0a9c3d9383b86397ae99c41b42c20f66}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_a0a9c3d9383b86397ae99c41b42c20f66}
+
+\item 
+\hypertarget{hw__gpio_8h_a05b8a866a9851731aef2410252245e70}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T20}~(0x00100000u)\label{hw__gpio_8h_a05b8a866a9851731aef2410252245e70}
+
+\item 
+\hypertarget{hw__gpio_8h_a2c2036b2d9f2c99eaf58a2c8f1da0fb7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_a2c2036b2d9f2c99eaf58a2c8f1da0fb7}
+
+\item 
+\hypertarget{hw__gpio_8h_a9e117a550333c6e08bfe16c4398c5d51}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T19}~(0x00080000u)\label{hw__gpio_8h_a9e117a550333c6e08bfe16c4398c5d51}
+
+\item 
+\hypertarget{hw__gpio_8h_ab98bfeb30ef85b58fa7f51be42d25ce3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_ab98bfeb30ef85b58fa7f51be42d25ce3}
+
+\item 
+\hypertarget{hw__gpio_8h_a97f273df7426a9a3ca6ac4e231aff827}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T18}~(0x00040000u)\label{hw__gpio_8h_a97f273df7426a9a3ca6ac4e231aff827}
+
+\item 
+\hypertarget{hw__gpio_8h_a6782d671b2026f291045c9d81bf941c8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_a6782d671b2026f291045c9d81bf941c8}
+
+\item 
+\hypertarget{hw__gpio_8h_a9d272a07091d85c2b7c17af8f5df8714}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T17}~(0x00020000u)\label{hw__gpio_8h_a9d272a07091d85c2b7c17af8f5df8714}
+
+\item 
+\hypertarget{hw__gpio_8h_a79423393fa70a50f2e17bb60906f2fc8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a79423393fa70a50f2e17bb60906f2fc8}
+
+\item 
+\hypertarget{hw__gpio_8h_afc8afbabb0027231a585ebc02e686a58}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T16}~(0x00010000u)\label{hw__gpio_8h_afc8afbabb0027231a585ebc02e686a58}
+
+\item 
+\hypertarget{hw__gpio_8h_a039eb100c0f9cf3f06f3d48a7c1c321d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a039eb100c0f9cf3f06f3d48a7c1c321d}
+
+\item 
+\hypertarget{hw__gpio_8h_a6ade88bfff9e7264d9c860613cd93ac9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T15}~(0x00008000u)\label{hw__gpio_8h_a6ade88bfff9e7264d9c860613cd93ac9}
+
+\item 
+\hypertarget{hw__gpio_8h_a5f5cf60267747bc307ec0effde69cad8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_a5f5cf60267747bc307ec0effde69cad8}
+
+\item 
+\hypertarget{hw__gpio_8h_a7f97e1191438d24e3d54a41f45568b9f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T14}~(0x00004000u)\label{hw__gpio_8h_a7f97e1191438d24e3d54a41f45568b9f}
+
+\item 
+\hypertarget{hw__gpio_8h_a1a165821e744ff8c3f73e4b16f3e8dbb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a1a165821e744ff8c3f73e4b16f3e8dbb}
+
+\item 
+\hypertarget{hw__gpio_8h_a5799412d8a59adfaa042dfb259bec673}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T13}~(0x00002000u)\label{hw__gpio_8h_a5799412d8a59adfaa042dfb259bec673}
+
+\item 
+\hypertarget{hw__gpio_8h_a926b65a66942533c186d3b43220d1c48}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_a926b65a66942533c186d3b43220d1c48}
+
+\item 
+\hypertarget{hw__gpio_8h_a1b351f845f705cd2099efc04e6c4d2e3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T12}~(0x00001000u)\label{hw__gpio_8h_a1b351f845f705cd2099efc04e6c4d2e3}
+
+\item 
+\hypertarget{hw__gpio_8h_a122845324ec9f39aabe83fe86deb6cd6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a122845324ec9f39aabe83fe86deb6cd6}
+
+\item 
+\hypertarget{hw__gpio_8h_afbea4eb250c9175246b28e8e29f334bc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T11}~(0x00000800u)\label{hw__gpio_8h_afbea4eb250c9175246b28e8e29f334bc}
+
+\item 
+\hypertarget{hw__gpio_8h_a280e269023beb2f39779becfc841247a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_a280e269023beb2f39779becfc841247a}
+
+\item 
+\hypertarget{hw__gpio_8h_a2ee0babd6330c2891ea83713457561a8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T10}~(0x00000400u)\label{hw__gpio_8h_a2ee0babd6330c2891ea83713457561a8}
+
+\item 
+\hypertarget{hw__gpio_8h_acbea3a9b2c2169abf560fa6ea9809dfc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_acbea3a9b2c2169abf560fa6ea9809dfc}
+
+\item 
+\hypertarget{hw__gpio_8h_a057dabb3f4e19e0238af70e389c19a50}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T9}~(0x00000200u)\label{hw__gpio_8h_a057dabb3f4e19e0238af70e389c19a50}
+
+\item 
+\hypertarget{hw__gpio_8h_aa391d9db4a89235f2ab5c780e48af795}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_aa391d9db4a89235f2ab5c780e48af795}
+
+\item 
+\hypertarget{hw__gpio_8h_a65cab65a2eb0fcca7030111774fc9e4e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T8}~(0x00000100u)\label{hw__gpio_8h_a65cab65a2eb0fcca7030111774fc9e4e}
+
+\item 
+\hypertarget{hw__gpio_8h_a909e5841bdb20ff60c995e21ae7d4d84}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_a909e5841bdb20ff60c995e21ae7d4d84}
+
+\item 
+\hypertarget{hw__gpio_8h_ae7701ace89f4361d85130032062cc441}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T7}~(0x00000080u)\label{hw__gpio_8h_ae7701ace89f4361d85130032062cc441}
+
+\item 
+\hypertarget{hw__gpio_8h_a014fda2ab46b7f39725964a2c4a49811}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_a014fda2ab46b7f39725964a2c4a49811}
+
+\item 
+\hypertarget{hw__gpio_8h_a097e4ef4704d725c75c7ceacef2b6c7c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T6}~(0x00000040u)\label{hw__gpio_8h_a097e4ef4704d725c75c7ceacef2b6c7c}
+
+\item 
+\hypertarget{hw__gpio_8h_a32ab51ad1deb238cd8cf0f54488a0aec}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a32ab51ad1deb238cd8cf0f54488a0aec}
+
+\item 
+\hypertarget{hw__gpio_8h_a6835b0df25f2ed38011d6340d95024f9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T5}~(0x00000020u)\label{hw__gpio_8h_a6835b0df25f2ed38011d6340d95024f9}
+
+\item 
+\hypertarget{hw__gpio_8h_a3965ea26a9e38f92a5407d58f82b677c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a3965ea26a9e38f92a5407d58f82b677c}
+
+\item 
+\hypertarget{hw__gpio_8h_ae507df46ffdc65d8a1187533277bdfa4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T4}~(0x00000010u)\label{hw__gpio_8h_ae507df46ffdc65d8a1187533277bdfa4}
+
+\item 
+\hypertarget{hw__gpio_8h_a5852acafad4b6ead2a9d4925c546921c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a5852acafad4b6ead2a9d4925c546921c}
+
+\item 
+\hypertarget{hw__gpio_8h_a8e4c7947e6e45aede4214b411a41d04c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T3}~(0x00000008u)\label{hw__gpio_8h_a8e4c7947e6e45aede4214b411a41d04c}
+
+\item 
+\hypertarget{hw__gpio_8h_aee1e82423ef4afa7c4f35fddcf658cc6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_aee1e82423ef4afa7c4f35fddcf658cc6}
+
+\item 
+\hypertarget{hw__gpio_8h_af36e5fed28f225008c7340aad8ae164d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T2}~(0x00000004u)\label{hw__gpio_8h_af36e5fed28f225008c7340aad8ae164d}
+
+\item 
+\hypertarget{hw__gpio_8h_aabf5898971500ee771a4a8acc066f76f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_aabf5898971500ee771a4a8acc066f76f}
+
+\item 
+\hypertarget{hw__gpio_8h_a188a7237adae7d19c03ae2d5f142cfa2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T1}~(0x00000002u)\label{hw__gpio_8h_a188a7237adae7d19c03ae2d5f142cfa2}
+
+\item 
+\hypertarget{hw__gpio_8h_ab2bfce53d4b17bb4d800c81403753bc4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_ab2bfce53d4b17bb4d800c81403753bc4}
+
+\item 
+\hypertarget{hw__gpio_8h_ada22cba4eda6b0696f2e683cf1e9a350}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T0}~(0x00000001u)\label{hw__gpio_8h_ada22cba4eda6b0696f2e683cf1e9a350}
+
+\item 
+\hypertarget{hw__gpio_8h_ac19a5cb959746ffe8ef0edc96c6da8d5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+T0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_ac19a5cb959746ffe8ef0edc96c6da8d5}
+
+\item 
+\hypertarget{hw__gpio_8h_ad9954eb8c69d7ea40f15bd8867e5ee2d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R31}~(0x80000000u)\label{hw__gpio_8h_ad9954eb8c69d7ea40f15bd8867e5ee2d}
+
+\item 
+\hypertarget{hw__gpio_8h_a8e2680acd2ea421d2057b914141b2688}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a8e2680acd2ea421d2057b914141b2688}
+
+\item 
+\hypertarget{hw__gpio_8h_a1c4b574479fed6b5740effa054f91ca0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R30}~(0x40000000u)\label{hw__gpio_8h_a1c4b574479fed6b5740effa054f91ca0}
+
+\item 
+\hypertarget{hw__gpio_8h_ae258b4d7fd32af40ab3b546ee706a006}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_ae258b4d7fd32af40ab3b546ee706a006}
+
+\item 
+\hypertarget{hw__gpio_8h_a3fb41f429fe651efa6156c8eb9b86e3c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R29}~(0x20000000u)\label{hw__gpio_8h_a3fb41f429fe651efa6156c8eb9b86e3c}
+
+\item 
+\hypertarget{hw__gpio_8h_aa9777540f5dc1029dc032a879781b125}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_aa9777540f5dc1029dc032a879781b125}
+
+\item 
+\hypertarget{hw__gpio_8h_ae4a78bafe71336a239dcfb6312069d6e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R28}~(0x10000000u)\label{hw__gpio_8h_ae4a78bafe71336a239dcfb6312069d6e}
+
+\item 
+\hypertarget{hw__gpio_8h_a27cc7569ef792e01f67b86fe0a709bb5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a27cc7569ef792e01f67b86fe0a709bb5}
+
+\item 
+\hypertarget{hw__gpio_8h_a9cc20e275f02a6e4f6a5d6d629b54f69}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R27}~(0x08000000u)\label{hw__gpio_8h_a9cc20e275f02a6e4f6a5d6d629b54f69}
+
+\item 
+\hypertarget{hw__gpio_8h_a72440c5b57064d3824e49d3bd905ec18}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_a72440c5b57064d3824e49d3bd905ec18}
+
+\item 
+\hypertarget{hw__gpio_8h_a1bf6335bfdace3d4dea7d385617bfa22}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R26}~(0x04000000u)\label{hw__gpio_8h_a1bf6335bfdace3d4dea7d385617bfa22}
+
+\item 
+\hypertarget{hw__gpio_8h_a5e7163d3ecd467a9eb1e3628add0b613}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_a5e7163d3ecd467a9eb1e3628add0b613}
+
+\item 
+\hypertarget{hw__gpio_8h_a8f29f4716d8717502f6ec25396e7febb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R25}~(0x02000000u)\label{hw__gpio_8h_a8f29f4716d8717502f6ec25396e7febb}
+
+\item 
+\hypertarget{hw__gpio_8h_ac040e157787f3bbaddd2fc58336d0f50}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_ac040e157787f3bbaddd2fc58336d0f50}
+
+\item 
+\hypertarget{hw__gpio_8h_a2953f7724c65a22c6c96738bdbd04b5c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R24}~(0x01000000u)\label{hw__gpio_8h_a2953f7724c65a22c6c96738bdbd04b5c}
+
+\item 
+\hypertarget{hw__gpio_8h_a3baef0a3a55ad55e351ba7d103fef4a2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_a3baef0a3a55ad55e351ba7d103fef4a2}
+
+\item 
+\hypertarget{hw__gpio_8h_acd8af1aef47276bf55d5d913ba903aa0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R23}~(0x00800000u)\label{hw__gpio_8h_acd8af1aef47276bf55d5d913ba903aa0}
+
+\item 
+\hypertarget{hw__gpio_8h_abedf90684caf0023f3fae62cee748591}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_abedf90684caf0023f3fae62cee748591}
+
+\item 
+\hypertarget{hw__gpio_8h_aafce98ae2659e9c70265f2be591435c1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R22}~(0x00400000u)\label{hw__gpio_8h_aafce98ae2659e9c70265f2be591435c1}
+
+\item 
+\hypertarget{hw__gpio_8h_a138f89afcdfa342935196383375f8774}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a138f89afcdfa342935196383375f8774}
+
+\item 
+\hypertarget{hw__gpio_8h_a3455f01dfc3707452e358f7379b20ef0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R21}~(0x00200000u)\label{hw__gpio_8h_a3455f01dfc3707452e358f7379b20ef0}
+
+\item 
+\hypertarget{hw__gpio_8h_ab913e179c376e76147152fc94c3cef72}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_ab913e179c376e76147152fc94c3cef72}
+
+\item 
+\hypertarget{hw__gpio_8h_a8712a87c6be5d5cf9f992122ef61af9d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R20}~(0x00100000u)\label{hw__gpio_8h_a8712a87c6be5d5cf9f992122ef61af9d}
+
+\item 
+\hypertarget{hw__gpio_8h_a53e09bba1253b07abb55167f95048cc5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_a53e09bba1253b07abb55167f95048cc5}
+
+\item 
+\hypertarget{hw__gpio_8h_a6d874c8159f5a23b6a2de311bf353e1c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R19}~(0x00080000u)\label{hw__gpio_8h_a6d874c8159f5a23b6a2de311bf353e1c}
+
+\item 
+\hypertarget{hw__gpio_8h_a17673226bdf9988b11177128b023e7a6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_a17673226bdf9988b11177128b023e7a6}
+
+\item 
+\hypertarget{hw__gpio_8h_aa0d64722074bb04f9cd33b8c07a5c0ba}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R18}~(0x00040000u)\label{hw__gpio_8h_aa0d64722074bb04f9cd33b8c07a5c0ba}
+
+\item 
+\hypertarget{hw__gpio_8h_a58a11fa1ceb7800ada12d20905e5f5eb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_a58a11fa1ceb7800ada12d20905e5f5eb}
+
+\item 
+\hypertarget{hw__gpio_8h_ac14eb8d041f6e1fb6628658d36ef761e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R17}~(0x00020000u)\label{hw__gpio_8h_ac14eb8d041f6e1fb6628658d36ef761e}
+
+\item 
+\hypertarget{hw__gpio_8h_a3535844a5f897bf5ae966e856b269f0a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a3535844a5f897bf5ae966e856b269f0a}
+
+\item 
+\hypertarget{hw__gpio_8h_aeef8f6bb3c05e0d3830dac0018a50a80}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R16}~(0x00010000u)\label{hw__gpio_8h_aeef8f6bb3c05e0d3830dac0018a50a80}
+
+\item 
+\hypertarget{hw__gpio_8h_a731e9ba7db100c41170c134989063ea6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a731e9ba7db100c41170c134989063ea6}
+
+\item 
+\hypertarget{hw__gpio_8h_acd215178dc5e21023aba44080125245e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R15}~(0x00008000u)\label{hw__gpio_8h_acd215178dc5e21023aba44080125245e}
+
+\item 
+\hypertarget{hw__gpio_8h_a1af9490ceb095df96d93f60b26d488f7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_a1af9490ceb095df96d93f60b26d488f7}
+
+\item 
+\hypertarget{hw__gpio_8h_a6f5a4c3423e8909066b43b9463cc4587}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R14}~(0x00004000u)\label{hw__gpio_8h_a6f5a4c3423e8909066b43b9463cc4587}
+
+\item 
+\hypertarget{hw__gpio_8h_a88afdf1a496b1b01f34ce43f44bfffe5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a88afdf1a496b1b01f34ce43f44bfffe5}
+
+\item 
+\hypertarget{hw__gpio_8h_a119fe79cc55428a7baf0ba87d657dd76}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R13}~(0x00002000u)\label{hw__gpio_8h_a119fe79cc55428a7baf0ba87d657dd76}
+
+\item 
+\hypertarget{hw__gpio_8h_a1a69740f37628b4422018f2bfbcf4464}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_a1a69740f37628b4422018f2bfbcf4464}
+
+\item 
+\hypertarget{hw__gpio_8h_aecbd8474ff62f938dd1eaa417d53de6c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R12}~(0x00001000u)\label{hw__gpio_8h_aecbd8474ff62f938dd1eaa417d53de6c}
+
+\item 
+\hypertarget{hw__gpio_8h_a95b58a3e7f630889d9ec0633ae04315e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a95b58a3e7f630889d9ec0633ae04315e}
+
+\item 
+\hypertarget{hw__gpio_8h_abc8dfeb2bcecfc45957278d82371fdcc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R11}~(0x00000800u)\label{hw__gpio_8h_abc8dfeb2bcecfc45957278d82371fdcc}
+
+\item 
+\hypertarget{hw__gpio_8h_a47e4d9dca2d767e3a7690ad537e26181}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_a47e4d9dca2d767e3a7690ad537e26181}
+
+\item 
+\hypertarget{hw__gpio_8h_a463d85d6279d5ea0794404157f43a5e5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R10}~(0x00000400u)\label{hw__gpio_8h_a463d85d6279d5ea0794404157f43a5e5}
+
+\item 
+\hypertarget{hw__gpio_8h_a49eae42122df798ae88af35eae0ef447}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a49eae42122df798ae88af35eae0ef447}
+
+\item 
+\hypertarget{hw__gpio_8h_a6f67bb5e7e04c4aa4f4f359848678032}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R9}~(0x00000200u)\label{hw__gpio_8h_a6f67bb5e7e04c4aa4f4f359848678032}
+
+\item 
+\hypertarget{hw__gpio_8h_a9547fe7ac18541a52b949ce946272846}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_a9547fe7ac18541a52b949ce946272846}
+
+\item 
+\hypertarget{hw__gpio_8h_a1969c59bcc4ead253c029f9005bc1e5d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R8}~(0x00000100u)\label{hw__gpio_8h_a1969c59bcc4ead253c029f9005bc1e5d}
+
+\item 
+\hypertarget{hw__gpio_8h_acbba9d367c4a008616012dda526e4eae}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_acbba9d367c4a008616012dda526e4eae}
+
+\item 
+\hypertarget{hw__gpio_8h_a1f6a760d8e3b568eeb95d70c711c26fc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R7}~(0x00000080u)\label{hw__gpio_8h_a1f6a760d8e3b568eeb95d70c711c26fc}
+
+\item 
+\hypertarget{hw__gpio_8h_a2a6efd4d635384558ed5d0d0344a4a8f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_a2a6efd4d635384558ed5d0d0344a4a8f}
+
+\item 
+\hypertarget{hw__gpio_8h_af10606b79682427de7a7af3d53c8b2d6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R6}~(0x00000040u)\label{hw__gpio_8h_af10606b79682427de7a7af3d53c8b2d6}
+
+\item 
+\hypertarget{hw__gpio_8h_af51577f959280061011bab88a50a09ab}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_af51577f959280061011bab88a50a09ab}
+
+\item 
+\hypertarget{hw__gpio_8h_a03648cf880208422728e1dc48140299f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R5}~(0x00000020u)\label{hw__gpio_8h_a03648cf880208422728e1dc48140299f}
+
+\item 
+\hypertarget{hw__gpio_8h_a545ea9ac0ba78e058d42c0c1a22e0ddb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a545ea9ac0ba78e058d42c0c1a22e0ddb}
+
+\item 
+\hypertarget{hw__gpio_8h_a4cea585792bc6baee327a25a0c14e466}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R4}~(0x00000010u)\label{hw__gpio_8h_a4cea585792bc6baee327a25a0c14e466}
+
+\item 
+\hypertarget{hw__gpio_8h_a182e76a610dce40b4583b16ab327531b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a182e76a610dce40b4583b16ab327531b}
+
+\item 
+\hypertarget{hw__gpio_8h_a9637d2d52ad5beec464453e0b44d2158}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R3}~(0x00000008u)\label{hw__gpio_8h_a9637d2d52ad5beec464453e0b44d2158}
+
+\item 
+\hypertarget{hw__gpio_8h_a77dd169047c9464337cf77ab67dec4e8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a77dd169047c9464337cf77ab67dec4e8}
+
+\item 
+\hypertarget{hw__gpio_8h_a4f3273909144b07c11c70ff75865735b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R2}~(0x00000004u)\label{hw__gpio_8h_a4f3273909144b07c11c70ff75865735b}
+
+\item 
+\hypertarget{hw__gpio_8h_a9fd661d44f592060924496eaf49e911d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_a9fd661d44f592060924496eaf49e911d}
+
+\item 
+\hypertarget{hw__gpio_8h_a4f5cd6579c5f9cc3e9b2a51e173ea6d4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R1}~(0x00000002u)\label{hw__gpio_8h_a4f5cd6579c5f9cc3e9b2a51e173ea6d4}
+
+\item 
+\hypertarget{hw__gpio_8h_a1112d2b58bef4bdee59b04af1f9b9196}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_a1112d2b58bef4bdee59b04af1f9b9196}
+
+\item 
+\hypertarget{hw__gpio_8h_a1afaf79e39c808ee76d250d00b74d9a7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R0}~(0x00000001u)\label{hw__gpio_8h_a1afaf79e39c808ee76d250d00b74d9a7}
+
+\item 
+\hypertarget{hw__gpio_8h_a33963f4c3f507253a58ff37b56f297e7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+R0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a33963f4c3f507253a58ff37b56f297e7}
+
+\item 
+\hypertarget{hw__gpio_8h_a0036e53bb9125bb5395d9ce227c80204}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N31}~(0x80000000u)\label{hw__gpio_8h_a0036e53bb9125bb5395d9ce227c80204}
+
+\item 
+\hypertarget{hw__gpio_8h_a9040512645b42f80450bb15fa997cae7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a9040512645b42f80450bb15fa997cae7}
+
+\item 
+\hypertarget{hw__gpio_8h_ac779dfc4098366c9208c0c244758533a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N30}~(0x40000000u)\label{hw__gpio_8h_ac779dfc4098366c9208c0c244758533a}
+
+\item 
+\hypertarget{hw__gpio_8h_a0e2000bbf11b3b3aff965f37387f3bf4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a0e2000bbf11b3b3aff965f37387f3bf4}
+
+\item 
+\hypertarget{hw__gpio_8h_a9255bdd14e90dd0eb4f79cb2e5cd7f51}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N29}~(0x20000000u)\label{hw__gpio_8h_a9255bdd14e90dd0eb4f79cb2e5cd7f51}
+
+\item 
+\hypertarget{hw__gpio_8h_a0eefb2c0f13152c9d85b4a68ee2720bc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a0eefb2c0f13152c9d85b4a68ee2720bc}
+
+\item 
+\hypertarget{hw__gpio_8h_a5fd7af4e52d0f9b026b23d23a7211d36}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N28}~(0x10000000u)\label{hw__gpio_8h_a5fd7af4e52d0f9b026b23d23a7211d36}
+
+\item 
+\hypertarget{hw__gpio_8h_a70bae089ff2266fbb8dbd9c33aeeea81}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a70bae089ff2266fbb8dbd9c33aeeea81}
+
+\item 
+\hypertarget{hw__gpio_8h_add723dff7389bbc549c86837c55d9a43}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N27}~(0x08000000u)\label{hw__gpio_8h_add723dff7389bbc549c86837c55d9a43}
+
+\item 
+\hypertarget{hw__gpio_8h_aadec5551a56a39a8f2234351f90bb6c8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_aadec5551a56a39a8f2234351f90bb6c8}
+
+\item 
+\hypertarget{hw__gpio_8h_a2d3ae398cfec16082a8645f5c9601bbb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N26}~(0x04000000u)\label{hw__gpio_8h_a2d3ae398cfec16082a8645f5c9601bbb}
+
+\item 
+\hypertarget{hw__gpio_8h_adad744a6b6a89f00ed5848048eefeb49}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_adad744a6b6a89f00ed5848048eefeb49}
+
+\item 
+\hypertarget{hw__gpio_8h_ab24a5ceb326e19979c4437cbb302cec9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N25}~(0x02000000u)\label{hw__gpio_8h_ab24a5ceb326e19979c4437cbb302cec9}
+
+\item 
+\hypertarget{hw__gpio_8h_a1776ab13702ba0ea12ebbb463851930c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_a1776ab13702ba0ea12ebbb463851930c}
+
+\item 
+\hypertarget{hw__gpio_8h_a152b662e9d4e7d38bc900ff0a3b60399}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N24}~(0x01000000u)\label{hw__gpio_8h_a152b662e9d4e7d38bc900ff0a3b60399}
+
+\item 
+\hypertarget{hw__gpio_8h_af80d766ba94363a1a52775d6ba574988}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_af80d766ba94363a1a52775d6ba574988}
+
+\item 
+\hypertarget{hw__gpio_8h_afa4a3443b89228adb7bd0d4a73b36a62}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N23}~(0x00800000u)\label{hw__gpio_8h_afa4a3443b89228adb7bd0d4a73b36a62}
+
+\item 
+\hypertarget{hw__gpio_8h_a17e2e36409ce15506c00ede0c1c7a380}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_a17e2e36409ce15506c00ede0c1c7a380}
+
+\item 
+\hypertarget{hw__gpio_8h_ac0cc0d48c741f4deba812a42862dfdea}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N22}~(0x00400000u)\label{hw__gpio_8h_ac0cc0d48c741f4deba812a42862dfdea}
+
+\item 
+\hypertarget{hw__gpio_8h_a83ba09cea3f1b4c27a9c9d6533c61fb5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a83ba09cea3f1b4c27a9c9d6533c61fb5}
+
+\item 
+\hypertarget{hw__gpio_8h_a6b6503b7cb41791c96b8d35b6999315c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N21}~(0x00200000u)\label{hw__gpio_8h_a6b6503b7cb41791c96b8d35b6999315c}
+
+\item 
+\hypertarget{hw__gpio_8h_aebc7eb8f956708e3a3d454b61111f4c6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_aebc7eb8f956708e3a3d454b61111f4c6}
+
+\item 
+\hypertarget{hw__gpio_8h_ad10c0fc96286878e6b83d8e5ba28ca8b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N20}~(0x00100000u)\label{hw__gpio_8h_ad10c0fc96286878e6b83d8e5ba28ca8b}
+
+\item 
+\hypertarget{hw__gpio_8h_acd502c6a53725fd04d81331ee71667e9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_acd502c6a53725fd04d81331ee71667e9}
+
+\item 
+\hypertarget{hw__gpio_8h_a65083711e6a61fedc6ad650fe1a30bd0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N19}~(0x00080000u)\label{hw__gpio_8h_a65083711e6a61fedc6ad650fe1a30bd0}
+
+\item 
+\hypertarget{hw__gpio_8h_a6647235f32e6194d526083493236aafc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_a6647235f32e6194d526083493236aafc}
+
+\item 
+\hypertarget{hw__gpio_8h_aa6874d57058104f049b3090bfb641a19}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N18}~(0x00040000u)\label{hw__gpio_8h_aa6874d57058104f049b3090bfb641a19}
+
+\item 
+\hypertarget{hw__gpio_8h_ab5de9097852ddde235e9c05a47975f1f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_ab5de9097852ddde235e9c05a47975f1f}
+
+\item 
+\hypertarget{hw__gpio_8h_a936d1883b5dbfdd638f8897b6d7858e9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N17}~(0x00020000u)\label{hw__gpio_8h_a936d1883b5dbfdd638f8897b6d7858e9}
+
+\item 
+\hypertarget{hw__gpio_8h_aefd0e9a5f9f5461920aa23989696f8ea}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_aefd0e9a5f9f5461920aa23989696f8ea}
+
+\item 
+\hypertarget{hw__gpio_8h_a67f4837ccf51c35db5982229caf3432e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N16}~(0x00010000u)\label{hw__gpio_8h_a67f4837ccf51c35db5982229caf3432e}
+
+\item 
+\hypertarget{hw__gpio_8h_a7c57e6d535118a73eef6061dae37934c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a7c57e6d535118a73eef6061dae37934c}
+
+\item 
+\hypertarget{hw__gpio_8h_aa73dfc0cbfdac06db55d2438a337542e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N15}~(0x00008000u)\label{hw__gpio_8h_aa73dfc0cbfdac06db55d2438a337542e}
+
+\item 
+\hypertarget{hw__gpio_8h_ae6800529e5f5f39474365aba1653d357}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_ae6800529e5f5f39474365aba1653d357}
+
+\item 
+\hypertarget{hw__gpio_8h_ac41fefb74a5720f1962586bd873da9e0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N14}~(0x00004000u)\label{hw__gpio_8h_ac41fefb74a5720f1962586bd873da9e0}
+
+\item 
+\hypertarget{hw__gpio_8h_a29d7748744fb9f2bf728af25ffcfc638}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a29d7748744fb9f2bf728af25ffcfc638}
+
+\item 
+\hypertarget{hw__gpio_8h_af3e8db02bc9dcf7f89ae5de914dbccbc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N13}~(0x00002000u)\label{hw__gpio_8h_af3e8db02bc9dcf7f89ae5de914dbccbc}
+
+\item 
+\hypertarget{hw__gpio_8h_aa772ef368faffa750ea0f25df1a4968c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_aa772ef368faffa750ea0f25df1a4968c}
+
+\item 
+\hypertarget{hw__gpio_8h_a882160b7656dfdbd747441e672f9cd8b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N12}~(0x00001000u)\label{hw__gpio_8h_a882160b7656dfdbd747441e672f9cd8b}
+
+\item 
+\hypertarget{hw__gpio_8h_a82f8b1a1c3824b09c4d495361c40e222}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a82f8b1a1c3824b09c4d495361c40e222}
+
+\item 
+\hypertarget{hw__gpio_8h_a9f46d39afb6bb45c4921f4213cd70313}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N11}~(0x00000800u)\label{hw__gpio_8h_a9f46d39afb6bb45c4921f4213cd70313}
+
+\item 
+\hypertarget{hw__gpio_8h_ab8091517715324e0d075e10be5bcf044}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_ab8091517715324e0d075e10be5bcf044}
+
+\item 
+\hypertarget{hw__gpio_8h_a06e87a6cbde5d212a40b09d36061fa3a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N10}~(0x00000400u)\label{hw__gpio_8h_a06e87a6cbde5d212a40b09d36061fa3a}
+
+\item 
+\hypertarget{hw__gpio_8h_a127735519216f398fbd5532dbe8f2271}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a127735519216f398fbd5532dbe8f2271}
+
+\item 
+\hypertarget{hw__gpio_8h_ad202c4d51cd74ac325cc84da856752b0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N9}~(0x00000200u)\label{hw__gpio_8h_ad202c4d51cd74ac325cc84da856752b0}
+
+\item 
+\hypertarget{hw__gpio_8h_a262dfdedc696cc77e287bead439b0e54}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_a262dfdedc696cc77e287bead439b0e54}
+
+\item 
+\hypertarget{hw__gpio_8h_a6eeea48e910810a382d0864bb6b1223a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N8}~(0x00000100u)\label{hw__gpio_8h_a6eeea48e910810a382d0864bb6b1223a}
+
+\item 
+\hypertarget{hw__gpio_8h_ab06531ceaefbb36cb483f4b36547e1d8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_ab06531ceaefbb36cb483f4b36547e1d8}
+
+\item 
+\hypertarget{hw__gpio_8h_a1628e95e9f5f2af5348c12c78c32e68d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N7}~(0x00000080u)\label{hw__gpio_8h_a1628e95e9f5f2af5348c12c78c32e68d}
+
+\item 
+\hypertarget{hw__gpio_8h_a1c60b4a4a8342e1765845aa32f8ae8b9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_a1c60b4a4a8342e1765845aa32f8ae8b9}
+
+\item 
+\hypertarget{hw__gpio_8h_af966958ddd93391e1615596ec24dfafd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N6}~(0x00000040u)\label{hw__gpio_8h_af966958ddd93391e1615596ec24dfafd}
+
+\item 
+\hypertarget{hw__gpio_8h_a03657335cf8e2522dcd4dfc928bc8b45}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a03657335cf8e2522dcd4dfc928bc8b45}
+
+\item 
+\hypertarget{hw__gpio_8h_a036fca5b5334323c9c8ec1c5584aea5c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N5}~(0x00000020u)\label{hw__gpio_8h_a036fca5b5334323c9c8ec1c5584aea5c}
+
+\item 
+\hypertarget{hw__gpio_8h_ac82ddb46e0a3ba35d1aa147f758ffd7a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_ac82ddb46e0a3ba35d1aa147f758ffd7a}
+
+\item 
+\hypertarget{hw__gpio_8h_a10185a00900f177aff95de68d42807be}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N4}~(0x00000010u)\label{hw__gpio_8h_a10185a00900f177aff95de68d42807be}
+
+\item 
+\hypertarget{hw__gpio_8h_af83f676112c44112c0acd8ea06029c7f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_af83f676112c44112c0acd8ea06029c7f}
+
+\item 
+\hypertarget{hw__gpio_8h_abee9e871d5c18e6cf0cc5df2b3b5bd81}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N3}~(0x00000008u)\label{hw__gpio_8h_abee9e871d5c18e6cf0cc5df2b3b5bd81}
+
+\item 
+\hypertarget{hw__gpio_8h_a80cad904c6bfa09c3461fd6183b74d77}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a80cad904c6bfa09c3461fd6183b74d77}
+
+\item 
+\hypertarget{hw__gpio_8h_a19335002586ab56b4207eca953c06d18}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N2}~(0x00000004u)\label{hw__gpio_8h_a19335002586ab56b4207eca953c06d18}
+
+\item 
+\hypertarget{hw__gpio_8h_acf2cee7c9fb7ee01d55d8b78285eb0ce}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_acf2cee7c9fb7ee01d55d8b78285eb0ce}
+
+\item 
+\hypertarget{hw__gpio_8h_ad66ea23612bc74550c82506bd6fc0060}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N1}~(0x00000002u)\label{hw__gpio_8h_ad66ea23612bc74550c82506bd6fc0060}
+
+\item 
+\hypertarget{hw__gpio_8h_aefc0ed2d60fdc66f44fd7f19a4726c56}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_aefc0ed2d60fdc66f44fd7f19a4726c56}
+
+\item 
+\hypertarget{hw__gpio_8h_a0ff4b7a09eb2dad4ca6be16a5525f83a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N0}~(0x00000001u)\label{hw__gpio_8h_a0ff4b7a09eb2dad4ca6be16a5525f83a}
+
+\item 
+\hypertarget{hw__gpio_8h_aa21d74b2239c667f2fa105d06489666f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_aa21d74b2239c667f2fa105d06489666f}
+
+\item 
+\hypertarget{hw__gpio_8h_a7cce262008728a186fef343105704765}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S31}~(0x80000000u)\label{hw__gpio_8h_a7cce262008728a186fef343105704765}
+
+\item 
+\hypertarget{hw__gpio_8h_a576f4279212527b1ce445f458c03f238}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a576f4279212527b1ce445f458c03f238}
+
+\item 
+\hypertarget{hw__gpio_8h_ad68f935c4dbcc141909deefff807dd04}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S30}~(0x40000000u)\label{hw__gpio_8h_ad68f935c4dbcc141909deefff807dd04}
+
+\item 
+\hypertarget{hw__gpio_8h_a9696dbb9b73626bcd123609ad1d0207b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a9696dbb9b73626bcd123609ad1d0207b}
+
+\item 
+\hypertarget{hw__gpio_8h_af156904fbf8a3b5ea3f83af6909d7125}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S29}~(0x20000000u)\label{hw__gpio_8h_af156904fbf8a3b5ea3f83af6909d7125}
+
+\item 
+\hypertarget{hw__gpio_8h_a226bb66a825654d9b430a74c4c1c066a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a226bb66a825654d9b430a74c4c1c066a}
+
+\item 
+\hypertarget{hw__gpio_8h_a9bea519e0d0927d6614992a1918218a6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S28}~(0x10000000u)\label{hw__gpio_8h_a9bea519e0d0927d6614992a1918218a6}
+
+\item 
+\hypertarget{hw__gpio_8h_a23d41cbcb53101ca658cc677366c328b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a23d41cbcb53101ca658cc677366c328b}
+
+\item 
+\hypertarget{hw__gpio_8h_a2197f7d8da49b64d544bcd5451f2b2b2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S27}~(0x08000000u)\label{hw__gpio_8h_a2197f7d8da49b64d544bcd5451f2b2b2}
+
+\item 
+\hypertarget{hw__gpio_8h_a570c3d4c492c31f120246e27c42602d0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_a570c3d4c492c31f120246e27c42602d0}
+
+\item 
+\hypertarget{hw__gpio_8h_a6b8d8025ac573240df2279c93479955a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S26}~(0x04000000u)\label{hw__gpio_8h_a6b8d8025ac573240df2279c93479955a}
+
+\item 
+\hypertarget{hw__gpio_8h_adcfaa3193975414e7fb41ebd48b430dc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_adcfaa3193975414e7fb41ebd48b430dc}
+
+\item 
+\hypertarget{hw__gpio_8h_a7e2b917afb538582bcf737c095827e72}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S25}~(0x02000000u)\label{hw__gpio_8h_a7e2b917afb538582bcf737c095827e72}
+
+\item 
+\hypertarget{hw__gpio_8h_a3e1ddf05ab07688fd892e9837892fb27}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_a3e1ddf05ab07688fd892e9837892fb27}
+
+\item 
+\hypertarget{hw__gpio_8h_af72bc0336bb04f788caf603d037d3805}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S24}~(0x01000000u)\label{hw__gpio_8h_af72bc0336bb04f788caf603d037d3805}
+
+\item 
+\hypertarget{hw__gpio_8h_ae9f54e5f6095f037d429573f8a82ebf5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_ae9f54e5f6095f037d429573f8a82ebf5}
+
+\item 
+\hypertarget{hw__gpio_8h_adfbcf3688eb10e532fb2172c01aa5d3a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S23}~(0x00800000u)\label{hw__gpio_8h_adfbcf3688eb10e532fb2172c01aa5d3a}
+
+\item 
+\hypertarget{hw__gpio_8h_af14019ffc05bfcfcaab9b2722aa8db58}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_af14019ffc05bfcfcaab9b2722aa8db58}
+
+\item 
+\hypertarget{hw__gpio_8h_a47055a595b58899d295cacefcc2dc16c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S22}~(0x00400000u)\label{hw__gpio_8h_a47055a595b58899d295cacefcc2dc16c}
+
+\item 
+\hypertarget{hw__gpio_8h_ab7699b8d3fca1bd7651630433108cf41}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_ab7699b8d3fca1bd7651630433108cf41}
+
+\item 
+\hypertarget{hw__gpio_8h_ac8fd28e579c492faececb370378b2e43}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S21}~(0x00200000u)\label{hw__gpio_8h_ac8fd28e579c492faececb370378b2e43}
+
+\item 
+\hypertarget{hw__gpio_8h_aa0f43d966192c3abe0f1bbfd55fe6bf2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_aa0f43d966192c3abe0f1bbfd55fe6bf2}
+
+\item 
+\hypertarget{hw__gpio_8h_a52e368a80a9257aaa481465e955e2c96}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S20}~(0x00100000u)\label{hw__gpio_8h_a52e368a80a9257aaa481465e955e2c96}
+
+\item 
+\hypertarget{hw__gpio_8h_a7ce10f174b3aa0f11315aec5c287b1be}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_a7ce10f174b3aa0f11315aec5c287b1be}
+
+\item 
+\hypertarget{hw__gpio_8h_acdeb7e97f7ba788bfef3d6dc8010c9d7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S19}~(0x00080000u)\label{hw__gpio_8h_acdeb7e97f7ba788bfef3d6dc8010c9d7}
+
+\item 
+\hypertarget{hw__gpio_8h_a8c6fe13693e8abdc7d1bbcda0c78873c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_a8c6fe13693e8abdc7d1bbcda0c78873c}
+
+\item 
+\hypertarget{hw__gpio_8h_a8a41fbf21b9b98fa737a84282016a84f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S18}~(0x00040000u)\label{hw__gpio_8h_a8a41fbf21b9b98fa737a84282016a84f}
+
+\item 
+\hypertarget{hw__gpio_8h_ad331376026271192dd1f84c665b24cff}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_ad331376026271192dd1f84c665b24cff}
+
+\item 
+\hypertarget{hw__gpio_8h_a64595f82026cc5a48b382f4a74f2f39f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S17}~(0x00020000u)\label{hw__gpio_8h_a64595f82026cc5a48b382f4a74f2f39f}
+
+\item 
+\hypertarget{hw__gpio_8h_a71ad3bca67a95efc8d8b500d130f400b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a71ad3bca67a95efc8d8b500d130f400b}
+
+\item 
+\hypertarget{hw__gpio_8h_a1ef322441991c1ccf8ff657efb0c4e13}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S16}~(0x00010000u)\label{hw__gpio_8h_a1ef322441991c1ccf8ff657efb0c4e13}
+
+\item 
+\hypertarget{hw__gpio_8h_a5df282421e3f56e21cbfd86f280a6917}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a5df282421e3f56e21cbfd86f280a6917}
+
+\item 
+\hypertarget{hw__gpio_8h_ac88743e77f683660049aa2ecd90e66ad}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S15}~(0x00008000u)\label{hw__gpio_8h_ac88743e77f683660049aa2ecd90e66ad}
+
+\item 
+\hypertarget{hw__gpio_8h_aab6b84a78450832b56a8de8c41fea4f2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_aab6b84a78450832b56a8de8c41fea4f2}
+
+\item 
+\hypertarget{hw__gpio_8h_a8bf346e2bb48ff0cb7849afb2158d7cb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S14}~(0x00004000u)\label{hw__gpio_8h_a8bf346e2bb48ff0cb7849afb2158d7cb}
+
+\item 
+\hypertarget{hw__gpio_8h_a2e326d2991d1ce5eaf41ab9b61516a46}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a2e326d2991d1ce5eaf41ab9b61516a46}
+
+\item 
+\hypertarget{hw__gpio_8h_ac4b96fe138d29b6e6bce0615b6157659}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S13}~(0x00002000u)\label{hw__gpio_8h_ac4b96fe138d29b6e6bce0615b6157659}
+
+\item 
+\hypertarget{hw__gpio_8h_a253947225e877053e973185801db72f5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_a253947225e877053e973185801db72f5}
+
+\item 
+\hypertarget{hw__gpio_8h_a025a79838e7b02455468bdb9ed28f2e0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S12}~(0x00001000u)\label{hw__gpio_8h_a025a79838e7b02455468bdb9ed28f2e0}
+
+\item 
+\hypertarget{hw__gpio_8h_a2fc08232c830a299bd4b767657adb3be}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a2fc08232c830a299bd4b767657adb3be}
+
+\item 
+\hypertarget{hw__gpio_8h_af47ee44bf20a7fbbbd342224303b5e48}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S11}~(0x00000800u)\label{hw__gpio_8h_af47ee44bf20a7fbbbd342224303b5e48}
+
+\item 
+\hypertarget{hw__gpio_8h_aae96637c110702b49f1268afd3eb54cf}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_aae96637c110702b49f1268afd3eb54cf}
+
+\item 
+\hypertarget{hw__gpio_8h_a5ca6387efe86a1dd5940218b472aa586}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S10}~(0x00000400u)\label{hw__gpio_8h_a5ca6387efe86a1dd5940218b472aa586}
+
+\item 
+\hypertarget{hw__gpio_8h_a2418b545b4c6eaad9e78c96802bcd8cb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a2418b545b4c6eaad9e78c96802bcd8cb}
+
+\item 
+\hypertarget{hw__gpio_8h_ae66edbf52caac3a78132bf6ac3d915a6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S9}~(0x00000200u)\label{hw__gpio_8h_ae66edbf52caac3a78132bf6ac3d915a6}
+
+\item 
+\hypertarget{hw__gpio_8h_a1c807c75e4fd1c5a32e2677b3584225e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_a1c807c75e4fd1c5a32e2677b3584225e}
+
+\item 
+\hypertarget{hw__gpio_8h_a25e213e2c39eea0031cadeaad539062b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S8}~(0x00000100u)\label{hw__gpio_8h_a25e213e2c39eea0031cadeaad539062b}
+
+\item 
+\hypertarget{hw__gpio_8h_ade85e208178134824ee248cbde833703}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_ade85e208178134824ee248cbde833703}
+
+\item 
+\hypertarget{hw__gpio_8h_a36398e1dfb090c05ecc2493ac260e9b6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S7}~(0x00000080u)\label{hw__gpio_8h_a36398e1dfb090c05ecc2493ac260e9b6}
+
+\item 
+\hypertarget{hw__gpio_8h_adc63c6149b20a782ed6f09d5c0aeaae3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_adc63c6149b20a782ed6f09d5c0aeaae3}
+
+\item 
+\hypertarget{hw__gpio_8h_a6f5d05b4e79ddc0879f992bfc3d30820}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S6}~(0x00000040u)\label{hw__gpio_8h_a6f5d05b4e79ddc0879f992bfc3d30820}
+
+\item 
+\hypertarget{hw__gpio_8h_a3c4f213e534644cbbed3bf45f5174ec3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a3c4f213e534644cbbed3bf45f5174ec3}
+
+\item 
+\hypertarget{hw__gpio_8h_a4ed62f4d1abea3294f1fa85e7938a6bd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S5}~(0x00000020u)\label{hw__gpio_8h_a4ed62f4d1abea3294f1fa85e7938a6bd}
+
+\item 
+\hypertarget{hw__gpio_8h_a3a5b2924059d097502cbf88ea28b9d2f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a3a5b2924059d097502cbf88ea28b9d2f}
+
+\item 
+\hypertarget{hw__gpio_8h_adcf3b0eac71bd93edc6ed233ebabc929}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S4}~(0x00000010u)\label{hw__gpio_8h_adcf3b0eac71bd93edc6ed233ebabc929}
+
+\item 
+\hypertarget{hw__gpio_8h_a7efee48b93bd3d38e9413f3c0df21641}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a7efee48b93bd3d38e9413f3c0df21641}
+
+\item 
+\hypertarget{hw__gpio_8h_af2aa985d63055b66d9d790d7c64ee4d6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S3}~(0x00000008u)\label{hw__gpio_8h_af2aa985d63055b66d9d790d7c64ee4d6}
+
+\item 
+\hypertarget{hw__gpio_8h_a7c4b5f8da36cd4dc45ae0c98c3134f00}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a7c4b5f8da36cd4dc45ae0c98c3134f00}
+
+\item 
+\hypertarget{hw__gpio_8h_ade2827b1e6db4bc4b127d9136f6c1591}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S2}~(0x00000004u)\label{hw__gpio_8h_ade2827b1e6db4bc4b127d9136f6c1591}
+
+\item 
+\hypertarget{hw__gpio_8h_a24eb27315d49ce37cbaf99b1ed39dec2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_a24eb27315d49ce37cbaf99b1ed39dec2}
+
+\item 
+\hypertarget{hw__gpio_8h_a879dd582cb0614f75fbb06ee984ed2d1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S1}~(0x00000002u)\label{hw__gpio_8h_a879dd582cb0614f75fbb06ee984ed2d1}
+
+\item 
+\hypertarget{hw__gpio_8h_ae487e2ffd9863c1560a3765c326705dd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_ae487e2ffd9863c1560a3765c326705dd}
+
+\item 
+\hypertarget{hw__gpio_8h_a0208a3c79ebed22a36afbba30e180dc1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S0}~(0x00000001u)\label{hw__gpio_8h_a0208a3c79ebed22a36afbba30e180dc1}
+
+\item 
+\hypertarget{hw__gpio_8h_a63c706174ce1eb7cf50b9655e192d121}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+R\+I\+S0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a63c706174ce1eb7cf50b9655e192d121}
+
+\item 
+\hypertarget{hw__gpio_8h_a4a7c1380ea9117027e872020bb4631c5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S31}~(0x80000000u)\label{hw__gpio_8h_a4a7c1380ea9117027e872020bb4631c5}
+
+\item 
+\hypertarget{hw__gpio_8h_a61fb7c739c013645dc0b9aba8a5d6d6a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a61fb7c739c013645dc0b9aba8a5d6d6a}
+
+\item 
+\hypertarget{hw__gpio_8h_a9562c96adc977b28d8bcdccf792da2e9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S30}~(0x40000000u)\label{hw__gpio_8h_a9562c96adc977b28d8bcdccf792da2e9}
+
+\item 
+\hypertarget{hw__gpio_8h_a456c7a657de982002ac429264e837ffe}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a456c7a657de982002ac429264e837ffe}
+
+\item 
+\hypertarget{hw__gpio_8h_a691a2ad1f019c727078bf33d9c5112c5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S29}~(0x20000000u)\label{hw__gpio_8h_a691a2ad1f019c727078bf33d9c5112c5}
+
+\item 
+\hypertarget{hw__gpio_8h_a72901e1506352d4890daf52546619f51}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a72901e1506352d4890daf52546619f51}
+
+\item 
+\hypertarget{hw__gpio_8h_abc21df457b0317f53bee8760dc889187}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S28}~(0x10000000u)\label{hw__gpio_8h_abc21df457b0317f53bee8760dc889187}
+
+\item 
+\hypertarget{hw__gpio_8h_a9c97909696f208a7350fe6f7710b7f9d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a9c97909696f208a7350fe6f7710b7f9d}
+
+\item 
+\hypertarget{hw__gpio_8h_a568322f8178ee0154483cf115c5c6acc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S27}~(0x08000000u)\label{hw__gpio_8h_a568322f8178ee0154483cf115c5c6acc}
+
+\item 
+\hypertarget{hw__gpio_8h_a86e9f011d076d9b54f8c9a4530f9c515}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_a86e9f011d076d9b54f8c9a4530f9c515}
+
+\item 
+\hypertarget{hw__gpio_8h_a9414cadae72acba5edd77861caab1eb3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S26}~(0x04000000u)\label{hw__gpio_8h_a9414cadae72acba5edd77861caab1eb3}
+
+\item 
+\hypertarget{hw__gpio_8h_a708cadfe486e6cb3d3060ef66aad513f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_a708cadfe486e6cb3d3060ef66aad513f}
+
+\item 
+\hypertarget{hw__gpio_8h_a08cfd2506b97c94c4f3a09fd2a141341}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S25}~(0x02000000u)\label{hw__gpio_8h_a08cfd2506b97c94c4f3a09fd2a141341}
+
+\item 
+\hypertarget{hw__gpio_8h_aa58fd25144c7267872a4c69a8233a057}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_aa58fd25144c7267872a4c69a8233a057}
+
+\item 
+\hypertarget{hw__gpio_8h_ad17bb82317b0cd30a2d874658d684923}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S24}~(0x01000000u)\label{hw__gpio_8h_ad17bb82317b0cd30a2d874658d684923}
+
+\item 
+\hypertarget{hw__gpio_8h_aa921de2e906787e162015ce69ac9b25f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_aa921de2e906787e162015ce69ac9b25f}
+
+\item 
+\hypertarget{hw__gpio_8h_ac69c7754e42787f705305c6b15f45391}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S23}~(0x00800000u)\label{hw__gpio_8h_ac69c7754e42787f705305c6b15f45391}
+
+\item 
+\hypertarget{hw__gpio_8h_add337c90f6789157f952c7e6b382e5f7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_add337c90f6789157f952c7e6b382e5f7}
+
+\item 
+\hypertarget{hw__gpio_8h_aebc30ee2b6816d14b0fda320dad50ef8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S22}~(0x00400000u)\label{hw__gpio_8h_aebc30ee2b6816d14b0fda320dad50ef8}
+
+\item 
+\hypertarget{hw__gpio_8h_aa1b849991796b054dbb41183b0707697}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_aa1b849991796b054dbb41183b0707697}
+
+\item 
+\hypertarget{hw__gpio_8h_ab0aefa3974ed8ac1d8dcfc615d51b856}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S21}~(0x00200000u)\label{hw__gpio_8h_ab0aefa3974ed8ac1d8dcfc615d51b856}
+
+\item 
+\hypertarget{hw__gpio_8h_a50a79aa389b35103ffabb8bab229d0ea}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_a50a79aa389b35103ffabb8bab229d0ea}
+
+\item 
+\hypertarget{hw__gpio_8h_a275cbbaec06371da43ea091e4b479539}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S20}~(0x00100000u)\label{hw__gpio_8h_a275cbbaec06371da43ea091e4b479539}
+
+\item 
+\hypertarget{hw__gpio_8h_a18e683d8d649e825d685b9c5e6aaecb4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_a18e683d8d649e825d685b9c5e6aaecb4}
+
+\item 
+\hypertarget{hw__gpio_8h_ac4b513cf2185d9775293d4c0d4f72876}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S19}~(0x00080000u)\label{hw__gpio_8h_ac4b513cf2185d9775293d4c0d4f72876}
+
+\item 
+\hypertarget{hw__gpio_8h_ade5a769df6b19b36b104b2fcb36de156}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_ade5a769df6b19b36b104b2fcb36de156}
+
+\item 
+\hypertarget{hw__gpio_8h_af2dfe004e4a0a52e284060d7801fa0d5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S18}~(0x00040000u)\label{hw__gpio_8h_af2dfe004e4a0a52e284060d7801fa0d5}
+
+\item 
+\hypertarget{hw__gpio_8h_aff9436e9497a07e4fd9e7010b80c345a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_aff9436e9497a07e4fd9e7010b80c345a}
+
+\item 
+\hypertarget{hw__gpio_8h_a2cbcbc50fb1eee62067f2f1b94457a05}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S17}~(0x00020000u)\label{hw__gpio_8h_a2cbcbc50fb1eee62067f2f1b94457a05}
+
+\item 
+\hypertarget{hw__gpio_8h_a4857dee4ebf97d047b910690bb8bdc4b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a4857dee4ebf97d047b910690bb8bdc4b}
+
+\item 
+\hypertarget{hw__gpio_8h_a4cdfb50debd1480ceeff0915c9302111}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S16}~(0x00010000u)\label{hw__gpio_8h_a4cdfb50debd1480ceeff0915c9302111}
+
+\item 
+\hypertarget{hw__gpio_8h_adf4d16484573673e6d6fc4e24e8bab15}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_adf4d16484573673e6d6fc4e24e8bab15}
+
+\item 
+\hypertarget{hw__gpio_8h_a7ad28b3dc3ca2e496cc31cc60b553dff}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S15}~(0x00008000u)\label{hw__gpio_8h_a7ad28b3dc3ca2e496cc31cc60b553dff}
+
+\item 
+\hypertarget{hw__gpio_8h_a9c4e7a680deb017ba5f5488790c6577f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_a9c4e7a680deb017ba5f5488790c6577f}
+
+\item 
+\hypertarget{hw__gpio_8h_a61cbd70b8efa5594c3f078706fd4beee}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S14}~(0x00004000u)\label{hw__gpio_8h_a61cbd70b8efa5594c3f078706fd4beee}
+
+\item 
+\hypertarget{hw__gpio_8h_a78fcde07f341be51c80116062ef25a7d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a78fcde07f341be51c80116062ef25a7d}
+
+\item 
+\hypertarget{hw__gpio_8h_a4c08f143403032e6cb9d2e3020633dc5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S13}~(0x00002000u)\label{hw__gpio_8h_a4c08f143403032e6cb9d2e3020633dc5}
+
+\item 
+\hypertarget{hw__gpio_8h_a4eed7c0e3f2782ef39ce298d82dd0bdd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_a4eed7c0e3f2782ef39ce298d82dd0bdd}
+
+\item 
+\hypertarget{hw__gpio_8h_aefc597fdc51bed8065769c9b43d1a8c5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S12}~(0x00001000u)\label{hw__gpio_8h_aefc597fdc51bed8065769c9b43d1a8c5}
+
+\item 
+\hypertarget{hw__gpio_8h_a47484104b686086c48b0adec505a5dc3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a47484104b686086c48b0adec505a5dc3}
+
+\item 
+\hypertarget{hw__gpio_8h_a7c1dd828451a285085d0c5a5ec74ca47}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S11}~(0x00000800u)\label{hw__gpio_8h_a7c1dd828451a285085d0c5a5ec74ca47}
+
+\item 
+\hypertarget{hw__gpio_8h_a3a7955ccf73729e174d11e4524756b82}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_a3a7955ccf73729e174d11e4524756b82}
+
+\item 
+\hypertarget{hw__gpio_8h_a660271ece960a46dd4088e430a97aa6c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S10}~(0x00000400u)\label{hw__gpio_8h_a660271ece960a46dd4088e430a97aa6c}
+
+\item 
+\hypertarget{hw__gpio_8h_a8ddd4433a4ae23e3f3141b2b7505ace9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a8ddd4433a4ae23e3f3141b2b7505ace9}
+
+\item 
+\hypertarget{hw__gpio_8h_a2ec894a365e1d3f2204c93f3084ad1ff}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S9}~(0x00000200u)\label{hw__gpio_8h_a2ec894a365e1d3f2204c93f3084ad1ff}
+
+\item 
+\hypertarget{hw__gpio_8h_a71c1df9c6acc560ecb4c025677b7c669}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_a71c1df9c6acc560ecb4c025677b7c669}
+
+\item 
+\hypertarget{hw__gpio_8h_ac2875bb90f1cf3cf32f0cdface1fb3a0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S8}~(0x00000100u)\label{hw__gpio_8h_ac2875bb90f1cf3cf32f0cdface1fb3a0}
+
+\item 
+\hypertarget{hw__gpio_8h_ad8026a1fee0efe6b03c6a7d0f59f3c26}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_ad8026a1fee0efe6b03c6a7d0f59f3c26}
+
+\item 
+\hypertarget{hw__gpio_8h_a766a6b291e79d43b45c024ba6921fcfc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S7}~(0x00000080u)\label{hw__gpio_8h_a766a6b291e79d43b45c024ba6921fcfc}
+
+\item 
+\hypertarget{hw__gpio_8h_a1adcca332b8e7b59173eef578fecf2f9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_a1adcca332b8e7b59173eef578fecf2f9}
+
+\item 
+\hypertarget{hw__gpio_8h_a4cb31ecdab8388827b091d74e265a77e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S6}~(0x00000040u)\label{hw__gpio_8h_a4cb31ecdab8388827b091d74e265a77e}
+
+\item 
+\hypertarget{hw__gpio_8h_a4aab86312f6a8b57f1d4b0043942873b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a4aab86312f6a8b57f1d4b0043942873b}
+
+\item 
+\hypertarget{hw__gpio_8h_a750c9271f48cdade530be0391cd5f609}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S5}~(0x00000020u)\label{hw__gpio_8h_a750c9271f48cdade530be0391cd5f609}
+
+\item 
+\hypertarget{hw__gpio_8h_a11b36a4206a28c411f5eba8976c0d0e4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a11b36a4206a28c411f5eba8976c0d0e4}
+
+\item 
+\hypertarget{hw__gpio_8h_a837a04427f4462b3a330b0c86a268ceb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S4}~(0x00000010u)\label{hw__gpio_8h_a837a04427f4462b3a330b0c86a268ceb}
+
+\item 
+\hypertarget{hw__gpio_8h_a6668ac421521be5d7719fbc704a7e96f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a6668ac421521be5d7719fbc704a7e96f}
+
+\item 
+\hypertarget{hw__gpio_8h_aaf700e2dee075a975e83c509f9c5f179}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S3}~(0x00000008u)\label{hw__gpio_8h_aaf700e2dee075a975e83c509f9c5f179}
+
+\item 
+\hypertarget{hw__gpio_8h_adec1e56276b5defbb84ea956e69ed3bc}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_adec1e56276b5defbb84ea956e69ed3bc}
+
+\item 
+\hypertarget{hw__gpio_8h_a3f6a81f442caf25eb479aeb2caef6e8a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S2}~(0x00000004u)\label{hw__gpio_8h_a3f6a81f442caf25eb479aeb2caef6e8a}
+
+\item 
+\hypertarget{hw__gpio_8h_ab1d8af4b7a890b113161f6f9e25eb941}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_ab1d8af4b7a890b113161f6f9e25eb941}
+
+\item 
+\hypertarget{hw__gpio_8h_a9b4c895c7aff415af1f6e41ebfaafc19}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S1}~(0x00000002u)\label{hw__gpio_8h_a9b4c895c7aff415af1f6e41ebfaafc19}
+
+\item 
+\hypertarget{hw__gpio_8h_a2f67b49b03bf484ce989e0b0a9614c28}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_a2f67b49b03bf484ce989e0b0a9614c28}
+
+\item 
+\hypertarget{hw__gpio_8h_a71409da0243452ec2cdfbcad1320eb2d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S0}~(0x00000001u)\label{hw__gpio_8h_a71409da0243452ec2cdfbcad1320eb2d}
+
+\item 
+\hypertarget{hw__gpio_8h_a4d3402d4d46031323433e5ceebb76fa0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+R\+I\+S\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+R\+I\+S0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a4d3402d4d46031323433e5ceebb76fa0}
+
+\item 
+\hypertarget{hw__gpio_8h_ad810e4c3bc86c61b8722eb377e25bbfb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L31}~(0x80000000u)\label{hw__gpio_8h_ad810e4c3bc86c61b8722eb377e25bbfb}
+
+\item 
+\hypertarget{hw__gpio_8h_ad01bb4e208584e31a84d4aec55cfe1ac}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_ad01bb4e208584e31a84d4aec55cfe1ac}
+
+\item 
+\hypertarget{hw__gpio_8h_a2e2bbfae0eb5ac8eee6898c81106a423}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L30}~(0x40000000u)\label{hw__gpio_8h_a2e2bbfae0eb5ac8eee6898c81106a423}
+
+\item 
+\hypertarget{hw__gpio_8h_a2092aea33d5ee8ea9372e46c486c902c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a2092aea33d5ee8ea9372e46c486c902c}
+
+\item 
+\hypertarget{hw__gpio_8h_a775150f53af369d9564fd36ad6b09968}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L29}~(0x20000000u)\label{hw__gpio_8h_a775150f53af369d9564fd36ad6b09968}
+
+\item 
+\hypertarget{hw__gpio_8h_a8c0c5a55fa3f19066531664a0489756c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a8c0c5a55fa3f19066531664a0489756c}
+
+\item 
+\hypertarget{hw__gpio_8h_ac509def5f11f0414529d9f17720b759a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L28}~(0x10000000u)\label{hw__gpio_8h_ac509def5f11f0414529d9f17720b759a}
+
+\item 
+\hypertarget{hw__gpio_8h_a2de8c575c92c41bea2e886b4718fe452}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a2de8c575c92c41bea2e886b4718fe452}
+
+\item 
+\hypertarget{hw__gpio_8h_adfa32086cad20e0b0ecc00540c7dc358}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L27}~(0x08000000u)\label{hw__gpio_8h_adfa32086cad20e0b0ecc00540c7dc358}
+
+\item 
+\hypertarget{hw__gpio_8h_ae481884d181717b0e95d04ded79a3b20}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_ae481884d181717b0e95d04ded79a3b20}
+
+\item 
+\hypertarget{hw__gpio_8h_ad93176aa11c017800e35b94af1c96b36}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L26}~(0x04000000u)\label{hw__gpio_8h_ad93176aa11c017800e35b94af1c96b36}
+
+\item 
+\hypertarget{hw__gpio_8h_aad5de2ff57184a89b06e9b5c0563c629}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_aad5de2ff57184a89b06e9b5c0563c629}
+
+\item 
+\hypertarget{hw__gpio_8h_a6e6e14eb734279d7c9a49746ddb21eec}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L25}~(0x02000000u)\label{hw__gpio_8h_a6e6e14eb734279d7c9a49746ddb21eec}
+
+\item 
+\hypertarget{hw__gpio_8h_a2c3a8c39b77461f33b1202ea56b0fdee}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_a2c3a8c39b77461f33b1202ea56b0fdee}
+
+\item 
+\hypertarget{hw__gpio_8h_afbd36e1152eb03ceba5dec57b8dc3513}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L24}~(0x01000000u)\label{hw__gpio_8h_afbd36e1152eb03ceba5dec57b8dc3513}
+
+\item 
+\hypertarget{hw__gpio_8h_a4203e607c69221d0b80bbf71dca6a4a5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_a4203e607c69221d0b80bbf71dca6a4a5}
+
+\item 
+\hypertarget{hw__gpio_8h_a4157f0c2583383f475b3ab01c1aeb3a1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L23}~(0x00800000u)\label{hw__gpio_8h_a4157f0c2583383f475b3ab01c1aeb3a1}
+
+\item 
+\hypertarget{hw__gpio_8h_a8176ca8e62c89c255b74f45aa079aee8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_a8176ca8e62c89c255b74f45aa079aee8}
+
+\item 
+\hypertarget{hw__gpio_8h_a4a3af2f6f78b06426b642c3202c9ead6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L22}~(0x00400000u)\label{hw__gpio_8h_a4a3af2f6f78b06426b642c3202c9ead6}
+
+\item 
+\hypertarget{hw__gpio_8h_a624a0171ca265124f23dc2b3a73383ae}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a624a0171ca265124f23dc2b3a73383ae}
+
+\item 
+\hypertarget{hw__gpio_8h_adde4ba4696234893b3d13e57a4239749}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L21}~(0x00200000u)\label{hw__gpio_8h_adde4ba4696234893b3d13e57a4239749}
+
+\item 
+\hypertarget{hw__gpio_8h_a3f1cd0b5a5fa3afaa647e7ebb2db5c32}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_a3f1cd0b5a5fa3afaa647e7ebb2db5c32}
+
+\item 
+\hypertarget{hw__gpio_8h_a90554756b4c7086905f610d835a9af3f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L20}~(0x00100000u)\label{hw__gpio_8h_a90554756b4c7086905f610d835a9af3f}
+
+\item 
+\hypertarget{hw__gpio_8h_ac1192e9b9c9b2a0f23cd9b455ea8d2a6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_ac1192e9b9c9b2a0f23cd9b455ea8d2a6}
+
+\item 
+\hypertarget{hw__gpio_8h_a601a7766a33bbbd5a9ac8bdfe5abf5e4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L19}~(0x00080000u)\label{hw__gpio_8h_a601a7766a33bbbd5a9ac8bdfe5abf5e4}
+
+\item 
+\hypertarget{hw__gpio_8h_ab8e2dc1d25bcf985080d300e8823368e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_ab8e2dc1d25bcf985080d300e8823368e}
+
+\item 
+\hypertarget{hw__gpio_8h_a80454bd7bccbbaa0afebda89f1af226e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L18}~(0x00040000u)\label{hw__gpio_8h_a80454bd7bccbbaa0afebda89f1af226e}
+
+\item 
+\hypertarget{hw__gpio_8h_a0015a8b7a7becf46f5362d226e389b49}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_a0015a8b7a7becf46f5362d226e389b49}
+
+\item 
+\hypertarget{hw__gpio_8h_a6e0aff831de076b0a0f8a581c9a318eb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L17}~(0x00020000u)\label{hw__gpio_8h_a6e0aff831de076b0a0f8a581c9a318eb}
+
+\item 
+\hypertarget{hw__gpio_8h_a1ed5a1ee280e91bb129d095aa0475674}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a1ed5a1ee280e91bb129d095aa0475674}
+
+\item 
+\hypertarget{hw__gpio_8h_a49f08c3d516da25e2bc37a2eca1e444d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L16}~(0x00010000u)\label{hw__gpio_8h_a49f08c3d516da25e2bc37a2eca1e444d}
+
+\item 
+\hypertarget{hw__gpio_8h_ab315bc5b8ad2d6f317bee4506bc49b4d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_ab315bc5b8ad2d6f317bee4506bc49b4d}
+
+\item 
+\hypertarget{hw__gpio_8h_a316e01e4197b590407ca67fd9589aa04}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L15}~(0x00008000u)\label{hw__gpio_8h_a316e01e4197b590407ca67fd9589aa04}
+
+\item 
+\hypertarget{hw__gpio_8h_acd20537345849b90c1bf7dc4b7520e3a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_acd20537345849b90c1bf7dc4b7520e3a}
+
+\item 
+\hypertarget{hw__gpio_8h_a8c4abecdec0dcaf92a4e1cff42c78825}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L14}~(0x00004000u)\label{hw__gpio_8h_a8c4abecdec0dcaf92a4e1cff42c78825}
+
+\item 
+\hypertarget{hw__gpio_8h_a01081af419aa316ed84a956557534d8e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a01081af419aa316ed84a956557534d8e}
+
+\item 
+\hypertarget{hw__gpio_8h_acbe9c5bc956aebc333a8256fd011ca98}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L13}~(0x00002000u)\label{hw__gpio_8h_acbe9c5bc956aebc333a8256fd011ca98}
+
+\item 
+\hypertarget{hw__gpio_8h_a2515d70802a36d19d92ffcc1797847e9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_a2515d70802a36d19d92ffcc1797847e9}
+
+\item 
+\hypertarget{hw__gpio_8h_af22f73bf3345fb92caee4d4cdb9c0306}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L12}~(0x00001000u)\label{hw__gpio_8h_af22f73bf3345fb92caee4d4cdb9c0306}
+
+\item 
+\hypertarget{hw__gpio_8h_aff7573899f8434c85d19f2e72e491fe3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_aff7573899f8434c85d19f2e72e491fe3}
+
+\item 
+\hypertarget{hw__gpio_8h_ad6277268dc41bbcc0c00a0b82c78f1aa}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L11}~(0x00000800u)\label{hw__gpio_8h_ad6277268dc41bbcc0c00a0b82c78f1aa}
+
+\item 
+\hypertarget{hw__gpio_8h_ae764169f118040606be126423c7db461}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_ae764169f118040606be126423c7db461}
+
+\item 
+\hypertarget{hw__gpio_8h_a5bf33470f05640a2507b164d75b7fcd7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L10}~(0x00000400u)\label{hw__gpio_8h_a5bf33470f05640a2507b164d75b7fcd7}
+
+\item 
+\hypertarget{hw__gpio_8h_a7430e7bd3d2c3e058c941a42f3b11bc0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a7430e7bd3d2c3e058c941a42f3b11bc0}
+
+\item 
+\hypertarget{hw__gpio_8h_ade1543b7eea93d5b951191047929d379}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L9}~(0x00000200u)\label{hw__gpio_8h_ade1543b7eea93d5b951191047929d379}
+
+\item 
+\hypertarget{hw__gpio_8h_a65eeb0834a451f731cbb37c0d9b9bde2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_a65eeb0834a451f731cbb37c0d9b9bde2}
+
+\item 
+\hypertarget{hw__gpio_8h_a9fcf8b65c63c41c6f5e74a8af6d2cc41}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L8}~(0x00000100u)\label{hw__gpio_8h_a9fcf8b65c63c41c6f5e74a8af6d2cc41}
+
+\item 
+\hypertarget{hw__gpio_8h_ac4e9d3d347e6bc669e743c1cf59d12ca}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_ac4e9d3d347e6bc669e743c1cf59d12ca}
+
+\item 
+\hypertarget{hw__gpio_8h_aba909c7878c3af48e9f82163f0b04bfb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L7}~(0x00000080u)\label{hw__gpio_8h_aba909c7878c3af48e9f82163f0b04bfb}
+
+\item 
+\hypertarget{hw__gpio_8h_a0f9f6ff244d14c0735f00526f0d6a139}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_a0f9f6ff244d14c0735f00526f0d6a139}
+
+\item 
+\hypertarget{hw__gpio_8h_a09df8ccb2f8f9e0a7e2f37a4f860aa1e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L6}~(0x00000040u)\label{hw__gpio_8h_a09df8ccb2f8f9e0a7e2f37a4f860aa1e}
+
+\item 
+\hypertarget{hw__gpio_8h_a66d6c55ca302d2632f9b7164f49c00ca}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a66d6c55ca302d2632f9b7164f49c00ca}
+
+\item 
+\hypertarget{hw__gpio_8h_af934c1cf2564e648b20a898e7d27344e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L5}~(0x00000020u)\label{hw__gpio_8h_af934c1cf2564e648b20a898e7d27344e}
+
+\item 
+\hypertarget{hw__gpio_8h_a1502a8dd3a193627cc8d673afebde0df}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a1502a8dd3a193627cc8d673afebde0df}
+
+\item 
+\hypertarget{hw__gpio_8h_abef8c7905a30274117dfbbbbe3f21bce}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L4}~(0x00000010u)\label{hw__gpio_8h_abef8c7905a30274117dfbbbbe3f21bce}
+
+\item 
+\hypertarget{hw__gpio_8h_a58491588fabca60cc6b22ecbf1c9c62d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a58491588fabca60cc6b22ecbf1c9c62d}
+
+\item 
+\hypertarget{hw__gpio_8h_ad6af2992a4ad0609f9ef182be30de83b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L3}~(0x00000008u)\label{hw__gpio_8h_ad6af2992a4ad0609f9ef182be30de83b}
+
+\item 
+\hypertarget{hw__gpio_8h_a44adcdf38e0cc38ad01a6106abcca212}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a44adcdf38e0cc38ad01a6106abcca212}
+
+\item 
+\hypertarget{hw__gpio_8h_a863d918842b88bb8b52888c4e3c9f1bb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L2}~(0x00000004u)\label{hw__gpio_8h_a863d918842b88bb8b52888c4e3c9f1bb}
+
+\item 
+\hypertarget{hw__gpio_8h_aa34173f3138eab2f3f623d52d36ae033}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_aa34173f3138eab2f3f623d52d36ae033}
+
+\item 
+\hypertarget{hw__gpio_8h_a56a18b6a41bd3698639ab6ccfa290bd4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L1}~(0x00000002u)\label{hw__gpio_8h_a56a18b6a41bd3698639ab6ccfa290bd4}
+
+\item 
+\hypertarget{hw__gpio_8h_af647fe2ea0e4e5579299ba59c55e2eb6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_af647fe2ea0e4e5579299ba59c55e2eb6}
+
+\item 
+\hypertarget{hw__gpio_8h_a52cb3f09c1f1c9b45b378c376334abc7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L0}~(0x00000001u)\label{hw__gpio_8h_a52cb3f09c1f1c9b45b378c376334abc7}
+
+\item 
+\hypertarget{hw__gpio_8h_a242d93e891d63905798215b6fcf71793}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+S\+E\+T\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+S\+E\+T\+F\+A\+L0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a242d93e891d63905798215b6fcf71793}
+
+\item 
+\hypertarget{hw__gpio_8h_ae227c9609c9ca78fa42d38ec6eee6e2b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L31}~(0x80000000u)\label{hw__gpio_8h_ae227c9609c9ca78fa42d38ec6eee6e2b}
+
+\item 
+\hypertarget{hw__gpio_8h_a7586de554c544ce8e70eb492547a3ba9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a7586de554c544ce8e70eb492547a3ba9}
+
+\item 
+\hypertarget{hw__gpio_8h_a2b10db174cac5d153aaf37e5e49fbe07}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L30}~(0x40000000u)\label{hw__gpio_8h_a2b10db174cac5d153aaf37e5e49fbe07}
+
+\item 
+\hypertarget{hw__gpio_8h_a8f0994fd1d6c193a60f9ec70da054839}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a8f0994fd1d6c193a60f9ec70da054839}
+
+\item 
+\hypertarget{hw__gpio_8h_a8802da3f84ab99d3819c1c70ae7b79d5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L29}~(0x20000000u)\label{hw__gpio_8h_a8802da3f84ab99d3819c1c70ae7b79d5}
+
+\item 
+\hypertarget{hw__gpio_8h_a87b6151c8ef38439a22284334b90ba47}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a87b6151c8ef38439a22284334b90ba47}
+
+\item 
+\hypertarget{hw__gpio_8h_aed5a2a09400d72f8e66c89c1a0317a56}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L28}~(0x10000000u)\label{hw__gpio_8h_aed5a2a09400d72f8e66c89c1a0317a56}
+
+\item 
+\hypertarget{hw__gpio_8h_ad613539761df4e86e95e938aaec60231}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_ad613539761df4e86e95e938aaec60231}
+
+\item 
+\hypertarget{hw__gpio_8h_ad3bb331284b2452e9f4608ada3510d02}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L27}~(0x08000000u)\label{hw__gpio_8h_ad3bb331284b2452e9f4608ada3510d02}
+
+\item 
+\hypertarget{hw__gpio_8h_a33bb88aeb18b4b03538d44b1d3387df2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_a33bb88aeb18b4b03538d44b1d3387df2}
+
+\item 
+\hypertarget{hw__gpio_8h_aca71d970603f8491f13ad0b1eb31b52e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L26}~(0x04000000u)\label{hw__gpio_8h_aca71d970603f8491f13ad0b1eb31b52e}
+
+\item 
+\hypertarget{hw__gpio_8h_a6bcb79f0de0187075354faa32915c9e3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_a6bcb79f0de0187075354faa32915c9e3}
+
+\item 
+\hypertarget{hw__gpio_8h_afb2aee17226d7ee5d567a32c3af3d1f3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L25}~(0x02000000u)\label{hw__gpio_8h_afb2aee17226d7ee5d567a32c3af3d1f3}
+
+\item 
+\hypertarget{hw__gpio_8h_a29184499a1503c37bcf547b8e2cad899}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_a29184499a1503c37bcf547b8e2cad899}
+
+\item 
+\hypertarget{hw__gpio_8h_a9f80acce741c39d40661696c8df87b3b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L24}~(0x01000000u)\label{hw__gpio_8h_a9f80acce741c39d40661696c8df87b3b}
+
+\item 
+\hypertarget{hw__gpio_8h_a23dd60b4d439b3a892ae28f56e945618}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_a23dd60b4d439b3a892ae28f56e945618}
+
+\item 
+\hypertarget{hw__gpio_8h_a3979144843cf05a7a963f5969a6dd12e}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L23}~(0x00800000u)\label{hw__gpio_8h_a3979144843cf05a7a963f5969a6dd12e}
+
+\item 
+\hypertarget{hw__gpio_8h_a2de6772d6e8194a79afad9198d146d7d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_a2de6772d6e8194a79afad9198d146d7d}
+
+\item 
+\hypertarget{hw__gpio_8h_a510f967dfea76309a1a21d8a7f608224}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L22}~(0x00400000u)\label{hw__gpio_8h_a510f967dfea76309a1a21d8a7f608224}
+
+\item 
+\hypertarget{hw__gpio_8h_a7a86542666f6a496e793fab56aa5f0d2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a7a86542666f6a496e793fab56aa5f0d2}
+
+\item 
+\hypertarget{hw__gpio_8h_a9597664dcdb07a1fa355818afa56da72}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L21}~(0x00200000u)\label{hw__gpio_8h_a9597664dcdb07a1fa355818afa56da72}
+
+\item 
+\hypertarget{hw__gpio_8h_a32fab727e287655c202cf6379c1a2338}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_a32fab727e287655c202cf6379c1a2338}
+
+\item 
+\hypertarget{hw__gpio_8h_aaff24400f3ca0b11b6f7467c2536273d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L20}~(0x00100000u)\label{hw__gpio_8h_aaff24400f3ca0b11b6f7467c2536273d}
+
+\item 
+\hypertarget{hw__gpio_8h_ac163198e075a1fc908818fb8bb2b40bb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_ac163198e075a1fc908818fb8bb2b40bb}
+
+\item 
+\hypertarget{hw__gpio_8h_a550a05e5ffba4dceafcbafe07759b473}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L19}~(0x00080000u)\label{hw__gpio_8h_a550a05e5ffba4dceafcbafe07759b473}
+
+\item 
+\hypertarget{hw__gpio_8h_aa77f127c1d275e9cfe70003acc59ad11}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_aa77f127c1d275e9cfe70003acc59ad11}
+
+\item 
+\hypertarget{hw__gpio_8h_a36d3340e2a6da100f25d1295776a0ea2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L18}~(0x00040000u)\label{hw__gpio_8h_a36d3340e2a6da100f25d1295776a0ea2}
+
+\item 
+\hypertarget{hw__gpio_8h_a3729de023c73e0140524d33b230569b5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_a3729de023c73e0140524d33b230569b5}
+
+\item 
+\hypertarget{hw__gpio_8h_a382591189b8350536d5d65be60626a1b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L17}~(0x00020000u)\label{hw__gpio_8h_a382591189b8350536d5d65be60626a1b}
+
+\item 
+\hypertarget{hw__gpio_8h_a65a7782a709bf80077229b901a928039}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a65a7782a709bf80077229b901a928039}
+
+\item 
+\hypertarget{hw__gpio_8h_a5810e9d3842861ce5d9105a52c826b2c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L16}~(0x00010000u)\label{hw__gpio_8h_a5810e9d3842861ce5d9105a52c826b2c}
+
+\item 
+\hypertarget{hw__gpio_8h_a9a486b452fa1faf588d9f821e89effff}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_a9a486b452fa1faf588d9f821e89effff}
+
+\item 
+\hypertarget{hw__gpio_8h_aa929fbfee22397e3359d5ac9e79d4d10}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L15}~(0x00008000u)\label{hw__gpio_8h_aa929fbfee22397e3359d5ac9e79d4d10}
+
+\item 
+\hypertarget{hw__gpio_8h_aaa072fd1943b26545548036a39a0a085}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_aaa072fd1943b26545548036a39a0a085}
+
+\item 
+\hypertarget{hw__gpio_8h_a124df0c7bfed1a9519b73b38590c85a2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L14}~(0x00004000u)\label{hw__gpio_8h_a124df0c7bfed1a9519b73b38590c85a2}
+
+\item 
+\hypertarget{hw__gpio_8h_a20b3fd9a7b498017d35769dca01b5ba0}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a20b3fd9a7b498017d35769dca01b5ba0}
+
+\item 
+\hypertarget{hw__gpio_8h_a556221a42dfacdca443b8a10f54d7914}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L13}~(0x00002000u)\label{hw__gpio_8h_a556221a42dfacdca443b8a10f54d7914}
+
+\item 
+\hypertarget{hw__gpio_8h_af6a3ffe9612e119311944ee27f1e9fbe}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_af6a3ffe9612e119311944ee27f1e9fbe}
+
+\item 
+\hypertarget{hw__gpio_8h_a92b297dcce5f39d1c83721dd1041c9d4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L12}~(0x00001000u)\label{hw__gpio_8h_a92b297dcce5f39d1c83721dd1041c9d4}
+
+\item 
+\hypertarget{hw__gpio_8h_a7500a80de1dc1d1beac3ffd0d0dad8df}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a7500a80de1dc1d1beac3ffd0d0dad8df}
+
+\item 
+\hypertarget{hw__gpio_8h_aae0c6e07b47fd344f6d7858e4eb19f13}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L11}~(0x00000800u)\label{hw__gpio_8h_aae0c6e07b47fd344f6d7858e4eb19f13}
+
+\item 
+\hypertarget{hw__gpio_8h_ac1b645ac67c4023dfbc4ea718b5a686d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_ac1b645ac67c4023dfbc4ea718b5a686d}
+
+\item 
+\hypertarget{hw__gpio_8h_aefaac4bbae8a463e3b88d28ba95414cd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L10}~(0x00000400u)\label{hw__gpio_8h_aefaac4bbae8a463e3b88d28ba95414cd}
+
+\item 
+\hypertarget{hw__gpio_8h_a710fc6ed851741e98eb251e26f0a9712}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a710fc6ed851741e98eb251e26f0a9712}
+
+\item 
+\hypertarget{hw__gpio_8h_acc3e3bdc0122de404a16ae02c8625790}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L9}~(0x00000200u)\label{hw__gpio_8h_acc3e3bdc0122de404a16ae02c8625790}
+
+\item 
+\hypertarget{hw__gpio_8h_aa5e9c19e3e7a0fa9f64a2d83cfba4daa}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_aa5e9c19e3e7a0fa9f64a2d83cfba4daa}
+
+\item 
+\hypertarget{hw__gpio_8h_a9d1faead06c3b3cdace22729ca3b7408}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L8}~(0x00000100u)\label{hw__gpio_8h_a9d1faead06c3b3cdace22729ca3b7408}
+
+\item 
+\hypertarget{hw__gpio_8h_ae90970340d67e2f0fe74bb48f366f9e6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_ae90970340d67e2f0fe74bb48f366f9e6}
+
+\item 
+\hypertarget{hw__gpio_8h_ac14551cf041409ab244030cc89c49e3f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L7}~(0x00000080u)\label{hw__gpio_8h_ac14551cf041409ab244030cc89c49e3f}
+
+\item 
+\hypertarget{hw__gpio_8h_ad33bee5a332bc78361759c397a5d6516}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_ad33bee5a332bc78361759c397a5d6516}
+
+\item 
+\hypertarget{hw__gpio_8h_a9905c964640a0033c23d77dc3640951b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L6}~(0x00000040u)\label{hw__gpio_8h_a9905c964640a0033c23d77dc3640951b}
+
+\item 
+\hypertarget{hw__gpio_8h_a3b184bec7b05ae6c93d6f54ad469ce6c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a3b184bec7b05ae6c93d6f54ad469ce6c}
+
+\item 
+\hypertarget{hw__gpio_8h_af8385a84a11c601be7c6f1c577372b76}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L5}~(0x00000020u)\label{hw__gpio_8h_af8385a84a11c601be7c6f1c577372b76}
+
+\item 
+\hypertarget{hw__gpio_8h_a8273549c595283d5642160273ffcaa09}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a8273549c595283d5642160273ffcaa09}
+
+\item 
+\hypertarget{hw__gpio_8h_a6354a782fddbf306cc22e7d7cbe1b166}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L4}~(0x00000010u)\label{hw__gpio_8h_a6354a782fddbf306cc22e7d7cbe1b166}
+
+\item 
+\hypertarget{hw__gpio_8h_a5dada9e22503b43aeb1d51b8d92b284c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_a5dada9e22503b43aeb1d51b8d92b284c}
+
+\item 
+\hypertarget{hw__gpio_8h_a15fe92404e2275682b33ce142e9d8b43}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L3}~(0x00000008u)\label{hw__gpio_8h_a15fe92404e2275682b33ce142e9d8b43}
+
+\item 
+\hypertarget{hw__gpio_8h_aed98a4618e87477477b5d146320b14aa}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_aed98a4618e87477477b5d146320b14aa}
+
+\item 
+\hypertarget{hw__gpio_8h_a53fe1692748cda2b9764603e4ef6ad99}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L2}~(0x00000004u)\label{hw__gpio_8h_a53fe1692748cda2b9764603e4ef6ad99}
+
+\item 
+\hypertarget{hw__gpio_8h_a8d27dd0eab73f4b844a0e3f85d1ac1b1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_a8d27dd0eab73f4b844a0e3f85d1ac1b1}
+
+\item 
+\hypertarget{hw__gpio_8h_a0e0bac8556c70c3ff5e3fa29e7a587ce}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L1}~(0x00000002u)\label{hw__gpio_8h_a0e0bac8556c70c3ff5e3fa29e7a587ce}
+
+\item 
+\hypertarget{hw__gpio_8h_a540d93bded97a547d74fa7628028e3bf}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_a540d93bded97a547d74fa7628028e3bf}
+
+\item 
+\hypertarget{hw__gpio_8h_aba2e43db6360d65e9f70607eba89056d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L0}~(0x00000001u)\label{hw__gpio_8h_aba2e43db6360d65e9f70607eba89056d}
+
+\item 
+\hypertarget{hw__gpio_8h_ae242d953b9e2659c01ed5c3dd0fe5757}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+C\+L\+R\+\_\+\+F\+A\+L\+\_\+\+T\+R\+I\+G\+\_\+\+C\+L\+R\+F\+A\+L0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_ae242d953b9e2659c01ed5c3dd0fe5757}
+
+\item 
+\hypertarget{hw__gpio_8h_afc14bdd782a433aa52c565bb7cc75ec7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T31}~(0x80000000u)\label{hw__gpio_8h_afc14bdd782a433aa52c565bb7cc75ec7}
+
+\item 
+\hypertarget{hw__gpio_8h_a982969d541962683e531e9771e25ee5b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T31\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__gpio_8h_a982969d541962683e531e9771e25ee5b}
+
+\item 
+\hypertarget{hw__gpio_8h_a2c701e3f081c928a2871b51065fbea74}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T30}~(0x40000000u)\label{hw__gpio_8h_a2c701e3f081c928a2871b51065fbea74}
+
+\item 
+\hypertarget{hw__gpio_8h_a15c53933077e15b957b2ae7e3523e71d}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T30\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__gpio_8h_a15c53933077e15b957b2ae7e3523e71d}
+
+\item 
+\hypertarget{hw__gpio_8h_a5d2be0f1716a75f6c2698a57e65032ca}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T29}~(0x20000000u)\label{hw__gpio_8h_a5d2be0f1716a75f6c2698a57e65032ca}
+
+\item 
+\hypertarget{hw__gpio_8h_a6e8a5cdc79c896db6ba8b3bed795bc21}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T29\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__gpio_8h_a6e8a5cdc79c896db6ba8b3bed795bc21}
+
+\item 
+\hypertarget{hw__gpio_8h_a9a422ed08becc976bdec1f658890dd78}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T28}~(0x10000000u)\label{hw__gpio_8h_a9a422ed08becc976bdec1f658890dd78}
+
+\item 
+\hypertarget{hw__gpio_8h_a7e413d2227946d61474c7ed57c220e8f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T28\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__gpio_8h_a7e413d2227946d61474c7ed57c220e8f}
+
+\item 
+\hypertarget{hw__gpio_8h_a4ecab04b8fd434b386bbf0a4b3351bd4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T27}~(0x08000000u)\label{hw__gpio_8h_a4ecab04b8fd434b386bbf0a4b3351bd4}
+
+\item 
+\hypertarget{hw__gpio_8h_aab4c7c90300108f3ff7ee7f85ebbe7b5}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T27\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__gpio_8h_aab4c7c90300108f3ff7ee7f85ebbe7b5}
+
+\item 
+\hypertarget{hw__gpio_8h_a8ea6a9250273d3f3f77d559a4d954d30}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T26}~(0x04000000u)\label{hw__gpio_8h_a8ea6a9250273d3f3f77d559a4d954d30}
+
+\item 
+\hypertarget{hw__gpio_8h_ab8eb03212d769a4a36cbd178d0e019a7}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T26\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__gpio_8h_ab8eb03212d769a4a36cbd178d0e019a7}
+
+\item 
+\hypertarget{hw__gpio_8h_afc324873503f58d6bd692a897ada0dfd}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T25}~(0x02000000u)\label{hw__gpio_8h_afc324873503f58d6bd692a897ada0dfd}
+
+\item 
+\hypertarget{hw__gpio_8h_a29c37f75b83ad9476e0a780b9ba7c711}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T25\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__gpio_8h_a29c37f75b83ad9476e0a780b9ba7c711}
+
+\item 
+\hypertarget{hw__gpio_8h_ae834e9962bf6faf285b4f44fb50b451c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T24}~(0x01000000u)\label{hw__gpio_8h_ae834e9962bf6faf285b4f44fb50b451c}
+
+\item 
+\hypertarget{hw__gpio_8h_aaa5b508aefef5e416de231719478ed48}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T24\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__gpio_8h_aaa5b508aefef5e416de231719478ed48}
+
+\item 
+\hypertarget{hw__gpio_8h_a4cba8991a3802287acccf8968b231ae8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T23}~(0x00800000u)\label{hw__gpio_8h_a4cba8991a3802287acccf8968b231ae8}
+
+\item 
+\hypertarget{hw__gpio_8h_a0ef26941f09487a40a4ff8ac8b5167ae}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T23\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__gpio_8h_a0ef26941f09487a40a4ff8ac8b5167ae}
+
+\item 
+\hypertarget{hw__gpio_8h_a53182e4f811d266ff9d702e732725a43}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T22}~(0x00400000u)\label{hw__gpio_8h_a53182e4f811d266ff9d702e732725a43}
+
+\item 
+\hypertarget{hw__gpio_8h_a5f4905f2fcf3526677377554b92cbbe2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T22\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__gpio_8h_a5f4905f2fcf3526677377554b92cbbe2}
+
+\item 
+\hypertarget{hw__gpio_8h_a2e97574a825ea480c21126afcc824f08}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T21}~(0x00200000u)\label{hw__gpio_8h_a2e97574a825ea480c21126afcc824f08}
+
+\item 
+\hypertarget{hw__gpio_8h_a4d946c6b31989342c67aae48aa0d26a3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T21\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__gpio_8h_a4d946c6b31989342c67aae48aa0d26a3}
+
+\item 
+\hypertarget{hw__gpio_8h_a0b261efe97b08542455c9a67327f1ba4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T20}~(0x00100000u)\label{hw__gpio_8h_a0b261efe97b08542455c9a67327f1ba4}
+
+\item 
+\hypertarget{hw__gpio_8h_a9aa26439511a33a6f940892638ab2426}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T20\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__gpio_8h_a9aa26439511a33a6f940892638ab2426}
+
+\item 
+\hypertarget{hw__gpio_8h_aacdb82ba2174beba524faad286779c4c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T19}~(0x00080000u)\label{hw__gpio_8h_aacdb82ba2174beba524faad286779c4c}
+
+\item 
+\hypertarget{hw__gpio_8h_a17ac2064572f8a2f48473a002bb5ebb1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T19\+\_\+\+S\+H\+I\+F\+T}~(0x00000013u)\label{hw__gpio_8h_a17ac2064572f8a2f48473a002bb5ebb1}
+
+\item 
+\hypertarget{hw__gpio_8h_a1c3d33bbddd27c9149ee34d38f85e6e4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T18}~(0x00040000u)\label{hw__gpio_8h_a1c3d33bbddd27c9149ee34d38f85e6e4}
+
+\item 
+\hypertarget{hw__gpio_8h_a86eccf58af2017a59af360e3cb7d81a6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T18\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__gpio_8h_a86eccf58af2017a59af360e3cb7d81a6}
+
+\item 
+\hypertarget{hw__gpio_8h_acb6250412ebb8a3d37be39918a8e6edb}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T17}~(0x00020000u)\label{hw__gpio_8h_acb6250412ebb8a3d37be39918a8e6edb}
+
+\item 
+\hypertarget{hw__gpio_8h_a65133e2c4a99eabba07ce42bae0b5876}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T17\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__gpio_8h_a65133e2c4a99eabba07ce42bae0b5876}
+
+\item 
+\hypertarget{hw__gpio_8h_a0792c04757bc1ec896e3802bd005f036}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T16}~(0x00010000u)\label{hw__gpio_8h_a0792c04757bc1ec896e3802bd005f036}
+
+\item 
+\hypertarget{hw__gpio_8h_aa98bc96b3c0b859825d6a5a5996d6a62}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T16\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__gpio_8h_aa98bc96b3c0b859825d6a5a5996d6a62}
+
+\item 
+\hypertarget{hw__gpio_8h_a9d0027e9675dae02a331f89d191cbeb8}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T15}~(0x00008000u)\label{hw__gpio_8h_a9d0027e9675dae02a331f89d191cbeb8}
+
+\item 
+\hypertarget{hw__gpio_8h_aea40fe19f1928b2c3ea6a270238a0438}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T15\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Fu)\label{hw__gpio_8h_aea40fe19f1928b2c3ea6a270238a0438}
+
+\item 
+\hypertarget{hw__gpio_8h_a57fee46b5fcb65822403172ea3648d2f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T14}~(0x00004000u)\label{hw__gpio_8h_a57fee46b5fcb65822403172ea3648d2f}
+
+\item 
+\hypertarget{hw__gpio_8h_a8b94b314b5d294c6a73a7d863e9ec6d3}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T14\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Eu)\label{hw__gpio_8h_a8b94b314b5d294c6a73a7d863e9ec6d3}
+
+\item 
+\hypertarget{hw__gpio_8h_ada26436cc5d511c8bf0766e2c10b39c6}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T13}~(0x00002000u)\label{hw__gpio_8h_ada26436cc5d511c8bf0766e2c10b39c6}
+
+\item 
+\hypertarget{hw__gpio_8h_afee15f1738bb1c7ac1519111a0e42c94}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T13\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Du)\label{hw__gpio_8h_afee15f1738bb1c7ac1519111a0e42c94}
+
+\item 
+\hypertarget{hw__gpio_8h_a8e32c01f8d6ecb3de5ecb71afb321240}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T12}~(0x00001000u)\label{hw__gpio_8h_a8e32c01f8d6ecb3de5ecb71afb321240}
+
+\item 
+\hypertarget{hw__gpio_8h_a6b90ad26d474ab5a2ece46786fe28bf2}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T12\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Cu)\label{hw__gpio_8h_a6b90ad26d474ab5a2ece46786fe28bf2}
+
+\item 
+\hypertarget{hw__gpio_8h_a36583422e0a8597bae1427737602c112}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T11}~(0x00000800u)\label{hw__gpio_8h_a36583422e0a8597bae1427737602c112}
+
+\item 
+\hypertarget{hw__gpio_8h_ac5d05d4faf2a144bffbe04f50f1439c1}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T11\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__gpio_8h_ac5d05d4faf2a144bffbe04f50f1439c1}
+
+\item 
+\hypertarget{hw__gpio_8h_a2ad6c716a5618219b9efee30900920ae}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T10}~(0x00000400u)\label{hw__gpio_8h_a2ad6c716a5618219b9efee30900920ae}
+
+\item 
+\hypertarget{hw__gpio_8h_a1b67872d920e6258bbc3844238fad931}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T10\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__gpio_8h_a1b67872d920e6258bbc3844238fad931}
+
+\item 
+\hypertarget{hw__gpio_8h_a478931002ffe53ee1f2359db99ce7613}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T9}~(0x00000200u)\label{hw__gpio_8h_a478931002ffe53ee1f2359db99ce7613}
+
+\item 
+\hypertarget{hw__gpio_8h_a39f6de3c34912b7fe9403ec4f14c2a9a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T9\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__gpio_8h_a39f6de3c34912b7fe9403ec4f14c2a9a}
+
+\item 
+\hypertarget{hw__gpio_8h_acb7cd25dbd0b619752efd973cd744b49}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T8}~(0x00000100u)\label{hw__gpio_8h_acb7cd25dbd0b619752efd973cd744b49}
+
+\item 
+\hypertarget{hw__gpio_8h_abed400faef42be7461a20b0ff47c7274}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T8\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__gpio_8h_abed400faef42be7461a20b0ff47c7274}
+
+\item 
+\hypertarget{hw__gpio_8h_ad5140bfad0dd26ebbd00f1f89e8256e9}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T7}~(0x00000080u)\label{hw__gpio_8h_ad5140bfad0dd26ebbd00f1f89e8256e9}
+
+\item 
+\hypertarget{hw__gpio_8h_ab4b4fcf3f095277ed1c42a1bc1842364}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__gpio_8h_ab4b4fcf3f095277ed1c42a1bc1842364}
+
+\item 
+\hypertarget{hw__gpio_8h_af8e9d9d1530ab33b54175cc2d94f376a}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T6}~(0x00000040u)\label{hw__gpio_8h_af8e9d9d1530ab33b54175cc2d94f376a}
+
+\item 
+\hypertarget{hw__gpio_8h_a2e34145a7dccde858df608b3d7811538}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__gpio_8h_a2e34145a7dccde858df608b3d7811538}
+
+\item 
+\hypertarget{hw__gpio_8h_a9808f26b8df3ae80e83165b140ac135c}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T5}~(0x00000020u)\label{hw__gpio_8h_a9808f26b8df3ae80e83165b140ac135c}
+
+\item 
+\hypertarget{hw__gpio_8h_a009631826053a68b9763bab37d6def04}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__gpio_8h_a009631826053a68b9763bab37d6def04}
+
+\item 
+\hypertarget{hw__gpio_8h_ae2ed8485f2c81a9f2407f6d087180224}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T4}~(0x00000010u)\label{hw__gpio_8h_ae2ed8485f2c81a9f2407f6d087180224}
+
+\item 
+\hypertarget{hw__gpio_8h_aaeb35d82a2be6f36df48657fbc010417}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__gpio_8h_aaeb35d82a2be6f36df48657fbc010417}
+
+\item 
+\hypertarget{hw__gpio_8h_a8635131e7501598c761fd7a941938473}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T3}~(0x00000008u)\label{hw__gpio_8h_a8635131e7501598c761fd7a941938473}
+
+\item 
+\hypertarget{hw__gpio_8h_a9cc9a18eae249b0f7c4e96cfe720d99b}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__gpio_8h_a9cc9a18eae249b0f7c4e96cfe720d99b}
+
+\item 
+\hypertarget{hw__gpio_8h_a19242864d7e780dfdc67a994313ff43f}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T2}~(0x00000004u)\label{hw__gpio_8h_a19242864d7e780dfdc67a994313ff43f}
+
+\item 
+\hypertarget{hw__gpio_8h_ad631e3aa47544ebe521819e6e1fe6201}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__gpio_8h_ad631e3aa47544ebe521819e6e1fe6201}
+
+\item 
+\hypertarget{hw__gpio_8h_a988b37f8b4ae8c8448bc43cbe3f4de33}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T1}~(0x00000002u)\label{hw__gpio_8h_a988b37f8b4ae8c8448bc43cbe3f4de33}
+
+\item 
+\hypertarget{hw__gpio_8h_acf336c7702ac4d1dc21552014745bd85}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__gpio_8h_acf336c7702ac4d1dc21552014745bd85}
+
+\item 
+\hypertarget{hw__gpio_8h_a8f047f4808fc535a9adaa102803ccbe4}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T0}~(0x00000001u)\label{hw__gpio_8h_a8f047f4808fc535a9adaa102803ccbe4}
+
+\item 
+\hypertarget{hw__gpio_8h_a86f7534045dfef9a60e2d6f85963d5ca}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+I\+N\+T\+S\+T\+A\+T\+\_\+\+S\+T\+A\+T0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__gpio_8h_a86f7534045dfef9a60e2d6f85963d5ca}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+G\+P\+I\+O register definitions. 
+

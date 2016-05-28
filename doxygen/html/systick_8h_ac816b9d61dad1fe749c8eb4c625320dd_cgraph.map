@@ -1,0 +1,14 @@
+<map id="systick_init" name="systick_init">
+<area shape="rect" id="node2" href="$timer_8c.html#aed4f606ff688de30d10e0b30eb7b5e21" title="Configures the timer. The timer can be configured in 64 bit mode 32 bit chained/unchained mode..." alt="" coords="147,5,258,32"/>
+<area shape="rect" id="node3" href="$timer_8c.html#a91cac574bb11559893394ad5b8cacfb9" title="Set the Period register(s) of the specified timer(s). " alt="" coords="147,56,259,83"/>
+<area shape="rect" id="node4" href="$timer_8c.html#a194d98f5a0ae1cdeb17deb7fe61c466f" title="Set the Reload period of the specified timer. " alt="" coords="145,107,261,133"/>
+<area shape="rect" id="node5" href="$interrupt_8c.html#a1ba160b3eddc19a9b5f3d1fa10ff6f46" title="Registers an interrupt Handler in the interrupt vector table for system interrupts. " alt="" coords="159,157,246,184"/>
+<area shape="rect" id="node6" href="$systick_8c.html#a9384a5cdefadfc512c20d301c750ffba" title="The systick interrupt service routine (ISR) which will be called every millisecond. " alt="" coords="151,208,254,235"/>
+<area shape="rect" id="node10" href="$timer_8c.html#a87b3ce1e8fe5a7fde5ec8f75cae4ff8c" title="Enables the specified timer interrupts. The timer interrupts which are to be enabled can be passed as..." alt="" coords="332,259,443,285"/>
+<area shape="rect" id="node11" href="$interrupt_8c.html#a2315050a4707c58de742a7bdb6fce944" title="Set the channel number for a system interrupt. Channel numbers 0&#45;1 are mapped to FIQ and Channel numb..." alt="" coords="150,309,255,336"/>
+<area shape="rect" id="node12" href="$interrupt_8c.html#abe0fc487514af7fb2b839b713da2dff4" title="Enables the sytem interrupt in AINTC. The interrupt will be processed only if it is enabled in AINTC..." alt="" coords="141,360,264,387"/>
+<area shape="rect" id="node13" href="$timer_8c.html#af46e1a7c7a2cc64a0c698b091c0cd608" title="Enables the timer in the specified mode. The timer must be configured before it is enabled..." alt="" coords="155,411,250,437"/>
+<area shape="rect" id="node7" href="$timer_8c.html#ab32d99a0068510c6ff13935e194bf6b2" title="Disables the specified timer interrupts. " alt="" coords="330,107,445,133"/>
+<area shape="rect" id="node8" href="$interrupt_8c.html#a6583ca8d7b474ed993ce31b45ef1dfd2" title="Clears a sytem interrupt status in AINTC. " alt="" coords="312,157,463,184"/>
+<area shape="rect" id="node9" href="$timer_8c.html#af9d8f894846ff4e5e5796f0e88ae8c78" title="Clears the status of specified timer interrupts. " alt="" coords="318,208,457,235"/>
+</map>

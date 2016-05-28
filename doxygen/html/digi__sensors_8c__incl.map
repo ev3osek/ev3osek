@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/digi_sensors.c" name="leJOS_EV3/src/ev3/digi_sensors.c">
+<area shape="rect" id="node2" href="$digi__sensors_8h.html" title="Function declarations to talk to the digital sensors (I2C sensors) " alt="" coords="5,95,112,121"/>
+<area shape="rect" id="node4" href="$i2c_8h.html" title="Function declarations related to I2C communication. " alt="" coords="137,95,188,121"/>
+<area shape="rect" id="node3" href="$sensors_8h.html" title="This header contains macros for the sensor ports of the EV3. " alt="" coords="19,169,98,196"/>
+<area shape="rect" id="node5" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="123,169,205,196"/>
+</map>

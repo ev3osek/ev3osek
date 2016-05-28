@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/include/armv5/cpu.h" name="leJOS_EV3/src/ev3/include/armv5/cpu.h">
+<area shape="rect" id="node2" href="$cpu_8c.html" title="This file contains the API definitions for configuring CPU. " alt="" coords="5,95,185,136"/>
+<area shape="rect" id="node3" href="$interrupt_8c.html" title="Contains the APIs for configuring AINTC. " alt="" coords="209,95,389,136"/>
+<area shape="rect" id="node4" href="$systick_8c.html" title="This header contains function definitions required to manage the tick in milliseconds on the EV3..." alt="" coords="414,102,609,129"/>
+</map>

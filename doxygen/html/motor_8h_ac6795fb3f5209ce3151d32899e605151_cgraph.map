@@ -1,0 +1,5 @@
+<map id="get_tacho_dir" name="get_tacho_dir">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html#adaed681b483d3acdb4f65842049abcda" title="Get the signal at a GPIO pin which is configured as input. " alt="" coords="153,5,224,32"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a624ad0306d1c4e6dfc8e2bb01798e0ce" title="Initialize a GPIO pin with its GPIO functionality and set its direction to input. ..." alt="" coords="272,5,376,32"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="424,5,519,32"/>
+</map>

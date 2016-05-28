@@ -1,0 +1,67 @@
+\hypertarget{syscfg_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/syscfg.c File Reference}
+\label{syscfg_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/syscfg.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/syscfg.\+c}}
+
+
+This file contains A\+P\+Is to lock and unlock the System Configuration (S\+Y\+S\+C\+F\+G) module registers by appropriately programming the Kick Registers.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+syscfg0\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}soc\+\_\+\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}evm\+A\+M1808.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+Include dependency graph for syscfg.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{syscfg_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{syscfg_8c_ad9852f17f940b3d76a65df9d28a18960}{Sys\+Cfg\+Registers\+Unlock} (void)
+\begin{DoxyCompactList}\small\item\em This function unlocks the write-\/protection of the S\+Y\+S\+C\+F\+G module. \end{DoxyCompactList}\item 
+void \hyperlink{syscfg_8c_a94096dbe2e0e6102149173a8d10e1591}{Sys\+Cfg\+Registers\+Lock} (void)
+\begin{DoxyCompactList}\small\item\em This function imposes write-\/protection on the S\+Y\+S\+C\+F\+G module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains A\+P\+Is to lock and unlock the System Configuration (S\+Y\+S\+C\+F\+G) module registers by appropriately programming the Kick Registers. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{syscfg_8c_a94096dbe2e0e6102149173a8d10e1591}{}\index{syscfg.\+c@{syscfg.\+c}!Sys\+Cfg\+Registers\+Lock@{Sys\+Cfg\+Registers\+Lock}}
+\index{Sys\+Cfg\+Registers\+Lock@{Sys\+Cfg\+Registers\+Lock}!syscfg.\+c@{syscfg.\+c}}
+\subsubsection[{Sys\+Cfg\+Registers\+Lock(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Sys\+Cfg\+Registers\+Lock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{syscfg_8c_a94096dbe2e0e6102149173a8d10e1591}
+
+
+This function imposes write-\/protection on the S\+Y\+S\+C\+F\+G module. 
+
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+On programming the Kick Registers with any value other than the unlock sequence, the S\+Y\+S\+C\+F\+G module gets locked and its registers cannot be accessed. 
+\end{DoxyNote}
+\hypertarget{syscfg_8c_ad9852f17f940b3d76a65df9d28a18960}{}\index{syscfg.\+c@{syscfg.\+c}!Sys\+Cfg\+Registers\+Unlock@{Sys\+Cfg\+Registers\+Unlock}}
+\index{Sys\+Cfg\+Registers\+Unlock@{Sys\+Cfg\+Registers\+Unlock}!syscfg.\+c@{syscfg.\+c}}
+\subsubsection[{Sys\+Cfg\+Registers\+Unlock(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Sys\+Cfg\+Registers\+Unlock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{syscfg_8c_ad9852f17f940b3d76a65df9d28a18960}
+
+
+This function unlocks the write-\/protection of the S\+Y\+S\+C\+F\+G module. 
+
+\begin{DoxyReturn}{Returns}
+None.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The other registers of the S\+Y\+S\+C\+F\+G module can be programmed only when an unlock sequence has been written to the Kick Regsiters. 
+\end{DoxyNote}

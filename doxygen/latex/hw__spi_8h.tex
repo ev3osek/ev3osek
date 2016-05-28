@@ -1,0 +1,895 @@
+\hypertarget{hw__spi_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+spi.h File Reference}
+\label{hw__spi_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+spi.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+spi.\+h}}
+
+
+S\+P\+I register definitions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hw__spi_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{hw__spi_8h_af8b9c12ca3105599d191c0c6d84d7a7a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R0}~(0x0)\label{hw__spi_8h_af8b9c12ca3105599d191c0c6d84d7a7a}
+
+\item 
+\hypertarget{hw__spi_8h_a7d507eead21eddc9e290170eb41de8c2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1}~(0x4)\label{hw__spi_8h_a7d507eead21eddc9e290170eb41de8c2}
+
+\item 
+\hypertarget{hw__spi_8h_a4e100a91c725bb702a9f8621bb0091cd}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0}~(0x8)\label{hw__spi_8h_a4e100a91c725bb702a9f8621bb0091cd}
+
+\item 
+\hypertarget{hw__spi_8h_acde89459766296d452c8280af54d901e}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L}~(0x\+C)\label{hw__spi_8h_acde89459766296d452c8280af54d901e}
+
+\item 
+\hypertarget{hw__spi_8h_a124d8737527c0cca7996839f7898f5bd}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G}~(0x10)\label{hw__spi_8h_a124d8737527c0cca7996839f7898f5bd}
+
+\item 
+\hypertarget{hw__spi_8h_a22fd3c0402e47413ce535e85332cb584}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C}(n)~(0x14 + (4 $\ast$ n))\label{hw__spi_8h_a22fd3c0402e47413ce535e85332cb584}
+
+\item 
+\hypertarget{hw__spi_8h_aa2ff8dcfe5c850a9c9d08663c320af30}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T0}~(0x38)\label{hw__spi_8h_aa2ff8dcfe5c850a9c9d08663c320af30}
+
+\item 
+\hypertarget{hw__spi_8h_afc7829deae27922198a612252e365d25}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1}~(0x3\+C)\label{hw__spi_8h_afc7829deae27922198a612252e365d25}
+
+\item 
+\hypertarget{hw__spi_8h_a11cb542c9bf90a0e1a1b374bfb760fa9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F}~(0x40)\label{hw__spi_8h_a11cb542c9bf90a0e1a1b374bfb760fa9}
+
+\item 
+\hypertarget{hw__spi_8h_a906330419b8a209015c586b7ce5c6ed6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+E\+M\+U}~(0x44)\label{hw__spi_8h_a906330419b8a209015c586b7ce5c6ed6}
+
+\item 
+\hypertarget{hw__spi_8h_a50b0986b17ca2d2c5e8c39fb264f02a3}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y}~(0x48)\label{hw__spi_8h_a50b0986b17ca2d2c5e8c39fb264f02a3}
+
+\item 
+\hypertarget{hw__spi_8h_af77c24bf3504d55271ca8ee26decdf7d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+F}~(0x4\+C)\label{hw__spi_8h_af77c24bf3504d55271ca8ee26decdf7d}
+
+\item 
+\hypertarget{hw__spi_8h_a3cddbd976424c0d2ee6fda6655cbb97a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T}(n)~(0x50 + (n $\ast$ 4))\label{hw__spi_8h_a3cddbd976424c0d2ee6fda6655cbb97a}
+
+\item 
+\hypertarget{hw__spi_8h_a4016f40d676741a634dae0c91c39701a}{}\#define {\bfseries S\+P\+I\+\_\+\+I\+N\+T\+V\+E\+C1}~(0x64)\label{hw__spi_8h_a4016f40d676741a634dae0c91c39701a}
+
+\item 
+\hypertarget{hw__spi_8h_afd7fba510fd79d6c4d919658ad4663fc}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R0\+\_\+\+R\+E\+S\+E\+T}~(0x00000001u)\label{hw__spi_8h_afd7fba510fd79d6c4d919658ad4663fc}
+
+\item 
+\hypertarget{hw__spi_8h_a1306a25955fd9abd928ba387dfdb88e6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R0\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a1306a25955fd9abd928ba387dfdb88e6}
+
+\item 
+\hypertarget{hw__spi_8h_a7bcf0c6db7731552a8c6b9d9c0f4a42a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+E\+N\+A\+B\+L\+E}~(0x01000000)\label{hw__spi_8h_a7bcf0c6db7731552a8c6b9d9c0f4a42a}
+
+\item 
+\hypertarget{hw__spi_8h_a684eab6cf2ec74b84b98099170272e4c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__spi_8h_a684eab6cf2ec74b84b98099170272e4c}
+
+\item 
+\hypertarget{hw__spi_8h_ad1d64feaf1a54e5fa2faa43d0f7cb869}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K}~(0x00010000u)\label{hw__spi_8h_ad1d64feaf1a54e5fa2faa43d0f7cb869}
+
+\item 
+\hypertarget{hw__spi_8h_aa1bc6eb143d0a9e5b11783e8440c23c4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__spi_8h_aa1bc6eb143d0a9e5b11783e8440c23c4}
+
+\item 
+\hypertarget{hw__spi_8h_a3cd16dc7285cbdff68118a077a937917}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+P\+O\+W\+E\+R\+D\+O\+W\+N}~(0x00000100u)\label{hw__spi_8h_a3cd16dc7285cbdff68118a077a937917}
+
+\item 
+\hypertarget{hw__spi_8h_a98fc22b768b34e516c805dcf16dfccb1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+P\+O\+W\+E\+R\+D\+O\+W\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_a98fc22b768b34e516c805dcf16dfccb1}
+
+\item 
+\hypertarget{hw__spi_8h_a7b8314f9227f177a52222b7413e832fe}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+C\+L\+K\+M\+O\+D}~(0x00000002u)\label{hw__spi_8h_a7b8314f9227f177a52222b7413e832fe}
+
+\item 
+\hypertarget{hw__spi_8h_ac73994bfafe52345a0e278a299f36be1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+C\+L\+K\+M\+O\+D\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_ac73994bfafe52345a0e278a299f36be1}
+
+\item 
+\hypertarget{hw__spi_8h_a736fe9fbb3985669aaba5872df8fec3c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+M\+A\+S\+T\+E\+R}~(0x00000001u)\label{hw__spi_8h_a736fe9fbb3985669aaba5872df8fec3c}
+
+\item 
+\hypertarget{hw__spi_8h_a4804b10e1acd4c9fa0d4d7d9d9d7969c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+G\+C\+R1\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a4804b10e1acd4c9fa0d4d7d9d9d7969c}
+
+\item 
+\hypertarget{hw__spi_8h_a3b5487f2c6858815b36fdec41bf2bbd4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+E\+N\+A\+B\+L\+E\+H\+I\+G\+H\+Z}~(0x01000000u)\label{hw__spi_8h_a3b5487f2c6858815b36fdec41bf2bbd4}
+
+\item 
+\hypertarget{hw__spi_8h_a15bb94982c3c097d4f881790b6e5aa9a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+E\+N\+A\+B\+L\+E\+H\+I\+G\+H\+Z\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__spi_8h_a15bb94982c3c097d4f881790b6e5aa9a}
+
+\item 
+\hypertarget{hw__spi_8h_a45e7a4096e2cb22c4f6a9db5e6cc98b0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+D\+M\+A\+R\+E\+Q\+E\+N}~(0x00010000u)\label{hw__spi_8h_a45e7a4096e2cb22c4f6a9db5e6cc98b0}
+
+\item 
+\hypertarget{hw__spi_8h_ae7a16c51dab997a34a144d1647aa0dc6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+D\+M\+A\+R\+E\+Q\+E\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__spi_8h_ae7a16c51dab997a34a144d1647aa0dc6}
+
+\item 
+\hypertarget{hw__spi_8h_a4efa83a4ebb548d6be6a9492983bcf8f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+T\+X\+I\+N\+T\+E\+N\+A}~(0x00000200u)\label{hw__spi_8h_a4efa83a4ebb548d6be6a9492983bcf8f}
+
+\item 
+\hypertarget{hw__spi_8h_abeec661deee2f0e16d519ff7a6f98472}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+T\+X\+I\+N\+T\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_abeec661deee2f0e16d519ff7a6f98472}
+
+\item 
+\hypertarget{hw__spi_8h_a4dbc7b5e4c84f744765844295cd5accd}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+R\+X\+I\+N\+T\+E\+N\+A}~(0x00000100u)\label{hw__spi_8h_a4dbc7b5e4c84f744765844295cd5accd}
+
+\item 
+\hypertarget{hw__spi_8h_abc52bfcdf34b28b1058588af3e354b01}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+R\+X\+I\+N\+T\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_abc52bfcdf34b28b1058588af3e354b01}
+
+\item 
+\hypertarget{hw__spi_8h_a2be2f4fcd07835b15117faf283a957bc}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+O\+V\+R\+N\+I\+N\+T\+E\+N\+A}~(0x00000040u)\label{hw__spi_8h_a2be2f4fcd07835b15117faf283a957bc}
+
+\item 
+\hypertarget{hw__spi_8h_ac796ba9153644642d940ad5c9ce0d549}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+O\+V\+R\+N\+I\+N\+T\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_ac796ba9153644642d940ad5c9ce0d549}
+
+\item 
+\hypertarget{hw__spi_8h_a930d7dd3698025d9dba456775e768678}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+B\+I\+T\+E\+R\+R\+E\+N\+A}~(0x00000010u)\label{hw__spi_8h_a930d7dd3698025d9dba456775e768678}
+
+\item 
+\hypertarget{hw__spi_8h_a70f28c65297950bbad3cc27ac13af8af}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+B\+I\+T\+E\+R\+R\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a70f28c65297950bbad3cc27ac13af8af}
+
+\item 
+\hypertarget{hw__spi_8h_ab102cba22669165f8a0fafd5090d6c8f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+D\+E\+S\+Y\+N\+C\+E\+N\+A}~(0x00000008u)\label{hw__spi_8h_ab102cba22669165f8a0fafd5090d6c8f}
+
+\item 
+\hypertarget{hw__spi_8h_a8f4d9040b0df817a6e86ece213170ef6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+D\+E\+S\+Y\+N\+C\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a8f4d9040b0df817a6e86ece213170ef6}
+
+\item 
+\hypertarget{hw__spi_8h_a6c6b9ac9fca86ad20153fc9b857b50ae}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+P\+A\+R\+E\+R\+R\+E\+N\+A}~(0x00000004u)\label{hw__spi_8h_a6c6b9ac9fca86ad20153fc9b857b50ae}
+
+\item 
+\hypertarget{hw__spi_8h_a97bd10b7284e81e98f79faf7987a14e1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+P\+A\+R\+E\+R\+R\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a97bd10b7284e81e98f79faf7987a14e1}
+
+\item 
+\hypertarget{hw__spi_8h_a0a9a3c884661f62426957dd053138a5b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+T\+I\+M\+E\+O\+U\+T\+E\+N\+A}~(0x00000002u)\label{hw__spi_8h_a0a9a3c884661f62426957dd053138a5b}
+
+\item 
+\hypertarget{hw__spi_8h_a981db59aa1850a12d5220d92fb9d0b44}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+T\+I\+M\+E\+O\+U\+T\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_a981db59aa1850a12d5220d92fb9d0b44}
+
+\item 
+\hypertarget{hw__spi_8h_aa8fa06f1827815b051c265bce7263d8b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+D\+L\+E\+N\+E\+R\+R\+E\+N\+A}~(0x00000001u)\label{hw__spi_8h_aa8fa06f1827815b051c265bce7263d8b}
+
+\item 
+\hypertarget{hw__spi_8h_a3b35ca986abeb7d0b2429277d0786bb5}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+I\+N\+T0\+\_\+\+D\+L\+E\+N\+E\+R\+R\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a3b35ca986abeb7d0b2429277d0786bb5}
+
+\item 
+\hypertarget{hw__spi_8h_a490de8470c67173d488a2dc735e7a2ec}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+T\+X\+I\+N\+T\+L\+V\+L}~(0x00000200u)\label{hw__spi_8h_a490de8470c67173d488a2dc735e7a2ec}
+
+\item 
+\hypertarget{hw__spi_8h_a204ac40b25a525dd4d959a0fd0d0769b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+T\+X\+I\+N\+T\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_a204ac40b25a525dd4d959a0fd0d0769b}
+
+\item 
+\hypertarget{hw__spi_8h_a7bb23921ea2793876af0e8df374da489}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+R\+X\+I\+N\+T\+L\+V\+L}~(0x00000100u)\label{hw__spi_8h_a7bb23921ea2793876af0e8df374da489}
+
+\item 
+\hypertarget{hw__spi_8h_aefdc865c8d7be6f5a688931c8f984def}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+R\+X\+I\+N\+T\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_aefdc865c8d7be6f5a688931c8f984def}
+
+\item 
+\hypertarget{hw__spi_8h_ae32059ca342b8df0ad18ce832dce5c68}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+O\+V\+R\+N\+I\+N\+T\+L\+V\+L}~(0x00000040u)\label{hw__spi_8h_ae32059ca342b8df0ad18ce832dce5c68}
+
+\item 
+\hypertarget{hw__spi_8h_aa1635c3dfdefe4ac8b0a9443874ae5ee}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+O\+V\+R\+N\+I\+N\+T\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_aa1635c3dfdefe4ac8b0a9443874ae5ee}
+
+\item 
+\hypertarget{hw__spi_8h_a21c615bdd6ec3b2cbf4cfc090f370323}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+B\+I\+T\+E\+R\+R\+L\+V\+L}~(0x00000010u)\label{hw__spi_8h_a21c615bdd6ec3b2cbf4cfc090f370323}
+
+\item 
+\hypertarget{hw__spi_8h_aec7f8b85e44a00f6830830be541291b3}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+B\+I\+T\+E\+R\+R\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_aec7f8b85e44a00f6830830be541291b3}
+
+\item 
+\hypertarget{hw__spi_8h_a90cf0b388918206d9005d1c550e24965}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+D\+E\+S\+Y\+N\+C\+L\+V\+L}~(0x00000008u)\label{hw__spi_8h_a90cf0b388918206d9005d1c550e24965}
+
+\item 
+\hypertarget{hw__spi_8h_a44432b2ce16bf3017504dd815d758e79}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+D\+E\+S\+Y\+N\+C\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a44432b2ce16bf3017504dd815d758e79}
+
+\item 
+\hypertarget{hw__spi_8h_a11f2d7c4dc2c901c3a9d6efdf3b5bda2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+P\+A\+R\+E\+R\+R\+L\+V\+L}~(0x00000004u)\label{hw__spi_8h_a11f2d7c4dc2c901c3a9d6efdf3b5bda2}
+
+\item 
+\hypertarget{hw__spi_8h_a6043a61406a74c17f5baabc114f5350e}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+P\+A\+R\+E\+R\+R\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a6043a61406a74c17f5baabc114f5350e}
+
+\item 
+\hypertarget{hw__spi_8h_aab8481bde619dcbe0735eb0631417ad6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+T\+I\+M\+E\+O\+U\+T\+L\+V\+L}~(0x00000002u)\label{hw__spi_8h_aab8481bde619dcbe0735eb0631417ad6}
+
+\item 
+\hypertarget{hw__spi_8h_a7115de44993e55be1c04b3c16a8bd6e7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+T\+I\+M\+E\+O\+U\+T\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_a7115de44993e55be1c04b3c16a8bd6e7}
+
+\item 
+\hypertarget{hw__spi_8h_a8ec235b6ce23b7dc41f93d62d0fdc671}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+D\+L\+E\+N\+E\+R\+R\+L\+V\+L}~(0x00000001u)\label{hw__spi_8h_a8ec235b6ce23b7dc41f93d62d0fdc671}
+
+\item 
+\hypertarget{hw__spi_8h_a5857d0a644b6bb7af65d7ab872c0ee5b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+L\+V\+L\+\_\+\+D\+L\+E\+N\+E\+R\+R\+L\+V\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a5857d0a644b6bb7af65d7ab872c0ee5b}
+
+\item 
+\hypertarget{hw__spi_8h_ad32fc8128bda31f30b4d7b047b79bcef}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+T\+X\+I\+N\+T\+F\+L\+G}~(0x00000200u)\label{hw__spi_8h_ad32fc8128bda31f30b4d7b047b79bcef}
+
+\item 
+\hypertarget{hw__spi_8h_abbcaa55ec1f536c00f3ac348667d0bb1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+T\+X\+I\+N\+T\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_abbcaa55ec1f536c00f3ac348667d0bb1}
+
+\item 
+\hypertarget{hw__spi_8h_ad2d3deb4df045176cd27d32ff16eb382}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+R\+X\+I\+N\+T\+F\+L\+G}~(0x00000100u)\label{hw__spi_8h_ad2d3deb4df045176cd27d32ff16eb382}
+
+\item 
+\hypertarget{hw__spi_8h_acd877492fe30e451390b970837e4a8ac}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+R\+X\+I\+N\+T\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_acd877492fe30e451390b970837e4a8ac}
+
+\item 
+\hypertarget{hw__spi_8h_a1ea0411652970e885c06f6cbca9e5f10}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+O\+V\+R\+N\+I\+N\+T\+F\+L\+G}~(0x00000040u)\label{hw__spi_8h_a1ea0411652970e885c06f6cbca9e5f10}
+
+\item 
+\hypertarget{hw__spi_8h_a1fb3126959b8cc45196ffce99f425bfa}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+O\+V\+R\+N\+I\+N\+T\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_a1fb3126959b8cc45196ffce99f425bfa}
+
+\item 
+\hypertarget{hw__spi_8h_a6d673828f9d9a0b55f7fe12f2f8fde74}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+B\+I\+T\+E\+R\+R\+F\+L\+G}~(0x00000010u)\label{hw__spi_8h_a6d673828f9d9a0b55f7fe12f2f8fde74}
+
+\item 
+\hypertarget{hw__spi_8h_a51403271ea1d1f8f6e535d80fb0d2fe1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+B\+I\+T\+E\+R\+R\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a51403271ea1d1f8f6e535d80fb0d2fe1}
+
+\item 
+\hypertarget{hw__spi_8h_aedca8922a2df7f219fff0f70f5313537}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+D\+E\+S\+Y\+N\+C\+F\+L\+G}~(0x00000008u)\label{hw__spi_8h_aedca8922a2df7f219fff0f70f5313537}
+
+\item 
+\hypertarget{hw__spi_8h_a22d151b482038ca9185cd50d195ceadd}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+D\+E\+S\+Y\+N\+C\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a22d151b482038ca9185cd50d195ceadd}
+
+\item 
+\hypertarget{hw__spi_8h_a87c25a7b942c0aeb851bb4ca4f98dd3b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+P\+A\+R\+E\+R\+R\+F\+L\+G}~(0x00000004u)\label{hw__spi_8h_a87c25a7b942c0aeb851bb4ca4f98dd3b}
+
+\item 
+\hypertarget{hw__spi_8h_a0ab49123154f6ed54739d9bf52e49131}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+P\+A\+R\+E\+R\+R\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a0ab49123154f6ed54739d9bf52e49131}
+
+\item 
+\hypertarget{hw__spi_8h_a26c517c1654cc7cb229068aa23e1ba3d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+T\+I\+M\+E\+O\+U\+T\+F\+L\+G}~(0x00000002u)\label{hw__spi_8h_a26c517c1654cc7cb229068aa23e1ba3d}
+
+\item 
+\hypertarget{hw__spi_8h_aa7eb063bea3b8ceae596fec31f6e28c2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+T\+I\+M\+E\+O\+U\+T\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_aa7eb063bea3b8ceae596fec31f6e28c2}
+
+\item 
+\hypertarget{hw__spi_8h_a56402720b660a209ef8e0dc1cc2fd7b2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+D\+L\+E\+N\+E\+R\+R\+F\+L\+G}~(0x00000001u)\label{hw__spi_8h_a56402720b660a209ef8e0dc1cc2fd7b2}
+
+\item 
+\hypertarget{hw__spi_8h_aaf0f156a7fb6277d881582b9d027f5b0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+L\+G\+\_\+\+D\+L\+E\+N\+E\+R\+R\+F\+L\+G\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_aaf0f156a7fb6277d881582b9d027f5b0}
+
+\item 
+\hypertarget{hw__spi_8h_add60071cb0ec91aa637de0ba645afafc}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+O\+M\+I\+F\+U\+N}~(0x00000800u)\label{hw__spi_8h_add60071cb0ec91aa637de0ba645afafc}
+
+\item 
+\hypertarget{hw__spi_8h_a21d6f82bf9306632492f1c5b1cc3ffd9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+O\+M\+I\+F\+U\+N\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__spi_8h_a21d6f82bf9306632492f1c5b1cc3ffd9}
+
+\item 
+\hypertarget{hw__spi_8h_af6af1cf67e1ca6539f046d35cd73e21c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+I\+M\+O\+F\+U\+N}~(0x00000400u)\label{hw__spi_8h_af6af1cf67e1ca6539f046d35cd73e21c}
+
+\item 
+\hypertarget{hw__spi_8h_afecf2ab8111d722fb3ae69965edccf5f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+I\+M\+O\+F\+U\+N\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__spi_8h_afecf2ab8111d722fb3ae69965edccf5f}
+
+\item 
+\hypertarget{hw__spi_8h_a63babccf2161ae1e848b3c8647415832}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+C\+L\+K\+F\+U\+N}~(0x00000200u)\label{hw__spi_8h_a63babccf2161ae1e848b3c8647415832}
+
+\item 
+\hypertarget{hw__spi_8h_aca2f426e7d8377ee532f3319870c0381}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+C\+L\+K\+F\+U\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_aca2f426e7d8377ee532f3319870c0381}
+
+\item 
+\hypertarget{hw__spi_8h_a4a3bb4a307c12fc9ab9d53b0ce400220}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+E\+N\+A\+F\+U\+N}~(0x00000100u)\label{hw__spi_8h_a4a3bb4a307c12fc9ab9d53b0ce400220}
+
+\item 
+\hypertarget{hw__spi_8h_a46fb8a7c8325aabe8a6ad075b1457db1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+E\+N\+A\+F\+U\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_a46fb8a7c8325aabe8a6ad075b1457db1}
+
+\item 
+\hypertarget{hw__spi_8h_a96df81d44c3fc3ad6e45bf9bef7dd5d6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N7}~(0x00000080u)\label{hw__spi_8h_a96df81d44c3fc3ad6e45bf9bef7dd5d6}
+
+\item 
+\hypertarget{hw__spi_8h_afb88fdcdef810303788ec3f13949b20c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__spi_8h_afb88fdcdef810303788ec3f13949b20c}
+
+\item 
+\hypertarget{hw__spi_8h_a34bf1a6adb2def791860d298257c5d5d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N6}~(0x00000040u)\label{hw__spi_8h_a34bf1a6adb2def791860d298257c5d5d}
+
+\item 
+\hypertarget{hw__spi_8h_a886e2d5453c0f3492598c2c0dd579ab3}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_a886e2d5453c0f3492598c2c0dd579ab3}
+
+\item 
+\hypertarget{hw__spi_8h_a80f19c573f2f333198e516da298ff2f1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N5}~(0x00000020u)\label{hw__spi_8h_a80f19c573f2f333198e516da298ff2f1}
+
+\item 
+\hypertarget{hw__spi_8h_a54256462fead06f61ab588a8ac9d0752}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__spi_8h_a54256462fead06f61ab588a8ac9d0752}
+
+\item 
+\hypertarget{hw__spi_8h_a25ce3e565bc9e444a5ae81e0c10e59f0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N4}~(0x00000010u)\label{hw__spi_8h_a25ce3e565bc9e444a5ae81e0c10e59f0}
+
+\item 
+\hypertarget{hw__spi_8h_a9982da00658de45c8ed95239817b9e57}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a9982da00658de45c8ed95239817b9e57}
+
+\item 
+\hypertarget{hw__spi_8h_a98169bc2bf57125635f13f7c6efaa9fa}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N3}~(0x00000008u)\label{hw__spi_8h_a98169bc2bf57125635f13f7c6efaa9fa}
+
+\item 
+\hypertarget{hw__spi_8h_ad1dcf0f0f9c166580afc79071107feca}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_ad1dcf0f0f9c166580afc79071107feca}
+
+\item 
+\hypertarget{hw__spi_8h_acf8f9129feb032b535104dc108884cc4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N2}~(0x00000004u)\label{hw__spi_8h_acf8f9129feb032b535104dc108884cc4}
+
+\item 
+\hypertarget{hw__spi_8h_a5023f1cbe38ff0192d058f9b459306db}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a5023f1cbe38ff0192d058f9b459306db}
+
+\item 
+\hypertarget{hw__spi_8h_a355546d48f22fd57a49c2b4cea323186}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N1}~(0x00000002u)\label{hw__spi_8h_a355546d48f22fd57a49c2b4cea323186}
+
+\item 
+\hypertarget{hw__spi_8h_aafb06b5717c1c24e5a37a8649aafa143}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_aafb06b5717c1c24e5a37a8649aafa143}
+
+\item 
+\hypertarget{hw__spi_8h_a20502bbfc8883dc1acce489479d24661}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N0}~(0x00000001u)\label{hw__spi_8h_a20502bbfc8883dc1acce489479d24661}
+
+\item 
+\hypertarget{hw__spi_8h_a763f2bf707bf2206785b7f1e0f489927}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C0\+\_\+\+S\+C\+S0\+F\+U\+N0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a763f2bf707bf2206785b7f1e0f489927}
+
+\item 
+\hypertarget{hw__spi_8h_aa33ea58b740d6a355e81801317f5bfe7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+O\+M\+I\+D\+I\+R}~(0x00000800u)\label{hw__spi_8h_aa33ea58b740d6a355e81801317f5bfe7}
+
+\item 
+\hypertarget{hw__spi_8h_aabe1c40472a4221be914605c7a18d880}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+O\+M\+I\+D\+I\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__spi_8h_aabe1c40472a4221be914605c7a18d880}
+
+\item 
+\hypertarget{hw__spi_8h_a97262c379ef24a3c26205a6ee4701378}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+I\+M\+O\+D\+I\+R}~(0x00000400u)\label{hw__spi_8h_a97262c379ef24a3c26205a6ee4701378}
+
+\item 
+\hypertarget{hw__spi_8h_aa20fb3edf15a118d863248d438585d70}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+I\+M\+O\+D\+I\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__spi_8h_aa20fb3edf15a118d863248d438585d70}
+
+\item 
+\hypertarget{hw__spi_8h_aeee04fbe1ab156068b0bb85ab437868c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+C\+L\+K\+D\+I\+R}~(0x00000200u)\label{hw__spi_8h_aeee04fbe1ab156068b0bb85ab437868c}
+
+\item 
+\hypertarget{hw__spi_8h_aa180fb6382cd79577922c4b04724dea9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+C\+L\+K\+D\+I\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_aa180fb6382cd79577922c4b04724dea9}
+
+\item 
+\hypertarget{hw__spi_8h_a204a1a1df8c02144464c950648801c44}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+E\+N\+A\+D\+I\+R}~(0x00000100u)\label{hw__spi_8h_a204a1a1df8c02144464c950648801c44}
+
+\item 
+\hypertarget{hw__spi_8h_aeec9fe1b238f7f26f2ce46d3aa82007b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+E\+N\+A\+D\+I\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_aeec9fe1b238f7f26f2ce46d3aa82007b}
+
+\item 
+\hypertarget{hw__spi_8h_af17397023157ca8c85bee7788861fd8e}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R7}~(0x00000080u)\label{hw__spi_8h_af17397023157ca8c85bee7788861fd8e}
+
+\item 
+\hypertarget{hw__spi_8h_a79848481c84b87e638c8bc394b5a0d11}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__spi_8h_a79848481c84b87e638c8bc394b5a0d11}
+
+\item 
+\hypertarget{hw__spi_8h_a7c6f2b3f7912d598c408f83a0c38df1d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R6}~(0x00000040u)\label{hw__spi_8h_a7c6f2b3f7912d598c408f83a0c38df1d}
+
+\item 
+\hypertarget{hw__spi_8h_a2488b89b5956c488f2111b1b9b2cc99b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_a2488b89b5956c488f2111b1b9b2cc99b}
+
+\item 
+\hypertarget{hw__spi_8h_a02bfe2d0cd684aa6fe364dc01b8d15cc}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R5}~(0x00000020u)\label{hw__spi_8h_a02bfe2d0cd684aa6fe364dc01b8d15cc}
+
+\item 
+\hypertarget{hw__spi_8h_ae1a88ca5a58c5d6f460ebbb5ce5765e7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__spi_8h_ae1a88ca5a58c5d6f460ebbb5ce5765e7}
+
+\item 
+\hypertarget{hw__spi_8h_a5d807e46f1b5f9805bfe571b97dea71a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R4}~(0x00000010u)\label{hw__spi_8h_a5d807e46f1b5f9805bfe571b97dea71a}
+
+\item 
+\hypertarget{hw__spi_8h_ae408ceff123fdca05c906894f1af570c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_ae408ceff123fdca05c906894f1af570c}
+
+\item 
+\hypertarget{hw__spi_8h_add71d3e18ca1c343749ba0977a2f1297}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R3}~(0x00000008u)\label{hw__spi_8h_add71d3e18ca1c343749ba0977a2f1297}
+
+\item 
+\hypertarget{hw__spi_8h_a6286baa30b7af7c8cc7bebc2045b86af}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a6286baa30b7af7c8cc7bebc2045b86af}
+
+\item 
+\hypertarget{hw__spi_8h_a7586d0eb53f8b777089d3d3f5bde9306}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R2}~(0x00000004u)\label{hw__spi_8h_a7586d0eb53f8b777089d3d3f5bde9306}
+
+\item 
+\hypertarget{hw__spi_8h_a5190351addb7c5edbf029338e625015d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a5190351addb7c5edbf029338e625015d}
+
+\item 
+\hypertarget{hw__spi_8h_a425de9add70c7ec794282cca76f7990a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R1}~(0x00000002u)\label{hw__spi_8h_a425de9add70c7ec794282cca76f7990a}
+
+\item 
+\hypertarget{hw__spi_8h_ab0b6e1d620455b237e5ae9946fe981aa}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_ab0b6e1d620455b237e5ae9946fe981aa}
+
+\item 
+\hypertarget{hw__spi_8h_adb25c4797c50c0bb9b76046d6397f344}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R0}~(0x00000001u)\label{hw__spi_8h_adb25c4797c50c0bb9b76046d6397f344}
+
+\item 
+\hypertarget{hw__spi_8h_a79dab4a3f8159dc1e8be5c4655004f17}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C1\+\_\+\+S\+C\+S0\+D\+I\+R0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a79dab4a3f8159dc1e8be5c4655004f17}
+
+\item 
+\hypertarget{hw__spi_8h_a22de9585e4e8ef8ff3b430d2ae394f44}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+O\+M\+I\+D\+I\+N}~(0x00000800u)\label{hw__spi_8h_a22de9585e4e8ef8ff3b430d2ae394f44}
+
+\item 
+\hypertarget{hw__spi_8h_a29de04ced9f61925c10d578b0cc92242}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+O\+M\+I\+D\+I\+N\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__spi_8h_a29de04ced9f61925c10d578b0cc92242}
+
+\item 
+\hypertarget{hw__spi_8h_a55249692e74922000bb0daf0ab718b72}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+I\+M\+O\+D\+I\+N}~(0x00000400u)\label{hw__spi_8h_a55249692e74922000bb0daf0ab718b72}
+
+\item 
+\hypertarget{hw__spi_8h_aef554995d9b13c679930ef7235dfb697}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+I\+M\+O\+D\+I\+N\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__spi_8h_aef554995d9b13c679930ef7235dfb697}
+
+\item 
+\hypertarget{hw__spi_8h_ae86427b859cf9a592532b5b07d1fbbb9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+C\+L\+K\+D\+I\+N}~(0x00000200u)\label{hw__spi_8h_ae86427b859cf9a592532b5b07d1fbbb9}
+
+\item 
+\hypertarget{hw__spi_8h_a23d205df8e8458432a33cd88b56ac99e}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+C\+L\+K\+D\+I\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_a23d205df8e8458432a33cd88b56ac99e}
+
+\item 
+\hypertarget{hw__spi_8h_a56e736389bb9a48a33eee2705495a6c9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+E\+N\+A\+D\+I\+N}~(0x00000100u)\label{hw__spi_8h_a56e736389bb9a48a33eee2705495a6c9}
+
+\item 
+\hypertarget{hw__spi_8h_aa7626c7ad58984c568c4335e60c487a4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+E\+N\+A\+D\+I\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_aa7626c7ad58984c568c4335e60c487a4}
+
+\item 
+\hypertarget{hw__spi_8h_af2f2a900b5a431f2fd8d767a56bf40f2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N7}~(0x00000080u)\label{hw__spi_8h_af2f2a900b5a431f2fd8d767a56bf40f2}
+
+\item 
+\hypertarget{hw__spi_8h_adfee9bbcf10196fdbba1de96cf73592b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__spi_8h_adfee9bbcf10196fdbba1de96cf73592b}
+
+\item 
+\hypertarget{hw__spi_8h_a28b2090f03db07c54e8a26606d7c2602}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N6}~(0x00000040u)\label{hw__spi_8h_a28b2090f03db07c54e8a26606d7c2602}
+
+\item 
+\hypertarget{hw__spi_8h_a64acf9d19d513785fc3be881de191a91}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_a64acf9d19d513785fc3be881de191a91}
+
+\item 
+\hypertarget{hw__spi_8h_aeba51261874b3ef2201c4e976d9025a2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N5}~(0x00000020u)\label{hw__spi_8h_aeba51261874b3ef2201c4e976d9025a2}
+
+\item 
+\hypertarget{hw__spi_8h_ae43daaf5c6c1acc8cde037124874e4d0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__spi_8h_ae43daaf5c6c1acc8cde037124874e4d0}
+
+\item 
+\hypertarget{hw__spi_8h_aead0b601bf4944c7621298423deaa406}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N4}~(0x00000010u)\label{hw__spi_8h_aead0b601bf4944c7621298423deaa406}
+
+\item 
+\hypertarget{hw__spi_8h_a463334ad27702e4757cf9860c82dc0a8}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a463334ad27702e4757cf9860c82dc0a8}
+
+\item 
+\hypertarget{hw__spi_8h_a69b82e39875d28d547a2f46e304f1fc1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N3}~(0x00000008u)\label{hw__spi_8h_a69b82e39875d28d547a2f46e304f1fc1}
+
+\item 
+\hypertarget{hw__spi_8h_a4c82808a964cb28cce22a7cd8c4c44b1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a4c82808a964cb28cce22a7cd8c4c44b1}
+
+\item 
+\hypertarget{hw__spi_8h_abb255bfc4ccb2566632ac9c0d398e28f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N2}~(0x00000004u)\label{hw__spi_8h_abb255bfc4ccb2566632ac9c0d398e28f}
+
+\item 
+\hypertarget{hw__spi_8h_a6bda019ab3eab4c0cccbbe640c12be72}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a6bda019ab3eab4c0cccbbe640c12be72}
+
+\item 
+\hypertarget{hw__spi_8h_acc4b91f83f6318cb71d4bd6afd870da9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N1}~(0x00000002u)\label{hw__spi_8h_acc4b91f83f6318cb71d4bd6afd870da9}
+
+\item 
+\hypertarget{hw__spi_8h_ab1bcdbe8eb121510a9299f0a99d20b11}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_ab1bcdbe8eb121510a9299f0a99d20b11}
+
+\item 
+\hypertarget{hw__spi_8h_ac0d8ee44add7154aa54603f61fe5efa4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N0}~(0x00000001u)\label{hw__spi_8h_ac0d8ee44add7154aa54603f61fe5efa4}
+
+\item 
+\hypertarget{hw__spi_8h_ac8d85ced323107031a9b32163fd603ab}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C2\+\_\+\+S\+C\+S0\+D\+I\+N0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_ac8d85ced323107031a9b32163fd603ab}
+
+\item 
+\hypertarget{hw__spi_8h_aa99a002dfe6501448dbf5efe10fa89d1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+O\+M\+I\+D\+O\+U\+T}~(0x00000800u)\label{hw__spi_8h_aa99a002dfe6501448dbf5efe10fa89d1}
+
+\item 
+\hypertarget{hw__spi_8h_aa092633ed2e98086bb293f3350d97ea1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+O\+M\+I\+D\+O\+U\+T\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__spi_8h_aa092633ed2e98086bb293f3350d97ea1}
+
+\item 
+\hypertarget{hw__spi_8h_ae0f469d07331d999a163d819281b96e7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+I\+M\+O\+D\+O\+U\+T}~(0x00000400u)\label{hw__spi_8h_ae0f469d07331d999a163d819281b96e7}
+
+\item 
+\hypertarget{hw__spi_8h_a66186b52678a1c6b0173ed22a2ad26c4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+I\+M\+O\+D\+O\+U\+T\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__spi_8h_a66186b52678a1c6b0173ed22a2ad26c4}
+
+\item 
+\hypertarget{hw__spi_8h_ae4947623e5e31e8345755295c9135aa7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+C\+L\+K\+D\+O\+U\+T}~(0x00000200u)\label{hw__spi_8h_ae4947623e5e31e8345755295c9135aa7}
+
+\item 
+\hypertarget{hw__spi_8h_a43f131c449c28a56f5ff87093b69d186}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+C\+L\+K\+D\+O\+U\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_a43f131c449c28a56f5ff87093b69d186}
+
+\item 
+\hypertarget{hw__spi_8h_a9f2785f469b4d21ab26a442f5a629fa5}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+E\+N\+A\+D\+O\+U\+T}~(0x00000100u)\label{hw__spi_8h_a9f2785f469b4d21ab26a442f5a629fa5}
+
+\item 
+\hypertarget{hw__spi_8h_ae21270e63290ec70bb25c8f4c30ed3e9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+E\+N\+A\+D\+O\+U\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_ae21270e63290ec70bb25c8f4c30ed3e9}
+
+\item 
+\hypertarget{hw__spi_8h_a3e84438c3534cc113acf9721bf09730f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T7}~(0x00000080u)\label{hw__spi_8h_a3e84438c3534cc113acf9721bf09730f}
+
+\item 
+\hypertarget{hw__spi_8h_aea6481fac1fa1d3b03d33d7fcd279544}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__spi_8h_aea6481fac1fa1d3b03d33d7fcd279544}
+
+\item 
+\hypertarget{hw__spi_8h_a89a7e75e0028033672df2b9deecaa1b7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T6}~(0x00000040u)\label{hw__spi_8h_a89a7e75e0028033672df2b9deecaa1b7}
+
+\item 
+\hypertarget{hw__spi_8h_ac500026f2c9238945028eae882d2b049}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_ac500026f2c9238945028eae882d2b049}
+
+\item 
+\hypertarget{hw__spi_8h_a302c8a65518bf772455c524a7eba4087}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T5}~(0x00000020u)\label{hw__spi_8h_a302c8a65518bf772455c524a7eba4087}
+
+\item 
+\hypertarget{hw__spi_8h_a1faa23fd77ef0fc4b2e152a3798fb08d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__spi_8h_a1faa23fd77ef0fc4b2e152a3798fb08d}
+
+\item 
+\hypertarget{hw__spi_8h_a2420dc5598fa782a784c5b60e6cd5e97}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T4}~(0x00000010u)\label{hw__spi_8h_a2420dc5598fa782a784c5b60e6cd5e97}
+
+\item 
+\hypertarget{hw__spi_8h_a6c2f2fedffdb7abacbfc1949c3b138a8}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a6c2f2fedffdb7abacbfc1949c3b138a8}
+
+\item 
+\hypertarget{hw__spi_8h_ae7e037f90a124377001fd862ab704c6d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T3}~(0x00000008u)\label{hw__spi_8h_ae7e037f90a124377001fd862ab704c6d}
+
+\item 
+\hypertarget{hw__spi_8h_a9e19fec2a6b6686dbbf3a32b5dd9f53e}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a9e19fec2a6b6686dbbf3a32b5dd9f53e}
+
+\item 
+\hypertarget{hw__spi_8h_ae7bb49bb03284c2e93fde829be3b8b56}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T2}~(0x00000004u)\label{hw__spi_8h_ae7bb49bb03284c2e93fde829be3b8b56}
+
+\item 
+\hypertarget{hw__spi_8h_aec23d6183b0e8f21a8756525ea9520cf}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_aec23d6183b0e8f21a8756525ea9520cf}
+
+\item 
+\hypertarget{hw__spi_8h_a649dc4af768d41e8919008c965045cf5}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T1}~(0x00000002u)\label{hw__spi_8h_a649dc4af768d41e8919008c965045cf5}
+
+\item 
+\hypertarget{hw__spi_8h_ac1360d905a1c49aa9ab2e0455800f863}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_ac1360d905a1c49aa9ab2e0455800f863}
+
+\item 
+\hypertarget{hw__spi_8h_a1a2ebbaf167e089fde4e12f3b6a09010}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T0}~(0x00000001u)\label{hw__spi_8h_a1a2ebbaf167e089fde4e12f3b6a09010}
+
+\item 
+\hypertarget{hw__spi_8h_adc2804549157608fdc0c399415d8535b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C3\+\_\+\+S\+C\+S0\+D\+O\+U\+T0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_adc2804549157608fdc0c399415d8535b}
+
+\item 
+\hypertarget{hw__spi_8h_a44f5dde31e4af22ef565e707673a1d93}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+O\+M\+I\+S\+E\+T}~(0x00000800u)\label{hw__spi_8h_a44f5dde31e4af22ef565e707673a1d93}
+
+\item 
+\hypertarget{hw__spi_8h_a98653655b82ec722d7dc32dd48ce0c15}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+O\+M\+I\+S\+E\+T\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__spi_8h_a98653655b82ec722d7dc32dd48ce0c15}
+
+\item 
+\hypertarget{hw__spi_8h_af206921043cbb3318bbac60ccc64009f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+I\+M\+O\+S\+E\+T}~(0x00000400u)\label{hw__spi_8h_af206921043cbb3318bbac60ccc64009f}
+
+\item 
+\hypertarget{hw__spi_8h_a8f94ac3f7f67686cb5d21dd80518ceea}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+I\+M\+O\+S\+E\+T\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__spi_8h_a8f94ac3f7f67686cb5d21dd80518ceea}
+
+\item 
+\hypertarget{hw__spi_8h_a6357e758c1656afe1aa7f59ceb133f3d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+C\+L\+K\+S\+E\+T}~(0x00000200u)\label{hw__spi_8h_a6357e758c1656afe1aa7f59ceb133f3d}
+
+\item 
+\hypertarget{hw__spi_8h_ab3cfb5c4f60ca4052b4718462b6056f0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+C\+L\+K\+S\+E\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_ab3cfb5c4f60ca4052b4718462b6056f0}
+
+\item 
+\hypertarget{hw__spi_8h_a49a9b52e065e1879509c710cbdd45ad5}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+E\+N\+A\+S\+E\+T}~(0x00000100u)\label{hw__spi_8h_a49a9b52e065e1879509c710cbdd45ad5}
+
+\item 
+\hypertarget{hw__spi_8h_a0b5697b2c8b8977498c874dee884ee36}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+E\+N\+A\+S\+E\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_a0b5697b2c8b8977498c874dee884ee36}
+
+\item 
+\hypertarget{hw__spi_8h_a888f189638840594656fb9e0af502bb7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T7}~(0x00000080u)\label{hw__spi_8h_a888f189638840594656fb9e0af502bb7}
+
+\item 
+\hypertarget{hw__spi_8h_a3c093776856b5e836883edc4977e3af0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__spi_8h_a3c093776856b5e836883edc4977e3af0}
+
+\item 
+\hypertarget{hw__spi_8h_a00944944c87b5b7c5c44a84ccc515193}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T6}~(0x00000040u)\label{hw__spi_8h_a00944944c87b5b7c5c44a84ccc515193}
+
+\item 
+\hypertarget{hw__spi_8h_a45f0c4610870de88de764fec8200761b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_a45f0c4610870de88de764fec8200761b}
+
+\item 
+\hypertarget{hw__spi_8h_af5b6e84cdbf4afa7e281d11a8fd388dd}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T5}~(0x00000020u)\label{hw__spi_8h_af5b6e84cdbf4afa7e281d11a8fd388dd}
+
+\item 
+\hypertarget{hw__spi_8h_a121def5448ab4a70e1ca1735a76f47f3}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__spi_8h_a121def5448ab4a70e1ca1735a76f47f3}
+
+\item 
+\hypertarget{hw__spi_8h_a2545c8aab8cd78abf4afac6520e489db}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T4}~(0x00000010u)\label{hw__spi_8h_a2545c8aab8cd78abf4afac6520e489db}
+
+\item 
+\hypertarget{hw__spi_8h_a8024668d543d57fc7f99eb9c82e37498}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a8024668d543d57fc7f99eb9c82e37498}
+
+\item 
+\hypertarget{hw__spi_8h_a9aa2b3a2b525872359e1e548260ae7e8}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T3}~(0x00000008u)\label{hw__spi_8h_a9aa2b3a2b525872359e1e548260ae7e8}
+
+\item 
+\hypertarget{hw__spi_8h_a0f2d3178bfdbea33f1e2edbeabd2d6bb}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a0f2d3178bfdbea33f1e2edbeabd2d6bb}
+
+\item 
+\hypertarget{hw__spi_8h_a52c428c5a4ef87dd3c12ebb1b1d982e3}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T2}~(0x00000004u)\label{hw__spi_8h_a52c428c5a4ef87dd3c12ebb1b1d982e3}
+
+\item 
+\hypertarget{hw__spi_8h_a55714a6c44e1e69269d4262d7b41648d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a55714a6c44e1e69269d4262d7b41648d}
+
+\item 
+\hypertarget{hw__spi_8h_aabdd8ae20969b279841f54fac579ab90}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T1}~(0x00000002u)\label{hw__spi_8h_aabdd8ae20969b279841f54fac579ab90}
+
+\item 
+\hypertarget{hw__spi_8h_a496a4bfa5c6cae572d6ab8f24464ce5c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_a496a4bfa5c6cae572d6ab8f24464ce5c}
+
+\item 
+\hypertarget{hw__spi_8h_a2ef4c5d367dfb8045553a8072a5592d8}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T0}~(0x00000001u)\label{hw__spi_8h_a2ef4c5d367dfb8045553a8072a5592d8}
+
+\item 
+\hypertarget{hw__spi_8h_abd501c88690630f1ff762349251eda66}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C4\+\_\+\+S\+C\+S0\+S\+E\+T0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_abd501c88690630f1ff762349251eda66}
+
+\item 
+\hypertarget{hw__spi_8h_a1dccaaad3d7a65b68a16d884c624a803}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+O\+M\+I\+C\+L\+R}~(0x00000800u)\label{hw__spi_8h_a1dccaaad3d7a65b68a16d884c624a803}
+
+\item 
+\hypertarget{hw__spi_8h_a7847c19947572e90b442a846bcca8ba4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+O\+M\+I\+C\+L\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Bu)\label{hw__spi_8h_a7847c19947572e90b442a846bcca8ba4}
+
+\item 
+\hypertarget{hw__spi_8h_a6c660e46ba5a2b1f43ab83e73b694ca0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+I\+M\+O\+C\+L\+R}~(0x00000400u)\label{hw__spi_8h_a6c660e46ba5a2b1f43ab83e73b694ca0}
+
+\item 
+\hypertarget{hw__spi_8h_a605cdba4abff6b964db8738d9c02c9c4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+I\+M\+O\+C\+L\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000000\+Au)\label{hw__spi_8h_a605cdba4abff6b964db8738d9c02c9c4}
+
+\item 
+\hypertarget{hw__spi_8h_a8e3faef4bdad7e2b7ec75dad13541493}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+C\+L\+K\+C\+L\+R}~(0x00000200u)\label{hw__spi_8h_a8e3faef4bdad7e2b7ec75dad13541493}
+
+\item 
+\hypertarget{hw__spi_8h_a46ec04d2f3a83160c1bbe99ac1241a5f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+C\+L\+K\+C\+L\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000009u)\label{hw__spi_8h_a46ec04d2f3a83160c1bbe99ac1241a5f}
+
+\item 
+\hypertarget{hw__spi_8h_a5b7c23c5317943ed6f93d78beb60c9f2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+E\+N\+A\+C\+L\+R}~(0x00000100u)\label{hw__spi_8h_a5b7c23c5317943ed6f93d78beb60c9f2}
+
+\item 
+\hypertarget{hw__spi_8h_a8ee9e53bb44a6b7e25a780dae07034be}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+E\+N\+A\+C\+L\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_a8ee9e53bb44a6b7e25a780dae07034be}
+
+\item 
+\hypertarget{hw__spi_8h_a064fc19e3f89124874bfd9b8f30a8580}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R7}~(0x00000080u)\label{hw__spi_8h_a064fc19e3f89124874bfd9b8f30a8580}
+
+\item 
+\hypertarget{hw__spi_8h_a3c64247ae7c3b403eb6dc1b195442291}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R7\+\_\+\+S\+H\+I\+F\+T}~(0x00000007u)\label{hw__spi_8h_a3c64247ae7c3b403eb6dc1b195442291}
+
+\item 
+\hypertarget{hw__spi_8h_acb1ef7023aedbabe25be40adefe01d88}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R6}~(0x00000040u)\label{hw__spi_8h_acb1ef7023aedbabe25be40adefe01d88}
+
+\item 
+\hypertarget{hw__spi_8h_a7029afa8ccb3daba5bc2eb6a44798c9b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R6\+\_\+\+S\+H\+I\+F\+T}~(0x00000006u)\label{hw__spi_8h_a7029afa8ccb3daba5bc2eb6a44798c9b}
+
+\item 
+\hypertarget{hw__spi_8h_a62d1f14a45e658fc6ea61ce51245c9c9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R5}~(0x00000020u)\label{hw__spi_8h_a62d1f14a45e658fc6ea61ce51245c9c9}
+
+\item 
+\hypertarget{hw__spi_8h_ac8d67ccaa1b73af61841b0b2711f7b07}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R5\+\_\+\+S\+H\+I\+F\+T}~(0x00000005u)\label{hw__spi_8h_ac8d67ccaa1b73af61841b0b2711f7b07}
+
+\item 
+\hypertarget{hw__spi_8h_a5d4100fd6d83c7ac275c955ac4f41a3c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R4}~(0x00000010u)\label{hw__spi_8h_a5d4100fd6d83c7ac275c955ac4f41a3c}
+
+\item 
+\hypertarget{hw__spi_8h_a0614b502a92ab8abb142a870ac63cae3}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R4\+\_\+\+S\+H\+I\+F\+T}~(0x00000004u)\label{hw__spi_8h_a0614b502a92ab8abb142a870ac63cae3}
+
+\item 
+\hypertarget{hw__spi_8h_af021bd1be8e4c7e39bbfbcd44f108193}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R3}~(0x00000008u)\label{hw__spi_8h_af021bd1be8e4c7e39bbfbcd44f108193}
+
+\item 
+\hypertarget{hw__spi_8h_a7494cbee974f5a76de269742f8f1a8b1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R3\+\_\+\+S\+H\+I\+F\+T}~(0x00000003u)\label{hw__spi_8h_a7494cbee974f5a76de269742f8f1a8b1}
+
+\item 
+\hypertarget{hw__spi_8h_a54de76c7589b3a8dfea66a06c2750fb2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R2}~(0x00000004u)\label{hw__spi_8h_a54de76c7589b3a8dfea66a06c2750fb2}
+
+\item 
+\hypertarget{hw__spi_8h_a086eb0d28b6d444cfa9137b38934f3e5}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R2\+\_\+\+S\+H\+I\+F\+T}~(0x00000002u)\label{hw__spi_8h_a086eb0d28b6d444cfa9137b38934f3e5}
+
+\item 
+\hypertarget{hw__spi_8h_af58050a4f81e8fbcdfd56dc5c9effff0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R1}~(0x00000002u)\label{hw__spi_8h_af58050a4f81e8fbcdfd56dc5c9effff0}
+
+\item 
+\hypertarget{hw__spi_8h_ae2ecd154c3ac091fddec11a56ede7b31}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R1\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_ae2ecd154c3ac091fddec11a56ede7b31}
+
+\item 
+\hypertarget{hw__spi_8h_ad48b3100090b78d4361a7934922904d4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R0}~(0x00000001u)\label{hw__spi_8h_ad48b3100090b78d4361a7934922904d4}
+
+\item 
+\hypertarget{hw__spi_8h_ad80a4a22577a18e9432f389e9cf22b28}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+P\+C5\+\_\+\+S\+C\+S0\+C\+L\+R0\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_ad80a4a22577a18e9432f389e9cf22b28}
+
+\item 
+\hypertarget{hw__spi_8h_a9b299ca6aadc936d4455989e480999e4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T0\+\_\+\+T\+X\+D\+A\+T\+A}~(0x0000\+F\+F\+F\+Fu)\label{hw__spi_8h_a9b299ca6aadc936d4455989e480999e4}
+
+\item 
+\hypertarget{hw__spi_8h_a762f950ef528009693bf3d734b9018f4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T0\+\_\+\+T\+X\+D\+A\+T\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a762f950ef528009693bf3d734b9018f4}
+
+\item 
+\hypertarget{hw__spi_8h_acf10cf88520833e1f8fd9a1345ddfbe7}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+C\+S\+H\+O\+L\+D}~(0x10000000u)\label{hw__spi_8h_acf10cf88520833e1f8fd9a1345ddfbe7}
+
+\item 
+\hypertarget{hw__spi_8h_ad0772824742518298807777a20393992}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+C\+S\+H\+O\+L\+D\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__spi_8h_ad0772824742518298807777a20393992}
+
+\item 
+\hypertarget{hw__spi_8h_afc8f96fbe52dc49f63a894a3e59939ba}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+W\+D\+E\+L}~(0x04000000u)\label{hw__spi_8h_afc8f96fbe52dc49f63a894a3e59939ba}
+
+\item 
+\hypertarget{hw__spi_8h_a5a1038cddd01704c9f696c3a0b52c1f5}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+W\+D\+E\+L\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__spi_8h_a5a1038cddd01704c9f696c3a0b52c1f5}
+
+\item 
+\hypertarget{hw__spi_8h_a4774ab372800e4afcd3221ccc6427e28}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+D\+F\+S\+E\+L}~(0x03000000u)\label{hw__spi_8h_a4774ab372800e4afcd3221ccc6427e28}
+
+\item 
+\hypertarget{hw__spi_8h_a1a896ec76379b51cb5c5d7c2a937ef51}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+D\+F\+S\+E\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__spi_8h_a1a896ec76379b51cb5c5d7c2a937ef51}
+
+\item 
+\hypertarget{hw__spi_8h_af97338d13dbf734a5143d6f2208e9451}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+D\+F\+S\+E\+L\+\_\+\+F\+O\+R\+M\+A\+T0}~(0x00000000u)\label{hw__spi_8h_af97338d13dbf734a5143d6f2208e9451}
+
+\item 
+\hypertarget{hw__spi_8h_a75978537f20635a9039d255e596174fc}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+D\+F\+S\+E\+L\+\_\+\+F\+O\+R\+M\+A\+T1}~(0x00000001u)\label{hw__spi_8h_a75978537f20635a9039d255e596174fc}
+
+\item 
+\hypertarget{hw__spi_8h_a407b066e5454a687e6ab463f1bd912d0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+D\+F\+S\+E\+L\+\_\+\+F\+O\+R\+M\+A\+T2}~(0x00000002u)\label{hw__spi_8h_a407b066e5454a687e6ab463f1bd912d0}
+
+\item 
+\hypertarget{hw__spi_8h_a9eaf9b73d9108582423d16f32e7ca10b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+D\+F\+S\+E\+L\+\_\+\+F\+O\+R\+M\+A\+T3}~(0x00000003u)\label{hw__spi_8h_a9eaf9b73d9108582423d16f32e7ca10b}
+
+\item 
+\hypertarget{hw__spi_8h_a131207f8e24cb55d7fb4083d8914eb25}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+C\+S\+N\+R}~(0x00\+F\+F0000u)\label{hw__spi_8h_a131207f8e24cb55d7fb4083d8914eb25}
+
+\item 
+\hypertarget{hw__spi_8h_a5829458ab45593a069052249b7766d14}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+C\+S\+N\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__spi_8h_a5829458ab45593a069052249b7766d14}
+
+\item 
+\hypertarget{hw__spi_8h_ad0954da2845b84152b40daddb86a8000}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+T\+X\+D\+A\+T\+A}~(0x0000\+F\+F\+F\+Fu)\label{hw__spi_8h_ad0954da2845b84152b40daddb86a8000}
+
+\item 
+\hypertarget{hw__spi_8h_a4db833240724afe5bf523ee7a290d41c}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+A\+T1\+\_\+\+T\+X\+D\+A\+T\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a4db833240724afe5bf523ee7a290d41c}
+
+\item 
+\hypertarget{hw__spi_8h_ac7b9b03f618c8602c31d0ed3b1bbe447}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+R\+X\+E\+M\+P\+T\+Y}~(0x80000000u)\label{hw__spi_8h_ac7b9b03f618c8602c31d0ed3b1bbe447}
+
+\item 
+\hypertarget{hw__spi_8h_ae6e7dd08a8b533d3cfdd26a4f59deff1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+R\+X\+E\+M\+P\+T\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Fu)\label{hw__spi_8h_ae6e7dd08a8b533d3cfdd26a4f59deff1}
+
+\item 
+\hypertarget{hw__spi_8h_a5d9ded79e2d0be73b451446ca6b2f25f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+R\+X\+O\+V\+R}~(0x40000000u)\label{hw__spi_8h_a5d9ded79e2d0be73b451446ca6b2f25f}
+
+\item 
+\hypertarget{hw__spi_8h_ac0881f4201114541eda5e274f99b0028}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+R\+X\+O\+V\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Eu)\label{hw__spi_8h_ac0881f4201114541eda5e274f99b0028}
+
+\item 
+\hypertarget{hw__spi_8h_aeaff16c880345a5a8aabc9cb5306c700}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+T\+X\+F\+U\+L\+L}~(0x20000000u)\label{hw__spi_8h_aeaff16c880345a5a8aabc9cb5306c700}
+
+\item 
+\hypertarget{hw__spi_8h_a0ab0a3db360ec33fd954febaf61a5953}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+T\+X\+F\+U\+L\+L\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Du)\label{hw__spi_8h_a0ab0a3db360ec33fd954febaf61a5953}
+
+\item 
+\hypertarget{hw__spi_8h_a6522b3711a375db578c6d70d429e212f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+B\+I\+T\+E\+R\+R}~(0x10000000u)\label{hw__spi_8h_a6522b3711a375db578c6d70d429e212f}
+
+\item 
+\hypertarget{hw__spi_8h_a1cd4f2f45ec2d7bf693484cfacaed12a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+B\+I\+T\+E\+R\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Cu)\label{hw__spi_8h_a1cd4f2f45ec2d7bf693484cfacaed12a}
+
+\item 
+\hypertarget{hw__spi_8h_a3cd3030e2995efd4b674227dd1467701}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+D\+E\+S\+Y\+N\+C}~(0x08000000u)\label{hw__spi_8h_a3cd3030e2995efd4b674227dd1467701}
+
+\item 
+\hypertarget{hw__spi_8h_acda3679ebbcbfabaf5eb45f880467a44}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+D\+E\+S\+Y\+N\+C\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Bu)\label{hw__spi_8h_acda3679ebbcbfabaf5eb45f880467a44}
+
+\item 
+\hypertarget{hw__spi_8h_ab0be4bc639842eb3cae46210a3d2ff62}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+P\+A\+R\+E\+R\+R}~(0x04000000u)\label{hw__spi_8h_ab0be4bc639842eb3cae46210a3d2ff62}
+
+\item 
+\hypertarget{hw__spi_8h_aeba757dcc0ebc701de69689a410da338}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+P\+A\+R\+E\+R\+R\+\_\+\+S\+H\+I\+F\+T}~(0x0000001\+Au)\label{hw__spi_8h_aeba757dcc0ebc701de69689a410da338}
+
+\item 
+\hypertarget{hw__spi_8h_a5d0722e5ae3456534dcc98a048c89ef0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+T\+I\+M\+E\+O\+U\+T}~(0x02000000u)\label{hw__spi_8h_a5d0722e5ae3456534dcc98a048c89ef0}
+
+\item 
+\hypertarget{hw__spi_8h_a0943d3998d7b1bf83cd37562d281f5ea}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000019u)\label{hw__spi_8h_a0943d3998d7b1bf83cd37562d281f5ea}
+
+\item 
+\hypertarget{hw__spi_8h_ae6154524752d89353d9b2d0faa185cd1}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+D\+L\+E\+N\+E\+R\+R}~(0x01000000u)\label{hw__spi_8h_ae6154524752d89353d9b2d0faa185cd1}
+
+\item 
+\hypertarget{hw__spi_8h_a7dd6a0c3fb229abba7df92331ce11b76}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+D\+L\+E\+N\+E\+R\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__spi_8h_a7dd6a0c3fb229abba7df92331ce11b76}
+
+\item 
+\hypertarget{hw__spi_8h_a69a910a45cf783afa54d495e19378a15}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+R\+X\+D\+A\+T\+A}~(0x0000\+F\+F\+F\+Fu)\label{hw__spi_8h_a69a910a45cf783afa54d495e19378a15}
+
+\item 
+\hypertarget{hw__spi_8h_a9fa6ef888acf1bd13991cc00ff17666b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+B\+U\+F\+\_\+\+R\+X\+D\+A\+T\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a9fa6ef888acf1bd13991cc00ff17666b}
+
+\item 
+\hypertarget{hw__spi_8h_a896343e089bdf267cbad294d49c28fbb}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+E\+M\+U\+\_\+\+R\+X\+D\+A\+T\+A}~(0x0000\+F\+F\+F\+Fu)\label{hw__spi_8h_a896343e089bdf267cbad294d49c28fbb}
+
+\item 
+\hypertarget{hw__spi_8h_ac3b20ff4a96ec6b381d91875cb5c1cbc}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+E\+M\+U\+\_\+\+R\+X\+D\+A\+T\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_ac3b20ff4a96ec6b381d91875cb5c1cbc}
+
+\item 
+\hypertarget{hw__spi_8h_aac70548eaddd022967b60c5fdfc6b43b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+C2\+T\+D\+E\+L\+A\+Y}~(0x\+F\+F000000u)\label{hw__spi_8h_aac70548eaddd022967b60c5fdfc6b43b}
+
+\item 
+\hypertarget{hw__spi_8h_a5c3f39fd00611d93e58f3264024e6ada}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+C2\+T\+D\+E\+L\+A\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__spi_8h_a5c3f39fd00611d93e58f3264024e6ada}
+
+\item 
+\hypertarget{hw__spi_8h_a7c18aba41980320604d2c4981eda862f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+T2\+C\+D\+E\+L\+A\+Y}~(0x00\+F\+F0000u)\label{hw__spi_8h_a7c18aba41980320604d2c4981eda862f}
+
+\item 
+\hypertarget{hw__spi_8h_a53c76683c17121a3cde29e52d05e89d9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+T2\+C\+D\+E\+L\+A\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__spi_8h_a53c76683c17121a3cde29e52d05e89d9}
+
+\item 
+\hypertarget{hw__spi_8h_ae680d00b400b20dc94f8cb5fbb81c73a}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+T2\+E\+D\+E\+L\+A\+Y}~(0x0000\+F\+F00u)\label{hw__spi_8h_ae680d00b400b20dc94f8cb5fbb81c73a}
+
+\item 
+\hypertarget{hw__spi_8h_a64b2435a35ed975fef1d578ef35cd009}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+T2\+E\+D\+E\+L\+A\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_a64b2435a35ed975fef1d578ef35cd009}
+
+\item 
+\hypertarget{hw__spi_8h_a0d973c74c02097c8608b8df2194bacad}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+C2\+E\+D\+E\+L\+A\+Y}~(0x000000\+F\+Fu)\label{hw__spi_8h_a0d973c74c02097c8608b8df2194bacad}
+
+\item 
+\hypertarget{hw__spi_8h_aaafb0d62319920d70a985c6f4759d8ce}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+L\+A\+Y\+\_\+\+C2\+E\+D\+E\+L\+A\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_aaafb0d62319920d70a985c6f4759d8ce}
+
+\item 
+\hypertarget{hw__spi_8h_ac8cff5c551c7cf2ae60782fcd9830ca0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+F\+\_\+\+C\+S\+D\+E\+F}~(0x0000000\+F\+Fu)\label{hw__spi_8h_ac8cff5c551c7cf2ae60782fcd9830ca0}
+
+\item 
+\hypertarget{hw__spi_8h_a81349e2320b57e44f9b018cc37b2061f}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+F\+\_\+\+C\+S\+D\+E\+F\+N}(n)~(1 $<$$<$ n)\label{hw__spi_8h_a81349e2320b57e44f9b018cc37b2061f}
+
+\item 
+\hypertarget{hw__spi_8h_ab7a2f9fd358e0f1611a32274c514c44b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+D\+E\+F\+\_\+\+C\+S\+D\+E\+F\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_ab7a2f9fd358e0f1611a32274c514c44b}
+
+\item 
+\hypertarget{hw__spi_8h_a7c34a501e39e8f6bdcf7cf24c0cee0af}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+W\+D\+E\+L\+A\+Y}~(0x3\+F000000u)\label{hw__spi_8h_a7c34a501e39e8f6bdcf7cf24c0cee0af}
+
+\item 
+\hypertarget{hw__spi_8h_aa05efa68253c614632ce58764aa087b4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+W\+D\+E\+L\+A\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x00000018u)\label{hw__spi_8h_aa05efa68253c614632ce58764aa087b4}
+
+\item 
+\hypertarget{hw__spi_8h_a116328acc00aff75ebf20950ec7fb3ea}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+A\+R\+P\+O\+L}~(0x00800000u)\label{hw__spi_8h_a116328acc00aff75ebf20950ec7fb3ea}
+
+\item 
+\hypertarget{hw__spi_8h_ab326baa3d7ea790ad56f4127b70ad694}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+A\+R\+P\+O\+L\+\_\+\+S\+H\+I\+F\+T}~(0x00000017u)\label{hw__spi_8h_ab326baa3d7ea790ad56f4127b70ad694}
+
+\item 
+\hypertarget{hw__spi_8h_a5c688a47020b5e3337302c0fe0156547}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+A\+R\+E\+N\+A}~(0x00400000u)\label{hw__spi_8h_a5c688a47020b5e3337302c0fe0156547}
+
+\item 
+\hypertarget{hw__spi_8h_a4e32dc150490f52843525c92366e3d6d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+A\+R\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000016u)\label{hw__spi_8h_a4e32dc150490f52843525c92366e3d6d}
+
+\item 
+\hypertarget{hw__spi_8h_a3c90c6fb4aab1dcf39a6a0dd7378adb6}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+W\+A\+I\+T\+E\+N\+A}~(0x00200000u)\label{hw__spi_8h_a3c90c6fb4aab1dcf39a6a0dd7378adb6}
+
+\item 
+\hypertarget{hw__spi_8h_a7a376bfc65aeb8dc1d0abae9f2224fac}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+W\+A\+I\+T\+E\+N\+A\+\_\+\+S\+H\+I\+F\+T}~(0x00000015u)\label{hw__spi_8h_a7a376bfc65aeb8dc1d0abae9f2224fac}
+
+\item 
+\hypertarget{hw__spi_8h_a5231456e81855ca1d9cf1121d76641a9}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+S\+H\+I\+F\+T\+D\+I\+R}~(0x00100000u)\label{hw__spi_8h_a5231456e81855ca1d9cf1121d76641a9}
+
+\item 
+\hypertarget{hw__spi_8h_a1fe40632b8e198a1dc2ccf17d5cc1588}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+S\+H\+I\+F\+T\+D\+I\+R\+\_\+\+S\+H\+I\+F\+T}~(0x00000014u)\label{hw__spi_8h_a1fe40632b8e198a1dc2ccf17d5cc1588}
+
+\item 
+\hypertarget{hw__spi_8h_abb09c6946ece837934036cbefa5a61b0}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+D\+I\+S\+C\+S\+T\+I\+M\+E\+R\+S}~(0x00040000u)\label{hw__spi_8h_abb09c6946ece837934036cbefa5a61b0}
+
+\item 
+\hypertarget{hw__spi_8h_a81a97ea3deac5eb161c85be6b23781e2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+D\+I\+S\+C\+S\+T\+I\+M\+E\+R\+S\+\_\+\+S\+H\+I\+F\+T}~(0x00000012u)\label{hw__spi_8h_a81a97ea3deac5eb161c85be6b23781e2}
+
+\item 
+\hypertarget{hw__spi_8h_a9074c8f9731d74cfd289844bdbac2e26}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y}~(0x00020000u)\label{hw__spi_8h_a9074c8f9731d74cfd289844bdbac2e26}
+
+\item 
+\hypertarget{hw__spi_8h_aeeefb897c8dee1a035a82d88e3455b11}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+S\+H\+I\+F\+T}~(0x00000011u)\label{hw__spi_8h_aeeefb897c8dee1a035a82d88e3455b11}
+
+\item 
+\hypertarget{hw__spi_8h_ae601716b6d560fa6a41daf1eae596a5d}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+H\+A\+S\+E}~(0x00010000u)\label{hw__spi_8h_ae601716b6d560fa6a41daf1eae596a5d}
+
+\item 
+\hypertarget{hw__spi_8h_a0e2086540d0cea61cf02261813ee5ab4}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+H\+A\+S\+E\+\_\+\+S\+H\+I\+F\+T}~(0x00000010u)\label{hw__spi_8h_a0e2086540d0cea61cf02261813ee5ab4}
+
+\item 
+\hypertarget{hw__spi_8h_ab8e86aced555fc6f2f478212fd3379ad}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E}~(0x0000\+F\+F00u)\label{hw__spi_8h_ab8e86aced555fc6f2f478212fd3379ad}
+
+\item 
+\hypertarget{hw__spi_8h_aaae19e3cf90c8029d4ebbb660d716198}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+\_\+\+S\+H\+I\+F\+T}~(0x00000008u)\label{hw__spi_8h_aaae19e3cf90c8029d4ebbb660d716198}
+
+\item 
+\hypertarget{hw__spi_8h_a8050404994556cb5230eff7ff1171ec2}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+C\+H\+A\+R\+L\+E\+N}~(0x0000001\+Fu)\label{hw__spi_8h_a8050404994556cb5230eff7ff1171ec2}
+
+\item 
+\hypertarget{hw__spi_8h_a72e7d880c964b6c2703441bebf83ac9b}{}\#define {\bfseries S\+P\+I\+\_\+\+S\+P\+I\+F\+M\+T\+\_\+\+C\+H\+A\+R\+L\+E\+N\+\_\+\+S\+H\+I\+F\+T}~(0x00000000u)\label{hw__spi_8h_a72e7d880c964b6c2703441bebf83ac9b}
+
+\item 
+\hypertarget{hw__spi_8h_a4d3e19aaa836eb7b78fbab65e3864bd1}{}\#define {\bfseries S\+P\+I\+\_\+\+I\+N\+T\+V\+E\+C\+\_\+\+I\+N\+T\+V\+E\+C\+T}~(0x0000003\+Eu)\label{hw__spi_8h_a4d3e19aaa836eb7b78fbab65e3864bd1}
+
+\item 
+\hypertarget{hw__spi_8h_a83a1aac1f74877b4d024e66225a98829}{}\#define {\bfseries S\+P\+I\+\_\+\+I\+N\+T\+V\+E\+C\+\_\+\+I\+N\+T\+V\+E\+C\+T\+\_\+\+S\+H\+I\+F\+T}~(0x00000001u)\label{hw__spi_8h_a83a1aac1f74877b4d024e66225a98829}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+P\+I register definitions. 
+

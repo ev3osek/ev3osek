@@ -1,0 +1,90 @@
+\hypertarget{adc_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/adc.c File Reference}
+\label{adc_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/adc.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/adc.\+c}}
+
+
+This file contains function definitions to talk to the A\+D\+C.  
+
+
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+Include dependency graph for adc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{adc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \hyperlink{adc_8c_add2dc4cfa717ea4e243a273ebdb98a21}{adc\+\_\+get} (unsigned short channel)
+\begin{DoxyCompactList}\small\item\em Get the value currently meassured by the A\+D\+C for the specified channel. \end{DoxyCompactList}\item 
+void \hyperlink{adc_8c_a2b815e6730e8723a6d1d06d9ef8f31c0}{adc\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the A\+D\+C by providing it with power. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains function definitions to talk to the A\+D\+C. 
+
+\begin{DoxyAuthor}{Author}
+ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{adc_8c_add2dc4cfa717ea4e243a273ebdb98a21}{}\index{adc.\+c@{adc.\+c}!adc\+\_\+get@{adc\+\_\+get}}
+\index{adc\+\_\+get@{adc\+\_\+get}!adc.\+c@{adc.\+c}}
+\subsubsection[{adc\+\_\+get(unsigned short channel)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short adc\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{channel}
+\end{DoxyParamCaption}
+)}\label{adc_8c_add2dc4cfa717ea4e243a273ebdb98a21}
+
+
+Get the value currently meassured by the A\+D\+C for the specified channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & -\/ The channel to meassure (ranging from 0 to 15)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value currently meassured by the A\+D\+C (ranging from 0 to 4095) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{adc_8c_add2dc4cfa717ea4e243a273ebdb98a21_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{adc_8c_a2b815e6730e8723a6d1d06d9ef8f31c0}{}\index{adc.\+c@{adc.\+c}!adc\+\_\+init@{adc\+\_\+init}}
+\index{adc\+\_\+init@{adc\+\_\+init}!adc.\+c@{adc.\+c}}
+\subsubsection[{adc\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void adc\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{adc_8c_a2b815e6730e8723a6d1d06d9ef8f31c0}
+
+
+Initialize the A\+D\+C by providing it with power. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{adc_8c_a2b815e6730e8723a6d1d06d9ef8f31c0_cgraph}
+\end{center}
+\end{figure}
+
+

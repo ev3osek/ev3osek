@@ -1,0 +1,11 @@
+<map id="leJOS_EV3/src/ev3/i2c.c" name="leJOS_EV3/src/ev3/i2c.c">
+<area shape="rect" id="node2" href="$i2c_8h.html" title="Function declarations related to I2C communication. " alt="" coords="5,80,56,107"/>
+<area shape="rect" id="node4" href="$soc___a_m1808_8h.html" title="This file contains the peripheral information for AM1808 SOC. " alt="" coords="80,80,189,107"/>
+<area shape="rect" id="node5" href="$systick_8h.html" title="This header contains function declarations required to manage the tick in milliseconds on the EV3..." alt="" coords="213,80,288,107"/>
+<area shape="rect" id="node6" href="$hw__syscfg0___a_m1808_8h.html" title="SYSCFG0 register definitions for AM1808. " alt="" coords="313,80,471,107"/>
+<area shape="rect" id="node7" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="495,80,577,107"/>
+<area shape="rect" id="node8" href="$digi__sensors_8h.html" title="Function declarations to talk to the digital sensors (I2C sensors) " alt="" coords="601,80,708,107"/>
+<area shape="rect" id="node10" href="$evm_a_m1808_8h.html" title="This file contains the board specific function prototypes for use by applications. " alt="" coords="732,80,839,107"/>
+<area shape="rect" id="node3" href="$mytypes_8h.html" title="This header defines the data types used in the leJOS driver. " alt="" coords="99,155,181,181"/>
+<area shape="rect" id="node9" href="$sensors_8h.html" title="This header contains macros for the sensor ports of the EV3. " alt="" coords="615,155,694,181"/>
+</map>

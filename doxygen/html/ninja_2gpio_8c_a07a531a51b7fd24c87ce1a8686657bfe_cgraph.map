@@ -1,0 +1,4 @@
+<map id="turn_off_brick" name="turn_off_brick">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="155,5,267,32"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="315,5,409,32"/>
+</map>

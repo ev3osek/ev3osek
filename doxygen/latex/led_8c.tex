@@ -1,0 +1,114 @@
+\hypertarget{led_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/led.c File Reference}
+\label{led_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/led.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/ninja/led.\+c}}
+
+
+This contains function definitions required to interact with the L\+E\+Ds of the E\+V3.  
+
+
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+Include dependency graph for led.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{led_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8c_af47863c8014e3ddf2909dedb61a7062b}{led\+\_\+set} (\hyperlink{led_8h_acb7e9e867e9fca70f6201b3c5c6a71ea}{led\+\_\+id} led, \hyperlink{led_8h_add3b17d7e612b943fa4ce611ee324e73}{led\+\_\+color} color)
+\begin{DoxyCompactList}\small\item\em Set the color of the given L\+E\+D. \end{DoxyCompactList}\item 
+void \hyperlink{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66}{led\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the G\+P\+I\+O pins required to manipulate the L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structled__info}{led\+\_\+info} \hyperlink{led_8c_a68105ee4550bf85a77559ea8c06460bb}{leds} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em This array stores information about the 2 L\+E\+Ds (left and right) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This contains function definitions required to interact with the L\+E\+Ds of the E\+V3. 
+
+\begin{DoxyAuthor}{Author}
+ev3ninja 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66}{}\index{led.\+c@{led.\+c}!led\+\_\+init@{led\+\_\+init}}
+\index{led\+\_\+init@{led\+\_\+init}!led.\+c@{led.\+c}}
+\subsubsection[{led\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void led\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66}
+
+
+Initialize the G\+P\+I\+O pins required to manipulate the L\+E\+Ds. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8c_a7eb4d382bdd4b42c57dbb7154d03ac66_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{led_8c_af47863c8014e3ddf2909dedb61a7062b}{}\index{led.\+c@{led.\+c}!led\+\_\+set@{led\+\_\+set}}
+\index{led\+\_\+set@{led\+\_\+set}!led.\+c@{led.\+c}}
+\subsubsection[{led\+\_\+set(led\+\_\+id led, led\+\_\+color color)}]{\setlength{\rightskip}{0pt plus 5cm}void led\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf led\+\_\+id}}]{led, }
+\item[{{\bf led\+\_\+color}}]{color}
+\end{DoxyParamCaption}
+)}\label{led_8c_af47863c8014e3ddf2909dedb61a7062b}
+
+
+Set the color of the given L\+E\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & -\/ The I\+D of the L\+E\+D to control \\
+\hline
+{\em color} & -\/ The color to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8c_af47863c8014e3ddf2909dedb61a7062b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{led_8c_a68105ee4550bf85a77559ea8c06460bb}{}\index{led.\+c@{led.\+c}!leds@{leds}}
+\index{leds@{leds}!led.\+c@{led.\+c}}
+\subsubsection[{leds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf led\+\_\+info} leds\mbox{[}$\,$\mbox{]}}\label{led_8c_a68105ee4550bf85a77559ea8c06460bb}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6, 13), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6,  7) \}, 
+    \{ \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6, 12), \hyperlink{ninja_2gpio_8h_a17024ec92fb640f98ea920b98d2c324c}{GPIO\_PIN}(6, 14) \}  
+\}
+\end{DoxyCode}
+
+
+This array stores information about the 2 L\+E\+Ds (left and right) 
+

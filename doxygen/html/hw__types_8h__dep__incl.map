@@ -1,0 +1,15 @@
+<map id="leJOS_EV3/src/ev3/include/hw/hw_types.h" name="leJOS_EV3/src/ev3/include/hw/hw_types.h">
+<area shape="rect" id="node2" href="$ecap_8c.html" title="ECAP APIs. " alt="" coords="5,95,185,136"/>
+<area shape="rect" id="node3" href="$ehrpwm_8c.html" title="This file contains the device abstraction layer APIs for EHRPWM. " alt="" coords="209,95,389,136"/>
+<area shape="rect" id="node4" href="$drivers_2gpio_8c.html" title="This file contains the device abstraction layer APIs for GPIO. " alt="" coords="413,95,593,136"/>
+<area shape="rect" id="node5" href="$interrupt_8c.html" title="Contains the APIs for configuring AINTC. " alt="" coords="929,184,1109,225"/>
+<area shape="rect" id="node6" href="$psc_8c.html" title="This file contains the device abstraction layer APIs for the PSC module. There are APIs here to enabl..." alt="" coords="669,95,849,136"/>
+<area shape="rect" id="node7" href="$drivers_2spi_8c.html" title="SPI device abstraction layer APIs. " alt="" coords="873,95,1053,136"/>
+<area shape="rect" id="node8" href="$syscfg_8c.html" title="This file contains APIs to lock and unlock the System Configuration (SYSCFG) module registers by appr..." alt="" coords="1077,95,1257,136"/>
+<area shape="rect" id="node9" href="$timer_8c.html" title="TIMER APIs. " alt="" coords="1281,95,1461,136"/>
+<area shape="rect" id="node10" href="$edma__event_8h.html" title="EDMA event enumeration. " alt="" coords="1485,95,1684,136"/>
+<area shape="rect" id="node11" href="$interrupt_8h.html" title="Interrupt related API declarations. " alt="" coords="1708,95,1891,136"/>
+<area shape="rect" id="node12" href="$init_8c.html" title="This code is required in order to initialize the leJOS driver including all modules properly..." alt="" coords="1521,191,1691,218"/>
+<area shape="rect" id="node13" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="1715,184,1883,225"/>
+<area shape="rect" id="node14" href="$systick_8c.html" title="This header contains function definitions required to manage the tick in milliseconds on the EV3..." alt="" coords="1907,191,2102,218"/>
+</map>

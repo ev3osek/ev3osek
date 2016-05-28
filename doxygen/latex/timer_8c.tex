@@ -1,0 +1,1054 @@
+\hypertarget{timer_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/timer.c File Reference}
+\label{timer_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/timer.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/timer.\+c}}
+
+
+T\+I\+M\+E\+R A\+P\+Is.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+tmr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+Include dependency graph for timer.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{timer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{timer_8c_a26d7fb01824d766617bec8788483d5e4}{}\#define {\bfseries W\+D\+T\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+\_\+\+A\+C\+T\+I\+V\+E}~(0x\+A5\+C6u)\label{timer_8c_a26d7fb01824d766617bec8788483d5e4}
+
+\item 
+\hypertarget{timer_8c_a837a77f5b6a3e556cf9d2271386b9b65}{}\#define {\bfseries W\+D\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+C\+T\+I\+V\+E}~(0x\+D\+A7\+Eu)\label{timer_8c_a837a77f5b6a3e556cf9d2271386b9b65}
+
+\item 
+\hypertarget{timer_8c_aded9c4b30eef8100a1c589fab8fe75f6}{}\#define {\bfseries C\+M\+P\+\_\+\+I\+D\+X\+\_\+\+M\+A\+S\+K}~(0x07)\label{timer_8c_aded9c4b30eef8100a1c589fab8fe75f6}
+
+\item 
+\hypertarget{timer_8c_a33cffc1b5b71f408ab1f2a3672f06595}{}\#define {\bfseries P\+R\+E\+S\+C\+A\+L\+E\+\_\+\+M\+A\+S\+K}~(0x0\+F)\label{timer_8c_a33cffc1b5b71f408ab1f2a3672f06595}
+
+\item 
+\hypertarget{timer_8c_aadd200b7ff0018c783adf3e777ba84b8}{}\#define {\bfseries T\+D\+D\+R\+\_\+\+M\+A\+S\+K}~(0x0\+F)\label{timer_8c_aadd200b7ff0018c783adf3e777ba84b8}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8c_af46e1a7c7a2cc64a0c698b091c0cd608}{Timer\+Enable} (unsigned int base\+Addr, unsigned int timer, unsigned int ena\+Mode)
+\begin{DoxyCompactList}\small\item\em Enables the timer in the specified mode. The timer must be configured before it is enabled. The timer starts running when this A\+P\+I is called. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a46a25c076cc25a8b986a810f906eaaa1}{Timer\+Disable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Disables the timer. The timer stops running when this A\+P\+I is called. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_aed4f606ff688de30d10e0b30eb7b5e21}{Timer\+Configure} (unsigned int base\+Addr, unsigned int config)
+\begin{DoxyCompactList}\small\item\em Configures the timer. The timer can be configured in 64 bit mode 32 bit chained/unchained mode, or as a watchdog timer. The timer can be given external clock input or internal clock input. When this A\+P\+I is called,~\newline
+ $>$ The Timer counters are cleared ~\newline
+ $>$ Both the timers are disabled from Reset. Hence, both the timers will start counting when enabled. ~\newline
+. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a9b3f87ac555fb07c086aafdee2602740}{Timer\+Watchdog\+Activate} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em Activate the Watchdog timer. The timer shall be configured as watchdog timer before this A\+P\+I is called. This A\+P\+I writes two keys into the W\+D\+T\+C\+R in the order to activate the W\+D\+T. The user shall call Timer\+Watchdog\+Reactivate A\+P\+I before the W\+D\+T expires, to avoid a reset. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a1bffc6a66759e91fe2a47c0e6fc0be35}{Timer\+Watchdog\+Reactivate} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em Re-\/activate the Watchdog timer. The W\+D\+T shall be enabled before this A\+P\+I is called. The user shall call this A\+P\+I before the W\+D\+T expires, to avoid a reset. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a91cac574bb11559893394ad5b8cacfb9}{Timer\+Period\+Set} (unsigned int base\+Addr, unsigned int timer, unsigned int period)
+\begin{DoxyCompactList}\small\item\em Set the Period register(s) of the specified timer(s). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a8494c4376171020d60fb6849c92b840c}{Timer\+Period\+Get} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Returns the Period register contents of the specified timer. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_abcb70c3dfa55ddb6643be86c74aad893}{Timer\+Counter\+Set} (unsigned int base\+Addr, unsigned int timer, unsigned int counter)
+\begin{DoxyCompactList}\small\item\em Set the Counter register of the specified timer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a1ca3cf4c6faf2b1c19e7e5c06c7ca300}{Timer\+Counter\+Get} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Returns the Counter register contents of the specified timer. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a194d98f5a0ae1cdeb17deb7fe61c466f}{Timer\+Reload\+Set} (unsigned int base\+Addr, unsigned int timer, unsigned int reload)
+\begin{DoxyCompactList}\small\item\em Set the Reload period of the specified timer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a0cf96ba41b9c376159027d2a25164d7a}{Timer\+Reload\+Get} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Returns the Reload Period of the specified timer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a3ab8207bd3ba5c52ad18ceb465901096}{Timer\+Capture\+Get} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Returns the capture value of the specified timer. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a38941747a32e7ac9c5a38e5421b9164e}{Timer\+Compare\+Set} (unsigned int base\+Addr, unsigned int reg\+Index, unsigned int compare)
+\begin{DoxyCompactList}\small\item\em Set the Compare value of the specified C\+M\+P register. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_ae4d4610134eae4ce5b41ebe947c0fe4a}{Timer\+Compare\+Get} (unsigned int base\+Addr, unsigned int reg\+Index)
+\begin{DoxyCompactList}\small\item\em Returns the Compare value of the specified C\+M\+P register. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a87b3ce1e8fe5a7fde5ec8f75cae4ff8c}{Timer\+Int\+Enable} (unsigned int base\+Addr, unsigned int int\+Flags)
+\begin{DoxyCompactList}\small\item\em Enables the specified timer interrupts. The timer interrupts which are to be enabled can be passed as parameter to this function. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_ab32d99a0068510c6ff13935e194bf6b2}{Timer\+Int\+Disable} (unsigned int base\+Addr, unsigned int int\+Flags)
+\begin{DoxyCompactList}\small\item\em Disables the specified timer interrupts. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a0446a59c87d922229fef66a0985b981b}{Timer\+Int\+Status\+Get} (unsigned int base\+Addr, unsigned int stat\+Flag)
+\begin{DoxyCompactList}\small\item\em Returns the status of specified timer interrupts. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_af9d8f894846ff4e5e5796f0e88ae8c78}{Timer\+Int\+Status\+Clear} (unsigned int base\+Addr, unsigned int stat\+Flag)
+\begin{DoxyCompactList}\small\item\em Clears the status of specified timer interrupts. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a1ae048c28cf17e7436e32db8d44c3b2b}{Timer\+Pre\+Scalar\+Count34\+Set} (unsigned int base\+Addr, unsigned int psc34)
+\begin{DoxyCompactList}\small\item\em Sets the Prescalar Counter of Timer34. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a552556a68f20befe39aa52346ca8c8aa}{Timer\+Pre\+Scalar\+Count34\+Get} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em Returns the Prescalar Counter of Timer34. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a1cee9a4d8f33e5ec9ff9e5d82be3773c}{Timer\+Div\+Dwn\+Ratio34\+Set} (unsigned int base\+Addr, unsigned int tddr34)
+\begin{DoxyCompactList}\small\item\em Sets the Timer Divide Down Ratio of Timer34. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_a81771d593831b11f207f910eb9ac79e7}{Timer\+Div\+Dwn\+Ratio34\+Get} (unsigned int base\+Addr)
+\begin{DoxyCompactList}\small\item\em returns the Timer Divide Down Ratio of Timer34. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a3e88b90fc63688899a5265f3da0638c2}{Timer\+Capture\+Configure} (unsigned int base\+Addr, unsigned int timer, unsigned int cfg\+Cap)
+\begin{DoxyCompactList}\small\item\em Configures the Timer for Capture Mode. The Timer Module Shall be Configured in 32 bit unchained mode before this A\+P\+I is called. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_abcae8c33c8af1b4a327a0b35430bcf8c}{Timer\+Read\+Reset\+Enable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Enables the timer(s) for read reset mode. The timer shall be Configured in 32 bit unchained mode before this A\+P\+I is called. Read reset determines the effect of timer counter read on T\+I\+Mn. If Read reset is enabled, the timer counter will be reset when the timer counter register T\+I\+Mn is read. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a0bd5785b8a6404cfa9fd15a97ab6634f}{Timer\+Read\+Reset\+Disable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Disables the timer for read reset mode. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a8567cc6c41cb9aaae9a16d6c27073f29}{Timer\+Input\+Gate\+Enable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Sets the Input Gate Enable. Allows the timer to gate the internal timer clock source. The timer starts counting when the input pin goes from Low to High and stops counting when transition happens from high to low. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_ad85c13c3a56568c4368ca2d04b71a1d8}{Timer\+Input\+Gate\+Disable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Disable the Input Gate. Timer clock will not be gated by input pin. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_aba24a8f906ab09ed36d0525bb16c25bb}{Timer\+Pulse\+Width\+Set} (unsigned int base\+Addr, unsigned int timer, unsigned int pulse\+Width)
+\begin{DoxyCompactList}\small\item\em Sets the pulse width for the specified timer. Determines the pulse. width in the T\+S\+T\+A\+Tn bit and the O\+U\+T pin in pulse mode. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a5693881a108b349c83206638c948bd3a}{Timer\+Clock\+Mode\+Set} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Sets the clock mode. Once the clock mode is set, the outpin behaves as 50\% duty cycle signal. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a03fed902e7238a96d1b1c808a0d8b6af}{Timer\+Pulse\+Mode\+Set} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Sets the pulse mode. The outpin goes active when the timer count reaches the period. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{timer_8c_ae975ecbb48f390c1a5c75669446b8c8a}{Timer\+O\+U\+T\+Status\+Get} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Returns the timer status. The timer status Drives the value of the timer output T\+M64\+P\+\_\+\+O\+U\+Tn when configured. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_ab9568c813c3185a4ae60828225d0dc14}{Timer\+Invert\+I\+N\+Enable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Inverts the T\+M\+R64\+P\+\_\+\+I\+Nn signal. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_aa6ed058a7ef169e2d775f7d6706bd2b0}{Timer\+Invert\+I\+N\+Disable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Disables the Inversion of the T\+M\+R64\+P\+\_\+\+I\+Nn signal. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_ac9e98218df047c41ddf320ef3bb939bb}{Timer\+Invert\+O\+U\+T\+Enable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Inverts the T\+M\+R64\+P\+\_\+\+O\+U\+Tn signal. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_ac9007158dbb96ec81ee76b1c779ef355}{Timer\+Invert\+O\+U\+T\+Disable} (unsigned int base\+Addr, unsigned int timer)
+\begin{DoxyCompactList}\small\item\em Disables the inversion the T\+M\+R64\+P\+\_\+\+O\+U\+Tn signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+I\+M\+E\+R A\+P\+Is. 
+
+This file contains the device abstraction layer A\+P\+Is for Timer Plus. 
+
+\subsection{Function Documentation}
+\hypertarget{timer_8c_a3e88b90fc63688899a5265f3da0638c2}{}\index{timer.\+c@{timer.\+c}!Timer\+Capture\+Configure@{Timer\+Capture\+Configure}}
+\index{Timer\+Capture\+Configure@{Timer\+Capture\+Configure}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Capture\+Configure(unsigned int base\+Addr, unsigned int timer, unsigned int cfg\+Cap)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Capture\+Configure (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer, }
+\item[{unsigned int}]{cfg\+Cap}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a3e88b90fc63688899a5265f3da0638c2}
+
+
+Configures the Timer for Capture Mode. The Timer Module Shall be Configured in 32 bit unchained mode before this A\+P\+I is called. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which capture to be configured. \\
+\hline
+{\em cfg\+Cap} & Configuration of Capture Mode.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers ~\newline
+ cfg\+Cap can take the values ~\newline
+ T\+M\+R\+\_\+\+C\+A\+P\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E -\/ Capture Mode disable ~\newline
+ T\+M\+R\+\_\+\+C\+A\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+R\+I\+S\+\_\+\+E\+D\+G\+E -\/ Capture enable at rising edge ~\newline
+ T\+M\+R\+\_\+\+C\+A\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+F\+A\+L\+L\+\_\+\+E\+D\+G\+E -\/ Capture enable at falling edge ~\newline
+ T\+M\+R\+\_\+\+C\+A\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+O\+T\+H\+\_\+\+E\+D\+G\+E -\/ Capture enable at both edges
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a3ab8207bd3ba5c52ad18ceb465901096}{}\index{timer.\+c@{timer.\+c}!Timer\+Capture\+Get@{Timer\+Capture\+Get}}
+\index{Timer\+Capture\+Get@{Timer\+Capture\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Capture\+Get(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Capture\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a3ab8207bd3ba5c52ad18ceb465901096}
+
+
+Returns the capture value of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which capture value to be read.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 ~\newline
+ \begin{DoxyReturn}{Returns}
+Capture Value 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a5693881a108b349c83206638c948bd3a}{}\index{timer.\+c@{timer.\+c}!Timer\+Clock\+Mode\+Set@{Timer\+Clock\+Mode\+Set}}
+\index{Timer\+Clock\+Mode\+Set@{Timer\+Clock\+Mode\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Clock\+Mode\+Set(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Clock\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a5693881a108b349c83206638c948bd3a}
+
+
+Sets the clock mode. Once the clock mode is set, the outpin behaves as 50\% duty cycle signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which clock mode to be set.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ae4d4610134eae4ce5b41ebe947c0fe4a}{}\index{timer.\+c@{timer.\+c}!Timer\+Compare\+Get@{Timer\+Compare\+Get}}
+\index{Timer\+Compare\+Get@{Timer\+Compare\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Compare\+Get(unsigned int base\+Addr, unsigned int reg\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Compare\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{reg\+Index}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ae4d4610134eae4ce5b41ebe947c0fe4a}
+
+
+Returns the Compare value of the specified C\+M\+P register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em reg\+Index} & Index of the C\+M\+P Register\\
+\hline
+\end{DoxyParams}
+reg\+Index can take any value from 0 to 7. If reg\+Index = n, contents of C\+M\+Pn will be returned.
+
+\begin{DoxyReturn}{Returns}
+Compare Value. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a38941747a32e7ac9c5a38e5421b9164e}{}\index{timer.\+c@{timer.\+c}!Timer\+Compare\+Set@{Timer\+Compare\+Set}}
+\index{Timer\+Compare\+Set@{Timer\+Compare\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Compare\+Set(unsigned int base\+Addr, unsigned int reg\+Index, unsigned int compare)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Compare\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{reg\+Index, }
+\item[{unsigned int}]{compare}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a38941747a32e7ac9c5a38e5421b9164e}
+
+
+Set the Compare value of the specified C\+M\+P register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em reg\+Index} & Index of the C\+M\+P Register \\
+\hline
+{\em compare} & The value to be written\\
+\hline
+\end{DoxyParams}
+reg\+Index can take any value from 0 to 7. If reg\+Index = n, C\+M\+Pn will be set with the value compare.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_aed4f606ff688de30d10e0b30eb7b5e21}{}\index{timer.\+c@{timer.\+c}!Timer\+Configure@{Timer\+Configure}}
+\index{Timer\+Configure@{Timer\+Configure}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Configure(unsigned int base\+Addr, unsigned int config)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Configure (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{config}
+\end{DoxyParamCaption}
+)}\label{timer_8c_aed4f606ff688de30d10e0b30eb7b5e21}
+
+
+Configures the timer. The timer can be configured in 64 bit mode 32 bit chained/unchained mode, or as a watchdog timer. The timer can be given external clock input or internal clock input. When this A\+P\+I is called,~\newline
+ $>$ The Timer counters are cleared ~\newline
+ $>$ Both the timers are disabled from Reset. Hence, both the timers will start counting when enabled. ~\newline
+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em config} & Configuration of the Timer Module.\\
+\hline
+\end{DoxyParams}
+config can take the values ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+64\+B\+I\+T\+\_\+\+C\+L\+K\+\_\+\+I\+N\+T -\/ 64 bit mode with internal clock ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+64\+B\+I\+T\+\_\+\+C\+L\+K\+\_\+\+E\+X\+T -\/ 64 bit mode with external clock ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+64\+B\+I\+T\+\_\+\+W\+A\+T\+C\+H\+D\+O\+G -\/ 64 bit watchdog timer mode ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+32\+B\+I\+T\+\_\+\+C\+H\+\_\+\+C\+L\+K\+\_\+\+I\+N\+T -\/ 32 bit chained mode with internal clock ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+32\+B\+I\+T\+\_\+\+C\+H\+\_\+\+C\+L\+K\+\_\+\+E\+X\+T -\/ 32 bit chained mode with external clock ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+32\+B\+I\+T\+\_\+\+U\+N\+C\+H\+\_\+\+C\+L\+K\+\_\+\+B\+O\+T\+H\+\_\+\+I\+N\+T -\/ 32 bit unchained mode; Both timers clock sources are internal ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+32\+B\+I\+T\+\_\+\+U\+N\+C\+H\+\_\+\+C\+L\+K\+\_\+12\+I\+N\+T\+\_\+34\+E\+X\+T -\/ 32 bit unchained mode; Clock source for Timer12 is internal and for Timer34 is external ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+32\+B\+I\+T\+\_\+\+U\+N\+C\+H\+\_\+\+C\+L\+K\+\_\+12\+E\+X\+T\+\_\+34\+I\+N\+T -\/ 32 bit unchained mode; Clock source for Timer12 is external and for Timer34 is internal ~\newline
+ T\+M\+R\+\_\+\+C\+F\+G\+\_\+32\+B\+I\+T\+\_\+\+U\+N\+C\+H\+\_\+\+C\+L\+K\+\_\+\+B\+O\+T\+H\+\_\+\+E\+X\+T -\/ 32 bit unchained mode; Both timers clock sources are external
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a1ca3cf4c6faf2b1c19e7e5c06c7ca300}{}\index{timer.\+c@{timer.\+c}!Timer\+Counter\+Get@{Timer\+Counter\+Get}}
+\index{Timer\+Counter\+Get@{Timer\+Counter\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Counter\+Get(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Counter\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a1ca3cf4c6faf2b1c19e7e5c06c7ca300}
+
+
+Returns the Counter register contents of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which counter to be read.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 ~\newline
+ \begin{DoxyReturn}{Returns}
+Counter Value. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_abcb70c3dfa55ddb6643be86c74aad893}{}\index{timer.\+c@{timer.\+c}!Timer\+Counter\+Set@{Timer\+Counter\+Set}}
+\index{Timer\+Counter\+Set@{Timer\+Counter\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Counter\+Set(unsigned int base\+Addr, unsigned int timer, unsigned int counter)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Counter\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer, }
+\item[{unsigned int}]{counter}
+\end{DoxyParamCaption}
+)}\label{timer_8c_abcb70c3dfa55ddb6643be86c74aad893}
+
+
+Set the Counter register of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which counter to be set. \\
+\hline
+{\em counter} & The counter value of the timer.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers ~\newline
+ \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a46a25c076cc25a8b986a810f906eaaa1}{}\index{timer.\+c@{timer.\+c}!Timer\+Disable@{Timer\+Disable}}
+\index{Timer\+Disable@{Timer\+Disable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Disable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a46a25c076cc25a8b986a810f906eaaa1}
+
+
+Disables the timer. The timer stops running when this A\+P\+I is called. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & Timer to be disabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers ~\newline
+ \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a81771d593831b11f207f910eb9ac79e7}{}\index{timer.\+c@{timer.\+c}!Timer\+Div\+Dwn\+Ratio34\+Get@{Timer\+Div\+Dwn\+Ratio34\+Get}}
+\index{Timer\+Div\+Dwn\+Ratio34\+Get@{Timer\+Div\+Dwn\+Ratio34\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Div\+Dwn\+Ratio34\+Get(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Div\+Dwn\+Ratio34\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a81771d593831b11f207f910eb9ac79e7}
+
+
+returns the Timer Divide Down Ratio of Timer34. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+D\+D\+R34 value. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a1cee9a4d8f33e5ec9ff9e5d82be3773c}{}\index{timer.\+c@{timer.\+c}!Timer\+Div\+Dwn\+Ratio34\+Set@{Timer\+Div\+Dwn\+Ratio34\+Set}}
+\index{Timer\+Div\+Dwn\+Ratio34\+Set@{Timer\+Div\+Dwn\+Ratio34\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Div\+Dwn\+Ratio34\+Set(unsigned int base\+Addr, unsigned int tddr34)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Div\+Dwn\+Ratio34\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{tddr34}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a1cee9a4d8f33e5ec9ff9e5d82be3773c}
+
+
+Sets the Timer Divide Down Ratio of Timer34. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em tddr34} & T\+D\+D\+R34, Timer Divide Down Ratio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_af46e1a7c7a2cc64a0c698b091c0cd608}{}\index{timer.\+c@{timer.\+c}!Timer\+Enable@{Timer\+Enable}}
+\index{Timer\+Enable@{Timer\+Enable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Enable(unsigned int base\+Addr, unsigned int timer, unsigned int ena\+Mode)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer, }
+\item[{unsigned int}]{ena\+Mode}
+\end{DoxyParamCaption}
+)}\label{timer_8c_af46e1a7c7a2cc64a0c698b091c0cd608}
+
+
+Enables the timer in the specified mode. The timer must be configured before it is enabled. The timer starts running when this A\+P\+I is called. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer to be enabled. \\
+\hline
+{\em ena\+Mode} & Mode of enabling the timer.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer 12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers ~\newline
+ ena\+Mode can take the values ~\newline
+ T\+M\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+O\+N\+C\+E -\/ Enable the timer to run once ~\newline
+ T\+M\+R\+\_\+\+E\+N\+A\+B\+L\+R\+\_\+\+C\+O\+N\+T -\/ Enable to run continuous ~\newline
+ T\+M\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+O\+N\+T\+R\+E\+L\+O\+A\+D -\/ Enable to run continuous with period reload
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ad85c13c3a56568c4368ca2d04b71a1d8}{}\index{timer.\+c@{timer.\+c}!Timer\+Input\+Gate\+Disable@{Timer\+Input\+Gate\+Disable}}
+\index{Timer\+Input\+Gate\+Disable@{Timer\+Input\+Gate\+Disable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Input\+Gate\+Disable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Input\+Gate\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ad85c13c3a56568c4368ca2d04b71a1d8}
+
+
+Disable the Input Gate. Timer clock will not be gated by input pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which input gate to be disabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a8567cc6c41cb9aaae9a16d6c27073f29}{}\index{timer.\+c@{timer.\+c}!Timer\+Input\+Gate\+Enable@{Timer\+Input\+Gate\+Enable}}
+\index{Timer\+Input\+Gate\+Enable@{Timer\+Input\+Gate\+Enable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Input\+Gate\+Enable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Input\+Gate\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a8567cc6c41cb9aaae9a16d6c27073f29}
+
+
+Sets the Input Gate Enable. Allows the timer to gate the internal timer clock source. The timer starts counting when the input pin goes from Low to High and stops counting when transition happens from high to low. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which input gate to be enabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ab32d99a0068510c6ff13935e194bf6b2}{}\index{timer.\+c@{timer.\+c}!Timer\+Int\+Disable@{Timer\+Int\+Disable}}
+\index{Timer\+Int\+Disable@{Timer\+Int\+Disable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Int\+Disable(unsigned int base\+Addr, unsigned int int\+Flags)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{int\+Flags}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ab32d99a0068510c6ff13935e194bf6b2}
+
+
+Disables the specified timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em int\+Flags} & Timer Interrupts to be disabled\\
+\hline
+\end{DoxyParams}
+int\+Flags can take any, or a combination of the following values ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R12\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Disable Timer12 interrupt in Capture Mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R12\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Disable Timer12 interrupt in normal mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R34\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Disable Timer34 interrupt in Capture mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R34\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Disable Timer34 interrupt in normal mode ~\newline
+ \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a87b3ce1e8fe5a7fde5ec8f75cae4ff8c}{}\index{timer.\+c@{timer.\+c}!Timer\+Int\+Enable@{Timer\+Int\+Enable}}
+\index{Timer\+Int\+Enable@{Timer\+Int\+Enable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Int\+Enable(unsigned int base\+Addr, unsigned int int\+Flags)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{int\+Flags}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a87b3ce1e8fe5a7fde5ec8f75cae4ff8c}
+
+
+Enables the specified timer interrupts. The timer interrupts which are to be enabled can be passed as parameter to this function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em int\+Flags} & Timer Interrupts to be enabled\\
+\hline
+\end{DoxyParams}
+int\+Flags can take any, or a combination of the following values ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R12\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Enable Timer12 interrupt in Capture Mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R12\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Enable Timer12 interrupt in normal mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R34\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Enable Timer34 interrupt in Capture mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+\_\+\+T\+M\+R34\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T\+\_\+\+M\+O\+D\+E -\/ Enable Timer34 interrupt in normal mode ~\newline
+ \begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_af9d8f894846ff4e5e5796f0e88ae8c78}{}\index{timer.\+c@{timer.\+c}!Timer\+Int\+Status\+Clear@{Timer\+Int\+Status\+Clear}}
+\index{Timer\+Int\+Status\+Clear@{Timer\+Int\+Status\+Clear}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Int\+Status\+Clear(unsigned int base\+Addr, unsigned int stat\+Flag)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Int\+Status\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{stat\+Flag}
+\end{DoxyParamCaption}
+)}\label{timer_8c_af9d8f894846ff4e5e5796f0e88ae8c78}
+
+
+Clears the status of specified timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em stat\+Flag} & Status flags to be cleared.\\
+\hline
+\end{DoxyParams}
+int\+Flags can take any or combination of the following values ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T12\+\_\+\+T\+I\+M\+E\+R\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T -\/ Timer12 interrupt status in normal mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T12\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T -\/ Timer12 interrupt status in capture mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T34\+\_\+\+T\+I\+M\+E\+R\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T -\/ Timer34 interrupt status in normal mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T34\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T -\/ Timer34 interrupt status in capture mode ~\newline
+ \begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a0446a59c87d922229fef66a0985b981b}{}\index{timer.\+c@{timer.\+c}!Timer\+Int\+Status\+Get@{Timer\+Int\+Status\+Get}}
+\index{Timer\+Int\+Status\+Get@{Timer\+Int\+Status\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Int\+Status\+Get(unsigned int base\+Addr, unsigned int stat\+Flag)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Int\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{stat\+Flag}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a0446a59c87d922229fef66a0985b981b}
+
+
+Returns the status of specified timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em stat\+Flag} & Status flags to be read.\\
+\hline
+\end{DoxyParams}
+int\+Flags can take any or combination of the following values ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T12\+\_\+\+T\+I\+M\+E\+R\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T -\/ Timer12 interrupt status in normal mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T12\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T -\/ Timer12 interrupt status in capture mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T34\+\_\+\+T\+I\+M\+E\+R\+\_\+\+N\+O\+N\+\_\+\+C\+A\+P\+T -\/ Timer34 interrupt status in normal mode ~\newline
+ T\+M\+R\+\_\+\+I\+N\+T\+S\+T\+A\+T34\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+A\+P\+T -\/ Timer34 interrupt status in capture mode ~\newline
+ \begin{DoxyReturn}{Returns}
+Status of Interrupt. Returns all the fields of which status is set
+\end{DoxyReturn}
+Note \+: This A\+P\+I will return the same fields which is passed as parameter, if all the specified interrupt status is set. The return value will be 0 if none of the interrupt status in the parameter passed is set. \hypertarget{timer_8c_aa6ed058a7ef169e2d775f7d6706bd2b0}{}\index{timer.\+c@{timer.\+c}!Timer\+Invert\+I\+N\+Disable@{Timer\+Invert\+I\+N\+Disable}}
+\index{Timer\+Invert\+I\+N\+Disable@{Timer\+Invert\+I\+N\+Disable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Invert\+I\+N\+Disable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Invert\+I\+N\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_aa6ed058a7ef169e2d775f7d6706bd2b0}
+
+
+Disables the Inversion of the T\+M\+R64\+P\+\_\+\+I\+Nn signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which inversion to be disabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ T\+M\+R64\+P\+\_\+\+I\+N\+T34 inversion will be disabled ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ T\+M\+R64\+P\+\_\+\+I\+N12 inversion will be disabled ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both T\+M\+R64\+P\+\_\+\+I\+N12 and T\+M\+R64\+P\+\_\+\+I\+N34 inversion disabled
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ab9568c813c3185a4ae60828225d0dc14}{}\index{timer.\+c@{timer.\+c}!Timer\+Invert\+I\+N\+Enable@{Timer\+Invert\+I\+N\+Enable}}
+\index{Timer\+Invert\+I\+N\+Enable@{Timer\+Invert\+I\+N\+Enable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Invert\+I\+N\+Enable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Invert\+I\+N\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ab9568c813c3185a4ae60828225d0dc14}
+
+
+Inverts the T\+M\+R64\+P\+\_\+\+I\+Nn signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which inversion to be enabled.\\
+\hline
+\end{DoxyParams}
+timer can take the following values. ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Inverts T\+M\+R64\+P\+\_\+\+I\+N34 signal ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Inverts T\+M\+R64\+P\+\_\+\+I\+N12 signal ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Inverts both T\+M\+R64\+P\+\_\+\+I\+N12 and T\+M\+R64\+P\+\_\+\+I\+N34 signals
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ac9007158dbb96ec81ee76b1c779ef355}{}\index{timer.\+c@{timer.\+c}!Timer\+Invert\+O\+U\+T\+Disable@{Timer\+Invert\+O\+U\+T\+Disable}}
+\index{Timer\+Invert\+O\+U\+T\+Disable@{Timer\+Invert\+O\+U\+T\+Disable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Invert\+O\+U\+T\+Disable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Invert\+O\+U\+T\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ac9007158dbb96ec81ee76b1c779ef355}
+
+
+Disables the inversion the T\+M\+R64\+P\+\_\+\+O\+U\+Tn signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which inversion to be disabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ T\+M\+R64\+P\+\_\+\+O\+U\+T34 inversion will be disabled ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ T\+M\+R64\+P\+\_\+\+O\+U\+T12 inversion will be disabled ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both T\+M\+R64\+P\+\_\+\+O\+U\+T12 and T\+M\+R64\+P\+\_\+\+O\+U\+T34 inversion disabled
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ac9e98218df047c41ddf320ef3bb939bb}{}\index{timer.\+c@{timer.\+c}!Timer\+Invert\+O\+U\+T\+Enable@{Timer\+Invert\+O\+U\+T\+Enable}}
+\index{Timer\+Invert\+O\+U\+T\+Enable@{Timer\+Invert\+O\+U\+T\+Enable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Invert\+O\+U\+T\+Enable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Invert\+O\+U\+T\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ac9e98218df047c41ddf320ef3bb939bb}
+
+
+Inverts the T\+M\+R64\+P\+\_\+\+O\+U\+Tn signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which inversion to be enabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Inverts T\+M\+R64\+P\+\_\+\+O\+U\+T34 signal ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Inverts T\+M\+R64\+P\+\_\+\+O\+U\+T12 signal ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Inverts both T\+M\+R64\+P\+\_\+\+O\+U\+T12 and T\+M\+R64\+P\+\_\+\+O\+U\+T34 signals
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_ae975ecbb48f390c1a5c75669446b8c8a}{}\index{timer.\+c@{timer.\+c}!Timer\+O\+U\+T\+Status\+Get@{Timer\+O\+U\+T\+Status\+Get}}
+\index{Timer\+O\+U\+T\+Status\+Get@{Timer\+O\+U\+T\+Status\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+O\+U\+T\+Status\+Get(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+O\+U\+T\+Status\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_ae975ecbb48f390c1a5c75669446b8c8a}
+
+
+Returns the timer status. The timer status Drives the value of the timer output T\+M64\+P\+\_\+\+O\+U\+Tn when configured. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which status to be read\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers ~\newline
+ Note \+: This A\+P\+I returns 0 if none of the status bits is set.
+
+\begin{DoxyReturn}{Returns}
+Status of the timer. Returns the following values or the combination of both. ~\newline
+ T\+M\+R\+\_\+\+O\+U\+T12\+\_\+\+A\+S\+S\+E\+R\+T\+E\+D -\/ T\+M\+R64\+P\+\_\+\+O\+U\+T12 is asserted ~\newline
+ T\+M\+R\+\_\+\+O\+U\+T34\+\_\+\+A\+S\+S\+E\+R\+T\+E\+D -\/ T\+M\+R64\+P\+\_\+\+O\+U\+T34 is asserted 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a8494c4376171020d60fb6849c92b840c}{}\index{timer.\+c@{timer.\+c}!Timer\+Period\+Get@{Timer\+Period\+Get}}
+\index{Timer\+Period\+Get@{Timer\+Period\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Period\+Get(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Period\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a8494c4376171020d60fb6849c92b840c}
+
+
+Returns the Period register contents of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which period to be read.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12
+
+\begin{DoxyReturn}{Returns}
+Period Value 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a91cac574bb11559893394ad5b8cacfb9}{}\index{timer.\+c@{timer.\+c}!Timer\+Period\+Set@{Timer\+Period\+Set}}
+\index{Timer\+Period\+Set@{Timer\+Period\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Period\+Set(unsigned int base\+Addr, unsigned int timer, unsigned int period)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Period\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer, }
+\item[{unsigned int}]{period}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a91cac574bb11559893394ad5b8cacfb9}
+
+
+Set the Period register(s) of the specified timer(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which period to be set. \\
+\hline
+{\em period} & The period value of the timer.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a552556a68f20befe39aa52346ca8c8aa}{}\index{timer.\+c@{timer.\+c}!Timer\+Pre\+Scalar\+Count34\+Get@{Timer\+Pre\+Scalar\+Count34\+Get}}
+\index{Timer\+Pre\+Scalar\+Count34\+Get@{Timer\+Pre\+Scalar\+Count34\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Pre\+Scalar\+Count34\+Get(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Pre\+Scalar\+Count34\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a552556a68f20befe39aa52346ca8c8aa}
+
+
+Returns the Prescalar Counter of Timer34. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prescalar Value. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a1ae048c28cf17e7436e32db8d44c3b2b}{}\index{timer.\+c@{timer.\+c}!Timer\+Pre\+Scalar\+Count34\+Set@{Timer\+Pre\+Scalar\+Count34\+Set}}
+\index{Timer\+Pre\+Scalar\+Count34\+Set@{Timer\+Pre\+Scalar\+Count34\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Pre\+Scalar\+Count34\+Set(unsigned int base\+Addr, unsigned int psc34)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Pre\+Scalar\+Count34\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{psc34}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a1ae048c28cf17e7436e32db8d44c3b2b}
+
+
+Sets the Prescalar Counter of Timer34. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em psc34} & 4 bit prescalar value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a03fed902e7238a96d1b1c808a0d8b6af}{}\index{timer.\+c@{timer.\+c}!Timer\+Pulse\+Mode\+Set@{Timer\+Pulse\+Mode\+Set}}
+\index{Timer\+Pulse\+Mode\+Set@{Timer\+Pulse\+Mode\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Pulse\+Mode\+Set(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Pulse\+Mode\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a03fed902e7238a96d1b1c808a0d8b6af}
+
+
+Sets the pulse mode. The outpin goes active when the timer count reaches the period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which pulse mode to be set.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_aba24a8f906ab09ed36d0525bb16c25bb}{}\index{timer.\+c@{timer.\+c}!Timer\+Pulse\+Width\+Set@{Timer\+Pulse\+Width\+Set}}
+\index{Timer\+Pulse\+Width\+Set@{Timer\+Pulse\+Width\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Pulse\+Width\+Set(unsigned int base\+Addr, unsigned int timer, unsigned int pulse\+Width)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Pulse\+Width\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer, }
+\item[{unsigned int}]{pulse\+Width}
+\end{DoxyParamCaption}
+)}\label{timer_8c_aba24a8f906ab09ed36d0525bb16c25bb}
+
+
+Sets the pulse width for the specified timer. Determines the pulse. width in the T\+S\+T\+A\+Tn bit and the O\+U\+T pin in pulse mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which pulse width to be set. \\
+\hline
+{\em pulse\+Width} & Pulse width to be set.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers ~\newline
+ pulse\+Width can take the following values ~\newline
+ T\+M\+R\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+1\+\_\+\+C\+L\+K -\/ 1 clock cycle ~\newline
+ T\+M\+R\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+2\+\_\+\+C\+L\+K -\/ 2 clock cycles ~\newline
+ T\+M\+R\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+3\+\_\+\+C\+L\+K -\/ 3 clock cycles ~\newline
+ T\+M\+R\+\_\+\+P\+U\+L\+S\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+4\+\_\+\+C\+L\+K -\/ 4 clock cycles
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a0bd5785b8a6404cfa9fd15a97ab6634f}{}\index{timer.\+c@{timer.\+c}!Timer\+Read\+Reset\+Disable@{Timer\+Read\+Reset\+Disable}}
+\index{Timer\+Read\+Reset\+Disable@{Timer\+Read\+Reset\+Disable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Read\+Reset\+Disable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Read\+Reset\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a0bd5785b8a6404cfa9fd15a97ab6634f}
+
+
+Disables the timer for read reset mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which Read Reset to be disabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_abcae8c33c8af1b4a327a0b35430bcf8c}{}\index{timer.\+c@{timer.\+c}!Timer\+Read\+Reset\+Enable@{Timer\+Read\+Reset\+Enable}}
+\index{Timer\+Read\+Reset\+Enable@{Timer\+Read\+Reset\+Enable}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Read\+Reset\+Enable(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Read\+Reset\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_abcae8c33c8af1b4a327a0b35430bcf8c}
+
+
+Enables the timer(s) for read reset mode. The timer shall be Configured in 32 bit unchained mode before this A\+P\+I is called. Read reset determines the effect of timer counter read on T\+I\+Mn. If Read reset is enabled, the timer counter will be reset when the timer counter register T\+I\+Mn is read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which Read Reset to be enabled.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a0cf96ba41b9c376159027d2a25164d7a}{}\index{timer.\+c@{timer.\+c}!Timer\+Reload\+Get@{Timer\+Reload\+Get}}
+\index{Timer\+Reload\+Get@{Timer\+Reload\+Get}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Reload\+Get(unsigned int base\+Addr, unsigned int timer)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Timer\+Reload\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a0cf96ba41b9c376159027d2a25164d7a}
+
+
+Returns the Reload Period of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which Reload value to be read.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 ~\newline
+ \begin{DoxyReturn}{Returns}
+Reload Value 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a194d98f5a0ae1cdeb17deb7fe61c466f}{}\index{timer.\+c@{timer.\+c}!Timer\+Reload\+Set@{Timer\+Reload\+Set}}
+\index{Timer\+Reload\+Set@{Timer\+Reload\+Set}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Reload\+Set(unsigned int base\+Addr, unsigned int timer, unsigned int reload)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Reload\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr, }
+\item[{unsigned int}]{timer, }
+\item[{unsigned int}]{reload}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a194d98f5a0ae1cdeb17deb7fe61c466f}
+
+
+Set the Reload period of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers. \\
+\hline
+{\em timer} & The timer, of which reload period to be set. \\
+\hline
+{\em reload} & The reload period value of the timer.\\
+\hline
+\end{DoxyParams}
+timer can take the values ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R34 -\/ Timer34 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R12 -\/ Timer12 only ~\newline
+ T\+M\+R\+\_\+\+T\+I\+M\+E\+R\+\_\+\+B\+O\+T\+H -\/ Both timers
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a9b3f87ac555fb07c086aafdee2602740}{}\index{timer.\+c@{timer.\+c}!Timer\+Watchdog\+Activate@{Timer\+Watchdog\+Activate}}
+\index{Timer\+Watchdog\+Activate@{Timer\+Watchdog\+Activate}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Watchdog\+Activate(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Watchdog\+Activate (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a9b3f87ac555fb07c086aafdee2602740}
+
+
+Activate the Watchdog timer. The timer shall be configured as watchdog timer before this A\+P\+I is called. This A\+P\+I writes two keys into the W\+D\+T\+C\+R in the order to activate the W\+D\+T. The user shall call Timer\+Watchdog\+Reactivate A\+P\+I before the W\+D\+T expires, to avoid a reset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\hypertarget{timer_8c_a1bffc6a66759e91fe2a47c0e6fc0be35}{}\index{timer.\+c@{timer.\+c}!Timer\+Watchdog\+Reactivate@{Timer\+Watchdog\+Reactivate}}
+\index{Timer\+Watchdog\+Reactivate@{Timer\+Watchdog\+Reactivate}!timer.\+c@{timer.\+c}}
+\subsubsection[{Timer\+Watchdog\+Reactivate(unsigned int base\+Addr)}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+Watchdog\+Reactivate (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Addr}
+\end{DoxyParamCaption}
+)}\label{timer_8c_a1bffc6a66759e91fe2a47c0e6fc0be35}
+
+
+Re-\/activate the Watchdog timer. The W\+D\+T shall be enabled before this A\+P\+I is called. The user shall call this A\+P\+I before the W\+D\+T expires, to avoid a reset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Addr} & Base Address of the Timer Module Registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

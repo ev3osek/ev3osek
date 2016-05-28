@@ -1,0 +1,100 @@
+\hypertarget{hw__types_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+types.h File Reference}
+\label{hw__types_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+types.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/include/hw/hw\+\_\+types.\+h}}
+
+
+Common type definitions and macros.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hw__types_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{hw__types_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{}\#define {\bfseries true}~1\label{hw__types_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}
+
+\item 
+\hypertarget{hw__types_8h_a65e9886d74aaee76545e83dd09011727}{}\#define {\bfseries false}~0\label{hw__types_8h_a65e9886d74aaee76545e83dd09011727}
+
+\item 
+\hypertarget{hw__types_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{}\#define {\bfseries N\+U\+L\+L}~((void$\ast$) 0)\label{hw__types_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}
+
+\item 
+\hypertarget{hw__types_8h_ac9660181819fceac0b5abcd67d76ca6e}{}\#define {\bfseries H\+W\+R\+E\+G}(x)~($\ast$((volatile unsigned int $\ast$)(x)))\label{hw__types_8h_ac9660181819fceac0b5abcd67d76ca6e}
+
+\item 
+\hypertarget{hw__types_8h_ac664ac49fa3d7c414f67572e522a74fb}{}\#define {\bfseries H\+W\+R\+E\+G\+H}(x)~($\ast$((volatile unsigned short $\ast$)(x)))\label{hw__types_8h_ac664ac49fa3d7c414f67572e522a74fb}
+
+\item 
+\hypertarget{hw__types_8h_a084083ee12e5262f8e54bb56c15ac8c7}{}\#define {\bfseries H\+W\+R\+E\+G\+B}(x)~($\ast$((volatile unsigned char $\ast$)(x)))\label{hw__types_8h_a084083ee12e5262f8e54bb56c15ac8c7}
+
+\item 
+\#define {\bfseries H\+W\+R\+E\+G\+B\+I\+T\+W}(x,  b)
+\item 
+\#define {\bfseries H\+W\+R\+E\+G\+B\+I\+T\+H}(x,  b)
+\item 
+\#define {\bfseries H\+W\+R\+E\+G\+B\+I\+T\+B}(x,  b)
+\item 
+\hypertarget{hw__types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{}\#define {\bfseries T\+R\+U\+E}~1\label{hw__types_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+\item 
+\hypertarget{hw__types_8h_aa93f0eb578d23995850d61f7d61c55c1}{}\#define {\bfseries F\+A\+L\+S\+E}~0\label{hw__types_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{hw__types_8h_a8697cf8a98b2543638f0c9368cd54800}{}typedef unsigned char {\bfseries t\+Boolean}\label{hw__types_8h_a8697cf8a98b2543638f0c9368cd54800}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common type definitions and macros. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{hw__types_8h_a53a5a76bcce83b3f6092466770329ea9}{}\index{hw\+\_\+types.\+h@{hw\+\_\+types.\+h}!H\+W\+R\+E\+G\+B\+I\+T\+B@{H\+W\+R\+E\+G\+B\+I\+T\+B}}
+\index{H\+W\+R\+E\+G\+B\+I\+T\+B@{H\+W\+R\+E\+G\+B\+I\+T\+B}!hw\+\_\+types.\+h@{hw\+\_\+types.\+h}}
+\subsubsection[{H\+W\+R\+E\+G\+B\+I\+T\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+W\+R\+E\+G\+B\+I\+T\+B(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}\label{hw__types_8h_a53a5a76bcce83b3f6092466770329ea9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+HWREGB(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(x) & 0xF0000000) | 0x02000000 |               \(\backslash\)
+               (((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(x) & 0x000FFFFF) << 5) | ((b) << 2))
+\end{DoxyCode}
+\hypertarget{hw__types_8h_a07d9be6dab8546aa348fc944e37dc446}{}\index{hw\+\_\+types.\+h@{hw\+\_\+types.\+h}!H\+W\+R\+E\+G\+B\+I\+T\+H@{H\+W\+R\+E\+G\+B\+I\+T\+H}}
+\index{H\+W\+R\+E\+G\+B\+I\+T\+H@{H\+W\+R\+E\+G\+B\+I\+T\+H}!hw\+\_\+types.\+h@{hw\+\_\+types.\+h}}
+\subsubsection[{H\+W\+R\+E\+G\+B\+I\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+W\+R\+E\+G\+B\+I\+T\+H(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}\label{hw__types_8h_a07d9be6dab8546aa348fc944e37dc446}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+HWREGH(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(x) & 0xF0000000) | 0x02000000 |               \(\backslash\)
+               (((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(x) & 0x000FFFFF) << 5) | ((b) << 2))
+\end{DoxyCode}
+\hypertarget{hw__types_8h_afc61bb0c136a7acdb99ebaf93799c7be}{}\index{hw\+\_\+types.\+h@{hw\+\_\+types.\+h}!H\+W\+R\+E\+G\+B\+I\+T\+W@{H\+W\+R\+E\+G\+B\+I\+T\+W}}
+\index{H\+W\+R\+E\+G\+B\+I\+T\+W@{H\+W\+R\+E\+G\+B\+I\+T\+W}!hw\+\_\+types.\+h@{hw\+\_\+types.\+h}}
+\subsubsection[{H\+W\+R\+E\+G\+B\+I\+T\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+W\+R\+E\+G\+B\+I\+T\+W(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}\label{hw__types_8h_afc61bb0c136a7acdb99ebaf93799c7be}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+HWREG(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(x) & 0xF0000000) | 0x02000000 |                \(\backslash\)
+              (((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(x) & 0x000FFFFF) << 5) | ((b) << 2))
+\end{DoxyCode}

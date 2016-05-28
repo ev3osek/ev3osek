@@ -1,0 +1,6 @@
+<map id="leJOS_EV3/src/ev3/include/hw/hw_ehrpwm.h" name="leJOS_EV3/src/ev3/include/hw/hw_ehrpwm.h">
+<area shape="rect" id="node2" href="$ehrpwm_8h.html" title="This file contains the Macros and API prototypes for ehrpwm driver. " alt="" coords="103,95,285,136"/>
+<area shape="rect" id="node5" href="$epwm_8h.html" title="This file contains the Macros and API prototypes for ehrpwm driver. " alt="" coords="309,95,492,136"/>
+<area shape="rect" id="node3" href="$ehrpwm_8c.html" title="This file contains the device abstraction layer APIs for EHRPWM. " alt="" coords="5,184,185,225"/>
+<area shape="rect" id="node4" href="$motor_8c.html" title="Driver implementation to control LEGO servo motors. This file contains function definitions to use mo..." alt="" coords="210,184,378,225"/>
+</map>

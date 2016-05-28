@@ -1,0 +1,4 @@
+<map id="ecrobot_wait_i2c_ready" name="ecrobot_wait_i2c_ready">
+<area shape="rect" id="node2" href="$systick_8c.html#acef982ce45bc326644139ebb22310c88" title="Get the current tick in milliseconds. " alt="" coords="212,5,327,32"/>
+<area shape="rect" id="node3" href="$i2c_8c.html#af78781a3419670e75e0ea69bef1316b7" title="Check whether an I2C port is currently busy or not. " alt="" coords="232,56,307,83"/>
+</map>

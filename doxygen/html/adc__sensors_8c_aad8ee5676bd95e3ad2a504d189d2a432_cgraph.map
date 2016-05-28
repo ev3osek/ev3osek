@@ -1,0 +1,7 @@
+<map id="sensor_sound_get" name="sensor_sound_get">
+<area shape="rect" id="node2" href="$ninja_2gpio_8c.html#a69974a7766fccf6b3ce362fec9ed8dfc" title="Set the value of a GPIO pin which is configured as output. " alt="" coords="181,5,252,32"/>
+<area shape="rect" id="node5" href="$adc_8c.html#add2dc4cfa717ea4e243a273ebdb98a21" title="Get the value currently meassured by the ADC for the specified channel. " alt="" coords="183,56,251,83"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8c.html#a7f7ab845fe3eb7d621eeaec3b116d6d2" title="Initialize a GPIO pin with its GPIO functionality and set its direction to output. " alt="" coords="300,5,412,32"/>
+<area shape="rect" id="node4" href="$ninja_2gpio_8c.html#a8cc18d800719367f95a7c1b1496e4267" title="Initialize a GPIO pin with its GPIO functionality. " alt="" coords="460,5,555,32"/>
+<area shape="rect" id="node6" href="$ninja_2spi_8c.html#a4bb7874eaf4a6b816c819510f0f331cb" title="Send data via the SPI0 controller and get an updated value received by the SPI0 controller. " alt="" coords="313,56,399,83"/>
+</map>

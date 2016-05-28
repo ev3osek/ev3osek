@@ -1,0 +1,5 @@
+<map id="leJOS_EV3/src/ev3/ninja/button.c" name="leJOS_EV3/src/ev3/ninja/button.c">
+<area shape="rect" id="node2" href="$button_8h.html" title="This header contains function declarations to use the hardware buttons of the EV3 as well as enumerat..." alt="" coords="11,95,80,121"/>
+<area shape="rect" id="node3" href="$ninja_2gpio_8h.html" title="This header declares function required to interact with GPIO pins of the SoC. " alt="" coords="105,95,162,121"/>
+<area shape="rect" id="node4" href="$hw__gpio_8h.html" title="GPIO register definitions. " alt="" coords="54,169,213,196"/>
+</map>

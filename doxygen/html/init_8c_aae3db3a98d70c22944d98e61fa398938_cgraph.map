@@ -1,0 +1,8 @@
+<map id="interrupt_init" name="interrupt_init">
+<area shape="rect" id="node2" href="$interrupt_8c.html#a216cbc1f5aed0d7e5f7ba557e730b0e9" title="This API is used to setup the AINTC. This API shall be called before using the AINTC. All the host interruptsi will be disabled after calling this API. The user shall enable all the interrupts required for processing. " alt="" coords="169,5,265,32"/>
+<area shape="rect" id="node3" href="$interrupt_8c.html#ab762b4e340eb694a59114d16a252919f" title="Enables the processor IRQ only in CPSR. Makes the processor to respond to IRQs. This does not affect ..." alt="" coords="147,56,288,83"/>
+<area shape="rect" id="node4" href="$interrupt_8c.html#af9ea132f26754d4ef754f8e0efd65ee9" title="Enables interrupts in GER register of AINTC. FIQ and IRQ will be signaled for processing. " alt="" coords="160,107,275,133"/>
+<area shape="rect" id="node5" href="$interrupt_8c.html#a66ae177818daddb7c73ea03249a4a814" title="Enables IRQ in HIER register of AINTC. " alt="" coords="167,157,268,184"/>
+<area shape="rect" id="node6" href="$interrupt_8c.html#a4d4febbbc95b51d284bc346b5aa788a2" title="Enables the processor FIQ only in CPSR. Makes the processor to respond to FIQs. This does not affect ..." alt="" coords="148,208,287,235"/>
+<area shape="rect" id="node7" href="$interrupt_8c.html#a5cd0cfc1a32f73a1a5134d76fcacd733" title="Enables FIQ in AINTC. " alt="" coords="168,259,267,285"/>
+</map>

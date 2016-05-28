@@ -1,0 +1,1133 @@
+\hypertarget{drivers_2spi_8c}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/spi.c File Reference}
+\label{drivers_2spi_8c}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/spi.\+c@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/drivers/spi.\+c}}
+
+
+S\+P\+I device abstraction layer A\+P\+Is.  
+
+
+{\ttfamily \#include \char`\"{}hw\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+spi.\+h\char`\"{}}\\*
+Include dependency graph for spi.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{drivers_2spi_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{drivers_2spi_8c_a619f396fc5e8e9af531d013444d52537}{S\+P\+I\+Clk\+Configure} (unsigned int base\+Add, unsigned int module\+Clk, unsigned int spi\+Clk, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It will configure the prescalar to generate required spi clock~\newline
+. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a9ba202f4acf65c7ed2eba042236f4b13}{S\+P\+I\+Enable} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It will Enable S\+P\+I module~\newline
+. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a0b2b610b5d0062e7115ed7be6727db7a}{S\+P\+I\+Reset} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It will put S\+P\+I in to reset state.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a2c6e5e1008e47a7fc62397b11503e6b8}{S\+P\+I\+Out\+Of\+Reset} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Brings S\+P\+I out of reset state. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_aac5ba03b05eb1d606f9a2b3ee087f277}{S\+P\+I\+Mode\+Configure} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Configures S\+P\+I to master or slave mode. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a60dfc50367007a0ec2e1ff0ca964027e}{S\+P\+I\+Pin\+Control} (unsigned int base\+Add, unsigned int idx, unsigned int flag, unsigned int $\ast$val)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Configures S\+P\+I Pin Control Registers.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_ac3e400b036ad4a718d843ac2a2702206}{S\+P\+I\+Delay\+Configure} (unsigned int base\+Add, unsigned int c2edelay, unsigned int t2edelay, unsigned int t2cdelay, unsigned int c2tdelay)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Configures S\+P\+I C\+S and E\+N\+A Delay in S\+P\+I\+D\+E\+L\+A\+Y Register.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a269f5ee822a8bf415e0a1ab7b5b769b1}{S\+P\+I\+Default\+C\+S\+Set} (unsigned int base\+Add, unsigned char dcsval)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Sets the default value for C\+S pin(line) when no transmission is is performed by writing to S\+P\+I\+D\+E\+F Reg.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a5c05784349692d4dddda63edc6b4ff1d}{S\+P\+I\+Dat1\+Config} (unsigned int base\+Add, unsigned int flag, unsigned char cs)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Configures the S\+P\+I\+Dat1 Register.\+It won\textquotesingle{}t write to T\+X part of the S\+P\+I\+Dat1 Register.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_af17f6a72525dce599f3fd7ed684a3b73}{S\+P\+I\+Transmit\+Data1} (unsigned int base\+Add, unsigned int data)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Trasmits Data from T\+X part of S\+P\+I\+D\+A\+T1 register.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a6caca0ce9ba622e520c193c4f1b512e4}{S\+P\+I\+C\+S\+Timer\+Disable} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Disables Transmit-\/end-\/to-\/chip-\/select-\/inactive-\/delay(t2cdelay) and Chip-\/select-\/active-\/to-\/transmit-\/start-\/delay(c2tdelay).~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a15ee2113bbc51f58d36df4da017e263d}{S\+P\+I\+C\+S\+Timer\+Enable} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Enables Transmit-\/end-\/to-\/chip-\/select-\/inactive-\/delay(t2cdelay) and Chip-\/select-\/active-\/to-\/transmit-\/start-\/delay(c2tdelay).~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a84fc77fb13ee697880314cda95f578cc}{S\+P\+I\+Char\+Length\+Set} (unsigned int base\+Add, unsigned int num\+Of\+Char, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Set the Charcter length.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_aba3a3881ab161a786284709dc5711262}{S\+P\+I\+Config\+Clk\+Format} (unsigned int base\+Add, unsigned int flag, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Configures S\+P\+I Clock\textquotesingle{}s Phase and Polarity. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_ac614d5356a0a2c9c8d14df00624e8139}{S\+P\+I\+Shift\+Msb\+First} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Configures S\+P\+I to Transmit M\+S\+B bit first during Data transfer. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a12efa10816bf3199bbebb2358d95195b}{S\+P\+I\+Shift\+Lsb\+First} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Configures S\+P\+I to Transmit L\+S\+B bit first during Data transfer. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a08774ff38877b23d22182720262cbfd2}{S\+P\+I\+Parity\+Enable} (unsigned int base\+Add, unsigned int flag, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Enables Parity in S\+P\+I and also configures Even or Odd Parity.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a4a495d63e4546588f764e3f1a5cc2715}{S\+P\+I\+Parity\+Disable} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Disables Parity in S\+P\+I.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_af5d0dd32ed580c5023b70c2aebc5d066}{S\+P\+I\+Wdelay\+Set} (unsigned int base\+Add, unsigned int flag, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It sets the Delay between S\+P\+I transmission.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a234713598ea1416862ad9ecb94d2db42}{S\+P\+I\+Wait\+Enable} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Configures S\+P\+I Master to wait for S\+P\+Ix\+\_\+\+E\+N\+A signal.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a893e01ac4887d9034d3c5a3545f0df17}{S\+P\+I\+Wait\+Disable} (unsigned int base\+Add, unsigned int data\+Format)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Configures S\+P\+I Master not to wait for S\+P\+Ix\+\_\+\+E\+N\+A signal.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a9269676642aba430603f461ed63a90b0}{S\+P\+I\+Int\+Level\+Set} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Configures S\+P\+I to Map interrupts to interrupt line I\+N\+T1.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a4f35b9b20071b12d765f4d208b341bc5}{S\+P\+I\+Int\+Enable} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Enables the interrupts. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_a21ed6d1976e174fda655443d3b732238}{S\+P\+I\+Int\+Disable} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It Disables the interrupts. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \hyperlink{drivers_2spi_8c_af6b79a3959bfb0979296dbe735b61411}{S\+P\+I\+Int\+Status\+Clear} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It clears Status of interrupts. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+unsigned int \hyperlink{drivers_2spi_8c_afdd6891109b0d59c698f33a59e62cf1b}{S\+P\+I\+Int\+Status} (unsigned int base\+Add, unsigned int flag)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It reads the Status of interrupts. 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+unsigned int \hyperlink{drivers_2spi_8c_afb2da43a9502e672e3c4ce4fb70e5b1c}{S\+P\+I\+Data\+Receive} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It recevies data by reading from S\+P\+I\+B\+U\+F register.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+unsigned int \hyperlink{drivers_2spi_8c_a65c0c2bbf62dfae147396d3fa7c37b6e}{S\+P\+I\+Interrupt\+Vector\+Get} (unsigned int base\+Add)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item It returns the vector of the pending interrupt at interrupt line I\+N\+T1.~\newline
+
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+P\+I device abstraction layer A\+P\+Is. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{drivers_2spi_8c_a84fc77fb13ee697880314cda95f578cc}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Char\+Length\+Set@{S\+P\+I\+Char\+Length\+Set}}
+\index{S\+P\+I\+Char\+Length\+Set@{S\+P\+I\+Char\+Length\+Set}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Char\+Length\+Set(unsigned int base\+Add, unsigned int num\+Of\+Char, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Char\+Length\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{num\+Of\+Char, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a84fc77fb13ee697880314cda95f578cc}
+
+
+
+\begin{DoxyItemize}
+\item It Set the Charcter length.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the value which determines the number of the charcters to be transmitted .~\newline
+ \\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a619f396fc5e8e9af531d013444d52537}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Clk\+Configure@{S\+P\+I\+Clk\+Configure}}
+\index{S\+P\+I\+Clk\+Configure@{S\+P\+I\+Clk\+Configure}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Clk\+Configure(unsigned int base\+Add, unsigned int module\+Clk, unsigned int spi\+Clk, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Clk\+Configure (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{module\+Clk, }
+\item[{unsigned int}]{spi\+Clk, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a619f396fc5e8e9af531d013444d52537}
+
+
+
+\begin{DoxyItemize}
+\item It will configure the prescalar to generate required spi clock~\newline
+. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is Memory Address of the S\+P\+I instance used~\newline
+. \\
+\hline
+{\em -\/} & module\+Clk is the input clk to S\+P\+I module from P\+L\+L~\newline
+. \\
+\hline
+{\em -\/} & spi\+Clk is the spi bus speed~\newline
+. \\
+\hline
+{\em -\/} & data\+Format is instance of the data format register used~\newline
+.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_aba3a3881ab161a786284709dc5711262}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Config\+Clk\+Format@{S\+P\+I\+Config\+Clk\+Format}}
+\index{S\+P\+I\+Config\+Clk\+Format@{S\+P\+I\+Config\+Clk\+Format}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Config\+Clk\+Format(unsigned int base\+Add, unsigned int flag, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Config\+Clk\+Format (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_aba3a3881ab161a786284709dc5711262}
+
+
+
+\begin{DoxyItemize}
+\item It Configures S\+P\+I Clock\textquotesingle{}s Phase and Polarity. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the value which determines Phase and Polarity of the Clock..~\newline
+ flag can take following values.~\newline
+ S\+P\+I\+\_\+\+C\+L\+K\+\_\+\+P\+O\+L\+\_\+\+H\+I\+G\+H -\/ Clock is High Before and after data transfer. S\+P\+I\+\_\+\+C\+L\+K\+\_\+\+P\+O\+L\+\_\+\+L\+O\+W -\/ Clock is Low Before and after data transfer. S\+P\+I\+\_\+\+C\+L\+K\+\_\+\+I\+N\+P\+H\+A\+S\+E -\/ Clock is not Delayed. S\+P\+I\+\_\+\+C\+L\+K\+\_\+\+O\+U\+T\+O\+F\+P\+H\+A\+S\+E -\/ Clock is Delayed by half clock cycle.\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a6caca0ce9ba622e520c193c4f1b512e4}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+C\+S\+Timer\+Disable@{S\+P\+I\+C\+S\+Timer\+Disable}}
+\index{S\+P\+I\+C\+S\+Timer\+Disable@{S\+P\+I\+C\+S\+Timer\+Disable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+C\+S\+Timer\+Disable(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+C\+S\+Timer\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a6caca0ce9ba622e520c193c4f1b512e4}
+
+
+
+\begin{DoxyItemize}
+\item It Disables Transmit-\/end-\/to-\/chip-\/select-\/inactive-\/delay(t2cdelay) and Chip-\/select-\/active-\/to-\/transmit-\/start-\/delay(c2tdelay).~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a15ee2113bbc51f58d36df4da017e263d}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+C\+S\+Timer\+Enable@{S\+P\+I\+C\+S\+Timer\+Enable}}
+\index{S\+P\+I\+C\+S\+Timer\+Enable@{S\+P\+I\+C\+S\+Timer\+Enable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+C\+S\+Timer\+Enable(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+C\+S\+Timer\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a15ee2113bbc51f58d36df4da017e263d}
+
+
+
+\begin{DoxyItemize}
+\item It Enables Transmit-\/end-\/to-\/chip-\/select-\/inactive-\/delay(t2cdelay) and Chip-\/select-\/active-\/to-\/transmit-\/start-\/delay(c2tdelay).~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a5c05784349692d4dddda63edc6b4ff1d}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Dat1\+Config@{S\+P\+I\+Dat1\+Config}}
+\index{S\+P\+I\+Dat1\+Config@{S\+P\+I\+Dat1\+Config}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Dat1\+Config(unsigned int base\+Add, unsigned int flag, unsigned char cs)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Dat1\+Config (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag, }
+\item[{unsigned char}]{cs}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a5c05784349692d4dddda63edc6b4ff1d}
+
+
+
+\begin{DoxyItemize}
+\item Configures the S\+P\+I\+Dat1 Register.\+It won\textquotesingle{}t write to T\+X part of the S\+P\+I\+Dat1 Register.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I data instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is value to Configure C\+S\+H\+O\+L,Wait Delay Conter Enable bit and to select the appropriate Data\+Format register.~\newline
+ flag can take following values.~\newline
+ S\+P\+I\+\_\+\+C\+S\+H\+O\+L\+D -\/ To Hold the C\+S line active after data Transfer untill new data and Control information is loaded.~\newline
+ S\+P\+I\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+E\+N\+A -\/ Enables Delay Counter.~\newline
+ S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T0 -\/ To select Data\+Format Register 0.~\newline
+ S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T1 -\/ To select Data\+Format Register 1.~\newline
+ S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T2 -\/ To select Data\+Format Register 2.~\newline
+ S\+P\+I\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T3 -\/ To select Data\+Format Register 3.~\newline
+ \\
+\hline
+{\em -\/} & cs is the value to driven on C\+S pin(line).~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_afb2da43a9502e672e3c4ce4fb70e5b1c}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Data\+Receive@{S\+P\+I\+Data\+Receive}}
+\index{S\+P\+I\+Data\+Receive@{S\+P\+I\+Data\+Receive}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Data\+Receive(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+P\+I\+Data\+Receive (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_afb2da43a9502e672e3c4ce4fb70e5b1c}
+
+
+
+\begin{DoxyItemize}
+\item It recevies data by reading from S\+P\+I\+B\+U\+F register.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the memory instance to be used.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+received data. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a269f5ee822a8bf415e0a1ab7b5b769b1}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Default\+C\+S\+Set@{S\+P\+I\+Default\+C\+S\+Set}}
+\index{S\+P\+I\+Default\+C\+S\+Set@{S\+P\+I\+Default\+C\+S\+Set}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Default\+C\+S\+Set(unsigned int base\+Add, unsigned char dcsval)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Default\+C\+S\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned char}]{dcsval}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a269f5ee822a8bf415e0a1ab7b5b769b1}
+
+
+
+\begin{DoxyItemize}
+\item Sets the default value for C\+S pin(line) when no transmission is is performed by writing to S\+P\+I\+D\+E\+F Reg.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & dcsval is the value written to S\+P\+I\+D\+E\+F register to set default value on C\+S pin(line).~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_ac3e400b036ad4a718d843ac2a2702206}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Delay\+Configure@{S\+P\+I\+Delay\+Configure}}
+\index{S\+P\+I\+Delay\+Configure@{S\+P\+I\+Delay\+Configure}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Delay\+Configure(unsigned int base\+Add, unsigned int c2edelay, unsigned int t2edelay, unsigned int t2cdelay, unsigned int c2tdelay)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Delay\+Configure (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{c2edelay, }
+\item[{unsigned int}]{t2edelay, }
+\item[{unsigned int}]{t2cdelay, }
+\item[{unsigned int}]{c2tdelay}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_ac3e400b036ad4a718d843ac2a2702206}
+
+
+
+\begin{DoxyItemize}
+\item Configures S\+P\+I C\+S and E\+N\+A Delay in S\+P\+I\+D\+E\+L\+A\+Y Register.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is Memory Address of the S\+P\+I instance.~\newline
+\\
+\hline
+{\em -\/} & c2edelay is the Chip-\/select-\/active-\/to-\/\+S\+P\+Ix\+\_\+\+E\+N\+A-\/signal -\/active-\/time-\/out.~\newline
+ \\
+\hline
+{\em -\/} & t2edelay is the Transmit-\/data-\/finished-\/to-\/\+S\+P\+Ix\+\_\+\+E\+N\+A-\/pin -\/inactive-\/time-\/out.~\newline
+ \\
+\hline
+{\em -\/} & t2cdelay is the Transmit-\/end-\/to-\/chip-\/select-\/inactive-\/delay.~\newline
+\\
+\hline
+{\em -\/} & c2tdelay is the Chip-\/select-\/active-\/to-\/transmit-\/start-\/delay.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none.
+\end{DoxyReturn}
+Note\+: S\+P\+Ix\+\_\+\+C\+S and S\+P\+I\+\_\+\+E\+N\+A are active low pins. \hypertarget{drivers_2spi_8c_a9ba202f4acf65c7ed2eba042236f4b13}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Enable@{S\+P\+I\+Enable}}
+\index{S\+P\+I\+Enable@{S\+P\+I\+Enable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Enable(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a9ba202f4acf65c7ed2eba042236f4b13}
+
+
+
+\begin{DoxyItemize}
+\item It will Enable S\+P\+I module~\newline
+. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used~\newline
+.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a21ed6d1976e174fda655443d3b732238}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Int\+Disable@{S\+P\+I\+Int\+Disable}}
+\index{S\+P\+I\+Int\+Disable@{S\+P\+I\+Int\+Disable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Int\+Disable(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Int\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a21ed6d1976e174fda655443d3b732238}
+
+
+
+\begin{DoxyItemize}
+\item It Disables the interrupts. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the interrupts required to be Enabled.~\newline
+\begin{DoxyVerb}       flag can take following values.\n
+
+       SPI_DATALEN_ERR_INT     - Data length error interrupt.\n
+       SPI_TIMEOUT_INT         - TimeOut length error interrupt.\n
+       SPI_PARITY_ERR_INT      - Parity error interrupt.\n
+       SPI_DESYNC_SLAVE_INT    - Desyncrozied slave interrupt.\n
+       SPI_BIT_ERR_INT         - Bit error interrupt.\n
+       SPI_RECV_OVERRUN_INT    - Receive Overrun interrupt.\n
+       SPI_RECV_INT            - Receive interrupt.\n
+       SPI_TRANSMIT_INT        - Transmit interrupt.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a4f35b9b20071b12d765f4d208b341bc5}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Int\+Enable@{S\+P\+I\+Int\+Enable}}
+\index{S\+P\+I\+Int\+Enable@{S\+P\+I\+Int\+Enable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Int\+Enable(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Int\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a4f35b9b20071b12d765f4d208b341bc5}
+
+
+
+\begin{DoxyItemize}
+\item It Enables the interrupts. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the interrupts required to be Enabled.~\newline
+\begin{DoxyVerb}       flag can take following values.\n
+
+       SPI_DATALEN_ERR_INT     - Data length error interrupt.\n
+       SPI_TIMEOUT_INT         - TimeOut length error interrupt.\n
+       SPI_PARITY_ERR_INT      - Parity error interrupt.\n
+       SPI_DESYNC_SLAVE_INT    - Desyncrozied slave interrupt.\n
+       SPI_BIT_ERR_INT         - Bit error interrupt.\n
+       SPI_RECV_OVERRUN_INT    - Receive Overrun interrupt.\n
+       SPI_RECV_INT            - Receive interrupt.\n
+       SPI_TRANSMIT_INT        - Transmit interrupt.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a65c0c2bbf62dfae147396d3fa7c37b6e}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Interrupt\+Vector\+Get@{S\+P\+I\+Interrupt\+Vector\+Get}}
+\index{S\+P\+I\+Interrupt\+Vector\+Get@{S\+P\+I\+Interrupt\+Vector\+Get}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Interrupt\+Vector\+Get(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+P\+I\+Interrupt\+Vector\+Get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a65c0c2bbf62dfae147396d3fa7c37b6e}
+
+
+
+\begin{DoxyItemize}
+\item It returns the vector of the pending interrupt at interrupt line I\+N\+T1.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the memory instance to be used.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of the pending interrupt at interrupt line I\+N\+T1. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a9269676642aba430603f461ed63a90b0}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Int\+Level\+Set@{S\+P\+I\+Int\+Level\+Set}}
+\index{S\+P\+I\+Int\+Level\+Set@{S\+P\+I\+Int\+Level\+Set}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Int\+Level\+Set(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Int\+Level\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a9269676642aba430603f461ed63a90b0}
+
+
+
+\begin{DoxyItemize}
+\item It Configures S\+P\+I to Map interrupts to interrupt line I\+N\+T1.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the interrupts required to be mapped.~\newline
+\begin{DoxyVerb}       flag can take following values.\n
+
+       SPI_DATALEN_ERR_INTLVL     - Data length error interrupt level.\n
+       SPI_TIMEOUT_INTLVL         - TimeOut length error interrupt level.\n
+       SPI_PARITY_ERR_INTLVL      - Parity error interrupt level.\n
+       SPI_DESYNC_SLAVE_INTLVL    - Desyncrozied slave interrupt level.\n
+       SPI_BIT_ERR_INTLVL         - Bit error interrupt level.\n
+       SPI_RECV_OVERRUN_INTLVL    - Receive Overrun interrupt level.\n
+       SPI_RECV_INTLVL            - Receive interrupt level.\n
+       SPI_TRANSMIT_INTLVL        - Transmit interrupt level.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_afdd6891109b0d59c698f33a59e62cf1b}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Int\+Status@{S\+P\+I\+Int\+Status}}
+\index{S\+P\+I\+Int\+Status@{S\+P\+I\+Int\+Status}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Int\+Status(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+P\+I\+Int\+Status (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_afdd6891109b0d59c698f33a59e62cf1b}
+
+
+
+\begin{DoxyItemize}
+\item It reads the Status of interrupts. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the interrupts whose status needs to be read.~\newline
+\begin{DoxyVerb}       flag can take following values.\n
+
+       SPI_DATALEN_ERR_INT     - Data length error interrupt.\n
+       SPI_TIMEOUT_INT         - TimeOut length error interrupt.\n
+       SPI_PARITY_ERR_INT      - Parity error interrupt.\n
+       SPI_DESYNC_SLAVE_INT    - Desyncrozied slave interrupt.\n
+       SPI_BIT_ERR_INT         - Bit error interrupt.\n
+       SPI_RECV_OVERRUN_INT    - Receive Overrun interrupt.\n
+       SPI_RECV_INT            - Receive interrupt.\n
+       SPI_TRANSMIT_INT        - Transmit interrupt.\n
+       SPI_DMA_REQUEST_ENA_INT - DMA request interrupt.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status of interrupt. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_af6b79a3959bfb0979296dbe735b61411}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Int\+Status\+Clear@{S\+P\+I\+Int\+Status\+Clear}}
+\index{S\+P\+I\+Int\+Status\+Clear@{S\+P\+I\+Int\+Status\+Clear}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Int\+Status\+Clear(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Int\+Status\+Clear (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_af6b79a3959bfb0979296dbe735b61411}
+
+
+
+\begin{DoxyItemize}
+\item It clears Status of interrupts. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the interrupts whose status needs to be cleared.~\newline
+\begin{DoxyVerb}       flag can take following values.\n
+
+       SPI_DATALEN_ERR_INT     - Data length error interrupt.\n
+       SPI_TIMEOUT_INT         - TimeOut length error interrupt.\n
+       SPI_PARITY_ERR_INT      - Parity error interrupt.\n
+       SPI_DESYNC_SLAVE_INT    - Desyncrozied slave interrupt.\n
+       SPI_BIT_ERR_INT         - Bit error interrupt.\n
+       SPI_RECV_OVERRUN_INT    - Receive Overrun interrupt.\n
+       SPI_RECV_INT            - Receive interrupt.\n
+       SPI_TRANSMIT_INT        - Transmit interrupt.\n
+       SPI_DMA_REQUEST_ENA_INT - DMA request interrupt.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_aac5ba03b05eb1d606f9a2b3ee087f277}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Mode\+Configure@{S\+P\+I\+Mode\+Configure}}
+\index{S\+P\+I\+Mode\+Configure@{S\+P\+I\+Mode\+Configure}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Mode\+Configure(unsigned int base\+Add, unsigned int flag)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Mode\+Configure (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_aac5ba03b05eb1d606f9a2b3ee087f277}
+
+
+
+\begin{DoxyItemize}
+\item Configures S\+P\+I to master or slave mode. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a2c6e5e1008e47a7fc62397b11503e6b8}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Out\+Of\+Reset@{S\+P\+I\+Out\+Of\+Reset}}
+\index{S\+P\+I\+Out\+Of\+Reset@{S\+P\+I\+Out\+Of\+Reset}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Out\+Of\+Reset(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Out\+Of\+Reset (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a2c6e5e1008e47a7fc62397b11503e6b8}
+
+
+
+\begin{DoxyItemize}
+\item Brings S\+P\+I out of reset state. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a4a495d63e4546588f764e3f1a5cc2715}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Parity\+Disable@{S\+P\+I\+Parity\+Disable}}
+\index{S\+P\+I\+Parity\+Disable@{S\+P\+I\+Parity\+Disable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Parity\+Disable(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Parity\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a4a495d63e4546588f764e3f1a5cc2715}
+
+
+
+\begin{DoxyItemize}
+\item It Disables Parity in S\+P\+I.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a08774ff38877b23d22182720262cbfd2}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Parity\+Enable@{S\+P\+I\+Parity\+Enable}}
+\index{S\+P\+I\+Parity\+Enable@{S\+P\+I\+Parity\+Enable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Parity\+Enable(unsigned int base\+Add, unsigned int flag, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Parity\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a08774ff38877b23d22182720262cbfd2}
+
+
+
+\begin{DoxyItemize}
+\item It Enables Parity in S\+P\+I and also configures Even or Odd Parity.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the value determines whether odd or even Parity.~\newline
+\begin{DoxyVerb}       flag can take following values.\n
+
+       SPI_ODD_PARITY   -  selects odd parity
+       SPI_EVEN_PARITY  -  selects even parity
+\end{DoxyVerb}
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a60dfc50367007a0ec2e1ff0ca964027e}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Pin\+Control@{S\+P\+I\+Pin\+Control}}
+\index{S\+P\+I\+Pin\+Control@{S\+P\+I\+Pin\+Control}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Pin\+Control(unsigned int base\+Add, unsigned int idx, unsigned int flag, unsigned int $\ast$val)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Pin\+Control (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{idx, }
+\item[{unsigned int}]{flag, }
+\item[{unsigned int $\ast$}]{val}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a60dfc50367007a0ec2e1ff0ca964027e}
+
+
+
+\begin{DoxyItemize}
+\item Configures S\+P\+I Pin Control Registers.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & idx is the Pin Control register number.\+It can take any integer value between 0 and 5.~\newline
+ \\
+\hline
+{\em -\/} & flag is to indicate to whether to (1)read from Pin Control Register or to (0)write to Pin Control Register.~\newline
+ \\
+\hline
+{\em -\/} & val is a value/return argument which has the value to be written in case of writes or the value read in case of reads\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none.~\newline
+
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a0b2b610b5d0062e7115ed7be6727db7a}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Reset@{S\+P\+I\+Reset}}
+\index{S\+P\+I\+Reset@{S\+P\+I\+Reset}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Reset(unsigned int base\+Add)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Reset (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a0b2b610b5d0062e7115ed7be6727db7a}
+
+
+
+\begin{DoxyItemize}
+\item It will put S\+P\+I in to reset state.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory Address of the S\+P\+I instance used.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a12efa10816bf3199bbebb2358d95195b}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Shift\+Lsb\+First@{S\+P\+I\+Shift\+Lsb\+First}}
+\index{S\+P\+I\+Shift\+Lsb\+First@{S\+P\+I\+Shift\+Lsb\+First}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Shift\+Lsb\+First(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Shift\+Lsb\+First (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a12efa10816bf3199bbebb2358d95195b}
+
+
+
+\begin{DoxyItemize}
+\item It Configures S\+P\+I to Transmit L\+S\+B bit first during Data transfer. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_ac614d5356a0a2c9c8d14df00624e8139}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Shift\+Msb\+First@{S\+P\+I\+Shift\+Msb\+First}}
+\index{S\+P\+I\+Shift\+Msb\+First@{S\+P\+I\+Shift\+Msb\+First}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Shift\+Msb\+First(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Shift\+Msb\+First (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_ac614d5356a0a2c9c8d14df00624e8139}
+
+
+
+\begin{DoxyItemize}
+\item It Configures S\+P\+I to Transmit M\+S\+B bit first during Data transfer. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_af17f6a72525dce599f3fd7ed684a3b73}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Transmit\+Data1@{S\+P\+I\+Transmit\+Data1}}
+\index{S\+P\+I\+Transmit\+Data1@{S\+P\+I\+Transmit\+Data1}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Transmit\+Data1(unsigned int base\+Add, unsigned int data)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Transmit\+Data1 (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_af17f6a72525dce599f3fd7ed684a3b73}
+
+
+
+\begin{DoxyItemize}
+\item Trasmits Data from T\+X part of S\+P\+I\+D\+A\+T1 register.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data is the data transmitted out of S\+P\+I.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\hypertarget{drivers_2spi_8c_a893e01ac4887d9034d3c5a3545f0df17}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Wait\+Disable@{S\+P\+I\+Wait\+Disable}}
+\index{S\+P\+I\+Wait\+Disable@{S\+P\+I\+Wait\+Disable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Wait\+Disable(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Wait\+Disable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a893e01ac4887d9034d3c5a3545f0df17}
+
+
+
+\begin{DoxyItemize}
+\item It Configures S\+P\+I Master not to wait for S\+P\+Ix\+\_\+\+E\+N\+A signal.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none.
+\end{DoxyReturn}
+Note\+:It is applicable only in S\+P\+I Master Mode.\+S\+P\+Ix\+\_\+\+E\+N\+A is a active low signal \hypertarget{drivers_2spi_8c_a234713598ea1416862ad9ecb94d2db42}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Wait\+Enable@{S\+P\+I\+Wait\+Enable}}
+\index{S\+P\+I\+Wait\+Enable@{S\+P\+I\+Wait\+Enable}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Wait\+Enable(unsigned int base\+Add, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Wait\+Enable (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_a234713598ea1416862ad9ecb94d2db42}
+
+
+
+\begin{DoxyItemize}
+\item It Configures S\+P\+I Master to wait for S\+P\+Ix\+\_\+\+E\+N\+A signal.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none.
+\end{DoxyReturn}
+Note\+:It is applicable only in S\+P\+I Master Mode.\+S\+P\+Ix\+\_\+\+E\+N\+A is a active low signal \hypertarget{drivers_2spi_8c_af5d0dd32ed580c5023b70c2aebc5d066}{}\index{drivers/spi.\+c@{drivers/spi.\+c}!S\+P\+I\+Wdelay\+Set@{S\+P\+I\+Wdelay\+Set}}
+\index{S\+P\+I\+Wdelay\+Set@{S\+P\+I\+Wdelay\+Set}!drivers/spi.\+c@{drivers/spi.\+c}}
+\subsubsection[{S\+P\+I\+Wdelay\+Set(unsigned int base\+Add, unsigned int flag, unsigned int data\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+Wdelay\+Set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{base\+Add, }
+\item[{unsigned int}]{flag, }
+\item[{unsigned int}]{data\+Format}
+\end{DoxyParamCaption}
+)}\label{drivers_2spi_8c_af5d0dd32ed580c5023b70c2aebc5d066}
+
+
+
+\begin{DoxyItemize}
+\item It sets the Delay between S\+P\+I transmission.~\newline
+
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & base\+Add is the Memory address of the the S\+P\+I instance used.~\newline
+\\
+\hline
+{\em -\/} & flag is the value determines amount of delay.~\newline
+\\
+\hline
+{\em -\/} & data\+Format is the value to select the Format register.~\newline
+\begin{DoxyVerb}       dataFormat can take following value.\n
+
+       SPI_DATA_FORMAT0      - To select DataFormat Register 0.\n
+       SPI_DATA_FORMAT1      - To select DataFormat Register 1.\n
+       SPI_DATA_FORMAT2      - To select DataFormat Register 2.\n
+       SPI_DATA_FORMAT3      - To select DataFormat Register 3.\n
+\end{DoxyVerb}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}

@@ -1,0 +1,234 @@
+\hypertarget{adc__sensors_8h}{}\section{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/adc\+\_\+sensors.h File Reference}
+\label{adc__sensors_8h}\index{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/adc\+\_\+sensors.\+h@{le\+J\+O\+S\+\_\+\+E\+V3/src/ev3/adc\+\_\+sensors.\+h}}
+
+
+Function declarations to read the analogous sensors.  
+
+
+{\ttfamily \#include \char`\"{}sensors.\+h\char`\"{}}\\*
+Include dependency graph for adc\+\_\+sensors.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{adc__sensors_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{adc__sensors_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{adc__sensors_8h_af0c3e7ffc54a364d6adfff86aa8a141d}{sensor\+\_\+touch\+\_\+get\+\_\+state} (int port)
+\begin{DoxyCompactList}\small\item\em Read the state of the N\+X\+T touch sensor connected to the specified port. \end{DoxyCompactList}\item 
+void \hyperlink{adc__sensors_8h_a358ec71c591f48806a9d1ada850cb4be}{sensor\+\_\+light\+\_\+set\+\_\+active} (int port)
+\begin{DoxyCompactList}\small\item\em Set an N\+X\+T light sensor at the specified port active by enabling its L\+E\+D. \end{DoxyCompactList}\item 
+void \hyperlink{adc__sensors_8h_ad14f89dae0cdb50d45e8bb2a514ea4ec}{sensor\+\_\+light\+\_\+set\+\_\+inactive} (int port)
+\begin{DoxyCompactList}\small\item\em Set an N\+X\+T light sensor at the specified port inactive by disabling its L\+E\+D. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{adc__sensors_8h_aa79a3551e376d601c60f8e62ae05b051}{sensor\+\_\+light\+\_\+get} (int port)
+\begin{DoxyCompactList}\small\item\em Get the 10 bit value of the N\+X\+T light sensor at the specified port. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{adc__sensors_8h_aad8ee5676bd95e3ad2a504d189d2a432}{sensor\+\_\+sound\+\_\+get} (int port)
+\begin{DoxyCompactList}\small\item\em Get the 10 bit value of the N\+X\+T sound sensor at the specified port. \end{DoxyCompactList}\item 
+signed short \hyperlink{adc__sensors_8h_ac18316e5f5caf3b43ff384bc7e80568d}{sensor\+\_\+gyro\+\_\+get} (int port)
+\begin{DoxyCompactList}\small\item\em Get the current rotation meassured by the Hi\+Technic gyro sensor connected at the specified port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function declarations to read the analogous sensors. 
+
+\begin{DoxyAuthor}{Author}
+Tobias Schießl 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{adc__sensors_8h_ac18316e5f5caf3b43ff384bc7e80568d}{}\index{adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}!sensor\+\_\+gyro\+\_\+get@{sensor\+\_\+gyro\+\_\+get}}
+\index{sensor\+\_\+gyro\+\_\+get@{sensor\+\_\+gyro\+\_\+get}!adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+gyro\+\_\+get(int port)}]{\setlength{\rightskip}{0pt plus 5cm}signed short sensor\+\_\+gyro\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{adc__sensors_8h_ac18316e5f5caf3b43ff384bc7e80568d}
+
+
+Get the current rotation meassured by the Hi\+Technic gyro sensor connected at the specified port. 
+
+The value returned by the sensor will be transformed into the range from -\/360 degrees to +360 degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current rotation meassured by the gyro sensor, ranging from -\/360 degrees to +360 degrees 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc__sensors_8h_ac18316e5f5caf3b43ff384bc7e80568d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{adc__sensors_8h_aa79a3551e376d601c60f8e62ae05b051}{}\index{adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}!sensor\+\_\+light\+\_\+get@{sensor\+\_\+light\+\_\+get}}
+\index{sensor\+\_\+light\+\_\+get@{sensor\+\_\+light\+\_\+get}!adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+light\+\_\+get(int port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short sensor\+\_\+light\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{adc__sensors_8h_aa79a3551e376d601c60f8e62ae05b051}
+
+
+Get the 10 bit value of the N\+X\+T light sensor at the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current value of the light sensor, ranging from 0 (White) to 1023 (Black) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc__sensors_8h_aa79a3551e376d601c60f8e62ae05b051_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{adc__sensors_8h_a358ec71c591f48806a9d1ada850cb4be}{}\index{adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}!sensor\+\_\+light\+\_\+set\+\_\+active@{sensor\+\_\+light\+\_\+set\+\_\+active}}
+\index{sensor\+\_\+light\+\_\+set\+\_\+active@{sensor\+\_\+light\+\_\+set\+\_\+active}!adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+light\+\_\+set\+\_\+active(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+light\+\_\+set\+\_\+active (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{adc__sensors_8h_a358ec71c591f48806a9d1ada850cb4be}
+
+
+Set an N\+X\+T light sensor at the specified port active by enabling its L\+E\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc__sensors_8h_a358ec71c591f48806a9d1ada850cb4be_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{adc__sensors_8h_ad14f89dae0cdb50d45e8bb2a514ea4ec}{}\index{adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}!sensor\+\_\+light\+\_\+set\+\_\+inactive@{sensor\+\_\+light\+\_\+set\+\_\+inactive}}
+\index{sensor\+\_\+light\+\_\+set\+\_\+inactive@{sensor\+\_\+light\+\_\+set\+\_\+inactive}!adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+light\+\_\+set\+\_\+inactive(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void sensor\+\_\+light\+\_\+set\+\_\+inactive (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{adc__sensors_8h_ad14f89dae0cdb50d45e8bb2a514ea4ec}
+
+
+Set an N\+X\+T light sensor at the specified port inactive by disabling its L\+E\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc__sensors_8h_ad14f89dae0cdb50d45e8bb2a514ea4ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{adc__sensors_8h_aad8ee5676bd95e3ad2a504d189d2a432}{}\index{adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}!sensor\+\_\+sound\+\_\+get@{sensor\+\_\+sound\+\_\+get}}
+\index{sensor\+\_\+sound\+\_\+get@{sensor\+\_\+sound\+\_\+get}!adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+sound\+\_\+get(int port)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short sensor\+\_\+sound\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{adc__sensors_8h_aad8ee5676bd95e3ad2a504d189d2a432}
+
+
+Get the 10 bit value of the N\+X\+T sound sensor at the specified port. 
+
+If this function is called for the first time with the specified port, the sound sensor will be initialized by setting its mode to d\+B.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current value of the sound sensor, ranging from 0 (loud) to 1023 (quiet) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc__sensors_8h_aad8ee5676bd95e3ad2a504d189d2a432_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{adc__sensors_8h_af0c3e7ffc54a364d6adfff86aa8a141d}{}\index{adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}!sensor\+\_\+touch\+\_\+get\+\_\+state@{sensor\+\_\+touch\+\_\+get\+\_\+state}}
+\index{sensor\+\_\+touch\+\_\+get\+\_\+state@{sensor\+\_\+touch\+\_\+get\+\_\+state}!adc\+\_\+sensors.\+h@{adc\+\_\+sensors.\+h}}
+\subsubsection[{sensor\+\_\+touch\+\_\+get\+\_\+state(int port)}]{\setlength{\rightskip}{0pt plus 5cm}int sensor\+\_\+touch\+\_\+get\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{adc__sensors_8h_af0c3e7ffc54a364d6adfff86aa8a141d}
+
+
+Read the state of the N\+X\+T touch sensor connected to the specified port. 
+
+If the sensor is red for the first time, the first value is invalid and will be discarded. The current state is red a second time in that case.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ The port the sensor is connected to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current state of the touch sensor\+: 1 if it is pressed, 0 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc__sensors_8h_af0c3e7ffc54a364d6adfff86aa8a141d_cgraph}
+\end{center}
+\end{figure}
+
+
