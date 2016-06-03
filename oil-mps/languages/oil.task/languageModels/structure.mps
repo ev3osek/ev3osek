@@ -10,7 +10,7 @@
     <import index="x27k" ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" />
     <import index="mj1l" ref="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" implicit="true" />
     <import index="qx8g" ref="r:264779d5-6695-4b5b-ba0a-eb616299242f(oil.message.structure)" implicit="true" />
-    <import index="yf3" ref="r:5ec975bd-2614-4742-bf8e-649686402e56(oil.resource.structure)" implicit="true" />
+    <import index="bwbq" ref="r:aa04fc7a-6e20-48c4-b6ac-7c1ce8638ec4(de.whz.osek.structure)" implicit="true" />
     <import index="u1z9" ref="r:bd641933-ad1e-436e-ae92-247a9a3b4aa2(oil.core.structure)" implicit="true" />
     <import index="rx5q" ref="r:8e560f65-464b-43d8-97bf-faadc37f178e(oil.event.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
@@ -102,7 +102,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="resources" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" to="yf3:1x4fgD956dR" resolve="ResourceRef" />
+      <ref role="20lvS9" to="bwbq:1x4fgD956dR" resolve="ResourceRef" />
     </node>
     <node concept="1TJgyj" id="62xxBiE6fOz" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />

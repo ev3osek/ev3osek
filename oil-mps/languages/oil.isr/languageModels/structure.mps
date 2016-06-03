@@ -8,7 +8,7 @@
   <imports>
     <import index="scpz" ref="r:dcec6791-9de2-4c75-82ab-f19ead96211d(oil.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="yf3" ref="r:5ec975bd-2614-4742-bf8e-649686402e56(oil.resource.structure)" implicit="true" />
+    <import index="mle0" ref="r:8664625f-e528-4bef-85fe-ee87292976ff(de.whz.osek.primitives.structure)" implicit="true" />
     <import index="qx8g" ref="r:264779d5-6695-4b5b-ba0a-eb616299242f(oil.message.structure)" implicit="true" />
   </imports>
   <registry>
@@ -68,7 +68,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="resources" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" to="yf3:1x4fgD956dR" resolve="ResourceType" />
+      <ref role="20lvS9" to="mle0:v5qeus8Gck" resolve="ResourceType" />
     </node>
     <node concept="1TJgyj" id="2WOANQOwsia" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />

@@ -68,7 +68,6 @@
     <language id="0f597d4a-95b6-4ef0-b1de-880252a7a2dd" fqName="oil" version="0" />
     <language id="456e47c8-7efc-41e0-8cdf-2227cba7fb92" fqName="oil.core" version="0" />
     <language id="5a14cfb7-f38c-4709-bde5-91507cdad10e" fqName="oil.event" version="0" />
-    <language id="e5102c75-b7c8-413e-9b46-a26e61cab682" fqName="oil.resource" version="0" />
     <language id="93ee8f9b-79ea-488f-91af-997abb3f8200" fqName="oil.task" version="0" />
     <language id="117f7a34-bd8f-4272-9535-2f31839ae920" fqName="oil.timer" version="0" />
   </languageVersions>

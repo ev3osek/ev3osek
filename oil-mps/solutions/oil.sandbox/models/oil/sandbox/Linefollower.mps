@@ -17,7 +17,6 @@
     <use id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements" version="1" />
     <use id="5a14cfb7-f38c-4709-bde5-91507cdad10e" name="oil.event" version="0" />
     <use id="117f7a34-bd8f-4272-9535-2f31839ae920" name="oil.timer" version="0" />
-    <use id="e5102c75-b7c8-413e-9b46-a26e61cab682" name="oil.resource" version="0" />
     <use id="b5816e12-8c8a-48cb-b63a-257253332775" name="de.whz.osek.mindstorms" version="0" />
     <use id="2cbd81a4-20e8-4416-9b20-18bad3a65211" name="de.whz.osek.sandboxLanguage" version="0" />
     <devkit ref="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
@@ -76,12 +75,6 @@
         <property id="7207764911834151445" name="property" index="3uoinE" />
       </concept>
       <concept id="7207764911834169913" name="de.whz.osek.structure.ResourceDeclaration" flags="ng" index="3uopR6" />
-      <concept id="7768296615203424746" name="de.whz.osek.structure.OilFileRef" flags="ng" index="1CRO5R">
-        <reference id="7768296615203424749" name="oilFile" index="1CRO5K" />
-      </concept>
-      <concept id="6887176728640940260" name="de.whz.osek.structure.OilFilesConfigItem" flags="ng" index="3KrG9q">
-        <child id="6887176728640940263" name="OilFiles" index="3KrG9p" />
-      </concept>
     </language>
     <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
       <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
@@ -286,7 +279,6 @@
       <concept id="1748589669711635627" name="oil.event.structure.EventLiteral" flags="ng" index="1hk5Ax">
         <child id="8230360703443541364" name="mask" index="1$bw00" />
       </concept>
-      <concept id="1748589669711636430" name="oil.event.structure.EventRef" flags="ng" index="1hk5F4" />
     </language>
     <language id="3441a607-e35e-4d6e-b985-e96d84ae790d" name="de.whz.osek.primitives">
       <concept id="2006000646084265599" name="de.whz.osek.primitives.structure.EventMaskType" flags="ng" index="22Q3ya" />
@@ -450,8 +442,8 @@
             <node concept="1hk5Ds" id="4osOqZkm2sH" role="3O_q_j">
               <ref role="1hk5Dt" node="4O31OoBlEF8" resolve="LineFollowerTask" />
             </node>
-            <node concept="1hk5F4" id="5z6cQ9lfKZf" role="3O_q_j">
-              <ref role="2DPCA0" node="4O31OoBlEBy" resolve="MeinTouchEvent" />
+            <node concept="4ZOvp" id="5JhwNflEOsd" role="3O_q_j">
+              <ref role="2DPCA0" node="7WxCaoPSgkZ" resolve="LightValueEvent" />
             </node>
           </node>
         </node>
@@ -509,8 +501,8 @@
         <property role="2hmy$m" value="455" />
       </node>
     </node>
-    <node concept="2NXPZ9" id="5g5RAGpXkYn" role="N3F5h">
-      <property role="TrG5h" value="empty_1452788274059_44" />
+    <node concept="2NXPZ9" id="5JhwNflEMwJ" role="N3F5h">
+      <property role="TrG5h" value="empty_1464793641696_83" />
     </node>
     <node concept="1sgJKc" id="5g5RAGpXlEm" role="N3F5h">
       <property role="TrG5h" value="SPid" />
@@ -1293,11 +1285,11 @@
               <node concept="3O_q_g" id="62ww4MHpGuQ" role="1_9egR">
                 <ref role="3O_q_h" to="tzd5:5g5RAGpXQ0i" resolve="WaitEvent" />
                 <node concept="2EHzL4" id="5z6cQ9lfQYI" role="3O_q_j">
-                  <node concept="1hk5F4" id="5z6cQ9lfR2c" role="3TlMhJ">
-                    <ref role="2DPCA0" node="4O31OoBlEB_" resolve="LightValueEvent" />
+                  <node concept="4ZOvp" id="5JhwNflEMfo" role="3TlMhI">
+                    <ref role="2DPCA0" node="7WxCaoPSgjt" resolve="TouchEvent" />
                   </node>
-                  <node concept="1hk5F4" id="5z6cQ9lfQY4" role="3TlMhI">
-                    <ref role="2DPCA0" node="4O31OoBlEBy" resolve="MeinTouchEvent" />
+                  <node concept="4ZOvp" id="5JhwNflEMi$" role="3TlMhJ">
+                    <ref role="2DPCA0" node="7WxCaoPSgkZ" resolve="LightValueEvent" />
                   </node>
                 </node>
               </node>
@@ -1345,8 +1337,8 @@
                 <node concept="1_9egQ" id="62ww4MHpGhC" role="3XIRFZ">
                   <node concept="3O_q_g" id="62ww4MHpGhA" role="1_9egR">
                     <ref role="3O_q_h" to="tzd5:5g5RAGpXPb1" resolve="ClearEvent" />
-                    <node concept="1hk5F4" id="5z6cQ9lfR6_" role="3O_q_j">
-                      <ref role="2DPCA0" node="4O31OoBlEBy" resolve="MeinTouchEvent" />
+                    <node concept="4ZOvp" id="5JhwNflEMnK" role="3O_q_j">
+                      <ref role="2DPCA0" node="7WxCaoPSgjt" resolve="TouchEvent" />
                     </node>
                   </node>
                 </node>
@@ -1476,8 +1468,8 @@
                 <node concept="3ZVu4v" id="62ww4MHpAHh" role="3TlMhI">
                   <ref role="3ZVs_2" node="62ww4MHoRyh" resolve="eventmask" />
                 </node>
-                <node concept="1hk5F4" id="5z6cQ9lfQUV" role="3TlMhJ">
-                  <ref role="2DPCA0" node="4O31OoBlEBy" resolve="MeinTouchEvent" />
+                <node concept="4ZOvp" id="5JhwNflEMl4" role="3TlMhJ">
+                  <ref role="2DPCA0" node="7WxCaoPSgjt" resolve="TouchEvent" />
                 </node>
               </node>
               <node concept="gg_gk" id="5g5RAGpY07U" role="gg_kh">
@@ -1509,8 +1501,8 @@
                   <node concept="1_9egQ" id="6_1SVP_NpsI" role="3XIRFZ">
                     <node concept="3O_q_g" id="6_1SVP_NpsG" role="1_9egR">
                       <ref role="3O_q_h" to="tzd5:5g5RAGpXPb1" resolve="ClearEvent" />
-                      <node concept="1hk5F4" id="5z6cQ9lfRmk" role="3O_q_j">
-                        <ref role="2DPCA0" node="4O31OoBlEB_" resolve="LightValueEvent" />
+                      <node concept="4ZOvp" id="5JhwNflEMuK" role="3O_q_j">
+                        <ref role="2DPCA0" node="7WxCaoPSgkZ" resolve="LightValueEvent" />
                       </node>
                     </node>
                   </node>
@@ -1537,7 +1529,7 @@
                       <property role="2caQfQ" value="false" />
                       <property role="2c7vTL" value="false" />
                     </node>
-                    <node concept="1S7827" id="3biQP485R8_" role="3XIe9u">
+                    <node concept="1S7827" id="5JhwNflEON6" role="3XIe9u">
                       <ref role="1S7826" node="4osOqZkm2sr" resolve="lightSensorValue" />
                     </node>
                   </node>
@@ -1917,11 +1909,11 @@
                   </node>
                 </node>
                 <node concept="2EHzL6" id="5z6cQ9lfRc4" role="gg_gt">
-                  <node concept="1hk5F4" id="5z6cQ9lfRhe" role="3TlMhJ">
-                    <ref role="2DPCA0" node="4O31OoBlEB_" resolve="LightValueEvent" />
-                  </node>
                   <node concept="3ZVu4v" id="62ww4MHpAHy" role="3TlMhI">
                     <ref role="3ZVs_2" node="62ww4MHoRyh" resolve="eventmask" />
+                  </node>
+                  <node concept="4ZOvp" id="5JhwNflEMra" role="3TlMhJ">
+                    <ref role="2DPCA0" node="7WxCaoPSgkZ" resolve="LightValueEvent" />
                   </node>
                 </node>
               </node>
@@ -2002,14 +1994,14 @@
     <node concept="3GEVxB" id="5g5RAGpXO$m" role="2OODSX">
       <ref role="3GEb4d" to="tzd5:2UjW4IkHtzb" resolve="kernel" />
     </node>
-    <node concept="3GEVxB" id="4osOqZkmaHA" role="2OODSX">
-      <ref role="3GEb4d" node="4osOqZkm2sh" resolve="LightValueEventDispatcherTask" />
-    </node>
     <node concept="3GEVxB" id="3biQP486lm2" role="2OODSX">
       <ref role="3GEb4d" node="3biQP486ju3" resolve="LfVariability" />
     </node>
     <node concept="3GEVxB" id="5YkaFUJVHXg" role="2OODSX">
       <ref role="3GEb4d" to="k7td:5YkaFUJVGNP" resolve="stdio_stub" />
+    </node>
+    <node concept="3GEVxB" id="5JhwNflEOw8" role="2OODSX">
+      <ref role="3GEb4d" node="4osOqZkm2sh" resolve="LightValueEventDispatcherTask" />
     </node>
     <node concept="3GEVxB" id="5z6cQ9lfQRl" role="2OODSX">
       <ref role="3GEb4d" node="4O31OoBlE86" resolve="LinefollowerOil" />
@@ -2064,8 +2056,8 @@
                 <node concept="1hk5Ds" id="4osOqZklZar" role="3O_q_j">
                   <ref role="1hk5Dt" node="4O31OoBlEF8" resolve="LineFollowerTask" />
                 </node>
-                <node concept="1hk5F4" id="5z6cQ9lfOEO" role="3O_q_j">
-                  <ref role="2DPCA0" node="4O31OoBlEBy" resolve="MeinTouchEvent" />
+                <node concept="4ZOvp" id="5JhwNflEOvj" role="3O_q_j">
+                  <ref role="2DPCA0" node="7WxCaoPSgjt" resolve="TouchEvent" />
                 </node>
               </node>
             </node>
@@ -2130,6 +2122,12 @@
       <node concept="2v9HqM" id="5YkaFUJVQo6" role="2eOfOg">
         <ref role="2v9HqP" to="k7td:5YkaFUJVGNP" resolve="stdio_stub" />
       </node>
+      <node concept="2v9HqM" id="5JhwNflCAne" role="2eOfOg">
+        <ref role="2v9HqP" node="4O31OoBlE86" resolve="LinefollowerOil" />
+      </node>
+      <node concept="2v9HqM" id="5JhwNflCAny" role="2eOfOg">
+        <ref role="2v9HqP" node="78Vwcm5yHla" resolve="AnotherOilFile" />
+      </node>
     </node>
     <node concept="QR8et" id="4osOqZklR7d" role="2AWWZH">
       <property role="1bwMw$" value="gcc" />
@@ -2140,14 +2138,6 @@
       <node concept="IjAfM" id="3biQP486NtM" role="19yoJo">
         <ref role="IjAfK" node="3biQP486ju6" resolve="DebugFeature" />
         <ref role="IjAfL" node="3biQP486ju_" resolve="DoDebug" />
-      </node>
-    </node>
-    <node concept="3KrG9q" id="78Vwcm5yH8b" role="2Q9xDr">
-      <node concept="1CRO5R" id="78Vwcm5yH8g" role="3KrG9p">
-        <ref role="1CRO5K" node="4O31OoBlE86" resolve="LinefollowerOil" />
-      </node>
-      <node concept="1CRO5R" id="78Vwcm5yHlo" role="3KrG9p">
-        <ref role="1CRO5K" node="78Vwcm5yHla" resolve="AnotherOilFile" />
       </node>
     </node>
   </node>
@@ -2250,18 +2240,18 @@
           <property role="2hmy$m" value="1" />
         </node>
       </node>
-      <node concept="bPy0e" id="4O31OoBlEBy" role="3aI4UL">
-        <node concept="1hk5Ax" id="4O31OoBlEBz" role="2DQcEM">
-          <property role="TrG5h" value="MeinTouchEvent" />
-          <node concept="3TlMh9" id="4O31OoBlEB$" role="1$bw00">
+      <node concept="bPy0e" id="7WxCaoPSgjt" role="3aI4UL">
+        <node concept="1hk5Ax" id="7WxCaoPSgjI" role="2DQcEM">
+          <property role="TrG5h" value="TouchEvent" />
+          <node concept="3TlMh9" id="7WxCaoPSgkB" role="1$bw00">
             <property role="2hmy$m" value="1" />
           </node>
         </node>
       </node>
-      <node concept="bPy0e" id="4O31OoBlEB_" role="3aI4UL">
-        <node concept="1hk5Ax" id="4O31OoBlEBA" role="2DQcEM">
+      <node concept="bPy0e" id="7WxCaoPSgkZ" role="3aI4UL">
+        <node concept="1hk5Ax" id="7WxCaoPSgm8" role="2DQcEM">
           <property role="TrG5h" value="LightValueEvent" />
-          <node concept="3TlMh9" id="4O31OoBlEBB" role="1$bw00">
+          <node concept="3TlMh9" id="7WxCaoPSgmE" role="1$bw00">
             <property role="2hmy$m" value="1" />
           </node>
         </node>

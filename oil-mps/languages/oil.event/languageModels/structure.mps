@@ -57,7 +57,12 @@
   <node concept="1TIwiD" id="1x4fgD956ve">
     <property role="TrG5h" value="EventRef" />
     <property role="1pbfSe" value="1633199320" />
-    <ref role="1TJDcQ" to="x27k:3ilck8KqBqr" resolve="GlobalConstantRef" />
+    <node concept="1TJgyj" id="5JhwNflEF4y" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="event" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4B0n6H25BL_" resolve="EventDeclaration" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4B0n6H25BL_">
     <property role="1pbfSe" value="1948854064" />

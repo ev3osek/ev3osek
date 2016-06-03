@@ -59,6 +59,9 @@
     <node concept="PrWs8" id="1JmJJmp2QHw" role="PzmwI">
       <ref role="PrY4T" to="vs0r:IviauXabd" resolve="IMbeddrIDERoot" />
     </node>
+    <node concept="PrWs8" id="6cbBThjym80" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:3Y7ywckEJZi" resolve="IKeepAliveInGeneration" />
+    </node>
     <node concept="1TJgyj" id="7FCpXS_VYUZ" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="cpu" />

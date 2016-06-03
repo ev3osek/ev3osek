@@ -14,7 +14,7 @@
     <import index="scpz" ref="r:dcec6791-9de2-4c75-82ab-f19ead96211d(oil.structure)" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
-    <import index="u1z9" ref="r:bd641933-ad1e-436e-ae92-247a9a3b4aa2(oil.core.structure)" implicit="true" />
+    <import index="u1z9" ref="r:bd641933-ad1e-436e-ae92-247a9a3b4aa2(oil.core.structure)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -70,7 +70,9 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
-      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT" />
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
@@ -175,6 +177,21 @@
       <node concept="A3Dl8" id="68g5zia2NTR" role="3clF45">
         <node concept="3Tqbb2" id="68g5zia2NTS" role="A3Ik2" />
       </node>
+    </node>
+    <node concept="13i0hz" id="5JhwNflBTeJ" role="13h7CS">
+      <property role="TrG5h" value="isImplementationArtifact" />
+      <property role="13i0it" value="false" />
+      <property role="13i0iv" value="false" />
+      <ref role="13i0hy" to="hwgx:7Vd878ENIh6" resolve="isImplementationArtifact" />
+      <node concept="3Tm1VV" id="5JhwNflBTeK" role="1B3o_S" />
+      <node concept="3clFbS" id="5JhwNflBTeP" role="3clF47">
+        <node concept="3cpWs6" id="5JhwNflBUQc" role="3cqZAp">
+          <node concept="3clFbT" id="5JhwNflBUNs" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+      <node concept="10P_77" id="5JhwNflBTeQ" role="3clF45" />
     </node>
     <node concept="13i0hz" id="1JmJJmp2Ucg" role="13h7CS">
       <property role="TrG5h" value="createProxy" />

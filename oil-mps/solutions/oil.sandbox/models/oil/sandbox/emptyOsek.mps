@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="7a30de00-cb30-45dd-ab11-776f84eb73fe" name="de.whz.osek" version="0" />
-    <use id="e5102c75-b7c8-413e-9b46-a26e61cab682" name="oil.resource" version="0" />
     <use id="b5816e12-8c8a-48cb-b63a-257253332775" name="de.whz.osek.mindstorms" version="0" />
     <use id="0f597d4a-95b6-4ef0-b1de-880252a7a2dd" name="oil" version="0" />
     <use id="456e47c8-7efc-41e0-8cdf-2227cba7fb92" name="oil.core" version="0" />
