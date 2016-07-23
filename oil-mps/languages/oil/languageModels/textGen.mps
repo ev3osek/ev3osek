@@ -17,19 +17,11 @@
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
       </concept>
-      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
-        <property id="1070475926801" name="value" index="Xl_RC" />
-      </concept>
-      <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
-        <child id="1068580123156" name="expression" index="3clFbG" />
-      </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
     </language>
     <language id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen">
-      <concept id="8931911391946696733" name="jetbrains.mps.lang.textGen.structure.ExtensionDeclaration" flags="in" index="9MYSb" />
-      <concept id="1237305208784" name="jetbrains.mps.lang.textGen.structure.NewLineAppendPart" flags="ng" index="l8MVK" />
       <concept id="1237305334312" name="jetbrains.mps.lang.textGen.structure.NodeAppendPart" flags="ng" index="l9hG8">
         <child id="1237305790512" name="value" index="lb14g" />
       </concept>
@@ -42,7 +34,6 @@
       <concept id="1233670071145" name="jetbrains.mps.lang.textGen.structure.ConceptTextGenDeclaration" flags="ig" index="WtQ9Q">
         <reference id="1233670257997" name="conceptDeclaration" index="WuzLi" />
         <child id="1233749296504" name="textGenBlock" index="11c4hB" />
-        <child id="7991274449437422201" name="extension" index="33IsuW" />
       </concept>
       <concept id="1233748055915" name="jetbrains.mps.lang.textGen.structure.NodeParameter" flags="nn" index="117lpO" />
       <concept id="1233749247888" name="jetbrains.mps.lang.textGen.structure.GenerateTextDeclaration" flags="in" index="11bSqf" />
@@ -51,50 +42,8 @@
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
-      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
-        <reference id="1138056516764" name="link" index="3Tt5mk" />
-      </concept>
     </language>
   </registry>
-  <node concept="WtQ9Q" id="3QwuWjHkWRX">
-    <ref role="WuzLi" to="scpz:1x4fgD93Cjb" resolve="OilFile" />
-    <node concept="9MYSb" id="3QwuWjHkWRZ" role="33IsuW">
-      <node concept="3clFbS" id="3QwuWjHkWS0" role="2VODD2">
-        <node concept="3clFbF" id="23s$hiVSvAU" role="3cqZAp">
-          <node concept="Xl_RD" id="3QwuWjHkWWo" role="3clFbG">
-            <property role="Xl_RC" value="oil" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="11bSqf" id="3QwuWjHkXcP" role="11c4hB">
-      <node concept="3clFbS" id="3QwuWjHkXcQ" role="2VODD2">
-        <node concept="lc7rE" id="5YkaFUJVm0M" role="3cqZAp">
-          <node concept="l9hG8" id="5YkaFUJVm22" role="lcghm">
-            <node concept="2OqwBi" id="5YkaFUJVmbU" role="lb14g">
-              <node concept="117lpO" id="5YkaFUJVm2I" role="2Oq$k0" />
-              <node concept="3TrcHB" id="5YkaFUJVmSl" role="2OqNvi">
-                <ref role="3TsBF5" to="scpz:1x4fgD93NIt" resolve="oilVersion" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="lc7rE" id="3QwuWjHkXIB" role="3cqZAp">
-          <node concept="l8MVK" id="3QwuWjHkXJ2" role="lcghm" />
-        </node>
-        <node concept="lc7rE" id="3QwuWjHl7OI" role="3cqZAp">
-          <node concept="l9hG8" id="3QwuWjHl7PE" role="lcghm">
-            <node concept="2OqwBi" id="3QwuWjHl7Su" role="lb14g">
-              <node concept="117lpO" id="3QwuWjHl7Qq" role="2Oq$k0" />
-              <node concept="3TrEf2" id="3QwuWjHl7WQ" role="2OqNvi">
-                <ref role="3Tt5mk" to="scpz:7FCpXS_VYUZ" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="1Y5JHpRzvbA">
     <ref role="WuzLi" to="scpz:1x4fgD93NJv" resolve="OilFileInclude" />
     <node concept="11bSqf" id="1Y5JHpRzvbB" role="11c4hB">

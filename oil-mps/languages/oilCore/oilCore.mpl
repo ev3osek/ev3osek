@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="oil.core" uuid="456e47c8-7efc-41e0-8cdf-2227cba7fb92" languageVersion="0" moduleVersion="0">
+<language namespace="oil.core" uuid="456e47c8-7efc-41e0-8cdf-2227cba7fb92" languageVersion="0" moduleVersion="1">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="languageModels" />
@@ -9,11 +9,6 @@
   <generators />
   <sourcePath />
   <dependencies>
-    <dependency reexport="false">93ee8f9b-79ea-488f-91af-997abb3f8200(oil.task)</dependency>
-    <dependency reexport="false">5a14cfb7-f38c-4709-bde5-91507cdad10e(oil.event)</dependency>
-    <dependency reexport="false">117f7a34-bd8f-4272-9535-2f31839ae920(oil.timer)</dependency>
-    <dependency reexport="false">fea8889b-d85b-42b3-9c3d-0b9b770726aa(oil.isr)</dependency>
-    <dependency reexport="false">e55dd432-501b-4a39-bc0f-a92e03c0ea9a(oil.message)</dependency>
     <dependency reexport="false">6d147ec7-3801-495b-99c7-ce6acdb2514e(oil.com)</dependency>
     <dependency reexport="false">6d11763d-483d-4b2b-8efc-09336c1b0001(com.mbeddr.core.modules)</dependency>
     <dependency reexport="false">2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)</dependency>
@@ -32,6 +27,7 @@
     <language id="fd392034-7849-419d-9071-12563d152375" fqName="jetbrains.mps.baseLanguage.closures" version="0" />
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" fqName="jetbrains.mps.baseLanguage.collections" version="0" />
     <language id="f2801650-65d5-424e-bb1b-463a8781b786" fqName="jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <language id="c7d5b9dd-a05f-4be2-bc73-f2e16994cc67" fqName="jetbrains.mps.baseLanguage.lightweightdsl" version="1" />
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" fqName="jetbrains.mps.baseLanguage.logging" version="0" />
     <language id="a247e09e-2435-45ba-b8d2-07e93feba96a" fqName="jetbrains.mps.baseLanguage.tuples" version="0" />
     <language id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" fqName="jetbrains.mps.lang.actions" version="0" />
@@ -39,6 +35,8 @@
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" fqName="jetbrains.mps.lang.constraints" version="0" />
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" fqName="jetbrains.mps.lang.core" version="1" />
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" fqName="jetbrains.mps.lang.editor" version="3" />
+    <language id="90746344-04fd-4286-97d5-b46ae6a81709" fqName="jetbrains.mps.lang.migration" version="0" />
+    <language id="9882f4ad-1955-46fe-8269-94189e5dbbf2" fqName="jetbrains.mps.lang.migration.util" version="0" />
     <language id="3a13115c-633c-4c5c-bbcc-75c4219e9555" fqName="jetbrains.mps.lang.quotation" version="0" />
     <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" fqName="jetbrains.mps.lang.sharedConcepts" version="0" />
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" fqName="jetbrains.mps.lang.smodel" version="2" />
@@ -73,7 +71,6 @@
     <module reference="cce85e64-7b37-4ad5-b0e6-9d18324cdfb3(de.itemis.mps.selection.runtime)" version="0" />
     <module reference="92d2ea16-5a42-4fdf-a676-c7604efe3504(de.slisson.mps.richtext)" version="0" />
     <module reference="7a30de00-cb30-45dd-ab11-776f84eb73fe(de.whz.osek)" version="0" />
-    <module reference="3441a607-e35e-4d6e-b985-e96d84ae790d(de.whz.osek.primitives)" version="0" />
     <module reference="2cbd81a4-20e8-4416-9b20-18bad3a65211(de.whz.osek.sandboxLanguage)" version="0" />
     <module reference="af19274f-5f89-42dd-8f3c-c9932448f7f2(jetbrains.mps.analyzers.runtime)" version="0" />
     <module reference="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" version="0" />
@@ -95,11 +92,6 @@
     <module reference="0f597d4a-95b6-4ef0-b1de-880252a7a2dd(oil)" version="0" />
     <module reference="6d147ec7-3801-495b-99c7-ce6acdb2514e(oil.com)" version="0" />
     <module reference="456e47c8-7efc-41e0-8cdf-2227cba7fb92(oil.core)" version="0" />
-    <module reference="5a14cfb7-f38c-4709-bde5-91507cdad10e(oil.event)" version="0" />
-    <module reference="fea8889b-d85b-42b3-9c3d-0b9b770726aa(oil.isr)" version="0" />
-    <module reference="e55dd432-501b-4a39-bc0f-a92e03c0ea9a(oil.message)" version="0" />
-    <module reference="93ee8f9b-79ea-488f-91af-997abb3f8200(oil.task)" version="0" />
-    <module reference="117f7a34-bd8f-4272-9535-2f31839ae920(oil.timer)" version="0" />
   </dependencyVersions>
   <extendedLanguages>
     <extendedLanguage>d4280a54-f6df-4383-aa41-d1b2bffa7eb1(com.mbeddr.core.base)</extendedLanguage>

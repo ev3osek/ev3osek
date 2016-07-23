@@ -7,67 +7,7 @@
   </languages>
   <imports>
     <import index="scpz" ref="r:dcec6791-9de2-4c75-82ab-f19ead96211d(oil.structure)" />
-    <import index="mj1l" ref="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" implicit="true" />
-    <import index="x27k" ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" implicit="true" />
   </imports>
-  <registry>
-    <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
-      <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
-        <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
-        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
-        <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
-        <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
-      </concept>
-      <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
-        <reference id="1169127628841" name="intfc" index="PrY4T" />
-      </concept>
-      <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
-        <reference id="1071489389519" name="extends" index="1TJDcQ" />
-        <child id="1169129564478" name="implements" index="PzmwI" />
-      </concept>
-      <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
-        <property id="1071599776563" name="role" index="20kJfa" />
-        <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
-        <property id="1071599937831" name="metaClass" index="20lmBu" />
-        <reference id="1071599976176" name="target" index="20lvS9" />
-      </concept>
-    </language>
-    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
-        <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-    </language>
-  </registry>
-  <node concept="1TIwiD" id="1x4fgD956iF">
-    <property role="TrG5h" value="EventLiteral" />
-    <property role="R4oN_" value="notifies tasks, that a specific event has occurred" />
-    <property role="1pbfSe" value="1633198517" />
-    <property role="34LRSv" value="Event" />
-    <ref role="1TJDcQ" to="mj1l:7FQByU3CrDs" resolve="BooleanLiteral" />
-    <node concept="PrWs8" id="4B0n6H258pq" role="PzmwI">
-      <ref role="PrY4T" to="x27k:5_l8w1EmTdf" resolve="IModuleContent" />
-    </node>
-    <node concept="1TJgyj" id="78S7ngm5xPO" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="mask" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="mj1l:7FQByU3CrCM" resolve="Expression" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="1x4fgD956ve">
-    <property role="TrG5h" value="EventRef" />
-    <property role="1pbfSe" value="1633199320" />
-    <node concept="1TJgyj" id="5JhwNflEF4y" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="event" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="4B0n6H25BL_" resolve="EventDeclaration" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="4B0n6H25BL_">
-    <property role="1pbfSe" value="1948854064" />
-    <property role="TrG5h" value="EventDeclaration" />
-    <ref role="1TJDcQ" to="x27k:3ilck8KpYYm" resolve="GlobalConstantDeclaration" />
-  </node>
+  <registry />
 </model>
 

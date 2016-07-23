@@ -9,11 +9,13 @@
   <imports>
     <import index="u1z9" ref="r:bd641933-ad1e-436e-ae92-247a9a3b4aa2(oil.core.structure)" />
     <import index="x27k" ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" />
+    <import index="bwbq" ref="r:aa04fc7a-6e20-48c4-b6ac-7c1ce8638ec4(de.whz.osek.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9" />
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
         <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
@@ -24,7 +26,6 @@
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
       <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
-        <property id="1160488491229" name="iconPath" index="MwhBj" />
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
         <child id="1169129564478" name="implements" index="PzmwI" />
@@ -40,35 +41,14 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
   </registry>
-  <node concept="1TIwiD" id="1x4fgD93Cjb">
-    <property role="TrG5h" value="OilFile" />
-    <property role="19KtqR" value="true" />
-    <property role="R4oN_" value="The root part of an OSEK Implementation Language configuration file. It defines some general attributes and is the container the root configuration element CPU" />
-    <property role="1pbfSe" value="1632813525" />
-    <property role="MwhBj" value="${module}/icons/osek_symbol.gif" />
-    <ref role="1TJDcQ" to="x27k:5_l8w1EmTcX" resolve="Module" />
-    <node concept="1TJgyi" id="1x4fgD93NIt" role="1TKVEl">
-      <property role="TrG5h" value="oilVersion" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="PrWs8" id="1JmJJmp2QHw" role="PzmwI">
-      <ref role="PrY4T" to="vs0r:IviauXabd" resolve="IMbeddrIDERoot" />
-    </node>
-    <node concept="PrWs8" id="6cbBThjym80" role="PzmwI">
-      <ref role="PrY4T" to="vs0r:3Y7ywckEJZi" resolve="IKeepAliveInGeneration" />
-    </node>
-    <node concept="1TJgyj" id="7FCpXS_VYUZ" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="cpu" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="u1z9:1x4fgD94T$4" resolve="CPU" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="1x4fgD93NJv">
     <property role="TrG5h" value="OilFileInclude" />
     <property role="R4oN_" value="specify other oil file, that should be included" />
@@ -78,6 +58,42 @@
       <property role="TrG5h" value="path" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="asaX9" id="2N$8aY8IZDN" role="lGtFl" />
+  </node>
+  <node concept="1TIwiD" id="2N$8aY8Ir9w">
+    <property role="1pbfSe" value="1247948017" />
+    <property role="TrG5h" value="OilFileNoModule" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2N$8aY8IBsr" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="cpu" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="bwbq:1x4fgD94T$4" resolve="CPU" />
+    </node>
+    <node concept="1TJgyi" id="2N$8aY8IBsp" role="1TKVEl">
+      <property role="TrG5h" value="oilVersion" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="PrWs8" id="2N$8aY8IwrG" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:IviauXabd" resolve="IMbeddrIDERoot" />
+    </node>
+    <node concept="asaX9" id="2N$8aY8IZDP" role="lGtFl" />
+  </node>
+  <node concept="1TIwiD" id="2N$8aY8Ir9B">
+    <property role="1pbfSe" value="1247948010" />
+    <property role="TrG5h" value="OilFileImport" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2N$8aY8I_21" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="oilFile" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2N$8aY8Ir9w" resolve="OilFileNoModule" />
+    </node>
+    <node concept="PrWs8" id="2N$8aY8Ir9C" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:6clJcrJZLbn" resolve="IChunkDependency" />
+    </node>
+    <node concept="asaX9" id="2N$8aY8IZDL" role="lGtFl" />
   </node>
 </model>
 

@@ -9,9 +9,7 @@
   <dependencies>
     <dependency reexport="false">61c69711-ed61-4850-81d9-7714ff227fb0(com.mbeddr.core.expressions)</dependency>
     <dependency reexport="false">b5816e12-8c8a-48cb-b63a-257253332775(de.whz.osek.mindstorms)</dependency>
-    <dependency reexport="false">93ee8f9b-79ea-488f-91af-997abb3f8200(oil.task)</dependency>
     <dependency reexport="false">~_PreferencesModule#OSEK Implementation Language.__spreferences.PlatformTemplates(OSEK Implementation Language.__spreferences.PlatformTemplates)</dependency>
-    <dependency reexport="false">5a14cfb7-f38c-4709-bde5-91507cdad10e(oil.event)</dependency>
     <dependency reexport="false">7a30de00-cb30-45dd-ab11-776f84eb73fe(de.whz.osek)</dependency>
     <dependency reexport="false">159e346e-43bd-4325-9139-eb179631a38c(de.whz.external)</dependency>
   </dependencies>
@@ -47,10 +45,9 @@
     <language id="7a060fae-09e0-4372-be36-6696d6554c0e" fqName="com.mbeddr.mpsutil.review.annotation" version="0" />
     <language id="c1c2a88a-323c-4605-a37d-9ab77a2ccbd2" fqName="com.mbeddr.mpsutil.suppresswarning" version="0" />
     <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" fqName="de.slisson.mps.richtext" version="0" />
+    <language id="159e346e-43bd-4325-9139-eb179631a38c" fqName="de.whz.external" version="0" />
     <language id="7a30de00-cb30-45dd-ab11-776f84eb73fe" fqName="de.whz.osek" version="0" />
     <language id="b5816e12-8c8a-48cb-b63a-257253332775" fqName="de.whz.osek.mindstorms" version="0" />
-    <language id="3441a607-e35e-4d6e-b985-e96d84ae790d" fqName="de.whz.osek.primitives" version="0" />
-    <language id="2cbd81a4-20e8-4416-9b20-18bad3a65211" fqName="de.whz.osek.sandboxLanguage" version="0" />
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" fqName="jetbrains.mps.baseLanguage" version="4" />
     <language id="ed6d7656-532c-4bc2-81d1-af945aeb8280" fqName="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <language id="fd392034-7849-419d-9071-12563d152375" fqName="jetbrains.mps.baseLanguage.closures" version="0" />
@@ -65,11 +62,6 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" fqName="jetbrains.mps.lang.structure" version="1" />
     <language id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" fqName="jetbrains.mps.lang.traceable" version="0" />
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" fqName="jetbrains.mps.lang.typesystem" version="0" />
-    <language id="0f597d4a-95b6-4ef0-b1de-880252a7a2dd" fqName="oil" version="0" />
-    <language id="456e47c8-7efc-41e0-8cdf-2227cba7fb92" fqName="oil.core" version="0" />
-    <language id="5a14cfb7-f38c-4709-bde5-91507cdad10e" fqName="oil.event" version="0" />
-    <language id="93ee8f9b-79ea-488f-91af-997abb3f8200" fqName="oil.task" version="0" />
-    <language id="117f7a34-bd8f-4272-9535-2f31839ae920" fqName="oil.timer" version="0" />
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
@@ -100,7 +92,6 @@
     <module reference="159e346e-43bd-4325-9139-eb179631a38c(de.whz.external)" version="0" />
     <module reference="7a30de00-cb30-45dd-ab11-776f84eb73fe(de.whz.osek)" version="0" />
     <module reference="b5816e12-8c8a-48cb-b63a-257253332775(de.whz.osek.mindstorms)" version="0" />
-    <module reference="3441a607-e35e-4d6e-b985-e96d84ae790d(de.whz.osek.primitives)" version="0" />
     <module reference="af19274f-5f89-42dd-8f3c-c9932448f7f2(jetbrains.mps.analyzers.runtime)" version="0" />
     <module reference="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" version="0" />
     <module reference="ed6d7656-532c-4bc2-81d1-af945aeb8280(jetbrains.mps.baseLanguage.blTypes)" version="0" />
@@ -117,10 +108,7 @@
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
     <module reference="7a5dda62-9140-4668-ab76-d5ed1746f2b2(jetbrains.mps.lang.typesystem)" version="0" />
-    <module reference="5a14cfb7-f38c-4709-bde5-91507cdad10e(oil.event)" version="0" />
     <module reference="6bde3119-21d7-4541-aeae-d4d4409a0647(oil.sandbox)" version="0" />
-    <module reference="93ee8f9b-79ea-488f-91af-997abb3f8200(oil.task)" version="0" />
-    <module reference="117f7a34-bd8f-4272-9535-2f31839ae920(oil.timer)" version="0" />
   </dependencyVersions>
 </solution>
 
