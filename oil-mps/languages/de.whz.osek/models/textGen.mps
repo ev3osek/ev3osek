@@ -23,6 +23,7 @@
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
       </concept>
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -1512,10 +1513,15 @@
                 <property role="lacIc" value="STATUS             = " />
               </node>
               <node concept="l9hG8" id="4ZphVsbHI5B" role="lcghm">
-                <node concept="2OqwBi" id="4ZphVsbHI5C" role="lb14g">
-                  <node concept="117lpO" id="4ZphVsbHI5D" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="3QwuWjHkYS8" role="2OqNvi">
-                    <ref role="3TsBF5" to="bwbq:1x4fgD94T$u" resolve="status" />
+                <node concept="2OqwBi" id="7UEdJ0VNeLD" role="lb14g">
+                  <node concept="2OqwBi" id="4ZphVsbHI5C" role="2Oq$k0">
+                    <node concept="117lpO" id="4ZphVsbHI5D" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3QwuWjHkYS8" role="2OqNvi">
+                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$u" resolve="status" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VNeXO" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1530,14 +1536,19 @@
                 <property role="lacIc" value="STARTUPHOOK        = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHkZ2s" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHkZLT" role="lb14g">
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <node concept="2OqwBi" id="3QwuWjHkZPB" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHkZMP" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHkZY1" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$w" resolve="startupHook" />
+                <node concept="2OqwBi" id="7UEdJ0VMY$p" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHkZLT" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="3QwuWjHkZPB" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHkZMP" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHkZY1" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T$w" resolve="startupHook" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMYLz" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1552,14 +1563,19 @@
                 <property role="lacIc" value="ERRORHOOK          = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHl0jI" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHl0mp" role="lb14g">
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <node concept="2OqwBi" id="3QwuWjHl0q7" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHl0nl" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHl0yx" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$K" resolve="errorHook" />
+                <node concept="2OqwBi" id="7UEdJ0VMYkC" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHl0mp" role="2Oq$k0">
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <node concept="2OqwBi" id="3QwuWjHl0q7" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHl0nl" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHl0yx" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T$K" resolve="errorHook" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMYx9" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1574,14 +1590,19 @@
                 <property role="lacIc" value="SHUTDOWNHOOK       = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHl0Wi" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHl0Zs" role="lb14g">
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <node concept="2OqwBi" id="3QwuWjHl139" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHl10o" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHl1bz" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$O" resolve="shutdownHook" />
+                <node concept="2OqwBi" id="7UEdJ0VMY4i" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHl0Zs" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="3QwuWjHl139" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHl10o" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHl1bz" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T$O" resolve="shutdownHook" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMYgN" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1596,14 +1617,19 @@
                 <property role="lacIc" value="PRETASKHOOK        = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHl92$" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHl96d" role="lb14g">
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <node concept="2OqwBi" id="3QwuWjHl99U" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHl979" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHl9ik" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$T" resolve="preTaskHook" />
+                <node concept="2OqwBi" id="7UEdJ0VMXNW" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHl96d" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="3QwuWjHl99U" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHl979" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHl9ik" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T$T" resolve="preTaskHook" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMY14" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1618,14 +1644,19 @@
                 <property role="lacIc" value="POSTTASKHOOK       = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHl9BU" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHl9BV" role="lb14g">
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <node concept="2OqwBi" id="3QwuWjHl9BW" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHl9BX" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHlaQx" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$Z" resolve="postTaskHook" />
+                <node concept="2OqwBi" id="7UEdJ0VMXzA" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHl9BV" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="3QwuWjHl9BW" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHl9BX" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHlaQx" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T$Z" resolve="postTaskHook" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMXKI" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1637,17 +1668,22 @@
             <node concept="lc7rE" id="3QwuWjHl9JD" role="3cqZAp">
               <node concept="2BGw6n" id="7_fwX8D8u7p" role="lcghm" />
               <node concept="la8eA" id="3QwuWjHl9JF" role="lcghm">
-                <property role="lacIc" value="USESERVICEID       = " />
+                <property role="lacIc" value="USEGETSERVICEID       = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHl9JG" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHl9JH" role="lb14g">
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <node concept="2OqwBi" id="3QwuWjHl9JI" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHl9JJ" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHlbyj" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T_n" resolve="useServiceID" />
+                <node concept="2OqwBi" id="7UEdJ0VMXjg" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHl9JH" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="3QwuWjHl9JI" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHl9JJ" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHlbyj" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T_n" resolve="useGetServiceID" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMXwo" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1662,14 +1698,19 @@
                 <property role="lacIc" value="USEPARAMETERACCESS = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHlabp" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHlabq" role="lb14g">
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <node concept="2OqwBi" id="3QwuWjHlabr" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHlabs" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHlbFD" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T_v" resolve="useParamterAccess" />
+                <node concept="2OqwBi" id="7UEdJ0VMX2U" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHlabq" role="2Oq$k0">
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <node concept="2OqwBi" id="3QwuWjHlabr" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHlabs" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHlbFD" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T_v" resolve="useParamterAccess" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMXg2" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>
@@ -1684,14 +1725,19 @@
                 <property role="lacIc" value="USERESSCHEDULER    = " />
               </node>
               <node concept="l9hG8" id="3QwuWjHl9S7" role="lcghm">
-                <node concept="2YIFZM" id="3QwuWjHl9S8" role="lb14g">
-                  <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-                  <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
-                  <node concept="2OqwBi" id="3QwuWjHl9S9" role="37wK5m">
-                    <node concept="117lpO" id="3QwuWjHl9Sa" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3QwuWjHla_3" role="2OqNvi">
-                      <ref role="3TsBF5" to="bwbq:1x4fgD94T_C" resolve="useResScheduler" />
+                <node concept="2OqwBi" id="7UEdJ0VMWts" role="lb14g">
+                  <node concept="2YIFZM" id="3QwuWjHl9S8" role="2Oq$k0">
+                    <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                    <ref role="37wK5l" to="wyt6:~String.valueOf(boolean):java.lang.String" resolve="valueOf" />
+                    <node concept="2OqwBi" id="3QwuWjHl9S9" role="37wK5m">
+                      <node concept="117lpO" id="3QwuWjHl9Sa" role="2Oq$k0" />
+                      <node concept="3TrcHB" id="3QwuWjHla_3" role="2OqNvi">
+                        <ref role="3TsBF5" to="bwbq:1x4fgD94T_C" resolve="useResScheduler" />
+                      </node>
                     </node>
+                  </node>
+                  <node concept="liA8E" id="7UEdJ0VMWZG" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
                   </node>
                 </node>
               </node>

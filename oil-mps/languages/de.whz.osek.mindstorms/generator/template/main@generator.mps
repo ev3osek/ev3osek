@@ -132,6 +132,7 @@
         <property id="7595578942776864816" name="comment" index="12NxFY" />
       </concept>
       <concept id="3373914745211365206" name="com.mbeddr.core.make.structure.Variable" flags="ng" index="3G52F3">
+        <property id="7595578942777303019" name="assignmentType" index="12Lnk_" />
         <property id="3373914745211446888" name="value" index="3G5mJX" />
       </concept>
       <concept id="3373914745211590969" name="com.mbeddr.core.make.structure.VariableRefCommandItem" flags="ng" index="3G69iG">
@@ -1295,6 +1296,35 @@
     <node concept="12Nxi1" id="2UjW4IkGiaz" role="12RR68" />
     <node concept="12NxFx" id="2UjW4IkGiaR" role="12RR68">
       <property role="12NxFY" value="Don't modify below part" />
+    </node>
+    <node concept="3G52F3" id="75ETgceepKD" role="12RR68">
+      <property role="TrG5h" value="EV3OSEK_ROOT" />
+      <property role="12Lnk_" value="=" />
+      <property role="3G5mJX" value="../.." />
+      <node concept="17Uvod" id="75ETgceeqbH" role="lGtFl">
+        <property role="P4ACc" value="f93d1dbe-bfd1-42dd-932a-f375fa6f5373/3373914745211365206/3373914745211446888" />
+        <property role="2qtEX9" value="value" />
+        <node concept="3zFVjK" id="75ETgceeqbI" role="3zH0cK">
+          <node concept="3clFbS" id="75ETgceeqbJ" role="2VODD2">
+            <node concept="3clFbF" id="75ETgceeqs1" role="3cqZAp">
+              <node concept="2OqwBi" id="75ETgceeqs2" role="3clFbG">
+                <node concept="1PxgMI" id="75ETgceeqs3" role="2Oq$k0">
+                  <ref role="1PxNhF" to="f1b2:4NwoSLUfe0h" resolve="EV3Platform" />
+                  <node concept="2OqwBi" id="75ETgceeqs4" role="1PxMeX">
+                    <node concept="30H73N" id="75ETgceeqs5" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="75ETgceeqs6" role="2OqNvi">
+                      <ref role="3Tt5mk" to="51wr:4BxItZJ4BoM" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3TrcHB" id="75ETgceeqFz" role="2OqNvi">
+                  <ref role="3TsBF5" to="f1b2:75ETgceep0U" resolve="ev3osek_Root" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="17Uvod" id="v5qeus7Wp5" role="lGtFl">
       <property role="P4ACc" value="f93d1dbe-bfd1-42dd-932a-f375fa6f5373/5950410542643585247/8883346479719598695" />

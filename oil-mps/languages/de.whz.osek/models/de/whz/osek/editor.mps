@@ -2155,10 +2155,10 @@
         </node>
         <node concept="3XFhqQ" id="_SoWTEeslW" role="3EZMnx" />
         <node concept="3F0ifn" id="_SoWTEespP" role="3EZMnx">
-          <property role="3F0ifm" value="use service ID" />
+          <property role="3F0ifm" value="use get service ID" />
         </node>
         <node concept="3F0A7n" id="_SoWTEespB" role="3EZMnx">
-          <ref role="1NtTu8" to="bwbq:1x4fgD94T_n" resolve="useServiceID" />
+          <ref role="1NtTu8" to="bwbq:1x4fgD94T_n" resolve="useGetServiceID" />
         </node>
         <node concept="l2Vlx" id="_SoWTEeslZ" role="2iSdaV" />
       </node>

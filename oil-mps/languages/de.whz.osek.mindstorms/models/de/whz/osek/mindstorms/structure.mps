@@ -52,6 +52,10 @@
       <property role="TrG5h" value="ev3_osekDotMakPath" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="75ETgceep0U" role="1TKVEl">
+      <property role="TrG5h" value="ev3osek_Root" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="1TIwiD" id="46z1WQnkGHW">
     <property role="1pbfSe" value="654978231" />

@@ -34,6 +34,7 @@
         <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
       </concept>
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -166,6 +167,19 @@
         <node concept="ljvvj" id="2UjW4IkGkd4" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+      </node>
+      <node concept="3F0ifn" id="75ETgceep2k" role="3EZMnx">
+        <property role="3F0ifm" value="Path to ev3osek directory =" />
+        <node concept="lj46D" id="75ETgceep2M" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pVoyu" id="75ETgceep2N" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="75ETgceep3m" role="3EZMnx">
+        <property role="1$x2rV" value="e.g. /home/ev3/Schreibtisch/ev3osek" />
+        <ref role="1NtTu8" to="f1b2:75ETgceep0U" resolve="ev3osek_Root" />
       </node>
     </node>
   </node>

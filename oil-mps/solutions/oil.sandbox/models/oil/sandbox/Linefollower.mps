@@ -236,6 +236,7 @@
         <property id="3356290354729003068" name="ev3_osekDotMakPath" index="2U8HxR" />
         <property id="7467785128650067750" name="compiler" index="1bwMw$" />
         <property id="7467785128650067752" name="make" index="1bwMwE" />
+        <property id="8172596275103502394" name="ev3osek_Root" index="1ZkRkT" />
       </concept>
     </language>
     <language id="017fba0e-af15-4a23-b0a8-02b5c1141e75" name="com.mbeddr.cc.var.annotations">
@@ -370,6 +371,7 @@
       <property role="1bwMw$" value="gcc" />
       <property role="1bwMwE" value="make" />
       <property role="2U8HxR" value="../../../../../../../OSEK_EV3/OSEK_EV3.mak" />
+      <property role="1ZkRkT" value="/home/ev3/Schreibtisch/ev3osek" />
     </node>
     <node concept="35TzUN" id="3biQP486NtI" role="2Q9xDr">
       <node concept="IjAfM" id="3biQP486NtM" role="19yoJo">
@@ -590,7 +592,7 @@
       </node>
       <node concept="1hlUgq" id="2CJ7vlDPYcz" role="1hk5Yg">
         <property role="TrG5h" value="LEJOS_OSEK" />
-        <property role="1hlUgk" value="standard" />
+        <property role="1hlUgk" value="extended" />
       </node>
       <node concept="1hk5YZ" id="2CJ7vlDPYc$" role="1hk5ZA">
         <property role="TrG5h" value="appmode1" />

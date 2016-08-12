@@ -6,5 +6,6 @@ TARGET_SOURCES = \
 TOPPERS_OSEK_OIL_SOURCE = ./AlarmTwoTasksResource.oil
 
 # Don't modify below part
+EV3OSEK_ROOT = ../..
 include ../../OSEK_EV3/OSEK_EV3.mak
  

@@ -9,11 +9,11 @@ OBJDUMP = $(PREFIX)objdump
 
 LOADADDR = 0xC1000000
 
-INCLUDEDIR = -I../../leJOS_EV3/src/ev3 -I../../OSEK_EV3/kernel -I../../leJOS_EV3/src/ev3/include/hw -I../../leJOS_EV3/src/ev3/include -I../../leJOS_EV3/src/ev3/include/armv5 \
-		-I../../leJOS_EV3/src/ev3/include/armv5/am1808 -I../../OSEK_EV3/include -I../../OSEK_EV3/config/ARM926EJ-S -I../../OSEK_EV3/config/ARM926EJ-S/lego_ev3 -I../../ECRobot -I../../leJOS_EV3/src/ev3/ninja -I./ 
-LDFLAGS = -nostdlib -T../../OSEK_EV3/OSEK.ld
+INCLUDEDIR = -I$(EV3OSEK_ROOT)/leJOS_EV3/src/ev3 -I$(EV3OSEK_ROOT)/OSEK_EV3/kernel -I$(EV3OSEK_ROOT)/leJOS_EV3/src/ev3/include/hw -I$(EV3OSEK_ROOT)/leJOS_EV3/src/ev3/include -I$(EV3OSEK_ROOT)/leJOS_EV3/src/ev3/include/armv5 \
+		-I$(EV3OSEK_ROOT)/leJOS_EV3/src/ev3/include/armv5/am1808 -I$(EV3OSEK_ROOT)/OSEK_EV3/include -I$(EV3OSEK_ROOT)/OSEK_EV3/config/ARM926EJ-S -I$(EV3OSEK_ROOT)/OSEK_EV3/config/ARM926EJ-S/lego_ev3 -I$(EV3OSEK_ROOT)/ECRobot -I$(EV3OSEK_ROOT)/leJOS_EV3/src/ev3/ninja -I./ 
+LDFLAGS = -nostdlib -T$(EV3OSEK_ROOT)/OSEK_EV3/OSEK.ld
 CPUFLAG = -mcpu=arm926ej-s
-STATIC_LIBS = ../../ECRobot/ECRobot.a ../../newlib/libc.a ../../leJOS_EV3/src/ev3/leJOS_EV3.a
+STATIC_LIBS = $(EV3OSEK_ROOT)/ECRobot/ECRobot.a $(EV3OSEK_ROOT)/newlib/libc.a $(EV3OSEK_ROOT)/leJOS_EV3/src/ev3/leJOS_EV3.a
 
 ELF = $(TARGET_NAME).elf
 BIN = $(TARGET_NAME).bin
@@ -24,18 +24,18 @@ BOOT_SCR = boot.scr
 
 TOPPERS_CFG_SOURCE = kernel_cfg.c
 TOPPERS_CFG_HEADER = kernel_id.h
-TOPPERS_OSEK_ROOT = ../../OSEK_EV3/sg/
+TOPPERS_OSEK_ROOT = $(EV3OSEK_ROOT)/OSEK_EV3/sg/
 
-C_SRC_FILES = ../../OSEK_EV3/OSEK.c ../../newlib/syscalls.c $(wildcard ../../OSEK_EV3/kernel/*.c) $(wildcard ../../OSEK_EV3/config/ARM926EJ-S/*.c) $(wildcard ../../OSEK_EV3/config/ARM926EJ-S/lego_ev3/*.c) \
+C_SRC_FILES = $(EV3OSEK_ROOT)/OSEK_EV3/OSEK.c $(EV3OSEK_ROOT)/newlib/syscalls.c $(wildcard $(EV3OSEK_ROOT)/OSEK_EV3/kernel/*.c) $(wildcard $(EV3OSEK_ROOT)/OSEK_EV3/config/ARM926EJ-S/*.c) $(wildcard $(EV3OSEK_ROOT)/OSEK_EV3/config/ARM926EJ-S/lego_ev3/*.c) \
         $(TOPPERS_CFG_SOURCE) $(TARGET_SOURCES)
         
-S_SRC_FILES = $(wildcard ../../OSEK_EV3/*.S) $(wildcard ../../OSEK_EV3/config/ARM926EJ-S/*.S)
+S_SRC_FILES = $(wildcard $(EV3OSEK_ROOT)/OSEK_EV3/*.S) $(wildcard $(EV3OSEK_ROOT)/OSEK_EV3/config/ARM926EJ-S/*.S)
 OBJECTS := $(C_SRC_FILES:.c=.o) $(S_SRC_FILES:.S=.o) 
 
 
 all: implementation.oil $(OBJECTS) ECRobot
 	@echo "Linking $(ELF)..." 
-	$(LD) $(LDFLAGS) $(OBJECTS) $(STATIC_LIBS) -o $(ELF) -lgcc --library-path=../../newlib
+	$(LD) $(LDFLAGS) $(OBJECTS) $(STATIC_LIBS) -o $(ELF) -lgcc --library-path=$(EV3OSEK_ROOT)/newlib
 	@echo "Creating $(BIN)..."
 	$(OBJCOPY) -O binary $(ELF) $(BIN)
 	@echo "Looking for entry point address..."
@@ -61,10 +61,10 @@ $(TOPPERS_CFG_SOURCE) $(TOPPERS_CFG_HEADER) implementation.oil : $(TOPPERS_OSEK_
 	wine $(TOPPERS_OSEK_ROOT)sg.exe $(TOPPERS_OSEK_OIL_SOURCE) -os=ECC2 -I$(TOPPERS_OSEK_ROOT)impl_oil -template=$(TOPPERS_OSEK_ROOT)lego_nxt.sgt
 
 ECRobot:
-	cd ../../ECRobot/ && make all
+	cd $(EV3OSEK_ROOT)/ECRobot/ && make all
 	
 leJOS:
-	cd ../../leJOS_EV3/src/ev3 && make all
+	cd $(EV3OSEK_ROOT)/leJOS_EV3/src/ev3 && make all
 	
 %.o: %.S
 	@echo "Compiling $<..."
