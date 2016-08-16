@@ -878,6 +878,122 @@
         </node>
       </node>
     </node>
+    <node concept="2B_Gvg" id="3QwuWjHjKDh" role="N3F5h">
+      <node concept="OjmMv" id="3QwuWjHjKDj" role="2B_H8o">
+        <node concept="19SGf9" id="3QwuWjHjKDk" role="OjmMu">
+          <node concept="19SUe$" id="3QwuWjHjKDl" role="19SJt6">
+            <property role="19SUeA" value="HiTechnic gyro sensor API" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnw" id="3QwuWjHjKMa" role="N3F5h">
+      <property role="TrG5h" value="ecrobot_get_gyro_sensor" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="false" />
+      <node concept="26VqpV" id="3QwuWjHjKHp" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3QwuWjHjKQl" role="1UOdpc">
+        <property role="TrG5h" value="port_id" />
+        <node concept="1AkAi2" id="5g5RAGpXjXI" role="2C2TGm">
+          <property role="2caQfQ" value="true" />
+          <property role="2c7vTL" value="true" />
+          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnw" id="5VhEZbxeapX" role="N3F5h">
+      <property role="TrG5h" value="ecrobot_get_gyro_sensor_degrees" />
+      <property role="2OOxQR" value="false" />
+      <node concept="26Vqpq" id="5VhEZbxe9Z8" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="5VhEZbxeaN9" role="1UOdpc">
+        <property role="TrG5h" value="port_id" />
+        <node concept="1AkAi2" id="5VhEZbxeaN8" role="2C2TGm">
+          <property role="2caQfQ" value="true" />
+          <property role="2c7vTL" value="true" />
+          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
+        </node>
+      </node>
+    </node>
+    <node concept="2B_Gvg" id="3QwuWjHjL3a" role="N3F5h">
+      <node concept="OjmMv" id="3QwuWjHjL3c" role="2B_H8o">
+        <node concept="19SGf9" id="3QwuWjHjL3d" role="OjmMu">
+          <node concept="19SUe$" id="3QwuWjHjL3e" role="19SJt6">
+            <property role="19SUeA" value="HiTechnic acceleration sensor API" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnw" id="3QwuWjHjLcZ" role="N3F5h">
+      <property role="TrG5h" value="ecrobot_init_accel_sensor" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="false" />
+      <node concept="19Rifw" id="3QwuWjHjL7r" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3QwuWjHjLhj" role="1UOdpc">
+        <property role="TrG5h" value="port_id" />
+        <node concept="1AkAi2" id="5g5RAGpXjXW" role="2C2TGm">
+          <property role="2caQfQ" value="true" />
+          <property role="2c7vTL" value="true" />
+          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnw" id="3QwuWjHjM5Z" role="N3F5h">
+      <property role="TrG5h" value="ecrobot_get_accel_sensor" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="false" />
+      <node concept="19Rifw" id="3QwuWjHjLuJ" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3QwuWjHjMaj" role="1UOdpc">
+        <property role="TrG5h" value="port_id" />
+        <node concept="1AkAi2" id="5g5RAGpXjYa" role="2C2TGm">
+          <property role="2caQfQ" value="true" />
+          <property role="2c7vTL" value="true" />
+          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
+        </node>
+      </node>
+      <node concept="19RgSI" id="3QwuWjHjMaR" role="1UOdpc">
+        <property role="TrG5h" value="buf" />
+        <node concept="3J0A42" id="3QwuWjHjMbA" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+          <node concept="26Vqpq" id="3QwuWjHjMaP" role="2umbIo">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+          <node concept="3TlMh9" id="3QwuWjHjMc0" role="1YbSNA">
+            <property role="2hmy$m" value="3" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnw" id="3QwuWjHjMoc" role="N3F5h">
+      <property role="TrG5h" value="ecrobot_term_accel_sensor" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="false" />
+      <node concept="19Rifw" id="3QwuWjHjMhA" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3QwuWjHjMtg" role="1UOdpc">
+        <property role="TrG5h" value="port_id" />
+        <node concept="1AkAi2" id="5g5RAGpXjYo" role="2C2TGm">
+          <property role="2caQfQ" value="true" />
+          <property role="2c7vTL" value="true" />
+          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
+        </node>
+      </node>
+    </node>
     <node concept="2B_Gvg" id="3QwuWjHjIX0" role="N3F5h">
       <node concept="OjmMv" id="3QwuWjHjIX2" role="2B_H8o">
         <node concept="19SGf9" id="3QwuWjHjIX3" role="OjmMu">
@@ -1037,106 +1153,6 @@
       <node concept="19RgSI" id="3QwuWjHjKsR" role="1UOdpc">
         <property role="TrG5h" value="port_id" />
         <node concept="1AkAi2" id="5g5RAGpXjXw" role="2C2TGm">
-          <property role="2caQfQ" value="true" />
-          <property role="2c7vTL" value="true" />
-          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
-        </node>
-      </node>
-    </node>
-    <node concept="2B_Gvg" id="3QwuWjHjKDh" role="N3F5h">
-      <node concept="OjmMv" id="3QwuWjHjKDj" role="2B_H8o">
-        <node concept="19SGf9" id="3QwuWjHjKDk" role="OjmMu">
-          <node concept="19SUe$" id="3QwuWjHjKDl" role="19SJt6">
-            <property role="19SUeA" value="HiTechnic gyro sensor API" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="N3Fnw" id="3QwuWjHjKMa" role="N3F5h">
-      <property role="TrG5h" value="ecrobot_get_gyro_sensor" />
-      <property role="2OOxQR" value="false" />
-      <property role="3mNisv" value="false" />
-      <node concept="26VqpV" id="3QwuWjHjKHp" role="2C2TGm">
-        <property role="2caQfQ" value="false" />
-        <property role="2c7vTL" value="false" />
-      </node>
-      <node concept="19RgSI" id="3QwuWjHjKQl" role="1UOdpc">
-        <property role="TrG5h" value="port_id" />
-        <node concept="1AkAi2" id="5g5RAGpXjXI" role="2C2TGm">
-          <property role="2caQfQ" value="true" />
-          <property role="2c7vTL" value="true" />
-          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
-        </node>
-      </node>
-    </node>
-    <node concept="2B_Gvg" id="3QwuWjHjL3a" role="N3F5h">
-      <node concept="OjmMv" id="3QwuWjHjL3c" role="2B_H8o">
-        <node concept="19SGf9" id="3QwuWjHjL3d" role="OjmMu">
-          <node concept="19SUe$" id="3QwuWjHjL3e" role="19SJt6">
-            <property role="19SUeA" value="HiTechnic acceleration sensor API" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="N3Fnw" id="3QwuWjHjLcZ" role="N3F5h">
-      <property role="TrG5h" value="ecrobot_init_accel_sensor" />
-      <property role="2OOxQR" value="false" />
-      <property role="3mNisv" value="false" />
-      <node concept="19Rifw" id="3QwuWjHjL7r" role="2C2TGm">
-        <property role="2caQfQ" value="false" />
-        <property role="2c7vTL" value="false" />
-      </node>
-      <node concept="19RgSI" id="3QwuWjHjLhj" role="1UOdpc">
-        <property role="TrG5h" value="port_id" />
-        <node concept="1AkAi2" id="5g5RAGpXjXW" role="2C2TGm">
-          <property role="2caQfQ" value="true" />
-          <property role="2c7vTL" value="true" />
-          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
-        </node>
-      </node>
-    </node>
-    <node concept="N3Fnw" id="3QwuWjHjM5Z" role="N3F5h">
-      <property role="TrG5h" value="ecrobot_get_accel_sensor" />
-      <property role="2OOxQR" value="false" />
-      <property role="3mNisv" value="false" />
-      <node concept="19Rifw" id="3QwuWjHjLuJ" role="2C2TGm">
-        <property role="2caQfQ" value="false" />
-        <property role="2c7vTL" value="false" />
-      </node>
-      <node concept="19RgSI" id="3QwuWjHjMaj" role="1UOdpc">
-        <property role="TrG5h" value="port_id" />
-        <node concept="1AkAi2" id="5g5RAGpXjYa" role="2C2TGm">
-          <property role="2caQfQ" value="true" />
-          <property role="2c7vTL" value="true" />
-          <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />
-        </node>
-      </node>
-      <node concept="19RgSI" id="3QwuWjHjMaR" role="1UOdpc">
-        <property role="TrG5h" value="buf" />
-        <node concept="3J0A42" id="3QwuWjHjMbA" role="2C2TGm">
-          <property role="2caQfQ" value="false" />
-          <property role="2c7vTL" value="false" />
-          <node concept="26Vqpq" id="3QwuWjHjMaP" role="2umbIo">
-            <property role="2caQfQ" value="false" />
-            <property role="2c7vTL" value="false" />
-          </node>
-          <node concept="3TlMh9" id="3QwuWjHjMc0" role="1YbSNA">
-            <property role="2hmy$m" value="3" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="N3Fnw" id="3QwuWjHjMoc" role="N3F5h">
-      <property role="TrG5h" value="ecrobot_term_accel_sensor" />
-      <property role="2OOxQR" value="false" />
-      <property role="3mNisv" value="false" />
-      <node concept="19Rifw" id="3QwuWjHjMhA" role="2C2TGm">
-        <property role="2caQfQ" value="false" />
-        <property role="2c7vTL" value="false" />
-      </node>
-      <node concept="19RgSI" id="3QwuWjHjMtg" role="1UOdpc">
-        <property role="TrG5h" value="port_id" />
-        <node concept="1AkAi2" id="5g5RAGpXjYo" role="2C2TGm">
           <property role="2caQfQ" value="true" />
           <property role="2c7vTL" value="true" />
           <ref role="1AkAi1" node="3tDp_yW5K_Z" resolve="SENSOR_PORT_T" />

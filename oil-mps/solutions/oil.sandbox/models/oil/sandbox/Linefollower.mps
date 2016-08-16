@@ -459,7 +459,7 @@
         <node concept="1_9egQ" id="GqrtFI6m8r" role="3XIRFZ">
           <node concept="3pqW6w" id="GqrtFI6m9j" role="1_9egR">
             <node concept="3O_q_g" id="GqrtFI6mab" role="3TlMhJ">
-              <ref role="3O_q_h" to="ei6g:3QwuWjHjKaZ" resolve="ecrobot_get_nxtcolorsensor_light" />
+              <ref role="3O_q_h" to="ei6g:3QwuWjHjGV8" resolve="ecrobot_get_light_sensor" />
               <node concept="1AkAhK" id="GqrtFI6mbB" role="3O_q_j">
                 <ref role="1AkAhZ" to="ei6g:3tDp_yW5KZ3" resolve="EV3_PORT_S2" />
               </node>
