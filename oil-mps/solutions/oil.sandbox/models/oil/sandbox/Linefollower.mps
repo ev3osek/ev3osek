@@ -244,6 +244,9 @@
         <reference id="661141253149262081" name="featureModel" index="2dvl_Q" />
         <reference id="7455436784495586129" name="configModel" index="AiAcg" />
       </concept>
+      <concept id="661141253149231475" name="com.mbeddr.cc.var.annotations.structure.PresenceCondition" flags="ng" index="2dvt44">
+        <child id="661141253149231543" name="condition" index="2dvt70" />
+      </concept>
       <concept id="6617704999132114000" name="com.mbeddr.cc.var.annotations.structure.ConfigurationMapping" flags="ng" index="IjAfM">
         <reference id="6617704999132114002" name="featureModel" index="IjAfK" />
         <reference id="6617704999132114003" name="configurationModel" index="IjAfL" />
@@ -251,9 +254,15 @@
       <concept id="6514264311693667923" name="com.mbeddr.cc.var.annotations.structure.VariabilityConfigItem" flags="ng" index="35TzUN">
         <child id="4920787109780106774" name="mappings" index="19yoJo" />
       </concept>
+      <concept id="2613872510229282925" name="com.mbeddr.cc.var.annotations.structure.FeatureCondition" flags="ng" index="3o9_tv">
+        <child id="2613872510229282926" name="expr" index="3o9_ts" />
+      </concept>
     </language>
     <language id="e401b447-8019-4ccd-a72c-bfb0230f5782" name="com.mbeddr.cc.var.fm">
       <concept id="8473958930087782177" name="com.mbeddr.cc.var.fm.structure.RootFeature" flags="ng" index="28I2Iu" />
+      <concept id="7642065485959505457" name="com.mbeddr.cc.var.fm.structure.FeatureRef" flags="ng" index="2qVrgw">
+        <reference id="7642065485959505458" name="feature" index="2qVrgz" />
+      </concept>
       <concept id="6825476687691297416" name="com.mbeddr.cc.var.fm.structure.ConfigurationModel" flags="ng" index="Id4hE">
         <reference id="6825476687691297418" name="configures" index="Id4hC" />
         <child id="6825476687691297417" name="rootFeature" index="Id4hF" />
@@ -429,20 +438,18 @@
     <node concept="18XYSt" id="2CJ7vlDRgCo" role="N3F5h">
       <ref role="18XYSp" node="2CJ7vlDQS6S" resolve="LightValueEventDispatcherTask" />
       <node concept="3XIRFW" id="2CJ7vlDRgCq" role="3XIRFX">
-        <node concept="1QiMYF" id="2CJ7vlDRjPQ" role="3XIRFZ">
-          <node concept="OjmMv" id="2CJ7vlDRjPS" role="3SJzmv">
-            <node concept="19SGf9" id="2CJ7vlDRjPT" role="OjmMu">
-              <node concept="19SUe$" id="2CJ7vlDRjPU" role="19SJt6">
-                <property role="19SUeA" value="TODO: #ifdef Debug_Output" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="1_9egQ" id="2CJ7vlDRjUb" role="3XIRFZ">
           <node concept="3O_q_g" id="2CJ7vlDRjU9" role="1_9egR">
             <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
             <node concept="PhEJO" id="2CJ7vlDRjVl" role="3O_q_j">
               <property role="PhEJT" value="Starting LightEventTask\n\r" />
+            </node>
+          </node>
+          <node concept="2dvt44" id="5VhEZbxfb0p" role="lGtFl">
+            <node concept="3o9_tv" id="5VhEZbxfb0q" role="2dvt70">
+              <node concept="2qVrgw" id="5VhEZbxfb1E" role="3o9_ts">
+                <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+              </node>
             </node>
           </node>
         </node>
@@ -469,15 +476,6 @@
             </node>
           </node>
         </node>
-        <node concept="1QiMYF" id="2CJ7vlDRjQS" role="3XIRFZ">
-          <node concept="OjmMv" id="2CJ7vlDRjQU" role="3SJzmv">
-            <node concept="19SGf9" id="2CJ7vlDRjQV" role="OjmMu">
-              <node concept="19SUe$" id="2CJ7vlDRjQW" role="19SJt6">
-                <property role="19SUeA" value="TODO: #ifdef Debug_Output" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="1_9egQ" id="2CJ7vlDRibS" role="3XIRFZ">
           <node concept="3O_q_g" id="2CJ7vlDRibQ" role="1_9egR">
             <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
@@ -486,6 +484,13 @@
             </node>
             <node concept="1S7827" id="2CJ7vlDRivW" role="3O_q_j">
               <ref role="1S7826" node="4osOqZkm2sr" resolve="lightSensorValue" />
+            </node>
+          </node>
+          <node concept="2dvt44" id="5VhEZbxfb2V" role="lGtFl">
+            <node concept="3o9_tv" id="5VhEZbxfb2W" role="2dvt70">
+              <node concept="2qVrgw" id="5VhEZbxfb4d" role="3o9_ts">
+                <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+              </node>
             </node>
           </node>
         </node>
@@ -1442,6 +1447,13 @@
               </node>
             </node>
           </node>
+          <node concept="2dvt44" id="5VhEZbxfc8e" role="lGtFl">
+            <node concept="3o9_tv" id="5VhEZbxfc8f" role="2dvt70">
+              <node concept="2qVrgw" id="5VhEZbxfc9r" role="3o9_ts">
+                <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+              </node>
+            </node>
+          </node>
         </node>
         <node concept="3XISUE" id="7vKHPVqxAl5" role="3XIRFZ" />
         <node concept="27v$Wf" id="GqrtFI5X3i" role="3XIRFZ">
@@ -1471,6 +1483,13 @@
                 <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
                 <node concept="PhEJO" id="GqrtFI5XaD" role="3O_q_j">
                   <property role="PhEJT" value="Waiting for event\n\r" />
+                </node>
+              </node>
+              <node concept="2dvt44" id="5VhEZbxfc9$" role="lGtFl">
+                <node concept="3o9_tv" id="5VhEZbxfc9_" role="2dvt70">
+                  <node concept="2qVrgw" id="5VhEZbxfcaZ" role="3o9_ts">
+                    <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -1511,6 +1530,13 @@
                       <property role="PhEJT" value="Got touch event \n\r" />
                     </node>
                   </node>
+                  <node concept="2dvt44" id="5VhEZbxfcb8" role="lGtFl">
+                    <node concept="3o9_tv" id="5VhEZbxfcb9" role="2dvt70">
+                      <node concept="2qVrgw" id="5VhEZbxfccL" role="3o9_ts">
+                        <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
                 <node concept="1_9egQ" id="GqrtFI5Yan" role="3XIRFZ">
                   <node concept="3O_q_g" id="GqrtFI5Yal" role="1_9egR">
@@ -1536,6 +1562,13 @@
                         <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
                         <node concept="PhEJO" id="GqrtFI5YgE" role="3O_q_j">
                           <property role="PhEJT" value="Starting motors\n\r" />
+                        </node>
+                      </node>
+                      <node concept="2dvt44" id="5VhEZbxfccU" role="lGtFl">
+                        <node concept="3o9_tv" id="5VhEZbxfccV" role="2dvt70">
+                          <node concept="2qVrgw" id="5VhEZbxfceU" role="3o9_ts">
+                            <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                          </node>
                         </node>
                       </node>
                     </node>
@@ -1602,6 +1635,13 @@
                             <property role="PhEJT" value="Stopping motors\n\r" />
                           </node>
                         </node>
+                        <node concept="2dvt44" id="5VhEZbxfcf3" role="lGtFl">
+                          <node concept="3o9_tv" id="5VhEZbxfcf4" role="2dvt70">
+                            <node concept="2qVrgw" id="5VhEZbxfchq" role="3o9_ts">
+                              <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                            </node>
+                          </node>
+                        </node>
                       </node>
                       <node concept="1_9egQ" id="GqrtFI609g" role="3XIRFZ">
                         <node concept="3O_q_g" id="GqrtFI609e" role="1_9egR">
@@ -1661,6 +1701,13 @@
                       <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
                       <node concept="PhEJO" id="GqrtFI60CJ" role="3O_q_j">
                         <property role="PhEJT" value="Got light event\n\r" />
+                      </node>
+                    </node>
+                    <node concept="2dvt44" id="5VhEZbxfcrU" role="lGtFl">
+                      <node concept="3o9_tv" id="5VhEZbxfcrV" role="2dvt70">
+                        <node concept="2qVrgw" id="5VhEZbxfcuC" role="3o9_ts">
+                          <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                        </node>
                       </node>
                     </node>
                   </node>
@@ -1778,6 +1825,13 @@
                         <ref role="3ZVs_2" node="GqrtFI61vh" resolve="output" />
                       </node>
                     </node>
+                    <node concept="2dvt44" id="5VhEZbxfcuL" role="lGtFl">
+                      <node concept="3o9_tv" id="5VhEZbxfcuM" role="2dvt70">
+                        <node concept="2qVrgw" id="5VhEZbxfcxQ" role="3o9_ts">
+                          <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                        </node>
+                      </node>
+                    </node>
                   </node>
                   <node concept="3XISUE" id="GqrtFI62m6" role="3XIRFZ" />
                   <node concept="c0U19" id="GqrtFI62kj" role="3XIRFZ">
@@ -1807,6 +1861,13 @@
                           <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
                           <node concept="PhEJO" id="GqrtFI62EF" role="3O_q_j">
                             <property role="PhEJT" value="Turning right\n\r" />
+                          </node>
+                        </node>
+                        <node concept="2dvt44" id="5VhEZbxfcxZ" role="lGtFl">
+                          <node concept="3o9_tv" id="5VhEZbxfcy0" role="2dvt70">
+                            <node concept="2qVrgw" id="5VhEZbxfc_x" role="3o9_ts">
+                              <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                            </node>
                           </node>
                         </node>
                       </node>
@@ -1942,6 +2003,13 @@
                               <property role="PhEJT" value="Turning left\n\r" />
                             </node>
                           </node>
+                          <node concept="2dvt44" id="5VhEZbxfc_E" role="lGtFl">
+                            <node concept="3o9_tv" id="5VhEZbxfc_F" role="2dvt70">
+                              <node concept="2qVrgw" id="5VhEZbxfcDz" role="3o9_ts">
+                                <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                              </node>
+                            </node>
+                          </node>
                         </node>
                         <node concept="3XIRlf" id="GqrtFI6dgF" role="3XIRFZ">
                           <property role="TrG5h" value="leftMotorSpeed" />
@@ -2058,6 +2126,13 @@
                               <property role="PhEJT" value="Going straight\n\r" />
                             </node>
                           </node>
+                          <node concept="2dvt44" id="5VhEZbxfcDG" role="lGtFl">
+                            <node concept="3o9_tv" id="5VhEZbxfcDH" role="2dvt70">
+                              <node concept="2qVrgw" id="5VhEZbxfcHW" role="3o9_ts">
+                                <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                              </node>
+                            </node>
+                          </node>
                         </node>
                         <node concept="1_9egQ" id="GqrtFI6iSg" role="3XIRFZ">
                           <node concept="3O_q_g" id="GqrtFI6iSe" role="1_9egR">
@@ -2101,6 +2176,13 @@
                       <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
                       <node concept="PhEJO" id="GqrtFI6jXr" role="3O_q_j">
                         <property role="PhEJT" value="An error occured (wrong event)\n\r" />
+                      </node>
+                    </node>
+                    <node concept="2dvt44" id="5VhEZbxfcI5" role="lGtFl">
+                      <node concept="3o9_tv" id="5VhEZbxfcI6" role="2dvt70">
+                        <node concept="2qVrgw" id="5VhEZbxfcMG" role="3o9_ts">
+                          <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+                        </node>
                       </node>
                     </node>
                   </node>
@@ -2205,20 +2287,18 @@
     <node concept="18XYSt" id="2CJ7vlDRkfQ" role="N3F5h">
       <ref role="18XYSp" node="2CJ7vlDQldO" resolve="TouchEventDispatcherTask" />
       <node concept="3XIRFW" id="2CJ7vlDRkfS" role="3XIRFX">
-        <node concept="1QiMYF" id="2CJ7vlDRkgT" role="3XIRFZ">
-          <node concept="OjmMv" id="2CJ7vlDRkgV" role="3SJzmv">
-            <node concept="19SGf9" id="2CJ7vlDRkgW" role="OjmMu">
-              <node concept="19SUe$" id="2CJ7vlDRkgX" role="19SJt6">
-                <property role="19SUeA" value="ifdef Debug_Output" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="1_9egQ" id="2CJ7vlDRki9" role="3XIRFZ">
           <node concept="3O_q_g" id="2CJ7vlDRki7" role="1_9egR">
             <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
             <node concept="PhEJO" id="2CJ7vlDRkiP" role="3O_q_j">
               <property role="PhEJT" value="Starting TouchEventTask\n\r" />
+            </node>
+          </node>
+          <node concept="2dvt44" id="5VhEZbxfaIz" role="lGtFl">
+            <node concept="3o9_tv" id="5VhEZbxfaI$" role="2dvt70">
+              <node concept="2qVrgw" id="5VhEZbxfaJM" role="3o9_ts">
+                <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
+              </node>
             </node>
           </node>
         </node>
@@ -2232,12 +2312,10 @@
                   <property role="PhEJT" value="Sending touch event" />
                 </node>
               </node>
-              <node concept="1z9TsT" id="2CJ7vlDRm0y" role="lGtFl">
-                <node concept="OjmMv" id="2CJ7vlDRm0z" role="1w35rA">
-                  <node concept="19SGf9" id="2CJ7vlDRm0$" role="OjmMu">
-                    <node concept="19SUe$" id="2CJ7vlDRm0_" role="19SJt6">
-                      <property role="19SUeA" value="ifdef Debug_Output" />
-                    </node>
+              <node concept="2dvt44" id="5VhEZbxfaKE" role="lGtFl">
+                <node concept="3o9_tv" id="5VhEZbxfaKF" role="2dvt70">
+                  <node concept="2qVrgw" id="5VhEZbxfaMn" role="3o9_ts">
+                    <ref role="2qVrgz" node="3biQP486jud" resolve="IsDebug" />
                   </node>
                 </node>
               </node>
