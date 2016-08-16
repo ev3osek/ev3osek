@@ -153,21 +153,6 @@
         </node>
         <node concept="l2Vlx" id="3s1LyzGERJJ" role="2iSdaV" />
       </node>
-      <node concept="3F0ifn" id="2UjW4IkGkd0" role="3EZMnx">
-        <property role="3F0ifm" value="Path to EV3_OSEK.mak" />
-        <node concept="lj46D" id="2UjW4IkGkd1" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="pVoyu" id="2UjW4IkGkd2" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="2UjW4IkGkd3" role="3EZMnx">
-        <ref role="1NtTu8" to="f1b2:2UjW4IkGiwW" resolve="ev3_osekDotMakPath" />
-        <node concept="ljvvj" id="2UjW4IkGkd4" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
       <node concept="3F0ifn" id="75ETgceep2k" role="3EZMnx">
         <property role="3F0ifm" value="Path to ev3osek directory =" />
         <node concept="lj46D" id="75ETgceep2M" role="3F10Kt">

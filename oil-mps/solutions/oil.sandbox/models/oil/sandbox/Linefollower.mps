@@ -233,7 +233,6 @@
     </language>
     <language id="b5816e12-8c8a-48cb-b63a-257253332775" name="de.whz.osek.mindstorms">
       <concept id="5539536996663091217" name="de.whz.osek.mindstorms.structure.EV3Platform" flags="ng" index="QR8et">
-        <property id="3356290354729003068" name="ev3_osekDotMakPath" index="2U8HxR" />
         <property id="7467785128650067750" name="compiler" index="1bwMw$" />
         <property id="7467785128650067752" name="make" index="1bwMwE" />
         <property id="8172596275103502394" name="ev3osek_Root" index="1ZkRkT" />
@@ -379,7 +378,6 @@
     <node concept="QR8et" id="4osOqZklR7d" role="2AWWZH">
       <property role="1bwMw$" value="gcc" />
       <property role="1bwMwE" value="make" />
-      <property role="2U8HxR" value="../../../../../../../OSEK_EV3/OSEK_EV3.mak" />
       <property role="1ZkRkT" value="/home/ev3/Schreibtisch/ev3osek" />
     </node>
     <node concept="35TzUN" id="3biQP486NtI" role="2Q9xDr">

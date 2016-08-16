@@ -1065,7 +1065,7 @@
   <node concept="3O_FC3" id="2UjW4IkGi9D">
     <property role="TrG5h" value="Makefile" />
     <property role="3GE5qa" value="EV3" />
-    <property role="3n8brD" value="../../OSEK_EV3/OSEK_EV3.mak" />
+    <property role="3n8brD" value="$(EV3OSEK_ROOT)/OSEK_EV3/OSEK_EV3.mak" />
     <node concept="n94m4" id="2UjW4IkGi9E" role="lGtFl">
       <ref role="n9lRv" to="51wr:6GqYvBOf2X8" resolve="BuildConfiguration" />
     </node>
@@ -1320,30 +1320,6 @@
                 <node concept="3TrcHB" id="75ETgceeqFz" role="2OqNvi">
                   <ref role="3TsBF5" to="f1b2:75ETgceep0U" resolve="ev3osek_Root" />
                 </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="17Uvod" id="v5qeus7Wp5" role="lGtFl">
-      <property role="P4ACc" value="f93d1dbe-bfd1-42dd-932a-f375fa6f5373/5950410542643585247/8883346479719598695" />
-      <property role="2qtEX9" value="include" />
-      <node concept="3zFVjK" id="v5qeus7Wp6" role="3zH0cK">
-        <node concept="3clFbS" id="v5qeus7Wp7" role="2VODD2">
-          <node concept="3clFbF" id="v5qeus7Wvn" role="3cqZAp">
-            <node concept="2OqwBi" id="v5qeus7XTI" role="3clFbG">
-              <node concept="1PxgMI" id="v5qeus7Xfb" role="2Oq$k0">
-                <ref role="1PxNhF" to="f1b2:4NwoSLUfe0h" resolve="EV3Platform" />
-                <node concept="2OqwBi" id="v5qeus7WzQ" role="1PxMeX">
-                  <node concept="30H73N" id="v5qeus7Wvm" role="2Oq$k0" />
-                  <node concept="3TrEf2" id="v5qeus7WHv" role="2OqNvi">
-                    <ref role="3Tt5mk" to="51wr:4BxItZJ4BoM" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3TrcHB" id="v5qeus7Y2R" role="2OqNvi">
-                <ref role="3TsBF5" to="f1b2:2UjW4IkGiwW" resolve="ev3_osekDotMakPath" />
               </node>
             </node>
           </node>
