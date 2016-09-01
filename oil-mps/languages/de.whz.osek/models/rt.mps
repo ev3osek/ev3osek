@@ -14,7 +14,6 @@
       </concept>
     </language>
     <language id="3bf5377a-e904-4ded-9754-5a516023bfaa" name="com.mbeddr.core.pointers">
-      <concept id="6113173064528067332" name="com.mbeddr.core.pointers.structure.StringType" flags="ng" index="Pu267" />
       <concept id="279446265608459824" name="com.mbeddr.core.pointers.structure.PointerType" flags="ng" index="3wxxNl" />
     </language>
     <language id="efda956e-491e-4f00-ba14-36af2f213ecf" name="com.mbeddr.core.udt">
@@ -47,6 +46,7 @@
         <property id="6116558314501417936" name="path" index="rcWEL" />
       </concept>
       <concept id="6021475212425916971" name="com.mbeddr.core.modules.structure.GlobalConstantFunctionDeclaration" flags="ng" index="BTY7A">
+        <child id="8655966904682451042" name="content" index="2_0FLF" />
         <child id="6021475212425916983" name="arguments" index="BTY7U" />
       </concept>
       <concept id="6021475212426054485" name="com.mbeddr.core.modules.structure.GlobalConstantFunctionArgument" flags="ng" index="BUhyo" />
@@ -62,6 +62,9 @@
       </concept>
       <concept id="6437088627575724000" name="com.mbeddr.core.modules.structure.FunctionPrototype" flags="ng" index="N3Fnw" />
       <concept id="8934095934011938595" name="com.mbeddr.core.modules.structure.EmptyModuleContent" flags="ng" index="2NXPZ9" />
+      <concept id="7308356872494660981" name="com.mbeddr.core.modules.structure.GlobalConstantFuntionArgumentRef" flags="ng" index="39I4aJ">
+        <reference id="7308356872494660982" name="arg" index="39I4aG" />
+      </concept>
       <concept id="7892328519581704407" name="com.mbeddr.core.modules.structure.Argument" flags="ng" index="19RgSI" />
       <concept id="6708182213627045678" name="com.mbeddr.core.modules.structure.IExternable" flags="ng" index="3mNis0">
         <property id="6708182213627045681" name="extern" index="3mNisv" />
@@ -266,6 +269,24 @@
     </node>
     <node concept="2NXPZ9" id="2UjW4IkHtya" role="N3F5h">
       <property role="TrG5h" value="empty_1452769245543_9" />
+    </node>
+    <node concept="BTY7A" id="3WvbRq1UQDY" role="N3F5h">
+      <property role="TrG5h" value="DeclareCounter" />
+      <property role="2OOxQR" value="true" />
+      <node concept="BUhyo" id="3WvbRq1UQHK" role="BTY7U">
+        <property role="TrG5h" value="CounterName" />
+        <node concept="rcJHQ" id="3WvbRq1UQIe" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+          <ref role="rcJHT" node="2UjW4IkHtxp" resolve="CounterType" />
+        </node>
+      </node>
+      <node concept="39I4aJ" id="3WvbRq1UQJf" role="2_0FLF">
+        <ref role="39I4aG" node="3WvbRq1UQHK" resolve="CounterName" />
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="3WvbRq1UQAg" role="N3F5h">
+      <property role="TrG5h" value="empty_1471892619668_4" />
     </node>
     <node concept="BTY7A" id="1Y5JHpRyqWG" role="N3F5h">
       <property role="TrG5h" value="TASKNAME" />
@@ -572,9 +593,10 @@
       <property role="3mNisv" value="true" />
       <node concept="19RgSI" id="2UjW4IkJ37H" role="1UOdpc">
         <property role="TrG5h" value="cntid" />
-        <node concept="Pu267" id="2UjW4IkJ37F" role="2C2TGm">
+        <node concept="rcJHQ" id="5f8fKyINf6P" role="2C2TGm">
           <property role="2caQfQ" value="false" />
           <property role="2c7vTL" value="false" />
+          <ref role="rcJHT" node="2UjW4IkHtxp" resolve="CounterType" />
         </node>
       </node>
       <node concept="rcJHQ" id="2UjW4IkHt$D" role="2C2TGm">

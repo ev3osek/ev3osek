@@ -607,7 +607,7 @@
       <property role="TrG5h" value="ecrobot_get_touch_sensor" />
       <property role="2OOxQR" value="false" />
       <property role="3mNisv" value="false" />
-      <node concept="3TlMgk" id="3QwuWjHkhyV" role="2C2TGm">
+      <node concept="26Vqp4" id="5f8fKyILT0P" role="2C2TGm">
         <property role="2caQfQ" value="false" />
         <property role="2c7vTL" value="false" />
       </node>
@@ -1878,6 +1878,22 @@
       <node concept="26Vqpb" id="3QwuWjHk0my" role="2C2TGm">
         <property role="2caQfQ" value="false" />
         <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="N3Fnw" id="5f8fKyINbZ8" role="N3F5h">
+      <property role="TrG5h" value="ecrobot_wait_ms" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <node concept="19Rifw" id="5f8fKyINb$U" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="5f8fKyINcon" role="1UOdpc">
+        <property role="TrG5h" value="ms" />
+        <node concept="26Vqpb" id="5f8fKyINcom" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
       </node>
     </node>
     <node concept="N3Fnw" id="3QwuWjHk16t" role="N3F5h">

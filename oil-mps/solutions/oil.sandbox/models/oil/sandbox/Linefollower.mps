@@ -62,7 +62,9 @@
       <concept id="5386789703557459044" name="de.whz.osek.structure.ExtendedTask" flags="ng" index="2yxTjl">
         <child id="5386789703557459045" name="events" index="2yxTjk" />
       </concept>
+      <concept id="8920938825873646480" name="de.whz.osek.structure.User1msIsrType2Function" flags="ng" index="2CZu$8" />
       <concept id="5539536996663425168" name="de.whz.osek.structure.TerminateTaskStatement" flags="ng" index="QCpGs" />
+      <concept id="4548406334698829002" name="de.whz.osek.structure.CounterDeclaration" flags="ng" index="2YKLIW" />
       <concept id="3455329014158468467" name="de.whz.osek.structure.TaskMacro" flags="ng" index="18XYSt">
         <reference id="3455329014158468471" name="oilTask" index="18XYSp" />
       </concept>
@@ -111,7 +113,7 @@
       <concept id="1748589669711583504" name="de.whz.osek.structure.OS" flags="ng" index="1hlUgq">
         <property id="1748589669711583518" name="status" index="1hlUgk" />
       </concept>
-      <concept id="6637659417469770051" name="de.whz.osek.structure.Counter" flags="ng" index="3qkAPh">
+      <concept id="6637659417469770051" name="de.whz.osek.structure.CounterLiteral" flags="ng" index="3qkAPh">
         <child id="8230360703443541346" name="minCycle" index="1$bw0m" />
         <child id="8230360703443541343" name="ticksPerBase" index="1$bw0F" />
         <child id="8230360703443541324" name="maxAllowedValue" index="1$bw0S" />
@@ -160,6 +162,9 @@
       <concept id="279446265608459824" name="com.mbeddr.core.pointers.structure.PointerType" flags="ng" index="3wxxNl" />
     </language>
     <language id="efda956e-491e-4f00-ba14-36af2f213ecf" name="com.mbeddr.core.udt">
+      <concept id="6116558314501347863" name="com.mbeddr.core.udt.structure.TypeDefType" flags="ng" index="rcJHQ">
+        <reference id="6116558314501347864" name="typeDef" index="rcJHT" />
+      </concept>
       <concept id="7099329415459817973" name="com.mbeddr.core.udt.structure.SUDeclaration" flags="ng" index="HsMI8">
         <child id="7099329415459888018" name="members" index="HszBJ" />
       </concept>
@@ -210,6 +215,7 @@
       <concept id="6437088627575722830" name="com.mbeddr.core.modules.structure.ImplementationModule" flags="ng" index="N3F5e" />
       <concept id="6437088627575722831" name="com.mbeddr.core.modules.structure.IModuleContent" flags="ng" index="N3F5f">
         <property id="1317894735999272944" name="exported" index="2OOxQR" />
+        <property id="6708182213627106114" name="preventNameMangling" index="3mNxdG" />
       </concept>
       <concept id="6437088627575724001" name="com.mbeddr.core.modules.structure.Function" flags="ng" index="N3Fnx">
         <child id="4185783222026475860" name="body" index="3XIRFX" />
@@ -332,6 +338,7 @@
       <concept id="8860443239512147449" name="com.mbeddr.core.expressions.structure.LessExpression" flags="ng" index="3Tl9Jn" />
       <concept id="8860443239512147447" name="com.mbeddr.core.expressions.structure.GreaterEqualsExpression" flags="ng" index="3Tl9Jp" />
       <concept id="8860443239512147445" name="com.mbeddr.core.expressions.structure.GreaterExpression" flags="ng" index="3Tl9Jr" />
+      <concept id="8860443239512129322" name="com.mbeddr.core.expressions.structure.EqualsExpression" flags="ng" index="3TlM44" />
       <concept id="8860443239512128058" name="com.mbeddr.core.expressions.structure.BooleanType" flags="ng" index="3TlMgk" />
       <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
         <property id="2941277002445651368" name="const" index="2c7vTL" />
@@ -373,6 +380,9 @@
       </node>
       <node concept="2v9HqM" id="GqrtFI5RqB" role="2eOfOg">
         <ref role="2v9HqP" node="2CJ7vlDPYcx" resolve="LinefollowerOil" />
+      </node>
+      <node concept="2v9HqM" id="7JdyDzjpMMI" role="2eOfOg">
+        <ref role="2v9HqP" node="7JdyDzjbVFv" resolve="User1msIsrType3" />
       </node>
     </node>
     <node concept="QR8et" id="4osOqZklR7d" role="2AWWZH">
@@ -426,9 +436,6 @@
         <property role="2caQfQ" value="false" />
         <property role="2c7vTL" value="false" />
       </node>
-    </node>
-    <node concept="2NXPZ9" id="4B0n6H28e9D" role="N3F5h">
-      <property role="TrG5h" value="empty_1454466460583_3" />
     </node>
     <node concept="2NXPZ9" id="2CJ7vlDRhzi" role="N3F5h">
       <property role="TrG5h" value="empty_1468592633088_21" />
@@ -545,9 +552,24 @@
     <property role="1hiKqn" value="2.5" />
     <node concept="1hlUge" id="2CJ7vlDPYcy" role="1v1S_x">
       <property role="TrG5h" value="ATMEL_AT91SAM7S256" />
+      <node concept="2YKLIW" id="3WvbRq1TAw0" role="3qjf8I">
+        <property role="TrG5h" value="SysTimerCnt" />
+        <node concept="3qkAPh" id="3WvbRq1TAw1" role="2DQcEM">
+          <property role="2hmy$m" value="0" />
+          <node concept="3TlMh9" id="3WvbRq1TABl" role="1$bw0m">
+            <property role="2hmy$m" value="1" />
+          </node>
+          <node concept="3TlMh9" id="3WvbRq1TAEi" role="1$bw0F">
+            <property role="2hmy$m" value="1" />
+          </node>
+          <node concept="3TlMh9" id="3WvbRq1TAHB" role="1$bw0S">
+            <property role="2hmy$m" value="10000" />
+          </node>
+        </node>
+      </node>
       <node concept="1hk5V6" id="2CJ7vlDRgoX" role="1v6YIA">
         <property role="TrG5h" value="TouchEventCyclicAlarm" />
-        <ref role="1v6S1U" node="2CJ7vlDRg73" resolve="SysTimerCnt" />
+        <ref role="1v6S1U" node="3WvbRq1TAw0" resolve="SysTimerCnt" />
         <node concept="1v6SQM" id="2CJ7vlDRgp5" role="1v6SD_">
           <ref role="1v6SNz" node="2CJ7vlDQldO" resolve="TouchEventDispatcherTask" />
         </node>
@@ -565,7 +587,7 @@
       </node>
       <node concept="1hk5V6" id="2CJ7vlDRgxt" role="1v6YIA">
         <property role="TrG5h" value="LightValueEventCyclicAlarm" />
-        <ref role="1v6S1U" node="2CJ7vlDRg73" resolve="SysTimerCnt" />
+        <ref role="1v6S1U" node="3WvbRq1TAw0" resolve="SysTimerCnt" />
         <node concept="1v6YA9" id="2CJ7vlDRgxI" role="1v6SZh">
           <node concept="3TlMh9" id="2CJ7vlDRgy3" role="1$bw0i">
             <property role="2hmy$m" value="1" />
@@ -579,18 +601,6 @@
         </node>
         <node concept="1v6SQM" id="2CJ7vlDRiOO" role="1v6SD_">
           <ref role="1v6SNz" node="2CJ7vlDQS6S" resolve="LightValueEventDispatcherTask" />
-        </node>
-      </node>
-      <node concept="3qkAPh" id="2CJ7vlDRg73" role="3qjf8I">
-        <property role="TrG5h" value="SysTimerCnt" />
-        <node concept="3TlMh9" id="2CJ7vlDRg9K" role="1$bw0m">
-          <property role="2hmy$m" value="1" />
-        </node>
-        <node concept="3TlMh9" id="2CJ7vlDRgbJ" role="1$bw0S">
-          <property role="2hmy$m" value="10000" />
-        </node>
-        <node concept="3TlMh9" id="2CJ7vlDRglw" role="1$bw0F">
-          <property role="2hmy$m" value="1" />
         </node>
       </node>
       <node concept="1hlUgq" id="2CJ7vlDPYcz" role="1hk5Yg">
@@ -611,7 +621,7 @@
         <node concept="1hk5Ax" id="2CJ7vlDPYes" role="2DQcEM">
           <property role="TrG5h" value="TouchEvent" />
           <node concept="3TlMh9" id="2CJ7vlDPYeV" role="1$bw00">
-            <property role="2hmy$m" value="1" />
+            <property role="2hmy$m" value="0" />
           </node>
         </node>
       </node>
@@ -619,7 +629,7 @@
         <node concept="1hk5Ax" id="2CJ7vlDQlcj" role="2DQcEM">
           <property role="TrG5h" value="LightValueEvent" />
           <node concept="3TlMh9" id="2CJ7vlDQldk" role="1$bw00">
-            <property role="2hmy$m" value="2" />
+            <property role="2hmy$m" value="1" />
           </node>
         </node>
       </node>
@@ -2330,10 +2340,15 @@
               </node>
             </node>
           </node>
-          <node concept="3O_q_g" id="2CJ7vlDRl23" role="c0U16">
-            <ref role="3O_q_h" to="ei6g:3QwuWjHjHa4" resolve="ecrobot_get_touch_sensor" />
-            <node concept="1AkAhK" id="2CJ7vlDRl2e" role="3O_q_j">
-              <ref role="1AkAhZ" to="ei6g:3tDp_yW5KZc" resolve="EV3_PORT_S3" />
+          <node concept="3TlM44" id="5f8fKyILUQi" role="c0U16">
+            <node concept="3TlMh9" id="5f8fKyILUR1" role="3TlMhJ">
+              <property role="2hmy$m" value="1" />
+            </node>
+            <node concept="3O_q_g" id="2CJ7vlDRl23" role="3TlMhI">
+              <ref role="3O_q_h" to="ei6g:3QwuWjHjHa4" resolve="ecrobot_get_touch_sensor" />
+              <node concept="1AkAhK" id="2CJ7vlDRl2e" role="3O_q_j">
+                <ref role="1AkAhZ" to="ei6g:3tDp_yW5KZc" resolve="EV3_PORT_S3" />
+              </node>
             </node>
           </node>
         </node>
@@ -2344,6 +2359,49 @@
         <property role="2caQfQ" value="false" />
         <property role="2c7vTL" value="false" />
       </node>
+    </node>
+  </node>
+  <node concept="N3F5e" id="7JdyDzjbVFv">
+    <property role="TrG5h" value="User1msIsrType3" />
+    <node concept="3GEVxB" id="7JdyDzjbVFx" role="2OODSX">
+      <ref role="3GEb4d" to="tzd5:2UjW4IkHtzb" resolve="kernel" />
+    </node>
+    <node concept="3GEVxB" id="7JdyDzjbVGx" role="2OODSX">
+      <ref role="3GEb4d" node="2CJ7vlDPYcx" resolve="LinefollowerOil" />
+    </node>
+    <node concept="1S7NMz" id="7JdyDzjbVF$" role="N3F5h">
+      <property role="TrG5h" value="SysTimerCnt" />
+      <property role="3mNisv" value="true" />
+      <node concept="rcJHQ" id="7JdyDzjbVFz" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="true" />
+        <ref role="rcJHT" to="tzd5:2UjW4IkHtxp" resolve="CounterType" />
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="7JdyDzjbVG_" role="N3F5h">
+      <property role="TrG5h" value="empty_1472677109412_14" />
+    </node>
+    <node concept="2CZu$8" id="7JdyDzjc_P1" role="N3F5h">
+      <property role="TrG5h" value="user_1ms_isr_type2" />
+      <property role="2OOxQR" value="true" />
+      <property role="3mNxdG" value="true" />
+      <node concept="19Rifw" id="7JdyDzjc_P2" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="3XIRFW" id="7JdyDzjc_P3" role="3XIRFX">
+        <node concept="1_9egQ" id="7JdyDzjn3qp" role="3XIRFZ">
+          <node concept="3O_q_g" id="7JdyDzjn3qn" role="1_9egR">
+            <ref role="3O_q_h" to="tzd5:2UjW4IkHtwi" resolve="SignalCounter" />
+            <node concept="4ZOvp" id="7JdyDzjn3qA" role="3O_q_j">
+              <ref role="2DPCA0" node="3WvbRq1TAw0" resolve="SysTimerCnt" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="7JdyDzjbVGp" role="N3F5h">
+      <property role="TrG5h" value="empty_1472677097118_13" />
     </node>
   </node>
 </model>

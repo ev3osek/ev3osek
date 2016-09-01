@@ -354,19 +354,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="2UjW4IkGjMd" role="3cqZAp">
-          <node concept="37vLTI" id="2UjW4IkGk9E" role="3clFbG">
-            <node concept="Xl_RD" id="2UjW4IkGk9W" role="37vLTx">
-              <property role="Xl_RC" value="../../OSEK_EV3/OSEK_EV3.mak" />
-            </node>
-            <node concept="2OqwBi" id="2UjW4IkGjPf" role="37vLTJ">
-              <node concept="13iPFW" id="2UjW4IkGjMb" role="2Oq$k0" />
-              <node concept="3TrcHB" id="2UjW4IkGk0N" role="2OqNvi">
-                <ref role="3TsBF5" to="f1b2:2UjW4IkGiwW" resolve="ev3_osekDotMakPath" />
-              </node>
-            </node>
-          </node>
-        </node>
       </node>
     </node>
   </node>
