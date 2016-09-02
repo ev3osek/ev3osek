@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="1" />
+    <use id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -220,13 +221,10 @@
     <property role="34LRSv" value="Event" />
     <property role="3GE5qa" value="Event" />
     <ref role="1TJDcQ" to="mj1l:1UQ4qqfUXf_" resolve="NumericLiteral" />
-    <node concept="PrWs8" id="4B0n6H258pq" role="PzmwI">
-      <ref role="PrY4T" to="x27k:5_l8w1EmTdf" resolve="IModuleContent" />
-    </node>
     <node concept="1TJgyj" id="78S7ngm5xPO" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="mask" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" to="mj1l:7FQByU3CrCM" resolve="Expression" />
     </node>
   </node>
@@ -293,19 +291,7 @@
     <property role="1pbfSe" value="1633198102" />
     <property role="34LRSv" value="task" />
     <property role="3GE5qa" value="Task" />
-    <ref role="1TJDcQ" to="mj1l:68dbbc7rHp$" resolve="UnsignedIntegerLiteral" />
-    <node concept="1TJgyj" id="78S7ngm5xPF" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="priority" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="mj1l:7FQByU3CrCM" resolve="Expression" />
-    </node>
-    <node concept="1TJgyj" id="78S7ngm5xPJ" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="activationAmount" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="mj1l:7FQByU3CrCM" resolve="Expression" />
-    </node>
+    <ref role="1TJDcQ" to="mj1l:7FQByU3CrDB" resolve="NumberLiteral" />
     <node concept="1TJgyj" id="58wCuMkZKxs" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="stacksize" />
@@ -335,6 +321,14 @@
     <node concept="1TJgyi" id="3QwuWjHllkV" role="1TKVEl">
       <property role="TrG5h" value="schedule" />
       <ref role="AX2Wp" node="3QwuWjHllky" resolve="Schedule" />
+    </node>
+    <node concept="1TJgyi" id="1Bd1FdQXRUz" role="1TKVEl">
+      <property role="TrG5h" value="priority" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="1Bd1FdQXRUA" role="1TKVEl">
+      <property role="TrG5h" value="activationAmount" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="1TIwiD" id="4NwoSLUgvyg">
@@ -468,11 +462,11 @@
     <property role="1pbfSe" value="1596173435" />
     <property role="3GE5qa" value="Timer" />
     <ref role="1TJDcQ" node="7FCpXS_WYDG" resolve="AlarmActionActivateTask" />
-    <node concept="1TJgyj" id="7FCpXS_WYKh" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
+    <node concept="1TJgyj" id="1Bd1FdR0aYZ" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="event" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1x4fgD956iF" resolve="EventLiteral" />
+      <ref role="20lvS9" node="1x4fgD956ve" resolve="EventRef" />
     </node>
   </node>
   <node concept="1TIwiD" id="1x4fgD956sq">
