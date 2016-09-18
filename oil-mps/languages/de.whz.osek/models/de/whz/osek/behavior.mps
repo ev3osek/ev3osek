@@ -1346,5 +1346,119 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="4IIl9K1dBNM">
+    <property role="3GE5qa" value="Core" />
+    <ref role="13h7C2" to="bwbq:4IIl9K1dBNL" resolve="StartupHookFunction" />
+    <node concept="13hLZK" id="4IIl9K1dBNN" role="13h7CW">
+      <node concept="3clFbS" id="4IIl9K1dBNO" role="2VODD2">
+        <node concept="3clFbF" id="4IIl9K1dBNP" role="3cqZAp">
+          <node concept="2OqwBi" id="4IIl9K1dBNQ" role="3clFbG">
+            <node concept="2OqwBi" id="4IIl9K1dBNR" role="2Oq$k0">
+              <node concept="13iPFW" id="4IIl9K1dBNS" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4IIl9K1dBNT" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="4IIl9K1dBNU" role="2OqNvi">
+              <node concept="Xl_RD" id="4IIl9K1dBNV" role="tz02z">
+                <property role="Xl_RC" value="StartupHook" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4IIl9K1dBO3" role="3cqZAp">
+          <node concept="2OqwBi" id="4IIl9K1dBO4" role="3clFbG">
+            <node concept="2OqwBi" id="4IIl9K1dBO5" role="2Oq$k0">
+              <node concept="13iPFW" id="4IIl9K1dBO6" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4IIl9K1dBO7" role="2OqNvi">
+                <ref role="3TsBF5" to="x27k:5Oog2UbP_d2" resolve="preventNameMangling" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="4IIl9K1dBO8" role="2OqNvi">
+              <node concept="3clFbT" id="4IIl9K1dBO9" role="tz02z">
+                <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="4IIl9K1dDku">
+    <property role="3GE5qa" value="Core" />
+    <ref role="13h7C2" to="bwbq:4IIl9K1dDkt" resolve="PreTaskHookFunction" />
+    <node concept="13hLZK" id="4IIl9K1dDkv" role="13h7CW">
+      <node concept="3clFbS" id="4IIl9K1dDkw" role="2VODD2">
+        <node concept="3clFbF" id="4IIl9K1dDoC" role="3cqZAp">
+          <node concept="2OqwBi" id="4IIl9K1dDoD" role="3clFbG">
+            <node concept="2OqwBi" id="4IIl9K1dDoE" role="2Oq$k0">
+              <node concept="13iPFW" id="4IIl9K1dDoF" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4IIl9K1dDoG" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="4IIl9K1dDoH" role="2OqNvi">
+              <node concept="Xl_RD" id="4IIl9K1dDoI" role="tz02z">
+                <property role="Xl_RC" value="PreTaskHook" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4IIl9K1dDoQ" role="3cqZAp">
+          <node concept="2OqwBi" id="4IIl9K1dDoR" role="3clFbG">
+            <node concept="2OqwBi" id="4IIl9K1dDoS" role="2Oq$k0">
+              <node concept="13iPFW" id="4IIl9K1dDoT" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4IIl9K1dDoU" role="2OqNvi">
+                <ref role="3TsBF5" to="x27k:5Oog2UbP_d2" resolve="preventNameMangling" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="4IIl9K1dDoV" role="2OqNvi">
+              <node concept="3clFbT" id="4IIl9K1dDoW" role="tz02z">
+                <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="4IIl9K1dFdo">
+    <property role="3GE5qa" value="Core" />
+    <ref role="13h7C2" to="bwbq:4IIl9K1dFdi" resolve="PostTaskHookFunction" />
+    <node concept="13hLZK" id="4IIl9K1dFdp" role="13h7CW">
+      <node concept="3clFbS" id="4IIl9K1dFdq" role="2VODD2">
+        <node concept="3clFbF" id="4IIl9K1dFdr" role="3cqZAp">
+          <node concept="2OqwBi" id="4IIl9K1dFds" role="3clFbG">
+            <node concept="2OqwBi" id="4IIl9K1dFdt" role="2Oq$k0">
+              <node concept="13iPFW" id="4IIl9K1dFdu" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4IIl9K1dFdv" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="4IIl9K1dFdw" role="2OqNvi">
+              <node concept="Xl_RD" id="4IIl9K1dFdx" role="tz02z">
+                <property role="Xl_RC" value="PostTaskHook" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4IIl9K1dFdD" role="3cqZAp">
+          <node concept="2OqwBi" id="4IIl9K1dFdE" role="3clFbG">
+            <node concept="2OqwBi" id="4IIl9K1dFdF" role="2Oq$k0">
+              <node concept="13iPFW" id="4IIl9K1dFdG" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4IIl9K1dFdH" role="2OqNvi">
+                <ref role="3TsBF5" to="x27k:5Oog2UbP_d2" resolve="preventNameMangling" />
+              </node>
+            </node>
+            <node concept="tyxLq" id="4IIl9K1dFdI" role="2OqNvi">
+              <node concept="3clFbT" id="4IIl9K1dFdJ" role="tz02z">
+                <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

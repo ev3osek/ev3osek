@@ -46,6 +46,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -65,6 +66,7 @@
         <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
+        <child id="1206060520071" name="elsifClauses" index="3eNLev" />
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
@@ -82,7 +84,12 @@
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
+        <child id="1206060619838" name="condition" index="3eO9$A" />
+        <child id="1206060644605" name="statementList" index="3eOfB_" />
+      </concept>
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
+      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
       </concept>
@@ -100,6 +107,11 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="1163668896201" name="jetbrains.mps.baseLanguage.structure.TernaryOperatorExpression" flags="nn" index="3K4zz7">
+        <child id="1163668914799" name="condition" index="3K4Cdx" />
+        <child id="1163668922816" name="ifTrue" index="3K4E3e" />
+        <child id="1163668934364" name="ifFalse" index="3K4GZi" />
+      </concept>
       <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
         <property id="6329021646629104958" name="text" index="3SKdUp" />
       </concept>
@@ -115,6 +127,9 @@
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
+      <concept id="1207055528241" name="jetbrains.mps.lang.typesystem.structure.WarningStatement" flags="nn" index="a7r0C">
+        <child id="1207055552304" name="warningText" index="a7wSD" />
+      </concept>
       <concept id="1185788614172" name="jetbrains.mps.lang.typesystem.structure.NormalTypeClause" flags="ng" index="mw_s8">
         <child id="1185788644032" name="normalType" index="mwGJk" />
       </concept>
@@ -175,6 +190,9 @@
       <concept id="1174663118805" name="jetbrains.mps.lang.typesystem.structure.CreateLessThanInequationStatement" flags="nn" index="1ZobV4" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
+        <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
+      </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
         <reference id="1145383142433" name="elementConcept" index="2I9WkF" />
@@ -184,6 +202,9 @@
       </concept>
       <concept id="3562215692195599741" name="jetbrains.mps.lang.smodel.structure.SLinkImplicitSelect" flags="nn" index="13MTOL">
         <reference id="3562215692195600259" name="link" index="13MTZf" />
+      </concept>
+      <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
+        <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
@@ -234,6 +255,7 @@
       <concept id="1160666733551" name="jetbrains.mps.baseLanguage.collections.structure.AddAllElementsOperation" flags="nn" index="X8dFx" />
       <concept id="1162935959151" name="jetbrains.mps.baseLanguage.collections.structure.GetSizeOperation" flags="nn" index="34oBXx" />
       <concept id="1167380149909" name="jetbrains.mps.baseLanguage.collections.structure.RemoveElementOperation" flags="nn" index="3dhRuq" />
+      <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
       <concept id="1225727723840" name="jetbrains.mps.baseLanguage.collections.structure.FindFirstOperation" flags="nn" index="1z4cxt" />
     </language>
   </registry>
@@ -536,14 +558,1783 @@
         </node>
       </node>
       <node concept="3clFbH" id="1Bd1FdQVsyB" role="3cqZAp" />
+      <node concept="3SKdUt" id="1a22ASGfbCn" role="3cqZAp">
+        <node concept="3SKdUq" id="1a22ASGfbCp" role="3SKWNk">
+          <property role="3SKdUp" value="check for only 1 CPU-Definition" />
+        </node>
+      </node>
+      <node concept="3cpWs8" id="1a22ASGfeTo" role="3cqZAp">
+        <node concept="3cpWsn" id="1a22ASGfeTr" role="3cpWs9">
+          <property role="TrG5h" value="cpuCount" />
+          <node concept="10Oyi0" id="1a22ASGfhxu" role="1tU5fm" />
+          <node concept="2OqwBi" id="1a22ASGfh08" role="33vP2m">
+            <node concept="2OqwBi" id="1a22ASGfgr$" role="2Oq$k0">
+              <node concept="2OqwBi" id="1a22ASGffGh" role="2Oq$k0">
+                <node concept="1YBJjd" id="1a22ASGffB8" role="2Oq$k0">
+                  <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                </node>
+                <node concept="2qgKlT" id="1a22ASGfgnd" role="2OqNvi">
+                  <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                </node>
+              </node>
+              <node concept="13MTOL" id="1a22ASGfgSv" role="2OqNvi">
+                <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+              </node>
+            </node>
+            <node concept="34oBXx" id="1a22ASGfhtn" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="1a22ASGfiAJ" role="3cqZAp">
+        <node concept="3clFbS" id="1a22ASGfiAL" role="3clFbx">
+          <node concept="2MkqsV" id="1a22ASGfjsU" role="3cqZAp">
+            <node concept="Xl_RD" id="1a22ASGfjt9" role="2MkJ7o">
+              <property role="Xl_RC" value="You need to define one ApplicationDefinition" />
+            </node>
+            <node concept="3K4zz7" id="1a22ASGfkZ0" role="2OEOjV">
+              <node concept="3eOSWO" id="1a22ASGfmRF" role="3K4Cdx">
+                <node concept="3cmrfG" id="1a22ASGfmRI" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="2OqwBi" id="1a22ASGfmcY" role="3uHU7B">
+                  <node concept="2OqwBi" id="1a22ASGfls3" role="2Oq$k0">
+                    <node concept="1YBJjd" id="1a22ASGflmO" role="2Oq$k0">
+                      <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                    </node>
+                    <node concept="2qgKlT" id="1a22ASGfm8C" role="2OqNvi">
+                      <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                    </node>
+                  </node>
+                  <node concept="34oBXx" id="1a22ASGfmFy" role="2OqNvi" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="1a22ASGfouq" role="3K4E3e">
+                <node concept="2OqwBi" id="1a22ASGfnGZ" role="2Oq$k0">
+                  <node concept="1YBJjd" id="1a22ASGfngp" role="2Oq$k0">
+                    <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                  </node>
+                  <node concept="2qgKlT" id="1a22ASGfoqs" role="2OqNvi">
+                    <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                  </node>
+                </node>
+                <node concept="1uHKPH" id="1a22ASGfoXQ" role="2OqNvi" />
+              </node>
+              <node concept="1YBJjd" id="1a22ASGfp0E" role="3K4GZi">
+                <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3eOVzh" id="1a22ASGfjrG" role="3clFbw">
+          <node concept="3cmrfG" id="1a22ASGfjrJ" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="37vLTw" id="1a22ASGfjll" role="3uHU7B">
+            <ref role="3cqZAo" node="1a22ASGfeTr" resolve="cpuCount" />
+          </node>
+        </node>
+        <node concept="3eNFk2" id="1a22ASGfkfB" role="3eNLev">
+          <node concept="3eOSWO" id="1a22ASGfk$L" role="3eO9$A">
+            <node concept="3cmrfG" id="1a22ASGfk$S" role="3uHU7w">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="37vLTw" id="1a22ASGfkgS" role="3uHU7B">
+              <ref role="3cqZAo" node="1a22ASGfeTr" resolve="cpuCount" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="1a22ASGfkfD" role="3eOfB_">
+            <node concept="2MkqsV" id="1a22ASGfkAd" role="3cqZAp">
+              <node concept="Xl_RD" id="1a22ASGfkAp" role="2MkJ7o">
+                <property role="Xl_RC" value="Only one ApplicationDefinition is supported." />
+              </node>
+              <node concept="1YBJjd" id="1a22ASGfkB0" role="2OEOjV">
+                <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="1a22ASGfjwN" role="3cqZAp" />
+      <node concept="3clFbH" id="1a22ASGdYAR" role="3cqZAp" />
+      <node concept="3SKdUt" id="1a22ASGdXeT" role="3cqZAp">
+        <node concept="3SKdUq" id="1a22ASGdXeV" role="3SKWNk">
+          <property role="3SKdUp" value="check hooks -&gt;" />
+        </node>
+      </node>
+      <node concept="3SKdUt" id="4IIl9K1gkR0" role="3cqZAp">
+        <node concept="3SKdUq" id="4IIl9K1gkR2" role="3SKWNk">
+          <property role="3SKdUp" value="TODO: refactor to one method" />
+        </node>
+      </node>
+      <node concept="3SKdUt" id="1a22ASGdZ4f" role="3cqZAp">
+        <node concept="3SKdUq" id="1a22ASGdZ4h" role="3SKWNk">
+          <property role="3SKdUp" value="StartupHook" />
+        </node>
+      </node>
+      <node concept="3cpWs8" id="1a22ASGe7fK" role="3cqZAp">
+        <node concept="3cpWsn" id="1a22ASGe7fL" role="3cpWs9">
+          <property role="TrG5h" value="startupHooks" />
+          <node concept="2I9FWS" id="1a22ASGe7fM" role="1tU5fm">
+            <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+          </node>
+          <node concept="2ShNRf" id="1a22ASGe7fN" role="33vP2m">
+            <node concept="2T8Vx0" id="1a22ASGe7fO" role="2ShVmc">
+              <node concept="2I9FWS" id="1a22ASGe7fP" role="2T96Bj">
+                <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="1a22ASGe7fQ" role="3cqZAp">
+        <node concept="2GrKxI" id="1a22ASGe7fR" role="2Gsz3X">
+          <property role="TrG5h" value="impl" />
+        </node>
+        <node concept="2OqwBi" id="1a22ASGe7fS" role="2GsD0m">
+          <node concept="1YBJjd" id="1a22ASGe7fT" role="2Oq$k0">
+            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+          </node>
+          <node concept="2qgKlT" id="1a22ASGe7fU" role="2OqNvi">
+            <ref role="37wK5l" to="ahli:7RiewQ_lHPf" resolve="referencedImplModules" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="1a22ASGe7fV" role="2LFqv$">
+          <node concept="3clFbJ" id="1a22ASGe7fW" role="3cqZAp">
+            <node concept="2OqwBi" id="1a22ASGe7fX" role="3clFbw">
+              <node concept="2OqwBi" id="1a22ASGe7fY" role="2Oq$k0">
+                <node concept="2GrUjf" id="1a22ASGe7fZ" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="1a22ASGe7fR" resolve="impl" />
+                </node>
+                <node concept="2qgKlT" id="1a22ASGe7g0" role="2OqNvi">
+                  <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                </node>
+              </node>
+              <node concept="2HwmR7" id="1a22ASGe7g1" role="2OqNvi">
+                <node concept="1bVj0M" id="1a22ASGe7g2" role="23t8la">
+                  <node concept="3clFbS" id="1a22ASGe7g3" role="1bW5cS">
+                    <node concept="3clFbF" id="1a22ASGe7g4" role="3cqZAp">
+                      <node concept="2OqwBi" id="1a22ASGe7g5" role="3clFbG">
+                        <node concept="2OqwBi" id="1a22ASGe7g6" role="2Oq$k0">
+                          <node concept="37vLTw" id="1a22ASGe7g7" role="2Oq$k0">
+                            <ref role="3cqZAo" node="1a22ASGe7gb" resolve="it" />
+                          </node>
+                          <node concept="3TrcHB" id="1a22ASGe7g8" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="1a22ASGe7g9" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                          <node concept="Xl_RD" id="1a22ASGe7ga" role="37wK5m">
+                            <property role="Xl_RC" value="StartupHook" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="1a22ASGe7gb" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="1a22ASGe7gc" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="1a22ASGe7gd" role="3clFbx">
+              <node concept="3clFbF" id="1a22ASGe7ge" role="3cqZAp">
+                <node concept="2OqwBi" id="1a22ASGe7gf" role="3clFbG">
+                  <node concept="37vLTw" id="1a22ASGe7gg" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1a22ASGe7fL" resolve="startupHooks" />
+                  </node>
+                  <node concept="TSZUe" id="1a22ASGe7gh" role="2OqNvi">
+                    <node concept="1PxgMI" id="1a22ASGe7gi" role="25WWJ7">
+                      <ref role="1PxNhF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+                      <node concept="2OqwBi" id="1a22ASGe7gj" role="1PxMeX">
+                        <node concept="2OqwBi" id="1a22ASGe7gk" role="2Oq$k0">
+                          <node concept="2GrUjf" id="1a22ASGe7gl" role="2Oq$k0">
+                            <ref role="2Gs0qQ" node="1a22ASGe7fR" resolve="impl" />
+                          </node>
+                          <node concept="2qgKlT" id="1a22ASGe7gm" role="2OqNvi">
+                            <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                          </node>
+                        </node>
+                        <node concept="1z4cxt" id="1a22ASGe7gn" role="2OqNvi">
+                          <node concept="1bVj0M" id="1a22ASGe7go" role="23t8la">
+                            <node concept="3clFbS" id="1a22ASGe7gp" role="1bW5cS">
+                              <node concept="3clFbF" id="1a22ASGe7gq" role="3cqZAp">
+                                <node concept="2OqwBi" id="1a22ASGe7gr" role="3clFbG">
+                                  <node concept="2OqwBi" id="1a22ASGe7gs" role="2Oq$k0">
+                                    <node concept="37vLTw" id="1a22ASGe7gt" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="1a22ASGe7gx" resolve="it" />
+                                    </node>
+                                    <node concept="3TrcHB" id="1a22ASGe7gu" role="2OqNvi">
+                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="1a22ASGe7gv" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                    <node concept="Xl_RD" id="1a22ASGe7gw" role="37wK5m">
+                                      <property role="Xl_RC" value="StartupHook" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="Rh6nW" id="1a22ASGe7gx" role="1bW2Oz">
+                              <property role="TrG5h" value="it" />
+                              <node concept="2jxLKc" id="1a22ASGe7gy" role="1tU5fm" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="1a22ASGdZZ8" role="3cqZAp">
+        <node concept="3clFbS" id="1a22ASGdZZa" role="3clFbx">
+          <node concept="3clFbJ" id="4IIl9K1bFGT" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1bFGV" role="3clFbx">
+              <node concept="2MkqsV" id="1a22ASGe7gB" role="3cqZAp">
+                <node concept="Xl_RD" id="1a22ASGe7gC" role="2MkJ7o">
+                  <property role="Xl_RC" value="You enabled StartupHook in OilFile but no corresponding function." />
+                </node>
+                <node concept="2OqwBi" id="1a22ASGelrv" role="2OEOjV">
+                  <node concept="2OqwBi" id="1a22ASGel6m" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1a22ASGekB6" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1a22ASGejU5" role="2Oq$k0">
+                        <node concept="1YBJjd" id="1a22ASGe7gD" role="2Oq$k0">
+                          <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                        </node>
+                        <node concept="2qgKlT" id="1a22ASGekyG" role="2OqNvi">
+                          <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="1a22ASGekYE" role="2OqNvi">
+                        <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                      </node>
+                    </node>
+                    <node concept="13MTOL" id="1a22ASGellM" role="2OqNvi">
+                      <ref role="13MTZf" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                  <node concept="1z4cxt" id="1a22ASGem1L" role="2OqNvi">
+                    <node concept="1bVj0M" id="1a22ASGem1N" role="23t8la">
+                      <node concept="3clFbS" id="1a22ASGem1O" role="1bW5cS">
+                        <node concept="3clFbF" id="1a22ASGem6o" role="3cqZAp">
+                          <node concept="2OqwBi" id="1a22ASGemaC" role="3clFbG">
+                            <node concept="37vLTw" id="1a22ASGem6n" role="2Oq$k0">
+                              <ref role="3cqZAo" node="1a22ASGem1P" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="1a22ASGemid" role="2OqNvi">
+                              <ref role="3TsBF5" to="bwbq:1x4fgD94T$w" resolve="startupHook" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="1a22ASGem1P" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="1a22ASGem1Q" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="4IIl9K1bYfO" role="3clFbw">
+              <node concept="3cmrfG" id="4IIl9K1bYhW" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="4IIl9K1bIPp" role="3uHU7B">
+                <node concept="37vLTw" id="4IIl9K1bFM1" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1a22ASGe7fL" resolve="startupHooks" />
+                </node>
+                <node concept="34oBXx" id="4IIl9K1bT2J" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="1a22ASGe2bC" role="3clFbw">
+          <node concept="2OqwBi" id="1a22ASGe0xW" role="2Oq$k0">
+            <node concept="1YBJjd" id="1a22ASGe0sO" role="2Oq$k0">
+              <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+            </node>
+            <node concept="2qgKlT" id="1a22ASGe12t" role="2OqNvi">
+              <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+            </node>
+          </node>
+          <node concept="2HwmR7" id="1a22ASGe2la" role="2OqNvi">
+            <node concept="1bVj0M" id="1a22ASGe2lc" role="23t8la">
+              <node concept="3clFbS" id="1a22ASGe2ld" role="1bW5cS">
+                <node concept="3clFbF" id="1a22ASGe2tf" role="3cqZAp">
+                  <node concept="2OqwBi" id="1a22ASGe4eV" role="3clFbG">
+                    <node concept="2OqwBi" id="1a22ASGe3qg" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1a22ASGe2Cn" role="2Oq$k0">
+                        <node concept="37vLTw" id="1a22ASGe2te" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1a22ASGe2le" resolve="it" />
+                        </node>
+                        <node concept="3TrEf2" id="1a22ASGe2XD" role="2OqNvi">
+                          <ref role="3Tt5mk" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="1a22ASGe3Q2" role="2OqNvi">
+                        <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="1a22ASGe4qs" role="2OqNvi">
+                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$w" resolve="startupHook" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="1a22ASGe2le" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="1a22ASGe2lf" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="9aQIb" id="4IIl9K1c0zV" role="9aQIa">
+          <node concept="3clFbS" id="4IIl9K1c0zW" role="9aQI4">
+            <node concept="3clFbJ" id="4IIl9K1c0HM" role="3cqZAp">
+              <node concept="3eOSWO" id="4IIl9K1cjdk" role="3clFbw">
+                <node concept="3cmrfG" id="4IIl9K1cjdn" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1c3Lm" role="3uHU7B">
+                  <node concept="37vLTw" id="4IIl9K1c0HY" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1a22ASGe7fL" resolve="startupHooks" />
+                  </node>
+                  <node concept="34oBXx" id="4IIl9K1cdYG" role="2OqNvi" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="4IIl9K1c0HO" role="3clFbx">
+                <node concept="2MkqsV" id="4IIl9K1cjgm" role="3cqZAp">
+                  <node concept="Xl_RD" id="4IIl9K1cjgy" role="2MkJ7o">
+                    <property role="Xl_RC" value="You declared StartupHook Function, so enable in OilFile!" />
+                  </node>
+                  <node concept="2OqwBi" id="4IIl9K1cogY" role="2OEOjV">
+                    <node concept="2OqwBi" id="4IIl9K1cngX" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1cmlp" role="2Oq$k0">
+                        <node concept="2OqwBi" id="4IIl9K1cjnV" role="2Oq$k0">
+                          <node concept="1YBJjd" id="4IIl9K1cjjz" role="2Oq$k0">
+                            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1cmh9" role="2OqNvi">
+                            <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                          </node>
+                        </node>
+                        <node concept="13MTOL" id="4IIl9K1cn9r" role="2OqNvi">
+                          <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="4IIl9K1co5j" role="2OqNvi" />
+                    </node>
+                    <node concept="3TrEf2" id="4IIl9K1cpdR" role="2OqNvi">
+                      <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="1a22ASGe7gX" role="3cqZAp">
+        <node concept="2GrKxI" id="1a22ASGe7gY" role="2Gsz3X">
+          <property role="TrG5h" value="startupHook" />
+        </node>
+        <node concept="37vLTw" id="1a22ASGe7gZ" role="2GsD0m">
+          <ref role="3cqZAo" node="1a22ASGe7fL" resolve="startupHooks" />
+        </node>
+        <node concept="3clFbS" id="1a22ASGe7h0" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1jCZz" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1jCZ$" role="3clFbx">
+              <node concept="a7r0C" id="4IIl9K1jCZ_" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1jCZA" role="a7wSD">
+                  <property role="Xl_RC" value="Did you want to implement kernel.h-&gt;ShutdownHook?" />
+                </node>
+                <node concept="2GrUjf" id="4IIl9K1jDgR" role="2OEOjV">
+                  <ref role="2Gs0qQ" node="1a22ASGe7gY" resolve="startupHook" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="4IIl9K1jCZC" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1jCZD" role="3fr31v">
+                <node concept="2OqwBi" id="4IIl9K1jCZE" role="2Oq$k0">
+                  <node concept="2GrUjf" id="4IIl9K1jD79" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="1a22ASGe7gY" resolve="startupHook" />
+                  </node>
+                  <node concept="3Tsc0h" id="4IIl9K1jCZG" role="2OqNvi">
+                    <ref role="3TtcxE" to="tpck:4uZwTti3__2" />
+                  </node>
+                </node>
+                <node concept="2HwmR7" id="4IIl9K1jCZH" role="2OqNvi">
+                  <node concept="1bVj0M" id="4IIl9K1jCZI" role="23t8la">
+                    <node concept="3clFbS" id="4IIl9K1jCZJ" role="1bW5cS">
+                      <node concept="3clFbF" id="4IIl9K1jCZK" role="3cqZAp">
+                        <node concept="2OqwBi" id="4IIl9K1jCZL" role="3clFbG">
+                          <node concept="37vLTw" id="4IIl9K1jCZM" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1jCZP" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="4IIl9K1jCZN" role="2OqNvi">
+                            <node concept="chp4Y" id="4IIl9K1jCZO" role="cj9EA">
+                              <ref role="cht4Q" to="x27k:7x9scHw5pU_" resolve="ImplementsExternalFunction" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="4IIl9K1jCZP" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="4IIl9K1jCZQ" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="1a22ASGdY9x" role="3cqZAp" />
+      <node concept="3SKdUt" id="4IIl9K1fN5Q" role="3cqZAp">
+        <node concept="3SKdUq" id="4IIl9K1fN5R" role="3SKWNk">
+          <property role="3SKdUp" value="ShutdownHook" />
+        </node>
+      </node>
+      <node concept="3cpWs8" id="4IIl9K1fN5S" role="3cqZAp">
+        <node concept="3cpWsn" id="4IIl9K1fN5T" role="3cpWs9">
+          <property role="TrG5h" value="shutdownHooks" />
+          <node concept="2I9FWS" id="4IIl9K1fN5U" role="1tU5fm">
+            <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+          </node>
+          <node concept="2ShNRf" id="4IIl9K1fN5V" role="33vP2m">
+            <node concept="2T8Vx0" id="4IIl9K1fN5W" role="2ShVmc">
+              <node concept="2I9FWS" id="4IIl9K1fN5X" role="2T96Bj">
+                <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1fN5Y" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1fN5Z" role="2Gsz3X">
+          <property role="TrG5h" value="impl" />
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1fN60" role="2GsD0m">
+          <node concept="1YBJjd" id="4IIl9K1fN61" role="2Oq$k0">
+            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+          </node>
+          <node concept="2qgKlT" id="4IIl9K1fN62" role="2OqNvi">
+            <ref role="37wK5l" to="ahli:7RiewQ_lHPf" resolve="referencedImplModules" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4IIl9K1fN63" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1fN64" role="3cqZAp">
+            <node concept="2OqwBi" id="4IIl9K1fN65" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1fN66" role="2Oq$k0">
+                <node concept="2GrUjf" id="4IIl9K1fN67" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="4IIl9K1fN5Z" resolve="impl" />
+                </node>
+                <node concept="2qgKlT" id="4IIl9K1fN68" role="2OqNvi">
+                  <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                </node>
+              </node>
+              <node concept="2HwmR7" id="4IIl9K1fN69" role="2OqNvi">
+                <node concept="1bVj0M" id="4IIl9K1fN6a" role="23t8la">
+                  <node concept="3clFbS" id="4IIl9K1fN6b" role="1bW5cS">
+                    <node concept="3clFbF" id="4IIl9K1fN6c" role="3cqZAp">
+                      <node concept="2OqwBi" id="4IIl9K1fN6d" role="3clFbG">
+                        <node concept="2OqwBi" id="4IIl9K1fN6e" role="2Oq$k0">
+                          <node concept="37vLTw" id="4IIl9K1fN6f" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1fN6j" resolve="it" />
+                          </node>
+                          <node concept="3TrcHB" id="4IIl9K1fN6g" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="4IIl9K1fN6h" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                          <node concept="Xl_RD" id="4IIl9K1fN6i" role="37wK5m">
+                            <property role="Xl_RC" value="ShutdownHook" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="4IIl9K1fN6j" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="4IIl9K1fN6k" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="4IIl9K1fN6l" role="3clFbx">
+              <node concept="3clFbF" id="4IIl9K1fN6m" role="3cqZAp">
+                <node concept="2OqwBi" id="4IIl9K1fN6n" role="3clFbG">
+                  <node concept="37vLTw" id="4IIl9K1fN6o" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1fN5T" resolve="shutdownHooks" />
+                  </node>
+                  <node concept="TSZUe" id="4IIl9K1fN6p" role="2OqNvi">
+                    <node concept="1PxgMI" id="4IIl9K1fN6q" role="25WWJ7">
+                      <ref role="1PxNhF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+                      <node concept="2OqwBi" id="4IIl9K1fN6r" role="1PxMeX">
+                        <node concept="2OqwBi" id="4IIl9K1fN6s" role="2Oq$k0">
+                          <node concept="2GrUjf" id="4IIl9K1fN6t" role="2Oq$k0">
+                            <ref role="2Gs0qQ" node="4IIl9K1fN5Z" resolve="impl" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1fN6u" role="2OqNvi">
+                            <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                          </node>
+                        </node>
+                        <node concept="1z4cxt" id="4IIl9K1fN6v" role="2OqNvi">
+                          <node concept="1bVj0M" id="4IIl9K1fN6w" role="23t8la">
+                            <node concept="3clFbS" id="4IIl9K1fN6x" role="1bW5cS">
+                              <node concept="3clFbF" id="4IIl9K1fN6y" role="3cqZAp">
+                                <node concept="2OqwBi" id="4IIl9K1fN6z" role="3clFbG">
+                                  <node concept="2OqwBi" id="4IIl9K1fN6$" role="2Oq$k0">
+                                    <node concept="37vLTw" id="4IIl9K1fN6_" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="4IIl9K1fN6D" resolve="it" />
+                                    </node>
+                                    <node concept="3TrcHB" id="4IIl9K1fN6A" role="2OqNvi">
+                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="4IIl9K1fN6B" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                    <node concept="Xl_RD" id="4IIl9K1fN6C" role="37wK5m">
+                                      <property role="Xl_RC" value="ShutdownHook" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="Rh6nW" id="4IIl9K1fN6D" role="1bW2Oz">
+                              <property role="TrG5h" value="it" />
+                              <node concept="2jxLKc" id="4IIl9K1fN6E" role="1tU5fm" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4IIl9K1fN6F" role="3cqZAp">
+        <node concept="3clFbS" id="4IIl9K1fN6G" role="3clFbx">
+          <node concept="3clFbJ" id="4IIl9K1fN6H" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1fN6I" role="3clFbx">
+              <node concept="2MkqsV" id="4IIl9K1fN6J" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1fN6K" role="2MkJ7o">
+                  <property role="Xl_RC" value="You enabled ShutdownHook in OilFile but no corresponding function." />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1fN6L" role="2OEOjV">
+                  <node concept="2OqwBi" id="4IIl9K1fN6M" role="2Oq$k0">
+                    <node concept="2OqwBi" id="4IIl9K1fN6N" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1fN6O" role="2Oq$k0">
+                        <node concept="1YBJjd" id="4IIl9K1fN6P" role="2Oq$k0">
+                          <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                        </node>
+                        <node concept="2qgKlT" id="4IIl9K1fN6Q" role="2OqNvi">
+                          <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="4IIl9K1fN6R" role="2OqNvi">
+                        <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                      </node>
+                    </node>
+                    <node concept="13MTOL" id="4IIl9K1fN6S" role="2OqNvi">
+                      <ref role="13MTZf" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                  <node concept="1z4cxt" id="4IIl9K1fN6T" role="2OqNvi">
+                    <node concept="1bVj0M" id="4IIl9K1fN6U" role="23t8la">
+                      <node concept="3clFbS" id="4IIl9K1fN6V" role="1bW5cS">
+                        <node concept="3clFbF" id="4IIl9K1fN6W" role="3cqZAp">
+                          <node concept="2OqwBi" id="4IIl9K1fN6X" role="3clFbG">
+                            <node concept="37vLTw" id="4IIl9K1fN6Y" role="2Oq$k0">
+                              <ref role="3cqZAo" node="4IIl9K1fN70" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="4IIl9K1fVOa" role="2OqNvi">
+                              <ref role="3TsBF5" to="bwbq:1x4fgD94T$O" resolve="shutdownHook" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="4IIl9K1fN70" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="4IIl9K1fN71" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="4IIl9K1fN72" role="3clFbw">
+              <node concept="3cmrfG" id="4IIl9K1fN73" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="4IIl9K1fN74" role="3uHU7B">
+                <node concept="37vLTw" id="4IIl9K1fN75" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4IIl9K1fN5T" resolve="shutdownHooks" />
+                </node>
+                <node concept="34oBXx" id="4IIl9K1fN76" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1fN77" role="3clFbw">
+          <node concept="2OqwBi" id="4IIl9K1fN78" role="2Oq$k0">
+            <node concept="1YBJjd" id="4IIl9K1fN79" role="2Oq$k0">
+              <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+            </node>
+            <node concept="2qgKlT" id="4IIl9K1fN7a" role="2OqNvi">
+              <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+            </node>
+          </node>
+          <node concept="2HwmR7" id="4IIl9K1fN7b" role="2OqNvi">
+            <node concept="1bVj0M" id="4IIl9K1fN7c" role="23t8la">
+              <node concept="3clFbS" id="4IIl9K1fN7d" role="1bW5cS">
+                <node concept="3clFbF" id="4IIl9K1fN7e" role="3cqZAp">
+                  <node concept="2OqwBi" id="4IIl9K1fN7f" role="3clFbG">
+                    <node concept="2OqwBi" id="4IIl9K1fN7g" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1fN7h" role="2Oq$k0">
+                        <node concept="37vLTw" id="4IIl9K1fN7i" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4IIl9K1fN7m" resolve="it" />
+                        </node>
+                        <node concept="3TrEf2" id="4IIl9K1fN7j" role="2OqNvi">
+                          <ref role="3Tt5mk" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="4IIl9K1fN7k" role="2OqNvi">
+                        <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="4IIl9K1fV_q" role="2OqNvi">
+                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$O" resolve="shutdownHook" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="4IIl9K1fN7m" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="4IIl9K1fN7n" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="9aQIb" id="4IIl9K1fN7o" role="9aQIa">
+          <node concept="3clFbS" id="4IIl9K1fN7p" role="9aQI4">
+            <node concept="3clFbJ" id="4IIl9K1fN7q" role="3cqZAp">
+              <node concept="3eOSWO" id="4IIl9K1fN7r" role="3clFbw">
+                <node concept="3cmrfG" id="4IIl9K1fN7s" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1fN7t" role="3uHU7B">
+                  <node concept="37vLTw" id="4IIl9K1fN7u" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1fN5T" resolve="shutdownHooks" />
+                  </node>
+                  <node concept="34oBXx" id="4IIl9K1fN7v" role="2OqNvi" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="4IIl9K1fN7w" role="3clFbx">
+                <node concept="2MkqsV" id="4IIl9K1fN7x" role="3cqZAp">
+                  <node concept="Xl_RD" id="4IIl9K1fN7y" role="2MkJ7o">
+                    <property role="Xl_RC" value="You declared ShutdownHook Function, so enable in OilFile!" />
+                  </node>
+                  <node concept="2OqwBi" id="4IIl9K1fN7z" role="2OEOjV">
+                    <node concept="2OqwBi" id="4IIl9K1fN7$" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1fN7_" role="2Oq$k0">
+                        <node concept="2OqwBi" id="4IIl9K1fN7A" role="2Oq$k0">
+                          <node concept="1YBJjd" id="4IIl9K1fN7B" role="2Oq$k0">
+                            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1fN7C" role="2OqNvi">
+                            <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                          </node>
+                        </node>
+                        <node concept="13MTOL" id="4IIl9K1fN7D" role="2OqNvi">
+                          <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="4IIl9K1fN7E" role="2OqNvi" />
+                    </node>
+                    <node concept="3TrEf2" id="4IIl9K1fN7F" role="2OqNvi">
+                      <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1fN7G" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1fN7H" role="2Gsz3X">
+          <property role="TrG5h" value="shutdownHook" />
+        </node>
+        <node concept="37vLTw" id="4IIl9K1fN7I" role="2GsD0m">
+          <ref role="3cqZAo" node="4IIl9K1fN5T" resolve="shutdownHooks" />
+        </node>
+        <node concept="3clFbS" id="4IIl9K1fN7J" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1iyIq" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1iyIs" role="3clFbx">
+              <node concept="a7r0C" id="4IIl9K1iBd2" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1iBdn" role="a7wSD">
+                  <property role="Xl_RC" value="Did you want to implement kernel.h-&gt;ShutdownHook?" />
+                </node>
+                <node concept="2GrUjf" id="4IIl9K1iBgp" role="2OEOjV">
+                  <ref role="2Gs0qQ" node="4IIl9K1fN7H" resolve="shutdownHook" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="4IIl9K1iyIU" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1i_ca" role="3fr31v">
+                <node concept="2OqwBi" id="4IIl9K1iz02" role="2Oq$k0">
+                  <node concept="2GrUjf" id="4IIl9K1iyJa" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="4IIl9K1fN7H" resolve="shutdownHook" />
+                  </node>
+                  <node concept="3Tsc0h" id="4IIl9K1i$dA" role="2OqNvi">
+                    <ref role="3TtcxE" to="tpck:4uZwTti3__2" />
+                  </node>
+                </node>
+                <node concept="2HwmR7" id="4IIl9K1iAEL" role="2OqNvi">
+                  <node concept="1bVj0M" id="4IIl9K1iAEN" role="23t8la">
+                    <node concept="3clFbS" id="4IIl9K1iAEO" role="1bW5cS">
+                      <node concept="3clFbF" id="4IIl9K1iALe" role="3cqZAp">
+                        <node concept="2OqwBi" id="4IIl9K1iAPj" role="3clFbG">
+                          <node concept="37vLTw" id="4IIl9K1iALd" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1iAEP" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="4IIl9K1iAXG" role="2OqNvi">
+                            <node concept="chp4Y" id="4IIl9K1iB50" role="cj9EA">
+                              <ref role="cht4Q" to="x27k:7x9scHw5pU_" resolve="ImplementsExternalFunction" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="4IIl9K1iAEP" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="4IIl9K1iAEQ" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="1a22ASGdVVl" role="3cqZAp" />
+      <node concept="3SKdUt" id="4IIl9K1fYon" role="3cqZAp">
+        <node concept="3SKdUq" id="4IIl9K1fYoo" role="3SKWNk">
+          <property role="3SKdUp" value="PreTaskHook" />
+        </node>
+      </node>
+      <node concept="3cpWs8" id="4IIl9K1fYop" role="3cqZAp">
+        <node concept="3cpWsn" id="4IIl9K1fYoq" role="3cpWs9">
+          <property role="TrG5h" value="preTaskHooks" />
+          <node concept="2I9FWS" id="4IIl9K1fYor" role="1tU5fm">
+            <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+          </node>
+          <node concept="2ShNRf" id="4IIl9K1fYos" role="33vP2m">
+            <node concept="2T8Vx0" id="4IIl9K1fYot" role="2ShVmc">
+              <node concept="2I9FWS" id="4IIl9K1fYou" role="2T96Bj">
+                <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1fYov" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1fYow" role="2Gsz3X">
+          <property role="TrG5h" value="impl" />
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1fYox" role="2GsD0m">
+          <node concept="1YBJjd" id="4IIl9K1fYoy" role="2Oq$k0">
+            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+          </node>
+          <node concept="2qgKlT" id="4IIl9K1fYoz" role="2OqNvi">
+            <ref role="37wK5l" to="ahli:7RiewQ_lHPf" resolve="referencedImplModules" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4IIl9K1fYo$" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1fYo_" role="3cqZAp">
+            <node concept="2OqwBi" id="4IIl9K1fYoA" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1fYoB" role="2Oq$k0">
+                <node concept="2GrUjf" id="4IIl9K1fYoC" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="4IIl9K1fYow" resolve="impl" />
+                </node>
+                <node concept="2qgKlT" id="4IIl9K1fYoD" role="2OqNvi">
+                  <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                </node>
+              </node>
+              <node concept="2HwmR7" id="4IIl9K1fYoE" role="2OqNvi">
+                <node concept="1bVj0M" id="4IIl9K1fYoF" role="23t8la">
+                  <node concept="3clFbS" id="4IIl9K1fYoG" role="1bW5cS">
+                    <node concept="3clFbF" id="4IIl9K1fYoH" role="3cqZAp">
+                      <node concept="2OqwBi" id="4IIl9K1fYoI" role="3clFbG">
+                        <node concept="2OqwBi" id="4IIl9K1fYoJ" role="2Oq$k0">
+                          <node concept="37vLTw" id="4IIl9K1fYoK" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1fYoO" resolve="it" />
+                          </node>
+                          <node concept="3TrcHB" id="4IIl9K1fYoL" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="4IIl9K1fYoM" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                          <node concept="Xl_RD" id="4IIl9K1fYoN" role="37wK5m">
+                            <property role="Xl_RC" value="PreTaskHook" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="4IIl9K1fYoO" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="4IIl9K1fYoP" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="4IIl9K1fYoQ" role="3clFbx">
+              <node concept="3clFbF" id="4IIl9K1fYoR" role="3cqZAp">
+                <node concept="2OqwBi" id="4IIl9K1fYoS" role="3clFbG">
+                  <node concept="37vLTw" id="4IIl9K1fYoT" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1fYoq" resolve="preTaskHooks" />
+                  </node>
+                  <node concept="TSZUe" id="4IIl9K1fYoU" role="2OqNvi">
+                    <node concept="1PxgMI" id="4IIl9K1fYoV" role="25WWJ7">
+                      <ref role="1PxNhF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+                      <node concept="2OqwBi" id="4IIl9K1fYoW" role="1PxMeX">
+                        <node concept="2OqwBi" id="4IIl9K1fYoX" role="2Oq$k0">
+                          <node concept="2GrUjf" id="4IIl9K1fYoY" role="2Oq$k0">
+                            <ref role="2Gs0qQ" node="4IIl9K1fYow" resolve="impl" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1fYoZ" role="2OqNvi">
+                            <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                          </node>
+                        </node>
+                        <node concept="1z4cxt" id="4IIl9K1fYp0" role="2OqNvi">
+                          <node concept="1bVj0M" id="4IIl9K1fYp1" role="23t8la">
+                            <node concept="3clFbS" id="4IIl9K1fYp2" role="1bW5cS">
+                              <node concept="3clFbF" id="4IIl9K1fYp3" role="3cqZAp">
+                                <node concept="2OqwBi" id="4IIl9K1fYp4" role="3clFbG">
+                                  <node concept="2OqwBi" id="4IIl9K1fYp5" role="2Oq$k0">
+                                    <node concept="37vLTw" id="4IIl9K1fYp6" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="4IIl9K1fYpa" resolve="it" />
+                                    </node>
+                                    <node concept="3TrcHB" id="4IIl9K1fYp7" role="2OqNvi">
+                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="4IIl9K1fYp8" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                    <node concept="Xl_RD" id="4IIl9K1fYp9" role="37wK5m">
+                                      <property role="Xl_RC" value="PreTaskHook" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="Rh6nW" id="4IIl9K1fYpa" role="1bW2Oz">
+                              <property role="TrG5h" value="it" />
+                              <node concept="2jxLKc" id="4IIl9K1fYpb" role="1tU5fm" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4IIl9K1fYpc" role="3cqZAp">
+        <node concept="3clFbS" id="4IIl9K1fYpd" role="3clFbx">
+          <node concept="3clFbJ" id="4IIl9K1fYpe" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1fYpf" role="3clFbx">
+              <node concept="2MkqsV" id="4IIl9K1fYpg" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1fYph" role="2MkJ7o">
+                  <property role="Xl_RC" value="You enabled PreTaskHook in OilFile but no corresponding function." />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1fYpi" role="2OEOjV">
+                  <node concept="2OqwBi" id="4IIl9K1fYpj" role="2Oq$k0">
+                    <node concept="2OqwBi" id="4IIl9K1fYpk" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1fYpl" role="2Oq$k0">
+                        <node concept="1YBJjd" id="4IIl9K1fYpm" role="2Oq$k0">
+                          <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                        </node>
+                        <node concept="2qgKlT" id="4IIl9K1fYpn" role="2OqNvi">
+                          <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="4IIl9K1fYpo" role="2OqNvi">
+                        <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                      </node>
+                    </node>
+                    <node concept="13MTOL" id="4IIl9K1fYpp" role="2OqNvi">
+                      <ref role="13MTZf" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                  <node concept="1z4cxt" id="4IIl9K1fYpq" role="2OqNvi">
+                    <node concept="1bVj0M" id="4IIl9K1fYpr" role="23t8la">
+                      <node concept="3clFbS" id="4IIl9K1fYps" role="1bW5cS">
+                        <node concept="3clFbF" id="4IIl9K1fYpt" role="3cqZAp">
+                          <node concept="2OqwBi" id="4IIl9K1fYpu" role="3clFbG">
+                            <node concept="37vLTw" id="4IIl9K1fYpv" role="2Oq$k0">
+                              <ref role="3cqZAo" node="4IIl9K1fYpx" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="4IIl9K1gbCm" role="2OqNvi">
+                              <ref role="3TsBF5" to="bwbq:1x4fgD94T$T" resolve="preTaskHook" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="4IIl9K1fYpx" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="4IIl9K1fYpy" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="4IIl9K1fYpz" role="3clFbw">
+              <node concept="3cmrfG" id="4IIl9K1fYp$" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="4IIl9K1fYp_" role="3uHU7B">
+                <node concept="37vLTw" id="4IIl9K1fYpA" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4IIl9K1fYoq" resolve="preTaskHooks" />
+                </node>
+                <node concept="34oBXx" id="4IIl9K1fYpB" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1fYpC" role="3clFbw">
+          <node concept="2OqwBi" id="4IIl9K1fYpD" role="2Oq$k0">
+            <node concept="1YBJjd" id="4IIl9K1fYpE" role="2Oq$k0">
+              <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+            </node>
+            <node concept="2qgKlT" id="4IIl9K1fYpF" role="2OqNvi">
+              <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+            </node>
+          </node>
+          <node concept="2HwmR7" id="4IIl9K1fYpG" role="2OqNvi">
+            <node concept="1bVj0M" id="4IIl9K1fYpH" role="23t8la">
+              <node concept="3clFbS" id="4IIl9K1fYpI" role="1bW5cS">
+                <node concept="3clFbF" id="4IIl9K1fYpJ" role="3cqZAp">
+                  <node concept="2OqwBi" id="4IIl9K1fYpK" role="3clFbG">
+                    <node concept="2OqwBi" id="4IIl9K1fYpL" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1fYpM" role="2Oq$k0">
+                        <node concept="37vLTw" id="4IIl9K1fYpN" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4IIl9K1fYpR" resolve="it" />
+                        </node>
+                        <node concept="3TrEf2" id="4IIl9K1fYpO" role="2OqNvi">
+                          <ref role="3Tt5mk" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="4IIl9K1fYpP" role="2OqNvi">
+                        <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="4IIl9K1gbKW" role="2OqNvi">
+                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$T" resolve="preTaskHook" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="4IIl9K1fYpR" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="4IIl9K1fYpS" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="9aQIb" id="4IIl9K1fYpT" role="9aQIa">
+          <node concept="3clFbS" id="4IIl9K1fYpU" role="9aQI4">
+            <node concept="3clFbJ" id="4IIl9K1fYpV" role="3cqZAp">
+              <node concept="3eOSWO" id="4IIl9K1fYpW" role="3clFbw">
+                <node concept="3cmrfG" id="4IIl9K1fYpX" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1fYpY" role="3uHU7B">
+                  <node concept="37vLTw" id="4IIl9K1fYpZ" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1fYoq" resolve="preTaskHooks" />
+                  </node>
+                  <node concept="34oBXx" id="4IIl9K1fYq0" role="2OqNvi" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="4IIl9K1fYq1" role="3clFbx">
+                <node concept="2MkqsV" id="4IIl9K1fYq2" role="3cqZAp">
+                  <node concept="Xl_RD" id="4IIl9K1fYq3" role="2MkJ7o">
+                    <property role="Xl_RC" value="You declared PreTaskHook Function, so enable in OilFile!" />
+                  </node>
+                  <node concept="2OqwBi" id="4IIl9K1fYq4" role="2OEOjV">
+                    <node concept="2OqwBi" id="4IIl9K1fYq5" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1fYq6" role="2Oq$k0">
+                        <node concept="2OqwBi" id="4IIl9K1fYq7" role="2Oq$k0">
+                          <node concept="1YBJjd" id="4IIl9K1fYq8" role="2Oq$k0">
+                            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1fYq9" role="2OqNvi">
+                            <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                          </node>
+                        </node>
+                        <node concept="13MTOL" id="4IIl9K1fYqa" role="2OqNvi">
+                          <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="4IIl9K1fYqb" role="2OqNvi" />
+                    </node>
+                    <node concept="3TrEf2" id="4IIl9K1fYqc" role="2OqNvi">
+                      <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1fYqd" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1fYqe" role="2Gsz3X">
+          <property role="TrG5h" value="preTaskHook" />
+        </node>
+        <node concept="37vLTw" id="4IIl9K1fYqf" role="2GsD0m">
+          <ref role="3cqZAo" node="4IIl9K1fYoq" resolve="preTaskHooks" />
+        </node>
+        <node concept="3clFbS" id="4IIl9K1fYqg" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1jDqA" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1jDqB" role="3clFbx">
+              <node concept="a7r0C" id="4IIl9K1jDqC" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1jDqD" role="a7wSD">
+                  <property role="Xl_RC" value="Did you want to implement kernel.h-&gt;ShutdownHook?" />
+                </node>
+                <node concept="2GrUjf" id="4IIl9K1jDIk" role="2OEOjV">
+                  <ref role="2Gs0qQ" node="4IIl9K1fYqe" resolve="preTaskHook" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="4IIl9K1jDqF" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1jDqG" role="3fr31v">
+                <node concept="2OqwBi" id="4IIl9K1jDqH" role="2Oq$k0">
+                  <node concept="2GrUjf" id="4IIl9K1jDyc" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="4IIl9K1fYqe" resolve="preTaskHook" />
+                  </node>
+                  <node concept="3Tsc0h" id="4IIl9K1jDqJ" role="2OqNvi">
+                    <ref role="3TtcxE" to="tpck:4uZwTti3__2" />
+                  </node>
+                </node>
+                <node concept="2HwmR7" id="4IIl9K1jDqK" role="2OqNvi">
+                  <node concept="1bVj0M" id="4IIl9K1jDqL" role="23t8la">
+                    <node concept="3clFbS" id="4IIl9K1jDqM" role="1bW5cS">
+                      <node concept="3clFbF" id="4IIl9K1jDqN" role="3cqZAp">
+                        <node concept="2OqwBi" id="4IIl9K1jDqO" role="3clFbG">
+                          <node concept="37vLTw" id="4IIl9K1jDqP" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1jDqS" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="4IIl9K1jDqQ" role="2OqNvi">
+                            <node concept="chp4Y" id="4IIl9K1jDqR" role="cj9EA">
+                              <ref role="cht4Q" to="x27k:7x9scHw5pU_" resolve="ImplementsExternalFunction" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="4IIl9K1jDqS" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="4IIl9K1jDqT" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="1a22ASGdWLD" role="3cqZAp" />
+      <node concept="3SKdUt" id="4IIl9K1g6wl" role="3cqZAp">
+        <node concept="3SKdUq" id="4IIl9K1g6wm" role="3SKWNk">
+          <property role="3SKdUp" value="PostTaskHook" />
+        </node>
+      </node>
+      <node concept="3cpWs8" id="4IIl9K1g6wn" role="3cqZAp">
+        <node concept="3cpWsn" id="4IIl9K1g6wo" role="3cpWs9">
+          <property role="TrG5h" value="postTaskHooks" />
+          <node concept="2I9FWS" id="4IIl9K1g6wp" role="1tU5fm">
+            <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+          </node>
+          <node concept="2ShNRf" id="4IIl9K1g6wq" role="33vP2m">
+            <node concept="2T8Vx0" id="4IIl9K1g6wr" role="2ShVmc">
+              <node concept="2I9FWS" id="4IIl9K1g6ws" role="2T96Bj">
+                <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1g6wt" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1g6wu" role="2Gsz3X">
+          <property role="TrG5h" value="impl" />
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1g6wv" role="2GsD0m">
+          <node concept="1YBJjd" id="4IIl9K1g6ww" role="2Oq$k0">
+            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+          </node>
+          <node concept="2qgKlT" id="4IIl9K1g6wx" role="2OqNvi">
+            <ref role="37wK5l" to="ahli:7RiewQ_lHPf" resolve="referencedImplModules" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4IIl9K1g6wy" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1g6wz" role="3cqZAp">
+            <node concept="2OqwBi" id="4IIl9K1g6w$" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1g6w_" role="2Oq$k0">
+                <node concept="2GrUjf" id="4IIl9K1g6wA" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="4IIl9K1g6wu" resolve="impl" />
+                </node>
+                <node concept="2qgKlT" id="4IIl9K1g6wB" role="2OqNvi">
+                  <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                </node>
+              </node>
+              <node concept="2HwmR7" id="4IIl9K1g6wC" role="2OqNvi">
+                <node concept="1bVj0M" id="4IIl9K1g6wD" role="23t8la">
+                  <node concept="3clFbS" id="4IIl9K1g6wE" role="1bW5cS">
+                    <node concept="3clFbF" id="4IIl9K1g6wF" role="3cqZAp">
+                      <node concept="2OqwBi" id="4IIl9K1g6wG" role="3clFbG">
+                        <node concept="2OqwBi" id="4IIl9K1g6wH" role="2Oq$k0">
+                          <node concept="37vLTw" id="4IIl9K1g6wI" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1g6wM" resolve="it" />
+                          </node>
+                          <node concept="3TrcHB" id="4IIl9K1g6wJ" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="4IIl9K1g6wK" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                          <node concept="Xl_RD" id="4IIl9K1g6wL" role="37wK5m">
+                            <property role="Xl_RC" value="PostTaskHook" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="4IIl9K1g6wM" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="4IIl9K1g6wN" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="4IIl9K1g6wO" role="3clFbx">
+              <node concept="3clFbF" id="4IIl9K1g6wP" role="3cqZAp">
+                <node concept="2OqwBi" id="4IIl9K1g6wQ" role="3clFbG">
+                  <node concept="37vLTw" id="4IIl9K1g6wR" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1g6wo" resolve="postTaskHooks" />
+                  </node>
+                  <node concept="TSZUe" id="4IIl9K1g6wS" role="2OqNvi">
+                    <node concept="1PxgMI" id="4IIl9K1g6wT" role="25WWJ7">
+                      <ref role="1PxNhF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+                      <node concept="2OqwBi" id="4IIl9K1g6wU" role="1PxMeX">
+                        <node concept="2OqwBi" id="4IIl9K1g6wV" role="2Oq$k0">
+                          <node concept="2GrUjf" id="4IIl9K1g6wW" role="2Oq$k0">
+                            <ref role="2Gs0qQ" node="4IIl9K1g6wu" resolve="impl" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1g6wX" role="2OqNvi">
+                            <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                          </node>
+                        </node>
+                        <node concept="1z4cxt" id="4IIl9K1g6wY" role="2OqNvi">
+                          <node concept="1bVj0M" id="4IIl9K1g6wZ" role="23t8la">
+                            <node concept="3clFbS" id="4IIl9K1g6x0" role="1bW5cS">
+                              <node concept="3clFbF" id="4IIl9K1g6x1" role="3cqZAp">
+                                <node concept="2OqwBi" id="4IIl9K1g6x2" role="3clFbG">
+                                  <node concept="2OqwBi" id="4IIl9K1g6x3" role="2Oq$k0">
+                                    <node concept="37vLTw" id="4IIl9K1g6x4" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="4IIl9K1g6x8" resolve="it" />
+                                    </node>
+                                    <node concept="3TrcHB" id="4IIl9K1g6x5" role="2OqNvi">
+                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="4IIl9K1g6x6" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                    <node concept="Xl_RD" id="4IIl9K1g6x7" role="37wK5m">
+                                      <property role="Xl_RC" value="PostTaskHook" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="Rh6nW" id="4IIl9K1g6x8" role="1bW2Oz">
+                              <property role="TrG5h" value="it" />
+                              <node concept="2jxLKc" id="4IIl9K1g6x9" role="1tU5fm" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4IIl9K1g6xa" role="3cqZAp">
+        <node concept="3clFbS" id="4IIl9K1g6xb" role="3clFbx">
+          <node concept="3clFbJ" id="4IIl9K1g6xc" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1g6xd" role="3clFbx">
+              <node concept="2MkqsV" id="4IIl9K1g6xe" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1g6xf" role="2MkJ7o">
+                  <property role="Xl_RC" value="You enabled PostTaskHook in OilFile but no corresponding function." />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1g6xg" role="2OEOjV">
+                  <node concept="2OqwBi" id="4IIl9K1g6xh" role="2Oq$k0">
+                    <node concept="2OqwBi" id="4IIl9K1g6xi" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1g6xj" role="2Oq$k0">
+                        <node concept="1YBJjd" id="4IIl9K1g6xk" role="2Oq$k0">
+                          <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                        </node>
+                        <node concept="2qgKlT" id="4IIl9K1g6xl" role="2OqNvi">
+                          <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="4IIl9K1g6xm" role="2OqNvi">
+                        <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                      </node>
+                    </node>
+                    <node concept="13MTOL" id="4IIl9K1g6xn" role="2OqNvi">
+                      <ref role="13MTZf" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                  <node concept="1z4cxt" id="4IIl9K1g6xo" role="2OqNvi">
+                    <node concept="1bVj0M" id="4IIl9K1g6xp" role="23t8la">
+                      <node concept="3clFbS" id="4IIl9K1g6xq" role="1bW5cS">
+                        <node concept="3clFbF" id="4IIl9K1g6xr" role="3cqZAp">
+                          <node concept="2OqwBi" id="4IIl9K1g6xs" role="3clFbG">
+                            <node concept="37vLTw" id="4IIl9K1g6xt" role="2Oq$k0">
+                              <ref role="3cqZAo" node="4IIl9K1g6xv" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="4IIl9K1gcbe" role="2OqNvi">
+                              <ref role="3TsBF5" to="bwbq:1x4fgD94T$Z" resolve="postTaskHook" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="4IIl9K1g6xv" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="4IIl9K1g6xw" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="4IIl9K1g6xx" role="3clFbw">
+              <node concept="3cmrfG" id="4IIl9K1g6xy" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="4IIl9K1g6xz" role="3uHU7B">
+                <node concept="37vLTw" id="4IIl9K1g6x$" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4IIl9K1g6wo" resolve="postTaskHooks" />
+                </node>
+                <node concept="34oBXx" id="4IIl9K1g6x_" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1g6xA" role="3clFbw">
+          <node concept="2OqwBi" id="4IIl9K1g6xB" role="2Oq$k0">
+            <node concept="1YBJjd" id="4IIl9K1g6xC" role="2Oq$k0">
+              <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+            </node>
+            <node concept="2qgKlT" id="4IIl9K1g6xD" role="2OqNvi">
+              <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+            </node>
+          </node>
+          <node concept="2HwmR7" id="4IIl9K1g6xE" role="2OqNvi">
+            <node concept="1bVj0M" id="4IIl9K1g6xF" role="23t8la">
+              <node concept="3clFbS" id="4IIl9K1g6xG" role="1bW5cS">
+                <node concept="3clFbF" id="4IIl9K1g6xH" role="3cqZAp">
+                  <node concept="2OqwBi" id="4IIl9K1g6xI" role="3clFbG">
+                    <node concept="2OqwBi" id="4IIl9K1g6xJ" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1g6xK" role="2Oq$k0">
+                        <node concept="37vLTw" id="4IIl9K1g6xL" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4IIl9K1g6xP" resolve="it" />
+                        </node>
+                        <node concept="3TrEf2" id="4IIl9K1g6xM" role="2OqNvi">
+                          <ref role="3Tt5mk" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="4IIl9K1g6xN" role="2OqNvi">
+                        <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="4IIl9K1gbWu" role="2OqNvi">
+                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$Z" resolve="postTaskHook" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="4IIl9K1g6xP" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="4IIl9K1g6xQ" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="9aQIb" id="4IIl9K1g6xR" role="9aQIa">
+          <node concept="3clFbS" id="4IIl9K1g6xS" role="9aQI4">
+            <node concept="3clFbJ" id="4IIl9K1g6xT" role="3cqZAp">
+              <node concept="3eOSWO" id="4IIl9K1g6xU" role="3clFbw">
+                <node concept="3cmrfG" id="4IIl9K1g6xV" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1g6xW" role="3uHU7B">
+                  <node concept="37vLTw" id="4IIl9K1g6xX" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1g6wo" resolve="postTaskHooks" />
+                  </node>
+                  <node concept="34oBXx" id="4IIl9K1g6xY" role="2OqNvi" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="4IIl9K1g6xZ" role="3clFbx">
+                <node concept="2MkqsV" id="4IIl9K1g6y0" role="3cqZAp">
+                  <node concept="Xl_RD" id="4IIl9K1g6y1" role="2MkJ7o">
+                    <property role="Xl_RC" value="You declared PostTaskHook Function, so enable in OilFile!" />
+                  </node>
+                  <node concept="2OqwBi" id="4IIl9K1g6y2" role="2OEOjV">
+                    <node concept="2OqwBi" id="4IIl9K1g6y3" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1g6y4" role="2Oq$k0">
+                        <node concept="2OqwBi" id="4IIl9K1g6y5" role="2Oq$k0">
+                          <node concept="1YBJjd" id="4IIl9K1g6y6" role="2Oq$k0">
+                            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1g6y7" role="2OqNvi">
+                            <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                          </node>
+                        </node>
+                        <node concept="13MTOL" id="4IIl9K1g6y8" role="2OqNvi">
+                          <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="4IIl9K1g6y9" role="2OqNvi" />
+                    </node>
+                    <node concept="3TrEf2" id="4IIl9K1g6ya" role="2OqNvi">
+                      <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1g6yb" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1g6yc" role="2Gsz3X">
+          <property role="TrG5h" value="postTaskHook" />
+        </node>
+        <node concept="37vLTw" id="4IIl9K1g6yd" role="2GsD0m">
+          <ref role="3cqZAo" node="4IIl9K1g6wo" resolve="postTaskHooks" />
+        </node>
+        <node concept="3clFbS" id="4IIl9K1g6ye" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1jDUt" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1jDUu" role="3clFbx">
+              <node concept="a7r0C" id="4IIl9K1jDUv" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1jDUw" role="a7wSD">
+                  <property role="Xl_RC" value="Did you want to implement kernel.h-&gt;ShutdownHook?" />
+                </node>
+                <node concept="2GrUjf" id="4IIl9K1jEg_" role="2OEOjV">
+                  <ref role="2Gs0qQ" node="4IIl9K1g6yc" resolve="postTaskHook" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="4IIl9K1jDUy" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1jDUz" role="3fr31v">
+                <node concept="2OqwBi" id="4IIl9K1jDU$" role="2Oq$k0">
+                  <node concept="2GrUjf" id="4IIl9K1jE23" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="4IIl9K1g6yc" resolve="postTaskHook" />
+                  </node>
+                  <node concept="3Tsc0h" id="4IIl9K1jDUA" role="2OqNvi">
+                    <ref role="3TtcxE" to="tpck:4uZwTti3__2" />
+                  </node>
+                </node>
+                <node concept="2HwmR7" id="4IIl9K1jDUB" role="2OqNvi">
+                  <node concept="1bVj0M" id="4IIl9K1jDUC" role="23t8la">
+                    <node concept="3clFbS" id="4IIl9K1jDUD" role="1bW5cS">
+                      <node concept="3clFbF" id="4IIl9K1jDUE" role="3cqZAp">
+                        <node concept="2OqwBi" id="4IIl9K1jDUF" role="3clFbG">
+                          <node concept="37vLTw" id="4IIl9K1jDUG" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1jDUJ" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="4IIl9K1jDUH" role="2OqNvi">
+                            <node concept="chp4Y" id="4IIl9K1jDUI" role="cj9EA">
+                              <ref role="cht4Q" to="x27k:7x9scHw5pU_" resolve="ImplementsExternalFunction" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="4IIl9K1jDUJ" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="4IIl9K1jDUK" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="4IIl9K1fVXK" role="3cqZAp" />
+      <node concept="3SKdUt" id="4IIl9K1gcgk" role="3cqZAp">
+        <node concept="3SKdUq" id="4IIl9K1gcgl" role="3SKWNk">
+          <property role="3SKdUp" value="ErrorHook" />
+        </node>
+      </node>
+      <node concept="3cpWs8" id="4IIl9K1gcgm" role="3cqZAp">
+        <node concept="3cpWsn" id="4IIl9K1gcgn" role="3cpWs9">
+          <property role="TrG5h" value="errorHooks" />
+          <node concept="2I9FWS" id="4IIl9K1gcgo" role="1tU5fm">
+            <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+          </node>
+          <node concept="2ShNRf" id="4IIl9K1gcgp" role="33vP2m">
+            <node concept="2T8Vx0" id="4IIl9K1gcgq" role="2ShVmc">
+              <node concept="2I9FWS" id="4IIl9K1gcgr" role="2T96Bj">
+                <ref role="2I9WkF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1gcgs" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1gcgt" role="2Gsz3X">
+          <property role="TrG5h" value="impl" />
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1gcgu" role="2GsD0m">
+          <node concept="1YBJjd" id="4IIl9K1gcgv" role="2Oq$k0">
+            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+          </node>
+          <node concept="2qgKlT" id="4IIl9K1gcgw" role="2OqNvi">
+            <ref role="37wK5l" to="ahli:7RiewQ_lHPf" resolve="referencedImplModules" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="4IIl9K1gcgx" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1gcgy" role="3cqZAp">
+            <node concept="2OqwBi" id="4IIl9K1gcgz" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1gcg$" role="2Oq$k0">
+                <node concept="2GrUjf" id="4IIl9K1gcg_" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="4IIl9K1gcgt" resolve="impl" />
+                </node>
+                <node concept="2qgKlT" id="4IIl9K1gcgA" role="2OqNvi">
+                  <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                </node>
+              </node>
+              <node concept="2HwmR7" id="4IIl9K1gcgB" role="2OqNvi">
+                <node concept="1bVj0M" id="4IIl9K1gcgC" role="23t8la">
+                  <node concept="3clFbS" id="4IIl9K1gcgD" role="1bW5cS">
+                    <node concept="3clFbF" id="4IIl9K1gcgE" role="3cqZAp">
+                      <node concept="2OqwBi" id="4IIl9K1gcgF" role="3clFbG">
+                        <node concept="2OqwBi" id="4IIl9K1gcgG" role="2Oq$k0">
+                          <node concept="37vLTw" id="4IIl9K1gcgH" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1gcgL" resolve="it" />
+                          </node>
+                          <node concept="3TrcHB" id="4IIl9K1gcgI" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="4IIl9K1gcgJ" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                          <node concept="Xl_RD" id="4IIl9K1gcgK" role="37wK5m">
+                            <property role="Xl_RC" value="ErrorHook" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Rh6nW" id="4IIl9K1gcgL" role="1bW2Oz">
+                    <property role="TrG5h" value="it" />
+                    <node concept="2jxLKc" id="4IIl9K1gcgM" role="1tU5fm" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="4IIl9K1gcgN" role="3clFbx">
+              <node concept="3clFbF" id="4IIl9K1gcgO" role="3cqZAp">
+                <node concept="2OqwBi" id="4IIl9K1gcgP" role="3clFbG">
+                  <node concept="37vLTw" id="4IIl9K1gcgQ" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1gcgn" resolve="errorHooks" />
+                  </node>
+                  <node concept="TSZUe" id="4IIl9K1gcgR" role="2OqNvi">
+                    <node concept="1PxgMI" id="4IIl9K1gcgS" role="25WWJ7">
+                      <ref role="1PxNhF" to="x27k:5_l8w1EmTvx" resolve="Function" />
+                      <node concept="2OqwBi" id="4IIl9K1gcgT" role="1PxMeX">
+                        <node concept="2OqwBi" id="4IIl9K1gcgU" role="2Oq$k0">
+                          <node concept="2GrUjf" id="4IIl9K1gcgV" role="2Oq$k0">
+                            <ref role="2Gs0qQ" node="4IIl9K1gcgt" resolve="impl" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1gcgW" role="2OqNvi">
+                            <ref role="37wK5l" to="qd6m:5DwX9xlFNJe" resolve="flattenedContents" />
+                          </node>
+                        </node>
+                        <node concept="1z4cxt" id="4IIl9K1gcgX" role="2OqNvi">
+                          <node concept="1bVj0M" id="4IIl9K1gcgY" role="23t8la">
+                            <node concept="3clFbS" id="4IIl9K1gcgZ" role="1bW5cS">
+                              <node concept="3clFbF" id="4IIl9K1gch0" role="3cqZAp">
+                                <node concept="2OqwBi" id="4IIl9K1gch1" role="3clFbG">
+                                  <node concept="2OqwBi" id="4IIl9K1gch2" role="2Oq$k0">
+                                    <node concept="37vLTw" id="4IIl9K1gch3" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="4IIl9K1gch7" resolve="it" />
+                                    </node>
+                                    <node concept="3TrcHB" id="4IIl9K1gch4" role="2OqNvi">
+                                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="4IIl9K1gch5" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                    <node concept="Xl_RD" id="4IIl9K1gch6" role="37wK5m">
+                                      <property role="Xl_RC" value="ErrorHook" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="Rh6nW" id="4IIl9K1gch7" role="1bW2Oz">
+                              <property role="TrG5h" value="it" />
+                              <node concept="2jxLKc" id="4IIl9K1gch8" role="1tU5fm" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbJ" id="4IIl9K1gch9" role="3cqZAp">
+        <node concept="3clFbS" id="4IIl9K1gcha" role="3clFbx">
+          <node concept="3clFbJ" id="4IIl9K1gchb" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1gchc" role="3clFbx">
+              <node concept="2MkqsV" id="4IIl9K1gchd" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1gche" role="2MkJ7o">
+                  <property role="Xl_RC" value="You enabled ErrorHook in OilFile but no corresponding function." />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1gchf" role="2OEOjV">
+                  <node concept="2OqwBi" id="4IIl9K1gchg" role="2Oq$k0">
+                    <node concept="2OqwBi" id="4IIl9K1gchh" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1gchi" role="2Oq$k0">
+                        <node concept="1YBJjd" id="4IIl9K1gchj" role="2Oq$k0">
+                          <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                        </node>
+                        <node concept="2qgKlT" id="4IIl9K1gchk" role="2OqNvi">
+                          <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="4IIl9K1gchl" role="2OqNvi">
+                        <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                      </node>
+                    </node>
+                    <node concept="13MTOL" id="4IIl9K1gchm" role="2OqNvi">
+                      <ref role="13MTZf" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                  <node concept="1z4cxt" id="4IIl9K1gchn" role="2OqNvi">
+                    <node concept="1bVj0M" id="4IIl9K1gcho" role="23t8la">
+                      <node concept="3clFbS" id="4IIl9K1gchp" role="1bW5cS">
+                        <node concept="3clFbF" id="4IIl9K1gchq" role="3cqZAp">
+                          <node concept="2OqwBi" id="4IIl9K1gchr" role="3clFbG">
+                            <node concept="37vLTw" id="4IIl9K1gchs" role="2Oq$k0">
+                              <ref role="3cqZAo" node="4IIl9K1gchu" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="4IIl9K1giCx" role="2OqNvi">
+                              <ref role="3TsBF5" to="bwbq:1x4fgD94T$K" resolve="errorHook" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="4IIl9K1gchu" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="4IIl9K1gchv" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="4IIl9K1gchw" role="3clFbw">
+              <node concept="3cmrfG" id="4IIl9K1gchx" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="2OqwBi" id="4IIl9K1gchy" role="3uHU7B">
+                <node concept="37vLTw" id="4IIl9K1gchz" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4IIl9K1gcgn" resolve="errorHooks" />
+                </node>
+                <node concept="34oBXx" id="4IIl9K1gch$" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2OqwBi" id="4IIl9K1gch_" role="3clFbw">
+          <node concept="2OqwBi" id="4IIl9K1gchA" role="2Oq$k0">
+            <node concept="1YBJjd" id="4IIl9K1gchB" role="2Oq$k0">
+              <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+            </node>
+            <node concept="2qgKlT" id="4IIl9K1gchC" role="2OqNvi">
+              <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+            </node>
+          </node>
+          <node concept="2HwmR7" id="4IIl9K1gchD" role="2OqNvi">
+            <node concept="1bVj0M" id="4IIl9K1gchE" role="23t8la">
+              <node concept="3clFbS" id="4IIl9K1gchF" role="1bW5cS">
+                <node concept="3clFbF" id="4IIl9K1gchG" role="3cqZAp">
+                  <node concept="2OqwBi" id="4IIl9K1gchH" role="3clFbG">
+                    <node concept="2OqwBi" id="4IIl9K1gchI" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1gchJ" role="2Oq$k0">
+                        <node concept="37vLTw" id="4IIl9K1gchK" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4IIl9K1gchO" resolve="it" />
+                        </node>
+                        <node concept="3TrEf2" id="4IIl9K1gchL" role="2OqNvi">
+                          <ref role="3Tt5mk" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="4IIl9K1gchM" role="2OqNvi">
+                        <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="4IIl9K1giL7" role="2OqNvi">
+                      <ref role="3TsBF5" to="bwbq:1x4fgD94T$K" resolve="errorHook" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="Rh6nW" id="4IIl9K1gchO" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="2jxLKc" id="4IIl9K1gchP" role="1tU5fm" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="9aQIb" id="4IIl9K1gchQ" role="9aQIa">
+          <node concept="3clFbS" id="4IIl9K1gchR" role="9aQI4">
+            <node concept="3clFbJ" id="4IIl9K1gchS" role="3cqZAp">
+              <node concept="3eOSWO" id="4IIl9K1gchT" role="3clFbw">
+                <node concept="3cmrfG" id="4IIl9K1gchU" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="2OqwBi" id="4IIl9K1gchV" role="3uHU7B">
+                  <node concept="37vLTw" id="4IIl9K1gchW" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4IIl9K1gcgn" resolve="errorHooks" />
+                  </node>
+                  <node concept="34oBXx" id="4IIl9K1gchX" role="2OqNvi" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="4IIl9K1gchY" role="3clFbx">
+                <node concept="2MkqsV" id="4IIl9K1gchZ" role="3cqZAp">
+                  <node concept="Xl_RD" id="4IIl9K1gci0" role="2MkJ7o">
+                    <property role="Xl_RC" value="You declared ErrorHook Function, so enable in OilFile!" />
+                  </node>
+                  <node concept="2OqwBi" id="4IIl9K1gci1" role="2OEOjV">
+                    <node concept="2OqwBi" id="4IIl9K1gci2" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4IIl9K1gci3" role="2Oq$k0">
+                        <node concept="2OqwBi" id="4IIl9K1gci4" role="2Oq$k0">
+                          <node concept="1YBJjd" id="4IIl9K1gci5" role="2Oq$k0">
+                            <ref role="1YBMHb" node="4EZxVF6oUP7" resolve="osekExecutable" />
+                          </node>
+                          <node concept="2qgKlT" id="4IIl9K1gci6" role="2OqNvi">
+                            <ref role="37wK5l" to="7loq:7JdyDzjneDe" resolve="referencedOilFiles" />
+                          </node>
+                        </node>
+                        <node concept="13MTOL" id="4IIl9K1gci7" role="2OqNvi">
+                          <ref role="13MTZf" to="bwbq:7FCpXS_VYUZ" />
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="4IIl9K1gci8" role="2OqNvi" />
+                    </node>
+                    <node concept="3TrEf2" id="4IIl9K1gci9" role="2OqNvi">
+                      <ref role="3Tt5mk" to="bwbq:1x4fgD956aq" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2Gpval" id="4IIl9K1gcia" role="3cqZAp">
+        <node concept="2GrKxI" id="4IIl9K1gcib" role="2Gsz3X">
+          <property role="TrG5h" value="errorHook" />
+        </node>
+        <node concept="37vLTw" id="4IIl9K1gcic" role="2GsD0m">
+          <ref role="3cqZAo" node="4IIl9K1gcgn" resolve="errorHooks" />
+        </node>
+        <node concept="3clFbS" id="4IIl9K1gcid" role="2LFqv$">
+          <node concept="3clFbJ" id="4IIl9K1jEv8" role="3cqZAp">
+            <node concept="3clFbS" id="4IIl9K1jEv9" role="3clFbx">
+              <node concept="a7r0C" id="4IIl9K1jEva" role="3cqZAp">
+                <node concept="Xl_RD" id="4IIl9K1jEvb" role="a7wSD">
+                  <property role="Xl_RC" value="Did you want to implement kernel.h-&gt;ShutdownHook?" />
+                </node>
+                <node concept="2GrUjf" id="4IIl9K1jERE" role="2OEOjV">
+                  <ref role="2Gs0qQ" node="4IIl9K1gcib" resolve="errorHook" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="4IIl9K1jEvd" role="3clFbw">
+              <node concept="2OqwBi" id="4IIl9K1jEve" role="3fr31v">
+                <node concept="2OqwBi" id="4IIl9K1jEvf" role="2Oq$k0">
+                  <node concept="2GrUjf" id="4IIl9K1jEAI" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="4IIl9K1gcib" resolve="errorHook" />
+                  </node>
+                  <node concept="3Tsc0h" id="4IIl9K1jEvh" role="2OqNvi">
+                    <ref role="3TtcxE" to="tpck:4uZwTti3__2" />
+                  </node>
+                </node>
+                <node concept="2HwmR7" id="4IIl9K1jEvi" role="2OqNvi">
+                  <node concept="1bVj0M" id="4IIl9K1jEvj" role="23t8la">
+                    <node concept="3clFbS" id="4IIl9K1jEvk" role="1bW5cS">
+                      <node concept="3clFbF" id="4IIl9K1jEvl" role="3cqZAp">
+                        <node concept="2OqwBi" id="4IIl9K1jEvm" role="3clFbG">
+                          <node concept="37vLTw" id="4IIl9K1jEvn" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4IIl9K1jEvq" resolve="it" />
+                          </node>
+                          <node concept="1mIQ4w" id="4IIl9K1jEvo" role="2OqNvi">
+                            <node concept="chp4Y" id="4IIl9K1jEvp" role="cj9EA">
+                              <ref role="cht4Q" to="x27k:7x9scHw5pU_" resolve="ImplementsExternalFunction" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="4IIl9K1jEvq" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="4IIl9K1jEvr" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbH" id="4IIl9K1fW5i" role="3cqZAp" />
+      <node concept="3clFbH" id="4IIl9K1fX4T" role="3cqZAp" />
       <node concept="3SKdUt" id="1Bd1FdQVu4J" role="3cqZAp">
         <node concept="3SKdUq" id="1Bd1FdQVu4L" role="3SKWNk">
           <property role="3SKdUp" value="check for unique EventMasks" />
-        </node>
-      </node>
-      <node concept="3SKdUt" id="1Bd1FdR3Wni" role="3cqZAp">
-        <node concept="3SKdUq" id="1Bd1FdR3Wnk" role="3SKWNk">
-          <property role="3SKdUp" value="TODO: funktioniert leider nicht wie gewünscht" />
         </node>
       </node>
       <node concept="3cpWs8" id="1Bd1FdQVuQc" role="3cqZAp">

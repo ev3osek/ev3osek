@@ -9,37 +9,37 @@
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  *  Copyright (C) 2004 by Witz Corporation, JAPAN
  * 
- *  ã‹L’˜ìŒ ŽÒ‚ÍCˆÈ‰º‚Ì (1)`(4) ‚ÌðŒ‚©CFree Software Foundation 
- *  ‚É‚æ‚Á‚ÄŒö•\‚³‚ê‚Ä‚¢‚é GNU General Public License ‚Ì Version 2 ‚É‹L
- *  q‚³‚ê‚Ä‚¢‚éðŒ‚ð–ž‚½‚·ê‡‚ÉŒÀ‚èC–{ƒ\ƒtƒgƒEƒFƒAi–{ƒ\ƒtƒgƒEƒFƒA
- *  ‚ð‰ü•Ï‚µ‚½‚à‚Ì‚ðŠÜ‚ÞDˆÈ‰º“¯‚¶j‚ðŽg—pE•¡»E‰ü•ÏEÄ”z•ziˆÈ‰ºC
- *  —˜—p‚ÆŒÄ‚Ôj‚·‚é‚±‚Æ‚ð–³ž‚Å‹–‘ø‚·‚éD
- *  (1) –{ƒ\ƒtƒgƒEƒFƒA‚ðƒ\[ƒXƒR[ƒh‚ÌŒ`‚Å—˜—p‚·‚éê‡‚É‚ÍCã‹L‚Ì’˜ì
- *      Œ •\Ž¦C‚±‚Ì—˜—pðŒ‚¨‚æ‚Ñ‰º‹L‚Ì–³•ÛØ‹K’è‚ªC‚»‚Ì‚Ü‚Ü‚ÌŒ`‚Åƒ\[
- *      ƒXƒR[ƒh’†‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚é‚±‚ÆD
- *  (2) –{ƒ\ƒtƒgƒEƒFƒA‚ðCƒ‰ƒCƒuƒ‰ƒŠŒ`Ž®‚È‚ÇC‘¼‚Ìƒ\ƒtƒgƒEƒFƒAŠJ”­‚ÉŽg
- *      —p‚Å‚«‚éŒ`‚ÅÄ”z•z‚·‚éê‡‚É‚ÍCÄ”z•z‚É”º‚¤ƒhƒLƒ…ƒƒ“ƒgi—˜—p
- *      ŽÒƒ}ƒjƒ…ƒAƒ‹‚È‚Çj‚ÉCã‹L‚Ì’˜ìŒ •\Ž¦C‚±‚Ì—˜—pðŒ‚¨‚æ‚Ñ‰º‹L
- *      ‚Ì–³•ÛØ‹K’è‚ðŒfÚ‚·‚é‚±‚ÆD
- *  (3) –{ƒ\ƒtƒgƒEƒFƒA‚ðC‹@Ší‚É‘g‚Ýž‚Þ‚È‚ÇC‘¼‚Ìƒ\ƒtƒgƒEƒFƒAŠJ”­‚ÉŽg
- *      —p‚Å‚«‚È‚¢Œ`‚ÅÄ”z•z‚·‚éê‡‚É‚ÍCŽŸ‚Ì‚¢‚¸‚ê‚©‚ÌðŒ‚ð–ž‚½‚·‚±
- *      ‚ÆD
- *    (a) Ä”z•z‚É”º‚¤ƒhƒLƒ…ƒƒ“ƒgi—˜—pŽÒƒ}ƒjƒ…ƒAƒ‹‚È‚Çj‚ÉCã‹L‚Ì’˜
- *        ìŒ •\Ž¦C‚±‚Ì—˜—pðŒ‚¨‚æ‚Ñ‰º‹L‚Ì–³•ÛØ‹K’è‚ðŒfÚ‚·‚é‚±‚ÆD
- *    (b) Ä”z•z‚ÌŒ`‘Ô‚ðC•Ê‚É’è‚ß‚é•û–@‚É‚æ‚Á‚ÄCTOPPERSƒvƒƒWƒFƒNƒg‚É
- *        •ñ‚·‚é‚±‚ÆD
- *  (4) –{ƒ\ƒtƒgƒEƒFƒA‚Ì—˜—p‚É‚æ‚è’¼Ú“I‚Ü‚½‚ÍŠÔÚ“I‚É¶‚¶‚é‚¢‚©‚È‚é‘¹
- *      ŠQ‚©‚ç‚àCã‹L’˜ìŒ ŽÒ‚¨‚æ‚ÑTOPPERSƒvƒƒWƒFƒNƒg‚ð–ÆÓ‚·‚é‚±‚ÆD
+ *  ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ìŒ ï¿½Ò‚ÍCï¿½È‰ï¿½ï¿½ï¿½ (1)ï¿½`(4) ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CFree Software Foundation 
+ *  ï¿½É‚ï¿½ï¿½ï¿½ï¿½ÄŒï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ GNU General Public License ï¿½ï¿½ Version 2 ï¿½É‹L
+ *  ï¿½qï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ð–ž‚ï¿½ï¿½ï¿½ï¿½ê‡ï¿½ÉŒï¿½ï¿½ï¿½ï¿½Cï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½iï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½A
+ *  ï¿½ï¿½ï¿½ï¿½ï¿½Ï‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½Ü‚ÞDï¿½È‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½gï¿½pï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½ÏEï¿½Ä”zï¿½zï¿½iï¿½È‰ï¿½ï¿½C
+ *  ï¿½ï¿½ï¿½pï¿½ÆŒÄ‚Ôjï¿½ï¿½ï¿½é‚±ï¿½Æ‚ð–³ï¿½ï¿½Å‹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½D
+ *  (1) ï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ï¿½ï¿½\ï¿½[ï¿½Xï¿½Rï¿½[ï¿½hï¿½ÌŒ`ï¿½Å—ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ê‡ï¿½É‚ÍCï¿½ï¿½ï¿½Lï¿½Ì’ï¿½ï¿½ï¿½
+ *      ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ì—ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ‰ï¿½ï¿½Lï¿½Ì–ï¿½ï¿½ÛØ‹Kï¿½è‚ªï¿½Cï¿½ï¿½ï¿½Ì‚Ü‚Ü‚ÌŒ`ï¿½Åƒ\ï¿½[
+ *      ï¿½Xï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½ÉŠÜ‚Ü‚ï¿½ï¿½Ä‚ï¿½ï¿½é‚±ï¿½ÆD
+ *  (2) ï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Cï¿½uï¿½ï¿½ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½È‚ÇCï¿½ï¿½ï¿½Ìƒ\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Jï¿½ï¿½ï¿½ÉŽg
+ *      ï¿½pï¿½Å‚ï¿½ï¿½ï¿½ï¿½`ï¿½ÅÄ”zï¿½zï¿½ï¿½ï¿½ï¿½ï¿½ê‡ï¿½É‚ÍCï¿½Ä”zï¿½zï¿½É”ï¿½ï¿½ï¿½ï¿½hï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½iï¿½ï¿½ï¿½p
+ *      ï¿½Òƒ}ï¿½jï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚Çjï¿½ÉCï¿½ï¿½ï¿½Lï¿½Ì’ï¿½ï¿½ìŒ ï¿½\ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ì—ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ‰ï¿½ï¿½L
+ *      ï¿½Ì–ï¿½ï¿½ÛØ‹Kï¿½ï¿½ï¿½ï¿½ï¿½fï¿½Ú‚ï¿½ï¿½é‚±ï¿½ÆD
+ *  (3) ï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ï¿½ï¿½Cï¿½@ï¿½ï¿½ï¿½É‘gï¿½Ýï¿½ï¿½Þ‚È‚ÇCï¿½ï¿½ï¿½Ìƒ\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Jï¿½ï¿½ï¿½ÉŽg
+ *      ï¿½pï¿½Å‚ï¿½ï¿½È‚ï¿½ï¿½`ï¿½ÅÄ”zï¿½zï¿½ï¿½ï¿½ï¿½ï¿½ê‡ï¿½É‚ÍCï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½ï¿½ê‚©ï¿½Ìï¿½ï¿½ï¿½ï¿½ð–ž‚ï¿½ï¿½ï¿½ï¿½ï¿½
+ *      ï¿½ÆD
+ *    (a) ï¿½Ä”zï¿½zï¿½É”ï¿½ï¿½ï¿½ï¿½hï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½iï¿½ï¿½ï¿½pï¿½Òƒ}ï¿½jï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½È‚Çjï¿½ÉCï¿½ï¿½ï¿½Lï¿½Ì’ï¿½
+ *        ï¿½ìŒ ï¿½\ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ì—ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ‰ï¿½ï¿½Lï¿½Ì–ï¿½ï¿½ÛØ‹Kï¿½ï¿½ï¿½ï¿½ï¿½fï¿½Ú‚ï¿½ï¿½é‚±ï¿½ÆD
+ *    (b) ï¿½Ä”zï¿½zï¿½ÌŒ`ï¿½Ô‚ï¿½ï¿½Cï¿½Ê‚É’ï¿½ï¿½ß‚ï¿½ï¿½ï¿½ï¿½@ï¿½É‚ï¿½ï¿½ï¿½ï¿½ÄCTOPPERSï¿½vï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½
+ *        ï¿½ñ‚ï¿½ï¿½é‚±ï¿½ÆD
+ *  (4) ï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Ì—ï¿½ï¿½pï¿½É‚ï¿½ï¿½è’¼ï¿½Ú“Iï¿½Ü‚ï¿½ï¿½ÍŠÔÚ“Iï¿½Éï¿½ï¿½ï¿½ï¿½é‚¢ï¿½ï¿½ï¿½È‚é‘¹
+ *      ï¿½Qï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ìŒ ï¿½Ò‚ï¿½ï¿½ï¿½ï¿½ï¿½TOPPERSï¿½vï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½ï¿½ÆÓ‚ï¿½ï¿½é‚±ï¿½ÆD
  * 
- *  –{ƒ\ƒtƒgƒEƒFƒA‚ÍC–³•ÛØ‚Å’ñ‹Ÿ‚³‚ê‚Ä‚¢‚é‚à‚Ì‚Å‚ ‚éDã‹L’˜ìŒ ŽÒ‚¨
- *  ‚æ‚ÑTOPPERSƒvƒƒWƒFƒNƒg‚ÍC–{ƒ\ƒtƒgƒEƒFƒA‚ÉŠÖ‚µ‚ÄC‚»‚Ì“K—p‰Â”\«‚à
- *  ŠÜ‚ß‚ÄC‚¢‚©‚È‚é•ÛØ‚às‚í‚È‚¢D‚Ü‚½C–{ƒ\ƒtƒgƒEƒFƒA‚Ì—˜—p‚É‚æ‚è’¼
- *  Ú“I‚Ü‚½‚ÍŠÔÚ“I‚É¶‚¶‚½‚¢‚©‚È‚é‘¹ŠQ‚ÉŠÖ‚µ‚Ä‚àC‚»‚ÌÓ”C‚ð•‰‚í‚È‚¢D
+ *  ï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ÍCï¿½ï¿½ï¿½ÛØ‚Å’ñ‹Ÿ‚ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Å‚ï¿½ï¿½ï¿½ï¿½Dï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ìŒ ï¿½Ò‚ï¿½
+ *  ï¿½ï¿½ï¿½ï¿½TOPPERSï¿½vï¿½ï¿½ï¿½Wï¿½Fï¿½Nï¿½gï¿½ÍCï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½ÉŠÖ‚ï¿½ï¿½ÄCï¿½ï¿½ï¿½Ì“Kï¿½pï¿½Â”\ï¿½ï¿½ï¿½ï¿½
+ *  ï¿½Ü‚ß‚ÄCï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ÛØ‚ï¿½ï¿½sï¿½ï¿½ï¿½È‚ï¿½ï¿½Dï¿½Ü‚ï¿½ï¿½Cï¿½{ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Ì—ï¿½ï¿½pï¿½É‚ï¿½ï¿½è’¼
+ *  ï¿½Ú“Iï¿½Ü‚ï¿½ï¿½ÍŠÔÚ“Iï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚é‘¹ï¿½Qï¿½ÉŠÖ‚ï¿½ï¿½Ä‚ï¿½ï¿½Cï¿½ï¿½ï¿½ÌÓ”Cï¿½ð•‰‚ï¿½ï¿½È‚ï¿½ï¿½D
  * 
  */
 
 /*
- *	ŽÀs§Œä‹@”\
+ *	ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½\
  */
 
 #include "osek_kernel.h"
@@ -51,28 +51,39 @@
 // Provided by ECRobot (osek_hook.c) and copied here to remove external reference
 void StartupHook(void) {
     leJOS_init();
+	UserStartupHook();
 }
 
+#ifndef PRETASKHOOK
 void PreTaskHook(void){}
+#endif
+#ifndef POSTTASKHOOK
 void PostTaskHook(void){}
+#endif
+#ifndef ERRORHOOK
 void ErrorHook(StatusType ercd){}
+#endif
+#ifndef SHUTDOWNHOOK
 void ShutdownHook(StatusType ercd){}
-
+#endif
+#ifndef STARTUPHOOK
+void UserStartupHook(void){}
+#endif
 
 /*
- *  OSŽÀs§Œä‚Ì‚½‚ß‚Ì•Ï”
+ *  OSï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ß‚Ì•Ïï¿½
  */
-UINT8		callevel;		/* ŽÀs’†‚ÌƒRƒ“ƒeƒLƒXƒg */
-AppModeType	appmode;		/* ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒ‚[ƒh */
+UINT8		callevel;		/* ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ÌƒRï¿½ï¿½ï¿½eï¿½Lï¿½Xï¿½g */
+AppModeType	appmode;		/* ï¿½Aï¿½vï¿½ï¿½ï¿½Pï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½h */
 
 /*
- *  ƒGƒ‰[ƒtƒbƒN‚É“n‚·î•ñ‚ðŠi”[‚·‚é•Ï”
+ *  ï¿½Gï¿½ï¿½ï¿½[ï¿½tï¿½bï¿½Nï¿½É“nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Ïï¿½
  */
 OSServiceIdType	_errorhook_svcid;
 _ErrorHook_Par	_errorhook_par1, _errorhook_par2, _errorhook_par3;
 
 /*
- *  ƒGƒ‰[ƒtƒbƒN‚ÌŒÄ‚Ño‚µ
+ *  ï¿½Gï¿½ï¿½ï¿½[ï¿½tï¿½bï¿½Nï¿½ÌŒÄ‚Ñoï¿½ï¿½
  */
 void
 call_errorhook(StatusType ercd, OSServiceIdType svcid)
@@ -82,10 +93,10 @@ call_errorhook(StatusType ercd, OSServiceIdType svcid)
 	volatile FP	errorhook_adr;
 	
 	/*
-	 *  CŒ¾Œê‚Ì‹KŠi‚Å‚ÍŠÖ”‚ÌƒAƒhƒŒƒX‚Í0‚É‚È‚ç‚È‚¢‚Æ‚¢‚¤‘O’ñ‚©‚ç,
-	 *  ƒRƒ“ƒpƒCƒ‰‚ÌÅ“K‰»‚É‚æ‚èErrorHook‚ÌƒAƒhƒŒƒX”»’è•ªŠò‚ª
-	 *  íœ‚³‚ê‚Ä‚µ‚Ü‚¤ê‡‚ª‚ ‚é‚½‚ß, volatileŽw’è‚µ‚½ƒ[ƒJƒ‹•Ï”‚É
-	 *  ƒAƒhƒŒƒX‚ð‘ã“ü‚µ‚Ä‚©‚ç”»’è‚µ‚Ä‚¢‚éD
+	 *  Cï¿½ï¿½ï¿½ï¿½ï¿½Ì‹Kï¿½iï¿½Å‚ÍŠÖï¿½ï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½0ï¿½É‚È‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Oï¿½ñ‚©‚ï¿½,
+	 *  ï¿½Rï¿½ï¿½ï¿½pï¿½Cï¿½ï¿½ï¿½ÌÅ“Kï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ErrorHookï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½è•ªï¿½ï¿½ï¿½ï¿½
+	 *  ï¿½íœï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ê‡ï¿½ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ï¿½, volatileï¿½wï¿½è‚µï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Jï¿½ï¿½ï¿½Ïï¿½ï¿½ï¿½
+	 *  ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ç”»ï¿½è‚µï¿½Ä‚ï¿½ï¿½ï¿½ï¿½D
 	*/
 	errorhook_adr = (FP)ErrorHook;
 	
@@ -94,7 +105,7 @@ call_errorhook(StatusType ercd, OSServiceIdType svcid)
 			_errorhook_svcid = svcid;
 			ErrorHook(ercd);
 		}
-		ShutdownOS(E_OS_CALLEVEL);	/* ‰ñ•œ•s‰Â”\ */
+		ShutdownOS(E_OS_CALLEVEL);	/* ï¿½ñ•œ•sï¿½Â”\ */
 	}
 	else {
 		if (( errorhook_adr != NULL) && (callevel != TCL_ERROR)) {
@@ -117,7 +128,7 @@ call_errorhook(StatusType ercd, OSServiceIdType svcid)
 }
 
 /*
- *  ƒ|ƒXƒgƒ^ƒXƒNƒtƒbƒN‚ÌŒÄ‚Ño‚µ
+ *  ï¿½|ï¿½Xï¿½gï¿½^ï¿½Xï¿½Nï¿½tï¿½bï¿½Nï¿½ÌŒÄ‚Ñoï¿½ï¿½
  */
 void
 call_posttaskhook(void)
@@ -132,7 +143,7 @@ call_posttaskhook(void)
 }
 
 /*
- *  ƒvƒŒƒ^ƒXƒNƒtƒbƒN‚ÌŒÄ‚Ño‚µ
+ *  ï¿½vï¿½ï¿½ï¿½^ï¿½Xï¿½Nï¿½tï¿½bï¿½Nï¿½ÌŒÄ‚Ñoï¿½ï¿½
  */
 void
 call_pretaskhook(void)
@@ -147,7 +158,7 @@ call_pretaskhook(void)
 }
 
 /*
- *  Œ»Ý‚ÌƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒ‚[ƒh‚ÌŽæ“¾
+ *  ï¿½ï¿½ï¿½Ý‚ÌƒAï¿½vï¿½ï¿½ï¿½Pï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ÌŽæ“¾
  */
 AppModeType
 GetActiveApplicationMode(void)
@@ -161,7 +172,7 @@ GetActiveApplicationMode(void)
 }
 
 /*
- *  OS‚Ì‹N“®
+ *  OSï¿½Ì‹Nï¿½ï¿½
  */
 void
 StartOS(AppModeType mode)
@@ -171,37 +182,37 @@ StartOS(AppModeType mode)
 	LOG_STAOS_ENTER(mode);
 
 	/*
-	 *  ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒ‚[ƒh‚ÌÝ’è
+	 *  ï¿½Aï¿½vï¿½ï¿½ï¿½Pï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ÌÝ’ï¿½
 	 */
 	appmode = mode;
 
 	/*
-	 *  ƒ^[ƒQƒbƒgˆË‘¶‚Ì‰Šú‰»
+	 *  ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½Ë‘ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	cpu_initialize();
 	sys_initialize();
 	tool_initialize();
 
 	/*
-	 *  Šeƒ‚ƒWƒ…[ƒ‹‚Ì‰Šú‰»
+	 *  ï¿½eï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	object_initialize();
 
 	/*
-	 *  StartupHook ‚ÌŒÄ‚Ño‚µ
+	 *  StartupHook ï¿½ÌŒÄ‚Ñoï¿½ï¿½
 	 *  
-	 *  CŒ¾Œê‚Ì‹KŠi‚Å‚ÍŠÖ”‚ÌƒAƒhƒŒƒX‚Í0‚É‚È‚ç‚È‚¢‚Æ‚¢‚¤‘O’ñ‚©‚ç,
-	 *  ƒRƒ“ƒpƒCƒ‰‚ÌÅ“K‰»‚É‚æ‚èStartupHook‚ÌƒAƒhƒŒƒX”»’è•ªŠò‚ª
-	 *  íœ‚³‚ê‚Ä‚µ‚Ü‚¤ê‡‚ª‚ ‚é‚½‚ß, volatileŽw’è‚µ‚½ƒ[ƒJƒ‹•Ï”‚É
-	 *  ƒAƒhƒŒƒX‚ð‘ã“ü‚µ‚Ä‚©‚ç”»’è‚µ‚Ä‚¢‚éD
+	 *  Cï¿½ï¿½ï¿½ï¿½ï¿½Ì‹Kï¿½iï¿½Å‚ÍŠÖï¿½ï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½0ï¿½É‚È‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Oï¿½ñ‚©‚ï¿½,
+	 *  ï¿½Rï¿½ï¿½ï¿½pï¿½Cï¿½ï¿½ï¿½ÌÅ“Kï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½StartupHookï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½è•ªï¿½ï¿½ï¿½ï¿½
+	 *  ï¿½íœï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ê‡ï¿½ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ï¿½, volatileï¿½wï¿½è‚µï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Jï¿½ï¿½ï¿½Ïï¿½ï¿½ï¿½
+	 *  ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ç”»ï¿½è‚µï¿½Ä‚ï¿½ï¿½ï¿½ï¿½D
 	 *
 	 */
 	startuphook_adr = (FP)StartupHook;
 	
 	if (startuphook_adr != NULL) {
 		/*
-		 *  StartupHook ‚Ì’†‚ÅCSuspendAllInterrupts ‚ªŒÄ‚Î‚ê
-		 *  ‚Ä‚à‘åä•v‚È‚æ‚¤‚ÉCsus_all_cnt ‚ð”ñƒ[ƒ‚É‚µ‚Ä‚¨‚­D
+		 *  StartupHook ï¿½Ì’ï¿½ï¿½ÅCSuspendAllInterrupts ï¿½ï¿½ï¿½Ä‚Î‚ï¿½
+		 *  ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½È‚æ‚¤ï¿½ÉCsus_all_cnt ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½É‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½D
 		 */
 		callevel = TCL_STARTUP;
 		sus_all_cnt++;
@@ -216,7 +227,7 @@ StartOS(AppModeType mode)
 }
 
 /*
- *  OS‚ÌI—¹
+ *  OSï¿½ÌIï¿½ï¿½
  */
 void
 ShutdownOS(StatusType ercd)
@@ -226,25 +237,25 @@ ShutdownOS(StatusType ercd)
 	LOG_STUTOS_ENTER(ercd);
 
 	/*
-	 *  ‚·‚×‚Ä‚ÌŠ„ž‚Ý‚ð‹ÖŽ~‚·‚é
+	 *  ï¿½ï¿½ï¿½×‚Ä‚ÌŠï¿½ï¿½ï¿½ï¿½Ý‚ï¿½ï¿½ÖŽ~ï¿½ï¿½ï¿½ï¿½
 	 */
         IntGlobalDisable();
 
 	/*
-	 *  ShutdownHook ‚ÌŒÄ‚Ño‚µ
+	 *  ShutdownHook ï¿½ÌŒÄ‚Ñoï¿½ï¿½
 	 *  
-	 *  CŒ¾Œê‚Ì‹KŠi‚Å‚ÍŠÖ”‚ÌƒAƒhƒŒƒX‚Í0‚É‚È‚ç‚È‚¢‚Æ‚¢‚¤‘O’ñ‚©‚ç,
-	 *  ƒRƒ“ƒpƒCƒ‰‚ÌÅ“K‰»‚É‚æ‚èShutdownHook‚ÌƒAƒhƒŒƒX”»’è•ªŠò‚ª
-	 *  íœ‚³‚ê‚Ä‚µ‚Ü‚¤ê‡‚ª‚ ‚é‚½‚ß, volatileŽw’è‚µ‚½ƒ[ƒJƒ‹•Ï”‚É
-	 *  ƒAƒhƒŒƒX‚ð‘ã“ü‚µ‚Ä‚©‚ç”»’è‚µ‚Ä‚¢‚éD
+	 *  Cï¿½ï¿½ï¿½ï¿½ï¿½Ì‹Kï¿½iï¿½Å‚ÍŠÖï¿½ï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½0ï¿½É‚È‚ï¿½ï¿½È‚ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½Oï¿½ñ‚©‚ï¿½,
+	 *  ï¿½Rï¿½ï¿½ï¿½pï¿½Cï¿½ï¿½ï¿½ÌÅ“Kï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ShutdownHookï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½è•ªï¿½ï¿½ï¿½ï¿½
+	 *  ï¿½íœï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ê‡ï¿½ï¿½ï¿½ï¿½ï¿½é‚½ï¿½ï¿½, volatileï¿½wï¿½è‚µï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Jï¿½ï¿½ï¿½Ïï¿½ï¿½ï¿½
+	 *  ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ç”»ï¿½è‚µï¿½Ä‚ï¿½ï¿½ï¿½ï¿½D
 	 */
 	 
 	 shutdownhook_adr = (FP)ShutdownHook;
 	 
 	if (shutdownhook_adr != NULL) {
 		/*
-		 *  ShutdownHook ‚Ì’†‚ÅCSuspendAllInterrupts ‚ªŒÄ‚Î‚ê
-		 *  ‚Ä‚à‘åä•v‚È‚æ‚¤‚ÉCsus_all_cnt ‚ð”ñƒ[ƒ‚É‚µ‚Ä‚¨‚­D
+		 *  ShutdownHook ï¿½Ì’ï¿½ï¿½ÅCSuspendAllInterrupts ï¿½ï¿½ï¿½Ä‚Î‚ï¿½
+		 *  ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½È‚æ‚¤ï¿½ÉCsus_all_cnt ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½É‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½D
 		 */
 		callevel = TCL_SHUTDOWN;
 		sus_all_cnt++;
@@ -255,7 +266,7 @@ ShutdownOS(StatusType ercd)
 	LOG_STUTOS_LEAVE();
 
 	/*
-	 *  ƒ^[ƒQƒbƒgˆË‘¶‚ÌI—¹ˆ—
+	 *  ï¿½^ï¿½[ï¿½Qï¿½bï¿½gï¿½Ë‘ï¿½ï¿½ÌIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	cpu_terminate();
 	sys_exit();

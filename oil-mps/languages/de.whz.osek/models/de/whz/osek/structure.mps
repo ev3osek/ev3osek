@@ -15,7 +15,21 @@
     <import index="51wr" ref="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" implicit="true" />
   </imports>
   <registry>
+    <language id="63e0e566-5131-447e-90e3-12ea330e1a00" name="com.mbeddr.mpsutil.blutil">
+      <concept id="3693790620639876318" name="com.mbeddr.mpsutil.blutil.structure.BLDoc" flags="ng" index="2aEySx">
+        <child id="3693790620639876319" name="text" index="2aEySw" />
+      </concept>
+    </language>
+    <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
+      <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
+        <child id="2557074442922392302" name="words" index="19SJt6" />
+      </concept>
+      <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$">
+        <property id="2557074442922438158" name="escapedValue" index="19SUeA" />
+      </concept>
+    </language>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9" />
       <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration" flags="ng" index="AxPO7">
         <property id="1212080844762" name="hasNoDefaultMember" index="PDuV0" />
         <property id="1197591154882" name="memberIdentifierPolicy" index="3lZH7k" />
@@ -33,9 +47,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
-        <child id="1169127546356" name="extends" index="PrDN$" />
-      </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -58,6 +70,7 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -144,9 +157,6 @@
     <property role="1pbfSe" value="510481272" />
     <property role="3GE5qa" value="Resource" />
     <property role="TrG5h" value="IResource" />
-    <node concept="PrWs8" id="6g77ZYUpKEC" role="PrDN$">
-      <ref role="PrY4T" to="vs0r:65XyadYKJgN" resolve="IIdentifierNamedConcept" />
-    </node>
   </node>
   <node concept="AxPO7" id="7FCpXS_UQxV">
     <property role="TrG5h" value="ResourcePropertyType" />
@@ -174,12 +184,12 @@
     <property role="R4oN_" value="property of a linked resource. Can link only standard and internal resources" />
     <property role="1pbfSe" value="1596729893" />
     <property role="3GE5qa" value="Resource" />
-    <ref role="1TJDcQ" to="mj1l:68dbbc7rHp$" resolve="UnsignedIntegerLiteral" />
-    <node concept="1TJgyj" id="7FCpXS_UQS7" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
+    <ref role="1TJDcQ" to="mj1l:1UQ4qqfUXf_" resolve="NumericLiteral" />
+    <node concept="1TJgyj" id="1a22ASGcefT" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="linkedResource" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6g77ZYUpzaO" resolve="ResourceLiteral" />
+      <ref role="20lvS9" node="1x4fgD956dR" resolve="ResourceRef" />
     </node>
     <node concept="PrWs8" id="6g77ZYUpJS7" role="PzmwI">
       <ref role="PrY4T" node="6g77ZYUpzdT" resolve="IResource" />
@@ -843,10 +853,15 @@
     <node concept="PrWs8" id="6cbBThjym80" role="PzmwI">
       <ref role="PrY4T" to="vs0r:3Y7ywckEJZi" resolve="IKeepAliveInGeneration" />
     </node>
+    <node concept="1TJgyj" id="1a22ASGenpX" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="implementationDefinition" />
+      <ref role="20lvS9" node="1a22ASGenpJ" resolve="ImplementationDefinition" />
+    </node>
     <node concept="1TJgyj" id="7FCpXS_VYUZ" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="cpu" />
-      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="applicationDefinition" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="1x4fgD94T$4" resolve="CPU" />
     </node>
   </node>
@@ -870,13 +885,6 @@
     <property role="34LRSv" value="TaskType" />
     <property role="3GE5qa" value="Task" />
     <ref role="1TJDcQ" to="mj1l:7lNBHBNB4PU" resolve="UnsignedIntType" />
-  </node>
-  <node concept="PlHQZ" id="4B0n6H25806">
-    <property role="1pbfSe" value="1948984207" />
-    <property role="TrG5h" value="IImplementationModuleReferencable" />
-    <node concept="PrWs8" id="4B0n6H258mk" role="PrDN$">
-      <ref role="PrY4T" to="vs0r:65XyadYKJgN" resolve="IIdentifierNamedConcept" />
-    </node>
   </node>
   <node concept="1TIwiD" id="3WvbRq1R3ja">
     <property role="1pbfSe" value="1057266624" />
@@ -909,6 +917,46 @@
     <property role="3GE5qa" value="Timer" />
     <property role="TrG5h" value="CounterType" />
     <ref role="1TJDcQ" to="mj1l:7lNBHBNBzyt" resolve="UnsignedInt8tType" />
+  </node>
+  <node concept="1TIwiD" id="1a22ASGenpJ">
+    <property role="1pbfSe" value="1052475613" />
+    <property role="TrG5h" value="ImplementationDefinition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="2aEySx" id="1a22ASGenpM" role="lGtFl">
+      <node concept="19SGf9" id="1a22ASGenpN" role="2aEySw">
+        <node concept="19SUe$" id="1a22ASGenpO" role="19SJt6">
+          <property role="19SUeA" value="TODO: has to be implemented" />
+        </node>
+      </node>
+    </node>
+    <node concept="asaX9" id="1a22ASGenpS" role="lGtFl" />
+  </node>
+  <node concept="1TIwiD" id="4IIl9K1dBNL">
+    <property role="1pbfSe" value="1290064269" />
+    <property role="3GE5qa" value="Core" />
+    <property role="TrG5h" value="StartupHookFunction" />
+    <property role="34LRSv" value="StartupHook" />
+    <property role="R4oN_" value="called at the end of operating system initialisation and before the scheduler is running" />
+    <ref role="1TJDcQ" to="x27k:5_l8w1EmTvx" resolve="Function" />
+    <node concept="asaX9" id="4IIl9K1jrB1" role="lGtFl" />
+  </node>
+  <node concept="1TIwiD" id="4IIl9K1dDkt">
+    <property role="1pbfSe" value="1290070457" />
+    <property role="3GE5qa" value="Core" />
+    <property role="TrG5h" value="PreTaskHookFunction" />
+    <property role="R4oN_" value="called before executing a new task" />
+    <property role="34LRSv" value="PreTaskHook" />
+    <ref role="1TJDcQ" to="x27k:5_l8w1EmTvx" resolve="Function" />
+    <node concept="asaX9" id="4IIl9K1jrAZ" role="lGtFl" />
+  </node>
+  <node concept="1TIwiD" id="4IIl9K1dFdi">
+    <property role="1pbfSe" value="1290078190" />
+    <property role="3GE5qa" value="Core" />
+    <property role="TrG5h" value="PostTaskHookFunction" />
+    <property role="R4oN_" value="called after executing the current task" />
+    <property role="34LRSv" value="PostTaskHook" />
+    <ref role="1TJDcQ" to="x27k:5_l8w1EmTvx" resolve="Function" />
+    <node concept="asaX9" id="4IIl9K1jrAX" role="lGtFl" />
   </node>
 </model>
 

@@ -1,7 +1,7 @@
 TARGET_NAME = OSEK-$(TARGET)
 
 PREFIX = arm-none-eabi-
-CC = $(PREFIX)gcc
+CC = $(PREFIX)gcc $(DEFINES)
 AS = $(PREFIX)as
 LD = $(PREFIX)ld
 OBJCOPY = $(PREFIX)objcopy
@@ -34,6 +34,8 @@ OBJECTS := $(C_SRC_FILES:.c=.o) $(S_SRC_FILES:.S=.o)
 
 
 all: implementation.oil $(OBJECTS) ECRobot
+	@#always recompile osctl.c in order to reevaluate compiler flags for Hook-defines
+	@touch $(EV3OSEK_ROOT)/OSEK_EV3/kernel/osctl.c
 	@echo "Linking $(ELF)..." 
 	$(LD) $(LDFLAGS) $(OBJECTS) $(STATIC_LIBS) -o $(ELF) -lgcc --library-path=$(EV3OSEK_ROOT)/newlib
 	@echo "Creating $(BIN)..."

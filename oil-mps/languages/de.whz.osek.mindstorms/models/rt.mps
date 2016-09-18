@@ -2352,5 +2352,20 @@
       <property role="rcWEL" value="&quot;ecrobot/libecrobot.a&quot;" />
     </node>
   </node>
+  <node concept="rcWEw" id="5sDZ674atXx">
+    <property role="TrG5h" value="ev3kernel" />
+    <node concept="N3Fnw" id="5sDZ674awd9" role="N3F5h">
+      <property role="TrG5h" value="UserStartupHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <node concept="19Rifw" id="5sDZ674awcL" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="rcWE1" id="5sDZ674awHA" role="rcWEr">
+      <property role="rcWEL" value="&quot;kernel.h&quot;" />
+    </node>
+  </node>
 </model>
 

@@ -59,6 +59,7 @@
       </concept>
       <concept id="6437088627575722831" name="com.mbeddr.core.modules.structure.IModuleContent" flags="ng" index="N3F5f">
         <property id="1317894735999272944" name="exported" index="2OOxQR" />
+        <property id="6708182213627106114" name="preventNameMangling" index="3mNxdG" />
       </concept>
       <concept id="6437088627575724000" name="com.mbeddr.core.modules.structure.FunctionPrototype" flags="ng" index="N3Fnw" />
       <concept id="8934095934011938595" name="com.mbeddr.core.modules.structure.EmptyModuleContent" flags="ng" index="2NXPZ9" />
@@ -83,6 +84,7 @@
       <concept id="318113533128716675" name="com.mbeddr.core.expressions.structure.ITyped" flags="ng" index="2C2TGh">
         <child id="318113533128716676" name="type" index="2C2TGm" />
       </concept>
+      <concept id="7892328519581699353" name="com.mbeddr.core.expressions.structure.VoidType" flags="ng" index="19Rifw" />
       <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
         <property id="2941277002445651368" name="const" index="2c7vTL" />
         <property id="2941277002448691247" name="volatile" index="2caQfQ" />
@@ -604,6 +606,66 @@
         <property role="2c7vTL" value="false" />
         <ref role="rcJHT" node="2UjW4IkHtzR" resolve="StatusType" />
       </node>
+    </node>
+    <node concept="2NXPZ9" id="4IIl9K1iovG" role="N3F5h">
+      <property role="TrG5h" value="empty_1473807021641_40" />
+    </node>
+    <node concept="N3Fnw" id="4IIl9K1ipuv" role="N3F5h">
+      <property role="TrG5h" value="StartupHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <node concept="19Rifw" id="4IIl9K1ipq0" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="N3Fnw" id="4IIl9K1ipFW" role="N3F5h">
+      <property role="TrG5h" value="ShutdownHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <property role="3mNxdG" value="true" />
+      <node concept="19Rifw" id="4IIl9K1ipA_" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="N3Fnw" id="4IIl9K1ioSX" role="N3F5h">
+      <property role="TrG5h" value="PreTaskHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <node concept="19Rifw" id="4IIl9K1ioOn" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="N3Fnw" id="4IIl9K1ip67" role="N3F5h">
+      <property role="TrG5h" value="PostTaskHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <node concept="19Rifw" id="4IIl9K1ip1d" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="N3Fnw" id="4IIl9K1ioFB" role="N3F5h">
+      <property role="TrG5h" value="ErrorHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="true" />
+      <node concept="19Rifw" id="4IIl9K1ioBh" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="4IIl9K1ioJy" role="1UOdpc">
+        <property role="TrG5h" value="ercd" />
+        <node concept="rcJHQ" id="4IIl9K1ioJx" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+          <ref role="rcJHT" node="2UjW4IkHtzR" resolve="StatusType" />
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="4IIl9K1ipac" role="N3F5h">
+      <property role="TrG5h" value="empty_1473807098200_44" />
     </node>
     <node concept="rcWE1" id="2UjW4IkHtzc" role="rcWEr">
       <property role="rcWEL" value="&quot;kernel.h&quot;" />
