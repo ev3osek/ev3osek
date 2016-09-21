@@ -13,6 +13,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="bpn0" ref="r:4732c7ac-787e-441b-b7cf-cc879d583fbc(de.whz.osek.sandboxLanguage.structure)" />
     <import index="51wr" ref="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" implicit="true" />
+    <import index="yq40" ref="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="63e0e566-5131-447e-90e3-12ea330e1a00" name="com.mbeddr.mpsutil.blutil">
@@ -42,6 +43,8 @@
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
+        <property id="4628067390765956807" name="final" index="R5$K2" />
+        <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
@@ -512,12 +515,28 @@
   </node>
   <node concept="1TIwiD" id="1x4fgD956kb">
     <property role="TrG5h" value="Message" />
-    <property role="R4oN_" value="represents OSEK messages. " />
+    <property role="R4oN_" value="represents OSEK messages" />
     <property role="1pbfSe" value="1633198613" />
     <property role="3GE5qa" value="Message" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="1x4fgD956kc" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="6zjU44HG6xG" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="MessageProperty" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6zjU44HG6xs" resolve="MessagePropertyType" />
+    </node>
+    <node concept="1TJgyj" id="6zjU44HG6xI" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Notification" />
+      <ref role="20lvS9" node="6zjU44HG6yG" resolve="Notification" />
+    </node>
+    <node concept="1TJgyj" id="6zjU44HG6xL" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="NotificationError" />
+      <ref role="20lvS9" node="6zjU44HG6yG" resolve="Notification" />
     </node>
   </node>
   <node concept="1TIwiD" id="1x4fgD956B$">
@@ -957,6 +976,121 @@
     <property role="34LRSv" value="PostTaskHook" />
     <ref role="1TJDcQ" to="x27k:5_l8w1EmTvx" resolve="Function" />
     <node concept="asaX9" id="4IIl9K1jrAX" role="lGtFl" />
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6xs">
+    <property role="1pbfSe" value="1769713507" />
+    <property role="3GE5qa" value="Message.MessagePropertyType" />
+    <property role="TrG5h" value="MessagePropertyType" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="PlHQZ" id="6zjU44HG6xt">
+    <property role="1pbfSe" value="1769713506" />
+    <property role="3GE5qa" value="Message" />
+    <property role="TrG5h" value="ICDataType" />
+    <node concept="1TJgyi" id="6zjU44HG6xu" role="1TKVEl">
+      <property role="TrG5h" value="CDataType" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="2aEySx" id="6zjU44HG6xx" role="lGtFl">
+      <node concept="19SGf9" id="6zjU44HG6xy" role="2aEySw">
+        <node concept="19SUe$" id="6zjU44HG6xz" role="19SJt6">
+          <property role="19SUeA" value="The CDataType attribute describes the data type of the message data using C language types (e.g. int or a structure name)." />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6xw">
+    <property role="1pbfSe" value="1769713503" />
+    <property role="3GE5qa" value="Message.MessagePropertyType" />
+    <property role="TrG5h" value="SendStaticInternal" />
+    <ref role="1TJDcQ" node="6zjU44HG6xs" resolve="MessagePropertyType" />
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6yG">
+    <property role="1pbfSe" value="1769713427" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="Notification" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6yH">
+    <property role="1pbfSe" value="1769713426" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="None" />
+    <property role="R4oN_" value="No notification is performed." />
+    <ref role="1TJDcQ" node="6zjU44HG6yG" resolve="Notification" />
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6yI">
+    <property role="1pbfSe" value="1769713425" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="ActivateTask" />
+    <property role="R4oN_" value="a task is activated" />
+    <ref role="1TJDcQ" node="6zjU44HG6yG" resolve="Notification" />
+    <node concept="1TJgyj" id="6zjU44HG6yR" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Task" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1x4fgD956tm" resolve="TaskRef" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6yJ">
+    <property role="1pbfSe" value="1769713424" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="SetEvent" />
+    <property role="R4oN_" value="an event is set for a task" />
+    <ref role="1TJDcQ" node="6zjU44HG6yG" resolve="Notification" />
+    <node concept="1TJgyj" id="6zjU44HG6yT" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Event" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1x4fgD956ve" resolve="EventRef" />
+    </node>
+    <node concept="1TJgyj" id="6zjU44HG6yV" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Task" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1x4fgD956tm" resolve="TaskRef" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6yQ">
+    <property role="1pbfSe" value="1769713417" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="ComCallback" />
+    <property role="R4oN_" value="a callback routine is called" />
+    <ref role="1TJDcQ" node="6zjU44HG6yG" resolve="Notification" />
+    <node concept="1TJgyi" id="6zjU44HG6yY" role="1TKVEl">
+      <property role="TrG5h" value="CallbackRoutineName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6z0">
+    <property role="1pbfSe" value="1769713407" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="Flag" />
+    <property role="R4oN_" value="a Flag is set" />
+    <ref role="1TJDcQ" node="6zjU44HG6yG" resolve="Notification" />
+    <node concept="PrWs8" id="6zjU44HG6z1" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6zjU44HG6z3">
+    <property role="1pbfSe" value="1769713404" />
+    <property role="3GE5qa" value="Message.Notification" />
+    <property role="TrG5h" value="INMCallback" />
+    <property role="R4oN_" value="A callback routine in an OSEK NM sub-system is called." />
+    <ref role="1TJDcQ" node="6zjU44HG6yG" resolve="Notification" />
+    <node concept="1TJgyj" id="6zjU44HG6za" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="CallbackRoutineName" />
+      <ref role="20lvS9" to="yq40:5jmmCdx$f5R" resolve="StringLiteral" />
+    </node>
+    <node concept="1TJgyj" id="6zjU44HG6z4" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="MonitoredIpdu" />
+      <ref role="20lvS9" to="mj1l:7FQByU3CrDB" resolve="NumberLiteral" />
+    </node>
   </node>
 </model>
 
