@@ -70,14 +70,12 @@
       </concept>
       <concept id="1748589669711250635" name="de.whz.osek.structure.OilFile" flags="ng" index="1hiFB1">
         <property id="1748589669711297437" name="oilVersion" index="1hiKqn" />
-        <child id="8856442871040962239" name="cpu" index="1v1S_x" />
+        <child id="8856442871040962239" name="applicationDefinition" index="1v1S_x" />
       </concept>
       <concept id="1748589669711636823" name="de.whz.osek.structure.AppModeType" flags="ng" index="1hk5ht">
         <reference id="1748589669711636824" name="appMode" index="1hk5hi" />
       </concept>
-      <concept id="1748589669711635627" name="de.whz.osek.structure.EventLiteral" flags="ng" index="1hk5Ax">
-        <child id="8230360703443541364" name="mask" index="1$bw00" />
-      </concept>
+      <concept id="1748589669711635627" name="de.whz.osek.structure.EventLiteral" flags="ng" index="1hk5Ax" />
       <concept id="1748589669711636310" name="de.whz.osek.structure.TaskRef" flags="ng" index="1hk5Ds">
         <reference id="1748589669711636311" name="task" index="1hk5Dt" />
       </concept>
@@ -112,6 +110,7 @@
       </concept>
       <concept id="1748589669711583504" name="de.whz.osek.structure.OS" flags="ng" index="1hlUgq">
         <property id="1748589669711583518" name="status" index="1hlUgk" />
+        <property id="1748589669711583520" name="startupHook" index="1hlUgE" />
       </concept>
       <concept id="6637659417469770051" name="de.whz.osek.structure.CounterLiteral" flags="ng" index="3qkAPh">
         <child id="8230360703443541346" name="minCycle" index="1$bw0m" />
@@ -198,6 +197,9 @@
       <concept id="3788988821851860886" name="com.mbeddr.core.modules.structure.GlobalConstantDeclaration" flags="ng" index="4WHVk" />
       <concept id="3788988821852026523" name="com.mbeddr.core.modules.structure.GlobalConstantRef" flags="ng" index="4ZOvp">
         <reference id="3376775282622611130" name="constant" index="2DPCA0" />
+      </concept>
+      <concept id="8667582976643931813" name="com.mbeddr.core.modules.structure.ImplementsExternalFunction" flags="ng" index="oneTI">
+        <reference id="8667582976643954445" name="implements" index="on8v6" />
       </concept>
       <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
         <child id="8967919205527146150" name="expression" index="2BFjQA" />
@@ -554,19 +556,11 @@
       <property role="TrG5h" value="ATMEL_AT91SAM7S256" />
       <node concept="bPy0e" id="1Bd1FdR09er" role="3aI4UL">
         <property role="TrG5h" value="TouchEvent" />
-        <node concept="1hk5Ax" id="1Bd1FdR09es" role="2DQcEM">
-          <node concept="3TlMh9" id="1Bd1FdR2HZi" role="1$bw00">
-            <property role="2hmy$m" value="1" />
-          </node>
-        </node>
+        <node concept="1hk5Ax" id="1Bd1FdR09es" role="2DQcEM" />
       </node>
       <node concept="bPy0e" id="1Bd1FdR09eO" role="3aI4UL">
         <property role="TrG5h" value="LightValueEvent" />
-        <node concept="1hk5Ax" id="1Bd1FdR09eP" role="2DQcEM">
-          <node concept="3TlMh9" id="1Bd1FdR2HZK" role="1$bw00">
-            <property role="2hmy$m" value="1" />
-          </node>
-        </node>
+        <node concept="1hk5Ax" id="1Bd1FdR09eP" role="2DQcEM" />
       </node>
       <node concept="2YKLIW" id="3WvbRq1TAw0" role="3qjf8I">
         <property role="TrG5h" value="SysTimerCnt" />
@@ -622,14 +616,15 @@
       <node concept="1hlUgq" id="2CJ7vlDPYcz" role="1hk5Yg">
         <property role="TrG5h" value="LEJOS_OSEK" />
         <property role="1hlUgk" value="extended" />
+        <property role="1hlUgE" value="true" />
       </node>
       <node concept="1hk5YZ" id="2CJ7vlDPYc$" role="1hk5ZA">
         <property role="TrG5h" value="appmode1" />
       </node>
       <node concept="3uopR6" id="2CJ7vlDPYc_" role="1v67J6">
+        <property role="TrG5h" value="LightValue" />
         <node concept="3uoiPb" id="2CJ7vlDPYdk" role="2DQcEM">
           <property role="2hmy$m" value="0" />
-          <property role="TrG5h" value="LightValue" />
           <property role="3uoinE" value="STANDARD" />
         </node>
       </node>
@@ -1398,23 +1393,6 @@
             <property role="2caQfQ" value="false" />
             <property role="2c7vTL" value="false" />
             <ref role="1sgJKq" node="5g5RAGpXlEm" resolve="SPid" />
-          </node>
-        </node>
-        <node concept="1_9egQ" id="7vKHPVqxAhY" role="3XIRFZ">
-          <node concept="3O_q_g" id="7vKHPVqxAhW" role="1_9egR">
-            <ref role="3O_q_h" to="ei6g:3QwuWjHjGZA" resolve="ecrobot_set_light_sensor_active" />
-            <node concept="1AkAhK" id="7vKHPVqxAil" role="3O_q_j">
-              <ref role="1AkAhZ" to="ei6g:3tDp_yW5KZ3" resolve="EV3_PORT_S2" />
-            </node>
-          </node>
-          <node concept="1z9TsT" id="7vKHPVqxAiI" role="lGtFl">
-            <node concept="OjmMv" id="7vKHPVqxAiJ" role="1w35rA">
-              <node concept="19SGf9" id="7vKHPVqxAiK" role="OjmMu">
-                <node concept="19SUe$" id="7vKHPVqxAiL" role="19SJt6">
-                  <property role="19SUeA" value="initialize light sensor and PID" />
-                </node>
-              </node>
-            </node>
           </node>
         </node>
         <node concept="1_9egQ" id="7vKHPVqxAjr" role="3XIRFZ">
@@ -2357,6 +2335,9 @@
     <node concept="3GEVxB" id="7JdyDzjbVGx" role="2OODSX">
       <ref role="3GEb4d" node="2CJ7vlDPYcx" resolve="LinefollowerOil" />
     </node>
+    <node concept="3GEVxB" id="3Hj6tXBQWpZ" role="2OODSX">
+      <ref role="3GEb4d" to="ei6g:3tDp_yW6whK" resolve="ecrobot_interface" />
+    </node>
     <node concept="1S7NMz" id="7JdyDzjbVF$" role="N3F5h">
       <property role="TrG5h" value="SysTimerCnt" />
       <property role="3mNisv" value="true" />
@@ -2388,8 +2369,41 @@
         </node>
       </node>
     </node>
-    <node concept="2NXPZ9" id="7JdyDzjbVGp" role="N3F5h">
-      <property role="TrG5h" value="empty_1472677097118_13" />
+    <node concept="2NXPZ9" id="3Hj6tXBQVmO" role="N3F5h">
+      <property role="TrG5h" value="empty_1474388628220_11" />
+    </node>
+    <node concept="N3Fnx" id="3Hj6tXBQVNi" role="N3F5h">
+      <property role="TrG5h" value="StartupHook" />
+      <property role="2OOxQR" value="false" />
+      <property role="3mNisv" value="false" />
+      <property role="3mNxdG" value="true" />
+      <node concept="3XIRFW" id="3Hj6tXBQVNk" role="3XIRFX">
+        <node concept="1_9egQ" id="7vKHPVqxAhY" role="3XIRFZ">
+          <node concept="3O_q_g" id="7vKHPVqxAhW" role="1_9egR">
+            <ref role="3O_q_h" to="ei6g:3QwuWjHjGZA" resolve="ecrobot_set_light_sensor_active" />
+            <node concept="1AkAhK" id="7vKHPVqxAil" role="3O_q_j">
+              <ref role="1AkAhZ" to="ei6g:3tDp_yW5KZ3" resolve="EV3_PORT_S2" />
+            </node>
+          </node>
+          <node concept="1z9TsT" id="7vKHPVqxAiI" role="lGtFl">
+            <node concept="OjmMv" id="7vKHPVqxAiJ" role="1w35rA">
+              <node concept="19SGf9" id="7vKHPVqxAiK" role="OjmMu">
+                <node concept="19SUe$" id="7vKHPVqxAiL" role="19SJt6">
+                  <property role="19SUeA" value="initialize light sensor and PID" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3XISUE" id="3Hj6tXBQWvY" role="3XIRFZ" />
+      </node>
+      <node concept="oneTI" id="3Hj6tXBQVT0" role="lGtFl">
+        <ref role="on8v6" to="tzd5:4IIl9K1ipuv" resolve="StartupHook" />
+      </node>
+      <node concept="19Rifw" id="3Hj6tXBQVTg" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
     </node>
   </node>
 </model>
