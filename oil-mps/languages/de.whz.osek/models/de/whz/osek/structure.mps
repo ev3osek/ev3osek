@@ -235,7 +235,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="mask" />
       <property role="20lbJX" value="0..1" />
-      <ref role="20lvS9" to="mj1l:7FQByU3CrCM" resolve="Expression" />
+      <ref role="20lvS9" to="mj1l:1UQ4qqfUXf_" resolve="NumericLiteral" />
     </node>
   </node>
   <node concept="1TIwiD" id="4F1Ib7ChyL$">
