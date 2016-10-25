@@ -781,31 +781,11 @@
         </node>
       </node>
     </node>
-    <node concept="3EZMnI" id="7saPwHYH99k" role="6VMZX">
-      <node concept="2iRkQZ" id="7saPwHYH99l" role="2iSdaV" />
-      <node concept="3F1sOY" id="5g5RAGpW$yl" role="3EZMnx">
-        <ref role="1NtTu8" to="mj1l:hEaDaGor64" />
-      </node>
-      <node concept="3F0ifn" id="7saPwHYH99q" role="3EZMnx">
-        <node concept="ljvvj" id="7saPwHYHi_8" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="pVoyu" id="7saPwHYHi_9" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="VPxyj" id="7saPwHYHi_a" role="3F10Kt">
-          <property role="VOm3f" value="false" />
-        </node>
-        <node concept="VPM3Z" id="7saPwHYHi_b" role="3F10Kt">
-          <property role="VOm3f" value="false" />
-        </node>
-      </node>
-      <node concept="1iCGBv" id="7saPwHYIaRT" role="3EZMnx">
-        <ref role="1NtTu8" to="bwbq:2ZNMQTB12lR" />
-        <node concept="1sVBvm" id="7saPwHYIaRV" role="1sWHZn">
-          <node concept="PMmxH" id="7saPwHYIaS8" role="2wV5jI">
-            <ref role="PMmxG" node="4PUAo64jhdw" resolve="TaskPart" />
-          </node>
+    <node concept="1iCGBv" id="7saPwHYIaRT" role="6VMZX">
+      <ref role="1NtTu8" to="bwbq:2ZNMQTB12lR" />
+      <node concept="1sVBvm" id="7saPwHYIaRV" role="1sWHZn">
+        <node concept="PMmxH" id="7saPwHYIaS8" role="2wV5jI">
+          <ref role="PMmxG" node="4PUAo64jhdw" resolve="TaskPart" />
         </node>
       </node>
     </node>
@@ -894,7 +874,7 @@
   </node>
   <node concept="24kQdi" id="4PUAo64h_fU">
     <property role="3GE5qa" value="Task" />
-    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="Task" />
+    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="TaskDeclaration" />
     <node concept="3EZMnI" id="4PUAo64hMy5" role="2wV5jI">
       <node concept="2iRkQZ" id="4PUAo64hNc1" role="2iSdaV" />
       <node concept="3EZMnI" id="4PUAo64jhgS" role="3EZMnx">
@@ -925,14 +905,11 @@
         <ref role="1k5W1q" to="r4b4:2CEi94dgZq3" resolve="Braces" />
       </node>
     </node>
-    <node concept="3F0A7n" id="1Y5JHpRziel" role="6VMZX">
-      <ref role="1NtTu8" to="mj1l:1UQ4qqfV3yK" resolve="value" />
-    </node>
   </node>
   <node concept="PKFIW" id="4PUAo64jhdw">
     <property role="TrG5h" value="TaskPart" />
     <property role="3GE5qa" value="Task" />
-    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="Task" />
+    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="TaskDeclaration" />
     <node concept="3EZMnI" id="4PUAo64jhdO" role="2wV5jI">
       <node concept="3EZMnI" id="4PUAo64jhdV" role="3EZMnx">
         <node concept="VPM3Z" id="4PUAo64jhdX" role="3F10Kt">
@@ -1069,7 +1046,7 @@
   </node>
   <node concept="24kQdi" id="3tDp_yW5YMd">
     <property role="3GE5qa" value="Task" />
-    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="Task" />
+    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="TaskDeclaration" />
     <node concept="PMmxH" id="3tDp_yW5YMk" role="2wV5jI">
       <ref role="PMmxG" node="23s$hiVSTNT" resolve="OilTaskEditor" />
     </node>
@@ -1080,7 +1057,7 @@
   <node concept="PKFIW" id="23s$hiVSTNT">
     <property role="TrG5h" value="OilTaskEditor" />
     <property role="3GE5qa" value="Task" />
-    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="Task" />
+    <ref role="1XX52x" to="bwbq:1x4fgD956cc" resolve="TaskDeclaration" />
     <node concept="b$f91" id="23s$hiVSTOk" role="2wV5jI">
       <node concept="3EZMnI" id="23s$hiVSTPM" role="b$wch">
         <node concept="l2Vlx" id="23s$hiVSTPP" role="2iSdaV" />

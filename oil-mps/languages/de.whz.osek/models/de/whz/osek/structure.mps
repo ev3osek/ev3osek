@@ -247,7 +247,7 @@
     <property role="1pbfSe" value="856155413" />
     <property role="34LRSv" value="extendedTask" />
     <property role="3GE5qa" value="Task" />
-    <ref role="1TJDcQ" node="1x4fgD956cc" resolve="Task" />
+    <ref role="1TJDcQ" node="1x4fgD956cc" resolve="TaskDeclaration" />
     <node concept="1TJgyj" id="4F1Ib7ChyL_" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="events" />
@@ -279,7 +279,7 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="task" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1x4fgD956cc" resolve="Task" />
+      <ref role="20lvS9" node="1x4fgD956cc" resolve="TaskDeclaration" />
     </node>
     <node concept="PrWs8" id="1Y5JHpRyyu$" role="PzmwI">
       <ref role="PrY4T" to="vs0r:7jSUHHvkAp9" resolve="IModuleContentRef" />
@@ -295,23 +295,20 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="oilTask" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1x4fgD956cc" resolve="Task" />
+      <ref role="20lvS9" node="1x4fgD956cc" resolve="TaskDeclaration" />
     </node>
   </node>
   <node concept="1TIwiD" id="1x4fgD956cc">
-    <property role="TrG5h" value="Task" />
+    <property role="TrG5h" value="TaskDeclaration" />
     <property role="R4oN_" value="an OIL Task" />
     <property role="1pbfSe" value="1633198102" />
     <property role="34LRSv" value="task" />
     <property role="3GE5qa" value="Task" />
-    <ref role="1TJDcQ" to="mj1l:7FQByU3CrDB" resolve="NumberLiteral" />
+    <ref role="1TJDcQ" to="x27k:5_l8w1EmTvw" resolve="FunctionPrototype" />
     <node concept="1TJgyj" id="58wCuMkZKxs" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="stacksize" />
       <ref role="20lvS9" to="mj1l:7FQByU3CrCM" resolve="Expression" />
-    </node>
-    <node concept="PrWs8" id="1Y5JHpRyzZt" role="PzmwI">
-      <ref role="PrY4T" to="vs0r:65XyadYKJgN" resolve="IIdentifierNamedConcept" />
     </node>
     <node concept="1TJgyj" id="4F1Ib7ChyLh" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -458,7 +455,7 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="task" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1x4fgD956cc" resolve="Task" />
+      <ref role="20lvS9" node="1x4fgD956cc" resolve="TaskDeclaration" />
     </node>
     <node concept="PrWs8" id="7FCpXS_WYDH" role="PzmwI">
       <ref role="PrY4T" node="7FCpXS_WYzo" resolve="IAlarmAction" />
@@ -635,7 +632,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="tasks" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1x4fgD956cc" resolve="Task" />
+      <ref role="20lvS9" node="1x4fgD956cc" resolve="TaskDeclaration" />
     </node>
     <node concept="1TJgyj" id="7FCpXS_W1Ko" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
