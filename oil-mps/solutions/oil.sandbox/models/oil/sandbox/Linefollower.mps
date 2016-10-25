@@ -82,7 +82,7 @@
       <concept id="1748589669711636430" name="de.whz.osek.structure.EventRef" flags="ng" index="1hk5F4">
         <reference id="6616213586235273506" name="event" index="2euN8h" />
       </concept>
-      <concept id="1748589669711635212" name="de.whz.osek.structure.Task" flags="ng" index="1hk5S6">
+      <concept id="1748589669711635212" name="de.whz.osek.structure.TaskDeclaration" flags="ng" index="1hk5S6">
         <property id="4440685318312908091" name="schedule" index="3gXiVZ" />
         <property id="1859149589038726819" name="priority" index="1JeBwg" />
         <property id="1859149589038726822" name="activationAmount" index="1JeBwl" />
@@ -629,7 +629,6 @@
         </node>
       </node>
       <node concept="1hk5S6" id="2CJ7vlDQldO" role="1v67Ja">
-        <property role="2hmy$m" value="0" />
         <property role="TrG5h" value="TouchEventDispatcherTask" />
         <property role="3gXiVZ" value="FULL" />
         <property role="1JeBwg" value="1" />
@@ -637,9 +636,12 @@
         <node concept="3TlMh9" id="2CJ7vlDQloA" role="36RUAK">
           <property role="2hmy$m" value="4096" />
         </node>
+        <node concept="19Rifw" id="3eun3UMR1Cy" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
       </node>
       <node concept="1hk5S6" id="2CJ7vlDQS6S" role="1v67Ja">
-        <property role="2hmy$m" value="0" />
         <property role="TrG5h" value="LightValueEventDispatcherTask" />
         <property role="3gXiVZ" value="FULL" />
         <property role="1JeBwg" value="1" />
@@ -650,9 +652,12 @@
         <node concept="3TlMh9" id="2CJ7vlDR3ON" role="36RUAK">
           <property role="2hmy$m" value="4096" />
         </node>
+        <node concept="19Rifw" id="3eun3UMR1Fi" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
       </node>
       <node concept="2yxTjl" id="2CJ7vlDRfCX" role="1v67Ja">
-        <property role="2hmy$m" value="0" />
         <property role="TrG5h" value="LineFollowerTask" />
         <property role="3gXiVZ" value="FULL" />
         <property role="1JeBwg" value="2" />
@@ -671,6 +676,10 @@
         </node>
         <node concept="1hk5F4" id="2CJ7vlDRfZC" role="2yxTjk">
           <ref role="2euN8h" node="1Bd1FdR09eO" resolve="LightValueEvent" />
+        </node>
+        <node concept="19Rifw" id="3eun3UMR1I2" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
         </node>
       </node>
     </node>
