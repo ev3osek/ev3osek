@@ -14,7 +14,7 @@ The outputs are as follows:
 
 1(2, 4) et 10914. <<--- Task 1 ends, so the counter a is 2.
 
-2(2, 6) et 12749. <<--- Task 2 resume but re-execute the loops, so the counter b is 6.
+2(2, 6) et 12749. <<--- Task 2 resumes but re-executes the loops, so the counter b is 6.
 
 2(2, 6) et 16001. <<--- Task 2 ends with additional execution time around 2000ms.
 
@@ -31,5 +31,5 @@ Therefore the expected results should be:
 
 1(2, 4) et 10914. 
 
-2(2, 4) et 11749~12000. <<--- Task 2 resume but only finish the rest of loop.
+2(2, 4) et 11749~12000. <<--- Task 2 resumes but only finishs the rest of loop.
 
