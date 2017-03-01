@@ -4,7 +4,7 @@
   <languages>
     <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="2" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -95,7 +95,7 @@
                 <node concept="2OqwBi" id="2ZNMQTB15sT" role="2Oq$k0">
                   <node concept="EsrRn" id="2ZNMQTB15ep" role="2Oq$k0" />
                   <node concept="3TrEf2" id="1Y5JHpRz0_U" role="2OqNvi">
-                    <ref role="3Tt5mk" to="bwbq:2ZNMQTB12lR" />
+                    <ref role="3Tt5mk" to="bwbq:2ZNMQTB12lR" resolve="oilTask" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="2ZNMQTB17IK" role="2OqNvi">
@@ -116,7 +116,7 @@
               <node concept="2OqwBi" id="2UjW4IkK1Ob" role="2Oq$k0">
                 <node concept="EsrRn" id="2UjW4IkK1yf" role="2Oq$k0" />
                 <node concept="3TrEf2" id="1Y5JHpRyZUl" role="2OqNvi">
-                  <ref role="3Tt5mk" to="bwbq:2ZNMQTB12lR" />
+                  <ref role="3Tt5mk" to="bwbq:2ZNMQTB12lR" resolve="oilTask" />
                 </node>
               </node>
               <node concept="3TrcHB" id="2UjW4IkK3yU" role="2OqNvi">
@@ -130,7 +130,7 @@
   </node>
   <node concept="1M2fIO" id="1Bd1FdQXRUE">
     <property role="3GE5qa" value="Task" />
-    <ref role="1M2myG" to="bwbq:1x4fgD956cc" resolve="Task" />
+    <ref role="1M2myG" to="bwbq:1x4fgD956cc" resolve="TaskDeclaration" />
     <node concept="EnEH3" id="1Bd1FdQXRUF" role="1MhHOB">
       <ref role="EomxK" to="bwbq:1Bd1FdQXRUz" resolve="priority" />
       <node concept="QB0g5" id="1Bd1FdQXRUH" role="QCWH9">
@@ -176,7 +176,7 @@
               <node concept="2OqwBi" id="1Bd1FdR3Y6W" role="37wK5m">
                 <node concept="EsrRn" id="1Bd1FdR3Y6X" role="2Oq$k0" />
                 <node concept="3TrEf2" id="1Bd1FdR3Y6Y" role="2OqNvi">
-                  <ref role="3Tt5mk" to="bwbq:78S7ngm5xPO" />
+                  <ref role="3Tt5mk" to="bwbq:78S7ngm5xPO" resolve="mask" />
                 </node>
               </node>
             </node>

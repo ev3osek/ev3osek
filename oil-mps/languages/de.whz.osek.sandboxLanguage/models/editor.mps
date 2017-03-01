@@ -2,7 +2,7 @@
 <model ref="r:d0317648-678f-4ff0-b115-07614785e6f0(de.whz.osek.sandboxLanguage.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -29,7 +29,7 @@
   <node concept="24kQdi" id="6g77ZYUpnOg">
     <ref role="1XX52x" to="bpn0:6g77ZYUpcAM" resolve="SandboxDeclaration" />
     <node concept="3F1sOY" id="6g77ZYUpnOi" role="2wV5jI">
-      <ref role="1NtTu8" to="x27k:2VsHNE717Q8" />
+      <ref role="1NtTu8" to="x27k:2VsHNE717Q8" resolve="value" />
     </node>
   </node>
   <node concept="24kQdi" id="6g77ZYUpttg">

@@ -2,7 +2,7 @@
 <model ref="r:47f0408b-765d-46e6-972c-d77ded5700ce(de.whz.make.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -99,7 +99,7 @@
       <node concept="3F2HdR" id="1wzo07Aq9Ri" role="3EZMnx">
         <property role="1cu_pB" value="0" />
         <property role="2czwfP" value="true" />
-        <ref role="1NtTu8" to="4vo2:1wzo07Aq9R4" />
+        <ref role="1NtTu8" to="4vo2:1wzo07Aq9R4" resolve="arguments" />
         <node concept="2iRfu4" id="1DDdy9C88QR" role="2czzBx" />
         <node concept="15ARfc" id="1I2SOvk9Ydn" role="3F10Kt">
           <property role="3$6WeP" value="0" />

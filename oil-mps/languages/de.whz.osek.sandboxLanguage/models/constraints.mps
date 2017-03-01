@@ -45,10 +45,11 @@
       <concept id="1138661924179" name="jetbrains.mps.lang.smodel.structure.Property_SetOperation" flags="nn" index="tyxLq">
         <child id="1138662048170" name="value" index="tz02z" />
       </concept>
-      <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
-        <reference id="1140138128738" name="concept" index="1PxNhF" />
-        <child id="1140138123956" name="leftExpression" index="1PxMeX" />
+      <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
+        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
+        <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
       </concept>
+      <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -66,11 +67,11 @@
           <node concept="3clFbF" id="6g77ZYUpnPy" role="3cqZAp">
             <node concept="2OqwBi" id="6g77ZYUpqk$" role="3clFbG">
               <node concept="1PxgMI" id="6g77ZYUpq31" role="2Oq$k0">
-                <ref role="1PxNhF" to="bpn0:6g77ZYUpcAL" resolve="SandboxLiteral" />
-                <node concept="2OqwBi" id="6g77ZYUpoZT" role="1PxMeX">
+                <ref role="1m5ApE" to="bpn0:6g77ZYUpcAL" resolve="SandboxLiteral" />
+                <node concept="2OqwBi" id="6g77ZYUpoZT" role="1m5AlR">
                   <node concept="EsrRn" id="6g77ZYUpnPx" role="2Oq$k0" />
                   <node concept="3TrEf2" id="6g77ZYUppCr" role="2OqNvi">
-                    <ref role="3Tt5mk" to="x27k:2VsHNE717Q8" />
+                    <ref role="3Tt5mk" to="x27k:2VsHNE717Q8" resolve="value" />
                   </node>
                 </node>
               </node>
@@ -87,11 +88,11 @@
             <node concept="2OqwBi" id="6g77ZYUpsyg" role="3clFbG">
               <node concept="2OqwBi" id="6g77ZYUpsbm" role="2Oq$k0">
                 <node concept="1PxgMI" id="6g77ZYUprXA" role="2Oq$k0">
-                  <ref role="1PxNhF" to="bpn0:6g77ZYUpcAL" resolve="SandboxLiteral" />
-                  <node concept="2OqwBi" id="6g77ZYUprhi" role="1PxMeX">
+                  <ref role="1m5ApE" to="bpn0:6g77ZYUpcAL" resolve="SandboxLiteral" />
+                  <node concept="2OqwBi" id="6g77ZYUprhi" role="1m5AlR">
                     <node concept="EsrRn" id="6g77ZYUpr9C" role="2Oq$k0" />
                     <node concept="3TrEf2" id="6g77ZYUpr_g" role="2OqNvi">
-                      <ref role="3Tt5mk" to="x27k:2VsHNE717Q8" />
+                      <ref role="3Tt5mk" to="x27k:2VsHNE717Q8" resolve="value" />
                     </node>
                   </node>
                 </node>

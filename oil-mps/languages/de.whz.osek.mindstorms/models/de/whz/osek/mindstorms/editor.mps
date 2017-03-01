@@ -2,7 +2,7 @@
 <model ref="r:1c87ad17-0db5-40a4-945d-99577a3e6003(de.whz.osek.mindstorms.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -67,7 +67,7 @@
         <property role="3F0ifm" value="init" />
       </node>
       <node concept="3F1sOY" id="4NwoSLUfnM1" role="3EZMnx">
-        <ref role="1NtTu8" to="x27k:3CmSUB7Fp_k" />
+        <ref role="1NtTu8" to="x27k:3CmSUB7Fp_k" resolve="body" />
       </node>
       <node concept="l2Vlx" id="4NwoSLUg8ls" role="2iSdaV" />
     </node>
@@ -80,7 +80,7 @@
       </node>
       <node concept="l2Vlx" id="4NwoSLUg6SP" role="2iSdaV" />
       <node concept="3F1sOY" id="4NwoSLUfnBS" role="3EZMnx">
-        <ref role="1NtTu8" to="x27k:3CmSUB7Fp_k" />
+        <ref role="1NtTu8" to="x27k:3CmSUB7Fp_k" resolve="body" />
       </node>
     </node>
   </node>
