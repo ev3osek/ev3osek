@@ -11,8 +11,6 @@
       <modulePath path="$PROJECT_DIR$/languages/de.whz.osek.sandboxLanguage/de.whz.osek.sandboxLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.whz.osek/de.whz.osek.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/oil.sandbox/oil.sandbox.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/osek.build/osek.build.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/osek/osek.msd" folder="" />
     </projectModules>
   </component>
 </project>
