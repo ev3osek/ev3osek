@@ -2,7 +2,6 @@
 <model ref="r:9d6ce390-4d44-4400-939c-b4fe1c7fb12e(oil.sandbox.Linefollower)">
   <persistence version="9" />
   <languages>
-    <use id="159e346e-43bd-4325-9139-eb179631a38c" name="de.whz.external" version="0" />
     <use id="7a30de00-cb30-45dd-ab11-776f84eb73fe" name="de.whz.osek" version="0" />
     <use id="b5816e12-8c8a-48cb-b63a-257253332775" name="de.whz.osek.mindstorms" version="0" />
     <use id="017fba0e-af15-4a23-b0a8-02b5c1141e75" name="com.mbeddr.cc.var.annotations" version="0" />
@@ -10,9 +9,9 @@
     <devkit ref="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
   </languages>
   <imports>
+    <import index="3y0n" ref="r:d4d16117-20fb-4ba8-a1b2-1598e121e1d0(com.mbeddr.core.stdlib)" />
     <import index="ei6g" ref="r:e45d922f-1536-49e9-9e76-fb0f78d94041(de.whz.osek.mindstorms.rt)" implicit="true" />
     <import index="tzd5" ref="r:0126c7d2-560a-4504-a602-3e7bcb88fde4(de.whz.osek.rt)" implicit="true" />
-    <import index="k7td" ref="r:494f59bd-1442-4e92-9db8-2bc4ada1797a(de.whz.external)" implicit="true" />
   </imports>
   <registry>
     <language id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements">
@@ -377,8 +376,8 @@
       <node concept="2v9HqM" id="3biQP486PXt" role="2eOfOg">
         <ref role="2v9HqP" to="tzd5:2UjW4IkHtze" resolve="osek" />
       </node>
-      <node concept="2v9HqM" id="5YkaFUJVQo6" role="2eOfOg">
-        <ref role="2v9HqP" to="k7td:5YkaFUJVGNP" resolve="stdio_stub" />
+      <node concept="2v9HqM" id="5IGRmRHOqaD" role="2eOfOg">
+        <ref role="2v9HqP" to="3y0n:1WTn9U1aQF1" resolve="stdio" />
       </node>
       <node concept="2v9HqM" id="GqrtFI5RqB" role="2eOfOg">
         <ref role="2v9HqP" node="2CJ7vlDPYcx" resolve="LinefollowerOil" />
@@ -447,7 +446,7 @@
       <node concept="3XIRFW" id="2CJ7vlDRgCq" role="3XIRFX">
         <node concept="1_9egQ" id="2CJ7vlDRjUb" role="3XIRFZ">
           <node concept="3O_q_g" id="2CJ7vlDRjU9" role="1_9egR">
-            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
             <node concept="PhEJO" id="2CJ7vlDRjVl" role="3O_q_j">
               <property role="PhEJT" value="Starting LightEventTask\n\r" />
             </node>
@@ -485,7 +484,7 @@
         </node>
         <node concept="1_9egQ" id="2CJ7vlDRibS" role="3XIRFZ">
           <node concept="3O_q_g" id="2CJ7vlDRibQ" role="1_9egR">
-            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
             <node concept="PhEJO" id="2CJ7vlDRicp" role="3O_q_j">
               <property role="PhEJT" value="Light sensor value: %u\n\r" />
             </node>
@@ -538,8 +537,8 @@
     <node concept="3GEVxB" id="3biQP486lnr" role="2OODSX">
       <ref role="3GEb4d" node="3biQP486ju3" resolve="LfVariability" />
     </node>
-    <node concept="3GEVxB" id="5YkaFUJVHZx" role="2OODSX">
-      <ref role="3GEb4d" to="k7td:5YkaFUJVGNP" resolve="stdio_stub" />
+    <node concept="3GEVxB" id="5IGRmRHOooR" role="2OODSX">
+      <ref role="3GEb4d" to="3y0n:1WTn9U1aQF1" resolve="stdio" />
     </node>
     <node concept="3GEVxB" id="2CJ7vlDRgS_" role="2OODSX">
       <ref role="3GEb4d" node="2CJ7vlDPYcx" resolve="LinefollowerOil" />
@@ -1416,7 +1415,7 @@
         </node>
         <node concept="1_9egQ" id="7vKHPVqxAmr" role="3XIRFZ">
           <node concept="3O_q_g" id="7vKHPVqxAmp" role="1_9egR">
-            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
             <node concept="PhEJO" id="7vKHPVqxAmY" role="3O_q_j">
               <property role="PhEJT" value="Initialization passed\n\r" />
             </node>
@@ -1463,7 +1462,7 @@
             <node concept="3XISUE" id="GqrtFI5X7E" role="3XIRFZ" />
             <node concept="1_9egQ" id="GqrtFI5Xal" role="3XIRFZ">
               <node concept="3O_q_g" id="GqrtFI5Xaj" role="1_9egR">
-                <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                 <node concept="PhEJO" id="GqrtFI5XaD" role="3O_q_j">
                   <property role="PhEJT" value="Waiting for event\n\r" />
                 </node>
@@ -1508,7 +1507,7 @@
               <node concept="3XIRFW" id="GqrtFI5XKg" role="c0U17">
                 <node concept="1_9egQ" id="GqrtFI5XRY" role="3XIRFZ">
                   <node concept="3O_q_g" id="GqrtFI5XRW" role="1_9egR">
-                    <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                    <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                     <node concept="PhEJO" id="GqrtFI5XSb" role="3O_q_j">
                       <property role="PhEJT" value="Got touch event \n\r" />
                     </node>
@@ -1542,7 +1541,7 @@
                   <node concept="3XIRFW" id="GqrtFI5Yem" role="c0U17">
                     <node concept="1_9egQ" id="GqrtFI5Ygv" role="3XIRFZ">
                       <node concept="3O_q_g" id="GqrtFI5Ygu" role="1_9egR">
-                        <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                        <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                         <node concept="PhEJO" id="GqrtFI5YgE" role="3O_q_j">
                           <property role="PhEJT" value="Starting motors\n\r" />
                         </node>
@@ -1613,7 +1612,7 @@
                     <node concept="3XIRFW" id="GqrtFI5ZRM" role="1ly_ph">
                       <node concept="1_9egQ" id="GqrtFI5ZSJ" role="3XIRFZ">
                         <node concept="3O_q_g" id="GqrtFI5ZSI" role="1_9egR">
-                          <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                          <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                           <node concept="PhEJO" id="GqrtFI5ZSU" role="3O_q_j">
                             <property role="PhEJT" value="Stopping motors\n\r" />
                           </node>
@@ -1681,7 +1680,7 @@
                 <node concept="3XIRFW" id="GqrtFI60tP" role="gg_gl">
                   <node concept="1_9egQ" id="GqrtFI60Cq" role="3XIRFZ">
                     <node concept="3O_q_g" id="GqrtFI60Cp" role="1_9egR">
-                      <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                      <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                       <node concept="PhEJO" id="GqrtFI60CJ" role="3O_q_j">
                         <property role="PhEJT" value="Got light event\n\r" />
                       </node>
@@ -1800,7 +1799,7 @@
                   <node concept="3XISUE" id="GqrtFI61Gy" role="3XIRFZ" />
                   <node concept="1_9egQ" id="GqrtFI61FK" role="3XIRFZ">
                     <node concept="3O_q_g" id="GqrtFI61FI" role="1_9egR">
-                      <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                      <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                       <node concept="PhEJO" id="GqrtFI61I2" role="3O_q_j">
                         <property role="PhEJT" value="PID output is %i\n\r" />
                       </node>
@@ -1841,7 +1840,7 @@
                     <node concept="3XIRFW" id="GqrtFI62pY" role="c0U17">
                       <node concept="1_9egQ" id="GqrtFI62Ew" role="3XIRFZ">
                         <node concept="3O_q_g" id="GqrtFI62Ev" role="1_9egR">
-                          <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                          <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                           <node concept="PhEJO" id="GqrtFI62EF" role="3O_q_j">
                             <property role="PhEJT" value="Turning right\n\r" />
                           </node>
@@ -1933,7 +1932,7 @@
                         <property role="3V$3ak" value="a9d69647-0840-491e-bf39-2eb0805d2011/4185783222026475861/4185783222026475862" />
                         <node concept="1_9egQ" id="GqrtFI68bu" role="8Wnug">
                           <node concept="3O_q_g" id="GqrtFI68bs" role="1_9egR">
-                            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                             <node concept="PhEJO" id="GqrtFI68c8" role="3O_q_j">
                               <property role="PhEJT" value="Left Motor Power: %i, Right Motor Power: %i\n" />
                             </node>
@@ -1981,7 +1980,7 @@
                       <node concept="3XIRFW" id="GqrtFI6cPh" role="gg_gl">
                         <node concept="1_9egQ" id="GqrtFI6dgC" role="3XIRFZ">
                           <node concept="3O_q_g" id="GqrtFI6dgD" role="1_9egR">
-                            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                             <node concept="PhEJO" id="GqrtFI6dgE" role="3O_q_j">
                               <property role="PhEJT" value="Turning left\n\r" />
                             </node>
@@ -2104,7 +2103,7 @@
                       <node concept="3XIRFW" id="GqrtFI6ide" role="1ly_ph">
                         <node concept="1_9egQ" id="GqrtFI6iA6" role="3XIRFZ">
                           <node concept="3O_q_g" id="GqrtFI6iA5" role="1_9egR">
-                            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                             <node concept="PhEJO" id="GqrtFI6iAh" role="3O_q_j">
                               <property role="PhEJT" value="Going straight\n\r" />
                             </node>
@@ -2156,7 +2155,7 @@
                 <node concept="3XIRFW" id="GqrtFI6jUR" role="1ly_ph">
                   <node concept="1_9egQ" id="GqrtFI6jXg" role="3XIRFZ">
                     <node concept="3O_q_g" id="GqrtFI6jXf" role="1_9egR">
-                      <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                      <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                       <node concept="PhEJO" id="GqrtFI6jXr" role="3O_q_j">
                         <property role="PhEJT" value="An error occured (wrong event)\n\r" />
                       </node>
@@ -2232,8 +2231,8 @@
     <node concept="3GEVxB" id="3biQP486lm2" role="2OODSX">
       <ref role="3GEb4d" node="3biQP486ju3" resolve="LfVariability" />
     </node>
-    <node concept="3GEVxB" id="5YkaFUJVHXg" role="2OODSX">
-      <ref role="3GEb4d" to="k7td:5YkaFUJVGNP" resolve="stdio_stub" />
+    <node concept="3GEVxB" id="5IGRmRHOokF" role="2OODSX">
+      <ref role="3GEb4d" to="3y0n:1WTn9U1aQF1" resolve="stdio" />
     </node>
     <node concept="3GEVxB" id="5JhwNflEOw8" role="2OODSX">
       <ref role="3GEb4d" node="4osOqZkm2sh" resolve="LightValueEventDispatcherTask" />
@@ -2257,8 +2256,8 @@
     <node concept="3GEVxB" id="3biQP486sqV" role="2OODSX">
       <ref role="3GEb4d" node="3biQP486ju3" resolve="LfVariability" />
     </node>
-    <node concept="3GEVxB" id="5YkaFUJVHXs" role="2OODSX">
-      <ref role="3GEb4d" to="k7td:5YkaFUJVGNP" resolve="stdio_stub" />
+    <node concept="3GEVxB" id="5IGRmRHOolJ" role="2OODSX">
+      <ref role="3GEb4d" to="3y0n:1WTn9U1aQF1" resolve="stdio" />
     </node>
     <node concept="3GEVxB" id="2CJ7vlDRlVn" role="2OODSX">
       <ref role="3GEb4d" node="2CJ7vlDPYcx" resolve="LinefollowerOil" />
@@ -2272,7 +2271,7 @@
       <node concept="3XIRFW" id="2CJ7vlDRkfS" role="3XIRFX">
         <node concept="1_9egQ" id="2CJ7vlDRki9" role="3XIRFZ">
           <node concept="3O_q_g" id="2CJ7vlDRki7" role="1_9egR">
-            <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+            <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
             <node concept="PhEJO" id="2CJ7vlDRkiP" role="3O_q_j">
               <property role="PhEJT" value="Starting TouchEventTask\n\r" />
             </node>
@@ -2290,7 +2289,7 @@
           <node concept="3XIRFW" id="2CJ7vlDRl1k" role="c0U17">
             <node concept="1_9egQ" id="2CJ7vlDRlzZ" role="3XIRFZ">
               <node concept="3O_q_g" id="2CJ7vlDRlzY" role="1_9egR">
-                <ref role="3O_q_h" to="k7td:5_NnRVV9ojC" resolve="printf" />
+                <ref role="3O_q_h" to="3y0n:137zkozycJV" resolve="printf" />
                 <node concept="PhEJO" id="2CJ7vlDRl$c" role="3O_q_j">
                   <property role="PhEJT" value="Sending touch event" />
                 </node>

@@ -5,7 +5,6 @@
       <modulePath path="$PROJECT_DIR$/_spreferences/CodeReviewPreferences/module.msd" folder="_spreferences" />
       <modulePath path="$PROJECT_DIR$/_spreferences/PlatformTemplates/module.msd" folder="_spreferences" />
       <modulePath path="$PROJECT_DIR$/_spreferences/TypeSizeConfiguration/module.msd" folder="_spreferences" />
-      <modulePath path="$PROJECT_DIR$/languages/de.whz.external/de.whz.external.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.whz.make/de.whz.make.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.whz.osek.mindstorms/de.whz.osek.mindstorms.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.whz.osek.sandboxLanguage/de.whz.osek.sandboxLanguage.mpl" folder="" />
