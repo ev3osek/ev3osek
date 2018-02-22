@@ -92,7 +92,7 @@
 //            jump to "dispatcher"
 /////////////////////////////////////////////////////////////////////////////////////////////////
 dispatch:
-	stmfd	sp!, {r0-r12, lr} 		// save the non-distructive registers
+	stmfd	sp!, {r0-r12} 		// save the non-distructive registers
 	ldr	r0, =tcxb_sp			// save sp in the sp saving area in TCB
 	ldr	r1, =runtsk
 	ldr	r1, [r1]			// "ldrb" performs zero-extension
@@ -115,8 +115,8 @@ dispatcher_r:
         BL      IntMasterIRQEnable              // enable interrupts (disabled in TerminateTask)
         BL      IntMasterFIQEnable
         ldmfd	sp!, {r0-r12}
-	ldmfd	sp!, {lr}			// the return address  is found abovce the destructive registers in the stack
-	MOV      pc, lr                          //. jump to the address
+        ldm		sp, {lr}^              // the return address  is found abovce the destructive registers in the stack
+		bx		lr                         // return to address where programm stopped before IRQ
 	
 .align	4
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -175,6 +175,8 @@ start_dispatch:
 	cmp	r0, #INVALID_TASK		// if (runtsk == INVALID) jump to "pre_idle"
 	beq	pre_idle_2
 	
+	ldr	r0, =runtsk
+	ldr	r0, [r0]
 	ldr	r1, =tcxb_sp			// sp = tcxb_sp[runtsk]
 	ldr	sp, [r1,r0, asl #2]
 
