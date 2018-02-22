@@ -115,7 +115,7 @@ dispatcher_r:
         BL      IntMasterIRQEnable              // enable interrupts (disabled in TerminateTask)
         BL      IntMasterFIQEnable
         ldmfd	sp!, {r0-r12}
-        ldm		sp, {lr}^              // the return address  is found abovce the destructive registers in the stack
+        ldmfd		sp!, {lr}^              // the return address  is found abovce the destructive registers in the stack
 		bx		lr                         // return to address where programm stopped before IRQ
 	
 .align	4

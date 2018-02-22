@@ -68,7 +68,7 @@ SWIHandler:
 IRQHandler:
         Sub      lr, lr, #0x4                   @ remove offset caused by Interrupt from return adress.
         STMFD    r13!, {r0-r12}                 @ Save context in IRQ stack
-        STM    r13, {lr}                     @Save lr in IRQ stack
+        STMFD    r13!, {lr}                     @Save lr in IRQ stack
         
         LDR      r0, =0xFFFEF604                @ AINTC HIPVR2 Register
         LDR      r0, [r0]                       @ Get Entry of ISR-Vector-Table
@@ -103,9 +103,9 @@ IRQHandler:
         MOV      r1, #0                         @ Reset the shouldDispatch-flag
         STR      r1, [r2]
        
-        LDM    r13, {r2}^                      @ pop lr from IRQ stack to r2
+        LDMFD    r13!, {r2}^                      @ pop lr from IRQ stack to r2
         MSR   cpsr_c, #MODE_SYS|I_F_BIT        @ Change to System MOde
-        STM      r13, {r2}                     @ push return adress from r2 to User/System stack 
+        STMFD      r13!, {r2}                     @ push return adress from r2 to User/System stack 
         MSR   cpsr_c, #MODE_IRQ|I_F_BIT       @ change to IRQ mode
  
         
@@ -115,7 +115,7 @@ IRQHandler:
         MOVS     pc, lr                   @ MOVS = Return from exception (i.e. change back to system mode)
         
 SkipButtons:
-        LDM    r13, {lr}                 @ Restore lr from IRQ stack
+        LDMFD    r13!, {lr}                 @ Restore lr from IRQ stack
         LDMFD    r13!, {r0-r12}             @ Restore registers from IRQ stack
         
         MOVS     pc, lr                  @ Return to program before IRQ
