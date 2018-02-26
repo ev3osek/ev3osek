@@ -145,6 +145,10 @@ ReleaseResource(ResourceType resid)
 		tcb_curpri[runtsk] = rescb_prevpri[resid];
 		tcb_lastres[runtsk] = rescb_prevres[resid];
 		rescb_prevpri[resid] = TPRI_NULL;
+			if (tcb_curpri[runtsk] < nextpri) { 
+		preempt(); 
+		dispatch(); 
+    } 
 	}
 	else {
 		CHECK_ACCESS(isrinib_intpri[runisr] <= resinib_ceilpri[resid]);

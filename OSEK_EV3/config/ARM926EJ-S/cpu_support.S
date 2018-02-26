@@ -73,6 +73,7 @@
 
 /*	ŠO•”ŒöŠJéŒ¾ */
 	.global	dispatch
+	.global	dispatch_irq
 	.global	start_dispatch
 	.global	exit_and_dispatch
 	.global	activate_r
@@ -92,6 +93,9 @@
 //            jump to "dispatcher"
 /////////////////////////////////////////////////////////////////////////////////////////////////
 dispatch:
+	stmfd	sp!, {lr}
+//	b dispatch_irq
+dispatch_irq:
 	stmfd	sp!, {r0-r12} 		// save the non-distructive registers
 	ldr	r0, =tcxb_sp			// save sp in the sp saving area in TCB
 	ldr	r1, =runtsk
