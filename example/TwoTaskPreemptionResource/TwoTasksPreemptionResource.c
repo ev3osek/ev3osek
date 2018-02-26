@@ -46,9 +46,9 @@ TASK(Task2)
   GetResource(Test);
   //printf("Task 2 intermediate ends.\n\r");
   LOOP2(2,562*1500);
-  ReleaseResource(Test);
   getTime();
   printf("Task 2(%i, %i) end at %i.\n\r",a,b,current_time);
+  ReleaseResource(Test);
   TerminateTask();
 }
 
