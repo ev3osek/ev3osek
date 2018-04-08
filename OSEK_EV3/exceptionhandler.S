@@ -91,6 +91,8 @@ IRQHandler:
 	STRB	 r1, [r0]
         MOV      lr, pc
         LDR      pc, =user_1ms_isr_type2
+        MOV      lr, pc
+        LDR      pc, =SetDispatch
         LDR	 r0, =callevel                  @ Restore previous callevel
         POP      {r2}                           
         STRB     r2, [r0]

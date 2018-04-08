@@ -434,12 +434,6 @@ CancelAlarm(AlarmType almid)
 /*
  *  カウンタを進める
  */
-extern TaskType runtsk;
-extern TaskType schedtsk;
-
-// WORKS!
-static volatile unsigned long shouldDispatch = 0;
-volatile unsigned int addrShouldDispatch = (unsigned int) &shouldDispatch;
 
 static volatile unsigned int first = 1;
 
@@ -501,8 +495,6 @@ SignalCounter(CounterType cntid)
                     enqueue_alarm(almid, cntid);
             }
             
-            if (runtsk != INVALID_TASK && runtsk != schedtsk) // If runtsk is INVALID_TASK we are in idle mode and therefore will schedule automatically
-                shouldDispatch = 1; // Flag to indicate that after we return from the ISR we need to dispatch the current task (will be checked in IRQ Handler)
 	}
   exit:
 	LOG_SIGCNT_LEAVE(ercd);
