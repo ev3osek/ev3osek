@@ -94,9 +94,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 dispatch:
 	stmfd	sp!, {lr}
+dispatch_irq:
 	mrs     lr, spsr				// save the status regisgter
 	stmfd	sp!, {lr}
-dispatch_irq:
 	stmfd	sp!, {r0-r12} 		// save the non-distructive registers
 	ldr	r0, =tcxb_sp			// save sp in the sp saving area in TCB
 	ldr	r1, =runtsk
