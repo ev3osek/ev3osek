@@ -94,10 +94,10 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 dispatch:
 	stmfd	sp!, {lr}
+	mrs     lr, spsr				// save the status regisgter
+	stmfd	sp!, {lr}
 dispatch_irq:
 	stmfd	sp!, {r0-r12} 		// save the non-distructive registers
-	mrs     r0, spsr				// save the status regisgter
-	stmfd	sp!, {r0}
 	ldr	r0, =tcxb_sp			// save sp in the sp saving area in TCB
 	ldr	r1, =runtsk
 	ldr	r1, [r1]			// "ldrb" performs zero-extension
@@ -118,12 +118,12 @@ dispatch_irq:
 ////////////////////////////////////////////////////////////////////////////////////////////////
 dispatcher_r:
         BL      IntMasterIRQEnable              // enable interrupts (disabled in TerminateTask)
-        BL      IntMasterFIQEnable
-        ldmfd	sp!, {r0}
-        msrne   spsr_cxsf, r0 
+        BL      IntMasterFIQEnable 
         ldmfd	sp!, {r0-r12}
+        ldmfd	sp!, {lr}
+        msrne   spsr_cxsf, lr
         ldmfd		sp!, {lr}^              // the return address  is found abovce the destructive registers in the stack
-		bx		lr                         // return to address where programm stopped before IRQ
+        bx		lr                         // return to address where programm stopped before IRQ
 	
 .align	4
 ////////////////////////////////////////////////////////////////////////////////////////////////

@@ -69,7 +69,9 @@ IRQHandler:
         Sub      lr, lr, #0x4                   @ remove offset caused by Interrupt from return adress.
         STMFD    r13!, {r0-r12}                 @ Save context in IRQ stack
         STMFD    r13!, {lr}                     @Save lr in IRQ stack
-        
+        MRS      lr, spsr                       @Save spsr
+        STMFD    r13!, {lr}
+
         LDR      r0, =0xFFFEF604                @ AINTC HIPVR2 Register
         LDR      r0, [r0]                       @ Get Entry of ISR-Vector-Table
         PUSH     {r0}                           @ Save r0 (required after ISR)
@@ -84,7 +86,7 @@ IRQHandler:
         
         MOV      lr, pc                         @ Otherwise check if any button was pressed
         LDR      pc, =check_EV3_buttons           
-        LDR	 r0, =callevel                  @ Set callevel to TCL_ISR2 (2) and call user_1ms_isr_type2
+        LDR	 r0, =callevel                      @ Set callevel to TCL_ISR2 (2) and call user_1ms_isr_type2
         LDRB     r2, [r0]
         PUSH     {r2}                           @ Save the current callevel to restore it afterwards
 	MOV	 r1, #2
@@ -93,7 +95,7 @@ IRQHandler:
         LDR      pc, =user_1ms_isr_type2
         MOV      lr, pc
         LDR      pc, =SetDispatch
-        LDR	 r0, =callevel                  @ Restore previous callevel
+        LDR	 r0, =callevel                      @ Restore previous callevel
         POP      {r2}                           
         STRB     r2, [r0]
         
@@ -104,11 +106,13 @@ IRQHandler:
         BEQ      SkipButtons
         MOV      r1, #0                         @ Reset the shouldDispatch-flag
         STR      r1, [r2]
-       
-        LDMFD    r13!, {r2}^                      @ pop lr from IRQ stack to r2
-        MSR   cpsr_c, #MODE_SYS|I_F_BIT        @ Change to System MOde
-        STMFD      r13!, {r2}                     @ push return adress from r2 to User/System stack 
-        MSR   cpsr_c, #MODE_IRQ|I_F_BIT       @ change to IRQ mode
+
+        LDMFD    r13!, {r0}
+        LDMFD    r13!, {r2}^                    @ pop lr from IRQ stack to r2
+        MSR      cpsr_c, #MODE_SYS|I_F_BIT      @ Change to System MOde
+        STMFD    r13!, {r2}                     @ push lr from r2 to User/System stack
+        STMFD    r13!, {r0}                     @ push spsr to User/System mode stack
+        MSR      cpsr_c, #MODE_IRQ|I_F_BIT      @ change to IRQ mode
  
         
         LDMFD    r13!, {r0-r12}                 @ Restore registers from IRQ stack
@@ -117,8 +121,10 @@ IRQHandler:
         MOVS     pc, lr                   @ MOVS = Return from exception (i.e. change back to system mode)
         
 SkipButtons:
+        LDMFD    r13!, {r0}                 @restore spsr
+        MSRNE    spsr_cxsf, r0
         LDMFD    r13!, {lr}                 @ Restore lr from IRQ stack
-        LDMFD    r13!, {r0-r12}             @ Restore registers from IRQ stack
+        LDMFD    r13!, {r0-r12}^            @ Restore registers from IRQ stack
         
         MOVS     pc, lr                  @ Return to program before IRQ
 
