@@ -435,7 +435,7 @@ CancelAlarm(AlarmType almid)
  *  カウンタを進める
  */
 
-static volatile unsigned int first = 1;
+static volatile unsigned int first = 0;
 
 // ALl calls to lock_cpu and unlock_cpu were removed from this function since it is always called from an ISR
 StatusType
