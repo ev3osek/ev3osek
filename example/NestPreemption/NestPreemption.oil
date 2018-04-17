@@ -19,6 +19,7 @@ CPU ARM926EJ_S
   APPMODE appmode1{}; 
   
   /* Definition of tasks */
+  
   TASK Task1
   {
     AUTOSTART = FALSE;
@@ -88,17 +89,7 @@ CPU ARM926EJ_S
     };
   };
 
-  TASK Task_Background
-  {
-    AUTOSTART = TRUE
-    {
-      APPMODE = appmode1;
-    };
-    PRIORITY = 1;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    STACKSIZE = 4096;
-  };
+
   
   /* Defintion of counter and alarm */
   COUNTER SysTimerCnt

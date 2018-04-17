@@ -7,7 +7,6 @@
 #define LOOP2(ID,End) if(ID==1){a++;}else if(ID==2){b++;}else if(ID==3){c++;} for(int l=0; l<End; l++){j|=j<<1;}
 #define getTime() current_time = systick_get_ms()-first_start;
 
-DeclareTask(Task_Background);
 DeclareTask(Task1);
 DeclareTask(Task2);
 DeclareCounter(SysTimerCnt);
@@ -47,11 +46,6 @@ TASK(Task2)
   TerminateTask();
 }
 
-// Testing purpose
-// Result: It will loop around 310 times for 1ms
-TASK(Task_Background)
-{  
-  TerminateTask();
-}
+
 
 
