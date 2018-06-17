@@ -182,8 +182,6 @@ start_dispatch:
 	cmp	r0, #INVALID_TASK		// if (runtsk == INVALID) jump to "pre_idle"
 	beq	pre_idle_2
 	
-	ldr	r0, =runtsk
-	ldr	r0, [r0]
 	ldr	r1, =tcxb_sp			// sp = tcxb_sp[runtsk]
 	ldr	sp, [r1,r0, asl #2]
 

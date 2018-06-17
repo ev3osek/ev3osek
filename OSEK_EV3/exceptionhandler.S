@@ -66,7 +66,7 @@ SWIHandler:
 @ pending IRQ. This handler doesnot support nesting.
 @
 IRQHandler:
-        Sub      lr, lr, #0x4                   @ remove offset caused by Interrupt from return adress.
+        SUB      lr, lr, #0x4                   @ remove offset caused by Interrupt from return adress.
         STMFD    r13!, {r0-r12}                 @ Save context in IRQ stack
         STMFD    r13!, {lr}                     @Save lr in IRQ stack
         MRS      r0, spsr                       @Save spsr
