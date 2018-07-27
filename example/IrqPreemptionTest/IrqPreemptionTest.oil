@@ -1,0 +1,114 @@
+#include "implementation.oil"
+
+CPU ARM926EJ_S
+{
+  OS LEJOS_OSEK
+  {
+    STATUS = EXTENDED;
+    STARTUPHOOK = FALSE;
+    ERRORHOOK = FALSE;
+    SHUTDOWNHOOK = FALSE;
+    PRETASKHOOK = FALSE;
+    POSTTASKHOOK = FALSE;
+    USEGETSERVICEID = FALSE;
+    USEPARAMETERACCESS = FALSE;
+    USERESSCHEDULER = FALSE;
+  };
+
+  /* Definition of application mode */
+  APPMODE appmode1{}; 
+  
+  /* Defintion of Resource */
+  RESOURCE Print
+  {
+    RESOURCEPROPERTY = STANDARD;
+  };
+  
+  /* Definition of tasks */
+
+  TASK Task1
+  {
+    AUTOSTART = TRUE;
+    PRIORITY = 10;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 4096;
+    RESOURCE = Print;
+  };
+  ALARM Task1_Alarm
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = Task1;
+    };
+    AUTOSTART = TRUE
+    {
+      ALARMTIME = 1;
+      CYCLETIME = 5000;
+      APPMODE = appmode1;
+    };
+  };
+
+  TASK Task2
+  {
+    AUTOSTART = TRUE;
+    PRIORITY = 7;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 4096;
+    RESOURCE = Print;
+  };
+  ALARM Task2_Alarm
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = Task2;
+    };
+    AUTOSTART = TRUE
+    {
+      ALARMTIME = 1;
+      CYCLETIME = 8000;
+      APPMODE = appmode1;
+    };
+  };
+
+  TASK Task3
+  {
+    AUTOSTART = TRUE;
+    PRIORITY = 4;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 4096;
+    RESOURCE = Print;
+  };
+  ALARM Task3_Alarm
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = Task3;
+    };
+    AUTOSTART = TRUE
+    {
+      ALARMTIME = 1;
+      CYCLETIME = 10000;
+      APPMODE = appmode1;
+    };
+  };
+
+  
+  /* Defintion of counter and alarm */
+  COUNTER SysTimerCnt
+  {
+    MINCYCLE = 1;
+    MAXALLOWEDVALUE = 10000;
+    TICKSPERBASE = 1;
+  };
+
+  
+
+};
+
+

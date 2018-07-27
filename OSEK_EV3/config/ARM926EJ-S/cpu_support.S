@@ -73,6 +73,7 @@
 
 /*	ŠO•”ŒöŠJéŒ¾ */
 	.global	dispatch
+	.global	dispatch_irq
 	.global	start_dispatch
 	.global	exit_and_dispatch
 	.global	activate_r
@@ -92,7 +93,11 @@
 //            jump to "dispatcher"
 /////////////////////////////////////////////////////////////////////////////////////////////////
 dispatch:
-	stmfd	sp!, {r0-r12, lr} 		// save the non-distructive registers
+	stmfd	sp!, {lr}
+dispatch_irq:
+	mrs     lr, spsr				// save the status regisgter
+	stmfd	sp!, {lr}
+	stmfd	sp!, {r0-r12} 		// save the non-distructive registers
 	ldr	r0, =tcxb_sp			// save sp in the sp saving area in TCB
 	ldr	r1, =runtsk
 	ldr	r1, [r1]			// "ldrb" performs zero-extension
@@ -113,10 +118,12 @@ dispatch:
 ////////////////////////////////////////////////////////////////////////////////////////////////
 dispatcher_r:
         BL      IntMasterIRQEnable              // enable interrupts (disabled in TerminateTask)
-        BL      IntMasterFIQEnable
+        BL      IntMasterFIQEnable 
         ldmfd	sp!, {r0-r12}
-	ldmfd	sp!, {lr}			// the return address  is found abovce the destructive registers in the stack
-	MOV      pc, lr                          //. jump to the address
+        ldmfd	sp!, {lr}
+        msrne   spsr_cxsf, lr
+        ldmfd		sp!, {lr}^              // the return address  is found abovce the destructive registers in the stack
+        bx		lr                         // return to address where programm stopped before IRQ
 	
 .align	4
 ////////////////////////////////////////////////////////////////////////////////////////////////
